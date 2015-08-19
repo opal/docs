@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>promise.rb</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            promise.rb
+        </h1>
+        <ul class="files">
+            <li>opal/stdlib/promise.rb</li>
+            <li>Last modified: 2015-08-19 01:14:21 +0200</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>{Promise} is used to help structure asynchronous code.</p>
+
+<p>It is available in the Opal standard library, and can be required in any
+Opal application:</p>
+
+<pre><code>require &#39;promise&#39;
+</code></pre>
+
+<p>## Basic Usage</p>
+
+<p>Promises are created and returned as objects with the assumption that they
+will eventually be resolved or rejected, but never both. A {Promise} has a
+{#then} and {#fail} method (or one of their aliases) that can be used to
+register a block that gets called once resolved or rejected.</p>
+
+<pre><code>promise = Promise.new
+
+promise.then {
+  puts &quot;resolved!&quot;
+}.fail {
+  puts &quot;rejected!&quot;
+}
+
+# some time later
+promise.resolve
+
+# =&gt; &quot;resolved!&quot;
+</code></pre>
+
+<p>It is important to remember that a promise can only be resolved or rejected
+once, so the block will only ever be called once (or not at all).</p>
+
+<p>## Resolving Promises</p>
+
+<p>To resolve a promise, means to inform the {Promise} that it has succeeded
+or evaluated to a useful value. {#resolve} can be passed a value which is
+then passed into the block handler:</p>
+
+<pre><code>def get_json
+  promise = Promise.new
+
+  HTTP.get(&quot;some_url&quot;) do |req|
+    promise.resolve req.json
+  end
+
+  promise
+end
+
+get_json.then do |json|
+  puts &quot;got some JSON from server&quot;
+end
+</code></pre>
+
+<p>## Rejecting Promises</p>
+
+<p>Promises are also designed to handle error <a
+href="nodejs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/cases_txt.html">cases</a>,
+or situations where an outcome is not as expected. Taking the previous
+example, we can also pass a value to a {#reject} call, which passes that
+object to the registered {#fail} handler:</p>
+
+<pre><code>def get_json
+  promise = Promise.new
+
+  HTTP.get(&quot;some_url&quot;) do |req|
+    if req.ok?
+      promise.resolve req.json
+    else
+      promise.reject req
+    end
+
+  promise
+end
+
+get_json.then {
+  # ...
+}.fail { |req|
+  puts &quot;it went wrong: #{req.message}&quot;
+}</code></pre>
+
+<p>## Chaining Promises</p>
+
+<p>Promises become even more useful when chained together. Each {#then} or
+{#fail} call returns a new {Promise} which can be used to chain more and
+more handlers together.</p>
+
+<pre><code>promise.then { wait_for_something }.then { do_something_else }
+</code></pre>
+
+<p>Rejections are propagated through the entire chain, so a “catch all”
+handler can be attached at the end of the tail:</p>
+
+<pre><code>promise.then { ... }.then { ... }.fail { ... }</code></pre>
+
+<p>## Composing Promises</p>
+
+<p>{Promise.when} can be used to wait for more than one promise to resolve (or
+reject). Using the previous example, we could request two different json
+requests and wait for both to finish:</p>
+
+<pre><code>Promise.when(get_json, get_json2).then |first, second|
+  puts &quot;got two json payloads: #{first}, #{second}&quot;
+end</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../classes/Promise.html">Promise</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../classes/Promise/Trace.html">Promise::Trace</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="../../../classes/Promise/When.html">Promise::When</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

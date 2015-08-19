@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>SourceMap::VLQ</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            SourceMap::VLQ 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/stdlib/source_map/vlq_rb.html">opal/stdlib/source_map/vlq.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Support for encoding/decoding the variable length quantity format described
+in the spec at:</p>
+
+<p><a
+href="https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit">docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit</a></p>
+
+<p>This implementation is heavily based on <a
+href="https://github.com/mozilla/source-map">github.com/mozilla/source-map</a>
+Copyright 2009-2011, Mozilla Foundation and contributors, BSD</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-base64_decode">base64_decode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-base64_encode">base64_encode</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-decode">decode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-decode_array">decode_array</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-encode">encode</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-from_vlq_signed">from_vlq_signed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-to_vlq_signed">to_vlq_signed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">VLQ_BASE_SHIFT</td>
+            <td>=</td>
+            <td class="attr-value">5;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>A single base 64 digit can contain 6 bits of data. For the base 64 variable
+length quantities we use in the source map spec, the first bit is the sign,
+the next four bits are the actual value, and the 6th bit is the
+continuation bit. The continuation bit tells us whether there are more
+digits in this value following this digit.</p>
+
+<pre><code>Continuation
+|    Sign
+|    |
+V    V
+101011</code></pre></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">VLQ_BASE</td>
+            <td>=</td>
+            <td class="attr-value">1 &lt;&lt; VLQ_BASE_SHIFT;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>binary: 100000</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">VLQ_BASE_MASK</td>
+            <td>=</td>
+            <td class="attr-value">VLQ_BASE - 1;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>binary: 011111</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">VLQ_CONTINUATION_BIT</td>
+            <td>=</td>
+            <td class="attr-value">VLQ_BASE;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>binary: 100000</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">BASE64_DIGITS</td>
+            <td>=</td>
+            <td class="attr-value">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&#39;.split(&#39;&#39;)</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">BASE64_VALUES</td>
+            <td>=</td>
+            <td class="attr-value">(0..64).inject({}){ |h, i| h.update BASE64_DIGITS[i] =&gt; i }</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-decode">
+            
+              <b>decode</b>(str)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-decode" name="method-c-decode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Decodes the next base 64 <a href="VLQ.html">VLQ</a> value from the given
+string and returns the value and the rest of the string.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-decode_source')" id="l_method-c-decode_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/88b42076dfbff5d3f86a676fcf746b29dee5f71a/stdlib/source_map/vlq.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-decode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">decode</span>(<span class="ruby-identifier">str</span>)
+
+  <span class="ruby-identifier">vlq</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">shift</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">continue</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">chars</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;&#39;</span>)
+
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">continue</span>
+    <span class="ruby-identifier">char</span> = <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">shift</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Expected more digits in base 64 VLQ value.&quot;</span>
+    <span class="ruby-identifier">digit</span> = <span class="ruby-identifier">base64_decode</span>(<span class="ruby-identifier">char</span>)
+    <span class="ruby-identifier">continue</span> = <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> (<span class="ruby-identifier">digit</span> <span class="ruby-operator">&amp;</span> <span class="ruby-constant">VLQ_CONTINUATION_BIT</span>) <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">digit</span> <span class="ruby-operator">&amp;=</span> <span class="ruby-constant">VLQ_BASE_MASK</span>
+    <span class="ruby-identifier">vlq</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">digit</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">shift</span>
+    <span class="ruby-identifier">shift</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">VLQ_BASE_SHIFT</span>
+  <span class="ruby-keyword">end</span>
+
+  [<span class="ruby-identifier">from_vlq_signed</span>(<span class="ruby-identifier">vlq</span>), <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;&#39;</span>)]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-decode_array">
+            
+              <b>decode_array</b>(str)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-decode_array" name="method-c-decode_array" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Decode an array of variable length quantities from the given string and
+return them.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-decode_array_source')" id="l_method-c-decode_array_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/88b42076dfbff5d3f86a676fcf746b29dee5f71a/stdlib/source_map/vlq.rb#L77" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-decode_array_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">decode_array</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">output</span> = []
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">str</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-identifier">int</span>, <span class="ruby-identifier">str</span> = <span class="ruby-identifier">decode</span>(<span class="ruby-identifier">str</span>)
+    <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">int</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-encode">
+            
+              <b>encode</b>(int)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-encode" name="method-c-encode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the base 64 <a href="VLQ.html">VLQ</a> encoded value.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-encode_source')" id="l_method-c-encode_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/88b42076dfbff5d3f86a676fcf746b29dee5f71a/stdlib/source_map/vlq.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-encode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">int</span>)
+
+  <span class="ruby-identifier">vlq</span> = <span class="ruby-identifier">to_vlq_signed</span>(<span class="ruby-identifier">int</span>)
+  <span class="ruby-identifier">encoded</span> = []
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">digit</span> = <span class="ruby-identifier">vlq</span> <span class="ruby-operator">&amp;</span> <span class="ruby-constant">VLQ_BASE_MASK</span>
+    <span class="ruby-identifier">vlq</span> <span class="ruby-operator">&gt;&gt;=</span> <span class="ruby-constant">VLQ_BASE_SHIFT</span>
+    <span class="ruby-identifier">digit</span> <span class="ruby-operator">|=</span> <span class="ruby-constant">VLQ_CONTINUATION_BIT</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">vlq</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">encoded</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">base64_encode</span>(<span class="ruby-identifier">digit</span>)
+  <span class="ruby-keyword">end</span> <span class="ruby-keyword">while</span> <span class="ruby-identifier">vlq</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+
+  <span class="ruby-identifier">encoded</span>.<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+              
+      <div class="sectiontitle">Class Protected methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-base64_decode">
+            
+              <b>base64_decode</b>(char)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-base64_decode" name="method-c-base64_decode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-base64_decode_source')" id="l_method-c-base64_decode_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/88b42076dfbff5d3f86a676fcf746b29dee5f71a/stdlib/source_map/vlq.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-base64_decode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">base64_decode</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-constant">BASE64_VALUES</span>[<span class="ruby-identifier">char</span>] <span class="ruby-keyword">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;#{char} is not a valid base64 digit&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-base64_encode">
+            
+              <b>base64_encode</b>(int)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-base64_encode" name="method-c-base64_encode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-base64_encode_source')" id="l_method-c-base64_encode_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/88b42076dfbff5d3f86a676fcf746b29dee5f71a/stdlib/source_map/vlq.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-base64_encode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">base64_encode</span>(<span class="ruby-identifier">int</span>)
+  <span class="ruby-constant">BASE64_DIGITS</span>[<span class="ruby-identifier">int</span>] <span class="ruby-keyword">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;#{int} is not a valid base64 digit&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-from_vlq_signed">
+            
+              <b>from_vlq_signed</b>(vlq)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-from_vlq_signed" name="method-c-from_vlq_signed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Converts to a two&#39;s-complement value from a value where the sign bit is
+placed in the least significant bit. For example, as decimals:</p>
+
+<pre><code>2 (10 binary) becomes 1, 3 (11 binary) becomes -1
+4 (100 binary) becomes 2, 5 (101 binary) becomes -2</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-from_vlq_signed_source')" id="l_method-c-from_vlq_signed_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/88b42076dfbff5d3f86a676fcf746b29dee5f71a/stdlib/source_map/vlq.rb#L113" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-from_vlq_signed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">from_vlq_signed</span>(<span class="ruby-identifier">vlq</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">vlq</span> <span class="ruby-operator">&amp;</span> <span class="ruby-number">1</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+    <span class="ruby-operator">-</span>(<span class="ruby-identifier">vlq</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-number">1</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">vlq</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-to_vlq_signed">
+            
+              <b>to_vlq_signed</b>(int)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-to_vlq_signed" name="method-c-to_vlq_signed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Converts from a two&#39;s-complement integer to an integer where the sign
+bit is placed in the least significant bit. For example, as decimals:</p>
+
+<pre><code>1 becomes 2 (10 binary), -1 becomes 3 (11 binary)
+2 becomes 4 (100 binary), -2 becomes 5 (101 binary)</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-to_vlq_signed_source')" id="l_method-c-to_vlq_signed_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/88b42076dfbff5d3f86a676fcf746b29dee5f71a/stdlib/source_map/vlq.rb#L100" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-to_vlq_signed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">to_vlq_signed</span>(<span class="ruby-identifier">int</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">int</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    ((<span class="ruby-operator">-</span><span class="ruby-identifier">int</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-number">1</span>) <span class="ruby-operator">+</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">int</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

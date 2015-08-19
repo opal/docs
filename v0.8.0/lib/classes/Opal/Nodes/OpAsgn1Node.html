@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Nodes::OpAsgn1Node</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Nodes::OpAsgn1Node 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Base.html">Opal::Nodes::Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/nodes/call_special_rb.html">opal/lib/opal/nodes/call_special.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p><a href="args">lhs</a> ||= rhs s(:op_asgn1, lhs, args, :||, rhs)</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-compile">compile</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-compile_and">compile_and</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-compile_operator">compile_operator</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-compile_or">compile_or</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-first_arg">first_arg</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-compile">
+            
+              <b>compile</b>()
+            
+            <a href="../../../classes/Opal/Nodes/OpAsgn1Node.html#method-i-compile" name="method-i-compile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_source')" id="l_method-i-compile_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/nodes/call_special.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/call_special.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">op</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;||&#39;</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">compile_or</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;&amp;&amp;&#39;</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">compile_and</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-identifier">compile_operator</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compile_and">
+            
+              <b>compile_and</b>()
+            
+            <a href="../../../classes/Opal/Nodes/OpAsgn1Node.html#method-i-compile_and" name="method-i-compile_and" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_and_source')" id="l_method-i-compile_and_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/nodes/call_special.rb#L114" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_and_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/call_special.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile_and</span>
+  <span class="ruby-identifier">with_temp</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-comment"># args</span>
+    <span class="ruby-identifier">with_temp</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-comment"># recv</span>
+      <span class="ruby-identifier">aref</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:call</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">r</span>), <span class="ruby-value">:[]</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:arglist</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">a</span>)))
+      <span class="ruby-identifier">aset</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:call</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">r</span>), <span class="ruby-value">:[]=</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:arglist</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">a</span>), <span class="ruby-identifier">rhs</span>))
+      <span class="ruby-identifier">andop</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:and</span>, <span class="ruby-identifier">aref</span>, <span class="ruby-identifier">aset</span>)
+
+      <span class="ruby-identifier">push</span> <span class="ruby-node">&quot;(#{a} = &quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">first_arg</span>), <span class="ruby-node">&quot;, #{r} = &quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">lhs</span>)
+      <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;, &quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">andop</span>), <span class="ruby-string">&quot;)&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compile_operator">
+            
+              <b>compile_operator</b>()
+            
+            <a href="../../../classes/Opal/Nodes/OpAsgn1Node.html#method-i-compile_operator" name="method-i-compile_operator" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_operator_source')" id="l_method-i-compile_operator_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/nodes/call_special.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_operator_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/call_special.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile_operator</span>
+  <span class="ruby-identifier">with_temp</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-comment"># args</span>
+    <span class="ruby-identifier">with_temp</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-comment"># recv</span>
+      <span class="ruby-identifier">cur</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:call</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">r</span>), <span class="ruby-value">:[]</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:arglist</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">a</span>)))
+      <span class="ruby-identifier">rhs</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:call</span>, <span class="ruby-identifier">cur</span>, <span class="ruby-identifier">op</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:arglist</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rhs</span>))
+      <span class="ruby-identifier">call</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:call</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">r</span>), <span class="ruby-value">:[]=</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:arglist</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">a</span>), <span class="ruby-identifier">rhs</span>))
+
+      <span class="ruby-identifier">push</span> <span class="ruby-node">&quot;(#{a} = &quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">first_arg</span>), <span class="ruby-node">&quot;, #{r} = &quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">lhs</span>)
+      <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;, &quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">call</span>), <span class="ruby-string">&quot;)&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compile_or">
+            
+              <b>compile_or</b>()
+            
+            <a href="../../../classes/Opal/Nodes/OpAsgn1Node.html#method-i-compile_or" name="method-i-compile_or" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_or_source')" id="l_method-i-compile_or_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/nodes/call_special.rb#L101" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_or_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/call_special.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile_or</span>
+  <span class="ruby-identifier">with_temp</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-comment"># args</span>
+    <span class="ruby-identifier">with_temp</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-comment"># recv</span>
+      <span class="ruby-identifier">aref</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:call</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">r</span>), <span class="ruby-value">:[]</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:arglist</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">a</span>)))
+      <span class="ruby-identifier">aset</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:call</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">r</span>), <span class="ruby-value">:[]=</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:arglist</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-identifier">a</span>), <span class="ruby-identifier">rhs</span>))
+      <span class="ruby-identifier">orop</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:or</span>, <span class="ruby-identifier">aref</span>, <span class="ruby-identifier">aset</span>)
+
+      <span class="ruby-identifier">push</span> <span class="ruby-node">&quot;(#{a} = &quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">first_arg</span>), <span class="ruby-node">&quot;, #{r} = &quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">lhs</span>)
+      <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;, &quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">orop</span>), <span class="ruby-string">&quot;)&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first_arg">
+            
+              <b>first_arg</b>()
+            
+            <a href="../../../classes/Opal/Nodes/OpAsgn1Node.html#method-i-first_arg" name="method-i-first_arg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_arg_source')" id="l_method-i-first_arg_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/nodes/call_special.rb#L76" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-first_arg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/call_special.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first_arg</span>
+  <span class="ruby-identifier">args</span>[<span class="ruby-number">1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

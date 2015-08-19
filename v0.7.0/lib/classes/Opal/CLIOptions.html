@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::CLIOptions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::CLIOptions 
+            
+                <span class="parent">&lt; 
+                    
+                    OptionParser
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/lib/opal/cli_options_rb.html">opal/lib/opal/cli_options.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>options</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../../classes/Opal/CLIOptions.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/4e764e881f755e982391791e6f8b3a7d895d6ab5/lib/opal/cli_options.rb#L5" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli_options.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@options</span> = {}
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">banner</span> = <span class="ruby-string">&#39;Usage: opal [options] -- [programfile]&#39;</span>
+
+  <span class="ruby-identifier">separator</span> <span class="ruby-string">&#39;&#39;</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-v&#39;</span>, <span class="ruby-string">&#39;--verbose&#39;</span>, <span class="ruby-string">&#39;print version number, then turn on verbose mode&#39;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">print_version</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:verbose</span>] = <span class="ruby-keyword">true</span> <span class="ruby-comment"># TODO: print some warnings when verbose = true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;--verbose&#39;</span>, <span class="ruby-string">&#39;turn on verbose mode&#39;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:verbose</span>] = <span class="ruby-keyword">true</span> <span class="ruby-comment"># TODO: print some warnings when verbose = true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;--version&#39;</span>, <span class="ruby-string">&#39;Print the version&#39;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">print_version</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-h&quot;</span>, <span class="ruby-string">&quot;--help&quot;</span>, <span class="ruby-string">&quot;Show this message&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-keyword">self</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+
+  <span class="ruby-identifier">section</span> <span class="ruby-string">&#39;Basic Options:&#39;</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-I&#39;</span>, <span class="ruby-string">&#39;--include DIR&#39;</span>,
+          <span class="ruby-string">&#39;Append a load path (may be used more than once)&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:load_paths</span>] <span class="ruby-operator">||=</span> []
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:load_paths</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">i</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-e&#39;</span>, <span class="ruby-string">&#39;--eval SOURCE&#39;</span>, <span class="ruby-constant">String</span>,
+          <span class="ruby-string">&#39;One line of script. Several -e\s allowed. Omit [programfile]&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:evals</span>] <span class="ruby-operator">||=</span> []
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:evals</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">source</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-r&#39;</span>, <span class="ruby-string">&#39;--require LIBRARY&#39;</span>, <span class="ruby-constant">String</span>,
+          <span class="ruby-string">&#39;Require the library before executing your script&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">library</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:requires</span>] <span class="ruby-operator">||=</span> []
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:requires</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">library</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-s&#39;</span>, <span class="ruby-string">&#39;--stub FILE&#39;</span>, <span class="ruby-constant">String</span>, <span class="ruby-string">&#39;Stubbed files will be compiled as empty files&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stub</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:stubs</span>] <span class="ruby-operator">||=</span> []
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:stubs</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">stub</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-p&#39;</span>, <span class="ruby-string">&#39;--preload FILE&#39;</span>, <span class="ruby-constant">String</span>, <span class="ruby-string">&#39;Preloaded files will be prepared for dynamic requires&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stub</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:preload</span>] <span class="ruby-operator">||=</span> []
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:preload</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">stub</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-g&#39;</span>, <span class="ruby-string">&#39;--gem GEM_NAME&#39;</span>, <span class="ruby-constant">String</span>, <span class="ruby-string">&#39;Adds the specified GEM_NAME to Opal\s load path.&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:gems</span>] <span class="ruby-operator">||=</span> []
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:gems</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">g</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">section</span> <span class="ruby-string">&#39;Running Options:&#39;</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;--sexp&#39;</span>, <span class="ruby-string">&#39;Show Sexps&#39;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:sexp</span>] = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-m&#39;</span>, <span class="ruby-string">&#39;--map&#39;</span>, <span class="ruby-string">&#39;Show sourcemap&#39;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:map</span>] = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-c&#39;</span>, <span class="ruby-string">&#39;--compile&#39;</span>, <span class="ruby-string">&#39;Compile to JavaScript&#39;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:compile</span>] = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-R&#39;</span>, <span class="ruby-string">&#39;--runner RUNNER&#39;</span>, <span class="ruby-node">%w[nodejs server phantomjs applescript]</span>, <span class="ruby-string">&#39;Choose the runner: nodejs (default), server&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">runner</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:runner</span>] = <span class="ruby-identifier">runner</span>.<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;--server-port PORT&#39;</span>, <span class="ruby-string">&#39;Set the port for the server runner (default port: 3000)&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">port</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:runner</span>] = <span class="ruby-value">:server</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:port</span>] = <span class="ruby-identifier">port</span>.<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">end</span>
+
+
+  <span class="ruby-identifier">section</span> <span class="ruby-string">&#39;Compilation Options:&#39;</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-M&#39;</span>, <span class="ruby-string">&#39;--no-method-missing&#39;</span>, <span class="ruby-string">&#39;Enable/Disable method missing&#39;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:method_missing</span>] = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-O&#39;</span>, <span class="ruby-string">&#39;--no-opal&#39;</span>, <span class="ruby-string">&#39;Enable/Disable implicit `require &quot;opal&quot;`&#39;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:skip_opal_require</span>] = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-A&#39;</span>, <span class="ruby-string">&#39;--arity-check&#39;</span>, <span class="ruby-string">&#39;Enable arity check&#39;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:arity_check</span>] = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-V&#39;</span>, <span class="ruby-string">&#39;Enable inline Operators&#39;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:inline_operators</span>] = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">dynamic_require_levels</span> = <span class="ruby-node">%w[error warning ignore]</span>
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-D&#39;</span>, <span class="ruby-string">&#39;--dynamic-require LEVEL&#39;</span>, <span class="ruby-identifier">dynamic_require_levels</span>,
+                <span class="ruby-string">&#39;Set level of dynamic require severity.&#39;</span>,
+                <span class="ruby-node">&quot;(deafult: error, values: #{dynamic_require_levels.join(&#39;, &#39;)})&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">level</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:dynamic_require_severity</span>] = <span class="ruby-identifier">level</span>.<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-P&#39;</span>, <span class="ruby-string">&#39;--source-map [FILE]&#39;</span>, <span class="ruby-string">&#39;Enable/Disable source map&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:source_map_enabled</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:source_map_file</span>] = <span class="ruby-identifier">file</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">file</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&#39;-F&#39;</span>, <span class="ruby-string">&#39;--file FILE&#39;</span>, <span class="ruby-string">&#39;Set filename for compiled code&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:file</span>] = <span class="ruby-identifier">file</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;--irb&quot;</span>, <span class="ruby-string">&quot;Enable IRB var mode&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:irb</span>] = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">separator</span> <span class="ruby-string">&#39;&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Nodes::CaseNode</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Nodes::CaseNode 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Base.html">Opal::Nodes::Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/nodes/case_rb.html">opal/lib/opal/nodes/case.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-case_parts">case_parts</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-case_stmt">case_stmt</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-compile">compile</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-needs_closure-3F">needs_closure?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-case_parts">
+            
+              <b>case_parts</b>()
+            
+            <a href="../../../classes/Opal/Nodes/CaseNode.html#method-i-case_parts" name="method-i-case_parts" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-case_parts_source')" id="l_method-i-case_parts_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0a183c472f214fe6fbe1d490e9f2ef221f6cd0f6/lib/opal/nodes/case.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-case_parts_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/case.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">case_parts</span>
+  <span class="ruby-identifier">children</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-case_stmt">
+            
+              <b>case_stmt</b>()
+            
+            <a href="../../../classes/Opal/Nodes/CaseNode.html#method-i-case_stmt" name="method-i-case_stmt" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-case_stmt_source')" id="l_method-i-case_stmt_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0a183c472f214fe6fbe1d490e9f2ef221f6cd0f6/lib/opal/nodes/case.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-case_stmt_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/case.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">case_stmt</span>
+  <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">case_stmt</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compile">
+            
+              <b>compile</b>()
+            
+            <a href="../../../classes/Opal/Nodes/CaseNode.html#method-i-compile" name="method-i-compile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_source')" id="l_method-i-compile_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0a183c472f214fe6fbe1d490e9f2ef221f6cd0f6/lib/opal/nodes/case.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/case.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile</span>
+  <span class="ruby-identifier">handled_else</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">in_case</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">condition</span>
+      <span class="ruby-identifier">case_stmt</span>[<span class="ruby-value">:cond</span>] = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">add_local</span> <span class="ruby-string">&#39;$case&#39;</span>
+
+      <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;$case = &quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">condition</span>), <span class="ruby-string">&quot;;&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">case_parts</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">wen</span>, <span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">wen</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">wen</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:when</span>
+        <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">wen</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">needs_closure?</span>
+        <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;else &quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">idx</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">push</span> <span class="ruby-identifier">stmt</span>(<span class="ruby-identifier">wen</span>)
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">wen</span> <span class="ruby-comment"># s(:else)</span>
+        <span class="ruby-identifier">handled_else</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">wen</span> = <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">wen</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">needs_closure?</span>
+        <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;else {&quot;</span>, <span class="ruby-identifier">stmt</span>(<span class="ruby-identifier">wen</span>), <span class="ruby-string">&quot;}&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># if we are having a closure, we must return a usable value</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">needs_closure?</span> <span class="ruby-keyword">and</span> <span class="ruby-operator">!</span><span class="ruby-identifier">handled_else</span>
+      <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;else { return nil }&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">wrap</span> <span class="ruby-string">&#39;(function() {&#39;</span>, <span class="ruby-string">&#39;})()&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">needs_closure?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-needs_closure-3F">
+            
+              <b>needs_closure?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/CaseNode.html#method-i-needs_closure-3F" name="method-i-needs_closure-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-needs_closure-3F_source')" id="l_method-i-needs_closure-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0a183c472f214fe6fbe1d490e9f2ef221f6cd0f6/lib/opal/nodes/case.rb#L42" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-needs_closure-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/case.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">needs_closure?</span>
+  <span class="ruby-operator">!</span><span class="ruby-identifier">stmt?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

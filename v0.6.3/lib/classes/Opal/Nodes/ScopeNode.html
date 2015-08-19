@@ -1,0 +1,1905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Nodes::ScopeNode</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Nodes::ScopeNode 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Base.html">Opal::Nodes::Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/nodes/scope_rb.html">opal/lib/opal/nodes/scope.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_arg">add_arg</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_proto_ivar">add_proto_ivar</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_scope_gvar">add_scope_gvar</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_scope_ivar">add_scope_ivar</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_scope_local">add_scope_local</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_scope_temp">add_scope_temp</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-class-3F">class?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-class_scope-3F">class_scope?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-def-3F">def?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-def_in_class-3F">def_in_class?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-find_parent_def">find_parent_def</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_super_chain">get_super_chain</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-has_local-3F">has_local?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-has_temp-3F">has_temp?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-identify-21">identify!</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-identity">identity</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-in_scope">in_scope</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-in_while-3F">in_while?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-iter-3F">iter?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-module-3F">module?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-new_temp">new_temp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-next_temp">next_temp</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pop_while">pop_while</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-proto">proto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-push_while">push_while</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Q</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-queue_temp">queue_temp</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-sclass-3F">sclass?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-should_donate-3F">should_donate?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_donate_methods">to_donate_methods</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_vars">to_vars</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-top-3F">top?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-uses_block-21">uses_block!</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-uses_block-3F">uses_block?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>block_name</td>
+            <td class='attr-desc'><p>The given block <a href="ScopeNode.html#attribute-i-name">#name</a> for a
+def scope</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>catch_return</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>defs</td>
+            <td class='attr-desc'><p>true if singleton def, false otherwise</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>gvars</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>ivars</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>methods</td>
+            <td class='attr-desc'><p>used by modules to know what <a
+href="ScopeNode.html#attribute-i-methods">#methods</a> to donate to
+includees</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>mid</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>name</td>
+            <td class='attr-desc'><p>The class or module <a href="ScopeNode.html#attribute-i-name">#name</a> if
+this scope is a class scope</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>parent</td>
+            <td class='attr-desc'><p>Every scope can have a <a
+href="ScopeNode.html#attribute-i-parent">#parent</a> scope</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>scope_name</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>uses_super</td>
+            <td class='attr-desc'><p>uses parents super method</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>uses_zuper</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(*)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-operator">*</span>)
+  <span class="ruby-keyword">super</span>
+
+  <span class="ruby-ivar">@locals</span>   = []
+  <span class="ruby-ivar">@temps</span>    = []
+  <span class="ruby-ivar">@args</span>     = []
+  <span class="ruby-ivar">@ivars</span>    = []
+  <span class="ruby-ivar">@gvars</span>    = []
+  <span class="ruby-ivar">@parent</span>   = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@queue</span>    = []
+  <span class="ruby-ivar">@unique</span>   = <span class="ruby-string">&#39;a&#39;</span>
+  <span class="ruby-ivar">@while_stack</span> = []
+  <span class="ruby-ivar">@identity</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-ivar">@methods</span> = []
+
+  <span class="ruby-ivar">@uses_block</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-comment"># used by classes to store all ivars used in direct def methods</span>
+  <span class="ruby-ivar">@proto_ivars</span> = []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_arg">
+            
+              <b>add_arg</b>(arg)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-add_arg" name="method-i-add_arg" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_arg_source')" id="l_method-i-add_arg_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L175" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_arg_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_arg</span>(<span class="ruby-identifier">arg</span>)
+  <span class="ruby-ivar">@args</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">arg</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@args</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">arg</span>
+  <span class="ruby-identifier">arg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_proto_ivar">
+            
+              <b>add_proto_ivar</b>(ivar)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-add_proto_ivar" name="method-i-add_proto_ivar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_proto_ivar_source')" id="l_method-i-add_proto_ivar_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L171" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_proto_ivar_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_proto_ivar</span>(<span class="ruby-identifier">ivar</span>)
+  <span class="ruby-ivar">@proto_ivars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">ivar</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@proto_ivars</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">ivar</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_scope_gvar">
+            
+              <b>add_scope_gvar</b>(gvar)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-add_scope_gvar" name="method-i-add_scope_gvar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_scope_gvar_source')" id="l_method-i-add_scope_gvar_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L167" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_scope_gvar_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_scope_gvar</span>(<span class="ruby-identifier">gvar</span>)
+  <span class="ruby-ivar">@gvars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">gvar</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@gvars</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">gvar</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_scope_ivar">
+            
+              <b>add_scope_ivar</b>(ivar)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-add_scope_ivar" name="method-i-add_scope_ivar" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_scope_ivar_source')" id="l_method-i-add_scope_ivar_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L159" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_scope_ivar_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_scope_ivar</span>(<span class="ruby-identifier">ivar</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">def_in_class?</span>
+    <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">add_proto_ivar</span> <span class="ruby-identifier">ivar</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@ivars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">ivar</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@ivars</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">ivar</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_scope_local">
+            
+              <b>add_scope_local</b>(local)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-add_scope_local" name="method-i-add_scope_local" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_scope_local_source')" id="l_method-i-add_scope_local_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L180" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_scope_local_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_scope_local</span>(<span class="ruby-identifier">local</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">has_local?</span> <span class="ruby-identifier">local</span>
+
+  <span class="ruby-ivar">@locals</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">local</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_scope_temp">
+            
+              <b>add_scope_temp</b>(*tmps)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-add_scope_temp" name="method-i-add_scope_temp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_scope_temp_source')" id="l_method-i-add_scope_temp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L193" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_scope_temp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_scope_temp</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">tmps</span>)
+  <span class="ruby-ivar">@temps</span>.<span class="ruby-identifier">push</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">tmps</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-class-3F">
+            
+              <b>class?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-class-3F" name="method-i-class-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns true if this is strictly a class scope</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-class-3F_source')" id="l_method-i-class-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-class-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">class?</span>
+  <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:class</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-class_scope-3F">
+            
+              <b>class_scope?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-class_scope-3F" name="method-i-class_scope-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns true if this scope is a class/module body scope</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-class_scope-3F_source')" id="l_method-i-class_scope-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-class_scope-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">class_scope?</span>
+  <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:class</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:module</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-def-3F">
+            
+              <b>def?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-def-3F" name="method-i-def-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-def-3F_source')" id="l_method-i-def-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L94" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-def-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">def?</span>
+  <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:def</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-def_in_class-3F">
+            
+              <b>def_in_class?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-def_in_class-3F" name="method-i-def_in_class-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Is this a normal def method directly inside a <a
+href="ScopeNode.html#method-i-class-3F">#class?</a> This is used for
+optimizing <a href="ScopeNode.html#attribute-i-ivars">#ivars</a> as we can
+set them to nil in the class body</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-def_in_class-3F_source')" id="l_method-i-def_in_class-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L101" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-def_in_class-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">def_in_class?</span>
+  <span class="ruby-operator">!</span><span class="ruby-ivar">@defs</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:def</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@parent</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">class?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_parent_def">
+            
+              <b>find_parent_def</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-find_parent_def" name="method-i-find_parent_def" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_parent_def_source')" id="l_method-i-find_parent_def_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L255" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_parent_def_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 255</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_parent_def</span>
+  <span class="ruby-identifier">scope</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">parent</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">def?</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">scope</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_super_chain">
+            
+              <b>get_super_chain</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-get_super_chain" name="method-i-get_super_chain" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_super_chain_source')" id="l_method-i-get_super_chain_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L266" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_super_chain_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 266</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_super_chain</span>
+  <span class="ruby-identifier">chain</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">defn</span>, <span class="ruby-identifier">mid</span> = [], <span class="ruby-keyword">self</span>, <span class="ruby-string">&#39;null&#39;</span>, <span class="ruby-string">&#39;null&#39;</span>
+
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">scope</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:iter</span>
+      <span class="ruby-identifier">chain</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">identify!</span>
+      <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">parent</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">parent</span>
+
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:def</span>
+      <span class="ruby-identifier">defn</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">identify!</span>
+      <span class="ruby-identifier">mid</span>  = <span class="ruby-node">&quot;&#39;#{scope.mid}&#39;&quot;</span>
+      <span class="ruby-keyword">break</span>
+
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  [<span class="ruby-identifier">chain</span>, <span class="ruby-identifier">defn</span>, <span class="ruby-identifier">mid</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-has_local-3F">
+            
+              <b>has_local?</b>(local)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-has_local-3F" name="method-i-has_local-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-has_local-3F_source')" id="l_method-i-has_local-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L186" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-has_local-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">has_local?</span>(<span class="ruby-identifier">local</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@locals</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">local</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@args</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">local</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">has_local?</span>(<span class="ruby-identifier">local</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parent</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:iter</span>
+
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-has_temp-3F">
+            
+              <b>has_temp?</b>(tmp)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-has_temp-3F" name="method-i-has_temp-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-has_temp-3F_source')" id="l_method-i-has_temp-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L197" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-has_temp-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">has_temp?</span>(<span class="ruby-identifier">tmp</span>)
+  <span class="ruby-ivar">@temps</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">tmp</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-identify-21">
+            
+              <b>identify!</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-identify-21" name="method-i-identify-21" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-identify-21_source')" id="l_method-i-identify-21_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L242" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-identify-21_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 242</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">identify!</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@identity</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@identity</span>
+
+  <span class="ruby-ivar">@identity</span> = <span class="ruby-ivar">@compiler</span>.<span class="ruby-identifier">unique_temp</span>
+  <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">add_scope_temp</span> <span class="ruby-ivar">@identity</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parent</span>
+
+  <span class="ruby-ivar">@identity</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-identity">
+            
+              <b>identity</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-identity" name="method-i-identity" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-identity_source')" id="l_method-i-identity_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L251" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-identity_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">identity</span>
+  <span class="ruby-ivar">@identity</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-in_scope">
+            
+              <b>in_scope</b>(&amp;block)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-in_scope" name="method-i-in_scope" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-in_scope_source')" id="l_method-i-in_scope_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-in_scope_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">in_scope</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">indent</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@parent</span> = <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">scope</span>
+    <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">scope</span> = <span class="ruby-keyword">self</span>
+    <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span> <span class="ruby-keyword">self</span>
+    <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">scope</span> = <span class="ruby-ivar">@parent</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-in_while-3F">
+            
+              <b>in_while?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-in_while-3F" name="method-i-in_while-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-in_while-3F_source')" id="l_method-i-in_while-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L229" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-in_while-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">in_while?</span>
+  <span class="ruby-operator">!</span><span class="ruby-ivar">@while_stack</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-iter-3F">
+            
+              <b>iter?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-iter-3F" name="method-i-iter-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>True if a block/iter scope</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-iter-3F_source')" id="l_method-i-iter-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L90" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-iter-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">iter?</span>
+  <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:iter</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-module-3F">
+            
+              <b>module?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-module-3F" name="method-i-module-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>True if this is a module scope</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-module-3F_source')" id="l_method-i-module-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L76" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-module-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">module?</span>
+  <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:module</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-new_temp">
+            
+              <b>new_temp</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-new_temp" name="method-i-new_temp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-new_temp_source')" id="l_method-i-new_temp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L201" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-new_temp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">new_temp</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@queue</span>.<span class="ruby-identifier">pop</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@queue</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">next_temp</span>
+  <span class="ruby-ivar">@temps</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+  <span class="ruby-identifier">tmp</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-next_temp">
+            
+              <b>next_temp</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-next_temp" name="method-i-next_temp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-next_temp_source')" id="l_method-i-next_temp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L209" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-next_temp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">next_temp</span>
+  <span class="ruby-identifier">tmp</span> = <span class="ruby-node">&quot;$#{@unique}&quot;</span>
+  <span class="ruby-ivar">@unique</span> = <span class="ruby-ivar">@unique</span>.<span class="ruby-identifier">succ</span>
+  <span class="ruby-identifier">tmp</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pop_while">
+            
+              <b>pop_while</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-pop_while" name="method-i-pop_while" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pop_while_source')" id="l_method-i-pop_while_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L225" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pop_while_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pop_while</span>
+  <span class="ruby-ivar">@while_stack</span>.<span class="ruby-identifier">pop</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-proto">
+            
+              <b>proto</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-proto" name="method-i-proto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Inside a class or module scope, the javascript variable <a
+href="ScopeNode.html#attribute-i-name">#name</a> returned by this function
+points to the classes&#39; prototype. This is the target to where <a
+href="ScopeNode.html#attribute-i-methods">#methods</a> are actually added
+inside a class body.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-proto_source')" id="l_method-i-proto_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L108" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-proto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">proto</span>
+  <span class="ruby-string">&quot;def&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-push_while">
+            
+              <b>push_while</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-push_while" name="method-i-push_while" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-push_while_source')" id="l_method-i-push_while_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L219" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-push_while_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">push_while</span>
+  <span class="ruby-identifier">info</span> = {}
+  <span class="ruby-ivar">@while_stack</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">info</span>
+  <span class="ruby-identifier">info</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-queue_temp">
+            
+              <b>queue_temp</b>(name)
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-queue_temp" name="method-i-queue_temp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-queue_temp_source')" id="l_method-i-queue_temp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L215" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-queue_temp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">queue_temp</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@queue</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sclass-3F">
+            
+              <b>sclass?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-sclass-3F" name="method-i-sclass-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sclass-3F_source')" id="l_method-i-sclass-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sclass-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sclass?</span>
+  <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:sclass</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-should_donate-3F">
+            
+              <b>should_donate?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-should_donate-3F" name="method-i-should_donate-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>A scope donates its <a
+href="ScopeNode.html#attribute-i-methods">#methods</a> if it is a module,
+or the core <a href="../../Object.html">Object</a> class. Modules donate
+their <a href="ScopeNode.html#attribute-i-methods">#methods</a> to classes
+or objects they are included in. <a href="../../Object.html">Object</a>
+donates <a href="ScopeNode.html#attribute-i-methods">#methods</a> to
+bridged classes whose native prototypes do not actually inherit from <a
+href="../../Opal.html">Opal</a>.Object.prototype.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-should_donate-3F_source')" id="l_method-i-should_donate-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L116" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-should_donate-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">should_donate?</span>
+  <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:module</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_donate_methods">
+            
+              <b>to_donate_methods</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-to_donate_methods" name="method-i-to_donate_methods" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Generates code for this module to donate <a
+href="ScopeNode.html#attribute-i-methods">#methods</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_donate_methods_source')" id="l_method-i-to_donate_methods_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L151" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_donate_methods_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_donate_methods</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">should_donate?</span> <span class="ruby-keyword">and</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@methods</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">fragment</span>(<span class="ruby-string">&quot;%s;$opal.donate(self, [%s]);&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-ivar">@compiler</span>.<span class="ruby-identifier">parser_indent</span>, <span class="ruby-ivar">@methods</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:inspect</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;, &#39;</span>)])
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">fragment</span>(<span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_vars">
+            
+              <b>to_vars</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-to_vars" name="method-i-to_vars" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Vars to use inside each scope</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_vars_source')" id="l_method-i-to_vars_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L122" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_vars_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_vars</span>
+  <span class="ruby-identifier">vars</span> = <span class="ruby-ivar">@temps</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">vars</span>.<span class="ruby-identifier">push</span>(<span class="ruby-operator">*</span><span class="ruby-ivar">@locals</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{l} = nil&quot;</span> })
+
+  <span class="ruby-identifier">iv</span> = <span class="ruby-identifier">ivars</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ivar</span><span class="ruby-operator">|</span>
+    <span class="ruby-node">&quot;if (self#{ivar} == null) self#{ivar} = nil;\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">gv</span> = <span class="ruby-identifier">gvars</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">gvar</span><span class="ruby-operator">|</span>
+    <span class="ruby-node">&quot;if ($gvars#{gvar} == null) $gvars#{gvar} = nil;\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">indent</span> = <span class="ruby-ivar">@compiler</span>.<span class="ruby-identifier">parser_indent</span>
+  <span class="ruby-identifier">str</span>  = <span class="ruby-identifier">vars</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;var #{vars.join &#39;, &#39;};\n&quot;</span>
+  <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;#{indent}#{iv.join indent}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">ivars</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">str</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;#{indent}#{gv.join indent}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">gvars</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">class?</span> <span class="ruby-keyword">and</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@proto_ivars</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-comment">#raise &quot;FIXME to_vars&quot;</span>
+    <span class="ruby-identifier">pvars</span> = <span class="ruby-ivar">@proto_ivars</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{proto}#{i}&quot;</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; = &#39;</span>)
+    <span class="ruby-identifier">result</span> = <span class="ruby-string">&quot;%s\n%s%s = nil;&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">str</span>, <span class="ruby-identifier">indent</span>, <span class="ruby-identifier">pvars</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-identifier">str</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">fragment</span>(<span class="ruby-identifier">result</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-top-3F">
+            
+              <b>top?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-top-3F" name="method-i-top-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns true if this is a top scope (main file body)</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-top-3F_source')" id="l_method-i-top-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-top-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">top?</span>
+  <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:top</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-uses_block-21">
+            
+              <b>uses_block!</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-uses_block-21" name="method-i-uses_block-21" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-uses_block-21_source')" id="l_method-i-uses_block-21_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L233" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-uses_block-21_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">uses_block!</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:iter</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@parent</span>
+    <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">uses_block!</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@uses_block</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">identify!</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-uses_block-3F">
+            
+              <b>uses_block?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ScopeNode.html#method-i-uses_block-3F" name="method-i-uses_block-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-uses_block-3F_source')" id="l_method-i-uses_block-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/nodes/scope.rb#L287" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-uses_block-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/scope.rb, line 287</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">uses_block?</span>
+  <span class="ruby-ivar">@uses_block</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

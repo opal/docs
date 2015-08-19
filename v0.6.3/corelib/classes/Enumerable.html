@@ -1,0 +1,3180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Enumerable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Enumerable 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/opal/corelib/enumerable_rb.html">opal/opal/corelib/enumerable.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-all-3F">all?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-any-3F">any?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-chunk">chunk</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-collect">collect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-collect_concat">collect_concat</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-count">count</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cycle">cycle</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-detect">detect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-drop">drop</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-drop_while">drop_while</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each_cons">each_cons</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_entry">each_entry</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_slice">each_slice</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_with_index">each_with_index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_with_object">each_with_object</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-entries">entries</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-find">find</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_all">find_all</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_index">find_index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-first">first</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-flat_map">flat_map</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-grep">grep</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-group_by">group_by</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-include-3F">include?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-inject">inject</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lazy">lazy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-map">map</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-max">max</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-max_by">max_by</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-member-3F">member?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-min">min</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-min_by">min_by</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-minmax">minmax</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-minmax_by">minmax_by</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-none-3F">none?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-one-3F">one?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-partition">partition</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-reduce">reduce</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-reject">reject</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-reverse_each">reverse_each</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-select">select</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-slice_before">slice_before</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sort">sort</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sort_by">sort_by</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-take">take</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-take_while">take_while</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_a">to_a</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Z</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-zip">zip</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-all-3F">
+            
+              <b>all?</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-all-3F" name="method-i-all-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-all-3F_source')" id="l_method-i-all-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L2" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-all-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">all?</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    var result = true;
+
+    if (block !== nil) {
+      self.$each._p = function() {
+        var value = $opal.$yieldX(block, arguments);
+
+        if (value === $breaker) {
+          result = $breaker.$v;
+          return $breaker;
+        }
+
+        if (#{Opal.falsy?(`value`)}) {
+          result = false;
+          return $breaker;
+        }
+      }
+    }
+    else {
+      self.$each._p = function(obj) {
+        if (arguments.length == 1 &amp;&amp; #{Opal.falsy?(`obj`)}) {
+          result = false;
+          return $breaker;
+        }
+      }
+    }
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-any-3F">
+            
+              <b>any?</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-any-3F" name="method-i-any-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-any-3F_source')" id="l_method-i-any-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-any-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">any?</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    var result = false;
+
+    if (block !== nil) {
+      self.$each._p = function() {
+        var value = $opal.$yieldX(block, arguments);
+
+        if (value === $breaker) {
+          result = $breaker.$v;
+          return $breaker;
+        }
+
+        if (#{Opal.truthy?(`value`)}) {
+          result = true;
+          return $breaker;
+        }
+      };
+    }
+    else {
+      self.$each._p = function(obj) {
+        if (arguments.length != 1 || #{Opal.truthy?(`obj`)}) {
+          result = true;
+          return $breaker;
+        }
+      }
+    }
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-chunk">
+            
+              <b>chunk</b>(state = undefined, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-chunk" name="method-i-chunk" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-chunk_source')" id="l_method-i-chunk_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L70" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-chunk_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">chunk</span>(<span class="ruby-identifier">state</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-collect">
+            
+              <b>collect</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-collect" name="method-i-collect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Enumerable.html#method-i-map">map</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-collect_source')" id="l_method-i-collect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L74" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-collect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">collect</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">collect</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-value">%x{
+    var result = [];
+
+    self.$each._p = function() {
+      var value = $opal.$yieldX(block, arguments);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      result.push(value);
+    };
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-collect_concat">
+            
+              <b>collect_concat</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-collect_concat" name="method-i-collect_concat" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Enumerable.html#method-i-flat_map">flat_map</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-collect_concat_source')" id="l_method-i-collect_concat_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L97" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-collect_concat_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">collect_concat</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">collect_concat</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-identifier">item</span> }.<span class="ruby-identifier">flatten</span>(<span class="ruby-number">1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-count">
+            
+              <b>count</b>(object = undefined, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-count" name="method-i-count" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-count_source')" id="l_method-i-count_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L102" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-count_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">count</span>(<span class="ruby-identifier">object</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    var result = 0;
+
+    if (object != null) {
+      block = function() {
+        return #{Opal.destructure(`arguments`) == `object`};
+      };
+    }
+    else if (block === nil) {
+      block = function() { return true; };
+    }
+
+    self.$each._p = function() {
+      var value = $opal.$yieldX(block, arguments);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      if (#{Opal.truthy?(`value`)}) {
+        result++;
+      }
+    }
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cycle">
+            
+              <b>cycle</b>(n = nil, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-cycle" name="method-i-cycle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cycle_source')" id="l_method-i-cycle_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L134" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cycle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cycle</span>(<span class="ruby-identifier">n</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">cycle</span>, <span class="ruby-identifier">n</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">n</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to!</span> <span class="ruby-identifier">n</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-value">:to_int</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-value">%x`n &lt;= 0`</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-node">%x{
+    var result,
+        all  = [];
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)},
+          value = $opal.$yield1(block, param);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      all.push(param);
+    }
+
+    self.$each();
+
+    if (result !== undefined) {
+      return result;
+    }
+
+    if (all.length === 0) {
+      return nil;
+    }
+  }</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-value">%x{
+      while (true) {
+        for (var i = 0, length = all.length; i &lt; length; i++) {
+          var value = $opal.$yield1(block, all[i]);
+
+          if (value === $breaker) {
+            return $breaker.$v;
+          }
+        }
+      }
+    }</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-value">%x{
+      while (n &gt; 1) {
+        for (var i = 0, length = all.length; i &lt; length; i++) {
+          var value = $opal.$yield1(block, all[i]);
+
+          if (value === $breaker) {
+            return $breaker.$v;
+          }
+        }
+
+        n--;
+      }
+    }</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-detect">
+            
+              <b>detect</b>(ifnone = undefined, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-detect" name="method-i-detect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Enumerable.html#method-i-find">find</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-detect_source')" id="l_method-i-detect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L199" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-detect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">detect</span>(<span class="ruby-identifier">ifnone</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">detect</span>, <span class="ruby-identifier">ifnone</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-node">%x{
+    var result = undefined;
+
+    self.$each._p = function() {
+      var params = #{Opal.destructure(`arguments`)},
+          value  = $opal.$yield1(block, params);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      if (#{Opal.truthy?(`value`)}) {
+        result = params;
+        return $breaker;
+      }
+    };
+
+    self.$each();
+
+    if (result === undefined &amp;&amp; ifnone !== undefined) {
+      if (typeof(ifnone) === &#39;function&#39;) {
+        result = ifnone();
+      }
+      else {
+        result = ifnone;
+      }
+    }
+
+    return result === undefined ? nil : result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-drop">
+            
+              <b>drop</b>(number)
+            
+            <a href="../classes/Enumerable.html#method-i-drop" name="method-i-drop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-drop_source')" id="l_method-i-drop_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L235" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-drop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">drop</span>(<span class="ruby-identifier">number</span>)
+  <span class="ruby-identifier">number</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span> <span class="ruby-identifier">number</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-value">:to_int</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-value">%x`number &lt; 0`</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;attempt to drop negative size&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-node">%x{
+    var result  = [],
+        current = 0;
+
+    self.$each._p = function() {
+      if (number &lt;= current) {
+        result.push(#{Opal.destructure(`arguments`)});
+      }
+
+      current++;
+    };
+
+    self.$each()
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-drop_while">
+            
+              <b>drop_while</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-drop_while" name="method-i-drop_while" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-drop_while_source')" id="l_method-i-drop_while_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L260" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-drop_while_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">drop_while</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">drop_while</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-node">%x{
+    var result   = [],
+        dropping = true;
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)};
+
+      if (dropping) {
+        var value = $opal.$yield1(block, param);
+
+        if (value === $breaker) {
+          result = $breaker.$v;
+          return $breaker;
+        }
+
+        if (#{Opal.falsy?(`value`)}) {
+          dropping = false;
+          result.push(param);
+        }
+      }
+      else {
+        result.push(param);
+      }
+    };
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_cons">
+            
+              <b>each_cons</b>(n, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-each_cons" name="method-i-each_cons" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_cons_source')" id="l_method-i-each_cons_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L294" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_cons_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 294</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_cons</span>(<span class="ruby-identifier">n</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_entry">
+            
+              <b>each_entry</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-each_entry" name="method-i-each_entry" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_entry_source')" id="l_method-i-each_entry_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L298" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_entry_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_entry</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_slice">
+            
+              <b>each_slice</b>(n, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-each_slice" name="method-i-each_slice" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_slice_source')" id="l_method-i-each_slice_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L302" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_slice_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_slice</span>(<span class="ruby-identifier">n</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">n</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span> <span class="ruby-identifier">n</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-value">:to_int</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-value">%x`n &lt;= 0`</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;invalid slice size&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">each_slice</span>, <span class="ruby-identifier">n</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-node">%x{
+    var result,
+        slice = []
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)};
+
+      slice.push(param);
+
+      if (slice.length === n) {
+        if ($opal.$yield1(block, slice) === $breaker) {
+          result = $breaker.$v;
+          return $breaker;
+        }
+
+        slice = [];
+      }
+    };
+
+    self.$each();
+
+    if (result !== undefined) {
+      return result;
+    }
+
+    // our &quot;last&quot; group, if smaller than n then won&#39;t have been yielded
+    if (slice.length &gt; 0) {
+      if ($opal.$yield1(block, slice) === $breaker) {
+        return $breaker.$v;
+      }
+    }
+  }</span>
+
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_with_index">
+            
+              <b>each_with_index</b>(*args, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-each_with_index" name="method-i-each_with_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_with_index_source')" id="l_method-i-each_with_index_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L347" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_with_index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 347</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_with_index</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">each_with_index</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-node">%x{
+    var result,
+        index = 0;
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)},
+          value = block(param, index);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      index++;
+    };
+
+    self.$each.apply(self, args);
+
+    if (result !== undefined) {
+      return result;
+    }
+  }</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_with_object">
+            
+              <b>each_with_object</b>(object, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-each_with_object" name="method-i-each_with_object" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_with_object_source')" id="l_method-i-each_with_object_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L376" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_with_object_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 376</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_with_object</span>(<span class="ruby-identifier">object</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">each_with_object</span>, <span class="ruby-identifier">object</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-node">%x{
+    var result;
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)},
+          value = block(param, object);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+    };
+
+    self.$each();
+
+    if (result !== undefined) {
+      return result;
+    }
+  }</span>
+
+  <span class="ruby-identifier">object</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-entries">
+            
+              <b>entries</b>(*args)
+            
+            <a href="../classes/Enumerable.html#method-i-entries" name="method-i-entries" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Enumerable.html#method-i-to_a">to_a</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-entries_source')" id="l_method-i-entries_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L402" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-entries_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 402</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">entries</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-node">%x{
+    var result = [];
+
+    self.$each._p = function() {
+      result.push(#{Opal.destructure(`arguments`)});
+    };
+
+    self.$each.apply(self, args);
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find">
+            
+              <b>find</b>(ifnone = undefined, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-find" name="method-i-find" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Enumerable.html#method-i-detect">detect</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_all">
+            
+              <b>find_all</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-find_all" name="method-i-find_all" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Enumerable.html#method-i-select">select</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_all_source')" id="l_method-i-find_all_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L418" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_all_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 418</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_all</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">find_all</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-node">%x{
+    var result = [];
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)},
+          value = $opal.$yield1(block, param);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      if (#{Opal.truthy?(`value`)}) {
+        result.push(param);
+      }
+    };
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_index">
+            
+              <b>find_index</b>(object = undefined, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-find_index" name="method-i-find_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_index_source')" id="l_method-i-find_index_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L444" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 444</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_index</span>(<span class="ruby-identifier">object</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">find_index</span> <span class="ruby-keyword">if</span> <span class="ruby-value">%x`object === undefined &amp;&amp; block === nil`</span>
+
+  <span class="ruby-node">%x{
+    var result = nil,
+        index  = 0;
+
+    if (object != null) {
+      self.$each._p = function() {
+        var param = #{Opal.destructure(`arguments`)};
+
+        if (#{`param` == `object`}) {
+          result = index;
+          return $breaker;
+        }
+
+        index += 1;
+      };
+    }
+    else if (block !== nil) {
+      self.$each._p = function() {
+        var value = $opal.$yieldX(block, arguments);
+
+        if (value === $breaker) {
+          result = $breaker.$v;
+          return $breaker;
+        }
+
+        if (#{Opal.truthy?(`value`)}) {
+          result = index;
+          return $breaker;
+        }
+
+        index += 1;
+      };
+    }
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first">
+            
+              <b>first</b>(number = undefined)
+            
+            <a href="../classes/Enumerable.html#method-i-first" name="method-i-first" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_source')" id="l_method-i-first_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L487" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-first_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 487</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first</span>(<span class="ruby-identifier">number</span> = <span class="ruby-identifier">undefined</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-value">%x`number === undefined`</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-keyword">nil</span>
+
+    <span class="ruby-node">%x{
+      self.$each._p = function() {
+        result = #{Opal.destructure(`arguments`)};
+
+        return $breaker;
+      };
+
+      self.$each();
+    }</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">result</span> = []
+    <span class="ruby-identifier">number</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span> <span class="ruby-identifier">number</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-value">:to_int</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-value">%x`number &lt; 0`</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;attempt to take negative size&#39;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-value">%x`number == 0`</span>
+      <span class="ruby-keyword">return</span> []
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-node">%x{
+      var current = 0,
+          number  = #{Opal.coerce_to number, Integer, :to_int};
+
+      self.$each._p = function() {
+        result.push(#{Opal.destructure(`arguments`)});
+
+        if (number &lt;= ++current) {
+          return $breaker;
+        }
+      };
+
+      self.$each();
+    }</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-flat_map">
+            
+              <b>flat_map</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-flat_map" name="method-i-flat_map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Enumerable.html#method-i-collect_concat">collect_concat</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-grep">
+            
+              <b>grep</b>(pattern, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-grep" name="method-i-grep" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-grep_source')" id="l_method-i-grep_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L533" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-grep_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 533</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">grep</span>(<span class="ruby-identifier">pattern</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    var result = [];
+
+    if (block !== nil) {
+      self.$each._p = function() {
+        var param = #{Opal.destructure(`arguments`)},
+            value = #{pattern === `param`};
+
+        if (#{Opal.truthy?(`value`)}) {
+          value = $opal.$yield1(block, param);
+
+          if (value === $breaker) {
+            result = $breaker.$v;
+            return $breaker;
+          }
+
+          result.push(value);
+        }
+      };
+    }
+    else {
+      self.$each._p = function() {
+        var param = #{Opal.destructure(`arguments`)},
+            value = #{pattern === `param`};
+
+        if (#{Opal.truthy?(`value`)}) {
+          result.push(param);
+        }
+      };
+    }
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-group_by">
+            
+              <b>group_by</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-group_by" name="method-i-group_by" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-group_by_source')" id="l_method-i-group_by_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L571" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-group_by_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 571</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">group_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">group_by</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-identifier">hash</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-node">%x{
+    var result;
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)},
+          value = $opal.$yield1(block, param);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      #{(hash[`value`] ||= []) &lt;&lt; `param`};
+    }
+
+    self.$each();
+
+    if (result !== undefined) {
+      return result;
+    }
+  }</span>
+
+  <span class="ruby-identifier">hash</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-include-3F">
+            
+              <b>include?</b>(obj)
+            
+            <a href="../classes/Enumerable.html#method-i-include-3F" name="method-i-include-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Enumerable.html#method-i-member-3F">member?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-include-3F_source')" id="l_method-i-include-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L601" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-include-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 601</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">include?</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-node">%x{
+    var result = false;
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)};
+
+      if (#{`param` == obj}) {
+        result = true;
+        return $breaker;
+      }
+    }
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inject">
+            
+              <b>inject</b>(object = undefined, sym = undefined, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-inject" name="method-i-inject" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Enumerable.html#method-i-reduce">reduce</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inject_source')" id="l_method-i-inject_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L620" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inject_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 620</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inject</span>(<span class="ruby-identifier">object</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-identifier">sym</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    var result = object;
+
+    if (block !== nil &amp;&amp; sym === undefined) {
+      self.$each._p = function() {
+        var value = #{Opal.destructure(`arguments`)};
+
+        if (result === undefined) {
+          result = value;
+          return;
+        }
+
+        value = $opal.$yieldX(block, [result, value]);
+
+        if (value === $breaker) {
+          result = $breaker.$v;
+          return $breaker;
+        }
+
+        result = value;
+      };
+    }
+    else {
+      if (sym === undefined) {
+        if (!#{Symbol === object}) {
+          #{raise TypeError, &quot;#{object.inspect} is not a Symbol&quot;};
+        }
+
+        sym    = object;
+        result = undefined;
+      }
+
+      self.$each._p = function() {
+        var value = #{Opal.destructure(`arguments`)};
+
+        if (result === undefined) {
+          result = value;
+          return;
+        }
+
+        result = #{`result`.__send__ sym, `value`};
+      };
+    }
+
+    self.$each();
+
+    return result == undefined ? nil : result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lazy">
+            
+              <b>lazy</b>()
+            
+            <a href="../classes/Enumerable.html#method-i-lazy" name="method-i-lazy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lazy_source')" id="l_method-i-lazy_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L671" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-lazy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 671</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lazy</span>
+  <span class="ruby-constant">Enumerator</span><span class="ruby-operator">::</span><span class="ruby-constant">Lazy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">enumerator_size</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">enum</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">yield</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-map">
+            
+              <b>map</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-map" name="method-i-map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Enumerable.html#method-i-collect">collect</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-max">
+            
+              <b>max</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-max" name="method-i-max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-max_source')" id="l_method-i-max_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L684" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 684</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">max</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    var result;
+
+    if (block !== nil) {
+      self.$each._p = function() {
+        var param = #{Opal.destructure(`arguments`)};
+
+        if (result === undefined) {
+          result = param;
+          return;
+        }
+
+        var value = block(param, result);
+
+        if (value === $breaker) {
+          result = $breaker.$v;
+          return $breaker;
+        }
+
+        if (value === nil) {
+          #{raise ArgumentError, &quot;comparison failed&quot;};
+        }
+
+        if (value &gt; 0) {
+          result = param;
+        }
+      };
+    }
+    else {
+      self.$each._p = function() {
+        var param = #{Opal.destructure(`arguments`)};
+
+        if (result === undefined) {
+          result = param;
+          return;
+        }
+
+        if (#{Opal.compare(`param`, `result`)} &gt; 0) {
+          result = param;
+        }
+      };
+    }
+
+    self.$each();
+
+    return result === undefined ? nil : result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-max_by">
+            
+              <b>max_by</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-max_by" name="method-i-max_by" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-max_by_source')" id="l_method-i-max_by_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L734" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-max_by_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 734</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">max_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">max_by</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block</span>
+
+  <span class="ruby-node">%x{
+    var result,
+        by;
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)},
+          value = $opal.$yield1(block, param);
+
+      if (result === undefined) {
+        result = param;
+        by     = value;
+        return;
+      }
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      if (#{`value` &lt;=&gt; `by`} &gt; 0) {
+        result = param
+        by     = value;
+      }
+    };
+
+    self.$each();
+
+    return result === undefined ? nil : result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-member-3F">
+            
+              <b>member?</b>(obj)
+            
+            <a href="../classes/Enumerable.html#method-i-member-3F" name="method-i-member-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Enumerable.html#method-i-include-3F">include?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-min">
+            
+              <b>min</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-min" name="method-i-min" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-min_source')" id="l_method-i-min_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L770" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-min_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 770</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">min</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    var result;
+
+    if (block !== nil) {
+      self.$each._p = function() {
+        var param = #{Opal.destructure(`arguments`)};
+
+        if (result === undefined) {
+          result = param;
+          return;
+        }
+
+        var value = block(param, result);
+
+        if (value === $breaker) {
+          result = $breaker.$v;
+          return $breaker;
+        }
+
+        if (value === nil) {
+          #{raise ArgumentError, &quot;comparison failed&quot;};
+        }
+
+        if (value &lt; 0) {
+          result = param;
+        }
+      };
+    }
+    else {
+      self.$each._p = function() {
+        var param = #{Opal.destructure(`arguments`)};
+
+        if (result === undefined) {
+          result = param;
+          return;
+        }
+
+        if (#{Opal.compare(`param`, `result`)} &lt; 0) {
+          result = param;
+        }
+      };
+    }
+
+    self.$each();
+
+    return result === undefined ? nil : result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-min_by">
+            
+              <b>min_by</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-min_by" name="method-i-min_by" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-min_by_source')" id="l_method-i-min_by_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L820" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-min_by_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 820</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">min_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">min_by</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block</span>
+
+  <span class="ruby-node">%x{
+    var result,
+        by;
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)},
+          value = $opal.$yield1(block, param);
+
+      if (result === undefined) {
+        result = param;
+        by     = value;
+        return;
+      }
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      if (#{`value` &lt;=&gt; `by`} &lt; 0) {
+        result = param
+        by     = value;
+      }
+    };
+
+    self.$each();
+
+    return result === undefined ? nil : result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-minmax">
+            
+              <b>minmax</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-minmax" name="method-i-minmax" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-minmax_source')" id="l_method-i-minmax_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L854" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-minmax_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 854</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">minmax</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-minmax_by">
+            
+              <b>minmax_by</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-minmax_by" name="method-i-minmax_by" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-minmax_by_source')" id="l_method-i-minmax_by_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L858" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-minmax_by_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 858</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">minmax_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-none-3F">
+            
+              <b>none?</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-none-3F" name="method-i-none-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-none-3F_source')" id="l_method-i-none-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L862" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-none-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 862</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">none?</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    var result = true;
+
+    if (block !== nil) {
+      self.$each._p = function() {
+        var value = $opal.$yieldX(block, arguments);
+
+        if (value === $breaker) {
+          result = $breaker.$v;
+          return $breaker;
+        }
+
+        if (#{Opal.truthy?(`value`)}) {
+          result = false;
+          return $breaker;
+        }
+      }
+    }
+    else {
+      self.$each._p = function() {
+        var value = #{Opal.destructure(`arguments`)};
+
+        if (#{Opal.truthy?(`value`)}) {
+          result = false;
+          return $breaker;
+        }
+      };
+    }
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-one-3F">
+            
+              <b>one?</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-one-3F" name="method-i-one-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-one-3F_source')" id="l_method-i-one-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L898" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-one-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 898</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">one?</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    var result = false;
+
+    if (block !== nil) {
+      self.$each._p = function() {
+        var value = $opal.$yieldX(block, arguments);
+
+        if (value === $breaker) {
+          result = $breaker.$v;
+          return $breaker;
+        }
+
+        if (#{Opal.truthy?(`value`)}) {
+          if (result === true) {
+            result = false;
+            return $breaker;
+          }
+
+          result = true;
+        }
+      }
+    }
+    else {
+      self.$each._p = function() {
+        var value = #{Opal.destructure(`arguments`)};
+
+        if (#{Opal.truthy?(`value`)}) {
+          if (result === true) {
+            result = false;
+            return $breaker;
+          }
+
+          result = true;
+        }
+      }
+    }
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-partition">
+            
+              <b>partition</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-partition" name="method-i-partition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-partition_source')" id="l_method-i-partition_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L942" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-partition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 942</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">partition</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">partition</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-node">%x{
+    var truthy = [], falsy = [];
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)},
+          value = $opal.$yield1(block, param);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      if (#{Opal.truthy?(`value`)}) {
+        truthy.push(param);
+      }
+      else {
+        falsy.push(param);
+      }
+    };
+
+    self.$each();
+
+    return [truthy, falsy];
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reduce">
+            
+              <b>reduce</b>(object = undefined, sym = undefined, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-reduce" name="method-i-reduce" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Enumerable.html#method-i-inject">inject</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reject">
+            
+              <b>reject</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-reject" name="method-i-reject" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reject_source')" id="l_method-i-reject_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L973" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-reject_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 973</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reject</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">reject</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-node">%x{
+    var result = [];
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)},
+          value = $opal.$yield1(block, param);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      if (#{Opal.falsy?(`value`)}) {
+        result.push(param);
+      }
+    };
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reverse_each">
+            
+              <b>reverse_each</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-reverse_each" name="method-i-reverse_each" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reverse_each_source')" id="l_method-i-reverse_each_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L999" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-reverse_each_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 999</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reverse_each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-value">%x{
+    var result = [];
+
+    self.$each._p = function() {
+      result.push(arguments);
+    };
+
+    self.$each();
+
+    for (var i = result.length - 1; i &gt;= 0; i--) {
+      $opal.$yieldX(block, result[i]);
+    }
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select">
+            
+              <b>select</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-select" name="method-i-select" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Enumerable.html#method-i-find_all">find_all</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-slice_before">
+            
+              <b>slice_before</b>(pattern = undefined, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-slice_before" name="method-i-slice_before" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-slice_before_source')" id="l_method-i-slice_before_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L1021" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-slice_before_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 1021</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">slice_before</span>(<span class="ruby-identifier">pattern</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-value">%x`pattern === undefined &amp;&amp; block === nil || arguments.length &gt; 1`</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;wrong number of arguments (#{`arguments.length`} for 1)&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">Enumerator</span>.<span class="ruby-identifier">new</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-node">%x{
+      var slice = [];
+
+      if (block !== nil) {
+        if (pattern === undefined) {
+          self.$each._p = function() {
+            var param = #{Opal.destructure(`arguments`)},
+                value = $opal.$yield1(block, param);
+
+            if (#{Opal.truthy?(`value`)} &amp;&amp; slice.length &gt; 0) {
+              #{e &lt;&lt; `slice`};
+              slice = [];
+            }
+
+            slice.push(param);
+          };
+        }
+        else {
+          self.$each._p = function() {
+            var param = #{Opal.destructure(`arguments`)},
+                value = block(param, #{pattern.dup});
+
+            if (#{Opal.truthy?(`value`)} &amp;&amp; slice.length &gt; 0) {
+              #{e &lt;&lt; `slice`};
+              slice = [];
+            }
+
+            slice.push(param);
+          };
+        }
+      }
+      else {
+        self.$each._p = function() {
+          var param = #{Opal.destructure(`arguments`)},
+              value = #{pattern === `param`};
+
+          if (#{Opal.truthy?(`value`)} &amp;&amp; slice.length &gt; 0) {
+            #{e &lt;&lt; `slice`};
+            slice = [];
+          }
+
+          slice.push(param);
+        };
+      }
+
+      self.$each();
+
+      if (slice.length &gt; 0) {
+        #{e &lt;&lt; `slice`};
+      }
+    }</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sort">
+            
+              <b>sort</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-sort" name="method-i-sort" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sort_source')" id="l_method-i-sort_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L1081" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sort_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 1081</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sort</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sort_by">
+            
+              <b>sort_by</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-sort_by" name="method-i-sort_by" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sort_by_source')" id="l_method-i-sort_by_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L1085" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sort_by_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 1085</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sort_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">sort_by</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-identifier">map</span> {
+    <span class="ruby-identifier">arg</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">destructure</span>(<span class="ruby-value">%x`arguments`</span>)
+
+    [<span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">arg</span>), <span class="ruby-identifier">arg</span>]
+  }.<span class="ruby-identifier">sort</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>[<span class="ruby-number">0</span>] }.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span> <span class="ruby-value">%x`arg[1]`</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-take">
+            
+              <b>take</b>(num)
+            
+            <a href="../classes/Enumerable.html#method-i-take" name="method-i-take" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-take_source')" id="l_method-i-take_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L1095" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-take_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 1095</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">take</span>(<span class="ruby-identifier">num</span>)
+  <span class="ruby-identifier">first</span>(<span class="ruby-identifier">num</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-take_while">
+            
+              <b>take_while</b>(&amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-take_while" name="method-i-take_while" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-take_while_source')" id="l_method-i-take_while_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L1099" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-take_while_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 1099</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">take_while</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">take_while</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block</span>
+
+  <span class="ruby-node">%x{
+    var result = [];
+
+    self.$each._p = function() {
+      var param = #{Opal.destructure(`arguments`)},
+          value = $opal.$yield1(block, param);
+
+      if (value === $breaker) {
+        result = $breaker.$v;
+        return $breaker;
+      }
+
+      if (#{Opal.falsy?(`value`)}) {
+        return $breaker;
+      }
+
+      result.push(param);
+    };
+
+    self.$each();
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_a">
+            
+              <b>to_a</b>(*args)
+            
+            <a href="../classes/Enumerable.html#method-i-to_a" name="method-i-to_a" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Enumerable.html#method-i-entries">entries</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-zip">
+            
+              <b>zip</b>(*others, &amp;block)
+            
+            <a href="../classes/Enumerable.html#method-i-zip" name="method-i-zip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-zip_source')" id="l_method-i-zip_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fc199b5e2e1e477e9415b28053e4b9eb81a8edb1/opal/corelib/enumerable.rb#L1129" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-zip_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/enumerable.rb, line 1129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">zip</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">others</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">others</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

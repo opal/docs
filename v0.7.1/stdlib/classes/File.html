@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>File</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            File 
+            
+                <span class="parent">&lt; 
+                    
+                    IO
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/nodejs/file_rb.html">opal/stdlib/nodejs/file.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-basename">basename</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-close">close</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-directory-3F">directory?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-dirname">dirname</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-exist-3F">exist?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-file-3F">file?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-flush">flush</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>J</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-join">join</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-open">open</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-read">read</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-realpath">realpath</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-size">size</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-write">write</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            ::IO::Writable
+          
+        </li>
+      
+        <li>
+          
+            ::IO::Readable
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>path</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-basename">
+            
+              <b>basename</b>(path, ext = undefined)
+            
+            <a href="../classes/File.html#method-c-basename" name="method-c-basename" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-basename_source')" id="l_method-c-basename_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-basename_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">ext</span> = <span class="ruby-identifier">undefined</span>)
+  <span class="ruby-node">%x`__path__.basename(#{path}, #{ext})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-directory-3F">
+            
+              <b>directory?</b>(path)
+            
+            <a href="../classes/File.html#method-c-directory-3F" name="method-c-directory-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-directory-3F_source')" id="l_method-c-directory-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L44" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-directory-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">exist?</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-value">%x`!!__fs__.lstatSync(path).isDirectory()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-dirname">
+            
+              <b>dirname</b>(path)
+            
+            <a href="../classes/File.html#method-c-dirname" name="method-c-dirname" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-dirname_source')" id="l_method-c-dirname_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-dirname_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-node">%x`__path__.dirname(#{path})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-exist-3F">
+            
+              <b>exist?</b>(path)
+            
+            <a href="../classes/File.html#method-c-exist-3F" name="method-c-exist-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-exist-3F_source')" id="l_method-c-exist-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L14" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-exist-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-node">%x`__fs__.existsSync(#{path})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-file-3F">
+            
+              <b>file?</b>(path)
+            
+            <a href="../classes/File.html#method-c-file-3F" name="method-c-file-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-file-3F_source')" id="l_method-c-file-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-file-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">file?</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">exist?</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-value">%x`!!__fs__.lstatSync(path).isFile()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-join">
+            
+              <b>join</b>(*paths)
+            
+            <a href="../classes/File.html#method-c-join" name="method-c-join" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-join_source')" id="l_method-c-join_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-join_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">join</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">paths</span>)
+  <span class="ruby-node">%x`__path__.join.apply(__path__, #{paths})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(path, flags)
+            
+            <a href="../classes/File.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Instance Methods</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L77" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">flags</span>)
+  <span class="ruby-identifier">flags</span> = <span class="ruby-identifier">flags</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/b/</span>, <span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-ivar">@path</span> = <span class="ruby-identifier">path</span>
+  <span class="ruby-ivar">@flags</span> = <span class="ruby-identifier">flags</span>
+  <span class="ruby-ivar">@fd</span> = <span class="ruby-value">%x`__fs__.openSync(path, flags)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-open">
+            
+              <b>open</b>(path, flags)
+            
+            <a href="../classes/File.html#method-c-open" name="method-c-open" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-open_source')" id="l_method-c-open_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L59" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-open_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">open</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">flags</span>
+  <span class="ruby-identifier">file</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">flags</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">file</span>)
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">file</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-read">
+            
+              <b>read</b>(path)
+            
+            <a href="../classes/File.html#method-c-read" name="method-c-read" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-read_source')" id="l_method-c-read_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-read_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">read</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-node">%x`__fs__.readFileSync(#{path}).toString()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-realpath">
+            
+              <b>realpath</b>(pathname, dir_string = nil, cache = nil, &amp;block)
+            
+            <a href="../classes/File.html#method-c-realpath" name="method-c-realpath" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-realpath_source')" id="l_method-c-realpath_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L18" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-realpath_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">realpath</span>(<span class="ruby-identifier">pathname</span>, <span class="ruby-identifier">dir_string</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">cache</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">pathname</span> = <span class="ruby-identifier">join</span>(<span class="ruby-identifier">dir_string</span>, <span class="ruby-identifier">pathname</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">dir_string</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-node">%x`
+    __fs__.realpath(#{pathname}, #{cache}, function(error, realpath){
+      if (error) #{raise error.message}
+      else #{block.call(`realpath`)}
+    })
+    `</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">%x`__fs__.realpathSync(#{pathname}, #{cache})`</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-size">
+            
+              <b>size</b>(path)
+            
+            <a href="../classes/File.html#method-c-size" name="method-c-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-size_source')" id="l_method-c-size_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">size</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">exist?</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-value">%x`__fs__.lstatSync(path).size`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-close">
+            
+              <b>close</b>()
+            
+            <a href="../classes/File.html#method-i-close" name="method-i-close" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_source')" id="l_method-i-close_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L94" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-close_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close</span>
+  <span class="ruby-node">%x`__fs__.closeSync(#{@fd})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-flush">
+            
+              <b>flush</b>()
+            
+            <a href="../classes/File.html#method-i-flush" name="method-i-flush" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-flush_source')" id="l_method-i-flush_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L90" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-flush_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">flush</span>
+  <span class="ruby-node">%x`__fs__.fsyncSync(#@fd)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-write">
+            
+              <b>write</b>(string)
+            
+            <a href="../classes/File.html#method-i-write" name="method-i-write" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-write_source')" id="l_method-i-write_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/file.rb#L86" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-write_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/file.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">write</span> <span class="ruby-identifier">string</span>
+  <span class="ruby-node">%x`__fs__.writeSync(#{@fd}, #{string}, null, #{string}.length)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

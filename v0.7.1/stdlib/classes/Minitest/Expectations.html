@@ -1,0 +1,1499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Minitest::Expectations</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Minitest::Expectations 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/stdlib/minitest/expectations_rb.html">opal/stdlib/minitest/expectations.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>It&#39;s where you hide your “assertions”.</p>
+
+<p>Please note, because of the way that expectations are implemented, all
+expectations (eg <a
+href="Expectations.html#method-i-must_equal">#must_equal</a>) are dependent
+upon a thread local variable <code>:current_spec</code>. If your specs rely
+on mixing threads into the specs themselves, you&#39;re better off using
+assertions. For example:</p>
+
+<pre><code>it &quot;should still work in threads&quot; do
+  my_threaded_thingy do
+    (1+1).must_equal 2  # bad
+    assert_equal 2, 1+1 # good
+  end
+end
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-must_be">must_be</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_be_close_to">must_be_close_to</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_be_empty">must_be_empty</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_be_instance_of">must_be_instance_of</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_be_kind_of">must_be_kind_of</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_be_nil">must_be_nil</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_be_same_as">must_be_same_as</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_be_silent">must_be_silent</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_be_within_delta">must_be_within_delta</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_be_within_epsilon">must_be_within_epsilon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_equal">must_equal</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_include">must_include</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_match">must_match</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_output">must_output</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_raise">must_raise</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_respond_to">must_respond_to</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-must_throw">must_throw</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-wont_be">wont_be</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_be_close_to">wont_be_close_to</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_be_empty">wont_be_empty</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_be_instance_of">wont_be_instance_of</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_be_kind_of">wont_be_kind_of</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_be_nil">wont_be_nil</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_be_same_as">wont_be_same_as</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_be_within_delta">wont_be_within_delta</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_be_within_epsilon">wont_be_within_epsilon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_equal">wont_equal</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_include">wont_include</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_match">wont_match</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wont_respond_to">wont_respond_to</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-must_be">
+            
+              <b>must_be</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_be" name="method-i-must_be" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_operator">Minitest::Assertions#assert_operator</a></p>
+
+<pre><code>n.must_be :&lt;=, 42
+</code></pre>
+
+<p>This can also do predicates:</p>
+
+<pre><code>str.must_be :empty?
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_be_source')" id="l_method-i-must_be_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L112" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_be_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 112</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_operator</span>, <span class="ruby-value">:must_be</span>, <span class="ruby-value">:reverse</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_be_close_to">
+            
+              <b>must_be_close_to</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_be_close_to" name="method-i-must_be_close_to" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_in_delta">Minitest::Assertions#assert_in_delta</a></p>
+
+<pre><code>n.must_be_close_to m [, delta]</code></pre>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Expectations.html#method-i-must_be_within_delta">must_be_within_delta</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_be_close_to_source')" id="l_method-i-must_be_close_to_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L43" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_be_close_to_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 43</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_in_delta</span>, <span class="ruby-value">:must_be_close_to</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_be_empty">
+            
+              <b>must_be_empty</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_be_empty" name="method-i-must_be_empty" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_empty">Minitest::Assertions#assert_empty</a>.</p>
+
+<pre><code>collection.must_be_empty
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_be_empty_source')" id="l_method-i-must_be_empty_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L25" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_be_empty_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 25</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_empty</span>, <span class="ruby-value">:must_be_empty</span>, <span class="ruby-value">:unary</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_be_instance_of">
+            
+              <b>must_be_instance_of</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_be_instance_of" name="method-i-must_be_instance_of" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_instance_of">Minitest::Assertions#assert_instance_of</a></p>
+
+<pre><code>obj.must_be_instance_of klass
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_be_instance_of_source')" id="l_method-i-must_be_instance_of_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L72" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_be_instance_of_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 72</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_instance_of</span>, <span class="ruby-value">:must_be_instance_of</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_be_kind_of">
+            
+              <b>must_be_kind_of</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_be_kind_of" name="method-i-must_be_kind_of" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_kind_of">Minitest::Assertions#assert_kind_of</a></p>
+
+<pre><code>obj.must_be_kind_of mod
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_be_kind_of_source')" id="l_method-i-must_be_kind_of_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L81" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_be_kind_of_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 81</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_kind_of</span>, <span class="ruby-value">:must_be_kind_of</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_be_nil">
+            
+              <b>must_be_nil</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_be_nil" name="method-i-must_be_nil" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_nil">Minitest::Assertions#assert_nil</a></p>
+
+<pre><code>obj.must_be_nil
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_be_nil_source')" id="l_method-i-must_be_nil_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L99" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_be_nil_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 99</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_nil</span>, <span class="ruby-value">:must_be_nil</span>, <span class="ruby-value">:unary</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_be_same_as">
+            
+              <b>must_be_same_as</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_be_same_as" name="method-i-must_be_same_as" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_same">Minitest::Assertions#assert_same</a></p>
+
+<pre><code>a.must_be_same_as b
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_be_same_as_source')" id="l_method-i-must_be_same_as_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L148" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_be_same_as_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 148</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_same</span>, <span class="ruby-value">:must_be_same_as</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_be_silent">
+            
+              <b>must_be_silent</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_be_silent" name="method-i-must_be_silent" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_silent">Minitest::Assertions#assert_silent</a></p>
+
+<pre><code>proc { ... }.must_be_silent</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_be_silent_source')" id="l_method-i-must_be_silent_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L157" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_be_silent_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 157</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_silent</span>, <span class="ruby-value">:must_be_silent</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_be_within_delta">
+            
+              <b>must_be_within_delta</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_be_within_delta" name="method-i-must_be_within_delta" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Expectations.html#method-i-must_be_close_to">must_be_close_to</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_be_within_epsilon">
+            
+              <b>must_be_within_epsilon</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_be_within_epsilon" name="method-i-must_be_within_epsilon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_in_epsilon">Minitest::Assertions#assert_in_epsilon</a></p>
+
+<pre><code>n.must_be_within_epsilon m [, epsilon]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_be_within_epsilon_source')" id="l_method-i-must_be_within_epsilon_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_be_within_epsilon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 54</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_in_epsilon</span>, <span class="ruby-value">:must_be_within_epsilon</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_equal">
+            
+              <b>must_equal</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_equal" name="method-i-must_equal" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_equal">Minitest::Assertions#assert_equal</a></p>
+
+<pre><code>a.must_equal b
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_equal_source')" id="l_method-i-must_equal_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_equal_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 34</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_equal</span>, <span class="ruby-value">:must_equal</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_include">
+            
+              <b>must_include</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_include" name="method-i-must_include" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_includes">Minitest::Assertions#assert_includes</a></p>
+
+<pre><code>collection.must_include obj
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_include_source')" id="l_method-i-must_include_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_include_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 63</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_includes</span>, <span class="ruby-value">:must_include</span>, <span class="ruby-value">:reverse</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_match">
+            
+              <b>must_match</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_match" name="method-i-must_match" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_match">Minitest::Assertions#assert_match</a></p>
+
+<pre><code>a.must_match b
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_match_source')" id="l_method-i-must_match_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L90" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_match_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 90</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_match</span>, <span class="ruby-value">:must_match</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_output">
+            
+              <b>must_output</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_output" name="method-i-must_output" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_output">Minitest::Assertions#assert_output</a></p>
+
+<pre><code>proc { ... }.must_output out_or_nil [, err]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_output_source')" id="l_method-i-must_output_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L121" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_output_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 121</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_output</span>, <span class="ruby-value">:must_output</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_raise">
+            
+              <b>must_raise</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_raise" name="method-i-must_raise" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_raises">Minitest::Assertions#assert_raises</a></p>
+
+<pre><code>proc { ... }.must_raise exception</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_raise_source')" id="l_method-i-must_raise_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L130" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_raise_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 130</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_raises</span>, <span class="ruby-value">:must_raise</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_respond_to">
+            
+              <b>must_respond_to</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_respond_to" name="method-i-must_respond_to" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_respond_to">Minitest::Assertions#assert_respond_to</a></p>
+
+<pre><code>obj.must_respond_to msg
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_respond_to_source')" id="l_method-i-must_respond_to_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L139" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_respond_to_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 139</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_respond_to</span>, <span class="ruby-value">:must_respond_to</span>, <span class="ruby-value">:reverse</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-must_throw">
+            
+              <b>must_throw</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-must_throw" name="method-i-must_throw" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-assert_throws">Minitest::Assertions#assert_throws</a></p>
+
+<pre><code>proc { ... }.must_throw sym</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-must_throw_source')" id="l_method-i-must_throw_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L166" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-must_throw_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 166</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:assert_throws</span>, <span class="ruby-value">:must_throw</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_be">
+            
+              <b>wont_be</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_be" name="method-i-wont_be" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_operator">Minitest::Assertions#refute_operator</a></p>
+
+<pre><code>n.wont_be :&lt;=, 42
+</code></pre>
+
+<p>This can also do predicates:</p>
+
+<pre><code>str.wont_be :empty?
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_be_source')" id="l_method-i-wont_be_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L262" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_be_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 262</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_operator</span>, <span class="ruby-value">:wont_be</span>, <span class="ruby-value">:reverse</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_be_close_to">
+            
+              <b>wont_be_close_to</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_be_close_to" name="method-i-wont_be_close_to" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_in_delta">Minitest::Assertions#refute_in_delta</a></p>
+
+<pre><code>n.wont_be_close_to m [, delta]</code></pre>
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Expectations.html#method-i-wont_be_within_delta">wont_be_within_delta</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_be_close_to_source')" id="l_method-i-wont_be_close_to_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L193" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_be_close_to_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 193</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_in_delta</span>, <span class="ruby-value">:wont_be_close_to</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_be_empty">
+            
+              <b>wont_be_empty</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_be_empty" name="method-i-wont_be_empty" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_empty">Minitest::Assertions#refute_empty</a></p>
+
+<pre><code>collection.wont_be_empty
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_be_empty_source')" id="l_method-i-wont_be_empty_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L175" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_be_empty_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 175</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_empty</span>, <span class="ruby-value">:wont_be_empty</span>, <span class="ruby-value">:unary</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_be_instance_of">
+            
+              <b>wont_be_instance_of</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_be_instance_of" name="method-i-wont_be_instance_of" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_instance_of">Minitest::Assertions#refute_instance_of</a></p>
+
+<pre><code>obj.wont_be_instance_of klass
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_be_instance_of_source')" id="l_method-i-wont_be_instance_of_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L222" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_be_instance_of_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 222</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_instance_of</span>, <span class="ruby-value">:wont_be_instance_of</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_be_kind_of">
+            
+              <b>wont_be_kind_of</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_be_kind_of" name="method-i-wont_be_kind_of" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_kind_of">Minitest::Assertions#refute_kind_of</a></p>
+
+<pre><code>obj.wont_be_kind_of mod
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_be_kind_of_source')" id="l_method-i-wont_be_kind_of_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L231" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_be_kind_of_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 231</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_kind_of</span>, <span class="ruby-value">:wont_be_kind_of</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_be_nil">
+            
+              <b>wont_be_nil</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_be_nil" name="method-i-wont_be_nil" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_nil">Minitest::Assertions#refute_nil</a></p>
+
+<pre><code>obj.wont_be_nil
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_be_nil_source')" id="l_method-i-wont_be_nil_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L249" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_be_nil_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 249</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_nil</span>, <span class="ruby-value">:wont_be_nil</span>, <span class="ruby-value">:unary</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_be_same_as">
+            
+              <b>wont_be_same_as</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_be_same_as" name="method-i-wont_be_same_as" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_same">Minitest::Assertions#refute_same</a></p>
+
+<pre><code>a.wont_be_same_as b
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_be_same_as_source')" id="l_method-i-wont_be_same_as_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L280" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_be_same_as_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 280</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_same</span>, <span class="ruby-value">:wont_be_same_as</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_be_within_delta">
+            
+              <b>wont_be_within_delta</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_be_within_delta" name="method-i-wont_be_within_delta" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Expectations.html#method-i-wont_be_close_to">wont_be_close_to</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_be_within_epsilon">
+            
+              <b>wont_be_within_epsilon</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_be_within_epsilon" name="method-i-wont_be_within_epsilon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_in_epsilon">Minitest::Assertions#refute_in_epsilon</a></p>
+
+<pre><code>n.wont_be_within_epsilon m [, epsilon]</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_be_within_epsilon_source')" id="l_method-i-wont_be_within_epsilon_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L204" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_be_within_epsilon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 204</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_in_epsilon</span>, <span class="ruby-value">:wont_be_within_epsilon</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_equal">
+            
+              <b>wont_equal</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_equal" name="method-i-wont_equal" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_equal">Minitest::Assertions#refute_equal</a></p>
+
+<pre><code>a.wont_equal b
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_equal_source')" id="l_method-i-wont_equal_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L184" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_equal_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 184</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_equal</span>, <span class="ruby-value">:wont_equal</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_include">
+            
+              <b>wont_include</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_include" name="method-i-wont_include" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_includes">Minitest::Assertions#refute_includes</a></p>
+
+<pre><code>collection.wont_include obj
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_include_source')" id="l_method-i-wont_include_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L213" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_include_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 213</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_includes</span>, <span class="ruby-value">:wont_include</span>, <span class="ruby-value">:reverse</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_match">
+            
+              <b>wont_match</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_match" name="method-i-wont_match" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_match">Minitest::Assertions#refute_match</a></p>
+
+<pre><code>a.wont_match b
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_match_source')" id="l_method-i-wont_match_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L240" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_match_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 240</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_match</span>, <span class="ruby-value">:wont_match</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wont_respond_to">
+            
+              <b>wont_respond_to</b>
+            
+            <a href="../../classes/Minitest/Expectations.html#method-i-wont_respond_to" name="method-i-wont_respond_to" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>See <a
+href="Assertions.html#method-i-refute_respond_to">Minitest::Assertions#refute_respond_to</a></p>
+
+<pre><code>obj.wont_respond_to msg
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wont_respond_to_source')" id="l_method-i-wont_respond_to_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d5fc039bc67d0ee27ad20031b0e5e9587b64222d/stdlib/minitest/expectations.rb#L271" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wont_respond_to_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/expectations.rb, line 271</span>
+<span class="ruby-identifier">infect_an_assertion</span> <span class="ruby-value">:refute_respond_to</span>, <span class="ruby-value">:wont_respond_to</span>, <span class="ruby-value">:reverse</span>
+</pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

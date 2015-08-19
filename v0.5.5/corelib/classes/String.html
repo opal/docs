@@ -1,0 +1,4186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>String</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            String 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/opal/corelib/encoding_rb.html">opal/opal/corelib/encoding.rb</a></li>
+            
+            <li><a href="../files/opal/opal/corelib/string_rb.html">opal/opal/corelib/string.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-25">%</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2A">*</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2B">+</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3C-3D-3E">&lt;=&gt;</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D-3D">===</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-7E">=~</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D">[]</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bytes">bytes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bytesize">bytesize</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-capitalize">capitalize</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-casecmp">casecmp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-center">center</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-chars">chars</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-chomp">chomp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-chop">chop</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-chr">chr</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clone">clone</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-count">count</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-downcase">downcase</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dup">dup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each_byte">each_byte</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_char">each_char</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-each_line">each_line</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-empty-3F">empty?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-encoding">encoding</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-end_with-3F">end_with?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-eql-3F">eql?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-equal-3F">equal?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-force_encoding">force_encoding</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-freeze">freeze</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-frozen-3F">frozen?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-getbyte">getbyte</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gsub">gsub</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-hash">hash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-hex">hex</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-include-3F">include?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-intern">intern</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-length">length</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-lines">lines</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-ljust">ljust</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-lstrip">lstrip</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-match">match</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-next">next</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ord">ord</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-partition">partition</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-reverse">reverse</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rindex">rindex</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rjust">rjust</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rstrip">rstrip</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scan">scan</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-size">size</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-slice">slice</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-split">split</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_with-3F">start_with?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-strip">strip</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sub">sub</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-succ">succ</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sum">sum</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-swapcase">swapcase</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_a">to_a</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_f">to_f</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_i">to_i</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_proc">to_proc</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_str">to_str</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_sym">to_sym</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tr">tr</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-tr_s">tr_s</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-try_convert">try_convert</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-upcase">upcase</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Comparable.html">
+              Comparable
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(str = &#39;&#39;)
+            
+            <a href="../classes/String.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L12" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">str</span> = <span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-value">%x`new String(str)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-try_convert">
+            
+              <b>try_convert</b>(what)
+            
+            <a href="../classes/String.html#method-c-try_convert" name="method-c-try_convert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-try_convert_source')" id="l_method-c-try_convert_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L6" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-try_convert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">try_convert</span>(<span class="ruby-identifier">what</span>)
+  <span class="ruby-identifier">what</span>.<span class="ruby-identifier">to_str</span>
+<span class="ruby-keyword">rescue</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-25">
+            
+              <b>%</b>(data)
+            
+            <a href="../classes/String.html#method-i-25" name="method-i-25" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-25_source')" id="l_method-i-25_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L16" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-25_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">%</span>(<span class="ruby-keyword ruby-title">data</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Array</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">data</span>
+    <span class="ruby-identifier">format</span>(<span class="ruby-keyword">self</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">data</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">format</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2A">
+            
+              <b>*</b>(count)
+            
+            <a href="../classes/String.html#method-i-2A" name="method-i-2A" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2A_source')" id="l_method-i-2A_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2A_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-keyword ruby-title">count</span>)
+  <span class="ruby-value">%x{
+    if (count &lt; 1) {
+      return &#39;&#39;;
+    }
+
+    var result  = &#39;&#39;,
+        pattern = self;
+
+    while (count &gt; 0) {
+      if (count &amp; 1) {
+        result += pattern;
+      }
+
+      count &gt;&gt;= 1;
+      pattern += pattern;
+    }
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2B">
+            
+              <b>+</b>(other)
+            
+            <a href="../classes/String.html#method-i-2B" name="method-i-2B" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2B_source')" id="l_method-i-2B_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2B_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-identifier">other</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span> <span class="ruby-identifier">other</span>, <span class="ruby-constant">String</span>, <span class="ruby-value">:to_str</span>
+
+  <span class="ruby-node">%x`self + #{other.to_s}`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3C-3D-3E">
+            
+              <b>&lt;=&gt;</b>(other)
+            
+            <a href="../classes/String.html#method-i-3C-3D-3E" name="method-i-3C-3D-3E" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3C-3D-3E_source')" id="l_method-i-3C-3D-3E_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3C-3D-3E_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:to_str</span>
+    <span class="ruby-identifier">other</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">to_str</span>.<span class="ruby-identifier">to_s</span>
+
+    <span class="ruby-value">%x`self &gt; other ? 1 : (self &lt; other ? -1 : 0)`</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">%x{
+      var cmp = #{other &lt;=&gt; self};
+
+      if (cmp === nil) {
+        return nil;
+      }
+      else {
+        return cmp &gt; 0 ? -1 : (cmp &lt; 0 ? 1 : 0);
+      }
+    }</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../classes/String.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="String.html#method-i-3D-3D-3D">===</a>, <a href="String.html#method-i-eql-3F">eql?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-value">%x`!!(other._isString &amp;&amp; self.valueOf() === other.valueOf())`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D-3D">
+            
+              <b>===</b>(other)
+            
+            <a href="../classes/String.html#method-i-3D-3D-3D" name="method-i-3D-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="String.html#method-i-equal-3F">equal?</a>
+            </div>
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="String.html#method-i-3D-3D">==</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-7E">
+            
+              <b>=~</b>(other)
+            
+            <a href="../classes/String.html#method-i-3D-7E" name="method-i-3D-7E" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-7E_source')" id="l_method-i-3D-7E_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L77" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-7E_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">=~</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isString) {
+      #{raise TypeError, &#39;type mismatch: String given&#39;};
+    }
+
+    return #{other =~ self};
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D">
+            
+              <b>[]</b>(index, length = undefined)
+            
+            <a href="../classes/String.html#method-i-5B-5D" name="method-i-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="String.html#method-i-slice">slice</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D_source')" id="l_method-i-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L87" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-keyword ruby-title">index</span>, <span class="ruby-identifier">length</span> = <span class="ruby-identifier">undefined</span>)
+  <span class="ruby-value">%x{
+    var size = self.length;
+
+    if (index._isRange) {
+      var exclude = index.exclude,
+          length  = index.end,
+          index   = index.begin;
+
+      if (index &lt; 0) {
+        index += size;
+      }
+
+      if (length &lt; 0) {
+        length += size;
+      }
+
+      if (!exclude) {
+        length += 1;
+      }
+
+      if (index &gt; size) {
+        return nil;
+      }
+
+      length = length - index;
+
+      if (length &lt; 0) {
+        length = 0;
+      }
+
+      return self.substr(index, length);
+    }
+
+    if (index &lt; 0) {
+      index += self.length;
+    }
+
+    if (length == null) {
+      if (index &gt;= self.length || index &lt; 0) {
+        return nil;
+      }
+
+      return self.substr(index, 1);
+    }
+
+    if (index &gt; self.length || index &lt; 0) {
+      return nil;
+    }
+
+    return self.substr(index, length);
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bytes">
+            
+              <b>bytes</b>()
+            
+            <a href="../classes/String.html#method-i-bytes" name="method-i-bytes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bytes_source')" id="l_method-i-bytes_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/encoding.rb#L128" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bytes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/encoding.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bytes</span>
+  <span class="ruby-identifier">each_byte</span>.<span class="ruby-identifier">to_a</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bytesize">
+            
+              <b>bytesize</b>()
+            
+            <a href="../classes/String.html#method-i-bytesize" name="method-i-bytesize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bytesize_source')" id="l_method-i-bytesize_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/encoding.rb#L132" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bytesize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/encoding.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bytesize</span>
+  <span class="ruby-ivar">@encoding</span>.<span class="ruby-identifier">bytesize</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-capitalize">
+            
+              <b>capitalize</b>()
+            
+            <a href="../classes/String.html#method-i-capitalize" name="method-i-capitalize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-capitalize_source')" id="l_method-i-capitalize_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L141" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-capitalize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">capitalize</span>
+  <span class="ruby-value">%x`self.charAt(0).toUpperCase() + self.substr(1).toLowerCase()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-casecmp">
+            
+              <b>casecmp</b>(other)
+            
+            <a href="../classes/String.html#method-i-casecmp" name="method-i-casecmp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-casecmp_source')" id="l_method-i-casecmp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L145" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-casecmp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">casecmp</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">other</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">other</span>, <span class="ruby-constant">String</span>, <span class="ruby-value">:to_str</span>).<span class="ruby-identifier">to_s</span>
+
+  <span class="ruby-value">%x`self.toLowerCase()`</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-value">%x`other.toLowerCase()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-center">
+            
+              <b>center</b>(width, padstr = &#39; &#39;)
+            
+            <a href="../classes/String.html#method-i-center" name="method-i-center" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-center_source')" id="l_method-i-center_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L151" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-center_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">center</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">padstr</span> = <span class="ruby-string">&#39; &#39;</span>)
+  <span class="ruby-identifier">width</span>  = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">width</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-value">:to_int</span>)
+  <span class="ruby-identifier">padstr</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">padstr</span>, <span class="ruby-constant">String</span>, <span class="ruby-value">:to_str</span>).<span class="ruby-identifier">to_s</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">padstr</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;zero width padding&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-value">%x`width &lt;= self.length`</span>
+
+  <span class="ruby-node">%x{
+    var ljustified = #{ljust ((width + @length) / 2).ceil, padstr},
+        rjustified = #{rjust ((width + @length) / 2).floor, padstr};
+
+    return rjustified + ljustified.slice(self.length);
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-chars">
+            
+              <b>chars</b>()
+            
+            <a href="../classes/String.html#method-i-chars" name="method-i-chars" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-chars_source')" id="l_method-i-chars_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L169" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-chars_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">chars</span>
+  <span class="ruby-identifier">each_char</span>.<span class="ruby-identifier">to_a</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-chomp">
+            
+              <b>chomp</b>(separator = $/)
+            
+            <a href="../classes/String.html#method-i-chomp" name="method-i-chomp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-chomp_source')" id="l_method-i-chomp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L173" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-chomp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">chomp</span>(<span class="ruby-identifier">separator</span> = <span class="ruby-identifier">$/</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-value">%x`separator === nil || self.length === 0`</span>
+
+  <span class="ruby-identifier">separator</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to!</span>(<span class="ruby-identifier">separator</span>, <span class="ruby-constant">String</span>, <span class="ruby-value">:to_str</span>).<span class="ruby-identifier">to_s</span>
+
+  <span class="ruby-value">%x{
+    if (separator === &quot;\\n&quot;) {
+      return self.replace(/\\r?\\n?$/, &#39;&#39;);
+    }
+    else if (separator === &quot;&quot;) {
+      return self.replace(/(\\r?\\n)+$/, &#39;&#39;);
+    }
+    else if (self.length &gt; separator.length) {
+      var tail = self.substr(-1 * separator.length);
+
+      if (tail === separator) {
+        return self.substr(0, self.length - separator.length);
+      }
+    }
+  }</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-chop">
+            
+              <b>chop</b>()
+            
+            <a href="../classes/String.html#method-i-chop" name="method-i-chop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-chop_source')" id="l_method-i-chop_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L197" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-chop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">chop</span>
+  <span class="ruby-value">%x{
+    var length = self.length;
+
+    if (length &lt;= 1) {
+      return &quot;&quot;;
+    }
+
+    if (self.charAt(length - 1) === &quot;\\n&quot; &amp;&amp; self.charAt(length - 2) === &quot;\\r&quot;) {
+      return self.substr(0, length - 2);
+    }
+    else {
+      return self.substr(0, length - 1);
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-chr">
+            
+              <b>chr</b>()
+            
+            <a href="../classes/String.html#method-i-chr" name="method-i-chr" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-chr_source')" id="l_method-i-chr_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L214" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-chr_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">chr</span>
+  <span class="ruby-value">%x`self.charAt(0)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clone">
+            
+              <b>clone</b>()
+            
+            <a href="../classes/String.html#method-i-clone" name="method-i-clone" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="String.html#method-i-dup">dup</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clone_source')" id="l_method-i-clone_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L218" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clone_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clone</span>
+  <span class="ruby-value">%x`self.slice()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-count">
+            
+              <b>count</b>(str)
+            
+            <a href="../classes/String.html#method-i-count" name="method-i-count" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-count_source')" id="l_method-i-count_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L222" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-count_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">count</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-value">%x`(self.length - self.replace(new RegExp(str, &#39;g&#39;), &#39;&#39;).length) / str.length`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-downcase">
+            
+              <b>downcase</b>()
+            
+            <a href="../classes/String.html#method-i-downcase" name="method-i-downcase" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-downcase_source')" id="l_method-i-downcase_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L228" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-downcase_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">downcase</span>
+  <span class="ruby-value">%x`self.toLowerCase()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dup">
+            
+              <b>dup</b>()
+            
+            <a href="../classes/String.html#method-i-dup" name="method-i-dup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="String.html#method-i-clone">clone</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_byte">
+            
+              <b>each_byte</b>(&amp;block)
+            
+            <a href="../classes/String.html#method-i-each_byte" name="method-i-each_byte" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_byte_source')" id="l_method-i-each_byte_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/encoding.rb#L136" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_byte_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/encoding.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_byte</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">each_byte</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-ivar">@encoding</span>.<span class="ruby-identifier">each_byte</span>(<span class="ruby-keyword">self</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_char">
+            
+              <b>each_char</b>(&amp;block)
+            
+            <a href="../classes/String.html#method-i-each_char" name="method-i-each_char" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_char_source')" id="l_method-i-each_char_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L232" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_char_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 232</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_char</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">each_char</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-node">%x{
+    for (var i = 0, length = self.length; i &lt; length; i++) {
+      #{yield `self.charAt(i)`};
+    }
+  }</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_line">
+            
+              <b>each_line</b>(separator = $/)
+            
+            <a href="../classes/String.html#method-i-each_line" name="method-i-each_line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_line_source')" id="l_method-i-each_line_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L244" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 244</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_line</span>(<span class="ruby-identifier">separator</span> = <span class="ruby-identifier">$/</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">split</span>(<span class="ruby-identifier">separator</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-node">%x{
+    var chomped  = #{chomp},
+        trailing = self.length != chomped.length,
+        splitted = chomped.split(separator);
+
+    for (var i = 0, length = splitted.length; i &lt; length; i++) {
+      if (i &lt; length - 1 || trailing) {
+        #{yield `splitted[i] + separator`};
+      }
+      else {
+        #{yield `splitted[i]`};
+      }
+    }
+  }</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-empty-3F">
+            
+              <b>empty?</b>()
+            
+            <a href="../classes/String.html#method-i-empty-3F" name="method-i-empty-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-empty-3F_source')" id="l_method-i-empty-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L265" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-empty-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">empty?</span>
+  <span class="ruby-value">%x`self.length === 0`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encoding">
+            
+              <b>encoding</b>()
+            
+            <a href="../classes/String.html#method-i-encoding" name="method-i-encoding" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-encoding_source')" id="l_method-i-encoding_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/encoding.rb#L144" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-encoding_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/encoding.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">encoding</span>
+  <span class="ruby-ivar">@encoding</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-end_with-3F">
+            
+              <b>end_with?</b>(*suffixes)
+            
+            <a href="../classes/String.html#method-i-end_with-3F" name="method-i-end_with-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-end_with-3F_source')" id="l_method-i-end_with-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L269" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-end_with-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">end_with?</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">suffixes</span>)
+  <span class="ruby-node">%x{
+    for (var i = 0, length = suffixes.length; i &lt; length; i++) {
+      var suffix = #{Opal.coerce_to `suffixes[i]`, String, :to_str};
+
+      if (self.length &gt;= suffix.length &amp;&amp; self.substr(0 - suffix.length) === suffix) {
+        return true;
+      }
+    }
+  }</span>
+
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eql-3F">
+            
+              <b>eql?</b>(other)
+            
+            <a href="../classes/String.html#method-i-eql-3F" name="method-i-eql-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="String.html#method-i-3D-3D">==</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-equal-3F">
+            
+              <b>equal?</b>(other)
+            
+            <a href="../classes/String.html#method-i-equal-3F" name="method-i-equal-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="String.html#method-i-3D-3D-3D">===</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-force_encoding">
+            
+              <b>force_encoding</b>(encoding)
+            
+            <a href="../classes/String.html#method-i-force_encoding" name="method-i-force_encoding" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-force_encoding_source')" id="l_method-i-force_encoding_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/encoding.rb#L148" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-force_encoding_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/encoding.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">force_encoding</span>(<span class="ruby-identifier">encoding</span>)
+  <span class="ruby-identifier">encoding</span> = <span class="ruby-constant">Encoding</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">encoding</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">encoding</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@encoding</span>
+
+  <span class="ruby-value">%x{
+    var result = new native_string(self);
+    result.encoding = encoding;
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-freeze">
+            
+              <b>freeze</b>()
+            
+            <a href="../classes/String.html#method-i-freeze" name="method-i-freeze" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-freeze_source')" id="l_method-i-freeze_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L1035" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-freeze_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 1035</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">freeze</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-frozen-3F">
+            
+              <b>frozen?</b>()
+            
+            <a href="../classes/String.html#method-i-frozen-3F" name="method-i-frozen-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-frozen-3F_source')" id="l_method-i-frozen-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L1039" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-frozen-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 1039</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">frozen?</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-getbyte">
+            
+              <b>getbyte</b>(idx)
+            
+            <a href="../classes/String.html#method-i-getbyte" name="method-i-getbyte" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-getbyte_source')" id="l_method-i-getbyte_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/encoding.rb#L161" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-getbyte_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/encoding.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">getbyte</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-ivar">@encoding</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">idx</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gsub">
+            
+              <b>gsub</b>(pattern, replace = undefined, &amp;block)
+            
+            <a href="../classes/String.html#method-i-gsub" name="method-i-gsub" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gsub_source')" id="l_method-i-gsub_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L286" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-gsub_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 286</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gsub</span>(<span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">replace</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">pattern</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">pattern</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_str</span>)
+    <span class="ruby-identifier">pattern</span> = <span class="ruby-node">/#{Regexp.escape(pattern.to_str)}/</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">Regexp</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">pattern</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;wrong argument type #{pattern.class} (expected Regexp)&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-node">%x{
+    var pattern = pattern.toString(),
+        options = pattern.substr(pattern.lastIndexOf(&#39;/&#39;) + 1) + &#39;g&#39;,
+        regexp  = pattern.substr(1, pattern.lastIndexOf(&#39;/&#39;) - 1);
+
+    #{self}.$sub._p = block;
+    return #{self}.$sub(new RegExp(regexp, options), replace);
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hash">
+            
+              <b>hash</b>()
+            
+            <a href="../classes/String.html#method-i-hash" name="method-i-hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hash_source')" id="l_method-i-hash_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L305" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 305</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hash</span>
+  <span class="ruby-node">%x`#{self}.toString()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hex">
+            
+              <b>hex</b>()
+            
+            <a href="../classes/String.html#method-i-hex" name="method-i-hex" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hex_source')" id="l_method-i-hex_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L309" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hex_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 309</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hex</span>
+  <span class="ruby-identifier">to_i</span> <span class="ruby-number">16</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-include-3F">
+            
+              <b>include?</b>(other)
+            
+            <a href="../classes/String.html#method-i-include-3F" name="method-i-include-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-include-3F_source')" id="l_method-i-include-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L313" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-include-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 313</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">include?</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-value">%x{
+    if (other._isString) {
+      return self.indexOf(other) !== -1;
+    }
+  }</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:to_str</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;no implicit conversion of #{other.class.name} into String&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-node">%x`self.indexOf(#{other.to_str}) !== -1`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>(what, offset = nil)
+            
+            <a href="../classes/String.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L327" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 327</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>(<span class="ruby-identifier">what</span>, <span class="ruby-identifier">offset</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">what</span>
+    <span class="ruby-identifier">what</span> = <span class="ruby-identifier">what</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">what</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:to_str</span>
+    <span class="ruby-identifier">what</span> = <span class="ruby-identifier">what</span>.<span class="ruby-identifier">to_str</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">not</span> <span class="ruby-constant">Regexp</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">what</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;type mismatch: #{what.class} given&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-number">-1</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">offset</span>
+    <span class="ruby-identifier">offset</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span> <span class="ruby-identifier">offset</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-value">:to_int</span>
+
+    <span class="ruby-value">%x{
+      var size = self.length;
+
+      if (offset &lt; 0) {
+        offset = offset + size;
+      }
+
+      if (offset &gt; size) {
+        return nil;
+      }
+    }</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Regexp</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">what</span>
+      <span class="ruby-identifier">result</span> = (<span class="ruby-identifier">what</span> <span class="ruby-operator">=~</span> <span class="ruby-value">%x`self.substr(offset)`</span>) <span class="ruby-operator">||</span> <span class="ruby-number">-1</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-value">%x`self.substr(offset).indexOf(what)`</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-value">%x{
+      if (result !== -1) {
+        result += offset;
+      }
+    }</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Regexp</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">what</span>
+      <span class="ruby-identifier">result</span> = (<span class="ruby-identifier">what</span> <span class="ruby-operator">=~</span> <span class="ruby-keyword">self</span>) <span class="ruby-operator">||</span> <span class="ruby-number">-1</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-value">%x`self.indexOf(what)`</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-value">%x`result === -1`</span>
+    <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../classes/String.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inspect_source')" id="l_method-i-inspect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L377" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 377</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inspect</span>
+  <span class="ruby-value">%x{
+    var escapable = /[\\\\\\&quot;\\x00-\\x1f\\x7f-\\x9f\\u00ad\\u0600-\\u0604\\u070f\\u17b4\\u17b5\\u200c-\\u200f\\u2028-\\u202f\\u2060-\\u206f\\ufeff\\ufff0-\\uffff]/g,
+        meta      = {
+          &#39;\\b&#39;: &#39;\\\\b&#39;,
+          &#39;\\t&#39;: &#39;\\\\t&#39;,
+          &#39;\\n&#39;: &#39;\\\\n&#39;,
+          &#39;\\f&#39;: &#39;\\\\f&#39;,
+          &#39;\\r&#39;: &#39;\\\\r&#39;,
+          &#39;&quot;&#39; : &#39;\\\\&quot;&#39;,
+          &#39;\\\\&#39;: &#39;\\\\\\\\&#39;
+        };
+
+    escapable.lastIndex = 0;
+
+    return escapable.test(self) ? &#39;&quot;&#39; + self.replace(escapable, function(a) {
+      var c = meta[a];
+
+      return typeof c === &#39;string&#39; ? c :
+        &#39;\\\\u&#39; + (&#39;0000&#39; + a.charCodeAt(0).toString(16)).slice(-4);
+    }) + &#39;&quot;&#39; : &#39;&quot;&#39; + self + &#39;&quot;&#39;;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-intern">
+            
+              <b>intern</b>()
+            
+            <a href="../classes/String.html#method-i-intern" name="method-i-intern" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="String.html#method-i-to_sym">to_sym</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-intern_source')" id="l_method-i-intern_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L401" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-intern_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 401</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">intern</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-length">
+            
+              <b>length</b>()
+            
+            <a href="../classes/String.html#method-i-length" name="method-i-length" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="String.html#method-i-size">size</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-length_source')" id="l_method-i-length_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L409" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-length_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">length</span>
+  <span class="ruby-value">%x`self.length`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lines">
+            
+              <b>lines</b>(separator = $/)
+            
+            <a href="../classes/String.html#method-i-lines" name="method-i-lines" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lines_source')" id="l_method-i-lines_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L405" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-lines_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 405</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lines</span>(<span class="ruby-identifier">separator</span> = <span class="ruby-identifier">$/</span>)
+  <span class="ruby-identifier">each_line</span>(<span class="ruby-identifier">separator</span>).<span class="ruby-identifier">to_a</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ljust">
+            
+              <b>ljust</b>(width, padstr = &#39; &#39;)
+            
+            <a href="../classes/String.html#method-i-ljust" name="method-i-ljust" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ljust_source')" id="l_method-i-ljust_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L413" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-ljust_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 413</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ljust</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">padstr</span> = <span class="ruby-string">&#39; &#39;</span>)
+  <span class="ruby-identifier">width</span>  = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">width</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-value">:to_int</span>)
+  <span class="ruby-identifier">padstr</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">padstr</span>, <span class="ruby-constant">String</span>, <span class="ruby-value">:to_str</span>).<span class="ruby-identifier">to_s</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">padstr</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;zero width padding&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-value">%x`width &lt;= self.length`</span>
+
+  <span class="ruby-value">%x{
+    var index  = -1,
+        result = &quot;&quot;;
+
+    width -= self.length;
+
+    while (++index &lt; width) {
+      result += padstr;
+    }
+
+    return self + result.slice(0, width);
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lstrip">
+            
+              <b>lstrip</b>()
+            
+            <a href="../classes/String.html#method-i-lstrip" name="method-i-lstrip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lstrip_source')" id="l_method-i-lstrip_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L437" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-lstrip_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 437</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lstrip</span>
+  <span class="ruby-value">%x`self.replace(/^\\s*/, &#39;&#39;)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-match">
+            
+              <b>match</b>(pattern, pos = undefined, &amp;block)
+            
+            <a href="../classes/String.html#method-i-match" name="method-i-match" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-match_source')" id="l_method-i-match_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L441" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-match_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 441</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">match</span>(<span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">pattern</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">pattern</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_str</span>)
+    <span class="ruby-identifier">pattern</span> = <span class="ruby-node">/#{Regexp.escape(pattern.to_str)}/</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">Regexp</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">pattern</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;wrong argument type #{pattern.class} (expected Regexp)&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">pattern</span>.<span class="ruby-identifier">match</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-next">
+            
+              <b>next</b>()
+            
+            <a href="../classes/String.html#method-i-next" name="method-i-next" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="String.html#method-i-succ">succ</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-next_source')" id="l_method-i-next_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L453" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-next_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 453</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">next</span>
+  <span class="ruby-node">%x{
+    if (#{self}.length === 0) {
+      return &quot;&quot;;
+    }
+
+    var initial = #{self}.substr(0, #{self}.length - 1);
+    var last    = String.fromCharCode(#{self}.charCodeAt(#{self}.length - 1) + 1);
+
+    return initial + last;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ord">
+            
+              <b>ord</b>()
+            
+            <a href="../classes/String.html#method-i-ord" name="method-i-ord" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ord_source')" id="l_method-i-ord_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L466" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-ord_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 466</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ord</span>
+  <span class="ruby-node">%x`#{self}.charCodeAt(0)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-partition">
+            
+              <b>partition</b>(str)
+            
+            <a href="../classes/String.html#method-i-partition" name="method-i-partition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-partition_source')" id="l_method-i-partition_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L470" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-partition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 470</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">partition</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-node">%x{
+    var result = #{self}.split(str);
+    var splitter = (result[0].length === #{self}.length ? &quot;&quot; : str);
+
+    return [result[0], splitter, result.slice(1).join(str.toString())];
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reverse">
+            
+              <b>reverse</b>()
+            
+            <a href="../classes/String.html#method-i-reverse" name="method-i-reverse" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reverse_source')" id="l_method-i-reverse_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L479" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-reverse_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 479</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reverse</span>
+  <span class="ruby-node">%x`#{self}.split(&#39;&#39;).reverse().join(&#39;&#39;)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rindex">
+            
+              <b>rindex</b>(search, offset = undefined)
+            
+            <a href="../classes/String.html#method-i-rindex" name="method-i-rindex" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>TODO handle case where search is regexp</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rindex_source')" id="l_method-i-rindex_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L484" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rindex_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 484</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rindex</span>(<span class="ruby-identifier">search</span>, <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">undefined</span>)
+  <span class="ruby-node">%x{
+    var search_type = (search == null ? Opal.NilClass : search.constructor);
+    if (search_type != String &amp;&amp; search_type != RegExp) {
+      var msg = &quot;type mismatch: &quot; + search_type + &quot; given&quot;;
+      #{raise TypeError.new(`msg`)};
+    }
+
+    if (#{self}.length == 0) {
+      return search.length == 0 ? 0 : nil;
+    }
+
+    var result = -1;
+    if (offset != null) {
+      if (offset &lt; 0) {
+        offset = #{self}.length + offset;
+      }
+
+      if (search_type == String) {
+        result = #{self}.lastIndexOf(search, offset);
+      }
+      else {
+        result = #{self}.substr(0, offset + 1).$reverse().search(search);
+        if (result !== -1) {
+          result = offset - result;
+        }
+      }
+    }
+    else {
+      if (search_type == String) {
+        result = #{self}.lastIndexOf(search);
+      }
+      else {
+        result = #{self}.$reverse().search(search);
+        if (result !== -1) {
+          result = #{self}.length - 1 - result;
+        }
+      }
+    }
+
+    return result === -1 ? nil : result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rjust">
+            
+              <b>rjust</b>(width, padstr = &#39; &#39;)
+            
+            <a href="../classes/String.html#method-i-rjust" name="method-i-rjust" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rjust_source')" id="l_method-i-rjust_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L528" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rjust_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 528</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rjust</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">padstr</span> = <span class="ruby-string">&#39; &#39;</span>)
+  <span class="ruby-identifier">width</span>  = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">width</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-value">:to_int</span>)
+  <span class="ruby-identifier">padstr</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">padstr</span>, <span class="ruby-constant">String</span>, <span class="ruby-value">:to_str</span>).<span class="ruby-identifier">to_s</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">padstr</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;zero width padding&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-value">%x`width &lt;= self.length`</span>
+
+  <span class="ruby-value">%x{
+    var chars     = Math.floor(width - self.length),
+        patterns  = Math.floor(chars / padstr.length),
+        result    = Array(patterns + 1).join(padstr),
+        remaining = chars - result.length;
+
+    return result + padstr.slice(0, remaining) + self;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rstrip">
+            
+              <b>rstrip</b>()
+            
+            <a href="../classes/String.html#method-i-rstrip" name="method-i-rstrip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rstrip_source')" id="l_method-i-rstrip_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L548" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rstrip_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 548</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rstrip</span>
+  <span class="ruby-value">%x`self.replace(/\\s*$/, &#39;&#39;)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scan">
+            
+              <b>scan</b>(pattern, &amp;block)
+            
+            <a href="../classes/String.html#method-i-scan" name="method-i-scan" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scan_source')" id="l_method-i-scan_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L552" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scan_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 552</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scan</span>(<span class="ruby-identifier">pattern</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    if (pattern.global) {
+      // should we clear it afterwards too?
+      pattern.lastIndex = 0;
+    }
+    else {
+      // rewrite regular expression to add the global flag to capture pre/post match
+      pattern = new RegExp(pattern.source, &#39;g&#39; + (pattern.multiline ? &#39;m&#39; : &#39;&#39;) + (pattern.ignoreCase ? &#39;i&#39; : &#39;&#39;));
+    }
+
+    var result = [];
+    var match;
+
+    while ((match = pattern.exec(#{self})) != null) {
+      var match_data = #{MatchData.new `pattern`, `match`};
+      if (block === nil) {
+        match.length == 1 ? result.push(match[0]) : result.push(match.slice(1));
+      }
+      else {
+        match.length == 1 ? block(match[0]) : block.apply(#{self}, match.slice(1));
+      }
+    }
+
+    return (block !== nil ? #{self} : result);
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-size">
+            
+              <b>size</b>()
+            
+            <a href="../classes/String.html#method-i-size" name="method-i-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="String.html#method-i-length">length</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-slice">
+            
+              <b>slice</b>(index, length = undefined)
+            
+            <a href="../classes/String.html#method-i-slice" name="method-i-slice" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="String.html#method-i-5B-5D">[]</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-split">
+            
+              <b>split</b>(pattern = $; || &#39; &#39;, limit = undefined)
+            
+            <a href="../classes/String.html#method-i-split" name="method-i-split" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-split_source')" id="l_method-i-split_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L584" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-split_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 584</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">split</span>(<span class="ruby-identifier">pattern</span> = <span class="ruby-identifier">$;</span> <span class="ruby-operator">||</span> <span class="ruby-string">&#39; &#39;</span>, <span class="ruby-identifier">limit</span> = <span class="ruby-identifier">undefined</span>)
+  <span class="ruby-node">%x`#{self}.split(pattern, limit)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_with-3F">
+            
+              <b>start_with?</b>(*prefixes)
+            
+            <a href="../classes/String.html#method-i-start_with-3F" name="method-i-start_with-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_with-3F_source')" id="l_method-i-start_with-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L588" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-start_with-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 588</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_with?</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">prefixes</span>)
+  <span class="ruby-node">%x{
+    for (var i = 0, length = prefixes.length; i &lt; length; i++) {
+      var prefix = #{Opal.coerce_to `prefixes[i]`, String, :to_str};
+
+      if (self.indexOf(prefix) === 0) {
+        return true;
+      }
+    }
+
+    return false;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-strip">
+            
+              <b>strip</b>()
+            
+            <a href="../classes/String.html#method-i-strip" name="method-i-strip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-strip_source')" id="l_method-i-strip_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L602" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-strip_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 602</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">strip</span>
+  <span class="ruby-node">%x`#{self}.replace(/^\\s*/, &#39;&#39;).replace(/\\s*$/, &#39;&#39;)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sub">
+            
+              <b>sub</b>(pattern, replace = undefined, &amp;block)
+            
+            <a href="../classes/String.html#method-i-sub" name="method-i-sub" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sub_source')" id="l_method-i-sub_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L606" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sub_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 606</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sub</span>(<span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">replace</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    if (typeof(replace) === &#39;string&#39;) {
+      // convert Ruby back reference to JavaScript back reference
+      replace = replace.replace(/\\\\([1-9])/g, &#39;$$$1&#39;)
+      return #{self}.replace(pattern, replace);
+    }
+    if (block !== nil) {
+      return #{self}.replace(pattern, function() {
+        // FIXME: this should be a formal MatchData object with all the goodies
+        var match_data = []
+        for (var i = 0, len = arguments.length; i &lt; len; i++) {
+          var arg = arguments[i];
+          if (arg == undefined) {
+            match_data.push(nil);
+          }
+          else {
+            match_data.push(arg);
+          }
+        }
+
+        var str = match_data.pop();
+        var offset = match_data.pop();
+        var match_len = match_data.length;
+
+        // $1, $2, $3 not being parsed correctly in Ruby code
+        //for (var i = 1; i &lt; match_len; i++) {
+        //  __gvars[String(i)] = match_data[i];
+        //}
+        #{$&amp; = `match_data[0]`};
+        #{$~ = `match_data`};
+        return block(match_data[0]);
+      });
+    }
+    else if (replace !== undefined) {
+      if (#{replace.is_a?(Hash)}) {
+        return #{self}.replace(pattern, function(str) {
+          var value = #{replace[str]};
+
+          return (value == null) ? nil : #{value.to_s};
+        });
+      }
+      else {
+        replace = #{String.try_convert(replace)};
+
+        if (replace == null) {
+          #{raise TypeError, &quot;can&#39;t convert #{replace.class} into String&quot;};
+        }
+
+        return #{self}.replace(pattern, replace);
+      }
+    }
+    else {
+      // convert Ruby back reference to JavaScript back reference
+      replace = replace.toString().replace(/\\\\([1-9])/g, &#39;$$$1&#39;)
+      return #{self}.replace(pattern, replace);
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-succ">
+            
+              <b>succ</b>()
+            
+            <a href="../classes/String.html#method-i-succ" name="method-i-succ" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="String.html#method-i-next">next</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sum">
+            
+              <b>sum</b>(n = 16)
+            
+            <a href="../classes/String.html#method-i-sum" name="method-i-sum" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sum_source')" id="l_method-i-sum_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L668" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sum_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 668</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sum</span>(<span class="ruby-identifier">n</span> = <span class="ruby-number">16</span>)
+  <span class="ruby-node">%x{
+    var result = 0;
+
+    for (var i = 0, length = #{self}.length; i &lt; length; i++) {
+      result += (#{self}.charCodeAt(i) % ((1 &lt;&lt; n) - 1));
+    }
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-swapcase">
+            
+              <b>swapcase</b>()
+            
+            <a href="../classes/String.html#method-i-swapcase" name="method-i-swapcase" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-swapcase_source')" id="l_method-i-swapcase_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L680" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-swapcase_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 680</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">swapcase</span>
+  <span class="ruby-node">%x{
+    var str = #{self}.replace(/([a-z]+)|([A-Z]+)/g, function($0,$1,$2) {
+      return $1 ? $0.toUpperCase() : $0.toLowerCase();
+    });
+
+    if (#{self}.constructor === String) {
+      return str;
+    }
+
+    return #{self.class.new `str`};
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_a">
+            
+              <b>to_a</b>()
+            
+            <a href="../classes/String.html#method-i-to_a" name="method-i-to_a" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_a_source')" id="l_method-i-to_a_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L694" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_a_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 694</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_a</span>
+  <span class="ruby-node">%x{
+    if (#{self}.length === 0) {
+      return [];
+    }
+
+    return [#{self}];
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_f">
+            
+              <b>to_f</b>()
+            
+            <a href="../classes/String.html#method-i-to_f" name="method-i-to_f" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_f_source')" id="l_method-i-to_f_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L704" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_f_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 704</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_f</span>
+  <span class="ruby-node">%x{
+    var result = parseFloat(#{self});
+
+    return isNaN(result) ? 0 : result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_i">
+            
+              <b>to_i</b>(base = 10)
+            
+            <a href="../classes/String.html#method-i-to_i" name="method-i-to_i" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_i_source')" id="l_method-i-to_i_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L712" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_i_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 712</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_i</span>(<span class="ruby-identifier">base</span> = <span class="ruby-number">10</span>)
+  <span class="ruby-node">%x{
+    var result = parseInt(#{self}, base);
+
+    if (isNaN(result)) {
+      return 0;
+    }
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_proc">
+            
+              <b>to_proc</b>()
+            
+            <a href="../classes/String.html#method-i-to_proc" name="method-i-to_proc" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_proc_source')" id="l_method-i-to_proc_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L724" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_proc_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 724</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_proc</span>
+  <span class="ruby-node">%x{
+    var name = &#39;$&#39; + #{self};
+
+    return function(arg) {
+      var meth = arg[name];
+      return meth ? meth.call(arg) : arg.$method_missing(name);
+    };
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/String.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="String.html#method-i-to_str">to_str</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L735" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 735</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_s</span>
+  <span class="ruby-node">%x`#{self}.toString()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_str">
+            
+              <b>to_str</b>()
+            
+            <a href="../classes/String.html#method-i-to_str" name="method-i-to_str" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="String.html#method-i-to_s">to_s</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_sym">
+            
+              <b>to_sym</b>()
+            
+            <a href="../classes/String.html#method-i-to_sym" name="method-i-to_sym" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="String.html#method-i-intern">intern</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tr">
+            
+              <b>tr</b>(from, to)
+            
+            <a href="../classes/String.html#method-i-tr" name="method-i-tr" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tr_source')" id="l_method-i-tr_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L743" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tr_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 743</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tr</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)
+  <span class="ruby-node">%x{
+    if (from.length == 0 || from === to) {
+      return #{self};
+    }
+
+    var subs = {};
+    var from_chars = from.split(&#39;&#39;);
+    var from_length = from_chars.length;
+    var to_chars = to.split(&#39;&#39;);
+    var to_length = to_chars.length;
+
+    var inverse = false;
+    var global_sub = null;
+    if (from_chars[0] === &#39;^&#39;) {
+      inverse = true;
+      from_chars.shift();
+      global_sub = to_chars[to_length - 1]
+      from_length -= 1;
+    }
+
+    var from_chars_expanded = [];
+    var last_from = null;
+    var in_range = false;
+    for (var i = 0; i &lt; from_length; i++) {
+      var char = from_chars[i];
+      if (last_from == null) {
+        last_from = char;
+        from_chars_expanded.push(char);
+      }
+      else if (char === &#39;-&#39;) {
+        if (last_from === &#39;-&#39;) {
+          from_chars_expanded.push(&#39;-&#39;);
+          from_chars_expanded.push(&#39;-&#39;);
+        }
+        else if (i == from_length - 1) {
+          from_chars_expanded.push(&#39;-&#39;);
+        }
+        else {
+          in_range = true;
+        }
+      }
+      else if (in_range) {
+        var start = last_from.charCodeAt(0) + 1;
+        var end = char.charCodeAt(0);
+        for (var c = start; c &lt; end; c++) {
+          from_chars_expanded.push(String.fromCharCode(c));
+        }
+        from_chars_expanded.push(char);
+        in_range = null;
+        last_from = null;
+      }
+      else {
+        from_chars_expanded.push(char);
+      }
+    }
+
+    from_chars = from_chars_expanded;
+    from_length = from_chars.length;
+
+    if (inverse) {
+      for (var i = 0; i &lt; from_length; i++) {
+        subs[from_chars[i]] = true;
+      }
+    }
+    else {
+      if (to_length &gt; 0) {
+        var to_chars_expanded = [];
+        var last_to = null;
+        var in_range = false;
+        for (var i = 0; i &lt; to_length; i++) {
+          var char = to_chars[i];
+          if (last_from == null) {
+            last_from = char;
+            to_chars_expanded.push(char);
+          }
+          else if (char === &#39;-&#39;) {
+            if (last_to === &#39;-&#39;) {
+              to_chars_expanded.push(&#39;-&#39;);
+              to_chars_expanded.push(&#39;-&#39;);
+            }
+            else if (i == to_length - 1) {
+              to_chars_expanded.push(&#39;-&#39;);
+            }
+            else {
+              in_range = true;
+            }
+          }
+          else if (in_range) {
+            var start = last_from.charCodeAt(0) + 1;
+            var end = char.charCodeAt(0);
+            for (var c = start; c &lt; end; c++) {
+              to_chars_expanded.push(String.fromCharCode(c));
+            }
+            to_chars_expanded.push(char);
+            in_range = null;
+            last_from = null;
+          }
+          else {
+            to_chars_expanded.push(char);
+          }
+        }
+
+        to_chars = to_chars_expanded;
+        to_length = to_chars.length;
+      }
+
+      var length_diff = from_length - to_length;
+      if (length_diff &gt; 0) {
+        var pad_char = (to_length &gt; 0 ? to_chars[to_length - 1] : &#39;&#39;);
+        for (var i = 0; i &lt; length_diff; i++) {
+          to_chars.push(pad_char);
+        }
+      }
+
+      for (var i = 0; i &lt; from_length; i++) {
+        subs[from_chars[i]] = to_chars[i];
+      }
+    }
+
+    var new_str = &#39;&#39;
+    for (var i = 0, length = #{self}.length; i &lt; length; i++) {
+      var char = #{self}.charAt(i);
+      var sub = subs[char];
+      if (inverse) {
+        new_str += (sub == null ? global_sub : char);
+      }
+      else {
+        new_str += (sub != null ? sub : char);
+      }
+    }
+    return new_str;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tr_s">
+            
+              <b>tr_s</b>(from, to)
+            
+            <a href="../classes/String.html#method-i-tr_s" name="method-i-tr_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tr_s_source')" id="l_method-i-tr_s_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L878" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-tr_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 878</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tr_s</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)
+  <span class="ruby-node">%x{
+    if (from.length == 0) {
+      return #{self};
+    }
+
+    var subs = {};
+    var from_chars = from.split(&#39;&#39;);
+    var from_length = from_chars.length;
+    var to_chars = to.split(&#39;&#39;);
+    var to_length = to_chars.length;
+
+    var inverse = false;
+    var global_sub = null;
+    if (from_chars[0] === &#39;^&#39;) {
+      inverse = true;
+      from_chars.shift();
+      global_sub = to_chars[to_length - 1]
+      from_length -= 1;
+    }
+
+    var from_chars_expanded = [];
+    var last_from = null;
+    var in_range = false;
+    for (var i = 0; i &lt; from_length; i++) {
+      var char = from_chars[i];
+      if (last_from == null) {
+        last_from = char;
+        from_chars_expanded.push(char);
+      }
+      else if (char === &#39;-&#39;) {
+        if (last_from === &#39;-&#39;) {
+          from_chars_expanded.push(&#39;-&#39;);
+          from_chars_expanded.push(&#39;-&#39;);
+        }
+        else if (i == from_length - 1) {
+          from_chars_expanded.push(&#39;-&#39;);
+        }
+        else {
+          in_range = true;
+        }
+      }
+      else if (in_range) {
+        var start = last_from.charCodeAt(0) + 1;
+        var end = char.charCodeAt(0);
+        for (var c = start; c &lt; end; c++) {
+          from_chars_expanded.push(String.fromCharCode(c));
+        }
+        from_chars_expanded.push(char);
+        in_range = null;
+        last_from = null;
+      }
+      else {
+        from_chars_expanded.push(char);
+      }
+    }
+
+    from_chars = from_chars_expanded;
+    from_length = from_chars.length;
+
+    if (inverse) {
+      for (var i = 0; i &lt; from_length; i++) {
+        subs[from_chars[i]] = true;
+      }
+    }
+    else {
+      if (to_length &gt; 0) {
+        var to_chars_expanded = [];
+        var last_to = null;
+        var in_range = false;
+        for (var i = 0; i &lt; to_length; i++) {
+          var char = to_chars[i];
+          if (last_from == null) {
+            last_from = char;
+            to_chars_expanded.push(char);
+          }
+          else if (char === &#39;-&#39;) {
+            if (last_to === &#39;-&#39;) {
+              to_chars_expanded.push(&#39;-&#39;);
+              to_chars_expanded.push(&#39;-&#39;);
+            }
+            else if (i == to_length - 1) {
+              to_chars_expanded.push(&#39;-&#39;);
+            }
+            else {
+              in_range = true;
+            }
+          }
+          else if (in_range) {
+            var start = last_from.charCodeAt(0) + 1;
+            var end = char.charCodeAt(0);
+            for (var c = start; c &lt; end; c++) {
+              to_chars_expanded.push(String.fromCharCode(c));
+            }
+            to_chars_expanded.push(char);
+            in_range = null;
+            last_from = null;
+          }
+          else {
+            to_chars_expanded.push(char);
+          }
+        }
+
+        to_chars = to_chars_expanded;
+        to_length = to_chars.length;
+      }
+
+      var length_diff = from_length - to_length;
+      if (length_diff &gt; 0) {
+        var pad_char = (to_length &gt; 0 ? to_chars[to_length - 1] : &#39;&#39;);
+        for (var i = 0; i &lt; length_diff; i++) {
+          to_chars.push(pad_char);
+        }
+      }
+
+      for (var i = 0; i &lt; from_length; i++) {
+        subs[from_chars[i]] = to_chars[i];
+      }
+    }
+    var new_str = &#39;&#39;
+    var last_substitute = null
+    for (var i = 0, length = #{self}.length; i &lt; length; i++) {
+      var char = #{self}.charAt(i);
+      var sub = subs[char]
+      if (inverse) {
+        if (sub == null) {
+          if (last_substitute == null) {
+            new_str += global_sub;
+            last_substitute = true;
+          }
+        }
+        else {
+          new_str += char;
+          last_substitute = null;
+        }
+      }
+      else {
+        if (sub != null) {
+          if (last_substitute == null || last_substitute !== sub) {
+            new_str += sub;
+            last_substitute = sub;
+          }
+        }
+        else {
+          new_str += char;
+          last_substitute = null;
+        }
+      }
+    }
+    return new_str;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-upcase">
+            
+              <b>upcase</b>()
+            
+            <a href="../classes/String.html#method-i-upcase" name="method-i-upcase" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-upcase_source')" id="l_method-i-upcase_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2eebb877558a584e99913ba99eddbb267e246a19/opal/corelib/string.rb#L1031" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-upcase_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string.rb, line 1031</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">upcase</span>
+  <span class="ruby-value">%x`self.toUpperCase()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

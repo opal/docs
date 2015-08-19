@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>MSpec::Opal::Environment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            MSpec::Opal::Environment 
+            
+                <span class="parent">&lt; 
+                    
+                    Opal::Environment
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/mspec/opal/rake_task_rb.html">opal/lib/mspec/opal/rake_task.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_files">add_files</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-build_min">build_min</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-build_specs">build_specs</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-files">files</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-files_to_run">files_to_run</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-paths_from_glob">paths_from_glob</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-rubyspec_paths">rubyspec_paths</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-specs">specs</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-stubs">stubs</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>basedir</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>pattern</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(basedir = nil, pattern = nil)
+            
+            <a href="../../../classes/MSpec/Opal/Environment.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/def172b0461f2727aa7ec1de2d3f6da402a9f092/lib/mspec/opal/rake_task.rb#L107" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">basedir</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">pattern</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-operator">::</span><span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Processor</span>.<span class="ruby-identifier">arity_check_enabled</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Processor</span>.<span class="ruby-identifier">dynamic_require_severity</span> = <span class="ruby-value">:ignore</span>
+  <span class="ruby-keyword">super</span>()
+  <span class="ruby-ivar">@pattern</span> = <span class="ruby-identifier">pattern</span> <span class="ruby-operator">||</span> <span class="ruby-constant">DEFAULT_PATTERN</span>
+  <span class="ruby-ivar">@basedir</span> = <span class="ruby-identifier">basedir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">basedir</span> <span class="ruby-operator">||</span> <span class="ruby-constant">DEFAULT_BASEDIR</span>)
+  <span class="ruby-identifier">append_path</span> <span class="ruby-identifier">basedir</span>
+  <span class="ruby-identifier">append_path</span> <span class="ruby-node">&quot;#{basedir}/rubyspec&quot;</span>
+  <span class="ruby-identifier">use_gem</span> <span class="ruby-string">&#39;mspec&#39;</span>
+
+  <span class="ruby-identifier">stubs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">asset</span><span class="ruby-operator">|</span>
+    <span class="ruby-operator">::</span><span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Processor</span>.<span class="ruby-identifier">stub_file</span> <span class="ruby-identifier">asset</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">ENV</span>[<span class="ruby-string">&#39;OPAL_SPEC&#39;</span>] = <span class="ruby-identifier">files_to_run</span>(<span class="ruby-identifier">pattern</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;,&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_files">
+            
+              <b>add_files</b>(specs)
+            
+            <a href="../../../classes/MSpec/Opal/Environment.html#method-i-add_files" name="method-i-add_files" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_files_source')" id="l_method-i-add_files_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/def172b0461f2727aa7ec1de2d3f6da402a9f092/lib/mspec/opal/rake_task.rb#L149" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_files_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_files</span> <span class="ruby-identifier">specs</span>
+  <span class="ruby-identifier">files</span>.<span class="ruby-identifier">concat</span> <span class="ruby-identifier">specs</span>.<span class="ruby-identifier">flatten</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-build_min">
+            
+              <b>build_min</b>(file = &quot;#{basedir}/build/specs.min.js&quot;)
+            
+            <a href="../../../classes/MSpec/Opal/Environment.html#method-i-build_min" name="method-i-build_min" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-build_min_source')" id="l_method-i-build_min_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/def172b0461f2727aa7ec1de2d3f6da402a9f092/lib/mspec/opal/rake_task.rb#L141" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-build_min_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">build_min</span> <span class="ruby-identifier">file</span> = <span class="ruby-node">&quot;#{basedir}/build/specs.min.js&quot;</span>
+  <span class="ruby-identifier">build</span> <span class="ruby-operator">::</span><span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Builder</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">uglify</span>(<span class="ruby-identifier">specs</span>.<span class="ruby-identifier">to_s</span>), <span class="ruby-identifier">file</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-build_specs">
+            
+              <b>build_specs</b>(file = &quot;#{basedir}/build/specs.js&quot;)
+            
+            <a href="../../../classes/MSpec/Opal/Environment.html#method-i-build_specs" name="method-i-build_specs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-build_specs_source')" id="l_method-i-build_specs_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/def172b0461f2727aa7ec1de2d3f6da402a9f092/lib/mspec/opal/rake_task.rb#L176" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-build_specs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">build_specs</span> <span class="ruby-identifier">file</span> = <span class="ruby-node">&quot;#{basedir}/build/specs.js&quot;</span>
+  <span class="ruby-identifier">code</span> = <span class="ruby-identifier">specs</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Building #{file}...&quot;</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-string">&#39;w+&#39;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-identifier">o</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">code</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-files">
+            
+              <b>files</b>()
+            
+            <a href="../../../classes/MSpec/Opal/Environment.html#method-i-files" name="method-i-files" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-files_source')" id="l_method-i-files_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/def172b0461f2727aa7ec1de2d3f6da402a9f092/lib/mspec/opal/rake_task.rb#L145" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-files_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">files</span>
+  <span class="ruby-ivar">@files</span> <span class="ruby-operator">||=</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-files_to_run">
+            
+              <b>files_to_run</b>(pattern=nil)
+            
+            <a href="../../../classes/MSpec/Opal/Environment.html#method-i-files_to_run" name="method-i-files_to_run" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-files_to_run_source')" id="l_method-i-files_to_run_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/def172b0461f2727aa7ec1de2d3f6da402a9f092/lib/mspec/opal/rake_task.rb#L165" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-files_to_run_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">files_to_run</span>(<span class="ruby-identifier">pattern</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># add any filters in spec/filters of specs we dont want to run</span>
+  <span class="ruby-identifier">add_files</span> <span class="ruby-identifier">paths_from_glob</span>(<span class="ruby-node">&quot;#{basedir}/filters/**/*.rb&quot;</span>)
+
+  <span class="ruby-comment"># add custom opal specs from spec/</span>
+  <span class="ruby-identifier">add_files</span> <span class="ruby-identifier">paths_from_glob</span>(<span class="ruby-identifier">pattern</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pattern</span>
+
+  <span class="ruby-comment"># add any rubyspecs we want to run (defined in spec/rubyspecs)</span>
+  <span class="ruby-identifier">add_files</span> <span class="ruby-identifier">rubyspec_paths</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-paths_from_glob">
+            
+              <b>paths_from_glob</b>(pattern)
+            
+            <a href="../../../classes/MSpec/Opal/Environment.html#method-i-paths_from_glob" name="method-i-paths_from_glob" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-paths_from_glob_source')" id="l_method-i-paths_from_glob_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/def172b0461f2727aa7ec1de2d3f6da402a9f092/lib/mspec/opal/rake_task.rb#L153" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-paths_from_glob_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">paths_from_glob</span> <span class="ruby-identifier">pattern</span>
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">pattern</span>)).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-node">/^#{basedir}\//</span>, <span class="ruby-string">&#39;&#39;</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/\.rb$/</span>, <span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rubyspec_paths">
+            
+              <b>rubyspec_paths</b>()
+            
+            <a href="../../../classes/MSpec/Opal/Environment.html#method-i-rubyspec_paths" name="method-i-rubyspec_paths" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rubyspec_paths_source')" id="l_method-i-rubyspec_paths_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/def172b0461f2727aa7ec1de2d3f6da402a9f092/lib/mspec/opal/rake_task.rb#L159" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rubyspec_paths_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rubyspec_paths</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;#{basedir}/rubyspecs&quot;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>).<span class="ruby-identifier">reject</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">line</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">&#39;#&#39;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-specs">
+            
+              <b>specs</b>()
+            
+            <a href="../../../classes/MSpec/Opal/Environment.html#method-i-specs" name="method-i-specs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-specs_source')" id="l_method-i-specs_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/def172b0461f2727aa7ec1de2d3f6da402a9f092/lib/mspec/opal/rake_task.rb#L137" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-specs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">specs</span>
+  <span class="ruby-ivar">@specs</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">self</span>[<span class="ruby-string">&#39;mspec/opal/main&#39;</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">raise</span>(<span class="ruby-node">&quot;Cannot find mspec/opal/main inside #{paths.inspect}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-stubs">
+            
+              <b>stubs</b>()
+            
+            <a href="../../../classes/MSpec/Opal/Environment.html#method-i-stubs" name="method-i-stubs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-stubs_source')" id="l_method-i-stubs_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/def172b0461f2727aa7ec1de2d3f6da402a9f092/lib/mspec/opal/rake_task.rb#L124" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-stubs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">stubs</span>
+  <span class="ruby-comment"># missing stdlib</span>
+  <span class="ruby-identifier">stubs</span> = <span class="ruby-node">%w[fileutils iconv yaml]</span>
+
+  <span class="ruby-comment"># use x-strings which generate bad javascript</span>
+  <span class="ruby-identifier">stubs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;mspec/helpers/tmp&quot;</span>
+  <span class="ruby-identifier">stubs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;mspec/helpers/environment&quot;</span>
+  <span class="ruby-identifier">stubs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;mspec/guards/block_device&quot;</span>
+  <span class="ruby-identifier">stubs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;mspec/guards/endian&quot;</span>
+
+  <span class="ruby-identifier">stubs</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

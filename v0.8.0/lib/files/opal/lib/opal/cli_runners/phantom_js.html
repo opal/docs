@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>phantom.js</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            phantom.js
+        </h1>
+        <ul class="files">
+            <li>opal/lib/opal/cli_runners/phantom.js</li>
+            <li>Last modified: 2015-08-19 01:14:21 +0200</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>var page   = require(&#39;webpage&#39;).create(); var fs     =
+require(&#39;fs&#39;); var system = require(&#39;system&#39;);</p>
+
+<p>page.onConsoleMessage = function(msg) {</p>
+
+<pre><code>system.stdout.write(msg);
+</code></pre>
+
+<p>};</p>
+
+<p>var opal_code = fs.read(&#39;/dev/stdin&#39;);</p>
+
+<pre><code>Exit phantom instance &quot;safely&quot; see - https://github.com/ariya/phantomjs/issues/12697
+https://github.com/nobuoka/gulp-qunit/commit/d242aff9b79de7543d956e294b2ee36eda4bac6c</code></pre>
+
+<p>function phantom_exit(code) {</p>
+
+<pre><code>page.close();
+setTimeout(function () { phantom.exit(code); }, 0);</code></pre>
+
+<p>}</p>
+
+<p>page.onCallback = function(data) {</p>
+
+<pre><code>switch (data[0]) {
+case &#39;exit&#39;:
+  var status = data[1] || 0;
+  phantom_exit(status);
+case &#39;stdout&#39;:
+  system.stdout.write(data[1] || &#39;&#39;);
+  break;
+case &#39;stderr&#39;:
+  system.stderr.write(data[1] || &#39;&#39;);
+  break;
+default:
+  console.error(&#39;Unknown callback data: &#39;, data);
+}</code></pre>
+
+<p>};</p>
+
+<p>page.content =  &#39;&lt;!doctype html&gt;&#39;+</p>
+
+<pre><code>&#39;&lt;html&gt;&#39;+
+&#39;  &lt;head&gt;&lt;meta charset=&quot;utf-8&quot;/&gt;&lt;/head&gt;&#39;+
+&quot;  &lt;body&gt;&lt;script&gt;//&lt;![CDATA[\n&quot;+
+opal_code+
+&quot;  //]]&gt;&lt;/script&gt;&quot;+
+&#39;  &lt;script&gt;callPhantom([&quot;exit&quot;, 0]);&lt;/script&gt;&lt;/body&gt;\n&#39;+
+&#39;  &lt;/body&gt;&#39;+
+&#39;&lt;/html&gt;&#39;;
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

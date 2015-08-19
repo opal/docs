@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Buffer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Buffer 
+            
+                <span class="parent">&lt; 
+                    
+                    Native
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/buffer_rb.html">opal/stdlib/buffer.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/buffer/array_rb.html">opal/stdlib/buffer/array.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/buffer/view_rb.html">opal/stdlib/buffer/view.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Buffer/Array.html">Buffer::Array</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Buffer/View.html">Buffer::View</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-length">length</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-name_for">name_for</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-size">size</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-supported-3F">supported?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_a">to_a</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-view">view</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Native.html">
+              Native
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-name_for">
+            
+              <b>name_for</b>(bits, type)
+            
+            <a href="../classes/Buffer.html#method-c-name_for" name="method-c-name_for" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-name_for_source')" id="l_method-c-name_for_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer.rb#L11" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-name_for_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">name_for</span>(<span class="ruby-identifier">bits</span>, <span class="ruby-identifier">type</span>)
+  <span class="ruby-node">&quot;#{case type
+    when :unsigned then &#39;Uint&#39;
+    when :signed   then &#39;Int&#39;
+    when :float    then &#39;Float&#39;
+  end}#{bits}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(size, bits = 8)
+            
+            <a href="../classes/Buffer.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">size</span>, <span class="ruby-identifier">bits</span> = <span class="ruby-number">8</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">native?</span>(<span class="ruby-identifier">size</span>)
+    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">size</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-value">%x`new ArrayBuffer(size * (bits / 8))`</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-supported-3F">
+            
+              <b>supported?</b>()
+            
+            <a href="../classes/Buffer.html#method-c-supported-3F" name="method-c-supported-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-supported-3F_source')" id="l_method-c-supported-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer.rb#L7" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-supported-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">supported?</span>
+  <span class="ruby-keyword">not</span> <span class="ruby-identifier">$$</span>[<span class="ruby-value">:ArrayBuffer</span>].<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-length">
+            
+              <b>length</b>()
+            
+            <a href="../classes/Buffer.html#method-i-length" name="method-i-length" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Buffer.html#method-i-size">size</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-length_source')" id="l_method-i-length_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-length_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">length</span>
+  <span class="ruby-node">%x`#@native.byteLength`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-size">
+            
+              <b>size</b>()
+            
+            <a href="../classes/Buffer.html#method-i-size" name="method-i-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Buffer.html#method-i-length">length</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_a">
+            
+              <b>to_a</b>(bits = 8, type = :unsigned)
+            
+            <a href="../classes/Buffer.html#method-i-to_a" name="method-i-to_a" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_a_source')" id="l_method-i-to_a_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_a_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_a</span>(<span class="ruby-identifier">bits</span> = <span class="ruby-number">8</span>, <span class="ruby-identifier">type</span> = <span class="ruby-value">:unsigned</span>)
+  <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">bits</span>, <span class="ruby-identifier">type</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-view">
+            
+              <b>view</b>(offset = nil, length = nil)
+            
+            <a href="../classes/Buffer.html#method-i-view" name="method-i-view" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-view_source')" id="l_method-i-view_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer.rb#L37" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-view_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">view</span>(<span class="ruby-identifier">offset</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">length</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">View</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">length</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

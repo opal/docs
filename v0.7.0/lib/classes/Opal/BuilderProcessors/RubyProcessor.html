@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::BuilderProcessors::RubyProcessor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::BuilderProcessors::RubyProcessor 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Processor.html">Opal::BuilderProcessors::Processor</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/builder_processors_rb.html">opal/lib/opal/builder_processors.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-compiled">compiled</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-compiler_class">compiler_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-compiler_for">compiler_for</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-required_trees">required_trees</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-requires">requires</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-source">source</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-source_map">source_map</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-compiled">
+            
+              <b>compiled</b>()
+            
+            <a href="../../../classes/Opal/BuilderProcessors/RubyProcessor.html#method-i-compiled" name="method-i-compiled" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compiled_source')" id="l_method-i-compiled_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f73b6c8498cde2dc1cc92161f331ee9098bf085f/lib/opal/builder_processors.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compiled_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder_processors.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compiled</span>
+  <span class="ruby-ivar">@compiled</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">compiler</span> = <span class="ruby-identifier">compiler_for</span>(<span class="ruby-ivar">@source</span>, <span class="ruby-identifier">file</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@filename</span>)
+    <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">compile</span>
+    <span class="ruby-identifier">compiler</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compiler_class">
+            
+              <b>compiler_class</b>()
+            
+            <a href="../../../classes/Opal/BuilderProcessors/RubyProcessor.html#method-i-compiler_class" name="method-i-compiler_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compiler_class_source')" id="l_method-i-compiler_class_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f73b6c8498cde2dc1cc92161f331ee9098bf085f/lib/opal/builder_processors.rb#L108" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compiler_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder_processors.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compiler_class</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Compiler</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compiler_for">
+            
+              <b>compiler_for</b>(source, options = {})
+            
+            <a href="../../../classes/Opal/BuilderProcessors/RubyProcessor.html#method-i-compiler_for" name="method-i-compiler_for" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compiler_for_source')" id="l_method-i-compiler_for_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f73b6c8498cde2dc1cc92161f331ee9098bf085f/lib/opal/builder_processors.rb#L96" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compiler_for_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder_processors.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compiler_for</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">compiler_class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">source</span>, <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-required_trees">
+            
+              <b>required_trees</b>()
+            
+            <a href="../../../classes/Opal/BuilderProcessors/RubyProcessor.html#method-i-required_trees" name="method-i-required_trees" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-required_trees_source')" id="l_method-i-required_trees_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f73b6c8498cde2dc1cc92161f331ee9098bf085f/lib/opal/builder_processors.rb#L104" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-required_trees_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder_processors.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">required_trees</span>
+  <span class="ruby-identifier">compiled</span>.<span class="ruby-identifier">required_trees</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-requires">
+            
+              <b>requires</b>()
+            
+            <a href="../../../classes/Opal/BuilderProcessors/RubyProcessor.html#method-i-requires" name="method-i-requires" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-requires_source')" id="l_method-i-requires_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f73b6c8498cde2dc1cc92161f331ee9098bf085f/lib/opal/builder_processors.rb#L100" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-requires_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder_processors.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">requires</span>
+  <span class="ruby-identifier">compiled</span>.<span class="ruby-identifier">requires</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-source">
+            
+              <b>source</b>()
+            
+            <a href="../../../classes/Opal/BuilderProcessors/RubyProcessor.html#method-i-source" name="method-i-source" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-source_source')" id="l_method-i-source_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f73b6c8498cde2dc1cc92161f331ee9098bf085f/lib/opal/builder_processors.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-source_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder_processors.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">source</span>
+  <span class="ruby-identifier">compiled</span>.<span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-source_map">
+            
+              <b>source_map</b>()
+            
+            <a href="../../../classes/Opal/BuilderProcessors/RubyProcessor.html#method-i-source_map" name="method-i-source_map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-source_map_source')" id="l_method-i-source_map_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f73b6c8498cde2dc1cc92161f331ee9098bf085f/lib/opal/builder_processors.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-source_map_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder_processors.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">source_map</span>
+  <span class="ruby-identifier">compiled</span>.<span class="ruby-identifier">source_map</span>.<span class="ruby-identifier">map</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

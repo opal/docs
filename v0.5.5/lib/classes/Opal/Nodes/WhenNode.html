@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Nodes::WhenNode</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Nodes::WhenNode 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Base.html">Opal::Nodes::Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/nodes/case_rb.html">opal/lib/opal/nodes/case.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-body_code">body_code</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-case_stmt">case_stmt</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-compile">compile</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-when_checks">when_checks</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-body_code">
+            
+              <b>body_code</b>()
+            
+            <a href="../../../classes/Opal/Nodes/WhenNode.html#method-i-body_code" name="method-i-body_code" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-body_code_source')" id="l_method-i-body_code_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0a183c472f214fe6fbe1d490e9f2ef221f6cd0f6/lib/opal/nodes/case.rb#L91" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-body_code_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/case.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">body_code</span>
+  <span class="ruby-identifier">body</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-case_stmt">
+            
+              <b>case_stmt</b>()
+            
+            <a href="../../../classes/Opal/Nodes/WhenNode.html#method-i-case_stmt" name="method-i-case_stmt" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-case_stmt_source')" id="l_method-i-case_stmt_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0a183c472f214fe6fbe1d490e9f2ef221f6cd0f6/lib/opal/nodes/case.rb#L87" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-case_stmt_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/case.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">case_stmt</span>
+  <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">case_stmt</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compile">
+            
+              <b>compile</b>()
+            
+            <a href="../../../classes/Opal/Nodes/WhenNode.html#method-i-compile" name="method-i-compile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_source')" id="l_method-i-compile_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0a183c472f214fe6fbe1d490e9f2ef221f6cd0f6/lib/opal/nodes/case.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/case.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile</span>
+  <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;if (&quot;</span>
+
+  <span class="ruby-identifier">when_checks</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">check</span>, <span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">push</span> <span class="ruby-string">&#39; || &#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">idx</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">check</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:splat</span>
+      <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;(function($splt) { for (var i = 0; i &lt; $splt.length; i++) {&quot;</span>
+      <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;if ($splt[i][&#39;$===&#39;]($case)) { return true; }&quot;</span>
+      <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;} return false; })(&quot;</span>, <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">check</span>[<span class="ruby-number">1</span>]), <span class="ruby-string">&quot;)&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">case_stmt</span>[<span class="ruby-value">:cond</span>]
+        <span class="ruby-identifier">call</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:call</span>, <span class="ruby-identifier">check</span>, <span class="ruby-value">:===</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:arglist</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-string">&#39;$case&#39;</span>)))
+        <span class="ruby-identifier">push</span> <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">call</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">push</span> <span class="ruby-identifier">js_truthy</span>(<span class="ruby-identifier">check</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;) {&quot;</span>, <span class="ruby-identifier">process</span>(<span class="ruby-identifier">body_code</span>, <span class="ruby-ivar">@level</span>), <span class="ruby-string">&quot;}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-when_checks">
+            
+              <b>when_checks</b>()
+            
+            <a href="../../../classes/Opal/Nodes/WhenNode.html#method-i-when_checks" name="method-i-when_checks" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-when_checks_source')" id="l_method-i-when_checks_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0a183c472f214fe6fbe1d490e9f2ef221f6cd0f6/lib/opal/nodes/case.rb#L83" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-when_checks_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/case.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">when_checks</span>
+  <span class="ruby-identifier">whens</span>.<span class="ruby-identifier">children</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

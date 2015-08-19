@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>File</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            File 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="IO.html">IO</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/opal/corelib/file_rb.html">opal/opal/corelib/file.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-basename">basename</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-directory-3F">directory?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-dirname">dirname</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-exist-3F">exist?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-exists-3F">exists?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-expand_path">expand_path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>J</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-join">join</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-split">split</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">Separator</td>
+            <td>=</td>
+            <td class="attr-value">SEPARATOR = &#39;/&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ALT_SEPARATOR</td>
+            <td>=</td>
+            <td class="attr-value">nil</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PATH_SEPARATOR</td>
+            <td>=</td>
+            <td class="attr-value">&#39;:&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-basename">
+            
+              <b>basename</b>(path)
+            
+            <a href="../classes/File.html#method-c-basename" name="method-c-basename" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-basename_source')" id="l_method-c-basename_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d82a84df4e6563375de997d695d8e7b29a08ede4/opal/corelib/file.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-basename_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/file.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">basename</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">split</span>(<span class="ruby-identifier">path</span>)[<span class="ruby-number">-1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-directory-3F">
+            
+              <b>directory?</b>(path)
+            
+            <a href="../classes/File.html#method-c-directory-3F" name="method-c-directory-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-directory-3F_source')" id="l_method-c-directory-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d82a84df4e6563375de997d695d8e7b29a08ede4/opal/corelib/file.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-directory-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/file.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">directory?</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">files</span> = []
+  <span class="ruby-node">%x{
+    for (var key in Opal.modules) {
+      #{files}.push(key)
+    }
+  }</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-identifier">path</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-node">%r{(^.#{SEPARATOR}+|#{SEPARATOR}+$)}</span>)
+  <span class="ruby-identifier">file</span> = <span class="ruby-identifier">files</span>.<span class="ruby-identifier">find</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">file</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/^#{path}/</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">file</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-dirname">
+            
+              <b>dirname</b>(path)
+            
+            <a href="../classes/File.html#method-c-dirname" name="method-c-dirname" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-dirname_source')" id="l_method-c-dirname_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d82a84df4e6563375de997d695d8e7b29a08ede4/opal/corelib/file.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-dirname_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/file.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dirname</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">split</span>(<span class="ruby-identifier">path</span>)[<span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">-2</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-exist-3F">
+            
+              <b>exist?</b>(path)
+            
+            <a href="../classes/File.html#method-c-exist-3F" name="method-c-exist-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="File.html#method-c-exists-3F">exists?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-exist-3F_source')" id="l_method-c-exist-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d82a84df4e6563375de997d695d8e7b29a08ede4/opal/corelib/file.rb#L31" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-exist-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/file.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exist?</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-node">%x`Opal.modules[#{path}] != null`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-exists-3F">
+            
+              <b>exists?</b>(path)
+            
+            <a href="../classes/File.html#method-c-exists-3F" name="method-c-exists-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="File.html#method-c-exist-3F">exist?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-expand_path">
+            
+              <b>expand_path</b>(path, basedir = nil)
+            
+            <a href="../classes/File.html#method-c-expand_path" name="method-c-expand_path" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-expand_path_source')" id="l_method-c-expand_path_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d82a84df4e6563375de997d695d8e7b29a08ede4/opal/corelib/file.rb#L7" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-expand_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/file.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">expand_path</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">basedir</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">path</span> = [<span class="ruby-identifier">basedir</span>, <span class="ruby-identifier">path</span>].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">SEPARATOR</span>)
+  <span class="ruby-identifier">parts</span> = <span class="ruby-identifier">path</span>.<span class="ruby-identifier">split</span>(<span class="ruby-constant">SEPARATOR</span>)
+  <span class="ruby-identifier">new_parts</span> = []
+  <span class="ruby-identifier">parts</span>[<span class="ruby-number">0</span>] = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">home</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;~&#39;</span>
+
+  <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">part</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;..&#39;</span>
+      <span class="ruby-identifier">new_parts</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">new_parts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">part</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">new_parts</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">SEPARATOR</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-join">
+            
+              <b>join</b>(*paths)
+            
+            <a href="../classes/File.html#method-c-join" name="method-c-join" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-join_source')" id="l_method-c-join_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d82a84df4e6563375de997d695d8e7b29a08ede4/opal/corelib/file.rb#L50" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-join_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/file.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">join</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">paths</span>)
+  <span class="ruby-identifier">paths</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">SEPARATOR</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-node">%r{#{SEPARATOR}+}</span>, <span class="ruby-constant">SEPARATOR</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-split">
+            
+              <b>split</b>(path)
+            
+            <a href="../classes/File.html#method-c-split" name="method-c-split" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-split_source')" id="l_method-c-split_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d82a84df4e6563375de997d695d8e7b29a08ede4/opal/corelib/file.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-split_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/file.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">split</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">path</span>.<span class="ruby-identifier">split</span>(<span class="ruby-constant">SEPARATOR</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

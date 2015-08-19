@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Sexp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Sexp 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/lib/opal/parser/sexp_rb.html">opal/lib/opal/parser/sexp.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3C-3C">&lt;&lt;</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-children">children</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-column">column</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dup">dup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-eql-3F">eql?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-line">line</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-method_missing">method_missing</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pretty_inspect">pretty_inspect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-push">push</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_ary">to_ary</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-type">type</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-type-3D">type=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>array</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>source</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(args)
+            
+            <a href="../../classes/Opal/Sexp.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L8" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@array</span> = <span class="ruby-identifier">args</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3C-3C">
+            
+              <b>&lt;&lt;</b>(other)
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-3C-3C" name="method-i-3C-3C" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3C-3C_source')" id="l_method-i-3C-3C_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L28" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3C-3C_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-ivar">@array</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">other</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Sexp.html#method-i-eql-3F">eql?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Sexp</span>
+    <span class="ruby-ivar">@array</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">array</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@array</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-children">
+            
+              <b>children</b>()
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-children" name="method-i-children" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-children_source')" id="l_method-i-children_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-children_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">children</span>
+  <span class="ruby-ivar">@array</span>[<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">-1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-column">
+            
+              <b>column</b>()
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-column" name="method-i-column" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-column_source')" id="l_method-i-column_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-column_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">column</span>
+  <span class="ruby-ivar">@source</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@source</span>[<span class="ruby-number">1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dup">
+            
+              <b>dup</b>()
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-dup" name="method-i-dup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dup_source')" id="l_method-i-dup_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L42" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dup</span>
+  <span class="ruby-constant">Sexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@array</span>.<span class="ruby-identifier">dup</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eql-3F">
+            
+              <b>eql?</b>(other)
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-eql-3F" name="method-i-eql-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Sexp.html#method-i-3D-3D">==</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Sexp.html#method-i-to_s">to_s</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inspect_source')" id="l_method-i-inspect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inspect</span>
+  <span class="ruby-node">&quot;(#{@array.map { |e| e.inspect }.join &#39;, &#39;})&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-line">
+            
+              <b>line</b>()
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-line" name="method-i-line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-line_source')" id="l_method-i-line_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">line</span>
+  <span class="ruby-ivar">@source</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@source</span>[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-method_missing">
+            
+              <b>method_missing</b>(sym, *args, &amp;block)
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-method_missing" name="method-i-method_missing" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-method_missing_source')" id="l_method-i-method_missing_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-method_missing_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">method_missing</span>(<span class="ruby-identifier">sym</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@array</span>.<span class="ruby-identifier">send</span> <span class="ruby-identifier">sym</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pretty_inspect">
+            
+              <b>pretty_inspect</b>()
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-pretty_inspect" name="method-i-pretty_inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pretty_inspect_source')" id="l_method-i-pretty_inspect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pretty_inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pretty_inspect</span>
+  <span class="ruby-node">&quot;(#{line ? &quot;#{line} &quot; : &#39;&#39;}#{@array.map { |e| e.inspect }.join &#39;, &#39;})&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-push">
+            
+              <b>push</b>(*parts)
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-push" name="method-i-push" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-push_source')" id="l_method-i-push_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-push_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">push</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">parts</span>)
+  <span class="ruby-ivar">@array</span>.<span class="ruby-identifier">push</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">parts</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_ary">
+            
+              <b>to_ary</b>()
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-to_ary" name="method-i-to_ary" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_ary_source')" id="l_method-i-to_ary_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_ary_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_ary</span>
+  <span class="ruby-ivar">@array</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Sexp.html#method-i-inspect">inspect</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-type">
+            
+              <b>type</b>()
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-type" name="method-i-type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-type_source')" id="l_method-i-type_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L12" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">type</span>
+  <span class="ruby-ivar">@array</span>[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-type-3D">
+            
+              <b>type=</b>(type)
+            
+            <a href="../../classes/Opal/Sexp.html#method-i-type-3D" name="method-i-type-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-type-3D_source')" id="l_method-i-type-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/abf6f4d6d191363f3df00dfc1dfe54f334338e8d/lib/opal/parser/sexp.rb#L16" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-type-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/sexp.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">type=</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-ivar">@array</span>[<span class="ruby-number">0</span>] = <span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

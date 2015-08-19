@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Regexp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Regexp 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/opal/corelib/regexp_rb.html">opal/opal/corelib/regexp.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D-3D">===</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-7E">=~</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-eql-3F">eql?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-escape">escape</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-last_match">last_match</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-match">match</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-options">options</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Q</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-quote">quote</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-source">source</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-union">union</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-7E">~</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">IGNORECASE</td>
+            <td>=</td>
+            <td class="attr-value">1</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">MULTILINE</td>
+            <td>=</td>
+            <td class="attr-value">4</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-escape">
+            
+              <b>escape</b>(string)
+            
+            <a href="../classes/Regexp.html#method-c-escape" name="method-c-escape" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Regexp.html#method-c-quote">quote</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-escape_source')" id="l_method-c-escape_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L9" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-escape_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">escape</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-value">%x{
+    return string.replace(/([-[\]\/{}()*+?.^$\\| ])/g, &#39;\\$1&#39;)
+                 .replace(/[\n]/g, &#39;\\n&#39;)
+                 .replace(/[\r]/g, &#39;\\r&#39;)
+                 .replace(/[\f]/g, &#39;\\f&#39;)
+                 .replace(/[\t]/g, &#39;\\t&#39;);
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-last_match">
+            
+              <b>last_match</b>(n=nil)
+            
+            <a href="../classes/Regexp.html#method-c-last_match" name="method-c-last_match" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-last_match_source')" id="l_method-c-last_match_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-last_match_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">last_match</span>(<span class="ruby-identifier">n</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">$~</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">$~</span>[<span class="ruby-identifier">n</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(regexp, options = undefined)
+            
+            <a href="../classes/Regexp.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">new</span>(<span class="ruby-identifier">regexp</span>, <span class="ruby-identifier">options</span> = <span class="ruby-identifier">undefined</span>)      
+  <span class="ruby-node">%x{
+    // Play nice with IE8
+    if (regexp.$$is_string &amp;&amp; regexp.substr(regexp.length-1, 1) == &quot;\\&quot;) {
+      #{raise RegexpError, &quot;too short escape sequence: /#{regexp}/&quot;}
+    }
+    
+    if (options == undefined || #{!options}) {
+      options = undefined;
+    }
+    
+    if (options != undefined) {
+      if (regexp.$$is_regexp) {
+        // options are already in regex
+        options = undefined;
+      }
+      else if (options.$$is_number) {
+        var result = &#39;&#39;;
+        if (#{IGNORECASE} &amp; options) {
+          result += &#39;i&#39;;
+        }
+        if (#{MULTILINE} &amp; options) {
+          result += &#39;m&#39;;
+        }
+        options = result;
+      }
+      else {
+        options = &#39;i&#39;;
+      }
+    }       
+    
+    return new RegExp(regexp, options);
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-quote">
+            
+              <b>quote</b>(string)
+            
+            <a href="../classes/Regexp.html#method-c-quote" name="method-c-quote" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Regexp.html#method-c-escape">escape</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-union">
+            
+              <b>union</b>(*parts)
+            
+            <a href="../classes/Regexp.html#method-c-union" name="method-c-union" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-union_source')" id="l_method-c-union_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L29" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-union_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">union</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">parts</span>)
+  <span class="ruby-node">%x{
+    var is_first_part_array, quoted_validated, part, options, each_part_options;
+    if (parts.length == 0) {
+      return /(?!)/;
+    }
+    // cover the 2 arrays passed as arguments case
+    is_first_part_array = parts[0].$$is_array;
+    if (parts.length &gt; 1 &amp;&amp; is_first_part_array) {
+      #{raise TypeError, &#39;no implicit conversion of Array into String&#39;}
+    }        
+    // deal with splat issues (related to https://github.com/opal/opal/issues/858)
+    if (is_first_part_array) {
+      parts = parts[0];
+    }
+    options = undefined;
+    quoted_validated = [];
+    for (var i=0; i &lt; parts.length; i++) {
+      part = parts[i];
+      if (part.$$is_string) {
+        quoted_validated.push(#{escape(`part`)});
+      }
+      else if (part.$$is_regexp) { 
+        each_part_options = #{`part`.options};   
+        if (options != undefined &amp;&amp; options != each_part_options) {
+          #{raise TypeError, &#39;All expressions must use the same options&#39;}
+        }
+        options = each_part_options;
+        quoted_validated.push(&#39;(&#39;+part.source+&#39;)&#39;);
+      }
+      else {
+        quoted_validated.push(#{escape(`part`.to_str)});
+      }
+    }
+  }</span>
+  <span class="ruby-comment"># Take advantage of logic that can parse options from JS Regex</span>
+  <span class="ruby-identifier">new</span>(<span class="ruby-value">%x`quoted_validated`</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;|&#39;</span>), <span class="ruby-value">%x`options`</span>) 
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../classes/Regexp.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Regexp.html#method-i-eql-3F">eql?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L104" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-value">%x`other.constructor == RegExp &amp;&amp; self.toString() === other.toString()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D-3D">
+            
+              <b>===</b>(string)
+            
+            <a href="../classes/Regexp.html#method-i-3D-3D-3D" name="method-i-3D-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D-3D_source')" id="l_method-i-3D-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L108" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">===</span>(<span class="ruby-keyword ruby-title">string</span>)
+  <span class="ruby-node">%x`#{match(string)} !== nil`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-7E">
+            
+              <b>=~</b>(string)
+            
+            <a href="../classes/Regexp.html#method-i-3D-7E" name="method-i-3D-7E" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-7E_source')" id="l_method-i-3D-7E_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L112" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-7E_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">=~</span>(<span class="ruby-keyword ruby-title">string</span>)
+  <span class="ruby-identifier">match</span>(<span class="ruby-identifier">string</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">$~</span>.<span class="ruby-identifier">begin</span>(<span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eql-3F">
+            
+              <b>eql?</b>(other)
+            
+            <a href="../classes/Regexp.html#method-i-eql-3F" name="method-i-eql-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Regexp.html#method-i-3D-3D">==</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../classes/Regexp.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inspect_source')" id="l_method-i-inspect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L118" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inspect</span>
+  <span class="ruby-value">%x`self.toString()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-match">
+            
+              <b>match</b>(string, pos = undefined, &amp;block)
+            
+            <a href="../classes/Regexp.html#method-i-match" name="method-i-match" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-match_source')" id="l_method-i-match_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L122" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-match_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">match</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    if (pos === undefined) {
+      pos = 0;
+    } else {
+      pos = #{Opal.coerce_to(pos, Integer, :to_int)};
+    }
+
+    if (string === nil) {
+      return #{$~ = nil};
+    }
+
+    string = #{Opal.coerce_to(string, String, :to_str)};
+
+    if (pos &lt; 0) {
+      pos += string.length;
+      if (pos &lt; 0) {
+        return #{$~ = nil};
+      }
+    }
+
+    // global RegExp maintains state, so not using self/this
+    var md, re = new RegExp(self.source, &#39;gm&#39; + (self.ignoreCase ? &#39;i&#39; : &#39;&#39;));
+
+    while (true) {
+      md = re.exec(string);
+      if (md === null) {
+        return #{$~ = nil};
+      }
+      if (md.index &gt;= pos) {
+        #{$~ = MatchData.new(`re`, `md`)}
+        return block === nil ? #{$~} : #{block.call($~)};
+      }
+      re.lastIndex = md.index + 1;
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-options">
+            
+              <b>options</b>()
+            
+            <a href="../classes/Regexp.html#method-i-options" name="method-i-options" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-options_source')" id="l_method-i-options_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L168" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-options_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">options</span>
+  <span class="ruby-comment"># https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags is still experimental</span>
+  <span class="ruby-comment"># we need the flags and source does not give us that</span>
+  <span class="ruby-node">%x{
+    var as_string, text_flags, result, text_flag;
+    as_string = self.toString();
+    if (as_string == &quot;/(?:)/&quot;) {
+      #{raise TypeError, &#39;uninitialized Regexp&#39;}
+    }
+    text_flags = as_string.replace(self.source, &#39;&#39;).match(/\w+/);
+    result = 0;
+    // may have no flags
+    if (text_flags == null) {
+      return result;
+    }
+    // first match contains all of our flags
+    text_flags = text_flags[0];
+    for (var i=0; i &lt; text_flags.length; i++) {
+      text_flag = text_flags[i];
+      switch(text_flag) {
+        case &#39;i&#39;:
+          result |= #{IGNORECASE};
+          break;
+        case &#39;m&#39;:
+          result |= #{MULTILINE};
+          break;
+        default:
+          #{raise &quot;RegExp flag #{`text_flag`} does not have a match in Ruby&quot;}
+      }
+    }
+    
+    return result;
+  }</span>  
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-source">
+            
+              <b>source</b>()
+            
+            <a href="../classes/Regexp.html#method-i-source" name="method-i-source" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Regexp.html#method-i-to_s">to_s</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-source_source')" id="l_method-i-source_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L164" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-source_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">source</span>
+  <span class="ruby-value">%x`self.source`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/Regexp.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Regexp.html#method-i-source">source</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-7E">
+            
+              <b>~</b>()
+            
+            <a href="../classes/Regexp.html#method-i-7E" name="method-i-7E" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-7E_source')" id="l_method-i-7E_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/0c9b220c0a3f828eff36ca8328d2e04c83dc6eee/opal/corelib/regexp.rb#L160" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-7E_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/regexp.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">~</span>
+  <span class="ruby-keyword ruby-title">self</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">$_</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

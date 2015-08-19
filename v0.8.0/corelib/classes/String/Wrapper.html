@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>String::Wrapper</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            String::Wrapper 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/opal/corelib/string/inheritance_rb.html">opal/opal/corelib/string/inheritance.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-25">%</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2A">*</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2B">+</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D-3D">===</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-5B-5D">[]</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-allocate">allocate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each_line">each_line</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-eql-3F">eql?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-initialize_copy">initialize_copy</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lines">lines</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-method_missing">method_missing</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-replace">replace</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-respond_to-3F">respond_to?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-split">split</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_str">to_str</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-5B-5D">
+            
+              <b>[]</b>(*objects)
+            
+            <a href="../../classes/String/Wrapper.html#method-c-5B-5D" name="method-c-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-5B-5D_source')" id="l_method-c-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-operator">[]</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">objects</span>)
+  <span class="ruby-identifier">allocate</span>(<span class="ruby-identifier">objects</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-allocate">
+            
+              <b>allocate</b>(string = &quot;&quot;)
+            
+            <a href="../../classes/String/Wrapper.html#method-c-allocate" name="method-c-allocate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-allocate_source')" id="l_method-c-allocate_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-allocate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">allocate</span>(<span class="ruby-identifier">string</span> = <span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-identifier">obj</span> = <span class="ruby-keyword">super</span>()
+  <span class="ruby-value">%x`obj.literal = string`</span>
+  <span class="ruby-identifier">obj</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(*args, &amp;block)
+            
+            <a href="../../classes/String/Wrapper.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">obj</span> = <span class="ruby-identifier">allocate</span>
+  <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">obj</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(string = &#39;&#39;)
+            
+            <a href="../../classes/String/Wrapper.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">string</span> = <span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-ivar">@literal</span> = <span class="ruby-identifier">string</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-25">
+            
+              <b>%</b>(data)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-25" name="method-i-25" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-25_source')" id="l_method-i-25_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L114" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-25_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">%</span>(<span class="ruby-keyword ruby-title">data</span>)
+  <span class="ruby-ivar">@literal</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2A">
+            
+              <b>*</b>(other)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-2A" name="method-i-2A" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2A_source')" id="l_method-i-2A_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L83" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2A_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    var result = #{@literal * other};
+
+    if (result.$$is_string) {
+      return #{self.class.allocate(`result`)}
+    }
+    else {
+      return result;
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2B">
+            
+              <b>+</b>(other)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-2B" name="method-i-2B" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2B_source')" id="l_method-i-2B_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L79" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2B_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-ivar">@literal</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Wrapper.html#method-i-eql-3F">eql?</a>, <a href="Wrapper.html#method-i-3D-3D-3D">===</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L62" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-ivar">@literal</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D-3D">
+            
+              <b>===</b>(other)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-3D-3D-3D" name="method-i-3D-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Wrapper.html#method-i-3D-3D">==</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_line">
+            
+              <b>each_line</b>(separator = $/)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-each_line" name="method-i-each_line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_line_source')" id="l_method-i-each_line_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L104" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_line</span>(<span class="ruby-identifier">separator</span> = <span class="ruby-identifier">$/</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">each_line</span>, <span class="ruby-identifier">separator</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-ivar">@literal</span>.<span class="ruby-identifier">each_line</span>(<span class="ruby-identifier">separator</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">str</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">allocate</span>(<span class="ruby-identifier">str</span>)}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eql-3F">
+            
+              <b>eql?</b>(other)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-eql-3F" name="method-i-eql-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Wrapper.html#method-i-3D-3D">==</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-initialize_copy">
+            
+              <b>initialize_copy</b>(other)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-initialize_copy" name="method-i-initialize_copy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-initialize_copy_source')" id="l_method-i-initialize_copy_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-initialize_copy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize_copy</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-ivar">@literal</span> = <span class="ruby-value">%x`other.literal`</span>.<span class="ruby-identifier">clone</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../../classes/String/Wrapper.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inspect_source')" id="l_method-i-inspect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inspect</span>
+  <span class="ruby-ivar">@literal</span>.<span class="ruby-identifier">inspect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lines">
+            
+              <b>lines</b>(separator = $/, &amp;block)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-lines" name="method-i-lines" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lines_source')" id="l_method-i-lines_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L109" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-lines_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lines</span>(<span class="ruby-identifier">separator</span> = <span class="ruby-identifier">$/</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">e</span> = <span class="ruby-identifier">each_line</span>(<span class="ruby-identifier">separator</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">block</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">to_a</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-method_missing">
+            
+              <b>method_missing</b>(*args, &amp;block)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-method_missing" name="method-i-method_missing" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-method_missing_source')" id="l_method-i-method_missing_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-method_missing_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">method_missing</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@literal</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-value">%x`result.$$is_string != null`</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-node">%x`result == #@literal`</span>
+      <span class="ruby-keyword">self</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">allocate</span>(<span class="ruby-identifier">result</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-replace">
+            
+              <b>replace</b>(string)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-replace" name="method-i-replace" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-replace_source')" id="l_method-i-replace_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L100" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-replace_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">replace</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-ivar">@literal</span> = <span class="ruby-identifier">string</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-respond_to-3F">
+            
+              <b>respond_to?</b>(name, *)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-respond_to-3F" name="method-i-respond_to-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-respond_to-3F_source')" id="l_method-i-respond_to-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-respond_to-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">respond_to?</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span>)
+  <span class="ruby-keyword">super</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@literal</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-split">
+            
+              <b>split</b>(pattern = undefined, limit = undefined)
+            
+            <a href="../../classes/String/Wrapper.html#method-i-split" name="method-i-split" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-split_source')" id="l_method-i-split_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L96" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-split_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">split</span>(<span class="ruby-identifier">pattern</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-identifier">limit</span> = <span class="ruby-identifier">undefined</span>)
+  <span class="ruby-ivar">@literal</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">limit</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">str</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">allocate</span>(<span class="ruby-identifier">str</span>)}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../../classes/String/Wrapper.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Wrapper.html#method-i-to_str">to_str</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/da2abac421928e02662fd9606300246b54b0c79d/opal/corelib/string/inheritance.rb#L69" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/string/inheritance.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_s</span>
+  <span class="ruby-ivar">@literal</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_str">
+            
+              <b>to_str</b>()
+            
+            <a href="../../classes/String/Wrapper.html#method-i-to_str" name="method-i-to_str" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Wrapper.html#method-i-to_s">to_s</a>
+            </div>
+          
+          
+          
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

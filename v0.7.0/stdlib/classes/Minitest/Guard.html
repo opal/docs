@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Minitest::Guard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Minitest::Guard 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/stdlib/minitest_rb.html">opal/stdlib/minitest.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Provides a simple set of guards that you can use in your tests to skip
+execution if it is not applicable. These methods are mixed into <a
+href="Test.html">Test</a> as both instance and class methods so you can use
+them inside or outside of the test methods.</p>
+
+<pre><code>def test_something_for_mri
+  skip &quot;bug 1234&quot;  if jruby?
+  # ...
+end
+
+if windows? then
+  # ... lots of test methods ...
+end
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>J</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-jruby-3F">jruby?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-maglev-3F">maglev?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mri-3F">mri?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-rubinius-3F">rubinius?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-windows-3F">windows?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-jruby-3F">
+            
+              <b>jruby?</b>(platform = RUBY_PLATFORM)
+            
+            <a href="../../classes/Minitest/Guard.html#method-i-jruby-3F" name="method-i-jruby-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Is this running on <a href="Guard.html#method-i-jruby-3F">#jruby?</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-jruby-3F_source')" id="l_method-i-jruby-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest.rb#L724" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-jruby-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest.rb, line 724</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">jruby?</span> <span class="ruby-identifier">platform</span> = <span class="ruby-constant">RUBY_PLATFORM</span>
+  <span class="ruby-string">&quot;java&quot;</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">platform</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-maglev-3F">
+            
+              <b>maglev?</b>(platform = defined?(RUBY_ENGINE) &amp;&amp; RUBY_ENGINE)
+            
+            <a href="../../classes/Minitest/Guard.html#method-i-maglev-3F" name="method-i-maglev-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Is this running on <a href="Guard.html#method-i-maglev-3F">#maglev?</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-maglev-3F_source')" id="l_method-i-maglev-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest.rb#L731" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-maglev-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest.rb, line 731</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">maglev?</span> <span class="ruby-identifier">platform</span> = <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">RUBY_ENGINE</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RUBY_ENGINE</span>
+  <span class="ruby-string">&quot;maglev&quot;</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">platform</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mri-3F">
+            
+              <b>mri?</b>(platform = RUBY_DESCRIPTION)
+            
+            <a href="../../classes/Minitest/Guard.html#method-i-mri-3F" name="method-i-mri-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Is this running on <a href="Guard.html#method-i-mri-3F">#mri?</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mri-3F_source')" id="l_method-i-mri-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest.rb#L738" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mri-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest.rb, line 738</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mri?</span> <span class="ruby-identifier">platform</span> = <span class="ruby-constant">RUBY_DESCRIPTION</span>
+  <span class="ruby-regexp">/^ruby/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">platform</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rubinius-3F">
+            
+              <b>rubinius?</b>(platform = defined?(RUBY_ENGINE) &amp;&amp; RUBY_ENGINE)
+            
+            <a href="../../classes/Minitest/Guard.html#method-i-rubinius-3F" name="method-i-rubinius-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Is this running on <a href="Guard.html#method-i-rubinius-3F">#rubinius?</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rubinius-3F_source')" id="l_method-i-rubinius-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest.rb#L745" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rubinius-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest.rb, line 745</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rubinius?</span> <span class="ruby-identifier">platform</span> = <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">RUBY_ENGINE</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RUBY_ENGINE</span>
+  <span class="ruby-string">&quot;rbx&quot;</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">platform</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-windows-3F">
+            
+              <b>windows?</b>(platform = RUBY_PLATFORM)
+            
+            <a href="../../classes/Minitest/Guard.html#method-i-windows-3F" name="method-i-windows-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Is this running on <a href="Guard.html#method-i-windows-3F">#windows?</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-windows-3F_source')" id="l_method-i-windows-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest.rb#L752" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-windows-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest.rb, line 752</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">windows?</span> <span class="ruby-identifier">platform</span> = <span class="ruby-constant">RUBY_PLATFORM</span>
+  <span class="ruby-regexp">/mswin|mingw/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">platform</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

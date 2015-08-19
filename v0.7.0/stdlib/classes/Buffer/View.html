@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Buffer::View</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Buffer::View 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/stdlib/buffer/view_rb.html">opal/stdlib/buffer/view.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D">[]</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D-3D">[]=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get">get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_float32">get_float32</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_float64">get_float64</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_int16">get_int16</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_int32">get_int32</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_int8">get_int8</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_uint16">get_uint16</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_uint32">get_uint32</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_uint8">get_uint8</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-length">length</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set">set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_float32">set_float32</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_float64">set_float64</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_int16">set_int16</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_int32">set_int32</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_int8">set_int8</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_uint16">set_uint16</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_uint32">set_uint32</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_uint8">set_uint8</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-size">size</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-supported-3F">supported?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../Native.html">
+              Native
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>buffer</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>offset</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(buffer, offset = nil, length = nil)
+            
+            <a href="../../classes/Buffer/View.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L12" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">buffer</span>, <span class="ruby-identifier">offset</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">length</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">native?</span>(<span class="ruby-identifier">buffer</span>)
+    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">buffer</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">offset</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">length</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-node">%x`new DataView(#{buffer.to_n}, #{offset.to_n}, #{length.to_n})`</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">offset</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-node">%x`new DataView(#{buffer.to_n}, #{offset.to_n})`</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-node">%x`new DataView(#{buffer.to_n})`</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@buffer</span> = <span class="ruby-identifier">buffer</span>
+  <span class="ruby-ivar">@offset</span> = <span class="ruby-identifier">offset</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-supported-3F">
+            
+              <b>supported?</b>()
+            
+            <a href="../../classes/Buffer/View.html#method-c-supported-3F" name="method-c-supported-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-supported-3F_source')" id="l_method-c-supported-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L6" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-supported-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">supported?</span>
+  <span class="ruby-keyword">not</span> <span class="ruby-identifier">$$</span>[<span class="ruby-value">:DataView</span>].<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D">
+            
+              <b>[]</b>(offset, bits = 8, type = :unsigned, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-5B-5D" name="method-i-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="View.html#method-i-get">get</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D-3D">
+            
+              <b>[]=</b>(offset, value, bits = 8, type = :unsigned, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-5B-5D-3D" name="method-i-5B-5D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="View.html#method-i-set">set</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get">
+            
+              <b>get</b>(offset, bits = 8, type = :unsigned, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-get" name="method-i-get" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="View.html#method-i-5B-5D">[]</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_source')" id="l_method-i-get_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">bits</span> = <span class="ruby-number">8</span>, <span class="ruby-identifier">type</span> = <span class="ruby-value">:unsigned</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-node">%x`#@native[&quot;get&quot; + #{Buffer.name_for bits, type}](offset, little)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_float32">
+            
+              <b>get_float32</b>(offset, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-get_float32" name="method-i-get_float32" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_float32_source')" id="l_method-i-get_float32_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_float32_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_float32</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.getFloat32(offset, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_float64">
+            
+              <b>get_float64</b>(offset, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-get_float64" name="method-i-get_float64" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_float64_source')" id="l_method-i-get_float64_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_float64_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_float64</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.getFloat64(offset, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_int16">
+            
+              <b>get_int16</b>(offset, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-get_int16" name="method-i-get_int16" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_int16_source')" id="l_method-i-get_int16_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_int16_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_int16</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.getInt16(offset, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_int32">
+            
+              <b>get_int32</b>(offset, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-get_int32" name="method-i-get_int32" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_int32_source')" id="l_method-i-get_int32_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L57" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_int32_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_int32</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.getInt32(offset, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_int8">
+            
+              <b>get_int8</b>(offset, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-get_int8" name="method-i-get_int8" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_int8_source')" id="l_method-i-get_int8_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L45" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_int8_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_int8</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.getInt8(offset, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_uint16">
+            
+              <b>get_uint16</b>(offset, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-get_uint16" name="method-i-get_uint16" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_uint16_source')" id="l_method-i-get_uint16_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L54" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_uint16_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_uint16</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.getUint16(offset, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_uint32">
+            
+              <b>get_uint32</b>(offset, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-get_uint32" name="method-i-get_uint32" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_uint32_source')" id="l_method-i-get_uint32_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_uint32_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_uint32</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.getUint32(offset, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_uint8">
+            
+              <b>get_uint8</b>(offset, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-get_uint8" name="method-i-get_uint8" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_uint8_source')" id="l_method-i-get_uint8_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_uint8_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_uint8</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.getUint8(offset, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-length">
+            
+              <b>length</b>()
+            
+            <a href="../../classes/Buffer/View.html#method-i-length" name="method-i-length" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="View.html#method-i-size">size</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-length_source')" id="l_method-i-length_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-length_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">length</span>
+  <span class="ruby-node">%x`#@native.byteLength`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set">
+            
+              <b>set</b>(offset, value, bits = 8, type = :unsigned, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-set" name="method-i-set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="View.html#method-i-5B-5D-3D">[]=</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_source')" id="l_method-i-set_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L39" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">bits</span> = <span class="ruby-number">8</span>, <span class="ruby-identifier">type</span> = <span class="ruby-value">:unsigned</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-node">%x`#@native[&quot;set&quot; + #{Buffer.name_for bits, type}](offset, value, little)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_float32">
+            
+              <b>set_float32</b>(offset, value, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-set_float32" name="method-i-set_float32" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_float32_source')" id="l_method-i-set_float32_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_float32_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_float32</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.setFloat32(offset, value, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_float64">
+            
+              <b>set_float64</b>(offset, value, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-set_float64" name="method-i-set_float64" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_float64_source')" id="l_method-i-set_float64_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L67" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_float64_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_float64</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.setFloat64(offset, value, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_int16">
+            
+              <b>set_int16</b>(offset, value, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-set_int16" name="method-i-set_int16" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_int16_source')" id="l_method-i-set_int16_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_int16_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_int16</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.setInt16(offset, value, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_int32">
+            
+              <b>set_int32</b>(offset, value, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-set_int32" name="method-i-set_int32" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_int32_source')" id="l_method-i-set_int32_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_int32_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_int32</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.setInt32(offset, value, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_int8">
+            
+              <b>set_int8</b>(offset, value, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-set_int8" name="method-i-set_int8" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_int8_source')" id="l_method-i-set_int8_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_int8_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_int8</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.setInt8(offset, value, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_uint16">
+            
+              <b>set_uint16</b>(offset, value, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-set_uint16" name="method-i-set_uint16" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_uint16_source')" id="l_method-i-set_uint16_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_uint16_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_uint16</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.setUint16(offset, value, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_uint32">
+            
+              <b>set_uint32</b>(offset, value, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-set_uint32" name="method-i-set_uint32" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_uint32_source')" id="l_method-i-set_uint32_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L61" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_uint32_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_uint32</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.setUint32(offset, value, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_uint8">
+            
+              <b>set_uint8</b>(offset, value, little = false)
+            
+            <a href="../../classes/Buffer/View.html#method-i-set_uint8" name="method-i-set_uint8" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_uint8_source')" id="l_method-i-set_uint8_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/44c694deca8b102b4b9520bf996ccb1d9048b9c6/stdlib/buffer/view.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_uint8_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/buffer/view.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_uint8</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">little</span> = <span class="ruby-keyword">false</span>); <span class="ruby-node">%x`#@native.setUint8(offset, value, little)`</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-size">
+            
+              <b>size</b>()
+            
+            <a href="../../classes/Buffer/View.html#method-i-size" name="method-i-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="View.html#method-i-length">length</a>
+            </div>
+          
+          
+          
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

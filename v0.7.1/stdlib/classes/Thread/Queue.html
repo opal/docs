@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Thread::Queue</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Thread::Queue 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/stdlib/thread_rb.html">opal/stdlib/thread.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3C-3C">&lt;&lt;</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-deq">deq</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each">each</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-empty-3F">empty?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-enq">enq</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-length">length</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pop">pop</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-push">push</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-shift">shift</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-size">size</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../../classes/Thread/Queue.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2d51b85b188281c80630167ba464c0f4e390eb9e/stdlib/thread.rb#L73" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/thread.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3C-3C">
+            
+              <b>&lt;&lt;</b>(value)
+            
+            <a href="../../classes/Thread/Queue.html#method-i-3C-3C" name="method-i-3C-3C" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Queue.html#method-i-push">push</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../../classes/Thread/Queue.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2d51b85b188281c80630167ba464c0f4e390eb9e/stdlib/thread.rb#L77" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/thread.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-ivar">@storage</span> = []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-deq">
+            
+              <b>deq</b>(non_block = false)
+            
+            <a href="../../classes/Thread/Queue.html#method-i-deq" name="method-i-deq" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Queue.html#method-i-pop">pop</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each">
+            
+              <b>each</b>(&amp;block)
+            
+            <a href="../../classes/Thread/Queue.html#method-i-each" name="method-i-each" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_source')" id="l_method-i-each_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2d51b85b188281c80630167ba464c0f4e390eb9e/stdlib/thread.rb#L110" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/thread.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@storage</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-empty-3F">
+            
+              <b>empty?</b>()
+            
+            <a href="../../classes/Thread/Queue.html#method-i-empty-3F" name="method-i-empty-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-empty-3F_source')" id="l_method-i-empty-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2d51b85b188281c80630167ba464c0f4e390eb9e/stdlib/thread.rb#L81" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-empty-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/thread.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">empty?</span>
+  <span class="ruby-ivar">@storage</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-enq">
+            
+              <b>enq</b>(value)
+            
+            <a href="../../classes/Thread/Queue.html#method-i-enq" name="method-i-enq" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Queue.html#method-i-push">push</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-length">
+            
+              <b>length</b>()
+            
+            <a href="../../classes/Thread/Queue.html#method-i-length" name="method-i-length" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Queue.html#method-i-size">size</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pop">
+            
+              <b>pop</b>(non_block = false)
+            
+            <a href="../../classes/Thread/Queue.html#method-i-pop" name="method-i-pop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Queue.html#method-i-shift">shift</a>, <a href="Queue.html#method-i-deq">deq</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pop_source')" id="l_method-i-pop_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2d51b85b188281c80630167ba464c0f4e390eb9e/stdlib/thread.rb#L91" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/thread.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pop</span>(<span class="ruby-identifier">non_block</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">ThreadError</span>, <span class="ruby-string">&quot;Queue empty&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">non_block</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">ThreadError</span>, <span class="ruby-string">&quot;Deadlock&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@storage</span>.<span class="ruby-identifier">shift</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-push">
+            
+              <b>push</b>(value)
+            
+            <a href="../../classes/Thread/Queue.html#method-i-push" name="method-i-push" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Queue.html#method-i-3C-3C">&lt;&lt;</a>, <a href="Queue.html#method-i-enq">enq</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-push_source')" id="l_method-i-push_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2d51b85b188281c80630167ba464c0f4e390eb9e/stdlib/thread.rb#L103" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-push_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/thread.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">push</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-ivar">@storage</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-shift">
+            
+              <b>shift</b>(non_block = false)
+            
+            <a href="../../classes/Thread/Queue.html#method-i-shift" name="method-i-shift" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Queue.html#method-i-pop">pop</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-size">
+            
+              <b>size</b>()
+            
+            <a href="../../classes/Thread/Queue.html#method-i-size" name="method-i-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Queue.html#method-i-length">length</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-size_source')" id="l_method-i-size_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/2d51b85b188281c80630167ba464c0f4e390eb9e/stdlib/thread.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/thread.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">size</span>
+  <span class="ruby-ivar">@storage</span>.<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

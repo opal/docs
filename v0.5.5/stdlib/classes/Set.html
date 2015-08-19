@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Set</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Set 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/set_rb.html">opal/stdlib/set.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3C-3C">&lt;&lt;</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-5B-5D">[]</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add">add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add-3F">add?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-do_with_enum">do_with_enum</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each">each</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-empty-3F">empty?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-include-3F">include?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-length">length</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-member-3F">member?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-merge">merge</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-size">size</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_a">to_a</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Enumerable.html">
+              Enumerable
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-5B-5D">
+            
+              <b>[]</b>(*ary)
+            
+            <a href="../classes/Set.html#method-c-5B-5D" name="method-c-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-5B-5D_source')" id="l_method-c-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L4" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-operator">[]</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">ary</span>)
+  <span class="ruby-identifier">new</span>(<span class="ruby-identifier">ary</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(enum = nil, &amp;block)
+            
+            <a href="../classes/Set.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L8" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">enum</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@hash</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>
+    <span class="ruby-identifier">do_with_enum</span>(<span class="ruby-identifier">enum</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-identifier">add</span>(<span class="ruby-identifier">block</span>[<span class="ruby-identifier">o</span>]) }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">enum</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3C-3C">
+            
+              <b>&lt;&lt;</b>(o)
+            
+            <a href="../classes/Set.html#method-i-3C-3C" name="method-i-3C-3C" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Set.html#method-i-add">add</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../classes/Set.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">equal?</span>(<span class="ruby-identifier">other</span>)
+    <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">instance_of?</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>)
+    <span class="ruby-ivar">@hash</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value">:@hash</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Set</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">other</span>.<span class="ruby-identifier">all?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@hash</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">o</span>) }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add">
+            
+              <b>add</b>(o)
+            
+            <a href="../classes/Set.html#method-i-add" name="method-i-add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Set.html#method-i-3C-3C">&lt;&lt;</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_source')" id="l_method-i-add_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add</span>(<span class="ruby-identifier">o</span>)
+  <span class="ruby-ivar">@hash</span>[<span class="ruby-identifier">o</span>] = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add-3F">
+            
+              <b>add?</b>(o)
+            
+            <a href="../classes/Set.html#method-i-add-3F" name="method-i-add-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add-3F_source')" id="l_method-i-add-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-add-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add?</span>(<span class="ruby-identifier">o</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">include?</span>(<span class="ruby-identifier">o</span>)
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">add</span>(<span class="ruby-identifier">o</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/Set.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-ivar">@hash</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-do_with_enum">
+            
+              <b>do_with_enum</b>(enum, &amp;block)
+            
+            <a href="../classes/Set.html#method-i-do_with_enum" name="method-i-do_with_enum" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-do_with_enum_source')" id="l_method-i-do_with_enum_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-do_with_enum_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">do_with_enum</span>(<span class="ruby-identifier">enum</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each">
+            
+              <b>each</b>(&amp;block)
+            
+            <a href="../classes/Set.html#method-i-each" name="method-i-each" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_source')" id="l_method-i-each_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">each</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-ivar">@hash</span>.<span class="ruby-identifier">each_key</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-empty-3F">
+            
+              <b>empty?</b>()
+            
+            <a href="../classes/Set.html#method-i-empty-3F" name="method-i-empty-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-empty-3F_source')" id="l_method-i-empty-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-empty-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">empty?</span>
+  <span class="ruby-ivar">@hash</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-include-3F">
+            
+              <b>include?</b>(o)
+            
+            <a href="../classes/Set.html#method-i-include-3F" name="method-i-include-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Set.html#method-i-member-3F">member?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-include-3F_source')" id="l_method-i-include-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L61" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-include-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">include?</span>(<span class="ruby-identifier">o</span>)
+  <span class="ruby-ivar">@hash</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">o</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-length">
+            
+              <b>length</b>()
+            
+            <a href="../classes/Set.html#method-i-length" name="method-i-length" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Set.html#method-i-size">size</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-member-3F">
+            
+              <b>member?</b>(o)
+            
+            <a href="../classes/Set.html#method-i-member-3F" name="method-i-member-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Set.html#method-i-include-3F">include?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-merge">
+            
+              <b>merge</b>(enum)
+            
+            <a href="../classes/Set.html#method-i-merge" name="method-i-merge" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-merge_source')" id="l_method-i-merge_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-merge_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">merge</span>(<span class="ruby-identifier">enum</span>)
+  <span class="ruby-identifier">do_with_enum</span>(<span class="ruby-identifier">enum</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-identifier">add</span> <span class="ruby-identifier">o</span> }
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-size">
+            
+              <b>size</b>()
+            
+            <a href="../classes/Set.html#method-i-size" name="method-i-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Set.html#method-i-length">length</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-size_source')" id="l_method-i-size_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">size</span>
+  <span class="ruby-ivar">@hash</span>.<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_a">
+            
+              <b>to_a</b>()
+            
+            <a href="../classes/Set.html#method-i-to_a" name="method-i-to_a" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_a_source')" id="l_method-i-to_a_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/46d23f29f5ee58df78fefe060f00cda52c75e84c/stdlib/set.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_a_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/set.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_a</span>
+  <span class="ruby-ivar">@hash</span>.<span class="ruby-identifier">keys</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

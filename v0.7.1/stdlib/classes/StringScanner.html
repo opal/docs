@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>StringScanner</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            StringScanner 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/strscan_rb.html">opal/stdlib/strscan.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D">[]</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-beginning_of_line-3F">beginning_of_line?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bol-3F">bol?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-check">check</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-eos-3F">eos?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_byte">get_byte</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-getch">getch</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-peek">peek</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pos-3D">pos=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-reset">reset</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rest">rest</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rest-3F">rest?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scan">scan</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-skip">skip</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unscan">unscan</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>matched</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>pos</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>string</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(string)
+            
+            <a href="../classes/StringScanner.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L5" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-ivar">@string</span>  = <span class="ruby-identifier">string</span>
+  <span class="ruby-ivar">@pos</span>     = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@matched</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@working</span> = <span class="ruby-identifier">string</span>
+  <span class="ruby-ivar">@match</span> = []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D">
+            
+              <b>[]</b>(idx)
+            
+            <a href="../classes/StringScanner.html#method-i-5B-5D" name="method-i-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D_source')" id="l_method-i-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-keyword ruby-title">idx</span>)
+  <span class="ruby-node">%x{
+    var match = #@match;
+
+    if (idx &lt; 0) {
+      idx += match.length;
+    }
+
+    if (idx &lt; 0 || idx &gt;= match.length) {
+      return nil;
+    }
+
+    if (match[idx] == null) {
+      return nil;
+    }
+
+    return match[idx];
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-beginning_of_line-3F">
+            
+              <b>beginning_of_line?</b>()
+            
+            <a href="../classes/StringScanner.html#method-i-beginning_of_line-3F" name="method-i-beginning_of_line-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="StringScanner.html#method-i-bol-3F">bol?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-beginning_of_line-3F_source')" id="l_method-i-beginning_of_line-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L15" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-beginning_of_line-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">beginning_of_line?</span>
+  <span class="ruby-node">%x`#@pos === 0 || #@string.charAt(#@pos - 1) === &quot;\n&quot;`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bol-3F">
+            
+              <b>bol?</b>()
+            
+            <a href="../classes/StringScanner.html#method-i-bol-3F" name="method-i-bol-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="StringScanner.html#method-i-beginning_of_line-3F">beginning_of_line?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check">
+            
+              <b>check</b>(regex)
+            
+            <a href="../classes/StringScanner.html#method-i-check" name="method-i-check" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_source')" id="l_method-i-check_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L69" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-check_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check</span>(<span class="ruby-identifier">regex</span>)
+  <span class="ruby-node">%x{
+    var regexp = new RegExp(&#39;^&#39; + regex.toString().substring(1, regex.toString().length - 1)),
+        result = regexp.exec(#@working);
+
+    if (result == null) {
+      return #{self}.matched = nil;
+    }
+
+    return #{self}.matched = result[0];
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eos-3F">
+            
+              <b>eos?</b>()
+            
+            <a href="../classes/StringScanner.html#method-i-eos-3F" name="method-i-eos-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-eos-3F_source')" id="l_method-i-eos-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L86" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-eos-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">eos?</span>
+  <span class="ruby-node">%x`#@working.length === 0`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_byte">
+            
+              <b>get_byte</b>()
+            
+            <a href="../classes/StringScanner.html#method-i-get_byte" name="method-i-get_byte" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="StringScanner.html#method-i-getch">getch</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_byte_source')" id="l_method-i-get_byte_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L110" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-get_byte_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_byte</span>()
+  <span class="ruby-node">%x{
+    var result = nil;
+    if (#{self}.pos &lt; #{self}.string.length) {
+      self.prev_pos = self.pos;
+      #{self}.pos += 1;
+      result = #{self}.matched = #{self}.working.substring(0, 1);
+      #{self}.working = #{self}.working.substring(1);
+    }
+    else {
+      #{self}.matched = nil;
+    }
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-getch">
+            
+              <b>getch</b>()
+            
+            <a href="../classes/StringScanner.html#method-i-getch" name="method-i-getch" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>not exactly, but for now…</p>
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="StringScanner.html#method-i-get_byte">get_byte</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-peek">
+            
+              <b>peek</b>(length)
+            
+            <a href="../classes/StringScanner.html#method-i-peek" name="method-i-peek" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-peek_source')" id="l_method-i-peek_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L82" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-peek_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">peek</span>(<span class="ruby-identifier">length</span>)
+  <span class="ruby-node">%x`#@working.substring(0, length)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pos-3D">
+            
+              <b>pos=</b>(pos)
+            
+            <a href="../classes/StringScanner.html#method-i-pos-3D" name="method-i-pos-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pos-3D_source')" id="l_method-i-pos-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L130" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pos-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pos=</span>(<span class="ruby-identifier">pos</span>)
+  <span class="ruby-node">%x{
+    if (pos &lt; 0) {
+      pos += #{@string.length};
+    }
+  }</span>
+
+  <span class="ruby-ivar">@pos</span> = <span class="ruby-identifier">pos</span>
+  <span class="ruby-ivar">@working</span> = <span class="ruby-node">%x`#{@string}.slice(pos)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reset">
+            
+              <b>reset</b>()
+            
+            <a href="../classes/StringScanner.html#method-i-reset" name="method-i-reset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reset_source')" id="l_method-i-reset_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L141" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-reset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reset</span>
+  <span class="ruby-ivar">@working</span> = <span class="ruby-ivar">@string</span>
+  <span class="ruby-ivar">@matched</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@pos</span>     = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rest">
+            
+              <b>rest</b>()
+            
+            <a href="../classes/StringScanner.html#method-i-rest" name="method-i-rest" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rest_source')" id="l_method-i-rest_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L147" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rest_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rest</span>
+  <span class="ruby-ivar">@working</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rest-3F">
+            
+              <b>rest?</b>()
+            
+            <a href="../classes/StringScanner.html#method-i-rest-3F" name="method-i-rest-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rest-3F_source')" id="l_method-i-rest-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L151" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rest-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rest?</span>
+  <span class="ruby-node">%x`#@working.length !== 0`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scan">
+            
+              <b>scan</b>(regex)
+            
+            <a href="../classes/StringScanner.html#method-i-scan" name="method-i-scan" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scan_source')" id="l_method-i-scan_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-scan_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scan</span>(<span class="ruby-identifier">regex</span>)
+  <span class="ruby-node">%x{
+    var regex  = new RegExp(&#39;^&#39; + regex.toString().substring(1, regex.toString().length - 1)),
+        result = regex.exec(#@working);
+
+    if (result == null) {
+      return #{self}.matched = nil;
+    }
+    else if (typeof(result) === &#39;object&#39;) {
+      #@prev_pos = #@pos;
+      #@pos     += result[0].length;
+      #@working  = #@working.substring(result[0].length);
+      #@matched  = result[0];
+      #@match    = result;
+
+      return result[0];
+    }
+    else if (typeof(result) === &#39;string&#39;) {
+      #@pos     += result.length;
+      #@working  = #@working.substring(result.length);
+
+      return result;
+    }
+    else {
+      return nil;
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skip">
+            
+              <b>skip</b>(re)
+            
+            <a href="../classes/StringScanner.html#method-i-skip" name="method-i-skip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skip_source')" id="l_method-i-skip_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L90" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-skip_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skip</span>(<span class="ruby-identifier">re</span>)
+  <span class="ruby-node">%x{
+    re = new RegExp(&#39;^&#39; + re.source)
+    var result = re.exec(#@working);
+
+    if (result == null) {
+      return #{self}.matched = nil;
+    }
+    else {
+      var match_str = result[0];
+      var match_len = match_str.length;
+      #{self}.matched = match_str;
+      self.prev_pos = self.pos;
+      #{self}.pos += match_len;
+      #{self}.working = #{self}.working.substring(match_len);
+      return match_len;
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/StringScanner.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L155" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-ivar">@match</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pos</span> = <span class="ruby-ivar">@string</span>.<span class="ruby-identifier">length</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unscan">
+            
+              <b>unscan</b>()
+            
+            <a href="../classes/StringScanner.html#method-i-unscan" name="method-i-unscan" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unscan_source')" id="l_method-i-unscan_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9065b68e92bb745eed21e8728c584b1d840b5223/stdlib/strscan.rb#L160" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unscan_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/strscan.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unscan</span>
+  <span class="ruby-ivar">@pos</span> = <span class="ruby-ivar">@prev_pos</span>
+  <span class="ruby-ivar">@prev_pos</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@match</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::CLI</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::CLI 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/lib/opal/cli_rb.html">opal/lib/opal/cli.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="CLI/MissingNodeJS.html">Opal::CLI::MissingNodeJS</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="CLI/PathFinder.html">Opal::CLI::PathFinder</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-evals_source">evals_source</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-map">map</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-prepare_eval_code">prepare_eval_code</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-processor_options">processor_options</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-puts">puts</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-run">run</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-run_code">run_code</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-run_with_node">run_with_node</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-server">server</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_processor_options">set_processor_options</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sexp">sexp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_compiled_source">show_compiled_source</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_sexp">show_sexp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-source">source</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sprockets">sprockets</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_server">start_server</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>stdout</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>evals</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>filename</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>load_paths</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>options</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>output</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>requires</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(options = nil)
+            
+            <a href="../../classes/Opal/CLI.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L13" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span> <span class="ruby-identifier">options</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">options</span> <span class="ruby-operator">||=</span> {}
+  <span class="ruby-ivar">@options</span>    = <span class="ruby-identifier">options</span>
+  <span class="ruby-ivar">@evals</span>      = <span class="ruby-identifier">options</span>[<span class="ruby-value">:evals</span>] <span class="ruby-operator">||</span> []
+  <span class="ruby-ivar">@requires</span>   = <span class="ruby-identifier">options</span>[<span class="ruby-value">:requires</span>] <span class="ruby-operator">||</span> []
+  <span class="ruby-ivar">@filename</span>   = <span class="ruby-identifier">options</span>[<span class="ruby-value">:filename</span>]
+  <span class="ruby-ivar">@load_paths</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:load_paths</span>] <span class="ruby-operator">||</span> []
+  <span class="ruby-ivar">@output</span>     = <span class="ruby-identifier">options</span>[<span class="ruby-value">:output</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">stdout</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">$stdout</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@evals</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@filename</span>.<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-evals_source">
+            
+              <b>evals_source</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-evals_source" name="method-i-evals_source" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>EVALS</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-evals_source_source')" id="l_method-i-evals_source_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L180" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-evals_source_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">evals_source</span>
+  <span class="ruby-identifier">evals</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-string">&#39;&#39;</span>, <span class="ruby-operator">&amp;</span><span class="ruby-value">:&lt;&lt;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-map">
+            
+              <b>map</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-map" name="method-i-map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-map_source')" id="l_method-i-map_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L133" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-map_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">map</span>
+  <span class="ruby-identifier">compiler</span> = <span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Compiler</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">compile</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">source_map</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prepare_eval_code">
+            
+              <b>prepare_eval_code</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-prepare_eval_code" name="method-i-prepare_eval_code" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prepare_eval_code_source')" id="l_method-i-prepare_eval_code_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L184" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-prepare_eval_code_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prepare_eval_code</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">evals</span>.<span class="ruby-identifier">any?</span>
+    <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;tmpdir&#39;</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mktmpdir</span>,<span class="ruby-node">&quot;opal-#{$$}.js.rb&quot;</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;w&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tempfile</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">load_paths</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">tempfile</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;require &quot;opal&quot;&#39;</span>
+      <span class="ruby-identifier">tempfile</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">evals_source</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@filename</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-processor_options">
+            
+              <b>processor_options</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-processor_options" name="method-i-processor_options" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-processor_options_source')" id="l_method-i-processor_options_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L143" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-processor_options_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">processor_options</span>
+  <span class="ruby-node">%w[
+    method_missing_enabled
+    arity_check_enabled
+    const_missing_enabled
+    dynamic_require_severity
+    source_map_enabled
+    irb_enabled
+  ]</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-puts">
+            
+              <b>puts</b>(*args)
+            
+            <a href="../../classes/Opal/CLI.html#method-i-puts" name="method-i-puts" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>OUTPUT</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-puts_source')" id="l_method-i-puts_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L173" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-puts_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">puts</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-run">
+            
+              <b>run</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-run" name="method-i-run" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-run_source')" id="l_method-i-run_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-run_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">run</span>
+  <span class="ruby-identifier">set_processor_options</span>
+
+  <span class="ruby-keyword">case</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:sexp</span>];    <span class="ruby-identifier">prepare_eval_code</span>; <span class="ruby-identifier">show_sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:compile</span>]; <span class="ruby-identifier">prepare_eval_code</span>; <span class="ruby-identifier">show_compiled_source</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:server</span>];  <span class="ruby-identifier">prepare_eval_code</span>; <span class="ruby-identifier">start_server</span>
+  <span class="ruby-keyword">else</span>                    <span class="ruby-identifier">run_code</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-run_code">
+            
+              <b>run_code</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-run_code" name="method-i-run_code" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-run_code_source')" id="l_method-i-run_code_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-run_code_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">run_code</span>
+  <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">paths</span>.<span class="ruby-identifier">concat</span> <span class="ruby-identifier">load_paths</span>
+  <span class="ruby-identifier">path_finder</span> = <span class="ruby-constant">PathFinder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Opal</span>.<span class="ruby-identifier">paths</span>)
+  <span class="ruby-identifier">builder</span> = <span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Builder</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">full_source</span> = <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">build</span>(<span class="ruby-string">&#39;opal&#39;</span>)
+
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;pathname&#39;</span>
+  <span class="ruby-identifier">requires</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">path</span>   = <span class="ruby-constant">Pathname</span>(<span class="ruby-identifier">path</span>)
+    <span class="ruby-identifier">path</span>   = <span class="ruby-constant">Pathname</span>(<span class="ruby-identifier">path_finder</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">path</span>)) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">absolute?</span>
+    <span class="ruby-identifier">full_source</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">build_str</span>(<span class="ruby-identifier">path</span>.<span class="ruby-identifier">read</span>, <span class="ruby-value">:file</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">to_s</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">evals</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">code</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">full_source</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">build_str</span>(<span class="ruby-identifier">code</span>, <span class="ruby-value">:file</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;(eval #{index+1})&quot;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">file</span> = <span class="ruby-constant">Pathname</span>(<span class="ruby-identifier">filename</span>.<span class="ruby-identifier">to_s</span>)
+  <span class="ruby-identifier">full_source</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">build_str</span>(<span class="ruby-identifier">file</span>.<span class="ruby-identifier">read</span>, <span class="ruby-value">:file</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">to_s</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">exist?</span>
+
+  <span class="ruby-identifier">run_with_node</span>(<span class="ruby-identifier">full_source</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-run_with_node">
+            
+              <b>run_with_node</b>(code)
+            
+            <a href="../../classes/Opal/CLI.html#method-i-run_with_node" name="method-i-run_with_node" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-run_with_node_source')" id="l_method-i-run_with_node_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L74" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-run_with_node_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">run_with_node</span>(<span class="ruby-identifier">code</span>)
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;open3&#39;</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">stdin</span>, <span class="ruby-identifier">stdout</span>, <span class="ruby-identifier">stderr</span> = <span class="ruby-constant">Open3</span>.<span class="ruby-identifier">popen3</span>(<span class="ruby-string">&#39;node&#39;</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">MissingNodeJS</span>, <span class="ruby-string">&#39;Please install Node.js to be able to run Opal scripts.&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">stdin</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">stdin</span>.<span class="ruby-identifier">close</span>
+
+  [<span class="ruby-identifier">stdout</span>, <span class="ruby-identifier">stderr</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">str</span> = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">str</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-server">
+            
+              <b>server</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-server" name="method-i-server" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-server_source')" id="l_method-i-server_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L161" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-server_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">server</span>
+  <span class="ruby-ivar">@server</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Server</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">load_paths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">s</span>.<span class="ruby-identifier">append_path</span> <span class="ruby-identifier">path</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">s</span>.<span class="ruby-identifier">main</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">&#39;.rb&#39;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_processor_options">
+            
+              <b>set_processor_options</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-set_processor_options" name="method-i-set_processor_options" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>PROCESSOR</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_processor_options_source')" id="l_method-i-set_processor_options_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L125" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-set_processor_options_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_processor_options</span>
+  <span class="ruby-identifier">processor_options</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">option</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">key</span> = <span class="ruby-identifier">option</span>.<span class="ruby-identifier">to_sym</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">has_key?</span> <span class="ruby-identifier">key</span>
+    <span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Processor</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{option}=&quot;</span>, <span class="ruby-identifier">options</span>[<span class="ruby-identifier">key</span>])
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sexp">
+            
+              <b>sexp</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-sexp" name="method-i-sexp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>SOURCE</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sexp_source')" id="l_method-i-sexp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L200" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sexp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sexp</span>
+  <span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Parser</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_compiled_source">
+            
+              <b>show_compiled_source</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-show_compiled_source" name="method-i-show_compiled_source" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_compiled_source_source')" id="l_method-i-show_compiled_source_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L107" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-show_compiled_source_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_compiled_source</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sprockets</span>[<span class="ruby-identifier">filename</span>]
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">sprockets</span>[<span class="ruby-identifier">filename</span>].<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">last</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">filename</span>)
+    <span class="ruby-identifier">puts</span> <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">compile</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">filename</span>), <span class="ruby-identifier">options</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">compile</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_sexp">
+            
+              <b>show_sexp</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-show_sexp" name="method-i-show_sexp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_sexp_source')" id="l_method-i-show_sexp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L117" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-show_sexp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_sexp</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">sexp</span>.<span class="ruby-identifier">inspect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-source">
+            
+              <b>source</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-source" name="method-i-source" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-source_source')" id="l_method-i-source_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L139" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-source_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">source</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">filename</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sprockets">
+            
+              <b>sprockets</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-sprockets" name="method-i-sprockets" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>SPROCKETS</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sprockets_source')" id="l_method-i-sprockets_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L157" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-sprockets_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sprockets</span>
+  <span class="ruby-identifier">server</span>.<span class="ruby-identifier">sprockets</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_server">
+            
+              <b>start_server</b>()
+            
+            <a href="../../classes/Opal/CLI.html#method-i-start_server" name="method-i-start_server" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_server_source')" id="l_method-i-start_server_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/454b562dcea541999ff35ca61bef2fbd5285b0f1/lib/opal/cli.rb#L94" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-start_server_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/cli.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_server</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rack&#39;</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;webrick&#39;</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;logger&#39;</span>
+
+  <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Server</span>.<span class="ruby-identifier">start</span>(
+    <span class="ruby-value">:app</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">server</span>,
+    <span class="ruby-value">:Port</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:port</span>] <span class="ruby-operator">||</span> <span class="ruby-number">3000</span>,
+    <span class="ruby-value">:AccessLog</span> =<span class="ruby-operator">&gt;</span> [],
+    <span class="ruby-value">:Logger</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Logger</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">$stdout</span>)
+  )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Nodes::IfNode</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Nodes::IfNode 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Base.html">Opal::Nodes::Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/nodes/if_rb.html">opal/lib/opal/nodes/if.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-compile">compile</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-falsy">falsy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-needs_wrapper-3F">needs_wrapper?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-skip_check_present-3F">skip_check_present?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-skip_check_present_not-3F">skip_check_present_not?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-truthy">truthy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">RUBY_ENGINE_CHECK</td>
+            <td>=</td>
+            <td class="attr-value">[:call, [:const, :RUBY_ENGINE],
+:==, [:arglist, [:str, &quot;opal&quot;]]]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RUBY_PLATFORM_CHECK</td>
+            <td>=</td>
+            <td class="attr-value">[:call, [:const, :RUBY_PLATFORM],
+:==, [:arglist, [:str, &quot;opal&quot;]]]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RUBY_ENGINE_CHECK_NOT</td>
+            <td>=</td>
+            <td class="attr-value">[:call, [:call, [:const, :RUBY_ENGINE], :==,
+[:arglist, [:str, &quot;opal&quot;]]], :&#39;!&#39;, [:arglist]]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RUBY_PLATFORM_CHECK_NOT</td>
+            <td>=</td>
+            <td class="attr-value">[:call, [:call, [:const, :RUBY_PLATFORM], :==,
+[:arglist, [:str, &quot;opal&quot;]]], :&#39;!&#39;, [:arglist]]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-compile">
+            
+              <b>compile</b>()
+            
+            <a href="../../../classes/Opal/Nodes/IfNode.html#method-i-compile" name="method-i-compile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_source')" id="l_method-i-compile_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/91f868e2d56b3467afa10fd90164da64f05bf309/lib/opal/nodes/if.rb#L22" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/if.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile</span>
+  <span class="ruby-identifier">truthy</span>, <span class="ruby-identifier">falsy</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">truthy</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">falsy</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">skip_check_present?</span>
+    <span class="ruby-identifier">falsy</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">skip_check_present_not?</span>
+    <span class="ruby-identifier">truthy</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;if (&quot;</span>, <span class="ruby-identifier">js_truthy</span>(<span class="ruby-identifier">test</span>), <span class="ruby-string">&quot;) {&quot;</span>
+
+  <span class="ruby-comment"># skip if-body if no truthy sexp</span>
+  <span class="ruby-identifier">indent</span> { <span class="ruby-identifier">line</span> <span class="ruby-identifier">stmt</span>(<span class="ruby-identifier">truthy</span>) } <span class="ruby-keyword">if</span> <span class="ruby-identifier">truthy</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">falsy</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">falsy</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:if</span>
+      <span class="ruby-identifier">line</span> <span class="ruby-string">&quot;} else &quot;</span>, <span class="ruby-identifier">stmt</span>(<span class="ruby-identifier">falsy</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">indent</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">line</span> <span class="ruby-string">&quot;} else {&quot;</span>
+        <span class="ruby-identifier">line</span> <span class="ruby-identifier">stmt</span>(<span class="ruby-identifier">falsy</span>)
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">line</span> <span class="ruby-string">&quot;}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">wrap</span> <span class="ruby-string">&quot;(function() {&quot;</span>, <span class="ruby-string">&quot;; return nil; })()&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">needs_wrapper?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-falsy">
+            
+              <b>falsy</b>()
+            
+            <a href="../../../classes/Opal/Nodes/IfNode.html#method-i-falsy" name="method-i-falsy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-falsy_source')" id="l_method-i-falsy_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/91f868e2d56b3467afa10fd90164da64f05bf309/lib/opal/nodes/if.rb#L72" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-falsy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/if.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">falsy</span>
+  <span class="ruby-identifier">needs_wrapper?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">false_body</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>)) <span class="ruby-operator">:</span> <span class="ruby-identifier">false_body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-needs_wrapper-3F">
+            
+              <b>needs_wrapper?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/IfNode.html#method-i-needs_wrapper-3F" name="method-i-needs_wrapper-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-needs_wrapper-3F_source')" id="l_method-i-needs_wrapper-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/91f868e2d56b3467afa10fd90164da64f05bf309/lib/opal/nodes/if.rb#L76" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-needs_wrapper-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/if.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">needs_wrapper?</span>
+  <span class="ruby-identifier">expr?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">recv?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skip_check_present-3F">
+            
+              <b>skip_check_present?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/IfNode.html#method-i-skip_check_present-3F" name="method-i-skip_check_present-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>pre-processing only effects <a href="IfNode.html#method-i-falsy">#falsy</a>
+blocks. If engine is opal, then <a
+href="IfNode.html#method-i-falsy">#falsy</a> block gets generated as
+normal. Unless engine is opal then that code gets generated as the <a
+href="IfNode.html#method-i-falsy">#falsy</a> block</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skip_check_present-3F_source')" id="l_method-i-skip_check_present-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/91f868e2d56b3467afa10fd90164da64f05bf309/lib/opal/nodes/if.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-skip_check_present-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/if.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skip_check_present?</span>
+  <span class="ruby-identifier">test</span> <span class="ruby-operator">==</span> <span class="ruby-constant">RUBY_ENGINE_CHECK</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">test</span> <span class="ruby-operator">==</span> <span class="ruby-constant">RUBY_PLATFORM_CHECK</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skip_check_present_not-3F">
+            
+              <b>skip_check_present_not?</b>()
+            
+            <a href="../../../classes/Opal/Nodes/IfNode.html#method-i-skip_check_present_not-3F" name="method-i-skip_check_present_not-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skip_check_present_not-3F_source')" id="l_method-i-skip_check_present_not-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/91f868e2d56b3467afa10fd90164da64f05bf309/lib/opal/nodes/if.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-skip_check_present_not-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/if.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skip_check_present_not?</span>
+  <span class="ruby-identifier">test</span> <span class="ruby-operator">==</span> <span class="ruby-constant">RUBY_ENGINE_CHECK_NOT</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">test</span> <span class="ruby-operator">==</span> <span class="ruby-constant">RUBY_PLATFORM_CHECK_NOT</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-truthy">
+            
+              <b>truthy</b>()
+            
+            <a href="../../../classes/Opal/Nodes/IfNode.html#method-i-truthy" name="method-i-truthy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-truthy_source')" id="l_method-i-truthy_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/91f868e2d56b3467afa10fd90164da64f05bf309/lib/opal/nodes/if.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-truthy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/if.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">truthy</span>
+  <span class="ruby-identifier">needs_wrapper?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">true_body</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>)) <span class="ruby-operator">:</span> <span class="ruby-identifier">true_body</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

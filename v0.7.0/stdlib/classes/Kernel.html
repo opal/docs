@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Kernel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Kernel 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/minitest/spec_rb.html">opal/stdlib/minitest/spec.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/native_rb.html">opal/stdlib/native.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/nodejs/process_rb.html">opal/stdlib/nodejs/process.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/nodejs/require_rb.html">opal/stdlib/nodejs/require.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/nodejs/runtime_rb.html">opal/stdlib/nodejs/runtime.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/opal-parser_rb.html">opal/stdlib/opal-parser.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/pathname_rb.html">opal/stdlib/pathname.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/phantomjs_rb.html">opal/stdlib/phantomjs.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/pp_rb.html">opal/stdlib/pp.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-Array">Array</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-Native">Native</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-Pathname">Pathname</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-__prepare_require__">__prepare_require__</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-caller">caller</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-eval">eval</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-exit">exit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-load">load</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-native-3F">native?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-node_require">node_require</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pp">pp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pretty_inspect">pretty_inspect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-require">require</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-require_remote">require_remote</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-Array">
+            
+              <b>Array</b>(object, *args, &amp;block)
+            
+            <a href="../classes/Kernel.html#method-i-Array" name="method-i-Array" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-Array_source')" id="l_method-i-Array_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fece6f3e12a82a320b16d2c5ca223246166e4044/stdlib/native.rb#L144" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-Array_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">Array</span>(<span class="ruby-identifier">object</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    if (object == null || object === nil) {
+      return [];
+    }
+    else if (#{native?(object)}) {
+      return #{Native::Array.new(object, *args, &amp;block).to_a};
+    }
+    else if (#{object.respond_to? :to_ary}) {
+      return #{object.to_ary};
+    }
+    else if (#{object.respond_to? :to_a}) {
+      return #{object.to_a};
+    }
+    else {
+      return [object];
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-Native">
+            
+              <b>Native</b>(obj)
+            
+            <a href="../classes/Kernel.html#method-i-Native" name="method-i-Native" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-Native_source')" id="l_method-i-Native_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fece6f3e12a82a320b16d2c5ca223246166e4044/stdlib/native.rb#L134" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-Native_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">Native</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-node">%x`#{obj} == null`</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">native?</span>(<span class="ruby-identifier">obj</span>)
+    <span class="ruby-constant">Native</span><span class="ruby-operator">::</span><span class="ruby-constant">Object</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">obj</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-Pathname">
+            
+              <b>Pathname</b>(path)
+            
+            <a href="../classes/Kernel.html#method-i-Pathname" name="method-i-Pathname" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-Pathname_source')" id="l_method-i-Pathname_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/faad2919868f1dacd45631efc3a36e2293f5e370/stdlib/pathname.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-Pathname_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/pathname.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">Pathname</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-__prepare_require__">
+            
+              <b>__prepare_require__</b>(path)
+            
+            <a href="../classes/Kernel.html#method-i-__prepare_require__" name="method-i-__prepare_require__" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-__prepare_require___source')" id="l_method-i-__prepare_require___source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/97ba4badab3eb640d96ffc71406d8bd48ee5ab59/stdlib/nodejs/require.rb#L4" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-__prepare_require___source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/require.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__prepare_require__</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">name</span> = <span class="ruby-node">%x`Opal.normalize_loadable_path(#{path})`</span>
+  <span class="ruby-identifier">full_path</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">end_with?</span>(<span class="ruby-string">&#39;.rb&#39;</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">name</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;.rb&#39;</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-node">%x`!Opal.modules[#{name}]`</span>
+    <span class="ruby-identifier">ruby</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">full_path</span>)
+    <span class="ruby-identifier">compiler</span> = <span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Compiler</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ruby</span>, <span class="ruby-identifier">requirable</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">file</span><span class="ruby-operator">:</span> <span class="ruby-identifier">name</span>)
+    <span class="ruby-identifier">js</span> = <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">compile</span>
+    <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">requires</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">sub_path</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">__prepare_require__</span>(<span class="ruby-identifier">sub_path</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-node">%x`eval(#{js})`</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">raise</span> [<span class="ruby-identifier">path</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">full_path</span>].<span class="ruby-identifier">inspect</span><span class="ruby-operator">+</span><span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-caller">
+            
+              <b>caller</b>()
+            
+            <a href="../classes/Kernel.html#method-i-caller" name="method-i-caller" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-caller_source')" id="l_method-i-caller_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f1f684b3567af66dd046838693a4f8b0cb16ff2c/stdlib/nodejs/process.rb#L7" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-caller_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/process.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">caller</span>
+  <span class="ruby-value">%x{
+    var stack;
+    try {
+      var err = Error(&quot;my error&quot;);
+      throw err;
+    } catch(e) {
+      stack = e.stack;
+    }
+    return stack.$split(&quot;\n&quot;).slice(3);
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eval">
+            
+              <b>eval</b>(str)
+            
+            <a href="../classes/Kernel.html#method-i-eval" name="method-i-eval" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-eval_source')" id="l_method-i-eval_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/7c6275d02536180b21c14fbca59072100656314d/stdlib/opal-parser.rb#L6" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-eval_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/opal-parser.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">eval</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">code</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">compile</span> <span class="ruby-identifier">str</span>, <span class="ruby-identifier">file</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;(eval)&#39;</span>
+  <span class="ruby-node">%x`eval(#{code})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exit">
+            
+              <b>exit</b>(status = true)
+            
+            <a href="../classes/Kernel.html#method-i-exit" name="method-i-exit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exit_source')" id="l_method-i-exit_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f1f684b3567af66dd046838693a4f8b0cb16ff2c/stdlib/nodejs/process.rb#L2" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/process.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exit</span>(<span class="ruby-identifier">status</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">$_</span><span class="ruby-identifier">_at_exit__</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:call</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">$_</span><span class="ruby-identifier">_at_exit__</span>
+  <span class="ruby-value">%x`process.exit(status === true ? 0 : status)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-load">
+            
+              <b>load</b>(path)
+            
+            <a href="../classes/Kernel.html#method-i-load" name="method-i-load" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-load_source')" id="l_method-i-load_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/97ba4badab3eb640d96ffc71406d8bd48ee5ab59/stdlib/nodejs/require.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-load_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/require.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">load</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-node">%x`Opal.load(#{__prepare_require__(path)})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-native-3F">
+            
+              <b>native?</b>(value)
+            
+            <a href="../classes/Kernel.html#method-i-native-3F" name="method-i-native-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-native-3F_source')" id="l_method-i-native-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fece6f3e12a82a320b16d2c5ca223246166e4044/stdlib/native.rb#L130" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-native-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">native?</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-value">%x`value == null || !value.$$class`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-node_require">
+            
+              <b>node_require</b>(name)
+            
+            <a href="../classes/Kernel.html#method-i-node_require" name="method-i-node_require" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-node_require_source')" id="l_method-i-node_require_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/c9e8eb0997fba98bb13ba7c4a0cd81c20813d2fd/stdlib/nodejs/runtime.rb#L22" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-node_require_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/runtime.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">node_require</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-node">%x`OpalNode.node_require(#{name})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pp">
+            
+              <b>pp</b>(*args)
+            
+            <a href="../classes/Kernel.html#method-i-pp" name="method-i-pp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pp_source')" id="l_method-i-pp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/db3fbfe83170a2a9d06a5bbdebff79ece68ca210/stdlib/pp.rb#L7" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/pp.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pp</span> <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">obj</span><span class="ruby-operator">|</span> <span class="ruby-value">%x`console.log(obj);`</span> }
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">args</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pretty_inspect">
+            
+              <b>pretty_inspect</b>()
+            
+            <a href="../classes/Kernel.html#method-i-pretty_inspect" name="method-i-pretty_inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pretty_inspect_source')" id="l_method-i-pretty_inspect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/db3fbfe83170a2a9d06a5bbdebff79ece68ca210/stdlib/pp.rb#L2" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pretty_inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/pp.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pretty_inspect</span>; <span class="ruby-identifier">inspect</span>; <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-require">
+            
+              <b>require</b>(path)
+            
+            <a href="../classes/Kernel.html#method-i-require" name="method-i-require" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-require_source')" id="l_method-i-require_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/97ba4badab3eb640d96ffc71406d8bd48ee5ab59/stdlib/nodejs/require.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-require_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/require.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">require</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-node">%x`Opal.require(#{__prepare_require__(path)})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-require_remote">
+            
+              <b>require_remote</b>(url)
+            
+            <a href="../classes/Kernel.html#method-i-require_remote" name="method-i-require_remote" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-require_remote_source')" id="l_method-i-require_remote_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/7c6275d02536180b21c14fbca59072100656314d/stdlib/opal-parser.rb#L11" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-require_remote_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/opal-parser.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">require_remote</span> <span class="ruby-identifier">url</span>
+  <span class="ruby-value">%x{
+    var r = new XMLHttpRequest();
+    r.open(&quot;GET&quot;, url, false);
+    r.send(&#39;&#39;);
+  }</span>
+  <span class="ruby-identifier">eval</span> <span class="ruby-value">%x`r.responseText`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

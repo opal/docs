@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Mock</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Mock 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/lib/mspec/opal/mspec_fixes_rb.html">opal/lib/mspec/opal/mspec_fixes.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-install_method">install_method</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-install_method">
+            
+              <b>install_method</b>(obj, sym, type=nil)
+            
+            <a href="../classes/Mock.html#method-c-install_method" name="method-c-install_method" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <ol><li>
+<p>class_eval() doesnt except string parameter</p>
+</li></ol>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-install_method_source')" id="l_method-c-install_method_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/df0193cc4b7407ef209c4c3c7fc8432241db7c3a/lib/mspec/opal/mspec_fixes.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-install_method_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/mspec_fixes.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">Mock</span>.<span class="ruby-identifier">install_method</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-identifier">sym</span>, <span class="ruby-identifier">type</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">meta</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">singleton_class</span>
+
+  <span class="ruby-identifier">key</span> = <span class="ruby-identifier">replaced_key</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">sym</span>
+  <span class="ruby-identifier">sym</span> = <span class="ruby-identifier">sym</span>.<span class="ruby-identifier">to_sym</span>
+
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">sym</span> <span class="ruby-operator">==</span> <span class="ruby-value">:respond_to?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">mock_respond_to?</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-identifier">sym</span>, <span class="ruby-keyword">true</span>)) <span class="ruby-keyword">and</span> <span class="ruby-operator">!</span><span class="ruby-identifier">replaced?</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">first</span>)
+    <span class="ruby-identifier">meta</span>.<span class="ruby-identifier">__send__</span> <span class="ruby-value">:alias_method</span>, <span class="ruby-identifier">key</span>.<span class="ruby-identifier">first</span>, <span class="ruby-identifier">sym</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># meta.class_eval &lt;&lt;-END</span>
+  <span class="ruby-comment">#   def #{sym}(*args, &amp;block)</span>
+  <span class="ruby-comment">#     Mock.verify_call self, :#{sym}, *args, &amp;block</span>
+  <span class="ruby-comment">#   end</span>
+  <span class="ruby-comment"># END</span>
+  <span class="ruby-identifier">meta</span>.<span class="ruby-identifier">class_eval</span> {
+    <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">sym</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">Mock</span>.<span class="ruby-identifier">verify_call</span> <span class="ruby-keyword">self</span>, <span class="ruby-identifier">sym</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+    <span class="ruby-keyword">end</span>
+  }
+
+  <span class="ruby-identifier">proxy</span> = <span class="ruby-constant">MockProxy</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">type</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">mock?</span>
+    <span class="ruby-constant">MSpec</span>.<span class="ruby-identifier">expectation</span>
+    <span class="ruby-constant">MSpec</span>.<span class="ruby-identifier">actions</span> <span class="ruby-value">:expectation</span>, <span class="ruby-constant">MSpec</span>.<span class="ruby-identifier">current</span>.<span class="ruby-identifier">state</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">stub?</span>
+    <span class="ruby-identifier">stubs</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">unshift</span> <span class="ruby-identifier">proxy</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">mocks</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">proxy</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">objects</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">obj</span>
+
+  <span class="ruby-identifier">proxy</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

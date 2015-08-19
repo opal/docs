@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>MSpec::Opal::Runner</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            MSpec::Opal::Runner 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/mspec/opal/rake_task_rb.html">opal/lib/mspec/opal/rake_task.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Runner/PhantomJS.html">MSpec::Opal::Runner::PhantomJS</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-passed-3F">passed?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-run">run</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start_phantomjs">start_phantomjs</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_server">start_server</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-stop_server">stop_server</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>app</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>port</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>server</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(&amp;block)
+            
+            <a href="../../../classes/MSpec/Opal/Runner.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/3496ea9f4365cd5a5fbacd426a95754271aa2dcb/lib/mspec/opal/rake_task.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span> <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+  <span class="ruby-ivar">@app</span> = <span class="ruby-constant">RackApp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>).<span class="ruby-identifier">to_app</span>
+  <span class="ruby-ivar">@port</span> = <span class="ruby-number">9999</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-passed-3F">
+            
+              <b>passed?</b>()
+            
+            <a href="../../../classes/MSpec/Opal/Runner.html#method-i-passed-3F" name="method-i-passed-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-passed-3F_source')" id="l_method-i-passed-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/3496ea9f4365cd5a5fbacd426a95754271aa2dcb/lib/mspec/opal/rake_task.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-passed-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">passed?</span>
+  <span class="ruby-ivar">@passed</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-run">
+            
+              <b>run</b>()
+            
+            <a href="../../../classes/MSpec/Opal/Runner.html#method-i-run" name="method-i-run" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-run_source')" id="l_method-i-run_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/3496ea9f4365cd5a5fbacd426a95754271aa2dcb/lib/mspec/opal/rake_task.rb#L72" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-run_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">run</span>
+  <span class="ruby-identifier">start_server</span>
+  <span class="ruby-identifier">start_phantomjs</span>
+
+  <span class="ruby-identifier">exit</span> <span class="ruby-number">1</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">passed?</span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-identifier">stop_server</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">server</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_phantomjs">
+            
+              <b>start_phantomjs</b>()
+            
+            <a href="../../../classes/MSpec/Opal/Runner.html#method-i-start_phantomjs" name="method-i-start_phantomjs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_phantomjs_source')" id="l_method-i-start_phantomjs_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/3496ea9f4365cd5a5fbacd426a95754271aa2dcb/lib/mspec/opal/rake_task.rb#L102" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-start_phantomjs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_phantomjs</span>
+  <span class="ruby-identifier">runner</span>  = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-string">&#39;../sprockets.js&#39;</span>, <span class="ruby-keyword">__FILE__</span>).<span class="ruby-identifier">shellescape</span>
+  <span class="ruby-identifier">url</span>     = <span class="ruby-node">&quot;http://localhost:#{port}/&quot;</span>.<span class="ruby-identifier">shellescape</span>
+  <span class="ruby-identifier">command</span> = <span class="ruby-constant">PhantomJS</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">runner</span>, <span class="ruby-identifier">url</span>)
+  <span class="ruby-ivar">@passed</span> = <span class="ruby-identifier">command</span>.<span class="ruby-identifier">run</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_server">
+            
+              <b>start_server</b>()
+            
+            <a href="../../../classes/MSpec/Opal/Runner.html#method-i-start_server" name="method-i-start_server" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_server_source')" id="l_method-i-start_server_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/3496ea9f4365cd5a5fbacd426a95754271aa2dcb/lib/mspec/opal/rake_task.rb#L109" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-start_server_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_server</span>
+  <span class="ruby-ivar">@server</span> = <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Server</span>.<span class="ruby-identifier">start</span>(<span class="ruby-value">:app</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">app</span>, <span class="ruby-value">:Port</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">port</span>, <span class="ruby-value">:AccessLog</span> =<span class="ruby-operator">&gt;</span> [],
+      <span class="ruby-value">:Logger</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">WEBrick</span><span class="ruby-operator">::</span><span class="ruby-constant">Log</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;/dev/null&quot;</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-stop_server">
+            
+              <b>stop_server</b>()
+            
+            <a href="../../../classes/MSpec/Opal/Runner.html#method-i-stop_server" name="method-i-stop_server" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-stop_server_source')" id="l_method-i-stop_server_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/3496ea9f4365cd5a5fbacd426a95754271aa2dcb/lib/mspec/opal/rake_task.rb#L83" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-stop_server_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/rake_task.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">stop_server</span>
+  <span class="ruby-identifier">server</span>.<span class="ruby-identifier">kill</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

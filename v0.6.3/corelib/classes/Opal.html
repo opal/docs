@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Opal 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/opal/corelib/helpers_rb.html">opal/opal/corelib/helpers.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-coerce_to">coerce_to</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-coerce_to-21">coerce_to!</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-coerce_to-3F">coerce_to?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-compare">compare</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-destructure">destructure</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-inspect">inspect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-respond_to-3F">respond_to?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-try_convert">try_convert</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-type_error">type_error</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-coerce_to">
+            
+              <b>coerce_to</b>(object, type, method)
+            
+            <a href="../classes/Opal.html#method-c-coerce_to" name="method-c-coerce_to" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-coerce_to_source')" id="l_method-c-coerce_to_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/6dbba1f9e73fc3ce097ecc3038e82d1d26b754ce/opal/corelib/helpers.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-coerce_to_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/helpers.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">method</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">object</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">object</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">object</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">method</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-identifier">type_error</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">type</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">object</span>.<span class="ruby-identifier">__send__</span> <span class="ruby-identifier">method</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-coerce_to-21">
+            
+              <b>coerce_to!</b>(object, type, method)
+            
+            <a href="../classes/Opal.html#method-c-coerce_to-21" name="method-c-coerce_to-21" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-coerce_to-21_source')" id="l_method-c-coerce_to-21_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/6dbba1f9e73fc3ce097ecc3038e82d1d26b754ce/opal/corelib/helpers.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-coerce_to-21_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/helpers.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">coerce_to!</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">method</span>)
+  <span class="ruby-identifier">coerced</span> = <span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">method</span>)
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">coerced</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-identifier">type_error</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">method</span>, <span class="ruby-identifier">coerced</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">coerced</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-coerce_to-3F">
+            
+              <b>coerce_to?</b>(object, type, method)
+            
+            <a href="../classes/Opal.html#method-c-coerce_to-3F" name="method-c-coerce_to-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-coerce_to-3F_source')" id="l_method-c-coerce_to-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/6dbba1f9e73fc3ce097ecc3038e82d1d26b754ce/opal/corelib/helpers.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-coerce_to-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/helpers.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">coerce_to?</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">method</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">object</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">method</span>
+
+  <span class="ruby-identifier">coerced</span> = <span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">method</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">coerced</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">coerced</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-identifier">type_error</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">method</span>, <span class="ruby-identifier">coerced</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">coerced</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-compare">
+            
+              <b>compare</b>(a, b)
+            
+            <a href="../classes/Opal.html#method-c-compare" name="method-c-compare" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-compare_source')" id="l_method-c-compare_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/6dbba1f9e73fc3ce097ecc3038e82d1d26b754ce/opal/corelib/helpers.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-compare_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/helpers.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">compare</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">compare</span> = <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-value">%x`compare === nil`</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;comparison of #{a.class.name} with #{b.class.name} failed&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">compare</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-destructure">
+            
+              <b>destructure</b>(args)
+            
+            <a href="../classes/Opal.html#method-c-destructure" name="method-c-destructure" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-destructure_source')" id="l_method-c-destructure_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/6dbba1f9e73fc3ce097ecc3038e82d1d26b754ce/opal/corelib/helpers.rb#L62" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-destructure_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/helpers.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">destructure</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-value">%x{
+    if (args.length == 1) {
+      return args[0];
+    }
+    else if (args._isArray) {
+      return args;
+    }
+    else {
+      return $slice.call(args);
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-inspect">
+            
+              <b>inspect</b>(obj)
+            
+            <a href="../classes/Opal.html#method-c-inspect" name="method-c-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-inspect_source')" id="l_method-c-inspect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/6dbba1f9e73fc3ce097ecc3038e82d1d26b754ce/opal/corelib/helpers.rb#L86" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/helpers.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">inspect</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-node">%x{
+    if (obj === undefined) {
+      return &quot;undefined&quot;;
+    }
+    else if (obj === null) {
+      return &quot;null&quot;;
+    }
+    else if (!obj._klass) {
+      return obj.toString();
+    }
+    else {
+      return #{obj.inspect};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-respond_to-3F">
+            
+              <b>respond_to?</b>(obj, method)
+            
+            <a href="../classes/Opal.html#method-c-respond_to-3F" name="method-c-respond_to-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-respond_to-3F_source')" id="l_method-c-respond_to-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/6dbba1f9e73fc3ce097ecc3038e82d1d26b754ce/opal/corelib/helpers.rb#L76" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-respond_to-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/helpers.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-identifier">method</span>)
+  <span class="ruby-value">%x{
+    if (obj == null || !obj._klass) {
+      return false;
+    }
+  }</span>
+
+  <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">method</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-try_convert">
+            
+              <b>try_convert</b>(object, type, method)
+            
+            <a href="../classes/Opal.html#method-c-try_convert" name="method-c-try_convert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-try_convert_source')" id="l_method-c-try_convert_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/6dbba1f9e73fc3ce097ecc3038e82d1d26b754ce/opal/corelib/helpers.rb#L44" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-try_convert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/helpers.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">try_convert</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">method</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">object</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">object</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">object</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">method</span>
+    <span class="ruby-identifier">object</span>.<span class="ruby-identifier">__send__</span> <span class="ruby-identifier">method</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-type_error">
+            
+              <b>type_error</b>(object, type, method = nil, coerced = nil)
+            
+            <a href="../classes/Opal.html#method-c-type_error" name="method-c-type_error" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-type_error_source')" id="l_method-c-type_error_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/6dbba1f9e73fc3ce097ecc3038e82d1d26b754ce/opal/corelib/helpers.rb#L2" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-type_error_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/helpers.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">type_error</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">method</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">coerced</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">method</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">coerced</span>
+    <span class="ruby-constant">TypeError</span>.<span class="ruby-identifier">new</span> <span class="ruby-node">&quot;can&#39;t convert #{object.class} into #{type} (#{object.class}##{method} gives #{coerced.class}&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">TypeError</span>.<span class="ruby-identifier">new</span> <span class="ruby-node">&quot;no implicit conversion of #{object.class} into #{type}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

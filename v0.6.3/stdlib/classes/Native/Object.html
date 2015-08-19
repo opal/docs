@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Native::Object</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Native::Object 
+            
+                <span class="parent">&lt; 
+                    
+                    BasicObject
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/stdlib/native_rb.html">opal/stdlib/native.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D">[]</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D-3D">[]=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-class">class</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each">each</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-has_key-3F">has_key?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-include-3F">include?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-instance_of-3F">instance_of?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-is_a-3F">is_a?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>K</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-key-3F">key?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-kind_of-3F">kind_of?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-member-3F">member?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-merge-21">merge!</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-method_missing">method_missing</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-nil-3F">nil?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-respond_to-3F">respond_to?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-respond_to_missing-3F">respond_to_missing?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_a">to_a</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../Native.html">
+              Native
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../../classes/Native/Object.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L168" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x`#@native === #{Native.try_convert(other)}`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D">
+            
+              <b>[]</b>(key)
+            
+            <a href="../../classes/Native/Object.html#method-i-5B-5D" name="method-i-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D_source')" id="l_method-i-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L194" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-keyword ruby-title">key</span>)
+  <span class="ruby-node">%x{
+    var prop = #@native[key];
+
+    if (prop instanceof Function) {
+      return prop;
+    }
+    else {
+      return #{::Native.call(@native, key)}
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D-3D">
+            
+              <b>[]=</b>(key, value)
+            
+            <a href="../../classes/Native/Object.html#method-i-5B-5D-3D" name="method-i-5B-5D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D-3D_source')" id="l_method-i-5B-5D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L207" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]=</span>(<span class="ruby-keyword ruby-title">key</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-identifier">native</span> = <span class="ruby-constant">Native</span>.<span class="ruby-identifier">try_convert</span>(<span class="ruby-identifier">value</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-node">%x`#{native} === nil`</span>
+    <span class="ruby-node">%x`#@native[key] = #{value}`</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">%x`#@native[key] = #{native}`</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-class">
+            
+              <b>class</b>()
+            
+            <a href="../../classes/Native/Object.html#method-i-class" name="method-i-class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-class_source')" id="l_method-i-class_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L262" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 262</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">class</span>
+  <span class="ruby-value">%x`self._klass`</span>
+<span class="ruby-keyword ruby-title">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each">
+            
+              <b>each</b>(*args)
+            
+            <a href="../../classes/Native/Object.html#method-i-each" name="method-i-each" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_source')" id="l_method-i-each_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L180" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-node">%x{
+      for (var key in #@native) {
+        #{yield `key`, `#@native[key]`}
+      }
+    }</span>
+
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">method_missing</span>(<span class="ruby-value">:each</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-has_key-3F">
+            
+              <b>has_key?</b>(name)
+            
+            <a href="../../classes/Native/Object.html#method-i-has_key-3F" name="method-i-has_key-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Object.html#method-i-key-3F">key?</a>, <a href="Object.html#method-i-include-3F">include?</a>, <a href="Object.html#method-i-member-3F">member?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-has_key-3F_source')" id="l_method-i-has_key-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L172" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-has_key-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">has_key?</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-node">%x`$opal.hasOwnProperty.call(#@native, #{name})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-include-3F">
+            
+              <b>include?</b>(name)
+            
+            <a href="../../classes/Native/Object.html#method-i-include-3F" name="method-i-include-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Object.html#method-i-has_key-3F">has_key?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../../classes/Native/Object.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inspect_source')" id="l_method-i-inspect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L270" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 270</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inspect</span>
+  <span class="ruby-node">&quot;#&lt;Native:#{`String(#@native)`}&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-instance_of-3F">
+            
+              <b>instance_of?</b>(klass)
+            
+            <a href="../../classes/Native/Object.html#method-i-instance_of-3F" name="method-i-instance_of-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-instance_of-3F_source')" id="l_method-i-instance_of-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L258" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-instance_of-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 258</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">instance_of?</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-value">%x`self._klass === klass`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-is_a-3F">
+            
+              <b>is_a?</b>(klass)
+            
+            <a href="../../classes/Native/Object.html#method-i-is_a-3F" name="method-i-is_a-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Object.html#method-i-kind_of-3F">kind_of?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-is_a-3F_source')" id="l_method-i-is_a-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L252" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-is_a-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 252</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">is_a?</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-value">%x`$opal.is_a(self, klass)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-key-3F">
+            
+              <b>key?</b>(name)
+            
+            <a href="../../classes/Native/Object.html#method-i-key-3F" name="method-i-key-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Object.html#method-i-has_key-3F">has_key?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-kind_of-3F">
+            
+              <b>kind_of?</b>(klass)
+            
+            <a href="../../classes/Native/Object.html#method-i-kind_of-3F" name="method-i-kind_of-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Object.html#method-i-is_a-3F">is_a?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-member-3F">
+            
+              <b>member?</b>(name)
+            
+            <a href="../../classes/Native/Object.html#method-i-member-3F" name="method-i-member-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Object.html#method-i-has_key-3F">has_key?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-merge-21">
+            
+              <b>merge!</b>(other)
+            
+            <a href="../../classes/Native/Object.html#method-i-merge-21" name="method-i-merge-21" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-merge-21_source')" id="l_method-i-merge-21_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L217" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-merge-21_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">merge!</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-node">%x{
+    var other = #{Native.convert(other)};
+
+    for (var prop in other) {
+      #@native[prop] = other[prop];
+    }
+  }</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-method_missing">
+            
+              <b>method_missing</b>(mid, *args, &amp;block)
+            
+            <a href="../../classes/Native/Object.html#method-i-method_missing" name="method-i-method_missing" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-method_missing_source')" id="l_method-i-method_missing_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L237" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-method_missing_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 237</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">method_missing</span>(<span class="ruby-identifier">mid</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    if (mid.charAt(mid.length - 1) === &#39;=&#39;) {
+      return #{self[mid.slice(0, mid.length - 1)] = args[0]};
+    }
+    else {
+      return #{::Native.call(@native, mid, *args, &amp;block)};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-nil-3F">
+            
+              <b>nil?</b>()
+            
+            <a href="../../classes/Native/Object.html#method-i-nil-3F" name="method-i-nil-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-nil-3F_source')" id="l_method-i-nil-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L248" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-nil-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">nil?</span>
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-respond_to-3F">
+            
+              <b>respond_to?</b>(name, include_all = false)
+            
+            <a href="../../classes/Native/Object.html#method-i-respond_to-3F" name="method-i-respond_to-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-respond_to-3F_source')" id="l_method-i-respond_to-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L229" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-respond_to-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">respond_to?</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">include_all</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">instance_method</span>(<span class="ruby-value">:respond_to?</span>).<span class="ruby-identifier">bind</span>(<span class="ruby-keyword">self</span>).<span class="ruby-identifier">call</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">include_all</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-respond_to_missing-3F">
+            
+              <b>respond_to_missing?</b>(name)
+            
+            <a href="../../classes/Native/Object.html#method-i-respond_to_missing-3F" name="method-i-respond_to_missing-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-respond_to_missing-3F_source')" id="l_method-i-respond_to_missing-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L233" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-respond_to_missing-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">respond_to_missing?</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-node">%x`$opal.hasOwnProperty.call(#@native, #{name})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_a">
+            
+              <b>to_a</b>(options = {}, &amp;block)
+            
+            <a href="../../classes/Native/Object.html#method-i-to_a" name="method-i-to_a" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_a_source')" id="l_method-i-to_a_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/d9989fcd4ae808dedfbd89f1536b1100219ccff4/stdlib/native.rb#L266" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_a_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 266</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_a</span>(<span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">Native</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@native</span>, <span class="ruby-identifier">options</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>).<span class="ruby-identifier">to_a</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

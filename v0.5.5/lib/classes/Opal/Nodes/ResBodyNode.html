@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Nodes::ResBodyNode</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Nodes::ResBodyNode 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Base.html">Opal::Nodes::Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/nodes/rescue_rb.html">opal/lib/opal/nodes/rescue.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-compile">compile</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-rescue_body">rescue_body</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rescue_classes">rescue_classes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rescue_variable">rescue_variable</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-compile">
+            
+              <b>compile</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ResBodyNode.html#method-i-compile" name="method-i-compile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_source')" id="l_method-i-compile_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/b78ba9e24c2bdffff8bb17958011a25d6f6a8b9c/lib/opal/nodes/rescue.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/rescue.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile</span>
+  <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;if (&quot;</span>
+
+  <span class="ruby-identifier">rescue_classes</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cls</span>, <span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">push</span> <span class="ruby-string">&#39;, &#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">idx</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">call</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:call</span>, <span class="ruby-identifier">cls</span>, <span class="ruby-value">:===</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:arglist</span>, <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-string">&#39;$err&#39;</span>)))
+    <span class="ruby-identifier">push</span> <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">call</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># if no classes are given, then catch all errors</span>
+  <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;true&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">rescue_classes</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;) {&quot;</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">variable</span> = <span class="ruby-identifier">rescue_variable</span>
+    <span class="ruby-identifier">variable</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_tmp</span>, <span class="ruby-string">&#39;$err&#39;</span>)
+    <span class="ruby-identifier">push</span> <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">variable</span>), <span class="ruby-string">&#39;;&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">line</span> <span class="ruby-identifier">process</span>(<span class="ruby-identifier">rescue_body</span>, <span class="ruby-ivar">@level</span>)
+  <span class="ruby-identifier">line</span> <span class="ruby-string">&quot;}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rescue_body">
+            
+              <b>rescue_body</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ResBodyNode.html#method-i-rescue_body" name="method-i-rescue_body" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rescue_body_source')" id="l_method-i-rescue_body_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/b78ba9e24c2bdffff8bb17958011a25d6f6a8b9c/lib/opal/nodes/rescue.rb#L129" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rescue_body_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/rescue.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rescue_body</span>
+  <span class="ruby-identifier">body</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rescue_classes">
+            
+              <b>rescue_classes</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ResBodyNode.html#method-i-rescue_classes" name="method-i-rescue_classes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rescue_classes_source')" id="l_method-i-rescue_classes_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/b78ba9e24c2bdffff8bb17958011a25d6f6a8b9c/lib/opal/nodes/rescue.rb#L123" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rescue_classes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/rescue.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rescue_classes</span>
+  <span class="ruby-identifier">classes</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">children</span>
+  <span class="ruby-identifier">classes</span>.<span class="ruby-identifier">pop</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">classes</span>.<span class="ruby-identifier">last</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">classes</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:const</span>
+  <span class="ruby-identifier">classes</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rescue_variable">
+            
+              <b>rescue_variable</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ResBodyNode.html#method-i-rescue_variable" name="method-i-rescue_variable" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rescue_variable_source')" id="l_method-i-rescue_variable_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/b78ba9e24c2bdffff8bb17958011a25d6f6a8b9c/lib/opal/nodes/rescue.rb#L115" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rescue_variable_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/rescue.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rescue_variable</span>
+  <span class="ruby-identifier">variable</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">last</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Sexp</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">variable</span> <span class="ruby-keyword">and</span> [<span class="ruby-value">:lasgn</span>, <span class="ruby-value">:iasgn</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">variable</span>.<span class="ruby-identifier">type</span>)
+    <span class="ruby-identifier">variable</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

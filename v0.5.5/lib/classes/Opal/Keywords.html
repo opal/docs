@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Keywords</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Opal::Keywords 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/lib/opal/parser/keywords_rb.html">opal/lib/opal/parser/keywords.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Keywords/KeywordTable.html">Opal::Keywords::KeywordTable</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>K</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-keyword">keyword</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-map">map</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">KEYWORDS</td>
+            <td>=</td>
+            <td class="attr-value">[
+[&quot;__LINE__&quot;,  [:k__LINE__, :k__LINE__],   :expr_end],
+[&quot;__FILE__&quot;,  [:k__FILE__, :k__FILE__],   :expr_end],
+[&quot;alias&quot;,     [:kALIAS,    :kALIAS],      :expr_fname],
+[&quot;and&quot;,       [:kAND,      :kAND],        :expr_beg],
+[&quot;begin&quot;,     [:kBEGIN,    :kBEGIN],      :expr_beg],
+[&quot;break&quot;,     [:kBREAK,    :kBREAK],      :expr_mid],
+[&quot;case&quot;,      [:kCASE,     :kCASE],       :expr_beg],
+[&quot;class&quot;,     [:kCLASS,    :kCLASS],      :expr_class],
+[&quot;def&quot;,       [:kDEF,      :kDEF],        :expr_fname],
+[&quot;defined?&quot;,  [:kDEFINED,  :kDEFINED],    :expr_arg],
+[&quot;do&quot;,        [:kDO,       :kDO],         :expr_beg],
+[&quot;else&quot;,      [:kELSE,     :kELSE],       :expr_beg],
+[&quot;elsif&quot;,     [:kELSIF,    :kELSIF],      :expr_beg],
+[&quot;end&quot;,       [:kEND,      :kEND],        :expr_end],
+[&quot;ensure&quot;,    [:kENSURE,   :kENSURE],     :expr_beg],
+[&quot;false&quot;,     [:kFALSE,    :kFALSE],      :expr_end],
+[&quot;if&quot;,        [:kIF,       :kIF_MOD],     :expr_beg],
+[&quot;module&quot;,    [:kMODULE,   :kMODULE],     :expr_beg],
+[&quot;nil&quot;,       [:kNIL,      :kNIL],        :expr_end],
+[&quot;next&quot;,      [:kNEXT,     :kNEXT],       :expr_mid],
+[&quot;not&quot;,       [:kNOT,      :kNOT],        :expr_beg],
+[&quot;or&quot;,        [:kOR,       :kOR],         :expr_beg],
+[&quot;redo&quot;,      [:kREDO,     :kREDO],       :expr_end],
+[&quot;rescue&quot;,    [:kRESCUE,   :kRESCUE_MOD], :expr_mid],
+[&quot;return&quot;,    [:kRETURN,   :kRETURN],     :expr_mid],
+[&quot;self&quot;,      [:kSELF,     :kSELF],       :expr_end],
+[&quot;super&quot;,     [:kSUPER,    :kSUPER],      :expr_arg],
+[&quot;then&quot;,      [:kTHEN,     :kTHEN],       :expr_beg],
+[&quot;true&quot;,      [:kTRUE,     :kTRUE],       :expr_end],
+[&quot;undef&quot;,     [:kUNDEF,    :kUNDEF],      :expr_fname],
+[&quot;unless&quot;,    [:kUNLESS,   :kUNLESS_MOD], :expr_beg],
+[&quot;until&quot;,     [:kUNTIL,    :kUNTIL_MOD],  :expr_beg],
+[&quot;when&quot;,      [:kWHEN,     :kWHEN],       :expr_beg],
+[&quot;while&quot;,     [:kWHILE,    :kWHILE_MOD],  :expr_beg],
+[&quot;yield&quot;,     [:kYIELD,    :kYIELD],      :expr_arg]
+].map { |decl| KeywordTable.new(*decl) }</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-keyword">
+            
+              <b>keyword</b>(kw)
+            
+            <a href="../../classes/Opal/Keywords.html#method-c-keyword" name="method-c-keyword" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-keyword_source')" id="l_method-c-keyword_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f489441937cd7362a2315c2e54ffe127ec402192/lib/opal/parser/keywords.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-keyword_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/keywords.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">keyword</span>(<span class="ruby-identifier">kw</span>)
+  <span class="ruby-identifier">map</span>[<span class="ruby-identifier">kw</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-map">
+            
+              <b>map</b>()
+            
+            <a href="../../classes/Opal/Keywords.html#method-c-map" name="method-c-map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-map_source')" id="l_method-c-map_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f489441937cd7362a2315c2e54ffe127ec402192/lib/opal/parser/keywords.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-map_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/parser/keywords.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">map</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@map</span>
+    <span class="ruby-ivar">@map</span> = {}
+    <span class="ruby-constant">KEYWORDS</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@map</span>[<span class="ruby-identifier">k</span>.<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">k</span> }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@map</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

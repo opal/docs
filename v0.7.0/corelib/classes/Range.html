@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Range</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Range 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/opal/corelib/range_rb.html">opal/opal/corelib/range.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D-3D">===</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cover-3F">cover?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each">each</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-eql-3F">eql?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-exclude_end-3F">exclude_end?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-include-3F">include?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-max">max</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-member-3F">member?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-min">min</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-size">size</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-step">step</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Enumerable.html">
+              Enumerable
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>begin</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>end</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>first</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>last</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(first, last, exclude = false)
+            
+            <a href="../classes/Range.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>, <span class="ruby-identifier">exclude</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">first</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">last</span>
+
+  <span class="ruby-ivar">@begin</span>   = <span class="ruby-identifier">first</span>
+  <span class="ruby-ivar">@end</span>     = <span class="ruby-identifier">last</span>
+  <span class="ruby-ivar">@exclude</span> = <span class="ruby-identifier">exclude</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../classes/Range.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L18" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-value">%x{
+    if (!other.$$is_range) {
+      return false;
+    }
+
+    return self.exclude === other.exclude &amp;&amp;
+           self.begin   ==  other.begin &amp;&amp;
+           self.end     ==  other.end;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D-3D">
+            
+              <b>===</b>(value)
+            
+            <a href="../classes/Range.html#method-i-3D-3D-3D" name="method-i-3D-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D-3D_source')" id="l_method-i-3D-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">===</span>(<span class="ruby-keyword ruby-title">value</span>)
+  <span class="ruby-identifier">include?</span> <span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cover-3F">
+            
+              <b>cover?</b>(value)
+            
+            <a href="../classes/Range.html#method-i-cover-3F" name="method-i-cover-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Range.html#method-i-include-3F">include?</a>, <a href="Range.html#method-i-member-3F">member?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cover-3F_source')" id="l_method-i-cover-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cover-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cover?</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-ivar">@begin</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-ivar">@exclude</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@end</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-ivar">@end</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each">
+            
+              <b>each</b>(&amp;block)
+            
+            <a href="../classes/Range.html#method-i-each" name="method-i-each" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_source')" id="l_method-i-each_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">each</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-identifier">current</span> = <span class="ruby-ivar">@begin</span>
+  <span class="ruby-identifier">last</span>    = <span class="ruby-ivar">@end</span>
+
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">current</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">last</span>
+    <span class="ruby-keyword">yield</span> <span class="ruby-identifier">current</span>
+
+    <span class="ruby-identifier">current</span> = <span class="ruby-identifier">current</span>.<span class="ruby-identifier">succ</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">current</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@exclude</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">current</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">last</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eql-3F">
+            
+              <b>eql?</b>(other)
+            
+            <a href="../classes/Range.html#method-i-eql-3F" name="method-i-eql-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-eql-3F_source')" id="l_method-i-eql-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-eql-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">eql?</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">Range</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">other</span>
+
+  <span class="ruby-ivar">@exclude</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">exclude_end?</span> <span class="ruby-operator">&amp;&amp;</span>
+  <span class="ruby-ivar">@begin</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">begin</span>) <span class="ruby-operator">&amp;&amp;</span>
+  <span class="ruby-ivar">@end</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">end</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exclude_end-3F">
+            
+              <b>exclude_end?</b>()
+            
+            <a href="../classes/Range.html#method-i-exclude_end-3F" name="method-i-exclude_end-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exclude_end-3F_source')" id="l_method-i-exclude_end-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exclude_end-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exclude_end?</span>
+  <span class="ruby-ivar">@exclude</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-include-3F">
+            
+              <b>include?</b>(value)
+            
+            <a href="../classes/Range.html#method-i-include-3F" name="method-i-include-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: member?
+            </div>
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Range.html#method-i-cover-3F">cover?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../classes/Range.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Range.html#method-i-to_s">to_s</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-max">
+            
+              <b>max</b>()
+            
+            <a href="../classes/Range.html#method-i-max" name="method-i-max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>FIXME: currently hardcoded to assume range holds numerics</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-max_source')" id="l_method-i-max_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L74" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">max</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">%x`#@exclude ? #@end - 1 : #@end`</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-member-3F">
+            
+              <b>member?</b>(value)
+            
+            <a href="../classes/Range.html#method-i-member-3F" name="method-i-member-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Range.html#method-i-cover-3F">cover?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-min">
+            
+              <b>min</b>()
+            
+            <a href="../classes/Range.html#method-i-min" name="method-i-min" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-min_source')" id="l_method-i-min_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-min_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">min</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@begin</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-size">
+            
+              <b>size</b>()
+            
+            <a href="../classes/Range.html#method-i-size" name="method-i-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-size_source')" id="l_method-i-size_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L94" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">size</span>
+  <span class="ruby-identifier">_begin</span> = <span class="ruby-ivar">@begin</span>
+  <span class="ruby-identifier">_end</span>   = <span class="ruby-ivar">@end</span>
+  <span class="ruby-identifier">_end</span>  <span class="ruby-operator">-=</span> <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@exclude</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">Numeric</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">_begin</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Numeric</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">_end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">_end</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">_begin</span>
+  <span class="ruby-identifier">infinity</span> = <span class="ruby-constant">Float</span><span class="ruby-operator">::</span><span class="ruby-constant">INFINITY</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">infinity</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">infinity</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">_begin</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">_end</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">infinity</span>
+
+  (<span class="ruby-value">%x`Math.abs(_end - _begin) + 1`</span>).<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-step">
+            
+              <b>step</b>(n = 1)
+            
+            <a href="../classes/Range.html#method-i-step" name="method-i-step" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-step_source')" id="l_method-i-step_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L107" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-step_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">step</span>(<span class="ruby-identifier">n</span> = <span class="ruby-number">1</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/Range.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Range.html#method-i-inspect">inspect</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/31628270ec4c08e4b723e2714d355853473051f4/opal/corelib/range.rb#L111" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/range.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_s</span>
+  <span class="ruby-node">%x`#{@begin.inspect} + (#@exclude ? &#39;...&#39; : &#39;..&#39;) + #{@end.inspect}`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

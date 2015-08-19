@@ -1,0 +1,3301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Numeric</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Numeric 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/opal/corelib/numeric_rb.html">opal/opal/corelib/numeric.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-25">%</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-26">&amp;</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2A">*</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2A-2A">**</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2B">+</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2B-40">+@</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2D">-</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2D-40">-@</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-2F">/</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3C">&lt;</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3C-3C">&lt;&lt;</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3C-3D">&lt;=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3C-3D-3E">&lt;=&gt;</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3E">&gt;</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3E-3D">&gt;=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-3E-3E">&gt;&gt;</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D">[]</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-5E">^</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-abs">abs</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ceil">ceil</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-chr">chr</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-coerce">coerce</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-conj">conj</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-conjugate">conjugate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-divmod">divmod</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-downto">downto</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-eql-3F">eql?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-equal-3F">equal?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-even-3F">even?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-finite-3F">finite?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-floor">floor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-gcd">gcd</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gcdlcm">gcdlcm</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-hash">hash</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-infinite-3F">infinite?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-instance_of-3F">instance_of?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-integer-3F">integer?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-is_a-3F">is_a?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>K</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-kind_of-3F">kind_of?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lcm">lcm</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-magnitude">magnitude</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-modulo">modulo</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-nan-3F">nan?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-negative-3F">negative?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-next">next</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-nonzero-3F">nonzero?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-odd-3F">odd?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-ord">ord</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-positive-3F">positive?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pred">pred</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-round">round</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-send_coerced">send_coerced</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-size">size</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-step">step</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-succ">succ</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-times">times</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_f">to_f</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_i">to_i</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_int">to_int</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-upto">upto</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Z</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-zero-3F">zero?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-7C">|</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-7E">~</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Comparable.html">
+              Comparable
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-25">
+            
+              <b>%</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-25" name="method-i-25" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Numeric.html#method-i-modulo">modulo</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-25_source')" id="l_method-i-25_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-25_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">%</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      if (other &lt; 0 || self &lt; 0) {
+        return (self % other + other) % other;
+      }
+      else {
+        return self % other;
+      }
+    }
+    else {
+      return #{send_coerced :%, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-26">
+            
+              <b>&amp;</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-26" name="method-i-26" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-26_source')" id="l_method-i-26_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L100" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-26_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&amp;</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self &amp; other;
+    }
+    else {
+      return #{send_coerced :&amp;, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2A">
+            
+              <b>*</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-2A" name="method-i-2A" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2A_source')" id="l_method-i-2A_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L62" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2A_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self * other;
+    }
+    else {
+      return #{send_coerced :*, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2A-2A">
+            
+              <b>**</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-2A-2A" name="method-i-2A-2A" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2A-2A_source')" id="l_method-i-2A-2A_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L218" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2A-2A_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">**</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return Math.pow(self, other);
+    }
+    else {
+      return #{send_coerced :**, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2B">
+            
+              <b>+</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-2B" name="method-i-2B" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2B_source')" id="l_method-i-2B_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2B_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self + other;
+    }
+    else {
+      return #{send_coerced :+, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2B-40">
+            
+              <b>+@</b>()
+            
+            <a href="../classes/Numeric.html#method-i-2B-40" name="method-i-2B-40" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2B-40_source')" id="l_method-i-2B-40_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L206" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2B-40_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+@</span>
+  <span class="ruby-value">%x`+self`</span>
+<span class="ruby-keyword ruby-title">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2D">
+            
+              <b>-</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-2D" name="method-i-2D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2D_source')" id="l_method-i-2D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L51" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self - other;
+    }
+    else {
+      return #{send_coerced :-, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2D-40">
+            
+              <b>-@</b>()
+            
+            <a href="../classes/Numeric.html#method-i-2D-40" name="method-i-2D-40" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2D-40_source')" id="l_method-i-2D-40_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L210" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2D-40_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-@</span>
+  <span class="ruby-value">%x`-self`</span>
+<span class="ruby-keyword ruby-title">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-2F">
+            
+              <b>/</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-2F" name="method-i-2F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-2F_source')" id="l_method-i-2F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L73" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-2F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">/</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self / other;
+    }
+    else {
+      return #{send_coerced :/, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3C">
+            
+              <b>&lt;</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-3C" name="method-i-3C" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3C_source')" id="l_method-i-3C_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L133" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3C_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self &lt; other;
+    }
+    else {
+      return #{send_coerced :&lt;, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3C-3C">
+            
+              <b>&lt;&lt;</b>(count)
+            
+            <a href="../classes/Numeric.html#method-i-3C-3C" name="method-i-3C-3C" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3C-3C_source')" id="l_method-i-3C-3C_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L190" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3C-3C_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-keyword ruby-title">count</span>)
+  <span class="ruby-node">%x`self &lt;&lt; #{count.to_int}`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3C-3D">
+            
+              <b>&lt;=</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-3C-3D" name="method-i-3C-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3C-3D_source')" id="l_method-i-3C-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L144" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3C-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self &lt;= other;
+    }
+    else {
+      return #{send_coerced :&lt;=, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3C-3D-3E">
+            
+              <b>&lt;=&gt;</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-3C-3D-3E" name="method-i-3C-3D-3E" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3C-3D-3E_source')" id="l_method-i-3C-3D-3E_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L177" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3C-3D-3E_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self &gt; other ? 1 : (self &lt; other ? -1 : 0);
+    }
+    else {
+      return #{send_coerced :&lt;=&gt;, other};
+    }
+  }</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">ArgumentError</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Numeric.html#method-i-eql-3F">eql?</a>, <a href="Numeric.html#method-i-equal-3F">equal?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L229" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self == Number(other);
+    }
+    else if (#{other.respond_to? :==}) {
+      return #{other == self};
+    }
+    else {
+      return false;
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3E">
+            
+              <b>&gt;</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-3E" name="method-i-3E" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3E_source')" id="l_method-i-3E_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L155" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3E_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&gt;</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self &gt; other;
+    }
+    else {
+      return #{send_coerced :&gt;, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3E-3D">
+            
+              <b>&gt;=</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-3E-3D" name="method-i-3E-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3E-3D_source')" id="l_method-i-3E-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L166" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3E-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&gt;=</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self &gt;= other;
+    }
+    else {
+      return #{send_coerced :&gt;=, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-3E-3E">
+            
+              <b>&gt;&gt;</b>(count)
+            
+            <a href="../classes/Numeric.html#method-i-3E-3E" name="method-i-3E-3E" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3E-3E_source')" id="l_method-i-3E-3E_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L194" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-3E-3E_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&gt;&gt;</span>(<span class="ruby-keyword ruby-title">count</span>)
+  <span class="ruby-node">%x`self &gt;&gt; #{count.to_int}`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D">
+            
+              <b>[]</b>(bit)
+            
+            <a href="../classes/Numeric.html#method-i-5B-5D" name="method-i-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D_source')" id="l_method-i-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L198" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-keyword ruby-title">bit</span>)
+  <span class="ruby-identifier">bit</span> = <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">coerce_to!</span> <span class="ruby-identifier">bit</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-value">:to_int</span>
+  <span class="ruby-identifier">min</span> = <span class="ruby-operator">-</span>(<span class="ruby-number">2</span><span class="ruby-operator">**</span><span class="ruby-number">30</span>)
+  <span class="ruby-identifier">max</span> =  (<span class="ruby-number">2</span><span class="ruby-operator">**</span><span class="ruby-number">30</span>) <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+
+  <span class="ruby-node">%x`(#{bit} &lt; #{min} || #{bit} &gt; #{max}) ? 0 : (self &gt;&gt; #{bit}) % 2`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-5E">
+            
+              <b>^</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-5E" name="method-i-5E" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5E_source')" id="l_method-i-5E_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L122" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-5E_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">^</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self ^ other;
+    }
+    else {
+      return #{send_coerced :^, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-abs">
+            
+              <b>abs</b>()
+            
+            <a href="../classes/Numeric.html#method-i-abs" name="method-i-abs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Numeric.html#method-i-magnitude">magnitude</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-abs_source')" id="l_method-i-abs_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L243" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-abs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">abs</span>
+  <span class="ruby-value">%x`Math.abs(self)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ceil">
+            
+              <b>ceil</b>()
+            
+            <a href="../classes/Numeric.html#method-i-ceil" name="method-i-ceil" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ceil_source')" id="l_method-i-ceil_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L247" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-ceil_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ceil</span>
+  <span class="ruby-value">%x`Math.ceil(self)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-chr">
+            
+              <b>chr</b>()
+            
+            <a href="../classes/Numeric.html#method-i-chr" name="method-i-chr" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-chr_source')" id="l_method-i-chr_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L251" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-chr_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">chr</span>
+  <span class="ruby-value">%x`String.fromCharCode(self)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-coerce">
+            
+              <b>coerce</b>(other, type = :operation)
+            
+            <a href="../classes/Numeric.html#method-i-coerce" name="method-i-coerce" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-coerce_source')" id="l_method-i-coerce_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L8" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-coerce_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">coerce</span>(<span class="ruby-identifier">other</span>, <span class="ruby-identifier">type</span> = <span class="ruby-value">:operation</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return [self, other];
+    }
+    else {
+      return #{other.coerce(self)};
+    }
+  }</span>
+<span class="ruby-keyword">rescue</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:operation</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;#{other.class} can&#39;t be coerce into Numeric&quot;</span>
+
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:comparison</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;comparison of #{self.class} with #{other.class} failed&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-conj">
+            
+              <b>conj</b>()
+            
+            <a href="../classes/Numeric.html#method-i-conj" name="method-i-conj" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Numeric.html#method-i-conjugate">conjugate</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-conj_source')" id="l_method-i-conj_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L255" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-conj_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 255</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">conj</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-conjugate">
+            
+              <b>conjugate</b>()
+            
+            <a href="../classes/Numeric.html#method-i-conjugate" name="method-i-conjugate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Numeric.html#method-i-conj">conj</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-divmod">
+            
+              <b>divmod</b>(rhs)
+            
+            <a href="../classes/Numeric.html#method-i-divmod" name="method-i-divmod" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-divmod_source')" id="l_method-i-divmod_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L440" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-divmod_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 440</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">divmod</span>(<span class="ruby-identifier">rhs</span>)
+  <span class="ruby-identifier">q</span> = (<span class="ruby-keyword">self</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">rhs</span>).<span class="ruby-identifier">floor</span>
+  <span class="ruby-identifier">r</span> = <span class="ruby-keyword">self</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">rhs</span>
+
+  [<span class="ruby-identifier">q</span>, <span class="ruby-identifier">r</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-downto">
+            
+              <b>downto</b>(finish, &amp;block)
+            
+            <a href="../classes/Numeric.html#method-i-downto" name="method-i-downto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-downto_source')" id="l_method-i-downto_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L261" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-downto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">downto</span>(<span class="ruby-identifier">finish</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">downto</span>, <span class="ruby-identifier">finish</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block</span>
+
+  <span class="ruby-value">%x{
+    for (var i = self; i &gt;= finish; i--) {
+      if (block(i) === $breaker) {
+        return $breaker.$v;
+      }
+    }
+  }</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-eql-3F">
+            
+              <b>eql?</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-eql-3F" name="method-i-eql-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Numeric.html#method-i-3D-3D">==</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-equal-3F">
+            
+              <b>equal?</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-equal-3F" name="method-i-equal-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Numeric.html#method-i-3D-3D">==</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-even-3F">
+            
+              <b>even?</b>()
+            
+            <a href="../classes/Numeric.html#method-i-even-3F" name="method-i-even-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-even-3F_source')" id="l_method-i-even-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L278" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-even-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">even?</span>
+  <span class="ruby-value">%x`self % 2 === 0`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-finite-3F">
+            
+              <b>finite?</b>()
+            
+            <a href="../classes/Numeric.html#method-i-finite-3F" name="method-i-finite-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-finite-3F_source')" id="l_method-i-finite-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L474" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-finite-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 474</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">finite?</span>
+  <span class="ruby-value">%x`self != Infinity &amp;&amp; self != -Infinity`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-floor">
+            
+              <b>floor</b>()
+            
+            <a href="../classes/Numeric.html#method-i-floor" name="method-i-floor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-floor_source')" id="l_method-i-floor_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L282" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-floor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 282</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">floor</span>
+  <span class="ruby-value">%x`Math.floor(self)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gcd">
+            
+              <b>gcd</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-gcd" name="method-i-gcd" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gcd_source')" id="l_method-i-gcd_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L286" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-gcd_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 286</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gcd</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">Integer</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">other</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">&#39;not an integer&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-value">%x{
+    var min = Math.abs(self),
+        max = Math.abs(other);
+
+    while (min &gt; 0) {
+      var tmp = min;
+
+      min = max % min;
+      max = tmp;
+    }
+
+    return max;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gcdlcm">
+            
+              <b>gcdlcm</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-gcdlcm" name="method-i-gcdlcm" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gcdlcm_source')" id="l_method-i-gcdlcm_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L306" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-gcdlcm_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 306</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gcdlcm</span>(<span class="ruby-identifier">other</span>)
+  [<span class="ruby-identifier">gcd</span>, <span class="ruby-identifier">lcm</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hash">
+            
+              <b>hash</b>()
+            
+            <a href="../classes/Numeric.html#method-i-hash" name="method-i-hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hash_source')" id="l_method-i-hash_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L310" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-hash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 310</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hash</span>
+  <span class="ruby-value">%x`self.toString()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-infinite-3F">
+            
+              <b>infinite?</b>()
+            
+            <a href="../classes/Numeric.html#method-i-infinite-3F" name="method-i-infinite-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-infinite-3F_source')" id="l_method-i-infinite-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L478" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-infinite-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 478</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">infinite?</span>
+  <span class="ruby-value">%x{
+    if (self == Infinity) {
+      return +1;
+    }
+    else if (self == -Infinity) {
+      return -1;
+    }
+    else {
+      return nil;
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>(base = 10)
+            
+            <a href="../classes/Numeric.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Numeric.html#method-i-to_s">to_s</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-instance_of-3F">
+            
+              <b>instance_of?</b>(klass)
+            
+            <a href="../classes/Numeric.html#method-i-instance_of-3F" name="method-i-instance_of-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-instance_of-3F_source')" id="l_method-i-instance_of-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L328" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-instance_of-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 328</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">instance_of?</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Fixnum</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Integer</span> <span class="ruby-operator">===</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Integer</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Integer</span> <span class="ruby-operator">===</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Float</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Float</span> <span class="ruby-operator">===</span> <span class="ruby-keyword">self</span>
+
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-integer-3F">
+            
+              <b>integer?</b>()
+            
+            <a href="../classes/Numeric.html#method-i-integer-3F" name="method-i-integer-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-integer-3F_source')" id="l_method-i-integer-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L314" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-integer-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 314</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">integer?</span>
+  <span class="ruby-value">%x`self % 1 === 0`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-is_a-3F">
+            
+              <b>is_a?</b>(klass)
+            
+            <a href="../classes/Numeric.html#method-i-is_a-3F" name="method-i-is_a-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Numeric.html#method-i-kind_of-3F">kind_of?</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-is_a-3F_source')" id="l_method-i-is_a-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L318" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-is_a-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">is_a?</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Fixnum</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Integer</span> <span class="ruby-operator">===</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Integer</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Integer</span> <span class="ruby-operator">===</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Float</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Float</span> <span class="ruby-operator">===</span> <span class="ruby-keyword">self</span>
+
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-kind_of-3F">
+            
+              <b>kind_of?</b>(klass)
+            
+            <a href="../classes/Numeric.html#method-i-kind_of-3F" name="method-i-kind_of-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Numeric.html#method-i-is_a-3F">is_a?</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lcm">
+            
+              <b>lcm</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-lcm" name="method-i-lcm" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lcm_source')" id="l_method-i-lcm_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L336" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-lcm_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 336</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lcm</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">Integer</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">other</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">&#39;not an integer&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-node">%x{
+    if (self == 0 || other == 0) {
+      return 0;
+    }
+    else {
+      return Math.abs(self * other / #{gcd(other)});
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-magnitude">
+            
+              <b>magnitude</b>()
+            
+            <a href="../classes/Numeric.html#method-i-magnitude" name="method-i-magnitude" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Numeric.html#method-i-abs">abs</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-modulo">
+            
+              <b>modulo</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-modulo" name="method-i-modulo" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Numeric.html#method-i-25">%</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-nan-3F">
+            
+              <b>nan?</b>()
+            
+            <a href="../classes/Numeric.html#method-i-nan-3F" name="method-i-nan-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-nan-3F_source')" id="l_method-i-nan-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L470" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-nan-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 470</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">nan?</span>
+  <span class="ruby-value">%x`isNaN(self)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-negative-3F">
+            
+              <b>negative?</b>()
+            
+            <a href="../classes/Numeric.html#method-i-negative-3F" name="method-i-negative-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-negative-3F_source')" id="l_method-i-negative-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L496" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-negative-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 496</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">negative?</span>
+  <span class="ruby-value">%x`1 / self &lt; 0`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-next">
+            
+              <b>next</b>()
+            
+            <a href="../classes/Numeric.html#method-i-next" name="method-i-next" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Numeric.html#method-i-succ">succ</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-next_source')" id="l_method-i-next_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L355" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-next_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 355</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">next</span>
+  <span class="ruby-value">%x`self + 1`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-nonzero-3F">
+            
+              <b>nonzero?</b>()
+            
+            <a href="../classes/Numeric.html#method-i-nonzero-3F" name="method-i-nonzero-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-nonzero-3F_source')" id="l_method-i-nonzero-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L359" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-nonzero-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 359</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">nonzero?</span>
+  <span class="ruby-value">%x`self == 0 ? nil : self`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-odd-3F">
+            
+              <b>odd?</b>()
+            
+            <a href="../classes/Numeric.html#method-i-odd-3F" name="method-i-odd-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-odd-3F_source')" id="l_method-i-odd-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L363" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-odd-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">odd?</span>
+  <span class="ruby-value">%x`self % 2 !== 0`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ord">
+            
+              <b>ord</b>()
+            
+            <a href="../classes/Numeric.html#method-i-ord" name="method-i-ord" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ord_source')" id="l_method-i-ord_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L367" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-ord_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 367</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ord</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-positive-3F">
+            
+              <b>positive?</b>()
+            
+            <a href="../classes/Numeric.html#method-i-positive-3F" name="method-i-positive-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-positive-3F_source')" id="l_method-i-positive-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L492" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-positive-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 492</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">positive?</span>
+  <span class="ruby-value">%x`1 / self &gt; 0`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pred">
+            
+              <b>pred</b>()
+            
+            <a href="../classes/Numeric.html#method-i-pred" name="method-i-pred" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pred_source')" id="l_method-i-pred_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L371" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pred_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 371</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pred</span>
+  <span class="ruby-value">%x`self - 1`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-round">
+            
+              <b>round</b>()
+            
+            <a href="../classes/Numeric.html#method-i-round" name="method-i-round" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-round_source')" id="l_method-i-round_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L375" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-round_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 375</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">round</span>
+  <span class="ruby-value">%x`Math.round(self)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-send_coerced">
+            
+              <b>send_coerced</b>(method, other)
+            
+            <a href="../classes/Numeric.html#method-i-send_coerced" name="method-i-send_coerced" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-send_coerced_source')" id="l_method-i-send_coerced_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-send_coerced_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">send_coerced</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">type</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">method</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:+</span>, <span class="ruby-value">:-</span>, <span class="ruby-value">:*</span>, <span class="ruby-value">:/</span>, <span class="ruby-value">:%</span>, <span class="ruby-value">:&amp;</span>, <span class="ruby-value">:|</span>, <span class="ruby-value">:^</span>, <span class="ruby-value">:**</span>
+      <span class="ruby-value">:operation</span>
+
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:&gt;</span>, <span class="ruby-value">:&gt;=</span>, <span class="ruby-value">:&lt;</span>, <span class="ruby-value">:&lt;=</span>, <span class="ruby-value">:&lt;=&gt;</span>
+      <span class="ruby-value">:comparison</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span> = <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">other</span>, <span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">a</span>.<span class="ruby-identifier">__send__</span> <span class="ruby-identifier">method</span>, <span class="ruby-identifier">b</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-size">
+            
+              <b>size</b>()
+            
+            <a href="../classes/Numeric.html#method-i-size" name="method-i-size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Since bitwise operations are 32 bit, declare it to be so.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-size_source')" id="l_method-i-size_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L466" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 466</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">size</span>
+  <span class="ruby-number">4</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-step">
+            
+              <b>step</b>(limit, step = 1, &amp;block)
+            
+            <a href="../classes/Numeric.html#method-i-step" name="method-i-step" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-step_source')" id="l_method-i-step_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L379" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-step_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 379</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">step</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">step</span> = <span class="ruby-number">1</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">step</span>, <span class="ruby-identifier">limit</span>, <span class="ruby-identifier">step</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block</span>
+
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;step cannot be 0&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-value">%x`step == 0`</span>
+
+  <span class="ruby-value">%x{
+    var value = self;
+
+    if (step &gt; 0) {
+      while (value &lt;= limit) {
+        block(value);
+        value += step;
+      }
+    }
+    else {
+      while (value &gt;= limit) {
+        block(value);
+        value += step;
+      }
+    }
+  }</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-succ">
+            
+              <b>succ</b>()
+            
+            <a href="../classes/Numeric.html#method-i-succ" name="method-i-succ" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Numeric.html#method-i-next">next</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-times">
+            
+              <b>times</b>(&amp;block)
+            
+            <a href="../classes/Numeric.html#method-i-times" name="method-i-times" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-times_source')" id="l_method-i-times_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L406" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-times_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 406</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">times</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">times</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block</span>
+
+  <span class="ruby-value">%x{
+    for (var i = 0; i &lt; self; i++) {
+      if (block(i) === $breaker) {
+        return $breaker.$v;
+      }
+    }
+  }</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_f">
+            
+              <b>to_f</b>()
+            
+            <a href="../classes/Numeric.html#method-i-to_f" name="method-i-to_f" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_f_source')" id="l_method-i-to_f_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L420" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_f_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 420</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_f</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_i">
+            
+              <b>to_i</b>()
+            
+            <a href="../classes/Numeric.html#method-i-to_i" name="method-i-to_i" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Numeric.html#method-i-to_int">to_int</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_i_source')" id="l_method-i-to_i_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L424" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_i_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 424</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_i</span>
+  <span class="ruby-value">%x`parseInt(self)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_int">
+            
+              <b>to_int</b>()
+            
+            <a href="../classes/Numeric.html#method-i-to_int" name="method-i-to_int" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="Numeric.html#method-i-to_i">to_i</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>(base = 10)
+            
+            <a href="../classes/Numeric.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="Numeric.html#method-i-inspect">inspect</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L430" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 430</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_s</span>(<span class="ruby-identifier">base</span> = <span class="ruby-number">10</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">base</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">2</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">base</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">36</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;base must be between 2 and 36&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-value">%x`self.toString(base)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-upto">
+            
+              <b>upto</b>(finish, &amp;block)
+            
+            <a href="../classes/Numeric.html#method-i-upto" name="method-i-upto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-upto_source')" id="l_method-i-upto_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L447" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-upto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 447</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">upto</span>(<span class="ruby-identifier">finish</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">upto</span>, <span class="ruby-identifier">finish</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block</span>
+
+  <span class="ruby-value">%x{
+    for (var i = self; i &lt;= finish; i++) {
+      if (block(i) === $breaker) {
+        return $breaker.$v;
+      }
+    }
+  }</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-zero-3F">
+            
+              <b>zero?</b>()
+            
+            <a href="../classes/Numeric.html#method-i-zero-3F" name="method-i-zero-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-zero-3F_source')" id="l_method-i-zero-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L461" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-zero-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 461</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">zero?</span>
+  <span class="ruby-value">%x`self == 0`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-7C">
+            
+              <b>|</b>(other)
+            
+            <a href="../classes/Numeric.html#method-i-7C" name="method-i-7C" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-7C_source')" id="l_method-i-7C_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L111" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-7C_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">|</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-node">%x{
+    if (other._isNumber) {
+      return self | other;
+    }
+    else {
+      return #{send_coerced :|, other};
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-7E">
+            
+              <b>~</b>()
+            
+            <a href="../classes/Numeric.html#method-i-7E" name="method-i-7E" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-7E_source')" id="l_method-i-7E_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/85220f32136c74ac93f1cb721462324a3423cf44/opal/corelib/numeric.rb#L214" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-7E_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/opal/corelib/numeric.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">~</span>
+  <span class="ruby-value">%x`~self`</span>
+<span class="ruby-keyword ruby-title">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

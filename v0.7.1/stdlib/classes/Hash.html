@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Hash</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Hash 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/json_rb.html">opal/stdlib/json.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/native_rb.html">opal/stdlib/native.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_json">to_json</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_n">to_n</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(defaults = undefined, &amp;block)
+            
+            <a href="../classes/Hash.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fece6f3e12a82a320b16d2c5ca223246166e4044/stdlib/native.rb#L458" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 458</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">defaults</span> = <span class="ruby-identifier">undefined</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    if (defaults != null) {
+      if (defaults.constructor === Object) {
+        var _map = self.map,
+            smap = self.smap,
+            keys = self.keys,
+            map, khash, value;
+
+        for (var key in defaults) {
+          value = defaults[key];
+
+          if (key.$$is_string) {
+            map = smap;
+            khash = key;
+          } else {
+            map = _map;
+            khash = key.$hash();
+          }
+
+          if (value &amp;&amp; value.constructor === Object) {
+            map[khash] = #{Hash.new(`value`)};
+          }
+          else {
+            map[khash] = #{Native(`value`)};
+          }
+
+          keys.push(key);
+        }
+      }
+      else {
+        self.none = defaults;
+      }
+    }
+    else if (block !== nil) {
+      self.proc = block;
+    }
+
+    return self;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-to_json">
+            
+              <b>to_json</b>()
+            
+            <a href="../classes/Hash.html#method-i-to_json" name="method-i-to_json" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_json_source')" id="l_method-i-to_json_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/7cd03fecc0003f303efe414e60328447c85ff804/stdlib/json.rb#L137" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_json_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/json.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_json</span>
+  <span class="ruby-node">%x{
+    var inspect = [],
+        keys = self.keys,
+        _map = self.map,
+        smap = self.smap,
+        map, khash;
+
+    for (var i = 0, length = keys.length; i &lt; length; i++) {
+      var key = keys[i];
+
+      if (key.$$is_string) {
+        map = smap;
+        khash = key;
+      } else {
+        map = _map;
+        khash = key.$hash();
+      }
+
+      inspect.push(#{`key`.to_s.to_json} + &#39;:&#39; + #{`map[khash]`.to_json});
+    }
+
+    return &#39;{&#39; + inspect.join(&#39;, &#39;) + &#39;}&#39;;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_n">
+            
+              <b>to_n</b>()
+            
+            <a href="../classes/Hash.html#method-i-to_n" name="method-i-to_n" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_n_source')" id="l_method-i-to_n_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/fece6f3e12a82a320b16d2c5ca223246166e4044/stdlib/native.rb#L500" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_n_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 500</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_n</span>
+  <span class="ruby-node">%x{
+    var result = {},
+        keys   = self.keys,
+        _map   = self.map,
+        smap   = self.smap,
+        map, khash, value;
+
+    for (var i = 0, length = keys.length; i &lt; length; i++) {
+      key   = keys[i];
+
+      if (key.$$is_string) {
+        map = smap;
+        khash = key;
+      } else {
+        map = _map;
+        khash = key.$hash();
+      }
+
+      value = map[khash];
+
+      if (#{`value`.respond_to? :to_n}) {
+        result[key] = #{`value`.to_n};
+      }
+      else {
+        result[key] = value;
+      }
+    }
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

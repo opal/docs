@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Nodes::ClassNode</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Nodes::ClassNode 
+            
+                <span class="parent">&lt; 
+                    
+                    ModuleNode
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/nodes/class_rb.html">opal/lib/opal/nodes/class.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-body_code">body_code</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-compile">compile</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-super_code">super_code</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-body_code">
+            
+              <b>body_code</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ClassNode.html#method-i-body_code" name="method-i-body_code" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-body_code_source')" id="l_method-i-body_code_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/880977e343dbdc0f473c22b95f508709368b03a0/lib/opal/nodes/class.rb#L37" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-body_code_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/class.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">body_code</span>
+  <span class="ruby-identifier">stmt</span>(<span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">returns</span>(<span class="ruby-identifier">body</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>)))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compile">
+            
+              <b>compile</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ClassNode.html#method-i-compile" name="method-i-compile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_source')" id="l_method-i-compile_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/880977e343dbdc0f473c22b95f508709368b03a0/lib/opal/nodes/class.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/class.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile</span>
+  <span class="ruby-identifier">name</span>, <span class="ruby-identifier">base</span> = <span class="ruby-identifier">name_and_base</span>
+  <span class="ruby-identifier">helper</span> <span class="ruby-value">:klass</span>
+
+  <span class="ruby-identifier">push</span> <span class="ruby-string">&quot;(function($base, $super) {&quot;</span>
+  <span class="ruby-identifier">line</span> <span class="ruby-node">&quot;  function $#{name}(){};&quot;</span>
+  <span class="ruby-identifier">line</span> <span class="ruby-node">&quot;  var self = $#{name} = $klass($base, $super, &#39;#{name}&#39;, $#{name});&quot;</span>
+
+  <span class="ruby-identifier">in_scope</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>
+    <span class="ruby-identifier">add_temp</span> <span class="ruby-node">&quot;#{scope.proto} = self._proto&quot;</span>
+    <span class="ruby-identifier">add_temp</span> <span class="ruby-string">&quot;$scope = self._scope&quot;</span>
+
+    <span class="ruby-identifier">body_code</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">body_code</span>
+    <span class="ruby-identifier">empty_line</span>
+
+    <span class="ruby-identifier">line</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">to_vars</span>
+    <span class="ruby-identifier">line</span> <span class="ruby-identifier">body_code</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">line</span> <span class="ruby-string">&quot;})(&quot;</span>, <span class="ruby-identifier">base</span>, <span class="ruby-string">&quot;, &quot;</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">super_code</span>, <span class="ruby-string">&quot;)&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-super_code">
+            
+              <b>super_code</b>()
+            
+            <a href="../../../classes/Opal/Nodes/ClassNode.html#method-i-super_code" name="method-i-super_code" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-super_code_source')" id="l_method-i-super_code_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/880977e343dbdc0f473c22b95f508709368b03a0/lib/opal/nodes/class.rb#L33" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-super_code_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/class.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">super_code</span>
+  <span class="ruby-identifier">sup</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">sup</span>) <span class="ruby-operator">:</span> <span class="ruby-string">&#39;null&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

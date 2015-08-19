@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>JSON</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            JSON 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/json_rb.html">opal/stdlib/json.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-5B-5D">[]</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-dump">dump</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-from_object">from_object</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-generate">generate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-parse">parse</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-parse-21">parse!</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>create_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-5B-5D">
+            
+              <b>[]</b>(value, options = {})
+            
+            <a href="../classes/JSON.html#method-c-5B-5D" name="method-c-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-5B-5D_source')" id="l_method-c-5B-5D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/07b974d9caa0ea66446f4a2a5b1379ba3a81eb30/stdlib/json.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/json.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-operator">[]</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">value</span>
+    <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">generate</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-dump">
+            
+              <b>dump</b>(obj, io = nil, limit = nil)
+            
+            <a href="../classes/JSON.html#method-c-dump" name="method-c-dump" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-dump_source')" id="l_method-c-dump_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/07b974d9caa0ea66446f4a2a5b1379ba3a81eb30/stdlib/json.rb#L88" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-dump_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/json.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-identifier">io</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">limit</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">string</span> = <span class="ruby-identifier">generate</span>(<span class="ruby-identifier">obj</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">io</span>
+    <span class="ruby-identifier">io</span> = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">to_io</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">responds_to?</span> <span class="ruby-value">:to_io</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">string</span>
+
+    <span class="ruby-identifier">io</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">string</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-from_object">
+            
+              <b>from_object</b>(js_object, options = {})
+            
+            <a href="../classes/JSON.html#method-c-from_object" name="method-c-from_object" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Raw js object =&gt; opal object</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-from_object_source')" id="l_method-c-from_object_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/07b974d9caa0ea66446f4a2a5b1379ba3a81eb30/stdlib/json.rb#L77" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-from_object_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/json.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">from_object</span>(<span class="ruby-identifier">js_object</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:object_class</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Hash</span>
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:array_class</span>]  <span class="ruby-operator">||=</span> <span class="ruby-constant">Array</span>
+
+  <span class="ruby-value">%x`to_opal(js_object, options.map)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-generate">
+            
+              <b>generate</b>(obj, options = {})
+            
+            <a href="../classes/JSON.html#method-c-generate" name="method-c-generate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-generate_source')" id="l_method-c-generate_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/07b974d9caa0ea66446f4a2a5b1379ba3a81eb30/stdlib/json.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-generate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/json.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">to_json</span>(<span class="ruby-identifier">options</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-parse">
+            
+              <b>parse</b>(source, options = {})
+            
+            <a href="../classes/JSON.html#method-c-parse" name="method-c-parse" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-parse_source')" id="l_method-c-parse_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/07b974d9caa0ea66446f4a2a5b1379ba3a81eb30/stdlib/json.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-parse_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/json.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">from_object</span>(<span class="ruby-value">%x`$parse(source)`</span>, <span class="ruby-identifier">options</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-parse-21">
+            
+              <b>parse!</b>(source, options = {})
+            
+            <a href="../classes/JSON.html#method-c-parse-21" name="method-c-parse-21" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-parse-21_source')" id="l_method-c-parse-21_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/07b974d9caa0ea66446f4a2a5b1379ba3a81eb30/stdlib/json.rb#L72" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-parse-21_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/json.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">options</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

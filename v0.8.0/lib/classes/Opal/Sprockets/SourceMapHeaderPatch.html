@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Sprockets::SourceMapHeaderPatch</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Opal::Sprockets::SourceMapHeaderPatch 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/sprockets/source_map_header_patch_rb.html">opal/lib/opal/sprockets/source_map_header_patch.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-headers_with_opal_source_maps">headers_with_opal_source_maps</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-included">included</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-inject-21">inject!</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-prefix">prefix</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-prefix-3D">prefix=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-included">
+            
+              <b>included</b>(base)
+            
+            <a href="../../../classes/Opal/Sprockets/SourceMapHeaderPatch.html#method-c-included" name="method-c-included" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-included_source')" id="l_method-c-included_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/352aa6bd4ca0d316eba93d113d9b1ddc13cf5b11/lib/opal/sprockets/source_map_header_patch.rb#L17" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-included_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/source_map_header_patch.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">included</span>(<span class="ruby-identifier">base</span>)
+  <span class="ruby-comment"># Poor man&#39;s alias_method_chain :)</span>
+  <span class="ruby-identifier">base</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:alias_method</span>, <span class="ruby-value">:headers_without_opal_source_maps</span>, <span class="ruby-value">:headers</span>)
+  <span class="ruby-identifier">base</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:alias_method</span>, <span class="ruby-value">:headers</span>, <span class="ruby-value">:headers_with_opal_source_maps</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-inject-21">
+            
+              <b>inject!</b>(prefix)
+            
+            <a href="../../../classes/Opal/Sprockets/SourceMapHeaderPatch.html#method-c-inject-21" name="method-c-inject-21" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-inject-21_source')" id="l_method-c-inject-21_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/352aa6bd4ca0d316eba93d113d9b1ddc13cf5b11/lib/opal/sprockets/source_map_header_patch.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-inject-21_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/source_map_header_patch.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">inject!</span>(<span class="ruby-identifier">prefix</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">prefix</span> = <span class="ruby-identifier">prefix</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-operator">::</span><span class="ruby-constant">Sprockets</span><span class="ruby-operator">::</span><span class="ruby-constant">Server</span>.<span class="ruby-identifier">ancestors</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-keyword">self</span>)
+    <span class="ruby-operator">::</span><span class="ruby-constant">Sprockets</span><span class="ruby-operator">::</span><span class="ruby-constant">Server</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:include</span>, <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-prefix">
+            
+              <b>prefix</b>()
+            
+            <a href="../../../classes/Opal/Sprockets/SourceMapHeaderPatch.html#method-c-prefix" name="method-c-prefix" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-prefix_source')" id="l_method-c-prefix_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/352aa6bd4ca0d316eba93d113d9b1ddc13cf5b11/lib/opal/sprockets/source_map_header_patch.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-prefix_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/source_map_header_patch.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">prefix</span>
+  <span class="ruby-ivar">@prefix</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-prefix-3D">
+            
+              <b>prefix=</b>(val)
+            
+            <a href="../../../classes/Opal/Sprockets/SourceMapHeaderPatch.html#method-c-prefix-3D" name="method-c-prefix-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-prefix-3D_source')" id="l_method-c-prefix-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/352aa6bd4ca0d316eba93d113d9b1ddc13cf5b11/lib/opal/sprockets/source_map_header_patch.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-prefix-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/source_map_header_patch.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">prefix=</span> <span class="ruby-identifier">val</span>
+  <span class="ruby-ivar">@prefix</span> = <span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-headers_with_opal_source_maps">
+            
+              <b>headers_with_opal_source_maps</b>(env, asset, length)
+            
+            <a href="../../../classes/Opal/Sprockets/SourceMapHeaderPatch.html#method-i-headers_with_opal_source_maps" name="method-i-headers_with_opal_source_maps" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Adds the source map header to all sprocket responses for assets with a .rb
+or .opal extension in the extension chain.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-headers_with_opal_source_maps_source')" id="l_method-i-headers_with_opal_source_maps_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/352aa6bd4ca0d316eba93d113d9b1ddc13cf5b11/lib/opal/sprockets/source_map_header_patch.rb#L8" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-headers_with_opal_source_maps_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/source_map_header_patch.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">headers_with_opal_source_maps</span>(<span class="ruby-identifier">env</span>, <span class="ruby-identifier">asset</span>, <span class="ruby-identifier">length</span>)
+  <span class="ruby-identifier">headers_without_opal_source_maps</span>(<span class="ruby-identifier">env</span>, <span class="ruby-identifier">asset</span>, <span class="ruby-identifier">length</span>).<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">current_headers</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">asset</span>.<span class="ruby-identifier">pathname</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\.(rb|opal)\b/</span>
+      <span class="ruby-identifier">base_path</span> = <span class="ruby-identifier">asset</span>.<span class="ruby-identifier">logical_path</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&#39;.js&#39;</span>, <span class="ruby-string">&#39;&#39;</span>)
+      <span class="ruby-identifier">current_headers</span>[<span class="ruby-string">&#39;X-SourceMap&#39;</span>] = <span class="ruby-node">&quot;#{::Opal::Sprockets::SourceMapHeaderPatch.prefix}/#{base_path}.map&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

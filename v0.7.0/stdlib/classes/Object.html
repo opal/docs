@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Object</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Object 
+            
+                <span class="parent">&lt; 
+                    
+                    BasicObject
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/delegate_rb.html">opal/stdlib/delegate.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/encoding_rb.html">opal/stdlib/encoding.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/json_rb.html">opal/stdlib/json.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/minitest/mock_rb.html">opal/stdlib/minitest/mock.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/minitest/spec_rb.html">opal/stdlib/minitest/spec.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/minitest/unit_rb.html">opal/stdlib/minitest/unit.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/nodejs/irb_rb.html">opal/stdlib/nodejs/irb.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/nodejs/process_rb.html">opal/stdlib/nodejs/process.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/rbconfig_rb.html">opal/stdlib/rbconfig.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/thread_rb.html">opal/stdlib/thread.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Thread/Queue.html">Object::Queue</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-DelegateClass">DelegateClass</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bytesize">bytesize</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each_byte">each_byte</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_json">to_json</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">NodeRepl</td>
+            <td>=</td>
+            <td class="attr-value">Native(`OpalNode.node_require(&#39;repl&#39;)`)</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ARGV</td>
+            <td>=</td>
+            <td class="attr-value">`process.argv.slice(2)`</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ENV</td>
+            <td>=</td>
+            <td class="attr-value">Object.new</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RUBY_NAME</td>
+            <td>=</td>
+            <td class="attr-value">&#39;opal&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>required for mspec it would appear</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RUBY_EXE</td>
+            <td>=</td>
+            <td class="attr-value">&#39;opal&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">RUBY_PATCHLEVEL</td>
+            <td>=</td>
+            <td class="attr-value">&quot;327&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">Queue</td>
+            <td>=</td>
+            <td class="attr-value">Thread::Queue</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-DelegateClass">
+            
+              <b>DelegateClass</b>(superklass)
+            
+            <a href="../classes/Object.html#method-i-DelegateClass" name="method-i-DelegateClass" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-DelegateClass_source')" id="l_method-i-DelegateClass_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bf9ede40eccdbf637285c988525443344bf6e9b2/stdlib/delegate.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-DelegateClass_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/delegate.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">DelegateClass</span>(<span class="ruby-identifier">superklass</span>)
+  <span class="ruby-constant">SimpleDelegator</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bytesize">
+            
+              <b>bytesize</b>()
+            
+            <a href="../classes/Object.html#method-i-bytesize" name="method-i-bytesize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bytesize_source')" id="l_method-i-bytesize_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/299343edcbddb50bbf383d1b7d2e954392f53d97/stdlib/encoding.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bytesize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/encoding.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bytesize</span>
+  <span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">length</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_byte">
+            
+              <b>each_byte</b>(string, &amp;block)
+            
+            <a href="../classes/Object.html#method-i-each_byte" name="method-i-each_byte" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_byte_source')" id="l_method-i-each_byte_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/299343edcbddb50bbf383d1b7d2e954392f53d97/stdlib/encoding.rb#L73" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_byte_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/encoding.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_byte</span>(<span class="ruby-identifier">string</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-node">%x{
+    for (var i = 0, length = string.length; i &lt; length; i++) {
+      var code = string.charCodeAt(i);
+
+      if (code &lt;= 0x7f) {
+        #{yield `code`};
+      }
+      else {
+        var encoded = encodeURIComponent(string.charAt(i)).substr(1).split(&#39;%&#39;);
+
+        for (var j = 0, encoded_length = encoded.length; j &lt; encoded_length; j++) {
+          #{yield `parseInt(encoded[j], 16)`};
+        }
+      }
+    }
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_json">
+            
+              <b>to_json</b>()
+            
+            <a href="../classes/Object.html#method-i-to_json" name="method-i-to_json" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_json_source')" id="l_method-i-to_json_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/7cd03fecc0003f303efe414e60328447c85ff804/stdlib/json.rb#L103" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_json_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/json.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_json</span>
+  <span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">to_json</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

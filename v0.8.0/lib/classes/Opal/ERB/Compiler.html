@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::ERB::Compiler</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::ERB::Compiler 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/erb_rb.html">opal/lib/opal/erb.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-compile">compile</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-find_code">find_code</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_contents">find_contents</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-fix_quotes">fix_quotes</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-prepared_source">prepared_source</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-require_erb">require_erb</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-wrap_compiled">wrap_compiled</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">BLOCK_EXPR</td>
+            <td>=</td>
+            <td class="attr-value">/\s+(do|\{)(\s*\|[^|]*\|)?\s*\Z/</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(source, file_name = &#39;(erb)&#39;)
+            
+            <a href="../../../classes/Opal/ERB/Compiler.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/erb.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/erb.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">file_name</span> = <span class="ruby-string">&#39;(erb)&#39;</span>)
+  <span class="ruby-ivar">@source</span>, <span class="ruby-ivar">@file_name</span>, <span class="ruby-ivar">@result</span> = <span class="ruby-identifier">source</span>, <span class="ruby-identifier">file_name</span>, <span class="ruby-identifier">source</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-compile">
+            
+              <b>compile</b>()
+            
+            <a href="../../../classes/Opal/ERB/Compiler.html#method-i-compile" name="method-i-compile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_source')" id="l_method-i-compile_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/erb.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/erb.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile</span>
+  <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">compile</span> <span class="ruby-identifier">prepared_source</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_code">
+            
+              <b>find_code</b>(result)
+            
+            <a href="../../../classes/Opal/ERB/Compiler.html#method-i-find_code" name="method-i-find_code" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_code_source')" id="l_method-i-find_code_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/erb.rb#L72" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_code_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/erb.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_code</span>(<span class="ruby-identifier">result</span>)
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/&lt;%([\s\S]+?)%&gt;/</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-node">&quot;\&quot;)\n#{ $1 }\noutput_buffer.append(\&quot;&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_contents">
+            
+              <b>find_contents</b>(result)
+            
+            <a href="../../../classes/Opal/ERB/Compiler.html#method-i-find_contents" name="method-i-find_contents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_contents_source')" id="l_method-i-find_contents_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/erb.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_contents_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/erb.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_contents</span>(<span class="ruby-identifier">result</span>)
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/&lt;%=([\s\S]+?)%&gt;/</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">inner</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\&#39;/</span>, <span class="ruby-string">&quot;&#39;&quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\&quot;/</span>, <span class="ruby-string">&#39;&quot;&#39;</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">inner</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">BLOCK_EXPR</span>
+      <span class="ruby-node">&quot;\&quot;)\noutput_buffer.append= #{ inner }\noutput_buffer.append(\&quot;&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-node">&quot;\&quot;)\noutput_buffer.append=(#{ inner })\noutput_buffer.append(\&quot;&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fix_quotes">
+            
+              <b>fix_quotes</b>(result)
+            
+            <a href="../../../classes/Opal/ERB/Compiler.html#method-i-fix_quotes" name="method-i-fix_quotes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fix_quotes_source')" id="l_method-i-fix_quotes_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/erb.rb#L52" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-fix_quotes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/erb.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fix_quotes</span>(<span class="ruby-identifier">result</span>)
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">gsub</span> <span class="ruby-string">&#39;&quot;&#39;</span>, <span class="ruby-string">&#39;\&quot;&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prepared_source">
+            
+              <b>prepared_source</b>()
+            
+            <a href="../../../classes/Opal/ERB/Compiler.html#method-i-prepared_source" name="method-i-prepared_source" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prepared_source_source')" id="l_method-i-prepared_source_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/erb.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-prepared_source_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/erb.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prepared_source</span>
+  <span class="ruby-ivar">@prepared_source</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">source</span> = <span class="ruby-ivar">@source</span>
+    <span class="ruby-identifier">source</span> = <span class="ruby-identifier">fix_quotes</span>(<span class="ruby-identifier">source</span>)
+    <span class="ruby-identifier">source</span> = <span class="ruby-identifier">find_contents</span>(<span class="ruby-identifier">source</span>)
+    <span class="ruby-identifier">source</span> = <span class="ruby-identifier">find_code</span>(<span class="ruby-identifier">source</span>)
+    <span class="ruby-identifier">source</span> = <span class="ruby-identifier">wrap_compiled</span>(<span class="ruby-identifier">source</span>)
+    <span class="ruby-identifier">source</span> = <span class="ruby-identifier">require_erb</span>(<span class="ruby-identifier">source</span>)
+    <span class="ruby-identifier">source</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-require_erb">
+            
+              <b>require_erb</b>(result)
+            
+            <a href="../../../classes/Opal/ERB/Compiler.html#method-i-require_erb" name="method-i-require_erb" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-require_erb_source')" id="l_method-i-require_erb_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/erb.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-require_erb_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/erb.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">require_erb</span>(<span class="ruby-identifier">result</span>)
+  <span class="ruby-string">&#39;require &quot;erb&quot;;&#39;</span><span class="ruby-operator">+</span><span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wrap_compiled">
+            
+              <b>wrap_compiled</b>(result)
+            
+            <a href="../../../classes/Opal/ERB/Compiler.html#method-i-wrap_compiled" name="method-i-wrap_compiled" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wrap_compiled_source')" id="l_method-i-wrap_compiled_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9d96a7ff7f766fb2a770e1ed5c92b618829ebf00/lib/opal/erb.rb#L78" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-wrap_compiled_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/erb.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">wrap_compiled</span>(<span class="ruby-identifier">result</span>)
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@file_name</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-node">/\.opalerb#{REGEXP_END}/</span>, <span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-node">&quot;Template.new(&#39;#{path}&#39;) do |output_buffer|\noutput_buffer.append(\&quot;#{result}\&quot;)\noutput_buffer.join\nend\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

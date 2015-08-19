@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Compiler</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Compiler 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/lib/opal/compiler_rb.html">opal/lib/opal/compiler.rb</a></li>
+            
+            <li><a href="../../files/opal/lib/opal/nodes/helpers_rb.html">opal/lib/opal/nodes/helpers.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-compile">compile</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-compiler_option">compiler_option</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-error">error</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fragment">fragment</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-handle_block_given_call">handle_block_given_call</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-handlers">handlers</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-helper">helper</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-helpers">helpers</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-in_case">in_case</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-in_while">in_while</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-in_while-3F">in_while?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-indent">indent</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-method_calls">method_calls</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-parser_indent">parser_indent</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process">process</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-requires">requires</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-returns">returns</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-s">s</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-source_map">source_map</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unique_temp">unique_temp</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-warning">warning</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-with_temp">with_temp</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">INDENT</td>
+            <td>=</td>
+            <td class="attr-value">&#39;  &#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>Generated code gets indented with two spaces on each <a
+href="Compiler.html#attribute-i-scope">#scope</a></p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">COMPARE</td>
+            <td>=</td>
+            <td class="attr-value">%w[&lt; &gt; &lt;= &gt;=]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>All compare method nodes - used to optimize performance of math comparisons</p></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>case_stmt</td>
+            <td class='attr-desc'><p>Current <a href="Compiler.html#attribute-i-case_stmt">#case_stmt</a></p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>eof_content</td>
+            <td class='attr-desc'><p>Any content in __END__ special construct</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>fragments</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>result</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>scope</td>
+            <td class='attr-desc'><p>Current <a href="Compiler.html#attribute-i-scope">#scope</a></p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-compiler_option">
+            
+              <b>compiler_option</b>(name, default_value, mid = nil)
+            
+            <a href="../../classes/Opal/Compiler.html#method-c-compiler_option" name="method-c-compiler_option" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>defines a compiler option, also creating method of form &#39;name?&#39;</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-compiler_option_source')" id="l_method-c-compiler_option_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-compiler_option_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">compiler_option</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">default_value</span>, <span class="ruby-identifier">mid</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">mid</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">name</span>) { <span class="ruby-identifier">default_value</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../../classes/Opal/Compiler.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L55" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-ivar">@indent</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-ivar">@unique</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@options</span> = {}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-compile">
+            
+              <b>compile</b>(source, options = {})
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-compile" name="method-i-compile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Compile some ruby code to a string.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_source')" id="l_method-i-compile_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L62" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-ivar">@source</span> = <span class="ruby-identifier">source</span>
+  <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">update</span> <span class="ruby-identifier">options</span>
+  <span class="ruby-ivar">@parser</span> = <span class="ruby-constant">Parser</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-ivar">@sexp</span> = <span class="ruby-identifier">s</span>(<span class="ruby-value">:top</span>, <span class="ruby-ivar">@parser</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-ivar">@source</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">file</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>))
+  <span class="ruby-ivar">@eof_content</span> = <span class="ruby-ivar">@parser</span>.<span class="ruby-identifier">lexer</span>.<span class="ruby-identifier">eof_content</span>
+
+  <span class="ruby-ivar">@fragments</span> = <span class="ruby-identifier">process</span>(<span class="ruby-ivar">@sexp</span>).<span class="ruby-identifier">flatten</span>
+
+  <span class="ruby-ivar">@result</span> = <span class="ruby-ivar">@fragments</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:code</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-error">
+            
+              <b>error</b>(msg, line = nil)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-error" name="method-i-error" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>This is called when a parsing/processing <a
+href="Compiler.html#method-i-error">#error</a> occurs. This method simply
+appends the filename and curent line number onto the message and raises it.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-error_source')" id="l_method-i-error_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L92" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-error_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">error</span>(<span class="ruby-identifier">msg</span>, <span class="ruby-identifier">line</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>, <span class="ruby-node">&quot;#{msg} :#{file}:#{line}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fragment">
+            
+              <b>fragment</b>(str, sexp = nil)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-fragment" name="method-i-fragment" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fragment_source')" id="l_method-i-fragment_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L117" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-fragment_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fragment</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">sexp</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">Fragment</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">sexp</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_block_given_call">
+            
+              <b>handle_block_given_call</b>(sexp)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-handle_block_given_call" name="method-i-handle_block_given_call" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_block_given_call_source')" id="l_method-i-handle_block_given_call_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L277" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-handle_block_given_call_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 277</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_block_given_call</span>(<span class="ruby-identifier">sexp</span>)
+  <span class="ruby-ivar">@scope</span>.<span class="ruby-identifier">uses_block!</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@scope</span>.<span class="ruby-identifier">block_name</span>
+    <span class="ruby-identifier">fragment</span>(<span class="ruby-node">&quot;(#{@scope.block_name} !== nil)&quot;</span>, <span class="ruby-identifier">sexp</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">scope</span> = <span class="ruby-ivar">@scope</span>.<span class="ruby-identifier">find_parent_def</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">block_name</span>
+    <span class="ruby-identifier">fragment</span>(<span class="ruby-node">&quot;(#{scope.block_name} !== nil)&quot;</span>, <span class="ruby-identifier">sexp</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">fragment</span>(<span class="ruby-string">&quot;false&quot;</span>, <span class="ruby-identifier">sexp</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handlers">
+            
+              <b>handlers</b>()
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-handlers" name="method-i-handlers" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handlers_source')" id="l_method-i-handlers_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L192" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-handlers_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handlers</span>
+  <span class="ruby-ivar">@handlers</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Nodes</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">handlers</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-helper">
+            
+              <b>helper</b>(name)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-helper" name="method-i-helper" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Use the given <a href="Compiler.html#method-i-helper">#helper</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-helper_source')" id="l_method-i-helper_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L128" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-helper_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">helper</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">helpers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-helpers">
+            
+              <b>helpers</b>()
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-helpers" name="method-i-helpers" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Any <a href="Compiler.html#method-i-helpers">#helpers</a> required by this
+file</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-helpers_source')" id="l_method-i-helpers_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-helpers_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">helpers</span>
+  <span class="ruby-ivar">@helpers</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>([<span class="ruby-value">:breaker</span>, <span class="ruby-value">:slice</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-in_case">
+            
+              <b>in_case</b>()
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-in_case" name="method-i-in_case" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-in_case_source')" id="l_method-i-in_case_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L168" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-in_case_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">in_case</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-identifier">old</span> = <span class="ruby-ivar">@case_stmt</span>
+  <span class="ruby-ivar">@case_stmt</span> = {}
+  <span class="ruby-keyword">yield</span>
+  <span class="ruby-ivar">@case_stmt</span> = <span class="ruby-identifier">old</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-in_while">
+            
+              <b>in_while</b>()
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-in_while" name="method-i-in_while" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Used when we enter a while statement. This pushes onto the current <a
+href="Compiler.html#attribute-i-scope">#scope</a>&#39;s while stack so we
+know how to handle break, next etc.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-in_while_source')" id="l_method-i-in_while_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L159" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-in_while_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">in_while</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-ivar">@while_loop</span> = <span class="ruby-ivar">@scope</span>.<span class="ruby-identifier">push_while</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">yield</span>
+  <span class="ruby-ivar">@scope</span>.<span class="ruby-identifier">pop_while</span>
+
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-in_while-3F">
+            
+              <b>in_while?</b>()
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-in_while-3F" name="method-i-in_while-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns true if the parser is curently handling a while sexp, false
+otherwise.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-in_while-3F_source')" id="l_method-i-in_while-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L178" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-in_while-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">in_while?</span>
+  <span class="ruby-ivar">@scope</span>.<span class="ruby-identifier">in_while?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-indent">
+            
+              <b>indent</b>(&amp;block)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-indent" name="method-i-indent" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>To keep code blocks nicely indented, this will yield a block after adding
+an extra layer of <a href="Compiler.html#method-i-indent">#indent</a>, and
+then returning the resulting code after reverting the <a
+href="Compiler.html#method-i-indent">#indent</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-indent_source')" id="l_method-i-indent_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L135" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-indent_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">indent</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">indent</span> = <span class="ruby-ivar">@indent</span>
+  <span class="ruby-ivar">@indent</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">INDENT</span>
+  <span class="ruby-ivar">@space</span> = <span class="ruby-node">&quot;\n#@indent&quot;</span>
+  <span class="ruby-identifier">res</span> = <span class="ruby-keyword">yield</span>
+  <span class="ruby-ivar">@indent</span> = <span class="ruby-identifier">indent</span>
+  <span class="ruby-ivar">@space</span> = <span class="ruby-node">&quot;\n#@indent&quot;</span>
+  <span class="ruby-identifier">res</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-method_calls">
+            
+              <b>method_calls</b>()
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-method_calls" name="method-i-method_calls" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Method calls made in this file</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-method_calls_source')" id="l_method-i-method_calls_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-method_calls_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">method_calls</span>
+  <span class="ruby-ivar">@method_calls</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-parser_indent">
+            
+              <b>parser_indent</b>()
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-parser_indent" name="method-i-parser_indent" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Instances of `Scope` can use this to determine the current <a
+href="Compiler.html#attribute-i-scope">#scope</a> <a
+href="Compiler.html#method-i-indent">#indent</a>. The <a
+href="Compiler.html#method-i-indent">#indent</a> is used to keep generated
+code easily readable.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-parser_indent_source')" id="l_method-i-parser_indent_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L106" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-parser_indent_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">parser_indent</span>
+  <span class="ruby-ivar">@indent</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process">
+            
+              <b>process</b>(sexp, level = :expr)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-process" name="method-i-process" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Process the given sexp by creating a node instance, based on its type, and
+compiling it to <a
+href="Compiler.html#attribute-i-fragments">#fragments</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_source')" id="l_method-i-process_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L184" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-process_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process</span>(<span class="ruby-identifier">sexp</span>, <span class="ruby-identifier">level</span> = <span class="ruby-value">:expr</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">handler</span> = <span class="ruby-identifier">handlers</span>[<span class="ruby-identifier">sexp</span>.<span class="ruby-identifier">type</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">handler</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">sexp</span>, <span class="ruby-identifier">level</span>, <span class="ruby-keyword">self</span>).<span class="ruby-identifier">compile_to_fragments</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unsupported sexp: #{sexp.type}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-requires">
+            
+              <b>requires</b>()
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-requires" name="method-i-requires" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>An array of <a href="Compiler.html#method-i-requires">#requires</a> used in
+this file</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-requires_source')" id="l_method-i-requires_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L197" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-requires_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">requires</span>
+  <span class="ruby-ivar">@requires</span> <span class="ruby-operator">||=</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-returns">
+            
+              <b>returns</b>(sexp)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-returns" name="method-i-returns" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>The last sexps in method bodies, for example, need to be returned in the
+compiled javascript. Due to syntax differences between javascript any ruby,
+some sexps need to be handled specially. For example, `if` statemented
+cannot be returned in javascript, so instead the “truthy” and “falsy” parts
+of the if statement both need to be returned instead.</p>
+
+<p>Sexps that need to be returned are passed to this method, and the
+alterned/new sexps are returned and should be used instead. Most sexps can
+just be added into a <a href="Compiler.html#method-i-s">#s</a>(:return)
+sexp, so that is the default action if no special case is required.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-returns_source')" id="l_method-i-returns_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L212" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-returns_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">returns</span>(<span class="ruby-identifier">sexp</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">returns</span> <span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">sexp</span>
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">sexp</span>.<span class="ruby-identifier">type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:break</span>, <span class="ruby-value">:next</span>, <span class="ruby-value">:redo</span>
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:yield</span>
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">0</span>] = <span class="ruby-value">:returnable_yield</span>
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:scope</span>
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>] = <span class="ruby-identifier">returns</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>]
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:block</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">sexp</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">1</span>
+      <span class="ruby-identifier">sexp</span>[<span class="ruby-number">-1</span>] = <span class="ruby-identifier">returns</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">-1</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">sexp</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">returns</span>(<span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>))
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:when</span>
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">returns</span>(<span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>])
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:rescue</span>
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>] = <span class="ruby-identifier">returns</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>]
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>] <span class="ruby-keyword">and</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>][<span class="ruby-number">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:resbody</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>][<span class="ruby-number">2</span>]
+        <span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>][<span class="ruby-number">2</span>] = <span class="ruby-identifier">returns</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>][<span class="ruby-number">2</span>]
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>][<span class="ruby-number">2</span>] = <span class="ruby-identifier">returns</span> <span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:ensure</span>
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>] = <span class="ruby-identifier">returns</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>]
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:begin</span>
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>] = <span class="ruby-identifier">returns</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>]
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:rescue_mod</span>
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>] = <span class="ruby-identifier">returns</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>]
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">returns</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>]
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:while</span>
+    <span class="ruby-comment"># sexp[2] = returns(sexp[2])</span>
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:return</span>, <span class="ruby-value">:js_return</span>
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:xstr</span>
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>] = <span class="ruby-node">&quot;return #{sexp[1]};&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-regexp">/return|;/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>]
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:dxstr</span>
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>] = <span class="ruby-node">&quot;return #{sexp[1]}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-regexp">/return|;|\n/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">sexp</span>[<span class="ruby-number">1</span>]
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:if</span>
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>] = <span class="ruby-identifier">returns</span>(<span class="ruby-identifier">sexp</span>[<span class="ruby-number">2</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>))
+    <span class="ruby-identifier">sexp</span>[<span class="ruby-number">3</span>] = <span class="ruby-identifier">returns</span>(<span class="ruby-identifier">sexp</span>[<span class="ruby-number">3</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">s</span>(<span class="ruby-value">:nil</span>))
+    <span class="ruby-identifier">sexp</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">s</span>(<span class="ruby-value">:js_return</span>, <span class="ruby-identifier">sexp</span>).<span class="ruby-identifier">tap</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">s</span>.<span class="ruby-identifier">source</span> = <span class="ruby-identifier">sexp</span>.<span class="ruby-identifier">source</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-s">
+            
+              <b>s</b>(*parts)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-s" name="method-i-s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create a <a href="Compiler.html#method-c-new">::new</a> sexp using the
+given parts. Even though this just <a
+href="Compiler.html#method-i-returns">#returns</a> an array, it must be
+used incase the internal structure of sexps does change.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-s_source')" id="l_method-i-s_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L113" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">s</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">parts</span>)
+  <span class="ruby-constant">Sexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parts</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-source_map">
+            
+              <b>source_map</b>(source_file = nil)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-source_map" name="method-i-source_map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-source_map_source')" id="l_method-i-source_map_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-source_map_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">source_map</span>(<span class="ruby-identifier">source_file</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">SourceMap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fragments</span>, <span class="ruby-identifier">source_file</span> <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">file</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unique_temp">
+            
+              <b>unique_temp</b>()
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-unique_temp" name="method-i-unique_temp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Used to generate a unique id name per file. These are used mainly to name
+method bodies for methods that use blocks.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unique_temp_source')" id="l_method-i-unique_temp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L123" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-unique_temp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unique_temp</span>
+  <span class="ruby-node">&quot;TMP_#{@unique += 1}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-warning">
+            
+              <b>warning</b>(msg, line = nil)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-warning" name="method-i-warning" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>This is called when a parsing/processing <a
+href="Compiler.html#method-i-warning">#warning</a> occurs. This method
+simply appends the filename and curent line number onto the message and
+issues a <a href="Compiler.html#method-i-warning">#warning</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-warning_source')" id="l_method-i-warning_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L99" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-warning_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">warning</span>(<span class="ruby-identifier">msg</span>, <span class="ruby-identifier">line</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{msg} :#{file}:#{line}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-with_temp">
+            
+              <b>with_temp</b>(&amp;block)
+            
+            <a href="../../classes/Opal/Compiler.html#method-i-with_temp" name="method-i-with_temp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Temporary varibales will be needed from time to time in the generated code,
+and this method will assign (or reuse) on while the block is yielding, and
+queue it back up once it is finished. Variables are queued once finished
+with to save the numbers of variables needed at runtime.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-with_temp_source')" id="l_method-i-with_temp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L150" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-with_temp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">with_temp</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@scope</span>.<span class="ruby-identifier">new_temp</span>
+  <span class="ruby-identifier">res</span> = <span class="ruby-keyword">yield</span> <span class="ruby-identifier">tmp</span>
+  <span class="ruby-ivar">@scope</span>.<span class="ruby-identifier">queue_temp</span> <span class="ruby-identifier">tmp</span>
+  <span class="ruby-identifier">res</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

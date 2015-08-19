@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>PhantomFormatter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            PhantomFormatter 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="BrowserFormatter.html">BrowserFormatter</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/lib/mspec/opal/runner_rb.html">opal/lib/mspec/opal/runner.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-green">green</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-log">log</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-red">red</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-green">
+            
+              <b>green</b>(str)
+            
+            <a href="../classes/PhantomFormatter.html#method-i-green" name="method-i-green" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-green_source')" id="l_method-i-green_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f837c5afdf8ff05b5a161f1c865c8b34f1ffa08e/lib/mspec/opal/runner.rb#L125" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-green_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/runner.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">green</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-value">%x`console.log(&#39;\033[32m&#39; + str + &#39;\033[0m&#39;)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-log">
+            
+              <b>log</b>(str)
+            
+            <a href="../classes/PhantomFormatter.html#method-i-log" name="method-i-log" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-log_source')" id="l_method-i-log_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f837c5afdf8ff05b5a161f1c865c8b34f1ffa08e/lib/mspec/opal/runner.rb#L133" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-log_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/runner.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">log</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-value">%x`console.log(str)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-red">
+            
+              <b>red</b>(str)
+            
+            <a href="../classes/PhantomFormatter.html#method-i-red" name="method-i-red" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-red_source')" id="l_method-i-red_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/f837c5afdf8ff05b5a161f1c865c8b34f1ffa08e/lib/mspec/opal/runner.rb#L129" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-red_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/mspec/opal/runner.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">red</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-value">%x`console.log(&#39;\033[31m&#39; + str + &#39;\033[0m&#39;)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

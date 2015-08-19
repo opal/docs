@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>SingleForwardable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            SingleForwardable 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/forwardable_rb.html">opal/stdlib/forwardable.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-def_delegator">def_delegator</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-def_delegators">def_delegators</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-def_single_delegator">def_single_delegator</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-def_single_delegators">def_single_delegators</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-delegate">delegate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-single_delegate">single_delegate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-def_delegator">
+            
+              <b>def_delegator</b>(accessor, method, ali = method)
+            
+            <a href="../classes/SingleForwardable.html#method-i-def_delegator" name="method-i-def_delegator" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="SingleForwardable.html#method-i-def_single_delegator">def_single_delegator</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-def_delegators">
+            
+              <b>def_delegators</b>(accessor, *methods)
+            
+            <a href="../classes/SingleForwardable.html#method-i-def_delegators" name="method-i-def_delegators" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="SingleForwardable.html#method-i-def_single_delegators">def_single_delegators</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-def_single_delegator">
+            
+              <b>def_single_delegator</b>(accessor, method, ali = method)
+            
+            <a href="../classes/SingleForwardable.html#method-i-def_single_delegator" name="method-i-def_single_delegator" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="SingleForwardable.html#method-i-def_delegator">def_delegator</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-def_single_delegator_source')" id="l_method-i-def_single_delegator_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9914842269502adf88805856c56a7187e9753b12/stdlib/forwardable.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-def_single_delegator_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/forwardable.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">def_single_delegator</span>(<span class="ruby-identifier">accessor</span>, <span class="ruby-identifier">method</span>, <span class="ruby-identifier">ali</span> = <span class="ruby-identifier">method</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">accessor</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">start_with?</span> <span class="ruby-value">?@</span>
+    <span class="ruby-identifier">define_singleton_method</span> <span class="ruby-identifier">ali</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-identifier">accessor</span>).<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">define_singleton_method</span> <span class="ruby-identifier">ali</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">accessor</span>).<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-def_single_delegators">
+            
+              <b>def_single_delegators</b>(accessor, *methods)
+            
+            <a href="../classes/SingleForwardable.html#method-i-def_single_delegators" name="method-i-def_single_delegators" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="SingleForwardable.html#method-i-def_delegators">def_delegators</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-def_single_delegators_source')" id="l_method-i-def_single_delegators_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9914842269502adf88805856c56a7187e9753b12/stdlib/forwardable.rb#L48" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-def_single_delegators_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/forwardable.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">def_single_delegators</span>(<span class="ruby-identifier">accessor</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">methods</span>)
+  <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-node">%w[__send__ __id__]</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">method</span>
+
+    <span class="ruby-identifier">def_single_delegator</span>(<span class="ruby-identifier">accessor</span>, <span class="ruby-identifier">method</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-delegate">
+            
+              <b>delegate</b>(hash)
+            
+            <a href="../classes/SingleForwardable.html#method-i-delegate" name="method-i-delegate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="SingleForwardable.html#method-i-single_delegate">single_delegate</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-single_delegate">
+            
+              <b>single_delegate</b>(hash)
+            
+            <a href="../classes/SingleForwardable.html#method-i-single_delegate" name="method-i-single_delegate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="SingleForwardable.html#method-i-delegate">delegate</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-single_delegate_source')" id="l_method-i-single_delegate_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/9914842269502adf88805856c56a7187e9753b12/stdlib/forwardable.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-single_delegate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/forwardable.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">single_delegate</span>(<span class="ruby-identifier">hash</span>)
+  <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">methods</span>, <span class="ruby-identifier">accessor</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">methods</span> = [<span class="ruby-identifier">methods</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:each</span>
+
+    <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">def_single_delegator</span>(<span class="ruby-identifier">accessor</span>, <span class="ruby-identifier">method</span>)
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

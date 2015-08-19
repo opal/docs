@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Singleton</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Singleton 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/singleton_rb.html">opal/stdlib/singleton.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Singleton/SingletonClassMethods.html">Singleton::SingletonClassMethods</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-__init__">__init__</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clone">clone</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dup">dup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-included">included</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-__init__">
+            
+              <b>__init__</b>(klass)
+            
+            <a href="../classes/Singleton.html#method-c-__init__" name="method-c-__init__" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-__init___source')" id="l_method-c-__init___source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/99f51d11c65c1607d0df5f47e788f247afdc28b2/stdlib/singleton.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-__init___source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/singleton.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">__init__</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">instance_eval</span> {
+    <span class="ruby-ivar">@singleton__instance__</span> = <span class="ruby-keyword">nil</span>
+  }
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">klass</span>.<span class="ruby-identifier">instance</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@singleton__instance__</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@singleton__instance__</span>
+    <span class="ruby-ivar">@singleton__instance__</span> = <span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">klass</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-included">
+            
+              <b>included</b>(klass)
+            
+            <a href="../classes/Singleton.html#method-c-included" name="method-c-included" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-included_source')" id="l_method-c-included_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/99f51d11c65c1607d0df5f47e788f247afdc28b2/stdlib/singleton.rb#L34" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-included_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/singleton.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">included</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">extend</span> <span class="ruby-constant">SingletonClassMethods</span>
+  <span class="ruby-constant">Singleton</span>.<span class="ruby-identifier">__init__</span>(<span class="ruby-identifier">klass</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-clone">
+            
+              <b>clone</b>()
+            
+            <a href="../classes/Singleton.html#method-i-clone" name="method-i-clone" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clone_source')" id="l_method-i-clone_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/99f51d11c65c1607d0df5f47e788f247afdc28b2/stdlib/singleton.rb#L2" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-clone_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/singleton.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clone</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;can&#39;t clone instance of singleton #{self.class}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dup">
+            
+              <b>dup</b>()
+            
+            <a href="../classes/Singleton.html#method-i-dup" name="method-i-dup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dup_source')" id="l_method-i-dup_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/99f51d11c65c1607d0df5f47e788f247afdc28b2/stdlib/singleton.rb#L6" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-dup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/singleton.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dup</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;can&#39;t dup instance of singleton #{self.class}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

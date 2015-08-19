@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Nodes::HashNode</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Nodes::HashNode 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Base.html">Opal::Nodes::Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../../files/opal/lib/opal/nodes/hash_rb.html">opal/lib/opal/nodes/hash.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-compile">compile</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-compile_hash">compile_hash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-compile_hash2">compile_hash2</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>K</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-keys_and_values">keys_and_values</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-simple_keys-3F">simple_keys?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-compile">
+            
+              <b>compile</b>()
+            
+            <a href="../../../classes/Opal/Nodes/HashNode.html#method-i-compile" name="method-i-compile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_source')" id="l_method-i-compile_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/b78ba9e24c2bdffff8bb17958011a25d6f6a8b9c/lib/opal/nodes/hash.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/hash.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile</span>
+  <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">values</span> = <span class="ruby-identifier">keys_and_values</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">simple_keys?</span> <span class="ruby-identifier">keys</span>
+    <span class="ruby-identifier">compile_hash2</span> <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">values</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">compile_hash</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compile_hash">
+            
+              <b>compile_hash</b>()
+            
+            <a href="../../../classes/Opal/Nodes/HashNode.html#method-i-compile_hash" name="method-i-compile_hash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_hash_source')" id="l_method-i-compile_hash_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/b78ba9e24c2bdffff8bb17958011a25d6f6a8b9c/lib/opal/nodes/hash.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_hash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/hash.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile_hash</span>
+  <span class="ruby-identifier">helper</span> <span class="ruby-value">:hash</span>
+
+  <span class="ruby-identifier">children</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child</span>, <span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">push</span> <span class="ruby-string">&#39;, &#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">idx</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">push</span> <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">child</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">wrap</span> <span class="ruby-string">&#39;$hash(&#39;</span>, <span class="ruby-string">&#39;)&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compile_hash2">
+            
+              <b>compile_hash2</b>(keys, values)
+            
+            <a href="../../../classes/Opal/Nodes/HashNode.html#method-i-compile_hash2" name="method-i-compile_hash2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_hash2_source')" id="l_method-i-compile_hash2_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/b78ba9e24c2bdffff8bb17958011a25d6f6a8b9c/lib/opal/nodes/hash.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_hash2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/hash.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile_hash2</span>(<span class="ruby-identifier">keys</span>, <span class="ruby-identifier">values</span>)
+  <span class="ruby-identifier">hash_obj</span>, <span class="ruby-identifier">hash_keys</span> = {}, []
+  <span class="ruby-identifier">helper</span> <span class="ruby-value">:hash2</span>
+
+  <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">key</span> = <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">idx</span>][<span class="ruby-number">1</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">inspect</span>
+    <span class="ruby-identifier">hash_keys</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">key</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">hash_obj</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">key</span>
+    <span class="ruby-identifier">hash_obj</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">expr</span>(<span class="ruby-identifier">values</span>[<span class="ruby-identifier">idx</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">hash_keys</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">push</span> <span class="ruby-string">&#39;, &#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">idx</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">push</span> <span class="ruby-node">&quot;#{key}: &quot;</span>
+    <span class="ruby-identifier">push</span> <span class="ruby-identifier">hash_obj</span>[<span class="ruby-identifier">key</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">wrap</span> <span class="ruby-node">&quot;$hash2([#{hash_keys.join &#39;, &#39;}], {&quot;</span>, <span class="ruby-string">&quot;})&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-keys_and_values">
+            
+              <b>keys_and_values</b>()
+            
+            <a href="../../../classes/Opal/Nodes/HashNode.html#method-i-keys_and_values" name="method-i-keys_and_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-keys_and_values_source')" id="l_method-i-keys_and_values_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/b78ba9e24c2bdffff8bb17958011a25d6f6a8b9c/lib/opal/nodes/hash.rb#L8" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-keys_and_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/hash.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">keys_and_values</span>
+  <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">values</span> = [], []
+
+  <span class="ruby-identifier">children</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">obj</span>, <span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">idx</span>.<span class="ruby-identifier">even?</span>
+      <span class="ruby-identifier">keys</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">obj</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">obj</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  [<span class="ruby-identifier">keys</span>, <span class="ruby-identifier">values</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-simple_keys-3F">
+            
+              <b>simple_keys?</b>(keys)
+            
+            <a href="../../../classes/Opal/Nodes/HashNode.html#method-i-simple_keys-3F" name="method-i-simple_keys-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-simple_keys-3F_source')" id="l_method-i-simple_keys-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/b78ba9e24c2bdffff8bb17958011a25d6f6a8b9c/lib/opal/nodes/hash.rb#L22" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-simple_keys-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/nodes/hash.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">simple_keys?</span>(<span class="ruby-identifier">keys</span>)
+  <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">all?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> [<span class="ruby-value">:sym</span>, <span class="ruby-value">:str</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">type</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

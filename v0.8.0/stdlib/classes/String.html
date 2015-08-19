@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>String</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            String 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/encoding_rb.html">opal/stdlib/encoding.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/json_rb.html">opal/stdlib/json.rb</a></li>
+            
+            <li><a href="../files/opal/stdlib/native_rb.html">opal/stdlib/native.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bytes">bytes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bytesize">bytesize</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each_byte">each_byte</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-encoding">encoding</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-force_encoding">force_encoding</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-getbyte">getbyte</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_n">to_n</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-bytes">
+            
+              <b>bytes</b>()
+            
+            <a href="../classes/String.html#method-i-bytes" name="method-i-bytes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bytes_source')" id="l_method-i-bytes_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/347e5604e6116aa871b30c8757b75fecf77ff1ce/stdlib/encoding.rb#L134" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bytes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/encoding.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bytes</span>
+  <span class="ruby-identifier">each_byte</span>.<span class="ruby-identifier">to_a</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bytesize">
+            
+              <b>bytesize</b>()
+            
+            <a href="../classes/String.html#method-i-bytesize" name="method-i-bytesize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bytesize_source')" id="l_method-i-bytesize_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/347e5604e6116aa871b30c8757b75fecf77ff1ce/stdlib/encoding.rb#L138" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-bytesize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/encoding.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bytesize</span>
+  <span class="ruby-ivar">@encoding</span>.<span class="ruby-identifier">bytesize</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each_byte">
+            
+              <b>each_byte</b>(&amp;block)
+            
+            <a href="../classes/String.html#method-i-each_byte" name="method-i-each_byte" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_byte_source')" id="l_method-i-each_byte_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/347e5604e6116aa871b30c8757b75fecf77ff1ce/stdlib/encoding.rb#L142" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-each_byte_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/encoding.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each_byte</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span> <span class="ruby-operator">:</span><span class="ruby-identifier">each_byte</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-ivar">@encoding</span>.<span class="ruby-identifier">each_byte</span>(<span class="ruby-keyword">self</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encoding">
+            
+              <b>encoding</b>()
+            
+            <a href="../classes/String.html#method-i-encoding" name="method-i-encoding" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-encoding_source')" id="l_method-i-encoding_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/347e5604e6116aa871b30c8757b75fecf77ff1ce/stdlib/encoding.rb#L150" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-encoding_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/encoding.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">encoding</span>
+  <span class="ruby-ivar">@encoding</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-force_encoding">
+            
+              <b>force_encoding</b>(encoding)
+            
+            <a href="../classes/String.html#method-i-force_encoding" name="method-i-force_encoding" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-force_encoding_source')" id="l_method-i-force_encoding_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/347e5604e6116aa871b30c8757b75fecf77ff1ce/stdlib/encoding.rb#L154" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-force_encoding_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/encoding.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">force_encoding</span>(<span class="ruby-identifier">encoding</span>)
+  <span class="ruby-identifier">encoding</span> = <span class="ruby-constant">Encoding</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">encoding</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">encoding</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@encoding</span>
+
+  <span class="ruby-value">%x{
+    var result = new String(self);
+    result.encoding = encoding;
+
+    return result;
+  }</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-getbyte">
+            
+              <b>getbyte</b>(idx)
+            
+            <a href="../classes/String.html#method-i-getbyte" name="method-i-getbyte" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-getbyte_source')" id="l_method-i-getbyte_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/347e5604e6116aa871b30c8757b75fecf77ff1ce/stdlib/encoding.rb#L167" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-getbyte_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/encoding.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">getbyte</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-ivar">@encoding</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">idx</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-to_n">
+            
+              <b>to_n</b>()
+            
+            <a href="../classes/String.html#method-i-to_n" name="method-i-to_n" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-to_n_source')" id="l_method-i-to_n_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/e416e4b77d6a3fd89228d4b68ef164863be653f7/stdlib/native.rb#L364" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-to_n_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/native.rb, line 364</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">to_n</span>
+  <span class="ruby-value">%x`self.valueOf()`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

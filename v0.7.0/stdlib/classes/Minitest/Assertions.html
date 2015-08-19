@@ -1,0 +1,2547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Minitest::Assertions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Minitest::Assertions 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/stdlib/minitest/assertions_rb.html">opal/stdlib/minitest/assertions.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Minitest <a href="Assertions.html">Assertions</a>.  All assertion methods
+accept a <code>msg</code> which is printed if the assertion fails.</p>
+
+<p>Protocol: Nearly everything here boils up to <code>assert</code>, which
+expects to be able to increment an instance accessor named
+<code>assertions</code>. This is not provided by <a
+href="Assertions.html">Assertions</a> and must be provided by the thing
+including <a href="Assertions.html">Assertions</a>. See <a
+href="Runnable.html">Minitest::Runnable</a> for an example.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-assert">assert</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_empty">assert_empty</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_equal">assert_equal</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_in_delta">assert_in_delta</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_in_epsilon">assert_in_epsilon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_includes">assert_includes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_instance_of">assert_instance_of</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_kind_of">assert_kind_of</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_match">assert_match</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_nil">assert_nil</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_operator">assert_operator</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_output">assert_output</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_predicate">assert_predicate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_raises">assert_raises</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_respond_to">assert_respond_to</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_same">assert_same</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_send">assert_send</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_silent">assert_silent</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-assert_throws">assert_throws</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-capture_io">capture_io</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-capture_subprocess_io">capture_subprocess_io</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-diff">diff</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-diff">diff</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-diff-3D">diff=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-exception_details">exception_details</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-flunk">flunk</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-message">message</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mu_pp">mu_pp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mu_pp_for_diff">mu_pp_for_diff</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pass">pass</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refute">refute</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_empty">refute_empty</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_equal">refute_equal</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_in_delta">refute_in_delta</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_in_epsilon">refute_in_epsilon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_includes">refute_includes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_instance_of">refute_instance_of</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_kind_of">refute_kind_of</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_match">refute_match</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_nil">refute_nil</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_operator">refute_operator</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_predicate">refute_predicate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_respond_to">refute_respond_to</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refute_same">refute_same</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-skip">skip</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-skipped-3F">skipped?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">UNDEFINED</td>
+            <td>=</td>
+            <td class="attr-value">Object.new</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">E</td>
+            <td>=</td>
+            <td class="attr-value">&quot;&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-diff">
+            
+              <b>diff</b>()
+            
+            <a href="../../classes/Minitest/Assertions.html#method-c-diff" name="method-c-diff" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the <a href="Assertions.html#method-c-diff">::diff</a> command to
+use in #diff. Tries to intelligently figure out what <a
+href="Assertions.html#method-c-diff">::diff</a> to use.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-diff_source')" id="l_method-c-diff_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-diff_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">diff</span>
+  <span class="ruby-ivar">@diff</span> = <span class="ruby-keyword">if</span> (<span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">&#39;host_os&#39;</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/mswin|mingw/</span> <span class="ruby-operator">&amp;&amp;</span>
+              <span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;diff.exe&quot;</span>, <span class="ruby-keyword">__FILE__</span>, <span class="ruby-keyword">__FILE__</span>)) <span class="ruby-keyword">then</span>
+            <span class="ruby-string">&quot;diff.exe -u&quot;</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Minitest</span><span class="ruby-operator">::</span><span class="ruby-constant">Test</span>.<span class="ruby-identifier">maglev?</span> <span class="ruby-keyword">then</span>
+            <span class="ruby-string">&quot;diff -u&quot;</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;gdiff&quot;</span>, <span class="ruby-keyword">__FILE__</span>, <span class="ruby-keyword">__FILE__</span>)
+            <span class="ruby-string">&quot;gdiff -u&quot;</span> <span class="ruby-comment"># solaris and kin suck</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;diff&quot;</span>, <span class="ruby-keyword">__FILE__</span>, <span class="ruby-keyword">__FILE__</span>)
+            <span class="ruby-string">&quot;diff -u&quot;</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-keyword">nil</span>
+          <span class="ruby-keyword">end</span> <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@diff</span>
+
+  <span class="ruby-ivar">@diff</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-diff-3D">
+            
+              <b>diff=</b>(o)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-c-diff-3D" name="method-c-diff-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="../Set.html">Set</a> the <a
+href="Assertions.html#method-c-diff">::diff</a> command to use in #diff.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-diff-3D_source')" id="l_method-c-diff-3D_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-diff-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">diff=</span> <span class="ruby-identifier">o</span>
+  <span class="ruby-ivar">@diff</span> = <span class="ruby-identifier">o</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-assert">
+            
+              <b>assert</b>(test, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert" name="method-i-assert" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless <code>test</code> is truthy.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_source')" id="l_method-i-assert_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L125" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert</span> <span class="ruby-identifier">test</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">assertions</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">test</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">msg</span> <span class="ruby-operator">||=</span> <span class="ruby-string">&quot;Failed assertion, no message given.&quot;</span>
+    <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">msg</span>.<span class="ruby-identifier">call</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Proc</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">msg</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Minitest</span><span class="ruby-operator">::</span><span class="ruby-constant">Assertion</span>, <span class="ruby-identifier">msg</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_empty">
+            
+              <b>assert_empty</b>(obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_empty" name="method-i-assert_empty" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless <code>obj</code> is empty.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_empty_source')" id="l_method-i-assert_empty_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L142" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_empty_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_empty</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp(obj)} to be empty&quot;</span> }
+  <span class="ruby-identifier">assert_respond_to</span> <span class="ruby-identifier">obj</span>, <span class="ruby-value">:empty?</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">empty?</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_equal">
+            
+              <b>assert_equal</b>(exp, act, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_equal" name="method-i-assert_equal" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless <code>exp == act</code> printing the difference between the
+two, if possible.</p>
+
+<p>If there is no visible difference but the assertion fails, you should
+suspect that your #== is buggy, or your inspect output is missing crucial
+details.</p>
+
+<p>For floats use <a
+href="Assertions.html#method-i-assert_in_delta">#assert_in_delta</a>.</p>
+
+<p>See also: <a href="Assertions.html#method-c-diff">::diff</a></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_equal_source')" id="l_method-i-assert_equal_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L162" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_equal_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_equal</span> <span class="ruby-identifier">exp</span>, <span class="ruby-identifier">act</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>, <span class="ruby-constant">E</span>) { <span class="ruby-identifier">diff</span> <span class="ruby-identifier">exp</span>, <span class="ruby-identifier">act</span> }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">exp</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">act</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_in_delta">
+            
+              <b>assert_in_delta</b>(exp, act, delta = 0.001, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_in_delta" name="method-i-assert_in_delta" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>For comparing Floats.  Fails unless <code>exp</code> and <code>act</code>
+are within <code>delta</code> of each other.</p>
+
+<pre><code>assert_in_delta Math::PI, (22.0 / 7.0), 0.01
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_in_delta_source')" id="l_method-i-assert_in_delta_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L173" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_in_delta_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_in_delta</span> <span class="ruby-identifier">exp</span>, <span class="ruby-identifier">act</span>, <span class="ruby-identifier">delta</span> = <span class="ruby-number">0.001</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">n</span> = (<span class="ruby-identifier">exp</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">act</span>).<span class="ruby-identifier">abs</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-node">&quot;Expected |#{exp} - #{act}| (#{n}) to be &lt;= #{delta}&quot;</span>
+  }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">delta</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">n</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_in_epsilon">
+            
+              <b>assert_in_epsilon</b>(a, b, epsilon = 0.001, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_in_epsilon" name="method-i-assert_in_epsilon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>For comparing Floats.  Fails unless <code>exp</code> and <code>act</code>
+have a relative error less than <code>epsilon</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_in_epsilon_source')" id="l_method-i-assert_in_epsilon_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L185" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_in_epsilon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_in_epsilon</span> <span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">epsilon</span> = <span class="ruby-number">0.001</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">assert_in_delta</span> <span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>, [<span class="ruby-identifier">a</span>.<span class="ruby-identifier">abs</span>, <span class="ruby-identifier">b</span>.<span class="ruby-identifier">abs</span>].<span class="ruby-identifier">min</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">epsilon</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_includes">
+            
+              <b>assert_includes</b>(collection, obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_includes" name="method-i-assert_includes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless <code>collection</code> includes <code>obj</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_includes_source')" id="l_method-i-assert_includes_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L192" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_includes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_includes</span> <span class="ruby-identifier">collection</span>, <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-node">&quot;Expected #{mu_pp(collection)} to include #{mu_pp(obj)}&quot;</span>
+  }
+  <span class="ruby-identifier">assert_respond_to</span> <span class="ruby-identifier">collection</span>, <span class="ruby-value">:include?</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">obj</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_instance_of">
+            
+              <b>assert_instance_of</b>(cls, obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_instance_of" name="method-i-assert_instance_of" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless <code>obj</code> is an instance of <code>cls</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_instance_of_source')" id="l_method-i-assert_instance_of_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L203" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_instance_of_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_instance_of</span> <span class="ruby-identifier">cls</span>, <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-node">&quot;Expected #{mu_pp(obj)} to be an instance of #{cls}, not #{obj.class}&quot;</span>
+  }
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">instance_of?</span>(<span class="ruby-identifier">cls</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_kind_of">
+            
+              <b>assert_kind_of</b>(cls, obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_kind_of" name="method-i-assert_kind_of" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless <code>obj</code> is a kind of <code>cls</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_kind_of_source')" id="l_method-i-assert_kind_of_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L214" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_kind_of_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_kind_of</span> <span class="ruby-identifier">cls</span>, <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-node">&quot;Expected #{mu_pp(obj)} to be a kind of #{cls}, not #{obj.class}&quot;</span> }
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-identifier">cls</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_match">
+            
+              <b>assert_match</b>(matcher, obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_match" name="method-i-assert_match" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless <code>matcher</code> <code>=~</code> <code>obj</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_match_source')" id="l_method-i-assert_match_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L224" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_match_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_match</span> <span class="ruby-identifier">matcher</span>, <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp matcher} to match #{mu_pp obj}&quot;</span> }
+  <span class="ruby-identifier">assert_respond_to</span> <span class="ruby-identifier">matcher</span>, <span class="ruby-value">:&quot;=~&quot;</span>
+  <span class="ruby-identifier">matcher</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span> <span class="ruby-identifier">matcher</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">matcher</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">matcher</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_nil">
+            
+              <b>assert_nil</b>(obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_nil" name="method-i-assert_nil" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless <code>obj</code> is nil</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_nil_source')" id="l_method-i-assert_nil_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L234" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_nil_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 234</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_nil</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp(obj)} to be nil&quot;</span> }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">nil?</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_operator">
+            
+              <b>assert_operator</b>(o1, op, o2 = UNDEFINED, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_operator" name="method-i-assert_operator" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>For testing with binary operators. Eg:</p>
+
+<pre><code>assert_operator 5, :&lt;=, 4
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_operator_source')" id="l_method-i-assert_operator_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L244" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_operator_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 244</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_operator</span> <span class="ruby-identifier">o1</span>, <span class="ruby-identifier">op</span>, <span class="ruby-identifier">o2</span> = <span class="ruby-constant">UNDEFINED</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">assert_predicate</span> <span class="ruby-identifier">o1</span>, <span class="ruby-identifier">op</span>, <span class="ruby-identifier">msg</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">UNDEFINED</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">o2</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp(o1)} to be #{op} #{mu_pp(o2)}&quot;</span> }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">o1</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">op</span>, <span class="ruby-identifier">o2</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_output">
+            
+              <b>assert_output</b>(stdout = nil, stderr = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_output" name="method-i-assert_output" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if stdout or stderr do not output the expected results. Pass in nil
+if you don&#39;t care about that streams output. Pass in “” if you require
+it to be silent. Pass in a regexp if you want to pattern match.</p>
+
+<p>NOTE: this uses #capture_io, not #capture_subprocess_io.</p>
+
+<p>See also: #assert_silent</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_output_source')" id="l_method-i-assert_output_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L260" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_output_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_output</span> <span class="ruby-identifier">stdout</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">stderr</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">out</span>, <span class="ruby-identifier">err</span> = <span class="ruby-identifier">capture_io</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">yield</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">err_msg</span> = <span class="ruby-constant">Regexp</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">stderr</span> <span class="ruby-operator">?</span> <span class="ruby-value">:assert_match</span> <span class="ruby-operator">:</span> <span class="ruby-value">:assert_equal</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">stderr</span>
+  <span class="ruby-identifier">out_msg</span> = <span class="ruby-constant">Regexp</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">stdout</span> <span class="ruby-operator">?</span> <span class="ruby-value">:assert_match</span> <span class="ruby-operator">:</span> <span class="ruby-value">:assert_equal</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">stdout</span>
+
+  <span class="ruby-identifier">y</span> = <span class="ruby-identifier">send</span> <span class="ruby-identifier">err_msg</span>, <span class="ruby-identifier">stderr</span>, <span class="ruby-identifier">err</span>, <span class="ruby-string">&quot;In stderr&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">err_msg</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-identifier">send</span> <span class="ruby-identifier">out_msg</span>, <span class="ruby-identifier">stdout</span>, <span class="ruby-identifier">out</span>, <span class="ruby-string">&quot;In stdout&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">out_msg</span>
+
+  (<span class="ruby-operator">!</span><span class="ruby-identifier">stdout</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">x</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">stderr</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_predicate">
+            
+              <b>assert_predicate</b>(o1, op, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_predicate" name="method-i-assert_predicate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>For testing with predicates. Eg:</p>
+
+<pre><code>assert_predicate str, :empty?
+</code></pre>
+
+<p>This is really meant for specs and is front-ended by <a
+href="Assertions.html#method-i-assert_operator">#assert_operator</a>:</p>
+
+<pre><code>str.must_be :empty?
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_predicate_source')" id="l_method-i-assert_predicate_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L283" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_predicate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 283</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_predicate</span> <span class="ruby-identifier">o1</span>, <span class="ruby-identifier">op</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp(o1)} to be #{op}&quot;</span> }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">o1</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">op</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_raises">
+            
+              <b>assert_raises</b>(*exp)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_raises" name="method-i-assert_raises" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless the block raises one of <code>exp</code>. Returns the
+exception matched so you can check the <a
+href="Assertions.html#method-i-message">#message</a>, attributes, etc.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_raises_source')" id="l_method-i-assert_raises_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L292" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_raises_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_raises</span> <span class="ruby-operator">*</span><span class="ruby-identifier">exp</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-node">&quot;#{exp.pop}.\n&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">exp</span>.<span class="ruby-identifier">last</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">yield</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Minitest</span><span class="ruby-operator">::</span><span class="ruby-constant">Skip</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">exp</span>.<span class="ruby-identifier">include?</span> <span class="ruby-constant">Minitest</span><span class="ruby-operator">::</span><span class="ruby-constant">Skip</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">expected</span> = <span class="ruby-identifier">exp</span>.<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">ex</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">ex</span>.<span class="ruby-identifier">instance_of?</span> <span class="ruby-constant">Module</span> <span class="ruby-keyword">then</span>
+        <span class="ruby-identifier">e</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-identifier">ex</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">e</span>.<span class="ruby-identifier">instance_of?</span> <span class="ruby-identifier">ex</span>
+      <span class="ruby-keyword">end</span>
+    }
+
+    <span class="ruby-identifier">assert</span> <span class="ruby-identifier">expected</span>, <span class="ruby-identifier">proc</span> {
+      <span class="ruby-identifier">exception_details</span>(<span class="ruby-identifier">e</span>, <span class="ruby-node">&quot;#{msg}#{mu_pp(exp)} exception expected, not&quot;</span>)
+    }
+
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">exp</span> = <span class="ruby-identifier">exp</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">exp</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+
+  <span class="ruby-identifier">flunk</span> <span class="ruby-node">&quot;#{msg}#{mu_pp(exp)} expected but nothing was raised.&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_respond_to">
+            
+              <b>assert_respond_to</b>(obj, meth, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_respond_to" name="method-i-assert_respond_to" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless <code>obj</code> responds to <code>meth</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_respond_to_source')" id="l_method-i-assert_respond_to_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L324" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_respond_to_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 324</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_respond_to</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">meth</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-node">&quot;Expected #{mu_pp(obj)} (#{obj.class}) to respond to ##{meth}&quot;</span>
+  }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">meth</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_same">
+            
+              <b>assert_same</b>(exp, act, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_same" name="method-i-assert_same" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless <code>exp</code> and <code>act</code> are #equal?</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_same_source')" id="l_method-i-assert_same_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L334" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_same_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 334</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_same</span> <span class="ruby-identifier">exp</span>, <span class="ruby-identifier">act</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-identifier">data</span> = [<span class="ruby-identifier">mu_pp</span>(<span class="ruby-identifier">act</span>), <span class="ruby-identifier">act</span>.<span class="ruby-identifier">object_id</span>, <span class="ruby-identifier">mu_pp</span>(<span class="ruby-identifier">exp</span>), <span class="ruby-identifier">exp</span>.<span class="ruby-identifier">object_id</span>]
+    <span class="ruby-string">&quot;Expected %s (oid=%d) to be the same as %s (oid=%d)&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">data</span>
+  }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">exp</span>.<span class="ruby-identifier">equal?</span>(<span class="ruby-identifier">act</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_send">
+            
+              <b>assert_send</b>(send_ary, m = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_send" name="method-i-assert_send" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><code>send_ary</code> is a receiver, <a
+href="Assertions.html#method-i-message">#message</a> and arguments.</p>
+
+<p>Fails unless the call returns a true value</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_send_source')" id="l_method-i-assert_send_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L347" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_send_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 347</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_send</span> <span class="ruby-identifier">send_ary</span>, <span class="ruby-identifier">m</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">recv</span>, <span class="ruby-identifier">msg</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> = <span class="ruby-identifier">send_ary</span>
+  <span class="ruby-identifier">m</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">m</span>) {
+    <span class="ruby-node">&quot;Expected #{mu_pp(recv)}.#{msg}(*#{mu_pp(args)}) to return true&quot;</span> }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">recv</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">msg</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>), <span class="ruby-identifier">m</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_silent">
+            
+              <b>assert_silent</b>()
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_silent" name="method-i-assert_silent" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if the block outputs anything to stderr or stdout.</p>
+
+<p>See also: #assert_output</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_silent_source')" id="l_method-i-assert_silent_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L359" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_silent_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 359</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_silent</span>
+  <span class="ruby-identifier">assert_output</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;&quot;</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">yield</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-assert_throws">
+            
+              <b>assert_throws</b>(sym, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-assert_throws" name="method-i-assert_throws" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails unless the block throws <code>sym</code></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-assert_throws_source')" id="l_method-i-assert_throws_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L368" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-assert_throws_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 368</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">assert_throws</span> <span class="ruby-identifier">sym</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">default</span> = <span class="ruby-node">&quot;Expected #{mu_pp(sym)} to have been thrown&quot;</span>
+  <span class="ruby-identifier">caught</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">catch</span>(<span class="ruby-identifier">sym</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-keyword">yield</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThreadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>       <span class="ruby-comment"># wtf?!? 1.8 + threads == suck</span>
+      <span class="ruby-identifier">default</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;, not \:#{e.message[/uncaught throw \`(\w+?)\&#39;/, 1]}&quot;</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ArgumentError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>     <span class="ruby-comment"># 1.9 exception</span>
+      <span class="ruby-identifier">default</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;, not #{e.message.split(/ /).last}&quot;</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NameError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>         <span class="ruby-comment"># 1.8 exception</span>
+      <span class="ruby-identifier">default</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;, not #{e.name.inspect}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">caught</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">caught</span>, <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-identifier">default</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-capture_io">
+            
+              <b>capture_io</b>()
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-capture_io" name="method-i-capture_io" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Captures $stdout and $stderr into strings:</p>
+
+<pre><code>out, err = capture_io do
+  puts &quot;Some info&quot;
+  warn &quot;You did a bad thing&quot;
+end
+
+assert_match %r%info%, out
+assert_match %r%bad%, err
+</code></pre>
+
+<p>NOTE: For efficiency, this method uses <a
+href="../StringIO.html">StringIO</a> and does not capture IO for
+subprocesses. Use #capture_subprocess_io for that.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-capture_io_source')" id="l_method-i-capture_io_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L402" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-capture_io_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 402</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">capture_io</span>
+  <span class="ruby-identifier">_synchronize</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">captured_stdout</span>, <span class="ruby-identifier">captured_stderr</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>, <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+
+      <span class="ruby-identifier">orig_stdout</span>, <span class="ruby-identifier">orig_stderr</span> = <span class="ruby-identifier">$stdout</span>, <span class="ruby-identifier">$stderr</span>
+      <span class="ruby-identifier">$stdout</span>, <span class="ruby-identifier">$stderr</span>         = <span class="ruby-identifier">captured_stdout</span>, <span class="ruby-identifier">captured_stderr</span>
+
+      <span class="ruby-keyword">yield</span>
+
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">captured_stdout</span>.<span class="ruby-identifier">string</span>, <span class="ruby-identifier">captured_stderr</span>.<span class="ruby-identifier">string</span>
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-identifier">$stdout</span> = <span class="ruby-identifier">orig_stdout</span>
+      <span class="ruby-identifier">$stderr</span> = <span class="ruby-identifier">orig_stderr</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-capture_subprocess_io">
+            
+              <b>capture_subprocess_io</b>()
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-capture_subprocess_io" name="method-i-capture_subprocess_io" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Captures $stdout and $stderr into strings, using Tempfile to ensure that
+subprocess IO is captured as well.</p>
+
+<pre><code>out, err = capture_subprocess_io do
+  system &quot;echo Some info&quot;
+  system &quot;echo You did a bad thing 1&gt;&amp;2&quot;
+end
+
+assert_match %r%info%, out
+assert_match %r%bad%, err
+</code></pre>
+
+<p>NOTE: This method is approximately 10x slower than #capture_io so only use
+it when you need to test the output of a subprocess.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-capture_subprocess_io_source')" id="l_method-i-capture_subprocess_io_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L435" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-capture_subprocess_io_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">capture_subprocess_io</span>
+  <span class="ruby-identifier">_synchronize</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">begin</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;tempfile&#39;</span>
+
+  <span class="ruby-identifier">captured_stdout</span>, <span class="ruby-identifier">captured_stderr</span> = <span class="ruby-constant">Tempfile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;out&quot;</span>), <span class="ruby-constant">Tempfile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;err&quot;</span>)
+
+  <span class="ruby-identifier">orig_stdout</span>, <span class="ruby-identifier">orig_stderr</span> = <span class="ruby-identifier">$stdout</span>.<span class="ruby-identifier">dup</span>, <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">$stdout</span>.<span class="ruby-identifier">reopen</span> <span class="ruby-identifier">captured_stdout</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">reopen</span> <span class="ruby-identifier">captured_stderr</span>
+
+  <span class="ruby-keyword">yield</span>
+
+  <span class="ruby-identifier">$stdout</span>.<span class="ruby-identifier">rewind</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">rewind</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">captured_stdout</span>.<span class="ruby-identifier">read</span>, <span class="ruby-identifier">captured_stderr</span>.<span class="ruby-identifier">read</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-identifier">captured_stdout</span>.<span class="ruby-identifier">unlink</span>
+  <span class="ruby-identifier">captured_stderr</span>.<span class="ruby-identifier">unlink</span>
+  <span class="ruby-identifier">$stdout</span>.<span class="ruby-identifier">reopen</span> <span class="ruby-identifier">orig_stdout</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">reopen</span> <span class="ruby-identifier">orig_stderr</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-diff">
+            
+              <b>diff</b>(exp, act)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-diff" name="method-i-diff" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns a <a href="Assertions.html#method-c-diff">::diff</a> between
+<code>exp</code> and <code>act</code>. If there is no known <a
+href="Assertions.html#method-c-diff">::diff</a> command or if it
+doesn&#39;t make sense to <a
+href="Assertions.html#method-c-diff">::diff</a> the output (single line,
+short output), then it simply returns a basic comparison between the two.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-diff_source')" id="l_method-i-diff_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L57" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-diff_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">diff</span> <span class="ruby-identifier">exp</span>, <span class="ruby-identifier">act</span>
+  <span class="ruby-identifier">expect</span> = <span class="ruby-identifier">mu_pp_for_diff</span> <span class="ruby-identifier">exp</span>
+  <span class="ruby-identifier">butwas</span> = <span class="ruby-identifier">mu_pp_for_diff</span> <span class="ruby-identifier">act</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-identifier">need_to_diff</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># (expect.include?(&quot;\n&quot;)    ||</span>
+    <span class="ruby-comment">#  butwas.include?(&quot;\n&quot;)    ||</span>
+    <span class="ruby-comment">#  expect.size &gt; 30         ||</span>
+    <span class="ruby-comment">#  butwas.size &gt; 30         ||</span>
+    <span class="ruby-comment">#  expect == butwas)        &amp;&amp;</span>
+    <span class="ruby-comment"># Minitest::Assertions.diff</span>
+
+
+  <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;Expected: #{mu_pp exp}\n  Actual: #{mu_pp act}&quot;</span> <span class="ruby-keyword">unless</span>
+    <span class="ruby-identifier">need_to_diff</span>
+
+  <span class="ruby-comment"># Tempfile.open(&quot;expect&quot;) do |a|</span>
+  <span class="ruby-comment">#   a.puts expect</span>
+  <span class="ruby-comment">#   a.flush</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment">#   Tempfile.open(&quot;butwas&quot;) do |b|</span>
+  <span class="ruby-comment">#     b.puts butwas</span>
+  <span class="ruby-comment">#     b.flush</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment">#     result = `#{Minitest::Assertions.diff} #{a.path} #{b.path}`</span>
+  <span class="ruby-comment">#     result.sub!(/^\-\-\- .+/, &quot;--- expected&quot;)</span>
+  <span class="ruby-comment">#     result.sub!(/^\+\+\+ .+/, &quot;+++ actual&quot;)</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment">#     if result.empty? then</span>
+  <span class="ruby-comment">#       klass = exp.class</span>
+  <span class="ruby-comment">#       result = [</span>
+  <span class="ruby-comment">#                 &quot;No visible difference in the #{klass}#inspect output.\n&quot;,</span>
+  <span class="ruby-comment">#                 &quot;You should look at the implementation of #== on &quot;,</span>
+  <span class="ruby-comment">#                 &quot;#{klass} or its members.\n&quot;,</span>
+  <span class="ruby-comment">#                 expect,</span>
+  <span class="ruby-comment">#                ].join</span>
+  <span class="ruby-comment">#     end</span>
+  <span class="ruby-comment">#   end</span>
+  <span class="ruby-comment"># end</span>
+
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exception_details">
+            
+              <b>exception_details</b>(e, msg)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-exception_details" name="method-i-exception_details" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns details for exception <code>e</code></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exception_details_source')" id="l_method-i-exception_details_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L464" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-exception_details_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 464</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exception_details</span> <span class="ruby-identifier">e</span>, <span class="ruby-identifier">msg</span>
+  [
+   <span class="ruby-node">&quot;#{msg}&quot;</span>,
+   <span class="ruby-node">&quot;Class: &lt;#{e.class}&gt;&quot;</span>,
+   <span class="ruby-node">&quot;Message: &lt;#{e.message.inspect}&gt;&quot;</span>,
+   <span class="ruby-string">&quot;---Backtrace---&quot;</span>,
+   <span class="ruby-node">&quot;#{Minitest::filter_backtrace(e.backtrace).join(&quot;\n&quot;)}&quot;</span>,
+   <span class="ruby-string">&quot;---------------&quot;</span>,
+  ].<span class="ruby-identifier">join</span> <span class="ruby-string">&quot;\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-flunk">
+            
+              <b>flunk</b>(msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-flunk" name="method-i-flunk" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails with <code>msg</code></p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-flunk_source')" id="l_method-i-flunk_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L478" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-flunk_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 478</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">flunk</span> <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> <span class="ruby-operator">||=</span> <span class="ruby-string">&quot;Epic Fail!&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-keyword">false</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-message">
+            
+              <b>message</b>(msg = nil, ending = nil, &amp;default)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-message" name="method-i-message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns a proc that will output <code>msg</code> along with the default <a
+href="Assertions.html#method-i-message">#message</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-message_source')" id="l_method-i-message_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L486" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 486</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">message</span> <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">ending</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">default</span>
+  <span class="ruby-identifier">proc</span> {
+    <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">msg</span>.<span class="ruby-identifier">call</span>.<span class="ruby-identifier">chomp</span>(<span class="ruby-string">&quot;.&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">Proc</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">msg</span>
+    <span class="ruby-identifier">custom_message</span> = <span class="ruby-node">&quot;#{msg}.\n&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">msg</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">msg</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-node">&quot;#{custom_message}#{default.call}#{ending || &quot;.&quot;}&quot;</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mu_pp">
+            
+              <b>mu_pp</b>(obj)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-mu_pp" name="method-i-mu_pp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>This returns a human-readable version of <code>obj</code>. By default
+#inspect is called. You can override this to use #pretty_print if you want.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mu_pp_source')" id="l_method-i-mu_pp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L106" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mu_pp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mu_pp</span> <span class="ruby-identifier">obj</span>
+  <span class="ruby-identifier">s</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">inspect</span>
+  <span class="ruby-identifier">s</span> = <span class="ruby-identifier">s</span>.<span class="ruby-identifier">encode</span> <span class="ruby-constant">Encoding</span>.<span class="ruby-identifier">default_external</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span> <span class="ruby-constant">Encoding</span>
+  <span class="ruby-identifier">s</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mu_pp_for_diff">
+            
+              <b>mu_pp_for_diff</b>(obj)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-mu_pp_for_diff" name="method-i-mu_pp_for_diff" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>This returns a <a href="Assertions.html#method-c-diff">::diff</a>-able
+human-readable version of <code>obj</code>. This differs from the regular
+<a href="Assertions.html#method-i-mu_pp">#mu_pp</a> because it expands
+escaped newlines and makes hex-values generic (like object_ids). This uses
+<a href="Assertions.html#method-i-mu_pp">#mu_pp</a> to do the first <a
+href="Assertions.html#method-i-pass">#pass</a> and then cleans it up.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mu_pp_for_diff_source')" id="l_method-i-mu_pp_for_diff_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L118" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mu_pp_for_diff_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mu_pp_for_diff</span> <span class="ruby-identifier">obj</span>
+  <span class="ruby-identifier">mu_pp</span>(<span class="ruby-identifier">obj</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\n/</span>, <span class="ruby-string">&quot;\n&quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/:0x[a-fA-F0-9]{4,}/m</span>, <span class="ruby-string">&#39;:0xXXXXXX&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pass">
+            
+              <b>pass</b>(msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-pass" name="method-i-pass" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>used for counting assertions</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pass_source')" id="l_method-i-pass_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L497" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-pass_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 497</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pass</span> <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute">
+            
+              <b>refute</b>(test, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute" name="method-i-refute" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>test</code> is truthy.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_source')" id="l_method-i-refute_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L504" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 504</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute</span> <span class="ruby-identifier">test</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> <span class="ruby-operator">||=</span> <span class="ruby-string">&quot;Failed refutation, no message given&quot;</span>
+  <span class="ruby-keyword">not</span> <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span> <span class="ruby-identifier">test</span>, <span class="ruby-identifier">msg</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_empty">
+            
+              <b>refute_empty</b>(obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_empty" name="method-i-refute_empty" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>obj</code> is empty.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_empty_source')" id="l_method-i-refute_empty_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L512" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_empty_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 512</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_empty</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp(obj)} to not be empty&quot;</span> }
+  <span class="ruby-identifier">assert_respond_to</span> <span class="ruby-identifier">obj</span>, <span class="ruby-value">:empty?</span>
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">empty?</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_equal">
+            
+              <b>refute_equal</b>(exp, act, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_equal" name="method-i-refute_equal" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>exp == act</code>.</p>
+
+<p>For floats use <a
+href="Assertions.html#method-i-refute_in_delta">#refute_in_delta</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_equal_source')" id="l_method-i-refute_equal_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L523" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_equal_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 523</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_equal</span> <span class="ruby-identifier">exp</span>, <span class="ruby-identifier">act</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-node">&quot;Expected #{mu_pp(act)} to not be equal to #{mu_pp(exp)}&quot;</span>
+  }
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">exp</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">act</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_in_delta">
+            
+              <b>refute_in_delta</b>(exp, act, delta = 0.001, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_in_delta" name="method-i-refute_in_delta" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>For comparing Floats.  Fails if <code>exp</code> is within
+<code>delta</code> of <code>act</code>.</p>
+
+<pre><code>refute_in_delta Math::PI, (22.0 / 7.0)
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_in_delta_source')" id="l_method-i-refute_in_delta_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L535" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_in_delta_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 535</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_in_delta</span> <span class="ruby-identifier">exp</span>, <span class="ruby-identifier">act</span>, <span class="ruby-identifier">delta</span> = <span class="ruby-number">0.001</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">n</span> = (<span class="ruby-identifier">exp</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">act</span>).<span class="ruby-identifier">abs</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-node">&quot;Expected |#{exp} - #{act}| (#{n}) to not be &lt;= #{delta}&quot;</span>
+  }
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">delta</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">n</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_in_epsilon">
+            
+              <b>refute_in_epsilon</b>(a, b, epsilon = 0.001, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_in_epsilon" name="method-i-refute_in_epsilon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>For comparing Floats.  Fails if <code>exp</code> and <code>act</code> have
+a relative error less than <code>epsilon</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_in_epsilon_source')" id="l_method-i-refute_in_epsilon_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L547" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_in_epsilon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 547</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_in_epsilon</span> <span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">epsilon</span> = <span class="ruby-number">0.001</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">refute_in_delta</span> <span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">a</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">epsilon</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_includes">
+            
+              <b>refute_includes</b>(collection, obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_includes" name="method-i-refute_includes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>collection</code> includes <code>obj</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_includes_source')" id="l_method-i-refute_includes_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L554" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_includes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 554</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_includes</span> <span class="ruby-identifier">collection</span>, <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-node">&quot;Expected #{mu_pp(collection)} to not include #{mu_pp(obj)}&quot;</span>
+  }
+  <span class="ruby-identifier">assert_respond_to</span> <span class="ruby-identifier">collection</span>, <span class="ruby-value">:include?</span>
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">obj</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_instance_of">
+            
+              <b>refute_instance_of</b>(cls, obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_instance_of" name="method-i-refute_instance_of" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>obj</code> is an instance of <code>cls</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_instance_of_source')" id="l_method-i-refute_instance_of_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L565" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_instance_of_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 565</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_instance_of</span> <span class="ruby-identifier">cls</span>, <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-node">&quot;Expected #{mu_pp(obj)} to not be an instance of #{cls}&quot;</span>
+  }
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">instance_of?</span>(<span class="ruby-identifier">cls</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_kind_of">
+            
+              <b>refute_kind_of</b>(cls, obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_kind_of" name="method-i-refute_kind_of" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>obj</code> is a kind of <code>cls</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_kind_of_source')" id="l_method-i-refute_kind_of_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L575" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_kind_of_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 575</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_kind_of</span> <span class="ruby-identifier">cls</span>, <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp(obj)} to not be a kind of #{cls}&quot;</span> }
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-identifier">cls</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_match">
+            
+              <b>refute_match</b>(matcher, obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_match" name="method-i-refute_match" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>matcher</code> <code>=~</code> <code>obj</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_match_source')" id="l_method-i-refute_match_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L583" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_match_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 583</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_match</span> <span class="ruby-identifier">matcher</span>, <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {<span class="ruby-node">&quot;Expected #{mu_pp matcher} to not match #{mu_pp obj}&quot;</span>}
+  <span class="ruby-identifier">assert_respond_to</span> <span class="ruby-identifier">matcher</span>, <span class="ruby-value">:&quot;=~&quot;</span>
+  <span class="ruby-identifier">matcher</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span> <span class="ruby-identifier">matcher</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">matcher</span>
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">matcher</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_nil">
+            
+              <b>refute_nil</b>(obj, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_nil" name="method-i-refute_nil" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>obj</code> is nil.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_nil_source')" id="l_method-i-refute_nil_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L593" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_nil_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 593</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_nil</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp(obj)} to not be nil&quot;</span> }
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">nil?</span>, <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_operator">
+            
+              <b>refute_operator</b>(o1, op, o2 = UNDEFINED, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_operator" name="method-i-refute_operator" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>o1</code> is not <code>op</code> <code>o2</code>. Eg:</p>
+
+<pre><code>refute_operator 1, :&gt;, 2 #=&gt; pass
+refute_operator 1, :&lt;, 2 #=&gt; fail
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_operator_source')" id="l_method-i-refute_operator_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L604" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_operator_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 604</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_operator</span> <span class="ruby-identifier">o1</span>, <span class="ruby-identifier">op</span>, <span class="ruby-identifier">o2</span> = <span class="ruby-constant">UNDEFINED</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">refute_predicate</span> <span class="ruby-identifier">o1</span>, <span class="ruby-identifier">op</span>, <span class="ruby-identifier">msg</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">UNDEFINED</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">o2</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp(o1)} to not be #{op} #{mu_pp(o2)}&quot;</span>}
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">o1</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">op</span>, <span class="ruby-identifier">o2</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_predicate">
+            
+              <b>refute_predicate</b>(o1, op, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_predicate" name="method-i-refute_predicate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>For testing with predicates.</p>
+
+<pre><code>refute_predicate str, :empty?
+</code></pre>
+
+<p>This is really meant for specs and is front-ended by <a
+href="Assertions.html#method-i-refute_operator">#refute_operator</a>:</p>
+
+<pre><code>str.wont_be :empty?
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_predicate_source')" id="l_method-i-refute_predicate_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L619" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_predicate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 619</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_predicate</span> <span class="ruby-identifier">o1</span>, <span class="ruby-identifier">op</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp(o1)} to not be #{op}&quot;</span> }
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">o1</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">op</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_respond_to">
+            
+              <b>refute_respond_to</b>(obj, meth, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_respond_to" name="method-i-refute_respond_to" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>obj</code> responds to the <a
+href="Assertions.html#method-i-message">#message</a> <code>meth</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_respond_to_source')" id="l_method-i-refute_respond_to_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L627" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_respond_to_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 627</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_respond_to</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">meth</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) { <span class="ruby-node">&quot;Expected #{mu_pp(obj)} to not respond to #{meth}&quot;</span> }
+
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">meth</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refute_same">
+            
+              <b>refute_same</b>(exp, act, msg = nil)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-refute_same" name="method-i-refute_same" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fails if <code>exp</code> is the same (by object identity) as
+<code>act</code>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refute_same_source')" id="l_method-i-refute_same_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L636" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-refute_same_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 636</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refute_same</span> <span class="ruby-identifier">exp</span>, <span class="ruby-identifier">act</span>, <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">message</span>(<span class="ruby-identifier">msg</span>) {
+    <span class="ruby-identifier">data</span> = [<span class="ruby-identifier">mu_pp</span>(<span class="ruby-identifier">act</span>), <span class="ruby-identifier">act</span>.<span class="ruby-identifier">object_id</span>, <span class="ruby-identifier">mu_pp</span>(<span class="ruby-identifier">exp</span>), <span class="ruby-identifier">exp</span>.<span class="ruby-identifier">object_id</span>]
+    <span class="ruby-string">&quot;Expected %s (oid=%d) to not be the same as %s (oid=%d)&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">data</span>
+  }
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">exp</span>.<span class="ruby-identifier">equal?</span>(<span class="ruby-identifier">act</span>), <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skip">
+            
+              <b>skip</b>(msg = nil, bt = caller)
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-skip" name="method-i-skip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Skips the current run. If run in verbose-mode, the skipped run gets listed
+at the end of the run but doesn&#39;t cause a failure exit code.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skip_source')" id="l_method-i-skip_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L649" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-skip_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 649</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skip</span> <span class="ruby-identifier">msg</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">bt</span> = <span class="ruby-identifier">caller</span>
+  <span class="ruby-identifier">msg</span> <span class="ruby-operator">||=</span> <span class="ruby-string">&quot;Skipped, no message given&quot;</span>
+  <span class="ruby-ivar">@skip</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Minitest</span><span class="ruby-operator">::</span><span class="ruby-constant">Skip</span>, <span class="ruby-identifier">msg</span>, <span class="ruby-identifier">bt</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skipped-3F">
+            
+              <b>skipped?</b>()
+            
+            <a href="../../classes/Minitest/Assertions.html#method-i-skipped-3F" name="method-i-skipped-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Was this testcase <a
+href="Assertions.html#method-i-skipped-3F">#skipped?</a> Meant for
+#teardown.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skipped-3F_source')" id="l_method-i-skipped-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a8611d0587f227f5f915a7e79f7d915f8f970fda/stdlib/minitest/assertions.rb#L658" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-skipped-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/minitest/assertions.rb, line 658</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skipped?</span>
+  <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@skip</span>) <span class="ruby-keyword">and</span> <span class="ruby-ivar">@skip</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

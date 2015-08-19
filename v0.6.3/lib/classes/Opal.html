@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Opal 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/lib/mspec/opal/rake_task_rb.html">opal/lib/mspec/opal/rake_task.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal_rb.html">opal/lib/opal.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/builder_rb.html">opal/lib/opal/builder.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/cli_rb.html">opal/lib/opal/cli.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/cli_options_rb.html">opal/lib/opal/cli_options.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/compiler_rb.html">opal/lib/opal/compiler.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/erb_rb.html">opal/lib/opal/erb.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/fragment_rb.html">opal/lib/opal/fragment.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/arglist_rb.html">opal/lib/opal/nodes/arglist.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/array_rb.html">opal/lib/opal/nodes/array.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/base_rb.html">opal/lib/opal/nodes/base.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/call_rb.html">opal/lib/opal/nodes/call.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/call_special_rb.html">opal/lib/opal/nodes/call_special.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/case_rb.html">opal/lib/opal/nodes/case.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/class_rb.html">opal/lib/opal/nodes/class.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/constants_rb.html">opal/lib/opal/nodes/constants.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/def_rb.html">opal/lib/opal/nodes/def.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/defined_rb.html">opal/lib/opal/nodes/defined.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/definitions_rb.html">opal/lib/opal/nodes/definitions.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/hash_rb.html">opal/lib/opal/nodes/hash.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/helpers_rb.html">opal/lib/opal/nodes/helpers.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/if_rb.html">opal/lib/opal/nodes/if.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/iter_rb.html">opal/lib/opal/nodes/iter.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/literal_rb.html">opal/lib/opal/nodes/literal.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/logic_rb.html">opal/lib/opal/nodes/logic.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/masgn_rb.html">opal/lib/opal/nodes/masgn.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/module_rb.html">opal/lib/opal/nodes/module.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/rescue_rb.html">opal/lib/opal/nodes/rescue.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/runtime_helpers_rb.html">opal/lib/opal/nodes/runtime_helpers.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/scope_rb.html">opal/lib/opal/nodes/scope.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/singleton_class_rb.html">opal/lib/opal/nodes/singleton_class.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/super_rb.html">opal/lib/opal/nodes/super.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/top_rb.html">opal/lib/opal/nodes/top.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/variables_rb.html">opal/lib/opal/nodes/variables.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/while_rb.html">opal/lib/opal/nodes/while.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/nodes/yield_rb.html">opal/lib/opal/nodes/yield.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/parser_rb.html">opal/lib/opal/parser.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/parser/grammar_rb.html">opal/lib/opal/parser/grammar.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/parser/keywords_rb.html">opal/lib/opal/parser/keywords.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/parser/lexer_rb.html">opal/lib/opal/parser/lexer.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/parser/parser_scope_rb.html">opal/lib/opal/parser/parser_scope.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/parser/sexp_rb.html">opal/lib/opal/parser/sexp.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/source_map_rb.html">opal/lib/opal/source_map.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/sprockets/environment_rb.html">opal/lib/opal/sprockets/environment.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/sprockets/erb_rb.html">opal/lib/opal/sprockets/erb.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/sprockets/processor_rb.html">opal/lib/opal/sprockets/processor.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/sprockets/server_rb.html">opal/lib/opal/sprockets/server.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/util_rb.html">opal/lib/opal/util.rb</a></li>
+            
+            <li><a href="../files/opal/lib/opal/version_rb.html">opal/lib/opal/version.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p><a href="Opal.html">Opal</a> is a ruby to javascript compiler, with a
+runtime for running in any javascript environment.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Opal/ERB.html">Opal::ERB</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Opal/Keywords.html">Opal::Keywords</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Opal/Nodes.html">Opal::Nodes</a>
+        </li>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="Opal/Util.html">Opal::Util</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/Builder.html">Opal::Builder</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/CLI.html">Opal::CLI</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/CLIOptions.html">Opal::CLIOptions</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/Compiler.html">Opal::Compiler</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/Environment.html">Opal::Environment</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/Fragment.html">Opal::Fragment</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/Lexer.html">Opal::Lexer</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/Parser.html">Opal::Parser</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/ParserScope.html">Opal::ParserScope</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/Processor.html">Opal::Processor</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/Server.html">Opal::Server</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/Sexp.html">Opal::Sexp</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/SourceMap.html">Opal::SourceMap</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="Opal/SourceMapServer.html">Opal::SourceMapServer</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-append_path">append_path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-compile">compile</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-core_dir">core_dir</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-gem_dir">gem_dir</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-paths">paths</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-process">process</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-std_dir">std_dir</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-use_gem">use_gem</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">VERSION</td>
+            <td>=</td>
+            <td class="attr-value">&#39;0.6.3&#39;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-append_path">
+            
+              <b>append_path</b>(path)
+            
+            <a href="../classes/Opal.html#method-c-append_path" name="method-c-append_path" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Add a file path to opals load path. Any gem containing ruby code that <a
+href="Opal.html">Opal</a> has access to should add a load path through this
+method. Load <a href="Opal.html#method-c-paths">::paths</a> added here
+should only be <a href="Opal.html#method-c-paths">::paths</a> which contain
+code targeted at being compiled by <a href="Opal.html">Opal</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-append_path_source')" id="l_method-c-append_path_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/86fcf97a29824d784c9f438c9a53d12aa0e5ead4/lib/opal.rb#L26" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-append_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">append_path</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">paths</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">path</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-compile">
+            
+              <b>compile</b>(source, options = {})
+            
+            <a href="../classes/Opal.html#method-c-compile" name="method-c-compile" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-compile_source')" id="l_method-c-compile_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/deb05d486f2997aa5f80c81d62fe314128f42130/lib/opal/compiler.rb#L7" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-compile_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/compiler.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">compile</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-constant">Compiler</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">compile</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">options</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-core_dir">
+            
+              <b>core_dir</b>()
+            
+            <a href="../classes/Opal.html#method-c-core_dir" name="method-c-core_dir" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-core_dir_source')" id="l_method-c-core_dir_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/86fcf97a29824d784c9f438c9a53d12aa0e5ead4/lib/opal.rb#L14" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-core_dir_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">core_dir</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-string">&#39;../../opal&#39;</span>, <span class="ruby-keyword">__FILE__</span>.<span class="ruby-identifier">untaint</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-gem_dir">
+            
+              <b>gem_dir</b>()
+            
+            <a href="../classes/Opal.html#method-c-gem_dir" name="method-c-gem_dir" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-gem_dir_source')" id="l_method-c-gem_dir_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/86fcf97a29824d784c9f438c9a53d12aa0e5ead4/lib/opal.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-gem_dir_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">gem_dir</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-string">&#39;..&#39;</span>, <span class="ruby-keyword">__FILE__</span>.<span class="ruby-identifier">untaint</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-paths">
+            
+              <b>paths</b>()
+            
+            <a href="../classes/Opal.html#method-c-paths" name="method-c-paths" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Private, don&#39;t add to these directly (use .append_path instead).</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-paths_source')" id="l_method-c-paths_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/86fcf97a29824d784c9f438c9a53d12aa0e5ead4/lib/opal.rb#L41" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-paths_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">paths</span>
+  <span class="ruby-ivar">@paths</span> <span class="ruby-operator">||=</span> [<span class="ruby-identifier">core_dir</span>.<span class="ruby-identifier">untaint</span>, <span class="ruby-identifier">std_dir</span>.<span class="ruby-identifier">untaint</span>, <span class="ruby-identifier">gem_dir</span>.<span class="ruby-identifier">untaint</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-process">
+            
+              <b>process</b>(asset)
+            
+            <a href="../classes/Opal.html#method-c-process" name="method-c-process" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Proccess using <a href="Sprockets.html">Sprockets</a></p>
+
+<pre><code>Opal.process(&#39;opal-jquery&#39;)   # =&gt; String
+</code></pre>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-process_source')" id="l_method-c-process_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/893b9c1b9f18b73b7517e82b235b9a1f770dc9c4/lib/opal/sprockets/environment.rb#L9" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-process_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/environment.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">process</span> <span class="ruby-identifier">asset</span>
+  <span class="ruby-constant">Environment</span>.<span class="ruby-identifier">new</span>[<span class="ruby-identifier">asset</span>].<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-std_dir">
+            
+              <b>std_dir</b>()
+            
+            <a href="../classes/Opal.html#method-c-std_dir" name="method-c-std_dir" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-std_dir_source')" id="l_method-c-std_dir_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/86fcf97a29824d784c9f438c9a53d12aa0e5ead4/lib/opal.rb#L18" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-std_dir_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">std_dir</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-string">&#39;../../stdlib&#39;</span>, <span class="ruby-keyword">__FILE__</span>.<span class="ruby-identifier">untaint</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-use_gem">
+            
+              <b>use_gem</b>(gem_name, include_dependecies = true)
+            
+            <a href="../classes/Opal.html#method-c-use_gem" name="method-c-use_gem" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-use_gem_source')" id="l_method-c-use_gem_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/86fcf97a29824d784c9f438c9a53d12aa0e5ead4/lib/opal.rb#L30" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-use_gem_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">use_gem</span>(<span class="ruby-identifier">gem_name</span>, <span class="ruby-identifier">include_dependecies</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">spec</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">gem_name</span>)
+
+  <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">runtime_dependencies</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dependency</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">use_gem</span> <span class="ruby-identifier">dependency</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">end</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">include_dependecies</span>
+
+  <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">append_path</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">gem_dir</span>, <span class="ruby-string">&#39;lib&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

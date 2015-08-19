@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Builder</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Builder 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/lib/opal/builder_rb.html">opal/lib/opal/builder.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-append_path">append_path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-build">build</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-build">build</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-build_asset">build_asset</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-build_erb">build_erb</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-build_js">build_js</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-build_ruby">build_ruby</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-build_str">build_str</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-compile_ruby">compile_ruby</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-find_asset">find_asset</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-require_asset">require_asset</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">BUILDERS</td>
+            <td>=</td>
+            <td class="attr-value">{ &quot;.rb&quot; =&gt; :build_ruby, &quot;.js&quot; =&gt; :build_js, &quot;.erb&quot; =&gt; :build_erb }</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-build">
+            
+              <b>build</b>(name)
+            
+            <a href="../../classes/Opal/Builder.html#method-c-build" name="method-c-build" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-build_source')" id="l_method-c-build_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-build_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">build</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-constant">Builder</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">build</span> <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(options = {})
+            
+            <a href="../../classes/Opal/Builder.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L14" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-ivar">@paths</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:paths</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">paths</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">options</span>
+  <span class="ruby-ivar">@handled</span> = {}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-append_path">
+            
+              <b>append_path</b>(path)
+            
+            <a href="../../classes/Opal/Builder.html#method-i-append_path" name="method-i-append_path" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-append_path_source')" id="l_method-i-append_path_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-append_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">append_path</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-ivar">@paths</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">path</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-build">
+            
+              <b>build</b>(path)
+            
+            <a href="../../classes/Opal/Builder.html#method-i-build" name="method-i-build" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-build_source')" id="l_method-i-build_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-build_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">build</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-ivar">@segments</span> = []
+
+  <span class="ruby-identifier">require_asset</span> <span class="ruby-identifier">path</span>
+
+  <span class="ruby-ivar">@segments</span>.<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-build_asset">
+            
+              <b>build_asset</b>(path)
+            
+            <a href="../../classes/Opal/Builder.html#method-i-build_asset" name="method-i-build_asset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-build_asset_source')" id="l_method-i-build_asset_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L66" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-build_asset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">build_asset</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">ext</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">extname</span> <span class="ruby-identifier">path</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">builder</span> = <span class="ruby-constant">BUILDERS</span>[<span class="ruby-identifier">ext</span>]
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unknown builder for #{ext}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@segments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">builder</span>, <span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-build_erb">
+            
+              <b>build_erb</b>(path)
+            
+            <a href="../../classes/Opal/Builder.html#method-i-build_erb" name="method-i-build_erb" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-build_erb_source')" id="l_method-i-build_erb_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L97" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-build_erb_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">build_erb</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-operator">::</span><span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">path</span>)).<span class="ruby-identifier">result</span> <span class="ruby-identifier">binding</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-build_js">
+            
+              <b>build_js</b>(path)
+            
+            <a href="../../classes/Opal/Builder.html#method-i-build_js" name="method-i-build_js" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-build_js_source')" id="l_method-i-build_js_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-build_js_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">build_js</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-build_ruby">
+            
+              <b>build_ruby</b>(path)
+            
+            <a href="../../classes/Opal/Builder.html#method-i-build_ruby" name="method-i-build_ruby" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-build_ruby_source')" id="l_method-i-build_ruby_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L89" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-build_ruby_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">build_ruby</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">compile_ruby</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">path</span>), <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">clone</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-build_str">
+            
+              <b>build_str</b>(str, options = {})
+            
+            <a href="../../classes/Opal/Builder.html#method-i-build_str" name="method-i-build_str" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-build_str_source')" id="l_method-i-build_str_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-build_str_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">build_str</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-ivar">@segments</span> = []
+  <span class="ruby-ivar">@segments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">compile_ruby</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-ivar">@segments</span>.<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-compile_ruby">
+            
+              <b>compile_ruby</b>(str, options = nil)
+            
+            <a href="../../classes/Opal/Builder.html#method-i-compile_ruby" name="method-i-compile_ruby" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-compile_ruby_source')" id="l_method-i-compile_ruby_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L76" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-compile_ruby_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">compile_ruby</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">options</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">options</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">clone</span>
+
+  <span class="ruby-identifier">compiler</span> = <span class="ruby-constant">Compiler</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">compile</span> <span class="ruby-identifier">str</span>, <span class="ruby-identifier">options</span>
+
+  <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">requires</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">require_asset</span> <span class="ruby-identifier">r</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_asset">
+            
+              <b>find_asset</b>(path)
+            
+            <a href="../../classes/Opal/Builder.html#method-i-find_asset" name="method-i-find_asset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_asset_source')" id="l_method-i-find_asset_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L47" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-find_asset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_asset</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">path</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Pathname</span>(<span class="ruby-identifier">path</span>).<span class="ruby-identifier">absolute?</span>
+
+  <span class="ruby-identifier">path</span>.<span class="ruby-identifier">untaint</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\A(\w[-.\w]*\/?)+\Z/</span>
+  <span class="ruby-identifier">file_types</span> = <span class="ruby-node">%w[.rb .js .js.erb]</span>
+
+  <span class="ruby-ivar">@paths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">root</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">file_types</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">type</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">test</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span> <span class="ruby-identifier">root</span>, <span class="ruby-node">&quot;#{path}#{type}&quot;</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">test</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">test</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Could not find asset: #{path}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-require_asset">
+            
+              <b>require_asset</b>(path)
+            
+            <a href="../../classes/Opal/Builder.html#method-i-require_asset" name="method-i-require_asset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-require_asset_source')" id="l_method-i-require_asset_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/a1cce79d40d494b89504328409d03e62c75a9198/lib/opal/builder.rb#L38" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-require_asset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/builder.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">require_asset</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">location</span> = <span class="ruby-identifier">find_asset</span> <span class="ruby-identifier">path</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@handled</span>[<span class="ruby-identifier">location</span>]
+    <span class="ruby-ivar">@handled</span>[<span class="ruby-identifier">location</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">build_asset</span> <span class="ruby-identifier">location</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

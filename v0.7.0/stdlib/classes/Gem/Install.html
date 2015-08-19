@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Gem::Install</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Gem::Install 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/stdlib/nodejs/rubygems_rb.html">opal/stdlib/nodejs/rubygems.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-curl">curl</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-full_name">full_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-gem_home">gem_home</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gems_dir">gems_dir</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-latest_version">latest_version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-perform">perform</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-specs_dir">specs_dir</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-version">version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(name, version)
+            
+            <a href="../../classes/Gem/Install.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/ff6f0fbe4e22eecfa6abd36c5ce0c84d038b00eb/stdlib/nodejs/rubygems.rb#L5" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/rubygems.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@version</span> = <span class="ruby-identifier">version</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-curl">
+            
+              <b>curl</b>(url)
+            
+            <a href="../../classes/Gem/Install.html#method-i-curl" name="method-i-curl" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-curl_source')" id="l_method-i-curl_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/ff6f0fbe4e22eecfa6abd36c5ce0c84d038b00eb/stdlib/nodejs/rubygems.rb#L49" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-curl_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/rubygems.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">curl</span> <span class="ruby-identifier">url</span>
+  <span class="ruby-node">&quot;curl -L #{url}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-full_name">
+            
+              <b>full_name</b>()
+            
+            <a href="../../classes/Gem/Install.html#method-i-full_name" name="method-i-full_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-full_name_source')" id="l_method-i-full_name_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/ff6f0fbe4e22eecfa6abd36c5ce0c84d038b00eb/stdlib/nodejs/rubygems.rb#L20" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-full_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/rubygems.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">full_name</span>
+  <span class="ruby-node">&quot;#{name}-#{version}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gem_home">
+            
+              <b>gem_home</b>()
+            
+            <a href="../../classes/Gem/Install.html#method-i-gem_home" name="method-i-gem_home" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gem_home_source')" id="l_method-i-gem_home_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/ff6f0fbe4e22eecfa6abd36c5ce0c84d038b00eb/stdlib/nodejs/rubygems.rb#L24" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-gem_home_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/rubygems.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gem_home</span>
+  <span class="ruby-constant">ENV</span>[<span class="ruby-string">&#39;HOME&#39;</span>]<span class="ruby-operator">+</span><span class="ruby-string">&#39;/.opal-node/opal-gems/#{RUBY_ENGINE_VERSION}&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gems_dir">
+            
+              <b>gems_dir</b>()
+            
+            <a href="../../classes/Gem/Install.html#method-i-gems_dir" name="method-i-gems_dir" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gems_dir_source')" id="l_method-i-gems_dir_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/ff6f0fbe4e22eecfa6abd36c5ce0c84d038b00eb/stdlib/nodejs/rubygems.rb#L28" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-gems_dir_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/rubygems.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gems_dir</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">gem_home</span>, <span class="ruby-value">:gems</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-latest_version">
+            
+              <b>latest_version</b>(name)
+            
+            <a href="../../classes/Gem/Install.html#method-i-latest_version" name="method-i-latest_version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-latest_version_source')" id="l_method-i-latest_version_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/ff6f0fbe4e22eecfa6abd36c5ce0c84d038b00eb/stdlib/nodejs/rubygems.rb#L14" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-latest_version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/rubygems.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">latest_version</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">command</span> = <span class="ruby-identifier">curl</span>(<span class="ruby-node">&quot;https://rubygems.org/api/v1/versions/#{name}.json&quot;</span>)
+  <span class="ruby-identifier">versions</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">system</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">versions</span>.<span class="ruby-identifier">first</span>[<span class="ruby-string">&#39;number&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-perform">
+            
+              <b>perform</b>()
+            
+            <a href="../../classes/Gem/Install.html#method-i-perform" name="method-i-perform" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-perform_source')" id="l_method-i-perform_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/ff6f0fbe4e22eecfa6abd36c5ce0c84d038b00eb/stdlib/nodejs/rubygems.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-perform_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/rubygems.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">perform</span>
+  <span class="ruby-identifier">gem_dir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">gems_dir</span>, <span class="ruby-identifier">full_name</span>)
+  <span class="ruby-identifier">spec_dir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">specs_dir</span>, <span class="ruby-identifier">full_name</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;.yml&#39;</span>)
+  <span class="ruby-identifier">system</span> <span class="ruby-node">&quot;mkdir -p #{gem_dir} #{spec_dir}&quot;</span>
+
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span> <span class="ruby-identifier">gem_dir</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">system</span> <span class="ruby-identifier">curl</span>(<span class="ruby-node">&quot;https://rubygems.org/downloads/#{name}-#{version}.gem&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&#39;| tar -xv&#39;</span>
+    <span class="ruby-identifier">system</span> <span class="ruby-node">&quot;gunzip metadata.gz --stdout &gt; #{specs_dir}/#{full_name}.yml&quot;</span>
+    <span class="ruby-identifier">system</span> <span class="ruby-string">&quot;gunzip data.tar.gz&quot;</span>
+    <span class="ruby-identifier">system</span> <span class="ruby-string">&quot;tar -xvf data.tar&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-specs_dir">
+            
+              <b>specs_dir</b>()
+            
+            <a href="../../classes/Gem/Install.html#method-i-specs_dir" name="method-i-specs_dir" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-specs_dir_source')" id="l_method-i-specs_dir_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/ff6f0fbe4e22eecfa6abd36c5ce0c84d038b00eb/stdlib/nodejs/rubygems.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-specs_dir_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/rubygems.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">specs_dir</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">gem_home</span>, <span class="ruby-value">:specs</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-version">
+            
+              <b>version</b>()
+            
+            <a href="../../classes/Gem/Install.html#method-i-version" name="method-i-version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-version_source')" id="l_method-i-version_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/ff6f0fbe4e22eecfa6abd36c5ce0c84d038b00eb/stdlib/nodejs/rubygems.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/rubygems.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">version</span>
+  <span class="ruby-ivar">@version</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">latest_version</span>(<span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::Processor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::Processor 
+            
+                <span class="parent">&lt; 
+                    
+                    Tilt::Template
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/lib/opal/sprockets/processor_rb.html">opal/lib/opal/sprockets/processor.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>The <a href="Processor.html">Processor</a> class is used to make ruby files
+(with rb or opal extensions) available to any sprockets based server. <a
+href="Processor.html">Processor</a> will then get passed any ruby source
+file to build. There are some options you can override globally which
+effect how certain ruby features are handled:</p>
+
+<pre><code>* method_missing_enabled      [true by default]
+* arity_check_enabled         [false by default]
+* const_missing_enabled       [true by default]
+* dynamic_require_severity    [:error by default]
+* source_map_enabled          [true by default]
+* irb_enabled                 [false by default]
+* inline_operators_enabled    [false by default]</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-engine_initialized-3F">engine_initialized?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-evaluate">evaluate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-initialize_engine">initialize_engine</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new_builder">new_builder</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-prepare">prepare</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-register_source_map">register_source_map</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-stub_file">stub_file</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-stubbed_files">stubbed_files</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-stubbed_files">stubbed_files</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-version">version</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>arity_check_enabled</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>const_missing_enabled</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>dynamic_require_severity</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>inline_operators_enabled</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>irb_enabled</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>method_missing_enabled</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>source_map_enabled</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>source_map_register</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-engine_initialized-3F">
+            
+              <b>engine_initialized?</b>()
+            
+            <a href="../../classes/Opal/Processor.html#method-c-engine_initialized-3F" name="method-c-engine_initialized-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-engine_initialized-3F_source')" id="l_method-c-engine_initialized-3F_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bc10b09d395f92ec1ab85806c69390d3aa0dc643/lib/opal/sprockets/processor.rb#L28" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-engine_initialized-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/processor.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">engine_initialized?</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new_builder">
+            
+              <b>new_builder</b>(context)
+            
+            <a href="../../classes/Opal/Processor.html#method-c-new_builder" name="method-c-new_builder" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_builder_source')" id="l_method-c-new_builder_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bc10b09d395f92ec1ab85806c69390d3aa0dc643/lib/opal/sprockets/processor.rb#L101" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_builder_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/processor.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">new_builder</span>(<span class="ruby-identifier">context</span>)
+  <span class="ruby-identifier">compiler_options</span> = {
+    <span class="ruby-value">:method_missing</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">method_missing_enabled</span>,
+    <span class="ruby-value">:arity_check</span>              =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">arity_check_enabled</span>,
+    <span class="ruby-value">:const_missing</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">const_missing_enabled</span>,
+    <span class="ruby-value">:dynamic_require_severity</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dynamic_require_severity</span>,
+    <span class="ruby-value">:irb</span>                      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">irb_enabled</span>,
+    <span class="ruby-value">:inline_operators</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">inline_operators_enabled</span>,
+  }
+
+  <span class="ruby-identifier">path_reader</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Sprockets</span><span class="ruby-operator">::</span><span class="ruby-constant">PathReader</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">context</span>.<span class="ruby-identifier">environment</span>, <span class="ruby-identifier">context</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Builder</span>.<span class="ruby-identifier">new</span>(
+    <span class="ruby-identifier">compiler_options</span><span class="ruby-operator">:</span> <span class="ruby-identifier">compiler_options</span>,
+    <span class="ruby-identifier">stubs</span><span class="ruby-operator">:</span>            <span class="ruby-identifier">stubbed_files</span>,
+    <span class="ruby-identifier">path_reader</span><span class="ruby-operator">:</span>      <span class="ruby-identifier">path_reader</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-stub_file">
+            
+              <b>stub_file</b>(name)
+            
+            <a href="../../classes/Opal/Processor.html#method-c-stub_file" name="method-c-stub_file" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-stub_file_source')" id="l_method-c-stub_file_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bc10b09d395f92ec1ab85806c69390d3aa0dc643/lib/opal/sprockets/processor.rb#L93" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-stub_file_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/processor.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">stub_file</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">stubbed_files</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-stubbed_files">
+            
+              <b>stubbed_files</b>()
+            
+            <a href="../../classes/Opal/Processor.html#method-c-stubbed_files" name="method-c-stubbed_files" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-stubbed_files_source')" id="l_method-c-stubbed_files_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bc10b09d395f92ec1ab85806c69390d3aa0dc643/lib/opal/sprockets/processor.rb#L89" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-stubbed_files_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/processor.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">stubbed_files</span>
+  <span class="ruby-ivar">@stubbed_files</span> <span class="ruby-operator">||=</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-version">
+            
+              <b>version</b>()
+            
+            <a href="../../classes/Opal/Processor.html#method-c-version" name="method-c-version" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-version_source')" id="l_method-c-version_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bc10b09d395f92ec1ab85806c69390d3aa0dc643/lib/opal/sprockets/processor.rb#L32" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-version_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/processor.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">version</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-evaluate">
+            
+              <b>evaluate</b>(context, locals, &amp;block)
+            
+            <a href="../../classes/Opal/Processor.html#method-i-evaluate" name="method-i-evaluate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-evaluate_source')" id="l_method-i-evaluate_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bc10b09d395f92ec1ab85806c69390d3aa0dc643/lib/opal/sprockets/processor.rb#L68" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-evaluate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/processor.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">evaluate</span>(<span class="ruby-identifier">context</span>, <span class="ruby-identifier">locals</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Opal</span>.<span class="ruby-identifier">compile</span> <span class="ruby-identifier">data</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">context</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-operator">::</span><span class="ruby-constant">Sprockets</span><span class="ruby-operator">::</span><span class="ruby-constant">Context</span>
+
+  <span class="ruby-identifier">path</span> = <span class="ruby-identifier">context</span>.<span class="ruby-identifier">logical_path</span>
+  <span class="ruby-identifier">prerequired</span> = []
+
+  <span class="ruby-identifier">builder</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new_builder</span>(<span class="ruby-identifier">context</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">build_str</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">path</span>, <span class="ruby-value">:prerequired</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">prerequired</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">source_map_enabled</span>
+    <span class="ruby-identifier">register_source_map</span>(<span class="ruby-identifier">context</span>.<span class="ruby-identifier">logical_path</span>, <span class="ruby-identifier">result</span>.<span class="ruby-identifier">source_map</span>.<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-node">&quot;#{result.to_s}\n//# sourceMappingURL=#{File.basename(context.logical_path)}.map\n&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-initialize_engine">
+            
+              <b>initialize_engine</b>()
+            
+            <a href="../../classes/Opal/Processor.html#method-i-initialize_engine" name="method-i-initialize_engine" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-initialize_engine_source')" id="l_method-i-initialize_engine_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bc10b09d395f92ec1ab85806c69390d3aa0dc643/lib/opal/sprockets/processor.rb#L36" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-initialize_engine_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/processor.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize_engine</span>
+  <span class="ruby-identifier">require_template_library</span> <span class="ruby-string">&#39;opal&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prepare">
+            
+              <b>prepare</b>()
+            
+            <a href="../../classes/Opal/Processor.html#method-i-prepare" name="method-i-prepare" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prepare_source')" id="l_method-i-prepare_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bc10b09d395f92ec1ab85806c69390d3aa0dc643/lib/opal/sprockets/processor.rb#L40" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-prepare_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/processor.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prepare</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-register_source_map">
+            
+              <b>register_source_map</b>(path, map_contents)
+            
+            <a href="../../classes/Opal/Processor.html#method-i-register_source_map" name="method-i-register_source_map" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-register_source_map_source')" id="l_method-i-register_source_map_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bc10b09d395f92ec1ab85806c69390d3aa0dc643/lib/opal/sprockets/processor.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-register_source_map_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/processor.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">register_source_map</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">map_contents</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">source_map_register</span>[<span class="ruby-identifier">path</span>] = <span class="ruby-identifier">map_contents</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-stubbed_files">
+            
+              <b>stubbed_files</b>()
+            
+            <a href="../../classes/Opal/Processor.html#method-i-stubbed_files" name="method-i-stubbed_files" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-stubbed_files_source')" id="l_method-i-stubbed_files_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/bc10b09d395f92ec1ab85806c69390d3aa0dc643/lib/opal/sprockets/processor.rb#L97" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-stubbed_files_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/processor.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">stubbed_files</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">stubbed_files</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

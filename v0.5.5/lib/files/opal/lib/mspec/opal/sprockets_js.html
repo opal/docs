@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>sprockets.js</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            sprockets.js
+        </h1>
+        <ul class="files">
+            <li>opal/lib/mspec/opal/sprockets.js</li>
+            <li>Last modified: 2015-08-19 03:19:50 +0200</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<pre><code>Test runner for phantomjs</code></pre>
+
+<p>var args = phantom.args; var page = require(&#39;webpage&#39;).create();</p>
+
+<p>page.onConsoleMessage = function(msg) {</p>
+
+<pre><code>console.log(msg);
+</code></pre>
+
+<p>};</p>
+
+<p>page.onInitialized = function() {</p>
+
+<pre><code>page.evaluate(function () {
+  window.OPAL_SPEC_PHANTOM = true;
+});
+</code></pre>
+
+<p>};</p>
+
+<p><a href="0">page.open(args</a>, function(status) {</p>
+
+<pre><code>if (status !== &#39;success&#39;) {
+  console.error(&quot;Cannot load: &quot; + args[0]);
+  phantom.exit(1);
+} else {
+  var timeout = parseInt(args[1] || 60000, 10);
+  var start = Date.now();
+  var interval = setInterval(function() {
+    if (Date.now() &gt; start + timeout) {
+      console.error(&quot;Specs timed out&quot;);
+      phantom.exit(124);
+    } else {
+      var code = page.evaluate(function() {
+        return window.OPAL_SPEC_CODE;
+      });
+
+      if (code === 0 || code === 1) {
+        clearInterval(interval);
+        phantom.exit(code);
+      }
+    }
+  }, 500);
+}</code></pre>
+
+<p>});</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>
