@@ -23,6 +23,9 @@ task :doc do
   base_dir   = "gh-pages/#{ref}"
   base_title = "Opal #{ref}"
 
+  # Still need to decide how to format the runtime, for now let's just put it
+  # in a markdown file and render it as it is.
+  # Below some possible alternative implementations with DOCCO/GROC/DOXX.
   path = 'opal/opal/corelib/runtime.js'
   File.write "opal/opal/corelib/runtime.js.md", "# Opal Runtime:\n\n```js\n#{File.read path}\n```\n"
 
@@ -45,6 +48,7 @@ task :doc do
 
   end
 
+  # DOCCO/GROC
   # path = 'opal/opal/corelib/runtime.js'
   # contents = File.read path
   # normalized_contents = contents.gsub(%r{^(\s)*(?m:/\*.*?\*/ *$)}) do |match|
@@ -60,6 +64,13 @@ task :doc do
   # # sh "groc --root opal/opal/corelib --output #{base_dir} runtime.js"
   # sh "docco --output #{base_dir} opal/opal/corelib/runtime.js"
   # File.write path, contents
+  #
+  # DOXX
+  # command = "doxx --template #{doc_repo.join('doxx-templates/opal.jade')} "\
+  #           "--source opal/corelib --target #{doc_base}/#{git}/#{name} "\
+  #           "--title \"Opal runtime.js Documentation\" --readme opal/README.md"
+  # puts command; system command or $stderr.puts "Please install doxx with: npm install"
+
 
   html_title = "#{base_title} API Documentation Index"
   File.write "#{base_dir}/index.html", <<-HTML.gsub(/^  /, '')
