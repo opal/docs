@@ -2,7 +2,7 @@ def directory? path
   File.directory? path
 end
 
-ref = ENV['REF']
+ref = ENV['REF'] or raise "Please set a REF env variable, e.g. `env REF=v0.8.0 rake doc`\n\n"
 
 task :doc do
   directory? 'opal' or sh 'git clone https://github.com/opal/opal.git opal'
