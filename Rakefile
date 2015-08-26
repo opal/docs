@@ -4,15 +4,23 @@ end
 
 ref = ENV['REF'] or raise "Please set a REF env variable, e.g. `env REF=v0.8.0 rake doc`\n\n"
 
+# The path to a local checkout of Opal, will use `ref` just to generate
+# documentation titles and target folders. E.g. `env LOCAL="../opal" rake …`
+local = ENV['LOCAL']
+
+opal_dir = local || 'opal'
+
 task :setup do
-  directory? 'opal' or sh 'git clone https://github.com/opal/opal.git opal'
-  directory? 'gh-pages' or sh 'git clone git@github.com:opal/docs.git gh-pages --reference . -b master'
-  cd 'opal' do
-    sh "git reset --hard"
-    sh "git clean -fx"
-    sh "git checkout #{ref}"
+  unless local
+    directory? 'opal' or sh 'git clone https://github.com/opal/opal.git opal'
+    cd 'opal' do
+      sh "git reset --hard"
+      sh "git clean -fx"
+      sh "git checkout #{ref}"
+    end
   end
 
+  directory? 'gh-pages' or sh 'git clone git@github.com:opal/docs.git gh-pages --reference . -b master'
   cd 'gh-pages' do
     sh "git reset --hard"
     sh "git clean -fx"
@@ -28,8 +36,8 @@ task :doc => :setup do
   # Still need to decide how to format the runtime, for now let's just put it
   # in a markdown file and render it as it is.
   # Below some possible alternative implementations with DOCCO/GROC/DOXX.
-  path = 'opal/opal/corelib/runtime.js'
-  File.write "opal/opal/corelib/runtime.js.md", "# Opal Runtime:\n\n```js\n#{File.read path}\n```\n"
+  path = "#{opal_dir}/opal/corelib/runtime.js"
+  File.write "#{opal_dir}/opal/corelib/runtime.js.md", "# Opal Runtime:\n\n```js\n#{File.read path}\n```\n"
 
   components.each do |component|
     target = case component
@@ -70,7 +78,7 @@ task :guides => :setup do
   CSS
 
   target_paths = []
-  files = Dir['../opal/docs/*.md']
+  files = Dir["#{opal_dir}/docs/*.md"]
   title_for = -> file { File.read(file).scan(/^#([^#].*?)$/).flatten.first.strip }
   target_for = -> file { File.basename(file).sub('.md', '.html') }
   mkdir_p base_dir
