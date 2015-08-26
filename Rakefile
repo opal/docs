@@ -139,19 +139,19 @@ def markdown(text)
 end
 
 def html_template(html, title:, css: "body {font-family: sans-serif;}")
-  <<-HTML.gsub(/^  /, '')
-  <!doctype html>
-  <html>
-    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>#{title}</title>
-      <style>#{css}</style>
-    </head>
-    <body>
-      #{html}
-    </body>
-  </html>
-  HTML
+<<-HTML
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>#{title}</title>
+    <style>#{css}</style>
+  </head>
+  <body>
+    #{html}
+  </body>
+</html>
+HTML
 end
 
 # FOR FUTURE REF:
