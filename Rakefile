@@ -50,30 +50,6 @@ task :doc => :setup do
 
   end
 
-  # DOCCO/GROC
-  # path = 'opal/opal/corelib/runtime.js'
-  # contents = File.read path
-  # normalized_contents = contents.gsub(%r{^(\s)*(?m:/\*.*?\*/ *$)}) do |match|
-  #   lines = match.strip.split("\n")
-  #   leading = lines.first.scan(/^ */).first + '// '
-  #   normalized = lines.map do |line|
-  #     line.sub(%r{^ *(?:/\*+|\* +|\*/|(?=[\S]|$))}, leading)
-  #   end.compact.join("\n")
-  #   "\n"+normalized
-  # end
-  # File.write path, normalized_contents
-  # puts normalized_contents
-  # # sh "groc --root opal/opal/corelib --output #{base_dir} runtime.js"
-  # sh "docco --output #{base_dir} opal/opal/corelib/runtime.js"
-  # File.write path, contents
-  #
-  # DOXX
-  # command = "doxx --template #{doc_repo.join('doxx-templates/opal.jade')} "\
-  #           "--source opal/corelib --target #{doc_base}/#{git}/#{name} "\
-  #           "--title \"Opal runtime.js Documentation\" --readme opal/README.md"
-  # puts command; system command or $stderr.puts "Please install doxx with: npm install"
-
-
   html_title = "#{base_title} API Documentation Index"
   File.write "#{base_dir}/index.html", html_template(<<-HTML.gsub(/^  /, ''), title: html_title, css: "body {font-family: sans-serif;}")
     <h1>#{html_title}</h1>
@@ -169,4 +145,30 @@ def html_template(html, title:, css: "body {font-family: sans-serif;}")
   </html>
   HTML
 end
+
+# FOR FUTURE REF:
+#
+#   DOCCO/GROC
+#   path = 'opal/opal/corelib/runtime.js'
+#   contents = File.read path
+#   normalized_contents = contents.gsub(%r{^(\s)*(?m:/\*.*?\*/ *$)}) do |match|
+#     lines = match.strip.split("\n")
+#     leading = lines.first.scan(/^ */).first + '// '
+#     normalized = lines.map do |line|
+#       line.sub(%r{^ *(?:/\*+|\* +|\*/|(?=[\S]|$))}, leading)
+#     end.compact.join("\n")
+#     "\n"+normalized
+#   end
+#   File.write path, normalized_contents
+#   puts normalized_contents
+#   # sh "groc --root opal/opal/corelib --output #{base_dir} runtime.js"
+#   sh "docco --output #{base_dir} opal/opal/corelib/runtime.js"
+#   File.write path, contents
+#
+#   DOXX
+#   command = "doxx --template #{doc_repo.join('doxx-templates/opal.jade')} "\
+#             "--source opal/corelib --target #{doc_base}/#{git}/#{name} "\
+#             "--title \"Opal runtime.js Documentation\" --readme opal/README.md"
+#   puts command; system command or $stderr.puts "Please install doxx with: npm install"
+
 
