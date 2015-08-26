@@ -75,21 +75,98 @@ task :doc => :setup do
 
 
   html_title = "#{base_title} API Documentation Index"
-  File.write "#{base_dir}/index.html", <<-HTML.gsub(/^  /, '')
+  File.write "#{base_dir}/index.html", html_template(<<-HTML.gsub(/^  /, ''), title: html_title, css: "body {font-family: sans-serif;}")
+    <h1>#{html_title}</h1>
+    <ul>
+      #{components.map {|c| "<li><a href='./#{c}/index.html'>#{c}</a></li>"}.join}
+    </ul>
+  HTML
+end
+
+task :guides => :setup do
+  base_dir   = "gh-pages/#{ref}"
+  base_title = "Opal #{ref.tr('-', '.').sub('stable', 'x')}"
+
+  pygments_css = Pygments.css(style: 'colorful')
+  css = <<-CSS
+  body {font-family: sans-serif;}
+  #{pygments_css}
+  CSS
+
+  target_paths = []
+  files = Dir['../opal/docs/*.md']
+  title_for = -> file { File.read(file).scan(/^#([^#].*?)$/).flatten.first.strip }
+  target_for = -> file { File.basename(file).sub('.md', '.html') }
+  mkdir_p base_dir
+
+  files.each do |path|
+    html_contents = markdown(File.read(path))
+    target_path = target_for[path]
+
+    html_title = "#{base_title} · #{title_for[path]}"
+    html_body = <<-HTML
+      <nav>
+        <a href="./index.html">« Back to index</a>
+      </nav>
+      <h1>#{html_title}</h1>
+      #{html_contents}
+    HTML
+
+    File.write "#{base_dir}/#{target_path}", html_template(html_body, title: html_title, css: css)
+  end
+
+  html_title = "#{base_title} · Guides"
+  html_body = %{
+    <h1>#{html_title}</h1>
+    <ul>
+      #{files.map {|t| "<li><a href='./#{target_for[t]}'>#{title_for[t]}</a></li>"}.join}
+    </ul>
+  }
+  File.write "#{base_dir}/index.html", html_template(html_body, title: html_title)
+end
+
+
+require 'redcarpet'
+require 'pygments'
+
+class HTMLwithPygments < Redcarpet::Render::HTML
+  def block_code(code, language)
+    language ||= 'text'
+    Pygments.highlight(code, lexer: language)
+  rescue
+    Pygments.highlight(code, lexer: 'text')
+  end
+end
+
+def markdown(text)
+  renderer = HTMLwithPygments.new(:hard_wrap => true, :filter_html => true)
+  options = {
+    :autolink            => true,
+    :space_after_headers => true,
+    :fenced_code_blocks  => true,
+    :tables              => true,
+    :strikethrough       => true,
+    :smart               => true,
+    :hard_wrap           => true,
+    :safelink            => true,
+    :no_intraemphasis    => true,
+  }
+  Redcarpet::Markdown.new(renderer, options).render(text)
+end
+
+def html_template(html, title:, css: "body {font-family: sans-serif;}")
+  <<-HTML.gsub(/^  /, '')
   <!doctype html>
   <html>
     <head>
-      <title>#{html_title}</title>
-      <style>body {font-family: sans-serif;}</style>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>#{title}</title>
+      <style>#{css}</style>
     </head>
     <body>
-      <h1>#{html_title}</h1>
-      <ul>
-        #{components.map {|c| "<li><a href='./#{c}/index.html'>#{c}</a></li>"}.join}
-      </ul>
+      #{html}
     </body>
   </html>
   HTML
 end
-
 
