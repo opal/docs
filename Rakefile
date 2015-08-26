@@ -4,7 +4,7 @@ end
 
 ref = ENV['REF'] or raise "Please set a REF env variable, e.g. `env REF=v0.8.0 rake doc`\n\n"
 
-task :doc do
+task :setup do
   directory? 'opal' or sh 'git clone https://github.com/opal/opal.git opal'
   directory? 'gh-pages' or sh 'git clone git@github.com:opal/docs.git gh-pages --reference . -b master'
   cd 'opal' do
@@ -18,7 +18,9 @@ task :doc do
     sh "git clean -fx"
     sh "git checkout gh-pages"
   end
+end
 
+task :doc => :setup do
   components = %w[corelib stdlib lib]
   base_dir   = "gh-pages/#{ref}"
   base_title = "Opal #{ref}"
