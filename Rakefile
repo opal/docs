@@ -120,6 +120,38 @@ class HTMLwithPygments < Redcarpet::Render::HTML
   rescue
     Pygments.highlight(code, lexer: 'text')
   end
+
+  NOTES_REGEXP = '^(TIP|IMPORTANT|CAUTION|WARNING|NOTE|INFO|TODO)[.:](.*?)'
+
+  def paragraph(text)
+    if text =~ /#{NOTES_REGEXP}/
+      convert_notes(text)
+    else
+      "<p>#{text}</p>"
+    end
+  end
+
+  def convert_notes(body)
+    # The following regexp detects special labels followed by a
+    # paragraph, perhaps at the end of the document.
+    #
+    # It is important that we do not eat more than one newline
+    # because formatting may be wrong otherwise. For example,
+    # if a bulleted list follows the first item is not rendered
+    # as a list item, but as a paragraph starting with a plain
+    # asterisk.
+    body.gsub(/#{NOTES_REGEXP}(\n(?=\n)|\Z)/m) do
+      css_class = case $1
+                  when 'CAUTION', 'IMPORTANT'
+                    'warning'
+                  when 'TIP'
+                    'info'
+                  else
+                    $1.downcase
+                  end
+      %(<div class="#{css_class}"><p>#{$2.strip}</p></div>)
+    end
+  end
 end
 
 def markdown(text)
