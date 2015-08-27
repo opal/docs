@@ -143,7 +143,7 @@ def html_template(html, title:, css: "body {font-family: sans-serif;}")
 <!doctype html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
     <title>#{title}</title>
     <style>#{css}</style>
   </head>
