@@ -55,16 +55,17 @@ task :api => :setup do
       --hyperlink-all
       #{target}
     }.gsub(/\n */, " ").strip
-
   end
 
   html_title = "#{base_title} API Documentation Index"
-  File.write "#{base_dir}/index.html", html_template(<<-HTML.gsub(/^  /, ''), title: html_title, css: "body {font-family: sans-serif;}")
+  html_body = <<-HTML
     <h1>#{html_title}</h1>
     <ul>
       #{components.map {|c| "<li><a href='./#{c}/index.html'>#{c}</a></li>"}.join}
     </ul>
   HTML
+
+  File.write "#{base_dir}/index.html", html_template(html_body, title: html_title)
 end
 
 task :guides => :setup do
@@ -86,13 +87,14 @@ task :guides => :setup do
   files.each do |path|
     html_contents = markdown(File.read(path))
     target_path = target_for[path]
-
-    html_title = "#{base_title} · #{title_for[path]}"
+    title = title_for[path]
+    puts "#{path.ljust 40} → #{title}"
+    html_title = "#{base_title} · #{title}"
     html_body = <<-HTML
       <nav>
         <a href="./index.html">« Back to index</a>
       </nav>
-      <h1>#{html_title}</h1>
+      <hr>
       #{html_contents}
     HTML
 
@@ -170,20 +172,15 @@ def markdown(text)
   Redcarpet::Markdown.new(renderer, options).render(text)
 end
 
-def html_template(html, title:, css: "body {font-family: sans-serif;}")
-<<-HTML
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>#{title}</title>
-    <style>#{css}</style>
-  </head>
-  <body>
-    #{html}
-  </body>
-</html>
-HTML
+def html_template(html, title:, css: '')
+  require 'ostruct'
+  require 'erb'
+  require 'pathname'
+  templates = Pathname(__dir__+'/templates')
+  current_page = OpenStruct.new(data: OpenStruct.new(title: title))
+  page_classes = OpenStruct.new
+  css = templates.join('application.css').read + css.to_s
+  ERB.new(templates.join('layout.erb').read).result(binding)
 end
 
 # FOR FUTURE REF:
@@ -212,3 +209,4 @@ end
 #   puts command; system command or $stderr.puts "Please install doxx with: npm install"
 
 
+task default: [:api, :guides]
