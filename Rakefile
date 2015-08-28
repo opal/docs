@@ -1,3 +1,6 @@
+require 'bundler/setup'
+Bundler.require
+
 def directory? path
   File.directory? path
 end
@@ -110,10 +113,6 @@ task :guides => :setup do
   }
   File.write "#{base_dir}/index.html", html_template(html_body, title: html_title)
 end
-
-
-require 'redcarpet'
-require 'pygments'
 
 class HTMLwithPygments < Redcarpet::Render::HTML
   def block_code(code, language)
