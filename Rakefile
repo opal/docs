@@ -28,9 +28,9 @@ task :setup do
   end
 end
 
-task :doc => :setup do
+task :api => :setup do
   components = %w[corelib stdlib lib]
-  base_dir   = "gh-pages/#{ref}"
+  base_dir   = "gh-pages/api/#{ref}"
   base_title = "Opal #{ref}"
 
   # Still need to decide how to format the runtime, for now let's just put it
@@ -68,7 +68,7 @@ task :doc => :setup do
 end
 
 task :guides => :setup do
-  base_dir   = "gh-pages/#{ref}"
+  base_dir   = "gh-pages/guides/#{ref}"
   base_title = "Opal #{ref.tr('-', '.').sub('stable', 'x')}"
 
   pygments_css = Pygments.css(style: 'colorful')
