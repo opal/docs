@@ -5,7 +5,9 @@ def directory? path
   File.directory? path
 end
 
-ref = ENV['REF'] or raise "Please set a REF env variable, e.g. `env REF=v0.8.0 rake doc`\n\n"
+def ref
+  ENV['REF'] or raise "Please set a REF env variable, e.g. `env REF=v0.8.0 rake doc`\n\n"
+end
 
 # The path to a local checkout of Opal, will use `ref` just to generate
 # documentation titles and target folders. E.g. `env LOCAL="../opal" rake …`
@@ -112,6 +114,36 @@ task :guides => :setup do
     </ul>
   }
   File.write "#{base_dir}/index.html", html_template(html_body, title: html_title)
+end
+
+task :index do
+  html_title = 'Opal Documentation Central'
+
+  api_versions = Dir['gh-pages/api/*/*/index.html'].map{|f| f.scan(%r{/api/([^/]+)/})}.flatten.uniq
+  guides_versions = Dir['gh-pages/guides/*/index.html'].map{|f| f.scan(%r{/guides/([^/]+)/})}.flatten.uniq
+
+  api_html = <<-HTML
+    <h3>API Docs</h3>
+    <ul>
+      #{api_versions.map {|v| "<li><a href='./api/#{v}/index.html'>#{v}</a></li>"}.join}
+    </ul>
+  HTML
+
+  guides_html = <<-HTML
+    <h3>Guides</h3>
+    <ul>
+      #{guides_versions.map {|v| "<li><a href='./guides/#{v}/index.html'>#{v}</a></li>"}.join}
+    </ul>
+  HTML
+
+  html_body = <<-HTML
+  <h1>#{html_title}</h1>
+  #{guides_html}
+  #{api_html}
+  HTML
+
+
+  File.write "gh-pages/index.html", html_template(html_body, title: html_title)
 end
 
 class HTMLwithPygments < Redcarpet::Render::HTML
