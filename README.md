@@ -8,3 +8,6 @@ This repo will hold the keys for generating Opal API documentation and guides on
 
 The plan is to start by generating API docs for all known opal versions, as well as continually improving the coverage on the latest release.
 
+### Running locally
+
+Use `php -S 0.0.0.0:9292 -t gh-pages/` (_shame on me for using PHP! please suggest a rackup version_)
