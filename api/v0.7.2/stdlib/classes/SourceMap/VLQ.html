@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>SourceMap::VLQ</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            SourceMap::VLQ 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/stdlib/source_map/vlq_rb.html">opal/stdlib/source_map/vlq.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Public: <a href="../Base64.html">Base64</a> <a href="VLQ.html">VLQ</a>
+encoding</p>
+
+<p>Adopted from ConradIrwin/ruby-source_map</p>
+
+<pre><code>https://github.com/ConradIrwin/ruby-source_map/blob/master/lib/source_map/vlq.rb
+</code></pre>
+
+<p>Resources</p>
+
+<pre><code>http://en.wikipedia.org/wiki/Variable-length_quantity
+https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit
+https://github.com/mozilla/source-map/blob/master/lib/source-map/base64-vlq.js</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-decode">decode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-decode_mappings">decode_mappings</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-encode">encode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-encode_mappings">encode_mappings</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">VLQ_BASE_SHIFT</td>
+            <td>=</td>
+            <td class="attr-value">5</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">VLQ_BASE</td>
+            <td>=</td>
+            <td class="attr-value">1 &lt;&lt; VLQ_BASE_SHIFT</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">VLQ_BASE_MASK</td>
+            <td>=</td>
+            <td class="attr-value">VLQ_BASE - 1</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">VLQ_CONTINUATION_BIT</td>
+            <td>=</td>
+            <td class="attr-value">VLQ_BASE</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">BASE64_DIGITS</td>
+            <td>=</td>
+            <td class="attr-value">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&#39;.split(&#39;&#39;)</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">BASE64_VALUES</td>
+            <td>=</td>
+            <td class="attr-value">(0...64).inject({}) { |h, i| h[BASE64_DIGITS[i]] = i; h }</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-decode">
+            
+              <b>decode</b>(str)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-decode" name="method-c-decode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Public: Decode a <a href="VLQ.html">VLQ</a> string.</p>
+
+<p>str - <a href="VLQ.html">VLQ</a> encoded <a
+href="../String.html">String</a></p>
+
+<p>Returns an <a href="../Array.html">Array</a> of Integers.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-decode_source')" id="l_method-c-decode_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/370a1383acdee77d25e4a451b70cf34c6d11e406/stdlib/source_map/vlq.rb#L46" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-decode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">decode</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">result</span> = []
+  <span class="ruby-identifier">chars</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">any?</span>
+    <span class="ruby-identifier">vlq</span> = <span class="ruby-number">0</span>
+    <span class="ruby-identifier">shift</span> = <span class="ruby-number">0</span>
+    <span class="ruby-identifier">continuation</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">continuation</span>
+      <span class="ruby-identifier">char</span> = <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">char</span>
+      <span class="ruby-identifier">digit</span> = <span class="ruby-constant">BASE64_VALUES</span>[<span class="ruby-identifier">char</span>]
+      <span class="ruby-identifier">continuation</span> = <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> (<span class="ruby-identifier">digit</span> <span class="ruby-operator">&amp;</span> <span class="ruby-constant">VLQ_CONTINUATION_BIT</span>) <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">digit</span> <span class="ruby-operator">&amp;=</span> <span class="ruby-constant">VLQ_BASE_MASK</span>
+      <span class="ruby-identifier">vlq</span>   <span class="ruby-operator">+=</span> <span class="ruby-identifier">digit</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">shift</span>
+      <span class="ruby-identifier">shift</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">VLQ_BASE_SHIFT</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">vlq</span> <span class="ruby-operator">&amp;</span> <span class="ruby-number">1</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-operator">?</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">vlq</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-number">1</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">vlq</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-number">1</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-decode_mappings">
+            
+              <b>decode_mappings</b>(str)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-decode_mappings" name="method-c-decode_mappings" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Public: Decode a <a href="VLQ.html">VLQ</a> string into mapping numbers.</p>
+
+<p>str - <a href="VLQ.html">VLQ</a> encoded <a
+href="../String.html">String</a></p>
+
+<p>Returns an two dimensional <a href="../Array.html">Array</a> of Integers.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-decode_mappings_source')" id="l_method-c-decode_mappings_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/370a1383acdee77d25e4a451b70cf34c6d11e406/stdlib/source_map/vlq.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-decode_mappings_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">decode_mappings</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">mappings</span> = []
+
+  <span class="ruby-identifier">str</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;;&#39;</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">group</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">mappings</span>[<span class="ruby-identifier">index</span>] = []
+    <span class="ruby-identifier">group</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;,&#39;</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">segment</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">mappings</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">decode</span>(<span class="ruby-identifier">segment</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">mappings</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-encode">
+            
+              <b>encode</b>(ary)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-encode" name="method-c-encode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Public: Encode a list of numbers into a compact <a href="VLQ.html">VLQ</a>
+string.</p>
+
+<p>ary - An <a href="../Array.html">Array</a> of Integers</p>
+
+<p>Returns a <a href="VLQ.html">VLQ</a> <a href="../String.html">String</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-encode_source')" id="l_method-c-encode_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/370a1383acdee77d25e4a451b70cf34c6d11e406/stdlib/source_map/vlq.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-encode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">ary</span>)
+  <span class="ruby-identifier">result</span> = []
+  <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">vlq</span> = <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> ((<span class="ruby-operator">-</span><span class="ruby-identifier">n</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-number">1</span>) <span class="ruby-operator">+</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">digit</span>  = <span class="ruby-identifier">vlq</span> <span class="ruby-operator">&amp;</span> <span class="ruby-constant">VLQ_BASE_MASK</span>
+      <span class="ruby-identifier">vlq</span>  <span class="ruby-operator">&gt;&gt;=</span> <span class="ruby-constant">VLQ_BASE_SHIFT</span>
+      <span class="ruby-identifier">digit</span> <span class="ruby-operator">|=</span> <span class="ruby-constant">VLQ_CONTINUATION_BIT</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">vlq</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">BASE64_DIGITS</span>[<span class="ruby-identifier">digit</span>]
+    <span class="ruby-keyword">end</span> <span class="ruby-keyword">while</span> <span class="ruby-identifier">vlq</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-encode_mappings">
+            
+              <b>encode_mappings</b>(ary)
+            
+            <a href="../../classes/SourceMap/VLQ.html#method-c-encode_mappings" name="method-c-encode_mappings" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Public: Encode a mapping array into a compact <a href="VLQ.html">VLQ</a>
+string.</p>
+
+<p>ary - Two dimensional <a href="../Array.html">Array</a> of Integers.</p>
+
+<p>Returns a <a href="VLQ.html">VLQ</a> encoded <a
+href="../String.html">String</a> seperated by , and ;.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-encode_mappings_source')" id="l_method-c-encode_mappings_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/370a1383acdee77d25e4a451b70cf34c6d11e406/stdlib/source_map/vlq.rb#L72" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-encode_mappings_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/source_map/vlq.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">encode_mappings</span>(<span class="ruby-identifier">ary</span>)
+  <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">group</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">group</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">segment</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">encode</span>(<span class="ruby-identifier">segment</span>)
+    }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;,&#39;</span>)
+  }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;;&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

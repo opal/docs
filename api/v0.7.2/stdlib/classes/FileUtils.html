@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>FileUtils</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            FileUtils 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/opal/stdlib/nodejs/fileutils_rb.html">opal/stdlib/nodejs/fileutils.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cp">cp</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-makedirs">makedirs</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mkdir_p">mkdir_p</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mkpath">mkpath</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mv">mv</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-rm">rm</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-cp">
+            
+              <b>cp</b>(source, target)
+            
+            <a href="../classes/FileUtils.html#method-i-cp" name="method-i-cp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cp_source')" id="l_method-i-cp_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/aeb4a6dc1afb8a726f760b0cfea51af1b97805f4/stdlib/nodejs/fileutils.rb#L10" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-cp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/fileutils.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cp</span> <span class="ruby-identifier">source</span>, <span class="ruby-identifier">target</span>
+  <span class="ruby-identifier">target</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">target</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">source</span>)) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">target</span>
+  <span class="ruby-value">%x`__fs__.writeFileSync(target, __fs__.readFileSync(source));`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-makedirs">
+            
+              <b>makedirs</b>(path)
+            
+            <a href="../classes/FileUtils.html#method-i-makedirs" name="method-i-makedirs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="FileUtils.html#method-i-mkdir_p">mkdir_p</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mkdir_p">
+            
+              <b>mkdir_p</b>(path)
+            
+            <a href="../classes/FileUtils.html#method-i-mkdir_p" name="method-i-mkdir_p" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+            <div class="aka">
+              Also aliased as: <a href="FileUtils.html#method-i-mkpath">mkpath</a>, <a href="FileUtils.html#method-i-makedirs">makedirs</a>
+            </div>
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mkdir_p_source')" id="l_method-i-mkdir_p_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/aeb4a6dc1afb8a726f760b0cfea51af1b97805f4/stdlib/nodejs/fileutils.rb#L5" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mkdir_p_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/fileutils.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mkdir_p</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-node">%x`__fs__.mkdirSync(#{path})`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mkpath">
+            
+              <b>mkpath</b>(path)
+            
+            <a href="../classes/FileUtils.html#method-i-mkpath" name="method-i-mkpath" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+            <div class="aka">
+              Alias for: <a href="FileUtils.html#method-i-mkdir_p">mkdir_p</a>
+            </div>
+          
+          
+          
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mv">
+            
+              <b>mv</b>(source, target)
+            
+            <a href="../classes/FileUtils.html#method-i-mv" name="method-i-mv" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mv_source')" id="l_method-i-mv_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/aeb4a6dc1afb8a726f760b0cfea51af1b97805f4/stdlib/nodejs/fileutils.rb#L19" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-mv_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/fileutils.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mv</span> <span class="ruby-identifier">source</span>, <span class="ruby-identifier">target</span>
+  <span class="ruby-identifier">target</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">target</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">source</span>)) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">target</span>
+  <span class="ruby-value">%x`__fs__.renameSync(source, target)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-rm">
+            
+              <b>rm</b>(path)
+            
+            <a href="../classes/FileUtils.html#method-i-rm" name="method-i-rm" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-rm_source')" id="l_method-i-rm_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/aeb4a6dc1afb8a726f760b0cfea51af1b97805f4/stdlib/nodejs/fileutils.rb#L15" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-rm_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/stdlib/nodejs/fileutils.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">rm</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-value">%x`__fs__.unlinkSync(path)`</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Opal::SourceMapServer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Opal::SourceMapServer 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/opal/lib/opal/sprockets/server_rb.html">opal/lib/opal/sprockets/server.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-call">call</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inspect">inspect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-not_found">not_found</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-register">register</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>prefix</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>sprockets</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(sprockets, prefix = &#39;/&#39;)
+            
+            <a href="../../classes/Opal/SourceMapServer.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/51ed21ac1d55227bdab29627b02f51816434bc3a/lib/opal/sprockets/server.rb#L16" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/server.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span> <span class="ruby-identifier">sprockets</span>, <span class="ruby-identifier">prefix</span> = <span class="ruby-string">&#39;/&#39;</span>
+  <span class="ruby-ivar">@sprockets</span> = <span class="ruby-identifier">sprockets</span>
+  <span class="ruby-ivar">@prefix</span> = <span class="ruby-identifier">prefix</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-call">
+            
+              <b>call</b>(env)
+            
+            <a href="../../classes/Opal/SourceMapServer.html#method-i-call" name="method-i-call" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_source')" id="l_method-i-call_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/51ed21ac1d55227bdab29627b02f51816434bc3a/lib/opal/sprockets/server.rb#L27" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-call_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/server.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call</span>(<span class="ruby-identifier">env</span>)
+  <span class="ruby-identifier">prefix_regex</span> = <span class="ruby-node">%r{^(?:#{prefix}/|/)}</span>
+  <span class="ruby-identifier">path_info</span> = <span class="ruby-identifier">env</span>[<span class="ruby-string">&#39;PATH_INFO&#39;</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-identifier">prefix_regex</span>, <span class="ruby-string">&#39;&#39;</span>)
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">path_info</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-regexp">%r{^(.*)\.map$}</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-node">$1</span>
+    <span class="ruby-identifier">asset</span>  = <span class="ruby-identifier">sprockets</span>[<span class="ruby-identifier">path</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">not_found</span>(<span class="ruby-identifier">path</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">asset</span>.<span class="ruby-identifier">nil?</span>
+
+    <span class="ruby-comment"># &quot;logical_name&quot; of a BundledAsset keeps the .js extension</span>
+    <span class="ruby-identifier">source</span> = <span class="ruby-identifier">register</span>[<span class="ruby-identifier">asset</span>.<span class="ruby-identifier">logical_path</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/\.js$/</span>, <span class="ruby-string">&#39;&#39;</span>)]
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">not_found</span>(<span class="ruby-identifier">asset</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">nil?</span>
+
+    <span class="ruby-identifier">map</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>)
+    <span class="ruby-identifier">map</span>[<span class="ruby-string">&#39;sources&#39;</span>] = <span class="ruby-identifier">map</span>[<span class="ruby-string">&#39;sources&#39;</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{prefix}/#{s}&quot;</span>}
+    <span class="ruby-identifier">source</span> = <span class="ruby-identifier">map</span>.<span class="ruby-identifier">to_json</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">not_found</span>(<span class="ruby-identifier">asset</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">nil?</span>
+
+    <span class="ruby-keyword">return</span> [<span class="ruby-number">200</span>, {<span class="ruby-string">&quot;Content-Type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;text/json&quot;</span>}, [<span class="ruby-identifier">source</span>.<span class="ruby-identifier">to_s</span>]]
+  <span class="ruby-keyword">when</span> <span class="ruby-regexp">%r{^(.*)\.rb$}</span>
+    <span class="ruby-identifier">source</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">sprockets</span>.<span class="ruby-identifier">resolve</span>(<span class="ruby-identifier">path_info</span>))
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">not_found</span>(<span class="ruby-identifier">path_info</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">return</span> [<span class="ruby-number">200</span>, {<span class="ruby-string">&quot;Content-Type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;text/ruby&quot;</span>}, [<span class="ruby-identifier">source</span>]]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">not_found</span>(<span class="ruby-identifier">path_info</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inspect">
+            
+              <b>inspect</b>()
+            
+            <a href="../../classes/Opal/SourceMapServer.html#method-i-inspect" name="method-i-inspect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inspect_source')" id="l_method-i-inspect_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/51ed21ac1d55227bdab29627b02f51816434bc3a/lib/opal/sprockets/server.rb#L23" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-inspect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/server.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inspect</span>
+  <span class="ruby-node">&quot;#&lt;#{self.class}:#{object_id}&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-not_found">
+            
+              <b>not_found</b>(*messages)
+            
+            <a href="../../classes/Opal/SourceMapServer.html#method-i-not_found" name="method-i-not_found" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-not_found_source')" id="l_method-i-not_found_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/51ed21ac1d55227bdab29627b02f51816434bc3a/lib/opal/sprockets/server.rb#L56" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-not_found_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/server.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">not_found</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">messages</span>)
+  <span class="ruby-identifier">not_found</span> = [<span class="ruby-number">404</span>, {}, [{<span class="ruby-identifier">not_found</span><span class="ruby-operator">:</span> <span class="ruby-identifier">messages</span>, <span class="ruby-identifier">keys</span><span class="ruby-operator">:</span> <span class="ruby-identifier">register</span>.<span class="ruby-identifier">keys</span>}.<span class="ruby-identifier">inspect</span>]]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-register">
+            
+              <b>register</b>()
+            
+            <a href="../../classes/Opal/SourceMapServer.html#method-i-register" name="method-i-register" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-register_source')" id="l_method-i-register_source">show</a>
+                
+                  | <a href="https://github.com/opal/opal/blob/51ed21ac1d55227bdab29627b02f51816434bc3a/lib/opal/sprockets/server.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                
+              </p>
+              <div id="method-i-register_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File opal/lib/opal/sprockets/server.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">register</span>
+  <span class="ruby-constant">Opal</span><span class="ruby-operator">::</span><span class="ruby-constant">Processor</span>.<span class="ruby-identifier">source_map_register</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    
