@@ -10,4 +10,4 @@ The plan is to start by generating API docs for all known opal versions, as well
 
 ### Running locally
 
-Use `php -S 0.0.0.0:9292 -t gh-pages/` (_shame on me for using PHP! please suggest a rackup version_)
+Use `ruby -run -e httpd gh-pages -p 5000`

@@ -6,7 +6,6 @@ GEM
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
-    rack (1.6.4)
     rake (10.4.2)
     rdoc (4.2.0)
     redcarpet (3.3.2)
@@ -20,7 +19,6 @@ PLATFORMS
 
 DEPENDENCIES
   pygments.rb
-  rack
   rake
   redcarpet
   sdoc
