@@ -9,6 +9,10 @@ def ref
   ENV['REF'] or raise "Please set a REF env variable, e.g. `env REF=v0.8.0 rake doc`\n\n"
 end
 
+def components
+  %w[corelib stdlib lib]
+end
+
 # The path to a local checkout of Opal, will use `ref` just to generate
 # documentation titles and target folders. E.g. `env LOCAL="../opal" rake …`
 local = ENV['LOCAL']
@@ -33,10 +37,12 @@ task :setup do
   end
 end
 
+def base_title
+  "Opal #{ref.tr('-', '.').sub('stable', 'x')}"
+end
+
 task :api => :setup do
-  components = %w[corelib stdlib lib]
   base_dir   = "gh-pages/api/#{ref}"
-  base_title = "Opal #{ref}"
 
   # Still need to decide how to format the runtime, for now let's just put it
   # in a markdown file and render it as it is.
@@ -45,37 +51,12 @@ task :api => :setup do
   File.write "#{opal_dir}/opal/corelib/runtime.js.md", "# Opal Runtime:\n\n```js\n#{File.read path}\n```\n"
 
   components.each do |component|
-    target = case component
-             when 'corelib' then 'opal/opal'
-             when 'stdlib'  then 'opal/stdlib'
-             when 'lib'     then 'opal/lib'
-             end
-
-    sh %{
-      sdoc
-      --format sdoc
-      --github
-      --output #{base_dir}/#{component}
-      --title "#{base_title} · #{component}"
-      --hyperlink-all
-      #{target}
-    }.gsub(/\n */, " ").strip
+    sdoc(component: component, base_dir: base_dir, base_title: base_title)
   end
-
-  html_title = "#{base_title} API Documentation Index"
-  html_body = <<-HTML
-    <h1>#{html_title}</h1>
-    <ul>
-      #{components.map {|c| "<li><a href='./#{c}/index.html'>#{c}</a></li>"}.join}
-    </ul>
-  HTML
-
-  File.write "#{base_dir}/index.html", html_template(html_body, title: html_title)
 end
 
 task :guides => :setup do
   base_dir   = "gh-pages/guides/#{ref}"
-  base_title = "Opal #{ref.tr('-', '.').sub('stable', 'x')}"
 
   pygments_css = Pygments.css(style: 'colorful')
   css = <<-CSS
@@ -117,10 +98,15 @@ task :guides => :setup do
 end
 
 task :index do
-  html_title = 'Opal Documentation Central'
+  html_title = 'Opal · Documentation Central'
 
   api_versions = Dir['gh-pages/api/*/*/index.html'].map{|f| f.scan(%r{/api/([^/]+)/})}.flatten.uniq
   guides_versions = Dir['gh-pages/guides/*/index.html'].map{|f| f.scan(%r{/guides/([^/]+)/})}.flatten.uniq
+
+  api_versions.each do |version|
+    ENV['REF'] = version
+    components_index(base_title: base_title, components: components, base_dir: "gh-pages/api/#{version}")
+  end
 
   api_html = <<-HTML
     <h3>API Docs</h3>
@@ -144,6 +130,36 @@ task :index do
 
 
   File.write "gh-pages/index.html", html_template(html_body, title: html_title)
+end
+
+def sdoc(component:, base_dir:, base_title:)
+  target = case component
+           when 'corelib' then 'opal/opal'
+           when 'stdlib'  then 'opal/stdlib'
+           when 'lib'     then 'opal/lib'
+           end
+
+  sh %{
+    sdoc
+    --format sdoc
+    --github
+    --output #{base_dir}/#{component}
+    --title "#{base_title} · #{component}"
+    --hyperlink-all
+    #{target}
+  }.gsub(/\n */, " ").strip
+end
+
+def components_index(base_title:, components:, base_dir:)
+  html_title = "#{base_title} API Documentation Index"
+  html_body = <<-HTML
+    <h1>#{html_title}</h1>
+    <ul>
+      #{components.map {|c| "<li><a href='./#{c}/index.html'>#{c}</a></li>"}.join}
+    </ul>
+  HTML
+
+  File.write "#{base_dir}/index.html", html_template(html_body, title: html_title)
 end
 
 class HTMLwithPygments < Redcarpet::Render::HTML
