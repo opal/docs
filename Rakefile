@@ -23,9 +23,10 @@ task :setup do
   unless local
     directory? 'opal' or sh 'git clone https://github.com/opal/opal.git opal'
     cd 'opal' do
+      sh "git fetch --all"
       sh "git reset --hard"
       sh "git clean -fx"
-      sh "git checkout #{ref}"
+      sh "git checkout --detach origin/#{ref}"
     end
   end
 
