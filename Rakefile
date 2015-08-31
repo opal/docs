@@ -5,8 +5,8 @@ def directory? path
   File.directory? path
 end
 
-def ref
-  ENV['REF'] or raise "Please set a REF env variable, e.g. `env REF=v0.8.0 rake doc`\n\n"
+def ref(raw_ref: ENV['REF'])
+  raw_ref or raise "Please set a REF env variable, e.g. `env REF=v0.8.0 rake doc`\n\n"
 end
 
 def components
@@ -39,7 +39,11 @@ task :setup do
 end
 
 def base_title
-  "Opal #{ref.tr('-', '.').sub('stable', 'x')}"
+  "Opal #{pretty_ref(ref)}"
+end
+
+def pretty_ref(ref)
+  ref.tr('-', '.').sub('stable', 'x')
 end
 
 task :api => :setup do
@@ -112,14 +116,14 @@ task :index do
   api_html = <<-HTML
     <h3>API Docs</h3>
     <ul>
-      #{api_versions.map {|v| "<li><a href='./api/#{v}/index.html'>#{v}</a></li>"}.join}
+      #{api_versions.map {|v| "<li><a href='./api/#{v}/index.html'>#{pretty_ref(v)}</a></li>"}.join}
     </ul>
   HTML
 
   guides_html = <<-HTML
     <h3>Guides</h3>
     <ul>
-      #{guides_versions.map {|v| "<li><a href='./guides/#{v}/index.html'>#{v}</a></li>"}.join}
+      #{guides_versions.map {|v| "<li><a href='./guides/#{v}/index.html'>#{pretty_ref(v)}</a></li>"}.join}
     </ul>
   HTML
 
