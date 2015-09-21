@@ -105,8 +105,8 @@ end
 task :index do
   html_title = 'Opal · Documentation Central'
 
-  api_versions = Dir['gh-pages/api/*/*/index.html'].map{|f| f.scan(%r{/api/([^/]+)/})}.flatten.uniq
-  guides_versions = Dir['gh-pages/guides/*/index.html'].map{|f| f.scan(%r{/guides/([^/]+)/})}.flatten.uniq
+  api_versions    = Dir['gh-pages/api/*/*/index.html' ].map{|f| f.scan(%r{/api/([^/]+)/})   }.flatten.uniq.sort.reverse
+  guides_versions = Dir['gh-pages/guides/*/index.html'].map{|f| f.scan(%r{/guides/([^/]+)/})}.flatten.uniq.sort.reverse
 
   api_versions.each do |version|
     ENV['REF'] = version
@@ -147,6 +147,7 @@ def sdoc(component:, base_dir:, base_title:)
   sh %{
     sdoc
     --format sdoc
+    --markup tomdoc
     --github
     --output #{base_dir}/#{component}
     --title "#{base_title} · #{component}"
