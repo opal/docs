@@ -26,7 +26,7 @@ task :setup do
       sh "git fetch --all"
       sh "git reset --hard"
       sh "git clean -fx"
-      sh "git checkout --detach origin/#{ref}"
+      sh "git checkout --detach #{ref}"
     end
   end
 
