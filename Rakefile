@@ -168,7 +168,7 @@ def yard(component:, base_dir:, base_title:)
       yard
       --output #{target.split('/').map{'..'}.join('/')}/#{base_dir}/#{component}
       --title "#{component} (#{base_title})"
-      **/*.rb
+      '**/*.rb'
     }.gsub(/\n */, " ").strip
   end
 end
