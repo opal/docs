@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ruby -run -e httpd gh-pages -p 5000

@@ -4,10 +4,18 @@ This repo will hold the keys for generating Opal API documentation and guides on
 
 [![documentation: Opal API](http://img.shields.io/badge/API%20documentation-read%20now-blue.svg)](https://opal.github.io/docs/index.html)
 
-### Roadmap
+### Generating docs for a single version
 
-The plan is to start by generating API docs for all known opal versions, as well as continually improving the coverage on the latest release.
+The passed version needs to be a valid git ref (e.g. a tag)
 
-### Running locally
+    bin/build v0.5.5
+    bin/build master
 
-Use `ruby -run -e httpd gh-pages -p 5000`
+### Rebuilding all the docs
+
+    bin/build-all
+
+### Previewing locally
+
+    bin/server # will use port 5000
+
