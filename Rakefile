@@ -56,7 +56,7 @@ task :api => :setup do
   File.write "#{opal_dir}/opal/corelib/runtime.js.md", "# Opal Runtime:\n\n```js\n#{File.read path}\n```\n"
 
   components.each do |component|
-    sdoc(component: component, base_dir: base_dir, base_title: base_title)
+    yard(component: component, base_dir: base_dir, base_title: base_title)
   end
 end
 
@@ -154,6 +154,23 @@ def sdoc(component:, base_dir:, base_title:)
     --hyperlink-all
     #{target}
   }.gsub(/\n */, " ").strip
+end
+
+def yard(component:, base_dir:, base_title:)
+  target = case component
+           when 'corelib' then 'opal/opal'
+           when 'stdlib'  then 'opal/stdlib'
+           when 'lib'     then 'opal/lib'
+           end
+
+  cd target do
+    sh %{
+      yard
+      --output #{target.split('/').map{'..'}.join('/')}/#{base_dir}/#{component}
+      --title "#{component} (#{base_title})"
+      **/*.rb
+    }.gsub(/\n */, " ").strip
+  end
 end
 
 def components_index(base_title:, components:, base_dir:)

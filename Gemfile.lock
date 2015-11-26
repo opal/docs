@@ -1,17 +1,18 @@
+GIT
+  remote: git://github.com/lsegal/yard.git
+  revision: 62b1c5ace0f2a087bcfa09cdcdc518153d595c77
+  specs:
+    yard (0.8.7.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    json (1.8.3)
     posix-spawn (0.3.11)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
     rake (10.4.2)
-    rdoc (4.2.0)
     redcarpet (3.3.2)
-    sdoc (0.4.1)
-      json (~> 1.7, >= 1.7.7)
-      rdoc (~> 4.0)
     yajl-ruby (1.2.1)
 
 PLATFORMS
@@ -21,7 +22,7 @@ DEPENDENCIES
   pygments.rb
   rake
   redcarpet
-  sdoc
+  yard!
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

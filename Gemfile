@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'sdoc'
+gem 'yard', github: 'lsegal/yard'
 gem 'rake'
 gem 'redcarpet'
 gem 'pygments.rb'
