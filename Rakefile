@@ -10,7 +10,8 @@ def ref(raw_ref: ENV['REF'])
 end
 
 def components
-  %w[lib corelib stdlib]
+  # %w[lib corelib stdlib]
+  %w[corelib]
 end
 
 # The path to a local checkout of Opal, will use `ref` just to generate
@@ -52,8 +53,13 @@ task :api => :setup do
   # Still need to decide how to format the runtime, for now let's just put it
   # in a markdown file and render it as it is.
   # Below some possible alternative implementations with DOCCO/GROC/DOXX.
-  path = "#{opal_dir}/opal/corelib/runtime.js"
-  File.write "#{opal_dir}/opal/corelib/runtime.js.md", "# Opal Runtime:\n\n```js\n#{File.read path}\n```\n"
+  markdown_path = "#{opal_dir}/opal/corelib/runtime.js"
+  markdown_lines = runtime_markdown(runtime_docs(File.read markdown_path))
+  File.write "#{opal_dir}/opal/corelib/RUNTIME.md", markdown_lines.join("\n")
+
+  # ruby_path = "#{opal_dir}/opal/corelib/runtime.js"
+  # ruby_lines = runtime_ruby(runtime_docs(File.read ruby_path))
+  # File.write "#{opal_dir}/opal/corelib/runtime.js.rb", ruby_lines.join("\n")
 
   components.each do |component|
     yard(component: component, base_dir: base_dir, base_title: base_title)
@@ -171,6 +177,8 @@ def yard(component:, base_dir:, base_title:)
       --db .yardoc-#{base_dir.downcase.gsub(/[^a-z\d]/,'-')}-#{component}
       --exclude 'node_modules'
       '**/*.rb'
+      -
+      **/*.md
     }.gsub(/\n */, " ").strip
   end
 end
@@ -253,6 +261,147 @@ def html_template(html, title:, css: '')
   page_classes = OpenStruct.new
   css = templates.join('application.css').read + css.to_s
   ERB.new(templates.join('layout.erb').read).result(binding)
+end
+
+# @returns some fake ruby code containing the docs and the code coming from runtime.js
+def runtime_docs(runtime_js_code)
+  # puts runtime_js_code
+  puts '='*80
+  lines = runtime_js_code.split("\n")
+  # puts lines.map {|l| '>> '+l}
+  puts '='*80
+  functions = []
+  in_comment = false
+  require 'pp'
+  scan_block_comment = -> lines {
+    next if lines.empty?
+    next unless lines.first.to_s.strip.start_with?('/*')
+    # p start_block: lines.first
+    lines.shift # skip the start
+    comment = []
+    comment << lines.shift.strip.gsub(/^\*+ /, '') until lines.first.strip.end_with? '*/'
+    # p comment: comment
+    lines.shift # skip the end
+    # pp block_comment: comment
+    comment
+  }
+  scan_line_comment = -> lines {
+    next if lines.empty?
+    next unless lines.first.strip.start_with? '//'
+    # p start_line: lines.first
+    comment = []
+    comment << lines.shift.strip.gsub(%r{^// ?}, '') while lines.first.strip.start_with? '//'
+    # pp line_comment: comment
+    comment
+  }
+  skip_blank_lines = -> lines {
+    next if lines.empty?
+    lines.shift if lines.first.strip.empty?
+  }
+  scan_function_body = -> lines {
+    next if lines.empty?
+    next unless lines.first =~ /\bfunction[^}]*$/
+    indentation = lines.first.scan(/^(\s*)\S/).flatten.first
+    # p start_func: lines.first, indentation: indentation
+    body = [lines.shift]
+    until lines.first =~ /^#{indentation}\};?/
+      body << lines.shift
+    end
+    body << lines.shift # the closure
+    # pp func: body
+    body
+  }
+
+  scan_line = -> lines {
+    line = lines.shift
+    # pp line: line
+    [line]
+  }
+  # p lines
+  until lines.empty?
+    current ||= {}
+    # p lines.first
+    # we're done with this
+    if current[:body]
+      functions << current
+      current = nil
+      next
+    end
+
+    current[:comment] = scan_block_comment[lines] || scan_line_comment[lines]
+    if current[:comment]
+      current[:body] = scan_function_body[lines] || scan_line[lines]
+    else
+      lines.shift
+    end
+  end
+
+  functions
+end
+
+def runtime_markdown(data)
+  extract_function_name = -> first_line {
+    function_args = ' *\(([^\)]*)\)\{'
+    first_line = first_line.strip.chomp(';').chomp("{").sub(/^var /, '').strip
+    case first_line
+    when /\W((?:Opal\.)?\w+) *= *function#{function_args}/ then "function: `#{$1}(#{$2}})`"
+    when /function *(\w+)#{function_args}/                 then "function: `#{$1}(#{$2})`"
+    else "`#{first_line}`"
+    end
+  }
+
+  markdown = [
+    '# runtime.js'
+  ]
+
+  data.each do |comment:, body:|
+    markdown << "## #{extract_function_name[body.first]}"
+    markdown << ""
+    markdown += comment
+    markdown << ""
+    markdown << "```js"
+    lead_space = body.first.scan(/^( *)/).flatten.first
+    markdown += body.map{|line| line.gsub(/^#{lead_space}/, '') }
+    markdown << "```"
+    markdown << ""
+    markdown << ""
+  end
+
+  markdown
+end
+
+def runtime_ruby(data)
+  extract_function_name = -> first_line {
+    function_args = ' *\(([^\)]*)\)\{'
+    first_line = first_line.strip.chomp(';').chomp("{").sub(/^var /, '').strip
+    case first_line
+    when /\W((?:Opal\.)?\w+) *= *function#{function_args}/ then "function: `#{$1}(#{$2}})`"
+    when /function *(\w+)#{function_args}/                 then "function: `#{$1}(#{$2})`"
+    else "`#{first_line}`"
+    end
+  }
+
+  ruby = [
+    'module Opal::Runtime'
+  ]
+
+  data.each do |comment:, body:|
+    method_name = extract_function_name[body.first]
+    ruby << "# @!method #{method_name}"
+    ruby += comment.map {|l| "# #{l}"}
+    # ruby << "def #{method_name.gsub(/[\W\-]+/, '_')}"
+    ruby << "<<-JAVASCRIPT"
+    lead_space = body.first.scan(/^( *)/).flatten.first
+    ruby += body.map{|line| line.gsub(/^#{lead_space}/, '') }
+    ruby << "JAVASCRIPT"
+    # ruby << "end"
+    ruby << ""
+    ruby << ""
+  end
+
+  ruby << 'end'
+
+  ruby
 end
 
 # FOR FUTURE REF:
