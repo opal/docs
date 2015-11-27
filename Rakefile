@@ -169,6 +169,7 @@ def yard(component:, base_dir:, base_title:)
       --output #{target.split('/').map{'..'}.join('/')}/#{base_dir}/#{component}
       --title "#{component} (#{base_title})"
       --db .yardoc-#{base_dir.downcase.gsub(/[^a-z\d]/,'-')}-#{component}
+      --exclude 'node_modules'
       '**/*.rb'
     }.gsub(/\n */, " ").strip
   end
