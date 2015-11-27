@@ -19,3 +19,6 @@ The passed version needs to be a valid git ref (e.g. a tag)
 
     bin/server # will use port 5000
 
+### Publishing (only with commit access)
+
+    bin/deploy
