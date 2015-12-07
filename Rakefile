@@ -30,12 +30,12 @@ task :setup do
     end
   end
 
-  directory? 'gh-pages' or sh 'git clone git@github.com:opal/docs.git gh-pages --reference . -b master'
+  directory? 'gh-pages' or sh 'git clone git@github.com:opal/docs.git gh-pages --reference . -b gh-pages'
   cd 'gh-pages' do
     sh "git reset --hard"
     sh "git clean -fx"
     sh "git checkout gh-pages"
-  end
+  end unless ENV['SKIP_GH_PAGES_RESET']
 end
 
 def base_title
@@ -51,14 +51,13 @@ task :api => :setup do
 
   # Still need to decide how to format the runtime, for now let's just put it
   # in a markdown file and render it as it is.
-  # Below some possible alternative implementations with DOCCO/GROC/DOXX.
-  markdown_path = "#{opal_dir}/opal/corelib/runtime.js"
-  markdown_lines = runtime_markdown(runtime_docs(File.read markdown_path))
+  runtime_path = "#{opal_dir}/opal/corelib/runtime.js"
+
+  markdown_lines = runtime_markdown(runtime_docs(File.read runtime_path))
   File.write "#{opal_dir}/opal/corelib/RUNTIME.md", markdown_lines.join("\n")
 
-  # ruby_path = "#{opal_dir}/opal/corelib/runtime.js"
-  # ruby_lines = runtime_ruby(runtime_docs(File.read ruby_path))
-  # File.write "#{opal_dir}/opal/corelib/runtime.js.rb", ruby_lines.join("\n")
+  ruby_lines = runtime_ruby(runtime_docs(File.read runtime_path))
+  File.write "#{opal_dir}/opal/corelib/runtime.js.rb", ruby_lines.join("\n")
 
   components.each do |component|
     yard(component: component, base_dir: base_dir, base_title: base_title)
@@ -170,12 +169,13 @@ def yard(component:, base_dir:, base_title:)
 
   cd target do
     sh %{
-      yard
+      yardoc
       --output #{target.split('/').map{'..'}.join('/')}/#{base_dir}/#{component}
       --title "#{component} (#{base_title})"
       --db .yardoc-#{base_dir.downcase.gsub(/[^a-z\d]/,'-')}-#{component}
       --exclude 'node_modules'
-      '**/*.rb'
+      --markup markdown
+      '**/*.rb' '**/*.js.rb'
       -
       **/*.md
     }.gsub(/\n */, " ").strip
@@ -370,34 +370,34 @@ def runtime_markdown(data)
 end
 
 def runtime_ruby(data)
-  extract_function_name = -> first_line {
-    function_args = ' *\(([^\)]*)\)\{'
-    first_line = first_line.strip.chomp(';').chomp("{").sub(/^var /, '').strip
-    case first_line
-    when /\W((?:Opal\.)?\w+) *= *function#{function_args}/ then "function: `#{$1}(#{$2}})`"
-    when /function *(\w+)#{function_args}/                 then "function: `#{$1}(#{$2})`"
-    else "`#{first_line}`"
-    end
+  extract_function_name = -> line {
+    next unless line =~ /function/
+
+    name = line.scan(/Opal\.\w+|function +(\w+)/).flatten.first
+    args = line.scan(/function[^(]*\(([^(]*)\)/).flatten.first
+    return name, args
   }
 
-  ruby = [
-    'module Opal::Runtime'
-  ]
+  ruby = []
 
   data.each do |comment:, body:|
-    method_name = extract_function_name[body.first]
-    ruby << "# @!method #{method_name}"
-    ruby += comment.map {|l| "# #{l}"}
-    # ruby << "def #{method_name.gsub(/[\W\-]+/, '_')}"
+    method_name, method_args = extract_function_name[body.first]
+    next if method_name.nil? or method_name =~ /^[A-Z]/
+
+    ruby += comment.map {|l| "# #{l.gsub("@returns", "@return")}"}
+    # ruby << "define_method #{method_name.inspect} do |*args|"
+    ruby << "def (JS::Opal).#{method_name}(*)"
     ruby << "<<-JAVASCRIPT"
     lead_space = body.first.scan(/^( *)/).flatten.first
-    ruby += body.map{|line| line.gsub(/^#{lead_space}/, '') }
+    ruby += body.map{|line| "   "+line.gsub(/^#{lead_space}/, '') }
     ruby << "JAVASCRIPT"
-    # ruby << "end"
+    ruby << "end"
     ruby << ""
     ruby << ""
   end
+  ruby.map! {|l| '  '+l}
 
+  ruby.unshift 'module JS::Opal'
   ruby << 'end'
 
   ruby

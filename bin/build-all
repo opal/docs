@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+system 'rake setup REF=master'
+
 %w[
   v0.5.5
   v0.6.3
@@ -10,5 +12,5 @@
   v0.8.1
   v0.9.0.beta2
 ].each do |ref|
-  system "#{__dir__}/build #{ref}"
+  system({'SKIP_GH_PAGES_RESET' => 'true'}, "#{__dir__}/build #{ref}")
 end

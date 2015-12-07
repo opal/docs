@@ -3,4 +3,4 @@
 ref=${1:-master}
 
 rake REF="$ref"
-rake index
+rake index REF="$ref"
