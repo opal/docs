@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: hash
+  
+    &mdash; corelib (Opal v0.8.1)
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "hash";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: hash</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="file_list.html"></iframe>
+
+      <div id="content"><div id='filecontents'><pre class="code ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>corelib/enumerable</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>Hash</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'>Enumerable</span>
+
+  <span class='comment'># Mark all hash instances as valid hashes (used to check keyword args, etc)
+</span>  <span class='backtick'>`</span><span class='tstring_content'>def.$$is_hash = true</span><span class='tstring_end'>`</span></span>
+
+  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_argv'>argv</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var hash, i, argc = argv.length;
+
+      if (argc === 1) {
+        hash = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to?'>coerce_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_argv'>argv</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Hash</span><span class='comma'>,</span> <span class='symbol'>:to_hash</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        if (hash !== nil) {
+          return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_allocate'>allocate</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>hash</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        }
+
+        argv = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to?'>coerce_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_argv'>argv</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Array</span><span class='comma'>,</span> <span class='symbol'>:to_ary</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        if (argv === nil) {
+          </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>odd number of arguments for Hash</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+        }
+
+        argc = argv.length;
+        hash = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_allocate'>allocate</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+
+        for (i = 0; i &lt; argc; i++) {
+          if (!argv[i].$$is_array) continue;
+          switch(argv[i].length) {
+          case 1:
+            hash.$store(argv[i][0], nil);
+            break;
+          case 2:
+            hash.$store(argv[i][0], argv[i][1]);
+            break;
+          default:
+            </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid number of elements (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>argv[i].length</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> for 1..2)</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+          }
+        }
+
+        return hash;
+      }
+
+      if (argc % 2 !== 0) {
+        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>odd number of arguments for Hash</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+      }
+
+      hash = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_allocate'>allocate</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+
+      for (i = 0; i &lt; argc; i += 2) {
+        hash.$store(argv[i], argv[i + 1]);
+      }
+
+      return hash;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_allocate'>allocate</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var hash = new self.$$alloc;
+
+      hash.map  = {};
+      hash.smap = {};
+      hash.keys = [];
+      hash.none = nil;
+      hash.proc = nil;
+
+      return hash;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      self.none = (defaults === undefined ? nil : defaults);
+      self.proc = block;
+    </span><span class='tstring_end'>}</span></span>
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (self === other) {
+        return true;
+      }
+
+      if (!other.keys || !other.smap || !other.map) {
+        return false;
+      }
+
+      if (self.keys.length !== other.keys.length) {
+        return false;
+      }
+
+      var _map  = self.map,
+          smap  = self.smap,
+          _map2 = other.map,
+          smap2 = other.smap,
+          map, map2, key, khash, value, value2;
+
+      for (var i = 0, length = self.keys.length; i &lt; length; i++) {
+        key = self.keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map   = smap;
+          map2  = smap2;
+        } else {
+          khash = key.$hash();
+          map   = _map;
+          map2  = _map2;
+        }
+
+        value  = map[khash];
+        if (value === undefined) console.log(&#39;==&#39;, key, self);
+        value2 = map2[khash];
+
+        if (value2 === undefined || </span><span class='embexpr_beg'>#{</span><span class='kw'>not</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span> <span class='op'>==</span> <span class='backtick'>`</span><span class='tstring_content'>value2</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+          return false;
+        }
+      }
+
+      return true;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var map, khash;
+
+      if (key.$$is_string) {
+        map = self.smap;
+        khash = key;
+      } else {
+        map = self.map;
+        khash = key.$hash();
+      }
+
+      if (map === undefined) { console.log(self, &#39;[] --&gt; key:&#39;, key, khash, map) }
+
+
+      if (Opal.hasOwnProperty.call(map, khash)) {
+        return map[khash];
+      }
+
+      var proc = </span><span class='embvar'>#</span><span class='ivar'>@proc</span><span class='tstring_content'>;
+
+      if (proc !== nil) {
+        return </span><span class='embexpr_beg'>#{</span> <span class='backtick'>`</span><span class='tstring_content'>proc</span><span class='tstring_end'>`</span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span> <span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+
+      return </span><span class='embvar'>#</span><span class='ivar'>@none</span><span class='tstring_content'>;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var map, khash, value;
+
+      if (key.$$is_string) {
+        map = self.smap;
+        khash = key;
+      } else {
+        map = self.map;
+        khash = key.$hash();
+      }
+
+      if (!Opal.hasOwnProperty.call(map, khash)) {
+        self.keys.push(key);
+      }
+
+      map[khash] = value;
+
+      return value;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_assoc'>assoc</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var keys = self.keys,
+          map, key, khash;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>key</span><span class='tstring_end'>`</span></span> <span class='op'>==</span> <span class='id identifier rubyid_object'>object</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+          if (key.$$is_string) {
+            map = self.smap;
+            khash = key;
+          } else {
+            map = self.map;
+            khash = key.$hash();
+          }
+
+          return [key, map[khash]];
+        }
+      }
+
+      return nil;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      self.map = {};
+      self.smap = {};
+      self.keys = [];
+      return self;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_clone'>clone</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var _map  = {},
+          smap  = {},
+          _map2 = self.map,
+          smap2 = self.smap,
+          keys  = [],
+          map, map2, key, khash, value;
+
+      for (var i = 0, length = self.keys.length; i &lt; length; i++) {
+        key   = self.keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+          map2 = smap2;
+        } else {
+          khash = key.$hash();
+          map = _map;
+          map2 = _map2;
+        }
+
+        value = map2[khash];
+
+        keys.push(key);
+        map[khash] = value;
+      }
+
+      var clone = new self.$$class.$$alloc();
+
+      clone.map  = _map;
+      clone.smap = smap;
+      clone.keys = keys;
+      clone.none = self.none;
+      clone.proc = self.proc;
+
+      return clone;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_default'>default</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (val !== undefined &amp;&amp; self.proc !== nil) {
+        return </span><span class='embexpr_beg'>#{</span><span class='ivar'>@proc</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+      return self.none;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_default='>default=</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      self.proc = nil;
+      return (self.none = object);
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_default_proc'>default_proc</span>
+    <span class='ivar'>@proc</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_default_proc='>default_proc=</span><span class='lparen'>(</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (proc !== nil) {
+        proc = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_proc'>proc</span><span class='comma'>,</span> <span class='const'>Proc</span><span class='comma'>,</span> <span class='symbol'>:to_proc</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+
+        if (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_proc'>proc</span><span class='period'>.</span><span class='id identifier rubyid_lambda?'>lambda?</span><span class='embexpr_end'>}</span><span class='tstring_content'> &amp;&amp; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_proc'>proc</span><span class='period'>.</span><span class='id identifier rubyid_arity'>arity</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span><span class='embexpr_end'>}</span><span class='tstring_content'> != 2) {
+          </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default_proc takes two arguments</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        }
+      }
+      self.none = nil;
+      return (self.proc = proc);
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var result, map, khash;
+
+      if (key.$$is_string) {
+        map = self.smap;
+        khash = key;
+      } else {
+        map = self.map;
+        khash = key.$hash();
+      }
+
+      result = map[khash];
+
+      if (result != null) {
+        delete map[khash];
+        self.keys.$delete(key);
+
+        return result;
+      }
+
+      if (block !== nil) {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+      return nil;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_delete_if'>delete_if</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:delete_if</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var _map = self.map,
+          smap = self.smap,
+          keys = self.keys,
+          map, key, value, obj, khash;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          map = smap;
+          khash = key;
+        } else {
+          map = _map;
+          khash = key.$hash();
+        }
+        obj = map[khash];
+        value = block(key, obj);
+
+        if (value === $breaker) {
+          return $breaker.$v;
+        }
+
+        if (value !== false &amp;&amp; value !== nil) {
+          keys.splice(i, 1);
+          delete map[khash];
+
+          length--;
+          i--;
+        }
+      }
+
+      return self;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_dup'>dup</span> <span class='id identifier rubyid_clone'>clone</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var _map = self.map,
+          smap = self.smap,
+          keys = self.keys,
+          map, key, khash, value;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          map = smap;
+          khash = key;
+        } else {
+          map = _map;
+          khash = key.$hash();
+        }
+
+        value = Opal.yield1(block, [key, map[khash]]);
+
+        if (value === $breaker) {
+          return $breaker.$v;
+        }
+      }
+
+      return self;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_each_key'>each_key</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_key</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+    <span class='comment'># @keys.each(&amp;block)
+</span>    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var keys = self.keys, key;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (block(key) === $breaker) {
+          return $breaker.$v;
+        }
+      }
+
+      return self;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_each_pair'>each_pair</span> <span class='id identifier rubyid_each'>each</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_each_value'>each_value</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_value</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var _map = self.map,
+          smap = self.smap,
+          keys = self.keys, key, map, khash;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          map = smap;
+          khash = key;
+        } else {
+          map = _map;
+          khash = key.$hash();
+        }
+
+        if (block(map[khash]) === $breaker) {
+          return $breaker.$v;
+        }
+      }
+
+      return self;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self.keys.length === 0</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_eql?'>eql?</span> <span class='op'>==</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var map, khash, value;
+
+      if (key.$$is_string) {
+        khash = key;
+        map = self.smap;
+      } else {
+        khash = key.$hash();
+        map = self.map;
+      }
+
+      value = map[khash];
+
+      if (value != null) {
+        return value;
+      }
+
+      if (block !== nil) {
+        var value;
+
+        if ((value = block(key)) === $breaker) {
+          return $breaker.$v;
+        }
+
+        return value;
+      }
+
+      if (defaults != null) {
+        return defaults;
+      }
+
+      </span><span class='embexpr_beg'>#{</span> <span class='id identifier rubyid_raise'>raise</span> <span class='const'>KeyError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key not found: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='embexpr_end'>}</span><span class='tstring_content'>;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_flatten'>flatten</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='op'>=</span><span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var _map = self.map,
+          smap = self.smap,
+          keys = self.keys,
+          result = [],
+          map, key, khash, value;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+        } else {
+          khash = key.$hash();
+          map = _map;
+        }
+
+        value = map[khash];
+
+        result.push(key);
+
+        if (value.$$is_array) {
+          if (level == null || level === 1) {
+            result.push(value);
+          }
+          else {
+            result = result.concat(</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>level - 1</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>);
+          }
+        }
+        else {
+          result.push(value);
+        }
+      }
+
+      return result;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var keys = self.keys,
+          map, khash;
+
+      if (key.$$is_string) {
+        khash = key;
+        map = self.smap;
+      } else {
+        khash = key.$hash();
+        map = self.map;
+      }
+
+      if (Opal.hasOwnProperty.call(map, khash)) {
+        for (var i = 0, length = keys.length; i &lt; length; i++) {
+          if (!</span><span class='embexpr_beg'>#{</span><span class='kw'>not</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>keys[i]</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+            return true;
+          }
+        }
+      }
+
+      return false;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_has_value?'>has_value?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var _map = self.map,
+          smap = self.smap,
+          keys = self.keys, key, map, khash;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          map = smap;
+          khash = key;
+        } else {
+          map = _map;
+          khash = key.$hash();
+        }
+
+        if (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>map[khash]</span><span class='tstring_end'>`</span></span> <span class='op'>==</span> <span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+          return true;
+        }
+      }
+
+      return false;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='backtick'>`</span><span class='tstring_content'>var hash_ids = null;</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var top = (hash_ids === null);
+      try {
+        var key, value,
+            hash = [&#39;Hash&#39;],
+            keys = self.keys,
+            id = self.$object_id(),
+            counter = 0;
+
+        if (top) {
+          hash_ids = {}
+        }
+
+        if (hash_ids.hasOwnProperty(id)) {
+          return &#39;self&#39;;
+        }
+
+        hash_ids[id] = true;
+
+        for (var i = 0, length = keys.length; i &lt; length; i++) {
+          key   = keys[i];
+          value = key.$$is_string ? self.smap[key] : self.map[key.$hash()];
+          key   = key.$hash();
+          value = (typeof(value) === &#39;undefined&#39;) ? &#39;&#39; : value.$hash();
+          hash.push([key,value]);
+        }
+
+        return hash.sort().join();
+      } finally {
+        if (top) {
+          hash_ids = null;
+        }
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_has_key?'>has_key?</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var _map = self.map,
+          smap = self.smap,
+          keys = self.keys,
+          map, khash, key;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          map = smap;
+          khash = key;
+        } else {
+          map = _map;
+          khash = key.$hash();
+        }
+
+        if (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>map[khash]</span><span class='tstring_end'>`</span></span> <span class='op'>==</span> <span class='id identifier rubyid_object'>object</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+          return key;
+        }
+      }
+
+      return nil;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_indexes'>indexes</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var result = [],
+          _map = self.map,
+          smap = self.smap,
+          map, key, khash, value;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+        } else {
+          khash = key.$hash();
+          map = _map;
+        }
+
+        value = map[khash];
+
+        if (value != null) {
+          result.push(value);
+        }
+        else {
+          result.push(self.none);
+        }
+      }
+
+      return result;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_indices'>indices</span> <span class='id identifier rubyid_indexes'>indexes</span>
+
+  <span class='backtick'>`</span><span class='tstring_content'>var inspect_ids = null;</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var top = (inspect_ids === null);
+      try {
+
+        var key, value,
+            inspect = [],
+            keys = self.keys,
+            id = self.$object_id(),
+            counter = 0;
+
+        if (top) {
+          inspect_ids = {}
+        }
+
+        if (inspect_ids.hasOwnProperty(id)) {
+          return &#39;{...}&#39;;
+        }
+
+        inspect_ids[id] = true;
+
+        for (var i = 0, length = keys.length; i &lt; length; i++) {
+          key   = keys[i];
+          value = key.$$is_string ? self.smap[key] : self.map[key.$hash()];
+          key   = key.$inspect();
+          value = value.$inspect();
+          inspect.push(key + &#39;=&gt;&#39; + value);
+        }
+
+        return &#39;{&#39; + inspect.join(&#39;, &#39;) + &#39;}&#39;;
+      } finally {
+
+        if (top) {
+          inspect_ids = null;
+        }
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_invert'>invert</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var result = Opal.hash(),
+          keys = self.keys,
+          _map = self.map,
+          smap = self.smap,
+          keys2 = result.keys,
+          _map2 = result.map,
+          smap2 = result.smap,
+          map, map2, key, khash, value;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          map = smap;
+          khash = key;
+        } else {
+          map = _map;
+          khash = key.$hash();
+        }
+
+        value = map[khash];
+        keys2.push(value);
+
+        if (value.$$is_string) {
+          map2 = smap2;
+          khash = value;
+        } else {
+          map2 = _map2;
+          khash = value.$hash();
+        }
+
+        map2[khash] = key;
+      }
+
+      return result;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_keep_if'>keep_if</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:keep_if</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var _map = self.map,
+          smap = self.smap,
+          keys = self.keys,
+          map, key, khash, value, keep;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+        } else {
+          khash = key.$hash();
+          map = _map;
+        }
+
+        value = map[khash];
+        keep  = block(key, value);
+
+        if (keep === $breaker) {
+          return $breaker.$v;
+        }
+
+        if (keep === false || keep === nil) {
+          keys.splice(i, 1);
+          delete map[khash];
+
+          length--;
+          i--;
+        }
+      }
+
+      return self;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_key'>key</span> <span class='id identifier rubyid_index'>index</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_key?'>key?</span> <span class='id identifier rubyid_has_key?'>has_key?</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_keys'>keys</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self.keys.slice(0)</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_length'>length</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self.keys.length</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_member?'>member?</span> <span class='id identifier rubyid_has_key?'>has_key?</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>unless</span> <span class='const'>Hash</span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span>
+      <span class='id identifier rubyid_other'>other</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='const'>Hash</span><span class='comma'>,</span> <span class='symbol'>:to_hash</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_cloned'>cloned</span> <span class='op'>=</span> <span class='id identifier rubyid_clone'>clone</span>
+    <span class='id identifier rubyid_cloned'>cloned</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_cloned'>cloned</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (! </span><span class='embexpr_beg'>#{</span><span class='const'>Hash</span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        other = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='const'>Hash</span><span class='comma'>,</span> <span class='symbol'>:to_hash</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+
+      var keys  = self.keys,
+          _map  = self.map,
+          smap  = self.smap,
+          keys2 = other.keys,
+          _map2 = other.map,
+          smap2 = other.smap,
+          map, map2, key, khash, value, value2;
+
+      if (block === nil) {
+        for (var i = 0, length = keys2.length; i &lt; length; i++) {
+          key = keys2[i];
+
+          if (key.$$is_string) {
+            khash = key;
+            map = smap;
+            map2 = smap2;
+          } else {
+            khash = key.$hash();
+            map = _map;
+            map2 = _map2;
+          }
+
+          if (map[khash] == null) {
+            keys.push(key);
+          }
+
+          map[khash] = map2[khash];
+        }
+      }
+      else {
+        for (var i = 0, length = keys2.length; i &lt; length; i++) {
+          key    = keys2[i];
+
+          if (key.$$is_string) {
+            khash = key;
+            map = smap;
+            map2 = smap2;
+          } else {
+            khash = key.$hash();
+            map = _map;
+            map2 = _map2;
+          }
+
+          value  = map[khash];
+          value2 = map2[khash];
+
+          if (value == null) {
+            keys.push(key);
+            map[khash] = value2;
+          }
+          else {
+            map[khash] = block(key, value, value2);
+          }
+        }
+      }
+
+      return self;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_rassoc'>rassoc</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var keys = self.keys,
+          _map = self.map,
+          smap = self.smap,
+          key, khash, value, map;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i]
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+        } else {
+          khash = key.$hash();
+          map = _map;
+        }
+
+        value = map[khash];
+
+        if (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span> <span class='op'>==</span> <span class='id identifier rubyid_object'>object</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+          return [key, value];
+        }
+      }
+
+      return nil;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_reject'>reject</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:reject</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var keys   = self.keys,
+          _map    = self.map,
+          smap    = self.smap,
+          result = Opal.hash(),
+          _map2   = result.map,
+          smap2   = result.smap,
+          keys2  = result.keys,
+          map, map2, key, khash, object, value;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+          map2 = smap2;
+        } else {
+          khash = key.$hash();
+          map = _map;
+          map2 = _map2;
+        }
+
+        object = map[khash];
+
+        if ((value = block(key, object)) === $breaker) {
+          return $breaker.$v;
+        }
+
+        if (value === false || value === nil) {
+          keys2.push(key);
+          map2[khash] = object;
+        }
+      }
+
+      return result;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_replace'>replace</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var keys  = self.keys = [],
+          _map  = self.map  = {},
+          smap  = self.smap = {},
+          _map2 = other.map,
+          smap2 = other.smap,
+          key, khash, map, map2;
+
+      for (var i = 0, length = other.keys.length; i &lt; length; i++) {
+        key = other.keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+          map2 = smap2;
+        } else {
+          khash = key.$hash();
+          map = _map;
+          map2 = _map2;
+        }
+
+        keys.push(key);
+        map[khash] = map2[khash];
+      }
+
+      return self;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:select</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var keys   = self.keys,
+          _map   = self.map,
+          smap   = self.smap,
+          result = Opal.hash(),
+          _map2  = result.map,
+          smap2  = result.smap,
+          keys2  = result.keys,
+          map, map2, key, khash, value, object;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+          map2 = smap2;
+        } else {
+          khash = key.$hash();
+          map = _map;
+          map2 = _map2;
+        }
+
+        value = map[khash];
+        object = block(key, value);
+
+        if (object === $breaker) {
+          return $breaker.$v;
+        }
+
+        if (object !== false &amp;&amp; object !== nil) {
+          keys2.push(key);
+          map2[khash] = value;
+        }
+      }
+
+      return result;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_select!'>select!</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:select!</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var _map = self.map,
+          smap = self.smap,
+          keys = self.keys,
+          result = nil,
+          key, khash, value, object, map;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+        } else {
+          khash = key.$hash();
+          map = _map;
+        }
+
+        value = map[khash];
+        object = block(key, value);
+
+        if (object === $breaker) {
+          return $breaker.$v;
+        }
+
+        if (object === false || object === nil) {
+          keys.splice(i, 1);
+          delete map[khash];
+
+          length--;
+          i--;
+          result = self
+        }
+      }
+
+      return result;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_shift'>shift</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var keys = self.keys,
+          _map = self.map,
+          smap = self.smap,
+          map, key, khash, value;
+
+      if (keys.length) {
+        key = keys[0];
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+        } else {
+          khash = key.$hash();
+          map = _map;
+        }
+        value = map[khash];
+
+        delete map[khash];
+        keys.splice(0, 1);
+
+        return [key, value];
+      }
+
+      return nil;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_size'>size</span> <span class='id identifier rubyid_length'>length</span>
+
+  <span class='id identifier rubyid_alias_method'>alias_method</span> <span class='symbol'>:store</span><span class='comma'>,</span> <span class='symbol'>:[]=</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var keys = self.keys,
+          _map = self.map,
+          smap = self.smap,
+          result = [],
+          map, key, khash;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+        } else {
+          khash = key.$hash();
+          map = _map;
+        }
+
+        result.push([key, map[khash]]);
+      }
+
+      return result;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (self.$$class === Opal.Hash) {
+        return self
+      }
+
+      var hash   = new Opal.Hash.$$alloc,
+          cloned = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_clone'>clone</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+
+      hash.map  = cloned.map;
+      hash.smap = cloned.smap;
+      hash.keys = cloned.keys;
+      hash.none = cloned.none;
+      hash.proc = cloned.proc;
+
+      return hash;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_to_s'>to_s</span> <span class='id identifier rubyid_inspect'>inspect</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_update'>update</span> <span class='id identifier rubyid_merge!'>merge!</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_value?'>value?</span> <span class='id identifier rubyid_has_value?'>has_value?</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_values_at'>values_at</span> <span class='id identifier rubyid_indexes'>indexes</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_values'>values</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var _map = self.map,
+          smap = self.smap,
+          keys = self.keys,
+          result = [],
+          map, khash, key;
+
+      for (var i = 0, length = keys.length; i &lt; length; i++) {
+        key = keys[i];
+
+        if (key.$$is_string) {
+          khash = key;
+          map = smap;
+        } else {
+          khash = key.$hash();
+          map = _map;
+        }
+
+        result.push(map[khash]);
+      }
+
+      return result;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre></div></div>
+
+      <div id="footer">
+  Generated on Fri Nov 27 11:10:08 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.2.3).
+</div>
+
+    </div>
+  </body>
+</html>

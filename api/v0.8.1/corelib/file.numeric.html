@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: numeric
+  
+    &mdash; corelib (Opal v0.8.1)
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "numeric";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: numeric</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="file_list.html"></iframe>
+
+      <div id="content"><div id='filecontents'><pre class="code ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>corelib/comparable</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>Numeric</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'>Comparable</span>
+
+  <span class='backtick'>`</span><span class='tstring_content'>def.$$is_number = true</span><span class='tstring_end'>`</span></span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid___id__'>__id__</span>
+    <span class='backtick'>`</span><span class='tstring_content'>(self * 2) + 1</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+  <span class='kw'>alias</span> <span class='id identifier rubyid_object_id'>object_id</span> <span class='id identifier rubyid___id__'>__id__</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_coerce'>coerce</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='symbol'>:operation</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return [self, other];
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_coerce'>coerce</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>rescue</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_type'>type</span>
+    <span class='kw'>when</span> <span class='symbol'>:operation</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> can&#39;t be coerced into Numeric</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='kw'>when</span> <span class='symbol'>:comparison</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>comparison of </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> with </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> failed</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_send_coerced'>send_coerced</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='id identifier rubyid_method'>method</span>
+      <span class='kw'>when</span> <span class='symbol'>:+</span><span class='comma'>,</span> <span class='symbol'>:-</span><span class='comma'>,</span> <span class='symbol'>:*</span><span class='comma'>,</span> <span class='symbol'>:/</span><span class='comma'>,</span> <span class='symbol'>:%</span><span class='comma'>,</span> <span class='symbol'>:&amp;</span><span class='comma'>,</span> <span class='symbol'>:|</span><span class='comma'>,</span> <span class='symbol'>:^</span><span class='comma'>,</span> <span class='symbol'>:**</span>
+        <span class='symbol'>:operation</span>
+
+      <span class='kw'>when</span> <span class='symbol'>:&gt;</span><span class='comma'>,</span> <span class='symbol'>:&gt;=</span><span class='comma'>,</span> <span class='symbol'>:&lt;</span><span class='comma'>,</span> <span class='symbol'>:&lt;=</span><span class='comma'>,</span> <span class='symbol'>:&lt;=&gt;</span>
+        <span class='symbol'>:comparison</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span> <span class='op'>=</span> <span class='id identifier rubyid_coerce'>coerce</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span> <span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>+</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self + other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:+</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>-</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self - other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:-</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>*</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self * other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:*</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>/</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self / other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:/</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>%</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        if (other &lt; 0 || self &lt; 0) {
+          return (self % other + other) % other;
+        }
+        else {
+          return self % other;
+        }
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:%</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>&amp;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self &amp; other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:&amp;</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self | other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:|</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>^</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self ^ other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:^</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self &lt; other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:&lt;</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>&lt;=</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self &lt;= other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:&lt;=</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self &gt; other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:&gt;</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>&gt;=</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self &gt;= other;
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:&gt;=</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self &gt; other ? 1 : (self &lt; other ? -1 : 0);
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:&lt;=&gt;</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>rescue</span> <span class='const'>ArgumentError</span>
+    <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_count'>count</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span> <span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
+
+    <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span><span class='embexpr_end'>}</span><span class='tstring_content'> &gt; 0 ? self &lt;&lt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span><span class='embexpr_end'>}</span><span class='tstring_content'> : self &gt;&gt; -</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span><span class='embexpr_end'>}</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>&gt;&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_count'>count</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span> <span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
+
+    <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span><span class='embexpr_end'>}</span><span class='tstring_content'> &gt; 0 ? self &gt;&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span><span class='embexpr_end'>}</span><span class='tstring_content'> : self &lt;&lt; -</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span><span class='embexpr_end'>}</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_bit'>bit</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_bit'>bit</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span> <span class='id identifier rubyid_bit'>bit</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
+    <span class='id identifier rubyid_min'>min</span> <span class='op'>=</span> <span class='op'>-</span><span class='lparen'>(</span><span class='int'>2</span><span class='op'>**</span><span class='int'>30</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_max'>max</span> <span class='op'>=</span>  <span class='lparen'>(</span><span class='int'>2</span><span class='op'>**</span><span class='int'>30</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='int'>1</span>
+
+    <span class='backtick'>`</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_bit'>bit</span><span class='embexpr_end'>}</span><span class='tstring_content'> &lt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_min'>min</span><span class='embexpr_end'>}</span><span class='tstring_content'> || </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_bit'>bit</span><span class='embexpr_end'>}</span><span class='tstring_content'> &gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_max'>max</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ? 0 : (self &gt;&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_bit'>bit</span><span class='embexpr_end'>}</span><span class='tstring_content'>) % 2</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>+@</span>
+    <span class='backtick'>`</span><span class='tstring_content'>+self</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>-@</span>
+    <span class='backtick'>`</span><span class='tstring_content'>-self</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>~</span>
+    <span class='backtick'>`</span><span class='tstring_content'>~self</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>**</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return Math.pow(self, other);
+      }
+      else {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_send_coerced'>send_coerced</span> <span class='symbol'>:**</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (other.$$is_number) {
+        return self == Number(other);
+      }
+      else if (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:==</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span> <span class='op'>==</span> <span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      }
+      else {
+        return false;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_abs'>abs</span>
+    <span class='backtick'>`</span><span class='tstring_content'>Math.abs(self)</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_ceil'>ceil</span>
+    <span class='backtick'>`</span><span class='tstring_content'>Math.ceil(self)</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_chr'>chr</span><span class='lparen'>(</span><span class='id identifier rubyid_encoding'>encoding</span><span class='op'>=</span><span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
+    <span class='backtick'>`</span><span class='tstring_content'>String.fromCharCode(self)</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_conj'>conj</span>
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_conjugate'>conjugate</span> <span class='id identifier rubyid_conj'>conj</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_downto'>downto</span><span class='lparen'>(</span><span class='id identifier rubyid_finish'>finish</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:downto</span><span class='comma'>,</span> <span class='id identifier rubyid_finish'>finish</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (!finish.$$is_number) {
+        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>comparison of </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> with </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_finish'>finish</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> failed</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+      }
+      for (var i = self; i &gt;= finish; i--) {
+        if (block(i) === $breaker) {
+          return $breaker.$v;
+        }
+      }
+    </span><span class='tstring_end'>}</span></span>
+
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_eql?'>eql?</span> <span class='op'>==</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_equal?'>equal?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='kw'>self</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span> <span class='op'>||</span> <span class='backtick'>`</span><span class='tstring_content'>isNaN(self) &amp;&amp; isNaN(other)</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_even?'>even?</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self % 2 === 0</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_floor'>floor</span>
+    <span class='backtick'>`</span><span class='tstring_content'>Math.floor(self)</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_gcd'>gcd</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='kw'>unless</span> <span class='const'>Integer</span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not an integer</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var min = Math.abs(self),
+          max = Math.abs(other);
+
+      while (min &gt; 0) {
+        var tmp = min;
+
+        min = max % min;
+        max = tmp;
+      }
+
+      return max;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_gcdlcm'>gcdlcm</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='lbracket'>[</span><span class='id identifier rubyid_gcd'>gcd</span><span class='comma'>,</span> <span class='id identifier rubyid_lcm'>lcm</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span>
+    <span class='backtick'>`</span><span class='tstring_content'>&#39;Numeric:&#39;+self.toString()</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_integer?'>integer?</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self % 1 === 0</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_klass'>klass</span> <span class='op'>==</span> <span class='const'>Fixnum</span> <span class='op'>&amp;&amp;</span> <span class='const'>Integer</span> <span class='op'>===</span> <span class='kw'>self</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_klass'>klass</span> <span class='op'>==</span> <span class='const'>Integer</span> <span class='op'>&amp;&amp;</span> <span class='const'>Integer</span> <span class='op'>===</span> <span class='kw'>self</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_klass'>klass</span> <span class='op'>==</span> <span class='const'>Float</span> <span class='op'>&amp;&amp;</span> <span class='const'>Float</span> <span class='op'>===</span> <span class='kw'>self</span>
+
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_kind_of?'>kind_of?</span> <span class='id identifier rubyid_is_a?'>is_a?</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_klass'>klass</span> <span class='op'>==</span> <span class='const'>Fixnum</span> <span class='op'>&amp;&amp;</span> <span class='const'>Integer</span> <span class='op'>===</span> <span class='kw'>self</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_klass'>klass</span> <span class='op'>==</span> <span class='const'>Integer</span> <span class='op'>&amp;&amp;</span> <span class='const'>Integer</span> <span class='op'>===</span> <span class='kw'>self</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_klass'>klass</span> <span class='op'>==</span> <span class='const'>Float</span> <span class='op'>&amp;&amp;</span> <span class='const'>Float</span> <span class='op'>===</span> <span class='kw'>self</span>
+
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_lcm'>lcm</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='kw'>unless</span> <span class='const'>Integer</span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not an integer</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (self == 0 || other == 0) {
+        return 0;
+      }
+      else {
+        return Math.abs(self * other / </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gcd'>gcd</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>);
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_magnitude'>magnitude</span> <span class='id identifier rubyid_abs'>abs</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_modulo'>modulo</span> <span class='op'>%</span>
+
+  <span class='kw'>def</span> <span class='kw'>next</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self + 1</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_nonzero?'>nonzero?</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self == 0 ? nil : self</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_odd?'>odd?</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self % 2 !== 0</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_ord'>ord</span>
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_pred'>pred</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self - 1</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='id identifier rubyid_ndigits'>ndigits</span><span class='op'>=</span><span class='int'>0</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var scale = Math.pow(10, ndigits);
+      return Math.round(self * scale) / scale;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_step'>step</span><span class='lparen'>(</span><span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_step'>step</span> <span class='op'>=</span> <span class='int'>1</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:step</span><span class='comma'>,</span> <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_step'>step</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>step cannot be 0</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>step == 0</span><span class='tstring_end'>`</span></span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      var value = self;
+
+      if (step &gt; 0) {
+        while (value &lt;= limit) {
+          block(value);
+          value += step;
+        }
+      }
+      else {
+        while (value &gt;= limit) {
+          block(value);
+          value += step;
+        }
+      }
+    </span><span class='tstring_end'>}</span></span>
+
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_succ'>succ</span> <span class='kw'>next</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_times'>times</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:times</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      for (var i = 0; i &lt; self; i++) {
+        if (block(i) === $breaker) {
+          return $breaker.$v;
+        }
+      }
+    </span><span class='tstring_end'>}</span></span>
+
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_to_f'>to_f</span>
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='backtick'>`</span><span class='tstring_content'>parseInt(self)</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_to_int'>to_int</span> <span class='id identifier rubyid_to_i'>to_i</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='int'>10</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_base'>base</span> <span class='op'>&lt;</span> <span class='int'>2</span> <span class='op'>||</span> <span class='id identifier rubyid_base'>base</span> <span class='op'>&gt;</span> <span class='int'>36</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>base must be between 2 and 36</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='backtick'>`</span><span class='tstring_content'>self.toString(base)</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>alias</span> <span class='id identifier rubyid_inspect'>inspect</span> <span class='id identifier rubyid_to_s'>to_s</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_divmod'>divmod</span><span class='lparen'>(</span><span class='id identifier rubyid_rhs'>rhs</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_q'>q</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='kw'>self</span> <span class='op'>/</span> <span class='id identifier rubyid_rhs'>rhs</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_floor'>floor</span>
+    <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='kw'>self</span> <span class='op'>%</span> <span class='id identifier rubyid_rhs'>rhs</span>
+
+    <span class='lbracket'>[</span><span class='id identifier rubyid_q'>q</span><span class='comma'>,</span> <span class='id identifier rubyid_r'>r</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_upto'>upto</span><span class='lparen'>(</span><span class='id identifier rubyid_finish'>finish</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:upto</span><span class='comma'>,</span> <span class='id identifier rubyid_finish'>finish</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (!finish.$$is_number) {
+        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>comparison of </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> with </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_finish'>finish</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> failed</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+      }
+      for (var i = self; i &lt;= finish; i++) {
+        if (block(i) === $breaker) {
+          return $breaker.$v;
+        }
+      }
+    </span><span class='tstring_end'>}</span></span>
+
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_zero?'>zero?</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self == 0</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Since bitwise operations are 32 bit, declare it to be so.
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_size'>size</span>
+    <span class='int'>4</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_nan?'>nan?</span>
+    <span class='backtick'>`</span><span class='tstring_content'>isNaN(self)</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_finite?'>finite?</span>
+    <span class='backtick'>`</span><span class='tstring_content'>self != Infinity &amp;&amp; self != -Infinity</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_infinite?'>infinite?</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (self == Infinity) {
+        return +1;
+      }
+      else if (self == -Infinity) {
+        return -1;
+      }
+      else {
+        return nil;
+      }
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_positive?'>positive?</span>
+    <span class='backtick'>`</span><span class='tstring_content'>1 / self &gt; 0</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_negative?'>negative?</span>
+    <span class='backtick'>`</span><span class='tstring_content'>1 / self &lt; 0</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Fixnum</span> <span class='op'>=</span> <span class='const'>Numeric</span>
+
+<span class='kw'>class</span> <span class='const'>Integer</span> <span class='op'>&lt;</span> <span class='const'>Numeric</span>
+  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>===</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>%x{</span><span class='tstring_content'>
+      if (!other.$$is_number) {
+        return false;
+      }
+
+      return (other % 1) === 0;
+    </span><span class='tstring_end'>}</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='kw'>class</span> <span class='const'>Float</span> <span class='op'>&lt;</span> <span class='const'>Numeric</span>
+  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>===</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+    <span class='backtick'>`</span><span class='tstring_content'>!!other.$$is_number</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+
+  <span class='const'>INFINITY</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>Infinity</span><span class='tstring_end'>`</span></span>
+  <span class='const'>NAN</span>      <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>NaN</span><span class='tstring_end'>`</span></span>
+
+  <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>Number.EPSILON</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span>
+    <span class='const'>EPSILON</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>Number.EPSILON</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>else</span>
+    <span class='const'>EPSILON</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>2.2204460492503130808472633361816E-16</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre></div></div>
+
+      <div id="footer">
+  Generated on Fri Nov 27 11:10:08 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.2.3).
+</div>
+
+    </div>
+  </body>
+</html>
