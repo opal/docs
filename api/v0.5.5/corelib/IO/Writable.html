@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="../_index.html">Index (W)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../IO.html" title="IO (class)">IO</a></span></span>
      &raquo; 
@@ -80,7 +82,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>corelib/io.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/io.rb</dd>
   </dl>
   
 </div>
@@ -197,7 +199,7 @@
 11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/io.rb', line 7</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/io.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
@@ -229,7 +231,7 @@
 15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/io.rb', line 13</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/io.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print'>print</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_write'>write</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>|</span> <span class='const'>String</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='gvar'>$,</span><span class='rparen'>)</span>
@@ -259,7 +261,7 @@
 19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/io.rb', line 17</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/io.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_write'>write</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>|</span> <span class='const'>String</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='gvar'>$/</span><span class='rparen'>)</span>
@@ -274,8 +276,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:46:51 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

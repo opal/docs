@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (M)</a> &raquo;
     
     
@@ -96,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>corelib/module.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb</dd>
   </dl>
   
 </div>
@@ -917,7 +919,7 @@
 24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 2</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -985,7 +987,7 @@
 46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 32</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1029,7 +1031,7 @@
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 26</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='op'>===</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>object == null</span><span class='tstring_end'>`</span></span>
@@ -1068,7 +1070,7 @@
 57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 48</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_alias_method'>alias_method</span><span class='lparen'>(</span><span class='id identifier rubyid_newname'>newname</span><span class='comma'>,</span> <span class='id identifier rubyid_oldname'>oldname</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1105,7 +1107,7 @@
 61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 59</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_alias_native'>alias_native</span><span class='lparen'>(</span><span class='id identifier rubyid_mid'>mid</span><span class='comma'>,</span> <span class='id identifier rubyid_jsid'>jsid</span> <span class='op'>=</span> <span class='id identifier rubyid_mid'>mid</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>self._proto[&#39;$&#39; + mid] = self._proto[jsid]</span><span class='tstring_end'>`</span></span>
@@ -1147,7 +1149,7 @@
 77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 63</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ancestors'>ancestors</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1239,7 +1241,7 @@
 131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 79</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_append_features'>append_features</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1324,7 +1326,7 @@
 136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 133</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attr_accessor'>attr_accessor</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_attr_reader'>attr_reader</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
@@ -1373,7 +1375,7 @@
 158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 138</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 138</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attr_reader'>attr_reader</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1438,7 +1440,7 @@
 179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 160</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 160</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attr_writer'>attr_writer</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1541,7 +1543,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 214</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 193</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 193</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_const_defined?'>const_defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_inherit'>inherit</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong constant name </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[A-Z]\w*$</span><span class='regexp_end'>/</span></span>
@@ -1633,7 +1635,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 239</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 218</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_inherit'>inherit</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong constant name </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[A-Z]\w*$</span><span class='regexp_end'>/</span></span>
@@ -1706,7 +1708,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 245</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 241</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 241</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_const_missing'>const_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_const'>const</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>._name</span><span class='tstring_end'>`</span></span>
@@ -1771,7 +1773,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 260</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 247</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_const_set'>const_set</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong constant name </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[A-Z]\w*$</span><span class='regexp_end'>/</span></span>
@@ -1828,7 +1830,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 187</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 187</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_constants'>constants</span>
   <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>._scope.constants</span><span class='tstring_end'>`</span></span>
@@ -1876,7 +1878,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 282</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 262</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 262</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1939,7 +1941,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 296</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 296</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_include'>include</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_mods'>mods</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1983,7 +1985,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 350</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 349</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 349</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_included'>included</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2020,7 +2022,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 325</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 315</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 315</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_instance_method'>instance_method</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2080,7 +2082,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 347</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 327</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 327</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_instance_methods'>instance_methods</span><span class='lparen'>(</span><span class='id identifier rubyid_include_super'>include_super</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2157,7 +2159,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 393</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 388</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 388</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_defined?'>method_defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2206,7 +2208,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 366</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 352</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 352</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_module_eval'>module_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2264,7 +2266,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 384</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 370</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 370</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_module_exec'>module_exec</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2314,7 +2316,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 405</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 395</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 395</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_module_function'>module_function</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_methods'>methods</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2378,7 +2380,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 435</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 407</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 407</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2434,7 +2436,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 442</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 440</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 440</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_private_class_method'>private_class_method</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>self[&#39;$&#39; + name] || nil</span><span class='tstring_end'>`</span></span>
@@ -2490,7 +2492,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 449</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 447</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 447</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_private_method_defined?'>private_method_defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
   <span class='kw'>false</span>
@@ -2523,7 +2525,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 438</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 437</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 437</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_public'>public</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2551,7 +2553,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 458</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 457</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 457</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_class_variable'>remove_class_variable</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2584,7 +2586,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 466</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 460</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 460</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_const'>remove_const</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2626,7 +2628,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 284</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 284</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_method'>remove_method</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2664,7 +2666,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 470</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 468</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 468</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -2695,7 +2697,7 @@ when self is not Module (or Class), implement 2nd form:</li>
 475</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/module.rb', line 472</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 472</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_undef_method'>undef_method</span><span class='lparen'>(</span><span class='id identifier rubyid_symbol'>symbol</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>$opal.add_stub_for(</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>._proto, &quot;$&quot; + symbol)</span><span class='tstring_end'>`</span></span>
@@ -2711,8 +2713,8 @@ when self is not Module (or Class), implement 2nd form:</li>
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:46:53 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

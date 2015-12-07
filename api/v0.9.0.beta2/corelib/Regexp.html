@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (R)</a> &raquo;
     
     
@@ -96,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>corelib/regexp.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb</dd>
   </dl>
   
 </div>
@@ -487,7 +489,7 @@
 14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 10</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_allocate'>allocate</span>
   <span class='id identifier rubyid_allocated'>allocated</span> <span class='op'>=</span> <span class='kw'>super</span>
@@ -529,7 +531,7 @@
 24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 16</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -569,7 +571,7 @@
 32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 26</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -629,7 +631,7 @@
 103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 75</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>      
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -720,7 +722,7 @@
 73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 36</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_parts'>parts</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -795,7 +797,7 @@
 108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 106</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>other.constructor == RegExp &amp;&amp; self.toString() === other.toString()</span><span class='tstring_end'>`</span></span>
@@ -825,7 +827,7 @@
 112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 110</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='op'>===</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to?'>coerce_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> !== nil</span><span class='tstring_end'>`</span></span>
@@ -855,7 +857,7 @@
 116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 114</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='op'>=~</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='gvar'>$~</span><span class='period'>.</span><span class='id identifier rubyid_begin'>begin</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
@@ -907,7 +909,7 @@
 202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 200</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 200</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_casefold?'>casefold?</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.ignoreCase</span><span class='tstring_end'>`</span></span>
@@ -937,7 +939,7 @@
 122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 120</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.toString()</span><span class='tstring_end'>`</span></span>
@@ -1013,7 +1015,7 @@
 172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 124</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 124</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_pos'>pos</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1103,7 +1105,7 @@
 198</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 182</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 182</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_options'>options</span>
   <span class='comment'># Flags would be nice to use with this, but still experimental - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags
@@ -1151,7 +1153,7 @@
 180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 178</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 178</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source'>source</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.source</span><span class='tstring_end'>`</span></span>
@@ -1181,7 +1183,7 @@
 176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/regexp.rb', line 174</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/regexp.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='op'>~</span>
   <span class='kw'>self</span> <span class='op'>=~</span> <span class='gvar'>$_</span>
@@ -1196,8 +1198,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:49:13 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

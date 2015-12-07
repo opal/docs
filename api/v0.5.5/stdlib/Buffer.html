@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (B)</a> &raquo;
     
     
@@ -103,8 +105,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>buffer.rb<span class="defines">,<br />
-  buffer/view.rb,<br /> buffer/array.rb</span>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/buffer.rb<span class="defines">,<br />
+  /Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/buffer/array.rb</span>
 </dd>
   </dl>
   
@@ -332,7 +334,7 @@
 25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'buffer.rb', line 19</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='comma'>,</span> <span class='id identifier rubyid_bits'>bits</span> <span class='op'>=</span> <span class='int'>8</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_native?'>native?</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
@@ -377,7 +379,7 @@
 17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'buffer.rb', line 11</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name_for'>name_for</span><span class='lparen'>(</span><span class='id identifier rubyid_bits'>bits</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>case</span> <span class='id identifier rubyid_type'>type</span>
@@ -433,7 +435,7 @@
 9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'buffer.rb', line 7</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_supported?'>supported?</span>
   <span class='kw'>not</span> <span class='gvar'>$$</span><span class='lbracket'>[</span><span class='symbol'>:ArrayBuffer</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -473,7 +475,7 @@
 29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'buffer.rb', line 27</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_length'>length</span>
   <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.byteLength</span><span class='tstring_end'>`</span></span>
@@ -503,7 +505,7 @@
 35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'buffer.rb', line 33</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span><span class='lparen'>(</span><span class='id identifier rubyid_bits'>bits</span> <span class='op'>=</span> <span class='int'>8</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='symbol'>:unsigned</span><span class='rparen'>)</span>
   <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_bits'>bits</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
@@ -533,7 +535,7 @@
 39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'buffer.rb', line 37</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_view'>view</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>View</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
@@ -548,8 +550,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:46:54 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

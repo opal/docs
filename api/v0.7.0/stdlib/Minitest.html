@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (M)</a> &raquo;
     
     
@@ -80,8 +82,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>minitest.rb<span class="defines">,<br />
-  minitest/unit.rb,<br /> minitest/test.rb,<br /> minitest/mock.rb,<br /> minitest/parallel.rb,<br /> minitest/benchmark.rb,<br /> minitest/benchmark.rb,<br /> minitest/assertions.rb,<br /> minitest/pride_plugin.rb</span>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb<span class="defines">,<br />
+  /Users/elia/Code/opal-docs/opal/stdlib/minitest/unit.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/minitest/mock.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/minitest/parallel.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/minitest/assertions.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/minitest/pride_plugin.rb</span>
 </dd>
   </dl>
   
@@ -503,7 +505,7 @@ loaded if a Runnable calls parallelize_me!.</p>
 152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest.rb', line 141</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid___run'>__run</span> <span class='id identifier rubyid_reporter'>reporter</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
   <span class='id identifier rubyid_suites'>suites</span> <span class='op'>=</span> <span class='const'>Runnable</span><span class='period'>.</span><span class='id identifier rubyid_runnables'>runnables</span><span class='period'>.</span><span class='id identifier rubyid_shuffle'>shuffle</span>
@@ -555,7 +557,7 @@ is done running. Eg:</p>
 69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest.rb', line 67</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_after_run'>after_run</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
   <span class='cvar'>@@after_run</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_block'>block</span>
@@ -607,7 +609,7 @@ is done running. Eg:</p>
 59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest.rb', line 45</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_autorun'>autorun</span>
   <span class='id identifier rubyid_at_exit'>at_exit</span> <span class='lbrace'>{</span>
@@ -659,7 +661,7 @@ is done running. Eg:</p>
 222</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest.rb', line 220</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 220</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_filter_backtrace'>filter_backtrace</span> <span class='id identifier rubyid_bt'>bt</span> <span class='comment'># :nodoc:
 </span>  <span class='id identifier rubyid_backtrace_filter'>backtrace_filter</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='id identifier rubyid_bt'>bt</span>
@@ -702,7 +704,7 @@ is done running. Eg:</p>
 76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest.rb', line 71</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_init_plugins'>init_plugins</span> <span class='id identifier rubyid_options'>options</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_extensions'>extensions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
@@ -759,7 +761,7 @@ is done running. Eg:</p>
 94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest.rb', line 78</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_load_plugins'>load_plugins</span> <span class='comment'># :nodoc:
 </span>  <span class='comment'># return unless self.extensions.empty?
@@ -820,7 +822,7 @@ is done running. Eg:</p>
 19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/pride_plugin.rb', line 10</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/pride_plugin.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_plugin_pride_init'>plugin_pride_init</span> <span class='id identifier rubyid_options'>options</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>if</span> <span class='const'>PrideIO</span><span class='period'>.</span><span class='id identifier rubyid_pride?'>pride?</span> <span class='kw'>then</span>
@@ -869,7 +871,7 @@ is done running. Eg:</p>
 8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/pride_plugin.rb', line 4</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/pride_plugin.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_plugin_pride_options'>plugin_pride_options</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='comment'># :nodoc:
 </span>  <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-p</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--pride</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Pride. Show your testing pride!</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
@@ -973,7 +975,7 @@ is done running. Eg:</p>
 218</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest.rb', line 154</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_process_args'>process_args</span> <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='comment'># :nodoc:
 </span>  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span>
@@ -1106,7 +1108,7 @@ responsible for doing whatever they do.</p>
 132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest.rb', line 113</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_load_plugins'>load_plugins</span>
@@ -1165,7 +1167,7 @@ responsible for doing whatever they do.</p>
 777</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest.rb', line 773</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 773</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_run_one_method'>run_one_method</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span> <span class='comment'># :nodoc:
 </span>  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span>
@@ -1211,7 +1213,7 @@ responsible for doing whatever they do.</p>
 22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest.rb', line 22</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 22</span>
 
 <span class='id identifier rubyid_mc'>mc</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='symbol'>:attr_accessor</span><span class='comma'>,</span> <span class='symbol'>:parallel_executor</span></pre>
     </td>
@@ -1224,8 +1226,8 @@ responsible for doing whatever they do.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:47:32 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

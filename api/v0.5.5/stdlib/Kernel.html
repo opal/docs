@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (K)</a> &raquo;
     
     
@@ -80,8 +82,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>pp.rb<span class="defines">,<br />
-  native.rb,<br /> pathname.rb,<br /> opal-parser.rb</span>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/pp.rb<span class="defines">,<br />
+  /Users/elia/Code/opal-docs/opal/stdlib/native.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/pathname.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/opal-parser.rb</span>
 </dd>
   </dl>
   
@@ -279,7 +281,7 @@
 148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 130</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -326,7 +328,7 @@
 10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal-parser.rb', line 7</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/opal-parser.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_code'>code</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span> <span class='id identifier rubyid_str'>str</span>
@@ -363,7 +365,7 @@
 128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 120</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='const'>Native</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_obj'>obj</span><span class='embexpr_end'>}</span><span class='tstring_content'> == null</span><span class='tstring_end'>`</span></span>
@@ -421,7 +423,7 @@
 118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 116</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_native?'>native?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>value == null || !value._klass</span><span class='tstring_end'>`</span></span>
@@ -450,7 +452,7 @@
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'pathname.rb', line 29</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/pathname.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='const'>Pathname</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -477,7 +479,7 @@
 2</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'pp.rb', line 2</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/pp.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pretty_inspect'>pretty_inspect</span><span class='semicolon'>;</span> <span class='id identifier rubyid_inspect'>inspect</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -490,8 +492,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:46:54 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

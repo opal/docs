@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="../../_index.html">Index (D)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Minitest.html" title="Minitest (module)">Minitest</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Spec.html" title="Minitest::Spec (class)">Spec</a></span></span>
      &raquo; 
@@ -85,7 +87,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>minitest/spec.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb</dd>
   </dl>
   
 </div>
@@ -555,7 +557,7 @@ automatically customizable spec types.</p>
 286</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 284</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 284</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_desc'>desc</span>
   <span class='ivar'>@desc</span>
@@ -592,7 +594,7 @@ automatically customizable spec types.</p>
 296</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 294</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 294</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_extended'>extended</span> <span class='id identifier rubyid_obj'>obj</span>
   <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='symbol'>:include</span><span class='comma'>,</span> <span class='const'>InstanceMethods</span>
@@ -645,7 +647,7 @@ automatically customizable spec types.</p>
 202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 197</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 197</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after'>after</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
   <span class='id identifier rubyid_define_method'>define_method</span> <span class='symbol'>:teardown</span> <span class='kw'>do</span>
@@ -695,7 +697,7 @@ automatically customizable spec types.</p>
 188</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 183</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 183</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before'>before</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
   <span class='id identifier rubyid_define_method'>define_method</span> <span class='symbol'>:setup</span> <span class='kw'>do</span>
@@ -738,7 +740,7 @@ automatically customizable spec types.</p>
 168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 166</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_children'>children</span>
   <span class='ivar'>@children</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -787,7 +789,7 @@ automatically customizable spec types.</p>
 273</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 262</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 262</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_desc'>desc</span> <span class='comment'># :nodoc:
 </span>  <span class='id identifier rubyid_cls'>cls</span> <span class='op'>=</span> <span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -836,7 +838,7 @@ automatically customizable spec types.</p>
 161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 159</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_describe_stack'>describe_stack</span> <span class='comment'># :nodoc:
 </span>  <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='symbol'>:describe_stack</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -903,7 +905,7 @@ and match between assertions and expectations as much as you want.</p>
 232</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 215</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_it'>it</span> <span class='id identifier rubyid_desc'>desc</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>anonymous</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
   <span class='id identifier rubyid_block'>block</span> <span class='op'>||=</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_skip'>skip</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(no tests defined)</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
@@ -984,7 +986,7 @@ and match between assertions and expectations as much as you want.</p>
 252</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 239</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 239</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_let'>let</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -1035,7 +1037,7 @@ and match between assertions and expectations as much as you want.</p>
 277</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 275</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 275</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@name</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='ivar'>@name</span> <span class='op'>:</span> <span class='kw'>super</span>
@@ -1077,7 +1079,7 @@ and match between assertions and expectations as much as you want.</p>
 174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 170</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_nuke_test_methods!'>nuke_test_methods!</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_public_instance_methods'>public_instance_methods</span><span class='period'>.</span><span class='id identifier rubyid_grep'>grep</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^test_</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
@@ -1139,7 +1141,7 @@ it matches.</p>
 142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 135</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_spec_type'>register_spec_type</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span> <span class='kw'>then</span>
@@ -1193,7 +1195,7 @@ it matches.</p>
 157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 149</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 149</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_spec_type'>spec_type</span> <span class='id identifier rubyid_desc'>desc</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_additional'>additional</span>
   <span class='const'>TYPES</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_matcher'>matcher</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='op'>|</span>
@@ -1240,7 +1242,7 @@ setting the name for you to +subject+.</p>
 260</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 258</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 258</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_subject'>subject</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
   <span class='id identifier rubyid_let'>let</span> <span class='symbol'>:subject</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
@@ -1280,7 +1282,7 @@ setting the name for you to +subject+.</p>
 281</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/spec.rb', line 279</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/spec.rb', line 279</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span> <span class='comment'># :nodoc:
 </span>  <span class='id identifier rubyid_name'>name</span> <span class='comment'># Can&#39;t alias due to 1.8.7, not sure why
@@ -1295,8 +1297,8 @@ setting the name for you to +subject+.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:48:13 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

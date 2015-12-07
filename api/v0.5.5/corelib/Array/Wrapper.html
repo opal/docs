@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="../_index.html">Index (W)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></span>
      &raquo; 
@@ -96,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>corelib/array.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb</dd>
   </dl>
   
 </div>
@@ -519,7 +521,7 @@
 1529</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1527</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1527</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@literal</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -563,7 +565,7 @@
 1539</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1531</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1531</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='ivar'>@literal</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -606,7 +608,7 @@
 1525</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1523</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1523</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_objects'>objects</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_allocate'>allocate</span><span class='lparen'>(</span><span class='id identifier rubyid_objects'>objects</span><span class='rparen'>)</span>
@@ -638,7 +640,7 @@
 1515</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1511</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1511</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_allocate'>allocate</span><span class='lparen'>(</span><span class='id identifier rubyid_array'>array</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_obj'>obj</span> <span class='op'>=</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -672,7 +674,7 @@
 1521</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1517</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1517</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_obj'>obj</span> <span class='op'>=</span> <span class='id identifier rubyid_allocate'>allocate</span>
@@ -729,7 +731,7 @@
 1581</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1570</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1570</span>
 
 <span class='kw'>def</span> <span class='op'>*</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -768,7 +770,7 @@
 1551</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1549</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1549</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='ivar'>@literal</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span>
@@ -811,7 +813,7 @@
 1594</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1583</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1583</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -872,7 +874,7 @@
 1555</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1553</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1553</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='ivar'>@literal</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
@@ -902,7 +904,7 @@
 1604</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1602</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1602</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_flatten'>flatten</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_allocate'>allocate</span><span class='lparen'>(</span><span class='ivar'>@literal</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -932,7 +934,7 @@
 1543</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1541</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1541</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize_copy'>initialize_copy</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='ivar'>@literal</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>other.literal</span><span class='tstring_end'>`</span></span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
@@ -962,7 +964,7 @@
 1567</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1565</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1565</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='ivar'>@literal</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
@@ -1014,7 +1016,7 @@
 1547</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1545</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1545</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='rparen'>)</span>
   <span class='kw'>super</span> <span class='op'>||</span> <span class='ivar'>@literal</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -1044,7 +1046,7 @@
 1559</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1557</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1557</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
   <span class='ivar'>@literal</span>
@@ -1074,7 +1076,7 @@
 1563</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1561</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1561</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
   <span class='kw'>self</span>
@@ -1104,7 +1106,7 @@
 1600</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/array.rb', line 1598</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/array.rb', line 1598</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_uniq'>uniq</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_allocate'>allocate</span><span class='lparen'>(</span><span class='ivar'>@literal</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span><span class='rparen'>)</span>
@@ -1119,8 +1121,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:46:52 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

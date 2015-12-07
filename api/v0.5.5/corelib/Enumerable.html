@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (E)</a> &raquo;
     
     
@@ -85,7 +87,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>corelib/enumerable.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb</dd>
   </dl>
   
 </div>
@@ -1080,7 +1082,7 @@
 34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 2</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all?'>all?</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1192,7 +1194,7 @@
 68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 36</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_any?'>any?</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1274,7 +1276,7 @@
 72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 70</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_chunk'>chunk</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
@@ -1327,7 +1329,7 @@
 95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 74</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_collect'>collect</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:collect</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -1402,7 +1404,7 @@
 99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 97</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_collect_concat'>collect_concat</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
@@ -1460,7 +1462,7 @@
 131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 101</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1579,7 +1581,7 @@
 196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 133</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cycle'>cycle</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:cycle</span><span class='comma'>,</span> <span class='id identifier rubyid_n'>n</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -1706,7 +1708,7 @@
 232</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 198</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_detect'>detect</span><span class='lparen'>(</span><span class='id identifier rubyid_ifnone'>ifnone</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:detect</span><span class='comma'>,</span> <span class='id identifier rubyid_ifnone'>ifnone</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -1789,7 +1791,7 @@
 257</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 234</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_drop'>drop</span><span class='lparen'>(</span><span class='id identifier rubyid_number'>number</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='id identifier rubyid_number'>number</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
@@ -1870,7 +1872,7 @@
 291</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 259</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 259</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_drop_while'>drop_while</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:drop_while</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -1952,7 +1954,7 @@
 295</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 293</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 293</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_cons'>each_cons</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
@@ -2004,7 +2006,7 @@
 299</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 297</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 297</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_entry'>each_entry</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
@@ -2075,7 +2077,7 @@
 344</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 301</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 301</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_slice'>each_slice</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
@@ -2171,7 +2173,7 @@
 373</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 346</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 346</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_with_index'>each_with_index</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_with_index</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2248,7 +2250,7 @@
 399</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 375</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 375</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_with_object</span><span class='comma'>,</span> <span class='id identifier rubyid_object'>object</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2314,7 +2316,7 @@
 413</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 401</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 401</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_entries'>entries</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2380,7 +2382,7 @@
 441</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 417</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 417</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_all'>find_all</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:find_all</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2471,7 +2473,7 @@
 484</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 443</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 443</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_index'>find_index</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:find_index</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>object === undefined &amp;&amp; block === nil</span><span class='tstring_end'>`</span></span>
@@ -2580,7 +2582,7 @@
 528</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 486</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 486</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_first'>first</span><span class='lparen'>(</span><span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>number === undefined</span><span class='tstring_end'>`</span></span>
@@ -2684,7 +2686,7 @@
 568</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 532</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 532</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_grep'>grep</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2774,7 +2776,7 @@
 598</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 570</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 570</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_group_by'>group_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:group_by</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2871,7 +2873,7 @@
 617</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 600</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 600</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2967,7 +2969,7 @@
 668</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 619</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 619</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='id identifier rubyid_sym'>sym</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3046,7 +3048,7 @@
 674</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 670</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 670</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lazy'>lazy</span>
   <span class='const'>Enumerator</span><span class='op'>::</span><span class='const'>Lazy</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_enumerator_size'>enumerator_size</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_enum'>enum</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='op'>|</span>
@@ -3124,7 +3126,7 @@
 731</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 683</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 683</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_max'>max</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3230,7 +3232,7 @@
 765</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 733</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 733</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_max_by'>max_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:max_by</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -3336,7 +3338,7 @@
 817</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 769</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 769</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_min'>min</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3442,7 +3444,7 @@
 851</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 819</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 819</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_min_by'>min_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:min_by</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -3524,7 +3526,7 @@
 855</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 853</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 853</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_minmax'>minmax</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
@@ -3576,7 +3578,7 @@
 859</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 857</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 857</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_minmax_by'>minmax_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
@@ -3660,7 +3662,7 @@
 895</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 861</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 861</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_none?'>none?</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3784,7 +3786,7 @@
 939</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 897</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 897</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_one?'>one?</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3876,7 +3878,7 @@
 943</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 941</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 941</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_partition'>partition</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
@@ -3928,7 +3930,7 @@
 949</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 947</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 947</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reverse_each'>reverse_each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
@@ -4014,7 +4016,7 @@
 1011</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 953</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 953</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slice_before'>slice_before</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>pattern === undefined &amp;&amp; block === nil || arguments.length &gt; 1</span><span class='tstring_end'>`</span></span>
@@ -4122,7 +4124,7 @@
 1015</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 1013</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 1013</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sort'>sort</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
@@ -4158,7 +4160,7 @@
 1025</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 1017</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 1017</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sort_by'>sort_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:sort_by</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -4194,7 +4196,7 @@
 1029</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 1027</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 1027</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_take'>take</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_first'>first</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
@@ -4248,7 +4250,7 @@
 1057</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 1031</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 1031</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_take_while'>take_while</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:take_while</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -4324,7 +4326,7 @@
 1063</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/enumerable.rb', line 1061</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 1061</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_zip'>zip</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_lists'>lists</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
@@ -4339,8 +4341,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:46:52 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="../_index.html">Index (B)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span>
      &raquo; 
@@ -96,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>opal/builder.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb</dd>
   </dl>
   
 </div>
@@ -442,7 +444,7 @@
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 14</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@paths</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:paths</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
@@ -481,7 +483,7 @@
 12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 10</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_build'>build</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='const'>Builder</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_build'>build</span> <span class='id identifier rubyid_name'>name</span>
@@ -517,7 +519,7 @@
 22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 20</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_append_path'>append_path</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='ivar'>@paths</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_path'>path</span>
@@ -551,7 +553,7 @@
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 24</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build'>build</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='ivar'>@segments</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -591,7 +593,7 @@
 74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 66</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_asset'>build_asset</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_ext'>ext</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_extname'>extname</span> <span class='id identifier rubyid_path'>path</span>
@@ -627,7 +629,7 @@
 99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 97</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_erb'>build_erb</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='op'>::</span><span class='const'>ERB</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_result'>result</span> <span class='id identifier rubyid_binding'>binding</span>
@@ -657,7 +659,7 @@
 95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 93</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_js'>build_js</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
@@ -687,7 +689,7 @@
 91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 89</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_ruby'>build_ruby</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_compile_ruby'>compile_ruby</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
@@ -719,7 +721,7 @@
 36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 32</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_str'>build_str</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@segments</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -760,7 +762,7 @@
 87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 76</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_ruby'>compile_ruby</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>||=</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
@@ -814,7 +816,7 @@
 64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 47</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_asset'>find_asset</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_path'>path</span> <span class='kw'>if</span> <span class='const'>Pathname</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_absolute?'>absolute?</span>
@@ -864,7 +866,7 @@
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/builder.rb', line 38</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_require_asset'>require_asset</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_location'>location</span> <span class='op'>=</span> <span class='id identifier rubyid_find_asset'>find_asset</span> <span class='id identifier rubyid_path'>path</span>
@@ -884,8 +886,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:47:04 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

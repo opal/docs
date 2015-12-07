@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (B)</a> &raquo;
     
     
@@ -80,7 +82,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>base64.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/base64.rb</dd>
   </dl>
   
 </div>
@@ -261,7 +263,7 @@
 131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'base64.rb', line 129</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/base64.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decode64'>decode64</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>decode(string.replace(/\r?\n/g, &#39;&#39;))</span><span class='tstring_end'>`</span></span>
@@ -291,7 +293,7 @@
 135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'base64.rb', line 133</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/base64.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_encode64'>encode64</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>encode(string).replace(/(.{60})/g, &quot;$1\n&quot;)</span><span class='tstring_end'>`</span></span>
@@ -321,7 +323,7 @@
 139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'base64.rb', line 137</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/base64.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strict_decode64'>strict_decode64</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>decode(string)</span><span class='tstring_end'>`</span></span>
@@ -351,7 +353,7 @@
 143</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'base64.rb', line 141</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/base64.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strict_encode64'>strict_encode64</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>encode(string)</span><span class='tstring_end'>`</span></span>
@@ -381,7 +383,7 @@
 147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'base64.rb', line 145</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/base64.rb', line 145</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_urlsafe_decode64'>urlsafe_decode64</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>decode(string.replace(/\-/g, &#39;+&#39;).replace(/_/g, &#39;/&#39;))</span><span class='tstring_end'>`</span></span>
@@ -411,7 +413,7 @@
 151</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'base64.rb', line 149</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/base64.rb', line 149</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_urlsafe_encode64'>urlsafe_encode64</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>encode(string).replace(/\+/g, &#39;-&#39;).replace(/\//g, &#39;_&#39;)</span><span class='tstring_end'>`</span></span>
@@ -426,8 +428,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:49:36 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

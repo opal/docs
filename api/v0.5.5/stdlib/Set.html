@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (S)</a> &raquo;
     
     
@@ -101,7 +103,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>set.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/set.rb</dd>
   </dl>
   
 </div>
@@ -480,7 +482,7 @@
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 8</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_enum'>enum</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -525,7 +527,7 @@
 6</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 4</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_ary'>ary</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_ary'>ary</span><span class='rparen'>)</span>
@@ -569,7 +571,7 @@
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 20</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_equal?'>equal?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
@@ -612,7 +614,7 @@
 35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 32</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='rparen'>)</span>
   <span class='ivar'>@hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_o'>o</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -669,7 +671,7 @@
 44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 38</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add?'>add?</span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='rparen'>)</span>
@@ -704,7 +706,7 @@
 59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 56</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
   <span class='ivar'>@hash</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
@@ -735,7 +737,7 @@
 73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 71</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_do_with_enum'>do_with_enum</span><span class='lparen'>(</span><span class='id identifier rubyid_enum'>enum</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_enum'>enum</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -767,7 +769,7 @@
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 46</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -821,7 +823,7 @@
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 52</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_empty?'>empty?</span>
   <span class='ivar'>@hash</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -877,7 +879,7 @@
 63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 61</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='rparen'>)</span>
   <span class='ivar'>@hash</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='rparen'>)</span>
@@ -908,7 +910,7 @@
 69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 66</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_enum'>enum</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_do_with_enum'>do_with_enum</span><span class='lparen'>(</span><span class='id identifier rubyid_enum'>enum</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_o'>o</span><span class='op'>|</span> <span class='id identifier rubyid_add'>add</span> <span class='id identifier rubyid_o'>o</span> <span class='rbrace'>}</span>
@@ -943,7 +945,7 @@
 77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 75</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_size'>size</span>
   <span class='ivar'>@hash</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
@@ -973,7 +975,7 @@
 82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'set.rb', line 80</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/set.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
   <span class='ivar'>@hash</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
@@ -988,8 +990,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:46:54 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

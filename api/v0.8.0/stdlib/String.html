@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (S)</a> &raquo;
     
     
@@ -96,8 +98,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>json.rb<span class="defines">,<br />
-  native.rb,<br /> encoding.rb</span>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/json.rb<span class="defines">,<br />
+  /Users/elia/Code/opal-docs/opal/stdlib/native.rb,<br /> /Users/elia/Code/opal-docs/opal/stdlib/encoding.rb</span>
 </dd>
   </dl>
   
@@ -301,7 +303,7 @@
 136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'encoding.rb', line 134</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/encoding.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bytes'>bytes</span>
   <span class='id identifier rubyid_each_byte'>each_byte</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
@@ -331,7 +333,7 @@
 140</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'encoding.rb', line 138</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/encoding.rb', line 138</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bytesize'>bytesize</span>
   <span class='ivar'>@encoding</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
@@ -365,7 +367,7 @@
 148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'encoding.rb', line 142</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/encoding.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_byte'>each_byte</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_byte</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -399,7 +401,7 @@
 152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'encoding.rb', line 150</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/encoding.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_encoding'>encoding</span>
   <span class='ivar'>@encoding</span>
@@ -438,7 +440,7 @@
 165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'encoding.rb', line 154</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/encoding.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='id identifier rubyid_encoding'>encoding</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>=</span> <span class='const'>Encoding</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_encoding'>encoding</span><span class='rparen'>)</span>
@@ -477,7 +479,7 @@
 169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'encoding.rb', line 167</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/encoding.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='id identifier rubyid_idx'>idx</span><span class='rparen'>)</span>
   <span class='ivar'>@encoding</span><span class='period'>.</span><span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_idx'>idx</span><span class='rparen'>)</span>
@@ -507,7 +509,7 @@
 366</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 364</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 364</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_n'>to_n</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.valueOf()</span><span class='tstring_end'>`</span></span>
@@ -522,8 +524,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:48:34 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

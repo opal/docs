@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="../_index.html">Index (S)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span>
      &raquo; 
@@ -96,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>opal/parser/sexp.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb</dd>
   </dl>
   
 </div>
@@ -542,7 +544,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 15</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='ivar'>@array</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span>
@@ -580,7 +582,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 31</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_sym'>sym</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@array</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='id identifier rubyid_sym'>sym</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
@@ -627,7 +629,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 11</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_array'>array</span>
   <span class='ivar'>@array</span>
@@ -669,7 +671,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 13</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source'>source</span>
   <span class='ivar'>@source</span>
@@ -707,7 +709,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 35</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='ivar'>@array</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_other'>other</span>
@@ -746,7 +748,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 53</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Sexp</span>
@@ -780,7 +782,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 27</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_children'>children</span>
   <span class='ivar'>@array</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
@@ -810,7 +812,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 67</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_column'>column</span>
   <span class='ivar'>@source</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@source</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
@@ -840,7 +842,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 49</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dup'>dup</span>
   <span class='const'>Sexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@array</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='rparen'>)</span>
@@ -874,7 +876,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 71</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@array</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
@@ -904,7 +906,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 63</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_line'>line</span>
   <span class='ivar'>@source</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@source</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
@@ -934,7 +936,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 75</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pretty_inspect'>pretty_inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line'>line</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line'>line</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='ivar'>@array</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
@@ -965,7 +967,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 40</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_parts'>parts</span><span class='rparen'>)</span>
   <span class='ivar'>@array</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_parts'>parts</span><span class='rparen'>)</span>
@@ -996,7 +998,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 45</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
   <span class='ivar'>@array</span>
@@ -1026,7 +1028,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 19</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
   <span class='ivar'>@array</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
@@ -1056,7 +1058,7 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 23</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_type='>type=</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='ivar'>@array</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span>
@@ -1071,8 +1073,8 @@ compiler then steps through the sexp trees to generate the javascript code.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:47:24 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

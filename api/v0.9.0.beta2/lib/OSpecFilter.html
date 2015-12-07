@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (O)</a> &raquo;
     
     
@@ -96,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>mspec/opal/runner.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb</dd>
   </dl>
   
 </div>
@@ -319,7 +321,7 @@
 9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 6</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@filters</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -357,7 +359,7 @@
 4</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 2</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_main'>main</span>
   <span class='ivar'>@main</span> <span class='op'>||=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -394,7 +396,7 @@
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 15</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='op'>===</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
   <span class='ivar'>@seen</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_description'>description</span>
@@ -425,7 +427,7 @@
 26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 24</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fails'>fails</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
   <span class='ivar'>@filters</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_description'>description</span>
@@ -455,7 +457,7 @@
 13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 11</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span>
   <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:exclude</span><span class='comma'>,</span> <span class='kw'>self</span>
@@ -485,7 +487,7 @@
 22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 20</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_filters'>register_filters</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -525,7 +527,7 @@
 40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 28</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unused_filters_message'>unused_filters_message</span><span class='lparen'>(</span><span class='label'>list:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_unused'>unused</span> <span class='op'>=</span> <span class='ivar'>@filters</span> <span class='op'>-</span> <span class='ivar'>@seen</span>
@@ -550,8 +552,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:49:07 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

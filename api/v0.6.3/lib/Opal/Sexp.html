@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="../_index.html">Index (S)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span>
      &raquo; 
@@ -96,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>opal/parser/sexp.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb</dd>
   </dl>
   
 </div>
@@ -526,7 +528,7 @@
 10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 8</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='ivar'>@array</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span>
@@ -564,7 +566,7 @@
 26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 24</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_sym'>sym</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@array</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='id identifier rubyid_sym'>sym</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
@@ -611,7 +613,7 @@
 6</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 4</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_array'>array</span>
   <span class='ivar'>@array</span>
@@ -653,7 +655,7 @@
 8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 6</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source'>source</span>
   <span class='ivar'>@source</span>
@@ -691,7 +693,7 @@
 31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 28</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='ivar'>@array</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_other'>other</span>
@@ -730,7 +732,7 @@
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 46</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Sexp</span>
@@ -764,7 +766,7 @@
 22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 20</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_children'>children</span>
   <span class='ivar'>@array</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
@@ -794,7 +796,7 @@
 62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 60</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_column'>column</span>
   <span class='ivar'>@source</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@source</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
@@ -824,7 +826,7 @@
 44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 42</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dup'>dup</span>
   <span class='const'>Sexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@array</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='rparen'>)</span>
@@ -858,7 +860,7 @@
 66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 64</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@array</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
@@ -888,7 +890,7 @@
 58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 56</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_line'>line</span>
   <span class='ivar'>@source</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@source</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
@@ -918,7 +920,7 @@
 70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 68</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pretty_inspect'>pretty_inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line'>line</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line'>line</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='ivar'>@array</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
@@ -949,7 +951,7 @@
 36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 33</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_parts'>parts</span><span class='rparen'>)</span>
   <span class='ivar'>@array</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_parts'>parts</span><span class='rparen'>)</span>
@@ -980,7 +982,7 @@
 40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 38</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
   <span class='ivar'>@array</span>
@@ -1010,7 +1012,7 @@
 14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 12</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
   <span class='ivar'>@array</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
@@ -1040,7 +1042,7 @@
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/parser/sexp.rb', line 16</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/sexp.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_type='>type=</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='ivar'>@array</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span>
@@ -1055,8 +1057,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:47:05 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

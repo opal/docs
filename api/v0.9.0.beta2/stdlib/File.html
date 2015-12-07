@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (F)</a> &raquo;
     
     
@@ -103,7 +105,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>nodejs/file.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb</dd>
   </dl>
   
 </div>
@@ -540,7 +542,7 @@
 87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 82</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_flags'>flags</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_flags'>flags</span> <span class='op'>=</span> <span class='id identifier rubyid_flags'>flags</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>b</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -590,7 +592,7 @@
 91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 89</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_path'>path</span>
   <span class='ivar'>@path</span>
@@ -627,7 +629,7 @@
 39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 37</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_basename'>basename</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_ext'>ext</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>__path__.basename(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ext'>ext</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span>
@@ -680,7 +682,7 @@
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 49</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_directory?'>directory?</span> <span class='id identifier rubyid_path'>path</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_exist?'>exist?</span> <span class='id identifier rubyid_path'>path</span>
@@ -711,7 +713,7 @@
 43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 41</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>__path__.dirname(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span>
@@ -763,7 +765,7 @@
 21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 19</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span> <span class='id identifier rubyid_path'>path</span>
   <span class='backtick'>`</span><span class='tstring_content'>__fs__.existsSync(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span>
@@ -816,7 +818,7 @@
 57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 54</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span> <span class='id identifier rubyid_path'>path</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_exist?'>exist?</span> <span class='id identifier rubyid_path'>path</span>
@@ -847,7 +849,7 @@
 47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 45</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_paths'>paths</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>__path__.join.apply(__path__, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_paths'>paths</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span>
@@ -886,7 +888,7 @@
 75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 64</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_flags'>flags</span>
   <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_flags'>flags</span><span class='rparen'>)</span>
@@ -925,7 +927,7 @@
 12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 10</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span> <span class='id identifier rubyid_path'>path</span>
   <span class='backtick'>`</span><span class='tstring_content'>__fs__.readFileSync(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>).toString()</span><span class='tstring_end'>`</span></span>
@@ -965,7 +967,7 @@
 35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 23</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_realpath'>realpath</span><span class='lparen'>(</span><span class='id identifier rubyid_pathname'>pathname</span><span class='comma'>,</span> <span class='id identifier rubyid_dir_string'>dir_string</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_cache'>cache</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_pathname'>pathname</span> <span class='op'>=</span> <span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_dir_string'>dir_string</span><span class='comma'>,</span> <span class='id identifier rubyid_pathname'>pathname</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_dir_string'>dir_string</span>
@@ -1006,7 +1008,7 @@
 62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 59</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='id identifier rubyid_path'>path</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_exist?'>exist?</span> <span class='id identifier rubyid_path'>path</span>
@@ -1038,7 +1040,7 @@
 17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 14</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span>
   <span class='backtick'>`</span><span class='tstring_content'>__fs__.writeFileSync(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_data'>data</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span>
@@ -1075,7 +1077,7 @@
 101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 99</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_close'>close</span>
   <span class='backtick'>`</span><span class='tstring_content'>__fs__.closeSync(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@fd</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span>
@@ -1105,7 +1107,7 @@
 97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 95</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 95</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_flush'>flush</span>
   <span class='backtick'>`</span><span class='tstring_content'>__fs__.fsyncSync(</span><span class='embvar'>#</span><span class='ivar'>@fd</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span>
@@ -1135,7 +1137,7 @@
 93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nodejs/file.rb', line 91</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/file.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_write'>write</span> <span class='id identifier rubyid_string'>string</span>
   <span class='backtick'>`</span><span class='tstring_content'>__fs__.writeSync(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@fd</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_string'>string</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span>
@@ -1150,8 +1152,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:49:16 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

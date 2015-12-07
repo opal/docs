@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (S)</a> &raquo;
     
     
@@ -101,7 +103,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>corelib/struct.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb</dd>
   </dl>
   
 </div>
@@ -542,7 +544,7 @@
 56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 52</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_members'>members</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
@@ -587,7 +589,7 @@
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 22</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_define_struct_attribute'>define_struct_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>==</span> <span class='const'>Struct</span>
@@ -627,7 +629,7 @@
 46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 40</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_inherited'>inherited</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_members'>members</span> <span class='op'>=</span> <span class='ivar'>@members</span>
@@ -665,7 +667,7 @@
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 32</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_members'>members</span>
   <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>==</span> <span class='const'>Struct</span>
@@ -715,7 +717,7 @@
 20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 6</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>super</span> <span class='kw'>unless</span> <span class='kw'>self</span> <span class='op'>==</span> <span class='const'>Struct</span>
@@ -774,7 +776,7 @@
 75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 62</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'>Integer</span> <span class='op'>===</span> <span class='id identifier rubyid_name'>name</span>
@@ -826,7 +828,7 @@
 90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 77</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'>Integer</span> <span class='op'>===</span> <span class='id identifier rubyid_name'>name</span>
@@ -870,7 +872,7 @@
 97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 92</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -906,7 +908,7 @@
 104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 99</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_pair'>each_pair</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_pair</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -963,7 +965,7 @@
 110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 106</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_hash'>hash</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_hash'>hash</span> <span class='op'>||</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
@@ -1011,7 +1013,7 @@
 138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 124</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 124</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;struct </span><span class='tstring_end'>&quot;</span></span>
@@ -1057,7 +1059,7 @@
 114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 112</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 112</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_length'>length</span>
   <span class='id identifier rubyid_members'>members</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
@@ -1087,7 +1089,7 @@
 60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 58</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_members'>members</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_members'>members</span>
@@ -1121,7 +1123,7 @@
 120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 118</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
   <span class='id identifier rubyid_members'>members</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -1151,7 +1153,7 @@
 144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 142</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span>
   <span class='id identifier rubyid_members'>members</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='semicolon'>;</span> <span class='id identifier rubyid_h'>h</span><span class='rbrace'>}</span>
@@ -1191,7 +1193,7 @@
 158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/struct.rb', line 146</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/struct.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_values_at'>values_at</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>|</span> <span class='backtick'>`</span><span class='tstring_content'>arg.$$is_range ? </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='embexpr_end'>}</span><span class='tstring_content'> : arg</span><span class='tstring_end'>`</span></span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
@@ -1216,8 +1218,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:48:52 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (O)</a> &raquo;
     
     
@@ -96,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>mspec/opal/runner.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb</dd>
   </dl>
   
 </div>
@@ -364,7 +366,7 @@
 213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 209</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 209</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter_class'>formatter_class</span><span class='rparen'>)</span>
   <span class='ivar'>@formatter_class</span> <span class='op'>=</span> <span class='id identifier rubyid_formatter_class'>formatter_class</span>
@@ -403,7 +405,7 @@
 207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 205</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 205</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_main'>main</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter_class'>formatter_class</span> <span class='op'>=</span> <span class='const'>BrowserFormatter</span><span class='rparen'>)</span>
   <span class='ivar'>@main</span> <span class='op'>||=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_formatter_class'>formatter_class</span>
@@ -443,7 +445,7 @@
 251</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 245</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 245</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after'>after</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -481,7 +483,7 @@
 243</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 237</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 237</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before'>before</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -518,7 +520,7 @@
 235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 230</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 230</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bm!'>bm!</span><span class='lparen'>(</span><span class='id identifier rubyid_repeat'>repeat</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.bm = {}</span><span class='tstring_end'>`</span></span>
@@ -565,7 +567,7 @@
 269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 253</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 253</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_did_finish'>did_finish</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -612,7 +614,7 @@
 220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 215</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span>
   <span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='ivar'>@formatter_class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -645,7 +647,7 @@
 224</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 222</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 222</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
   <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_opal_runner'>opal_runner</span>
@@ -675,7 +677,7 @@
 228</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mspec/opal/runner.rb', line 226</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 226</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_will_start'>will_start</span>
   <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_actions'>actions</span> <span class='symbol'>:start</span>
@@ -690,8 +692,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:48:27 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

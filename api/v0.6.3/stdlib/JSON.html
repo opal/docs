@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (J)</a> &raquo;
     
     
@@ -80,7 +82,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>json.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/json.rb</dd>
   </dl>
   
 </div>
@@ -303,7 +305,7 @@
 57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'json.rb', line 55</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/json.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_id'>create_id</span>
   <span class='ivar'>@create_id</span>
@@ -344,7 +346,7 @@
 66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'json.rb', line 60</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/json.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'>String</span> <span class='op'>===</span> <span class='id identifier rubyid_value'>value</span>
@@ -387,7 +389,7 @@
 99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'json.rb', line 88</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/json.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='comma'>,</span> <span class='id identifier rubyid_io'>io</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
@@ -439,7 +441,7 @@
 82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'json.rb', line 77</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/json.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_object'>from_object</span><span class='lparen'>(</span><span class='id identifier rubyid_js_object'>js_object</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:object_class</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Hash</span>
@@ -472,7 +474,7 @@
 86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'json.rb', line 84</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/json.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -502,7 +504,7 @@
 70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'json.rb', line 68</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/json.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_from_object'>from_object</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>$parse(source)</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -532,7 +534,7 @@
 74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'json.rb', line 72</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/json.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parse!'>parse!</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -547,8 +549,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:47:12 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="../../_index.html">Index (I)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Opal.html" title="Opal (module)">Opal</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Nodes.html" title="Opal::Nodes (module)">Nodes</a></span></span>
      &raquo; 
@@ -100,7 +102,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>opal/nodes/iter.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/iter.rb</dd>
   </dl>
   
 </div>
@@ -370,7 +372,7 @@
 107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/iter.rb', line 99</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/iter.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_args'>args</span>
   <span class='kw'>if</span> <span class='const'>Fixnum</span> <span class='op'>===</span> <span class='id identifier rubyid_args_sexp'>args_sexp</span> <span class='kw'>or</span> <span class='id identifier rubyid_args_sexp'>args_sexp</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -433,7 +435,7 @@ identifiers.</p>
 133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/iter.rb', line 117</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/iter.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_args_to_params'>args_to_params</span><span class='lparen'>(</span><span class='id identifier rubyid_sexp'>sexp</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -477,7 +479,7 @@ identifiers.</p>
 111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/iter.rb', line 109</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/iter.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_body'>body</span>
   <span class='id identifier rubyid_compiler'>compiler</span><span class='period'>.</span><span class='id identifier rubyid_returns'>returns</span><span class='lparen'>(</span><span class='id identifier rubyid_body_sexp'>body_sexp</span> <span class='op'>||</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='symbol'>:nil</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -550,7 +552,7 @@ identifiers.</p>
 55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/iter.rb', line 10</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/iter.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='id identifier rubyid_opt_args'>opt_args</span>  <span class='op'>=</span> <span class='id identifier rubyid_extract_opt_args'>extract_opt_args</span>
@@ -644,7 +646,7 @@ identifiers.</p>
 80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/iter.rb', line 57</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/iter.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_args'>compile_args</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='id identifier rubyid_opt_args'>opt_args</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_arg'>arg</span><span class='comma'>,</span> <span class='id identifier rubyid_idx'>idx</span><span class='op'>|</span>
@@ -708,7 +710,7 @@ identifiers.</p>
 97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/iter.rb', line 92</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/iter.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extract_block_arg'>extract_block_arg</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Sexp</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='symbol'>:block_pass</span>
@@ -755,7 +757,7 @@ identifiers.</p>
 89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/iter.rb', line 83</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/iter.rb', line 83</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extract_opt_args'>extract_opt_args</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Sexp</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='symbol'>:block</span>
@@ -774,8 +776,8 @@ identifiers.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:49:27 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (B)</a> &raquo;
     
     
@@ -80,7 +82,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>corelib/basic_object.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb</dd>
   </dl>
   
 </div>
@@ -430,7 +432,7 @@
 3</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 2</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -469,7 +471,7 @@
 118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 114</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_symbol'>symbol</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>NoMethodError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>self.$inspect &amp;&amp; !self.$inspect.$$stub</span><span class='tstring_end'>`</span></span> <span class='op'>?</span>
@@ -508,7 +510,7 @@
 39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 37</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='op'>!</span>
   <span class='kw'>false</span>
@@ -538,7 +540,7 @@
 43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 41</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='op'>!=</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='op'>!</span><span class='lparen'>(</span><span class='kw'>self</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
@@ -572,7 +574,7 @@
 7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 5</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>self === other</span><span class='tstring_end'>`</span></span>
@@ -602,7 +604,7 @@
 15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 13</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid___id__'>__id__</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.$$id || (self.$$id = Opal.uid())</span><span class='tstring_end'>`</span></span>
@@ -648,7 +650,7 @@
 35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 17</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_symbol'>symbol</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -716,7 +718,7 @@
 11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 9</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>self</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span>
@@ -772,7 +774,7 @@
 75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 47</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no block given</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -852,7 +854,7 @@
 103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 77</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_instance_exec'>instance_exec</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no block given</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -905,7 +907,7 @@
 106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 105</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_singleton_method_added'>singleton_method_added</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -933,7 +935,7 @@
 109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 108</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_singleton_method_removed'>singleton_method_removed</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -961,7 +963,7 @@
 112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/basic_object.rb', line 111</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/basic_object.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_singleton_method_undefined'>singleton_method_undefined</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -975,8 +977,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:49:14 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

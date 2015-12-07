@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="../../_index.html">Index (B)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Opal.html" title="Opal (module)">Opal</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Nodes.html" title="Opal::Nodes (module)">Nodes</a></span></span>
      &raquo; 
@@ -98,7 +100,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>opal/nodes/definitions.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/definitions.rb</dd>
   </dl>
   
 </div>
@@ -322,7 +324,7 @@
 119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/definitions.rb', line 117</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/definitions.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_child_is_expr?'>child_is_expr?</span><span class='lparen'>(</span><span class='id identifier rubyid_child'>child</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raw_expression?'>raw_expression?</span><span class='lparen'>(</span><span class='id identifier rubyid_child'>child</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lbracket'>[</span><span class='symbol'>:stmt</span><span class='comma'>,</span> <span class='symbol'>:stmt_closure</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='ivar'>@level</span><span class='rparen'>)</span>
@@ -364,7 +366,7 @@
 111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/definitions.rb', line 97</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/definitions.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_push'>push</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nil</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_children'>children</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -493,7 +495,7 @@ must be rewritten.</p>
 174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/definitions.rb', line 146</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/definitions.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_inline_yield'>find_inline_yield</span><span class='lparen'>(</span><span class='id identifier rubyid_stmt'>stmt</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_found'>found</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -571,7 +573,7 @@ must be rewritten.</p>
 123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/definitions.rb', line 121</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/definitions.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_raw_expression?'>raw_expression?</span><span class='lparen'>(</span><span class='id identifier rubyid_child'>child</span><span class='rparen'>)</span>
   <span class='op'>!</span><span class='lbracket'>[</span><span class='symbol'>:xstr</span><span class='comma'>,</span> <span class='symbol'>:dxstr</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
@@ -601,7 +603,7 @@ must be rewritten.</p>
 115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'opal/nodes/definitions.rb', line 113</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/definitions.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stmt_join'>stmt_join</span>
   <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_class_scope?'>class_scope?</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_current_indent'>current_indent</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_current_indent'>current_indent</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -616,8 +618,8 @@ must be rewritten.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:49:09 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="../_index.html">Index (O)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Native.html" title="Native (module)">Native</a></span></span>
      &raquo; 
@@ -93,7 +95,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>native.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/native.rb</dd>
   </dl>
   
 </div>
@@ -451,7 +453,7 @@
 212</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 203</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_mid'>mid</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -495,7 +497,7 @@
 156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 154</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'> === </span><span class='embexpr_beg'>#{</span><span class='const'>Native</span><span class='period'>.</span><span class='id identifier rubyid_try_convert'>try_convert</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>`</span></span>
@@ -534,7 +536,7 @@
 191</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 180</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 180</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -579,7 +581,7 @@
 201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 193</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 193</span>
 
 <span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_native'>native</span> <span class='op'>=</span> <span class='const'>Native</span><span class='period'>.</span><span class='id identifier rubyid_try_convert'>try_convert</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
@@ -615,7 +617,7 @@
 230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 228</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 228</span>
 
 <span class='kw'>def</span> <span class='kw'>class</span>
   <span class='backtick'>`</span><span class='tstring_content'>self._klass</span><span class='tstring_end'>`</span></span>
@@ -655,7 +657,7 @@
 178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 166</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -721,7 +723,7 @@
 160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 158</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 158</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.hasOwnProperty(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span>
@@ -751,7 +753,7 @@
 242</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 240</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 240</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;Native:</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>String(</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -803,7 +805,7 @@
 226</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 224</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 224</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_klass'>klass</span> <span class='op'>==</span> <span class='const'>Native</span>
@@ -859,7 +861,7 @@
 220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 218</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_klass'>klass</span> <span class='op'>==</span> <span class='const'>Native</span>
@@ -911,7 +913,7 @@
 216</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 214</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 214</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_nil?'>nil?</span>
   <span class='kw'>false</span>
@@ -941,7 +943,7 @@
 234</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 232</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 232</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='const'>Native</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@native</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
@@ -971,7 +973,7 @@
 238</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'native.rb', line 236</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 236</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='const'>Native</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@native</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -986,8 +988,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:46:54 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

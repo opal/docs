@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="../_index.html">Index (B)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Minitest.html" title="Minitest (module)">Minitest</a></span></span>
      &raquo; 
@@ -100,7 +102,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>minitest/benchmark.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb</dd>
   </dl>
   
 </div>
@@ -743,7 +745,7 @@ starting with &quot;bench_&quot; get executed on a per-class.</p>
 41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 36</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_bench_exp'>bench_exp</span> <span class='id identifier rubyid_min'>min</span><span class='comma'>,</span> <span class='id identifier rubyid_max'>max</span><span class='comma'>,</span> <span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='int'>10</span>
   <span class='id identifier rubyid_min'>min</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_log10'>log10</span><span class='lparen'>(</span><span class='id identifier rubyid_min'>min</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_log10'>log10</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -791,7 +793,7 @@ starting with &quot;bench_&quot; get executed on a per-class.</p>
 53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 49</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_bench_linear'>bench_linear</span> <span class='id identifier rubyid_min'>min</span><span class='comma'>,</span> <span class='id identifier rubyid_max'>max</span><span class='comma'>,</span> <span class='id identifier rubyid_step'>step</span> <span class='op'>=</span> <span class='int'>10</span>
   <span class='lparen'>(</span><span class='id identifier rubyid_min'>min</span><span class='op'>..</span><span class='id identifier rubyid_max'>max</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_step'>step</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
@@ -837,7 +839,7 @@ Override if you need different ranges for your benchmarks.</p>
 64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 62</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_bench_range'>bench_range</span>
   <span class='id identifier rubyid_bench_exp'>bench_exp</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>10_000</span>
@@ -877,7 +879,7 @@ Override if you need different ranges for your benchmarks.</p>
 14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 12</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_io'>io</span> <span class='comment'># :nodoc:
 </span>  <span class='ivar'>@io</span>
@@ -919,7 +921,7 @@ Override if you need different ranges for your benchmarks.</p>
 24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 20</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='id identifier rubyid_reporter'>reporter</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='comment'># :nodoc:
 </span>  <span class='comment'># NOTE: this is truly horrible... but I don&#39;t see a way around this ATM.
@@ -961,7 +963,7 @@ Override if you need different ranges for your benchmarks.</p>
 28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 26</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_runnable_methods'>runnable_methods</span> <span class='comment'># :nodoc:
 </span>  <span class='id identifier rubyid_methods_matching'>methods_matching</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^bench_</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -1039,7 +1041,7 @@ analysis.</p>
 103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 84</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assert_performance'>assert_performance</span> <span class='id identifier rubyid_validation'>validation</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_work'>work</span>
   <span class='id identifier rubyid_range'>range</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_bench_range'>bench_range</span>
@@ -1122,7 +1124,7 @@ more details.</p>
 136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 128</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assert_performance_constant'>assert_performance_constant</span> <span class='id identifier rubyid_threshold'>threshold</span> <span class='op'>=</span> <span class='float'>0.99</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_work'>work</span>
   <span class='id identifier rubyid_validation'>validation</span> <span class='op'>=</span> <span class='id identifier rubyid_proc'>proc</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_range'>range</span><span class='comma'>,</span> <span class='id identifier rubyid_times'>times</span><span class='op'>|</span>
@@ -1181,7 +1183,7 @@ match a exponential curve within a given error +threshold+.</p>
 156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 154</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assert_performance_exponential'>assert_performance_exponential</span> <span class='id identifier rubyid_threshold'>threshold</span> <span class='op'>=</span> <span class='float'>0.99</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_work'>work</span>
   <span class='id identifier rubyid_assert_performance'>assert_performance</span> <span class='id identifier rubyid_validation_for_fit'>validation_for_fit</span><span class='lparen'>(</span><span class='symbol'>:exponential</span><span class='comma'>,</span> <span class='id identifier rubyid_threshold'>threshold</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_work'>work</span>
@@ -1234,7 +1236,7 @@ match a straight line within a given error +threshold+.</p>
 196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 194</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assert_performance_linear'>assert_performance_linear</span> <span class='id identifier rubyid_threshold'>threshold</span> <span class='op'>=</span> <span class='float'>0.99</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_work'>work</span>
   <span class='id identifier rubyid_assert_performance'>assert_performance</span> <span class='id identifier rubyid_validation_for_fit'>validation_for_fit</span><span class='lparen'>(</span><span class='symbol'>:linear</span><span class='comma'>,</span> <span class='id identifier rubyid_threshold'>threshold</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_work'>work</span>
@@ -1287,7 +1289,7 @@ match a logarithmic curve within a given error +threshold+.</p>
 176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 174</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assert_performance_logarithmic'>assert_performance_logarithmic</span> <span class='id identifier rubyid_threshold'>threshold</span> <span class='op'>=</span> <span class='float'>0.99</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_work'>work</span>
   <span class='id identifier rubyid_assert_performance'>assert_performance</span> <span class='id identifier rubyid_validation_for_fit'>validation_for_fit</span><span class='lparen'>(</span><span class='symbol'>:logarithmic</span><span class='comma'>,</span> <span class='id identifier rubyid_threshold'>threshold</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_work'>work</span>
@@ -1340,7 +1342,7 @@ fit to match a power curve within a given error +threshold+.</p>
 216</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 214</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 214</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assert_performance_power'>assert_performance_power</span> <span class='id identifier rubyid_threshold'>threshold</span> <span class='op'>=</span> <span class='float'>0.99</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_work'>work</span>
   <span class='id identifier rubyid_assert_performance'>assert_performance</span> <span class='id identifier rubyid_validation_for_fit'>validation_for_fit</span><span class='lparen'>(</span><span class='symbol'>:power</span><span class='comma'>,</span> <span class='id identifier rubyid_threshold'>threshold</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_work'>work</span>
@@ -1386,7 +1388,7 @@ fit to match a power curve within a given error +threshold+.</p>
 229</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 223</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 223</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fit_error'>fit_error</span> <span class='id identifier rubyid_xys'>xys</span>
   <span class='id identifier rubyid_y_bar'>y_bar</span>  <span class='op'>=</span> <span class='id identifier rubyid_sigma'>sigma</span><span class='lparen'>(</span><span class='id identifier rubyid_xys'>xys</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='op'>|</span> <span class='id identifier rubyid_y'>y</span> <span class='rbrace'>}</span> <span class='op'>/</span> <span class='id identifier rubyid_xys'>xys</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
@@ -1445,7 +1447,7 @@ fit to match a power curve within a given error +threshold+.</p>
 251</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 238</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 238</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fit_exponential'>fit_exponential</span> <span class='id identifier rubyid_xs'>xs</span><span class='comma'>,</span> <span class='id identifier rubyid_ys'>ys</span>
   <span class='id identifier rubyid_n'>n</span>     <span class='op'>=</span> <span class='id identifier rubyid_xs'>xs</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
@@ -1511,7 +1513,7 @@ fit to match a power curve within a given error +threshold+.</p>
 296</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 283</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 283</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fit_linear'>fit_linear</span> <span class='id identifier rubyid_xs'>xs</span><span class='comma'>,</span> <span class='id identifier rubyid_ys'>ys</span>
   <span class='id identifier rubyid_n'>n</span>   <span class='op'>=</span> <span class='id identifier rubyid_xs'>xs</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
@@ -1577,7 +1579,7 @@ fit to match a power curve within a given error +threshold+.</p>
 273</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 260</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 260</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fit_logarithmic'>fit_logarithmic</span> <span class='id identifier rubyid_xs'>xs</span><span class='comma'>,</span> <span class='id identifier rubyid_ys'>ys</span>
   <span class='id identifier rubyid_n'>n</span>     <span class='op'>=</span> <span class='id identifier rubyid_xs'>xs</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
@@ -1642,7 +1644,7 @@ fit to match a power curve within a given error +threshold+.</p>
 317</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 305</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 305</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fit_power'>fit_power</span> <span class='id identifier rubyid_xs'>xs</span><span class='comma'>,</span> <span class='id identifier rubyid_ys'>ys</span>
   <span class='id identifier rubyid_n'>n</span>       <span class='op'>=</span> <span class='id identifier rubyid_xs'>xs</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
@@ -1692,7 +1694,7 @@ fit to match a power curve within a given error +threshold+.</p>
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 16</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_io'>io</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_io'>io</span>
@@ -1737,7 +1739,7 @@ sum of the result. Eg:</p>
 329</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 326</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 326</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sigma'>sigma</span> <span class='id identifier rubyid_enum'>enum</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
   <span class='id identifier rubyid_enum'>enum</span> <span class='op'>=</span> <span class='id identifier rubyid_enum'>enum</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span>
@@ -1783,7 +1785,7 @@ that the error is within a tolerable threshold.</p>
 341</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'minitest/benchmark.rb', line 335</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/benchmark.rb', line 335</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_validation_for_fit'>validation_for_fit</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_threshold'>threshold</span>
   <span class='id identifier rubyid_proc'>proc</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_range'>range</span><span class='comma'>,</span> <span class='id identifier rubyid_times'>times</span><span class='op'>|</span>
@@ -1802,8 +1804,8 @@ that the error is within a tolerable threshold.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:48:16 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

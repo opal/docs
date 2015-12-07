@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (O)</a> &raquo;
     
     
@@ -80,7 +82,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>corelib/helpers.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/helpers.rb</dd>
   </dl>
   
 </div>
@@ -333,7 +335,7 @@
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/helpers.rb', line 10</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/helpers.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_object'>object</span> <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>===</span> <span class='id identifier rubyid_object'>object</span>
@@ -375,7 +377,7 @@
 28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/helpers.rb', line 20</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/helpers.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_coerced'>coerced</span> <span class='op'>=</span> <span class='id identifier rubyid_coerce_to'>coerce_to</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
@@ -443,7 +445,7 @@
 42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/helpers.rb', line 30</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/helpers.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to?'>coerce_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='id identifier rubyid_method'>method</span>
@@ -489,7 +491,7 @@
 60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/helpers.rb', line 52</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/helpers.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_compare'>compare</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_compare'>compare</span> <span class='op'>=</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_b'>b</span>
@@ -535,7 +537,7 @@
 74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/helpers.rb', line 62</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/helpers.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -588,7 +590,7 @@
 101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/helpers.rb', line 86</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/helpers.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -659,7 +661,7 @@
 84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/helpers.rb', line 76</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/helpers.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -699,7 +701,7 @@
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/helpers.rb', line 44</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/helpers.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_try_convert'>try_convert</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_object'>object</span> <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>===</span> <span class='id identifier rubyid_object'>object</span>
@@ -737,7 +739,7 @@
 8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'corelib/helpers.rb', line 2</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/helpers.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_type_error'>type_error</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_coerced'>coerced</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_method'>method</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_coerced'>coerced</span>
@@ -756,8 +758,8 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:48:31 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 

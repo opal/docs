@@ -35,7 +35,9 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
+  <span class="title"><a href="/docs">Opal Docs</a></span>
   
+    &raquo;
     <a href="_index.html">Index (O)</a> &raquo;
     
     
@@ -80,7 +82,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>observer.rb</dd>
+    <dd>/Users/elia/Code/opal-docs/opal/stdlib/observer.rb</dd>
   </dl>
   
 </div>
@@ -433,7 +435,7 @@ notifications.</p>
 132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'observer.rb', line 126</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/observer.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_observer'>add_observer</span><span class='lparen'>(</span><span class='id identifier rubyid_observer'>observer</span><span class='comma'>,</span> <span class='id identifier rubyid_func'>func</span><span class='op'>=</span><span class='symbol'>:update</span><span class='rparen'>)</span>
   <span class='ivar'>@observer_peers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>unless</span> <span class='kw'>defined?</span> <span class='ivar'>@observer_peers</span>
@@ -480,7 +482,7 @@ the changed +state+ is +true+.</p>
 169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'observer.rb', line 167</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/observer.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_changed'>changed</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='op'>=</span><span class='kw'>true</span><span class='rparen'>)</span>
   <span class='ivar'>@observer_state</span> <span class='op'>=</span> <span class='id identifier rubyid_state'>state</span>
@@ -539,7 +541,7 @@ the changed +state+ is +true+.</p>
 181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'observer.rb', line 175</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/observer.rb', line 175</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_changed?'>changed?</span>
   <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='ivar'>@observer_state</span> <span class='kw'>and</span> <span class='ivar'>@observer_state</span>
@@ -587,7 +589,7 @@ the changed +state+ is +true+.</p>
 159</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'observer.rb', line 153</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/observer.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count_observers'>count_observers</span>
   <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='ivar'>@observer_peers</span>
@@ -634,7 +636,7 @@ receive notifications.</p>
 141</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'observer.rb', line 139</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/observer.rb', line 139</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_observer'>delete_observer</span><span class='lparen'>(</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span>
   <span class='ivar'>@observer_peers</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_observer'>observer</span> <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='ivar'>@observer_peers</span>
@@ -674,7 +676,7 @@ receive notifications.</p>
 148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'observer.rb', line 146</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/observer.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_observers'>delete_observers</span>
   <span class='ivar'>@observer_peers</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span> <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='ivar'>@observer_peers</span>
@@ -727,7 +729,7 @@ The changed state is then set to +false+.</p>
 200</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'observer.rb', line 191</span>
+      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/observer.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_notify_observers'>notify_observers</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='ivar'>@observer_state</span> <span class='kw'>and</span> <span class='ivar'>@observer_state</span>
@@ -749,8 +751,8 @@ The changed state is then set to +false+.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Dec  7 12:47:52 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  Generated on 12/09/15 by
+  <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
   0.8.7.6 (ruby-2.2.3).
 </div>
 
