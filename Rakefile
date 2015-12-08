@@ -264,33 +264,23 @@ end
 
 # @returns some fake ruby code containing the docs and the code coming from runtime.js
 def runtime_docs(runtime_js_code)
-  # puts runtime_js_code
-  puts '='*80
   lines = runtime_js_code.split("\n")
-  # puts lines.map {|l| '>> '+l}
-  puts '='*80
   functions = []
   in_comment = false
-  require 'pp'
   scan_block_comment = -> lines {
     next if lines.empty?
     next unless lines.first.to_s.strip.start_with?('/*')
-    # p start_block: lines.first
     lines.shift # skip the start
     comment = []
     comment << lines.shift.strip.gsub(/^\*+ /, '') until lines.first.strip.end_with? '*/'
-    # p comment: comment
     lines.shift # skip the end
-    # pp block_comment: comment
     comment
   }
   scan_line_comment = -> lines {
     next if lines.empty?
     next unless lines.first.strip.start_with? '//'
-    # p start_line: lines.first
     comment = []
     comment << lines.shift.strip.gsub(%r{^// ?}, '') while lines.first.strip.start_with? '//'
-    # pp line_comment: comment
     comment
   }
   skip_blank_lines = -> lines {
@@ -301,25 +291,21 @@ def runtime_docs(runtime_js_code)
     next if lines.empty?
     next unless lines.first =~ /\bfunction[^}]*$/
     indentation = lines.first.scan(/^(\s*)\S/).flatten.first
-    # p start_func: lines.first, indentation: indentation
     body = [lines.shift]
     until lines.first =~ /^#{indentation}\};?/
       body << lines.shift
     end
     body << lines.shift # the closure
-    # pp func: body
     body
   }
 
   scan_line = -> lines {
     line = lines.shift
-    # pp line: line
     [line]
   }
-  # p lines
   until lines.empty?
     current ||= {}
-    # p lines.first
+
     # we're done with this
     if current[:body]
       functions << current
