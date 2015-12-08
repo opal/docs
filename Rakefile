@@ -118,23 +118,28 @@ task :index do
   end
 
   api_html = <<-HTML
-    <h3>API Docs</h3>
-    <ul>
-      #{api_versions.map {|v| "<li><a href='./api/#{v}/index.html'>#{pretty_ref(v)}</a></li>"}.join}
-    </ul>
+    <div style="float: left; min-width: 50%;">
+      <h3>API Docs</h3>
+      <ul>
+        #{api_versions.map {|v| "<li><a href='./api/#{v}/index.html'>#{pretty_ref(v)}</a></li>"}.join}
+      </ul>
+    </div>
   HTML
 
   guides_html = <<-HTML
-    <h3>Guides</h3>
-    <ul>
-      #{guides_versions.map {|v| "<li><a href='./guides/#{v}/index.html'>#{pretty_ref(v)}</a></li>"}.join}
-    </ul>
+    <div style="float: left; min-width: 50%;">
+      <h3>Guides</h3>
+      <ul>
+        #{guides_versions.map {|v| "<li><a href='./guides/#{v}/index.html'>#{pretty_ref(v)}</a></li>"}.join}
+      </ul>
+    </div>
   HTML
 
   html_body = <<-HTML
   <h1>#{html_title}</h1>
   #{guides_html}
   #{api_html}
+  <div style="clear:both"></div>
   HTML
 
 
