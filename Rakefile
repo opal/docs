@@ -10,7 +10,7 @@ def ref(raw_ref: ENV['REF'])
 end
 
 def components
-  %w[lib corelib stdlib]
+  ENV.fetch('COMPONENTS', 'lib corelib stdlib').split(/\W+/)
 end
 
 # The path to a local checkout of Opal, will use `ref` just to generate

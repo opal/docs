@@ -2,5 +2,5 @@
 
 ref=${1:-master}
 
-rake REF="$ref"
+rake REF="$ref" COMPONENTS="$2"
 rake index REF="$ref"
