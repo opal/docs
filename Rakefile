@@ -172,19 +172,23 @@ def yard(component:, base_dir:, base_title:)
            when 'lib'     then 'opal/lib'
            end
 
-  cd target do
-    sh %{
-      yardoc
-      --output #{target.split('/').map{'..'}.join('/')}/#{base_dir}/#{component}
-      --title "#{component} (#{base_title})"
-      --db .yardoc-#{base_dir.downcase.gsub(/[^a-z\d]/,'-')}-#{component}
-      --exclude 'node_modules'
-      --markup markdown
-      '**/*.rb' '**/*.js.rb'
-      -
-      **/*.md
-    }.gsub(/\n */, " ").strip
-  end
+  target = File.expand_path(target)
+  output = "#{target}/#{base_dir}/#{component}"
+  rm_rf "#{output}/*"
+  sh %{
+    yardoc
+    --debug
+    --template-path="#{__dir__}/templates/yard/"
+    --output=#{output}
+    --title="#{component} (#{base_title})"
+    --db="#{__dir__}/.yardoc-#{base_dir.downcase.gsub(/[^a-z\d]/,'-')}-#{component}"
+    --exclude='node_modules'
+    --markup="markdown"
+    --no-cache
+    '#{target}/**/*.rb' '#{target}/**/*.js.rb'
+    -
+    **/*.md
+  }.gsub(/\n */, " ").strip
 end
 
 def components_index(base_title:, components:, base_dir:)
