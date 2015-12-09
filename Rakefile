@@ -381,7 +381,7 @@ def runtime_ruby(data)
 
     ruby += comment.map {|l| "# #{l.gsub("@returns", "@return")}"}
     # ruby << "define_method #{method_name.inspect} do |*args|"
-    ruby << "def (JS::Opal).#{method_name}(*)"
+    ruby << "def self.#{method_name}(*)"
     ruby << "<<-JAVASCRIPT"
     lead_space = body.first.scan(/^( *)/).flatten.first
     ruby += body.map{|line| "   "+line.gsub(/^#{lead_space}/, '') }
@@ -390,12 +390,17 @@ def runtime_ruby(data)
     ruby << ""
     ruby << ""
   end
-  ruby.map! {|l| '  '+l}
 
-  ruby.unshift 'module JS::Opal'
-  ruby << 'end'
-
-  ruby
+  [
+    'module __JS__',
+    %Q{  # This module is just a placeholder for showing the documentation of the},
+    %Q{  # internal JavaScript runtime. The methods you'll find defined below},
+    %Q{  # are actually JavaScript functions attached to the `Opal` global object},
+    %Q{  module Opal},
+  ] + ruby.map {|l| '    '+l} + [
+    %Q{  end},
+    %Q{end},
+  ]
 end
 
 # FOR FUTURE REF:
