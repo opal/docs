@@ -10,7 +10,9 @@ def ref(raw_ref: ENV['REF'])
 end
 
 def components
-  ENV.fetch('COMPONENTS', 'lib corelib stdlib').split(/\W+/)
+  components = ENV['COMPONENTS'].to_s
+  components = 'lib corelib stdlib' if components.empty?
+  components.split(/\W+/)
 end
 
 # The path to a local checkout of Opal, will use `ref` just to generate
@@ -173,21 +175,21 @@ def yard(component:, base_dir:, base_title:)
            end
 
   target = File.expand_path(target)
-  output = "#{target}/#{base_dir}/#{component}"
+  output = "#{__dir__}/#{base_dir}/#{component}"
   rm_rf "#{output}/*"
   sh %{
     yardoc
-    --debug
     --template-path="#{__dir__}/templates/yard/"
     --output=#{output}
     --title="#{component} (#{base_title})"
     --db="#{__dir__}/.yardoc-#{base_dir.downcase.gsub(/[^a-z\d]/,'-')}-#{component}"
-    --exclude='node_modules'
+    --exclude 'node_modules'
     --markup="markdown"
     --no-cache
+    --main #{target}/README.md
     '#{target}/**/*.rb' '#{target}/**/*.js.rb'
     -
-    **/*.md
+    #{target}/**/*.md
   }.gsub(/\n */, " ").strip
 end
 
