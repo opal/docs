@@ -110,9 +110,29 @@ end
 
 task :index do
   html_title = 'Opal · Documentation Central'
+  version_sorting = -> v {
+    segments = v.split('.').map do |segment|
+      if segment =~ /^\d+$/
+        -(segment.to_i)
+      else
+        segment
+      end
+    end
+    segments [3] ||= '0' # if we have not beta/rc/etc let's use the string "0"
+    segments
+  }
 
-  api_versions    = Dir['gh-pages/api/*/*/index.html' ].map{|f| f.scan(%r{/api/([^/]+)/})   }.flatten.uniq.sort.reverse
-  guides_versions = Dir['gh-pages/guides/*/index.html'].map{|f| f.scan(%r{/guides/([^/]+)/})}.flatten.uniq.sort.reverse
+  sorting = -> v {
+    case v
+    when /^v/
+      ['1_version', *version_sorting[v[1..-1]]]
+    else
+      ['0_branch']
+    end
+  }
+
+  api_versions    = Dir['gh-pages/api/*/*/index.html' ].map{|f| f.scan(%r{/api/([^/]+)/})   }.flatten.uniq.sort_by(&sorting)
+  guides_versions = Dir['gh-pages/guides/*/index.html'].map{|f| f.scan(%r{/guides/([^/]+)/})}.flatten.uniq.sort_by(&sorting)
 
   api_versions.each do |version|
     ENV['REF'] = version
