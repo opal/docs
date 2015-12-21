@@ -139,11 +139,27 @@ task :index do
     components_index(base_title: base_title, components: components, base_dir: "gh-pages/api/#{version}")
   end
 
+  api_path    = -> v { "./api/#{v}/index.html" }
+  guides_path = -> v { "./guides/#{v}/index.html" }
+
+  stable_v = 'v0.9.0'
+
+  stable_html = <<-HTML
+    <div class="jumbotron">
+      <h1>#{pretty_ref(stable_v)} <small>stable</small></h1>
+      <p><a href="https://github.com/opal/opal/blob/0-9-stable/CHANGELOG.md">See the full Changelog to see <b>what's new</b></a></p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="#{api_path[stable_v]}" role="button">API Docs</a>
+        <a class="btn btn-primary btn-lg" href="#{guides_path[stable_v]}" role="button">Guides</a>
+      </p>
+    </div>
+  HTML
+
   api_html = <<-HTML
     <div style="float: left; min-width: 50%;">
       <h3>API Docs</h3>
       <ul>
-        #{api_versions.map {|v| "<li><a href='./api/#{v}/index.html'>#{pretty_ref(v)}</a></li>"}.join}
+        #{api_versions.map {|v| "<li><a href='#{api_path[v]}'>#{pretty_ref(v)}</a></li>"}.join}
       </ul>
     </div>
   HTML
@@ -152,16 +168,26 @@ task :index do
     <div style="float: left; min-width: 50%;">
       <h3>Guides</h3>
       <ul>
-        #{guides_versions.map {|v| "<li><a href='./guides/#{v}/index.html'>#{pretty_ref(v)}</a></li>"}.join}
+        #{guides_versions.map {|v| "<li><a href='#{guides_path[v]}'>#{pretty_ref(v)}</a></li>"}.join}
       </ul>
     </div>
   HTML
 
+  other_versions_html = <<-HTML
+    <div class="well">
+      <h2>All versions</h2>
+      #{guides_html}
+      #{api_html}
+      <div style="clear:both"></div>
+    </div>
+  HTML
+
   html_body = <<-HTML
-  <h1>#{html_title}</h1>
-  #{guides_html}
-  #{api_html}
-  <div style="clear:both"></div>
+  <div class="page-header">
+    <h1>#{html_title}</h1>
+  </div>
+  #{stable_html}
+  #{other_versions_html}
   HTML
 
 
