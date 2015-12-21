@@ -4,6 +4,7 @@ require 'fileutils'
 include FileUtils
 
 cd 'gh-pages' do
-  system 'git commit -u -am "Update docs"' and
+  system 'git add -A' and
+  system 'git commit -u -m "Update docs"' and
   system 'git push'
 end
