@@ -1,6 +1,8 @@
 require 'bundler/setup'
 Bundler.require
 
+STABLE_VERSION = 'v0.9.2'
+
 def directory? path
   File.directory? path
 end
@@ -142,7 +144,7 @@ task :index do
   api_path    = -> v { "./api/#{v}/index.html" }
   guides_path = -> v { "./guides/#{v}/index.html" }
 
-  stable_v = 'v0.9.0'
+  stable_v = STABLE_VERSION
 
   stable_html = <<-HTML
     <div class="jumbotron">
