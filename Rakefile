@@ -149,7 +149,7 @@ task :index do
   stable_html = <<-HTML
     <div class="jumbotron">
       <h1>#{pretty_ref(stable_v)} <small>stable</small></h1>
-      <p><a href="https://github.com/opal/opal/blob/0-9-stable/CHANGELOG.md">See the full Changelog to see <b>what's new</b></a></p>
+      <p><a href="https://github.com/opal/opal/blob/master/CHANGELOG.md">See the full Changelog to see <b>what's new</b></a></p>
       <p>
         <a class="btn btn-primary btn-lg" href="#{api_path[stable_v]}" role="button">API Docs</a>
         <a class="btn btn-primary btn-lg" href="#{guides_path[stable_v]}" role="button">Guides</a>
