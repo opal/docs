@@ -1,7 +1,7 @@
 require 'bundler/setup'
 Bundler.require
 
-STABLE_VERSION = 'v0.10.1'
+STABLE_VERSION = 'v0.10.3'
 
 def directory? path
   File.directory? path
