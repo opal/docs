@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Server
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb</dd>
+    <dd>opal/lib/opal/sprockets/server.rb</dd>
   </dl>
   
 </div>
@@ -409,7 +407,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#public_dir%3D-instance_method" title="#public_dir= (instance method)">#<strong>public_dir=</strong>(dir)  &#x21d2; Object </a>
+      <a href="#public_dir=-instance_method" title="#public_dir= (instance method)">#<strong>public_dir=</strong>(dir)  &#x21d2; Object </a>
     
 
     
@@ -431,7 +429,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#source_map%3D-instance_method" title="#source_map= (instance method)">#<strong>source_map=</strong>(enabled)  &#x21d2; Object </a>
+      <a href="#source_map=-instance_method" title="#source_map= (instance method)">#<strong>source_map=</strong>(enabled)  &#x21d2; Object </a>
     
 
     
@@ -599,7 +597,7 @@
 65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span> <span class='id identifier rubyid_debug_or_options'>debug_or_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
   <span class='kw'>unless</span> <span class='const'>Hash</span> <span class='op'>===</span> <span class='id identifier rubyid_debug_or_options'>debug_or_options</span>
@@ -613,7 +611,7 @@
   <span class='ivar'>@use_index</span>   <span class='op'>=</span> <span class='kw'>true</span>
   <span class='ivar'>@public_root</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='ivar'>@public_urls</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-  <span class='ivar'>@sprockets</span>   <span class='op'>=</span> <span class='const'>Environment</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@sprockets</span>   <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Environment.html" title="Opal::Environment (class)">Environment</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Environment.html#initialize-instance_method" title="Opal::Environment#initialize (method)">new</a></span></span>
   <span class='ivar'>@debug</span>       <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:debug</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
 
   <span class='kw'>yield</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -661,7 +659,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_debug'>debug</span>
   <span class='ivar'>@debug</span>
@@ -703,7 +701,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index_path'>index_path</span>
   <span class='ivar'>@index_path</span>
@@ -745,7 +743,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_main'>main</span>
   <span class='ivar'>@main</span>
@@ -787,7 +785,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_public_root'>public_root</span>
   <span class='ivar'>@public_root</span>
@@ -829,7 +827,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_public_urls'>public_urls</span>
   <span class='ivar'>@public_urls</span>
@@ -871,7 +869,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sprockets'>sprockets</span>
   <span class='ivar'>@sprockets</span>
@@ -913,7 +911,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_use_index'>use_index</span>
   <span class='ivar'>@use_index</span>
@@ -950,7 +948,7 @@
 82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_append_path'>append_path</span> <span class='id identifier rubyid_path'>path</span>
   <span class='ivar'>@sprockets</span><span class='period'>.</span><span class='id identifier rubyid_append_path'>append_path</span> <span class='id identifier rubyid_path'>path</span>
@@ -980,7 +978,7 @@
 109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_env'>env</span><span class='rparen'>)</span>
   <span class='ivar'>@app</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='id identifier rubyid_env'>env</span>
@@ -1021,7 +1019,7 @@
 101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_app'>create_app</span>
   <span class='id identifier rubyid_server'>server</span><span class='comma'>,</span> <span class='id identifier rubyid_sprockets'>sprockets</span> <span class='op'>=</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='ivar'>@sprockets</span>
@@ -1033,7 +1031,7 @@
     <span class='id identifier rubyid_use'>use</span> <span class='const'>Rack</span><span class='op'>::</span><span class='const'>ShowExceptions</span>
     <span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/assets</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_run'>run</span> <span class='id identifier rubyid_sprockets'>sprockets</span> <span class='rbrace'>}</span>
     <span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_source_maps'>source_maps</span><span class='period'>.</span><span class='id identifier rubyid_prefix'>prefix</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_run'>run</span> <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_source_maps'>source_maps</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_source_map_enabled'>source_map_enabled</span>
-    <span class='id identifier rubyid_use'>use</span> <span class='const'>Index</span><span class='comma'>,</span> <span class='id identifier rubyid_server'>server</span> <span class='kw'>if</span> <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_use_index'>use_index</span>
+    <span class='id identifier rubyid_use'>use</span> <span class='const'><span class='object_link'><a href="Server/Index.html" title="Opal::Server::Index (class)">Index</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_server'>server</span> <span class='kw'>if</span> <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_use_index'>use_index</span>
     <span class='id identifier rubyid_run'>run</span> <span class='const'>Rack</span><span class='op'>::</span><span class='const'>Static</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_not_found'>not_found</span><span class='comma'>,</span> <span class='symbol'>:root</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_public_root'>public_root</span><span class='comma'>,</span> <span class='symbol'>:urls</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_public_urls'>public_urls</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -1063,7 +1061,7 @@
 70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_public_dir='>public_dir=</span><span class='lparen'>(</span><span class='id identifier rubyid_dir'>dir</span><span class='rparen'>)</span>
   <span class='ivar'>@public_root</span> <span class='op'>=</span> <span class='id identifier rubyid_dir'>dir</span>
@@ -1094,10 +1092,10 @@
 74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_map='>source_map=</span><span class='lparen'>(</span><span class='id identifier rubyid_enabled'>enabled</span><span class='rparen'>)</span>
-  <span class='const'>Opal</span><span class='op'>::</span><span class='const'>Processor</span><span class='period'>.</span><span class='id identifier rubyid_source_map_enabled'>source_map_enabled</span> <span class='op'>=</span> <span class='id identifier rubyid_enabled'>enabled</span>
+  <span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Processor.html" title="Opal::Processor (class)">Processor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_source_map_enabled'><span class='object_link'><a href="Processor.html#source_map_enabled-class_method" title="Opal::Processor.source_map_enabled (method)">source_map_enabled</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_enabled'>enabled</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1124,10 +1122,10 @@
 78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_map_enabled'>source_map_enabled</span>
-  <span class='const'>Opal</span><span class='op'>::</span><span class='const'>Processor</span><span class='period'>.</span><span class='id identifier rubyid_source_map_enabled'>source_map_enabled</span>
+  <span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Processor.html" title="Opal::Processor (class)">Processor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_source_map_enabled'><span class='object_link'><a href="Processor.html#source_map_enabled-class_method" title="Opal::Processor.source_map_enabled (method)">source_map_enabled</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1154,10 +1152,10 @@
 105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_maps'>source_maps</span>
-  <span class='ivar'>@source_maps</span> <span class='op'>||=</span> <span class='const'>SourceMapServer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@sprockets</span><span class='rparen'>)</span>
+  <span class='ivar'>@source_maps</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="SourceMapServer.html" title="Opal::SourceMapServer (class)">SourceMapServer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SourceMapServer.html#initialize-instance_method" title="Opal::SourceMapServer#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@sprockets</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1184,7 +1182,7 @@
 86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_use_gem'>use_gem</span> <span class='id identifier rubyid_gem_name'>gem_name</span>
   <span class='ivar'>@sprockets</span><span class='period'>.</span><span class='id identifier rubyid_use_gem'>use_gem</span> <span class='id identifier rubyid_gem_name'>gem_name</span>
@@ -1199,9 +1197,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

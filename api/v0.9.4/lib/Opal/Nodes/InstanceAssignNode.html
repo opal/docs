@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::InstanceAssignNode
   
@@ -100,14 +98,11 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/variables.rb</dd>
+    <dd>opal/lib/opal/nodes/variables.rb</dd>
   </dl>
   
 </div>
 
-
-  <h2>Constant Summary</h2>
-  
 
 
 
@@ -237,7 +232,7 @@
 77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/variables.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/variables.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_property'>property</span> <span class='id identifier rubyid_ivar'>ivar</span><span class='lparen'>(</span><span class='id identifier rubyid_var_name'>var_name</span><span class='rparen'>)</span>
@@ -269,7 +264,7 @@
 71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/variables.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/variables.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_var_name'>var_name</span>
   <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
@@ -284,9 +279,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

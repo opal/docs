@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::JsAttrAssignNode
   
@@ -102,7 +100,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb</dd>
+    <dd>opal/lib/opal/nodes/call_special.rb</dd>
   </dl>
   
 </div>
@@ -118,9 +116,6 @@
   
 
 </div>
-  <h2>Constant Summary</h2>
-  
-
 
 
   <h2>Constant Summary</h2>
@@ -209,7 +204,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="CallNode.html" title="Opal::Nodes::CallNode (class)">CallNode</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="CallNode.html#add_special-class_method" title="Opal::Nodes::CallNode.add_special (method)">add_special</a></span>, <span class='object_link'><a href="CallNode.html#attr_assignment%3F-instance_method" title="Opal::Nodes::CallNode#attr_assignment? (method)">#attr_assignment?</a></span>, <span class='object_link'><a href="CallNode.html#compile-instance_method" title="Opal::Nodes::CallNode#compile (method)">#compile</a></span>, <span class='object_link'><a href="CallNode.html#compile_assignment-instance_method" title="Opal::Nodes::CallNode#compile_assignment (method)">#compile_assignment</a></span>, <span class='object_link'><a href="CallNode.html#compile_default%21-instance_method" title="Opal::Nodes::CallNode#compile_default! (method)">#compile_default!</a></span>, <span class='object_link'><a href="CallNode.html#compile_default%3F-instance_method" title="Opal::Nodes::CallNode#compile_default? (method)">#compile_default?</a></span>, <span class='object_link'><a href="CallNode.html#compile_irb_var-instance_method" title="Opal::Nodes::CallNode#compile_irb_var (method)">#compile_irb_var</a></span>, <span class='object_link'><a href="CallNode.html#handle_special-instance_method" title="Opal::Nodes::CallNode#handle_special (method)">#handle_special</a></span>, <span class='object_link'><a href="CallNode.html#recv_sexp-instance_method" title="Opal::Nodes::CallNode#recv_sexp (method)">#recv_sexp</a></span>, <span class='object_link'><a href="CallNode.html#using_irb%3F-instance_method" title="Opal::Nodes::CallNode#using_irb? (method)">#using_irb?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="CallNode.html#add_special-class_method" title="Opal::Nodes::CallNode.add_special (method)">add_special</a></span>, <span class='object_link'><a href="CallNode.html#attr_assignment%3F-instance_method" title="Opal::Nodes::CallNode#attr_assignment? (method)">#attr_assignment?</a></span>, <span class='object_link'><a href="CallNode.html#compile-instance_method" title="Opal::Nodes::CallNode#compile (method)">#compile</a></span>, <span class='object_link'><a href="CallNode.html#compile_assignment-instance_method" title="Opal::Nodes::CallNode#compile_assignment (method)">#compile_assignment</a></span>, <span class='object_link'><a href="CallNode.html#compile_default!-instance_method" title="Opal::Nodes::CallNode#compile_default! (method)">#compile_default!</a></span>, <span class='object_link'><a href="CallNode.html#compile_default%3F-instance_method" title="Opal::Nodes::CallNode#compile_default? (method)">#compile_default?</a></span>, <span class='object_link'><a href="CallNode.html#compile_irb_var-instance_method" title="Opal::Nodes::CallNode#compile_irb_var (method)">#compile_irb_var</a></span>, <span class='object_link'><a href="CallNode.html#handle_special-instance_method" title="Opal::Nodes::CallNode#handle_special (method)">#handle_special</a></span>, <span class='object_link'><a href="CallNode.html#recv_sexp-instance_method" title="Opal::Nodes::CallNode#recv_sexp (method)">#recv_sexp</a></span>, <span class='object_link'><a href="CallNode.html#using_irb%3F-instance_method" title="Opal::Nodes::CallNode#using_irb? (method)">#using_irb?</a></span></p>
 
   
   
@@ -264,7 +259,7 @@
 40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/call_special.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default_compile'>default_compile</span>
   <span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_recv'>recv</span><span class='lparen'>(</span><span class='id identifier rubyid_recv_sexp'>recv_sexp</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_expr'>expr</span><span class='lparen'>(</span><span class='id identifier rubyid_arglist'>arglist</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>=</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_expr'>expr</span><span class='lparen'>(</span><span class='id identifier rubyid_arglist'>arglist</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -316,7 +311,7 @@
 36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/call_special.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_record_method?'>record_method?</span>
   <span class='kw'>false</span>
@@ -331,9 +326,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

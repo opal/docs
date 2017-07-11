@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -113,28 +119,28 @@ class to make it easy to get a rack server up and running for trying out opal.
 This server will automatically recompile ruby sources when they change, meaning
 you just need to refresh your page to autorun.</p>
 <h2>Getting setup</h2>
-<p>Add <code>opal</code> to a <code>Gemfile</code>:</p><div class="highlight"><pre><span class="c1">#Gemfile</span>
+<p>Add <code>opal</code> to a <code>Gemfile</code>:</p><div class="highlight"><pre><span></span><span class="c1">#Gemfile</span>
 <span class="n">source</span> <span class="s1">&#39;https://rubygems.org&#39;</span>
 
 <span class="n">gem</span> <span class="s1">&#39;opal&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 0.6.0&#39;</span>
 </pre></div><p>And install with <code>bundle install</code>.</p><p>We need a directory to hold our opal code, so create <code>app/</code> and add a simple
-demo script to <code>app/application.rb</code>:</p><div class="highlight"><pre><span class="c1"># app/application.rb</span>
+demo script to <code>app/application.rb</code>:</p><div class="highlight"><pre><span></span><span class="c1"># app/application.rb</span>
 <span class="nb">require</span> <span class="s1">&#39;opal&#39;</span>
 
 <span class="nb">puts</span> <span class="s2">&quot;hello world&quot;</span>
-</pre></div><p>Finally, we need a html page to run, so create <code>index.html</code>:</p><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>opal server example<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;/assets/application.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+</pre></div><p>Finally, we need a html page to run, so create <code>index.html</code>:</p><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>opal server example<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/assets/application.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 <h2>Using Opal::Server</h2>
-<p><code>Opal::Server</code> can be run like any rack app, so just add a <code>config.ru</code> file:</p><div class="highlight"><pre><span class="c1"># config.ru</span>
+<p><code>Opal::Server</code> can be run like any rack app, so just add a <code>config.ru</code> file:</p><div class="highlight"><pre><span></span><span class="c1"># config.ru</span>
 <span class="nb">require</span> <span class="s1">&#39;bundler&#39;</span>
 <span class="no">Bundler</span><span class="o">.</span><span class="n">require</span>
 
@@ -151,7 +157,7 @@ main file to <code>application</code>, which will be found inside <code>app/</co
 <p>Run <code>bundle exec rackup</code> and visit the page <code>http://localhost:9292</code> in any
 browser. Observe the console to see the printed statement.</p><p>You can just change <code>app/application.rb</code> and refresh the page to see any changes.</p>
 <h2>Using an existing <code>sprockets</code> instance</h2>
-<p>We only need to append Opal paths to the existing sprockets instance.</p><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;sprockets&#39;</span>
+<p>We only need to append Opal paths to the existing sprockets instance.</p><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;sprockets&#39;</span>
 <span class="n">environment</span> <span class="o">=</span> <span class="no">Sprockets</span><span class="o">::</span><span class="no">Environment</span><span class="o">.</span><span class="n">new</span>
 
 <span class="nb">require</span> <span class="s1">&#39;opal&#39;</span>

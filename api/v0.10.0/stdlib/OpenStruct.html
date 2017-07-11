@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: OpenStruct
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb</dd>
+    <dd>opal/stdlib/ostruct.rb</dd>
   </dl>
   
 </div>
@@ -154,7 +152,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -176,7 +174,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D%3D-instance_method" title="#=== (instance method)">#<strong>===</strong>(other)  &#x21d2; Object </a>
+      <a href="#===-instance_method" title="#=== (instance method)">#<strong>===</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -198,7 +196,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(name)  &#x21d2; Object </a>
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(name)  &#x21d2; Object </a>
     
 
     
@@ -220,7 +218,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(name, value)  &#x21d2; Object </a>
+      <a href="#[]=-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(name, value)  &#x21d2; Object </a>
     
 
     
@@ -504,7 +502,7 @@
 8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 2</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -556,7 +554,7 @@
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>2</span>
@@ -613,7 +611,7 @@
 72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_table'>table</span>
   <span class='ivar'>@table</span>
@@ -652,10 +650,10 @@
 44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>OpenStruct</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="OpenStruct (class)">OpenStruct</a></span></span><span class='rparen'>)</span>
 
   <span class='ivar'>@table</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='symbol'>:@table</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -686,10 +684,10 @@
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='op'>===</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>OpenStruct</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="OpenStruct (class)">OpenStruct</a></span></span><span class='rparen'>)</span>
 
   <span class='ivar'>@table</span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='symbol'>:@table</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -718,7 +716,7 @@
 12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span>
@@ -748,7 +746,7 @@
 16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span><span class='lbracket'>[</span><span class='id identifier rubyid_new_ostruct_member'>new_ostruct_member</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -783,7 +781,7 @@
 79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_field'>delete_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_sym'>sym</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
@@ -822,7 +820,7 @@
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_pair'>each_pair</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_pair</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -880,10 +878,10 @@
 56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>OpenStruct</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="OpenStruct (class)">OpenStruct</a></span></span><span class='rparen'>)</span>
 
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='symbol'>:@table</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -912,7 +910,7 @@
 68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_hash'>hash</span>
@@ -977,7 +975,7 @@
 125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1043,7 +1041,7 @@
 88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new_ostruct_member'>new_ostruct_member</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
@@ -1078,7 +1076,7 @@
 60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -1108,7 +1106,7 @@
 64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/ostruct.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/ostruct.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_n'>to_n</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_to_n'>to_n</span>
@@ -1123,9 +1121,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

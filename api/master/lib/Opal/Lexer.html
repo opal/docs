@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Lexer
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb</dd>
+    <dd>opal/lib/opal/parser/lexer.rb</dd>
   </dl>
   
 </div>
@@ -131,86 +129,84 @@ EOF has been reached.</p>
 
 </div>
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="STR_FUNC_ESCAPE-constant" class="">STR_FUNC_ESCAPE =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>0x01</span></pre></dd>
-      
-        <dt id="STR_FUNC_EXPAND-constant" class="">STR_FUNC_EXPAND =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>0x02</span></pre></dd>
-      
-        <dt id="STR_FUNC_REGEXP-constant" class="">STR_FUNC_REGEXP =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>0x04</span></pre></dd>
-      
-        <dt id="STR_FUNC_QWORDS-constant" class="">STR_FUNC_QWORDS =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>0x08</span></pre></dd>
-      
-        <dt id="STR_FUNC_SYMBOL-constant" class="">STR_FUNC_SYMBOL =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>0x10</span></pre></dd>
-      
-        <dt id="STR_FUNC_INDENT-constant" class="">STR_FUNC_INDENT =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>0x20</span></pre></dd>
-      
-        <dt id="STR_FUNC_XQUOTE-constant" class="">STR_FUNC_XQUOTE =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>0x40</span></pre></dd>
-      
-        <dt id="STR_SQUOTE-constant" class="">STR_SQUOTE =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>0x00</span></pre></dd>
-      
-        <dt id="STR_DQUOTE-constant" class="">STR_DQUOTE =
-          
-        </dt>
-        <dd><pre class="code"><span class='const'>STR_FUNC_EXPAND</span></pre></dd>
-      
-        <dt id="STR_XQUOTE-constant" class="">STR_XQUOTE =
-          
-        </dt>
-        <dd><pre class="code"><span class='const'>STR_FUNC_EXPAND</span> <span class='op'>|</span> <span class='const'>STR_FUNC_XQUOTE</span></pre></dd>
-      
-        <dt id="STR_REGEXP-constant" class="">STR_REGEXP =
-          
-        </dt>
-        <dd><pre class="code"><span class='const'>STR_FUNC_REGEXP</span> <span class='op'>|</span> <span class='const'>STR_FUNC_ESCAPE</span> <span class='op'>|</span> <span class='const'>STR_FUNC_EXPAND</span></pre></dd>
-      
-        <dt id="STR_SWORD-constant" class="">STR_SWORD =
-          
-        </dt>
-        <dd><pre class="code"><span class='const'>STR_FUNC_QWORDS</span></pre></dd>
-      
-        <dt id="STR_DWORD-constant" class="">STR_DWORD =
-          
-        </dt>
-        <dd><pre class="code"><span class='const'>STR_FUNC_QWORDS</span> <span class='op'>|</span> <span class='const'>STR_FUNC_EXPAND</span></pre></dd>
-      
-        <dt id="STR_SSYM-constant" class="">STR_SSYM =
-          
-        </dt>
-        <dd><pre class="code"><span class='const'>STR_FUNC_SYMBOL</span></pre></dd>
-      
-        <dt id="STR_DSYM-constant" class="">STR_DSYM =
-          
-        </dt>
-        <dd><pre class="code"><span class='const'>STR_FUNC_SYMBOL</span> <span class='op'>|</span> <span class='const'>STR_FUNC_EXPAND</span></pre></dd>
-      
-    </dl>
-  
+  <dl class="constants">
+    
+      <dt id="STR_FUNC_ESCAPE-constant" class="">STR_FUNC_ESCAPE =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>0x01</span></pre></dd>
+    
+      <dt id="STR_FUNC_EXPAND-constant" class="">STR_FUNC_EXPAND =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>0x02</span></pre></dd>
+    
+      <dt id="STR_FUNC_REGEXP-constant" class="">STR_FUNC_REGEXP =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>0x04</span></pre></dd>
+    
+      <dt id="STR_FUNC_QWORDS-constant" class="">STR_FUNC_QWORDS =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>0x08</span></pre></dd>
+    
+      <dt id="STR_FUNC_SYMBOL-constant" class="">STR_FUNC_SYMBOL =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>0x10</span></pre></dd>
+    
+      <dt id="STR_FUNC_INDENT-constant" class="">STR_FUNC_INDENT =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>0x20</span></pre></dd>
+    
+      <dt id="STR_FUNC_XQUOTE-constant" class="">STR_FUNC_XQUOTE =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>0x40</span></pre></dd>
+    
+      <dt id="STR_SQUOTE-constant" class="">STR_SQUOTE =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>0x00</span></pre></dd>
+    
+      <dt id="STR_DQUOTE-constant" class="">STR_DQUOTE =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="#STR_FUNC_EXPAND-constant" title="Opal::Lexer::STR_FUNC_EXPAND (constant)">STR_FUNC_EXPAND</a></span></span></pre></dd>
+    
+      <dt id="STR_XQUOTE-constant" class="">STR_XQUOTE =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="#STR_FUNC_EXPAND-constant" title="Opal::Lexer::STR_FUNC_EXPAND (constant)">STR_FUNC_EXPAND</a></span></span> <span class='op'>|</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_XQUOTE-constant" title="Opal::Lexer::STR_FUNC_XQUOTE (constant)">STR_FUNC_XQUOTE</a></span></span></pre></dd>
+    
+      <dt id="STR_REGEXP-constant" class="">STR_REGEXP =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="#STR_FUNC_REGEXP-constant" title="Opal::Lexer::STR_FUNC_REGEXP (constant)">STR_FUNC_REGEXP</a></span></span> <span class='op'>|</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_ESCAPE-constant" title="Opal::Lexer::STR_FUNC_ESCAPE (constant)">STR_FUNC_ESCAPE</a></span></span> <span class='op'>|</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_EXPAND-constant" title="Opal::Lexer::STR_FUNC_EXPAND (constant)">STR_FUNC_EXPAND</a></span></span></pre></dd>
+    
+      <dt id="STR_SWORD-constant" class="">STR_SWORD =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="#STR_FUNC_QWORDS-constant" title="Opal::Lexer::STR_FUNC_QWORDS (constant)">STR_FUNC_QWORDS</a></span></span></pre></dd>
+    
+      <dt id="STR_DWORD-constant" class="">STR_DWORD =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="#STR_FUNC_QWORDS-constant" title="Opal::Lexer::STR_FUNC_QWORDS (constant)">STR_FUNC_QWORDS</a></span></span> <span class='op'>|</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_EXPAND-constant" title="Opal::Lexer::STR_FUNC_EXPAND (constant)">STR_FUNC_EXPAND</a></span></span></pre></dd>
+    
+      <dt id="STR_SSYM-constant" class="">STR_SSYM =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="#STR_FUNC_SYMBOL-constant" title="Opal::Lexer::STR_FUNC_SYMBOL (constant)">STR_FUNC_SYMBOL</a></span></span></pre></dd>
+    
+      <dt id="STR_DSYM-constant" class="">STR_DSYM =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="#STR_FUNC_SYMBOL-constant" title="Opal::Lexer::STR_FUNC_SYMBOL (constant)">STR_FUNC_SYMBOL</a></span></span> <span class='op'>|</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_EXPAND-constant" title="Opal::Lexer::STR_FUNC_EXPAND (constant)">STR_FUNC_EXPAND</a></span></span></pre></dd>
+    
+  </dl>
 
 
 
@@ -1288,7 +1284,7 @@ EOF has been reached.</p>
     <p>Create a new instance using the given ruby code and filename for
 reference.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='const'>Opal</span><span class='op'>::</span><span class='const'>Lexer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ruby code</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my_file.rb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Opal::Lexer (class)">Lexer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ruby code</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my_file.rb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 </code></pre>
 
 
@@ -1355,7 +1351,7 @@ reference.</p>
 74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
   <span class='ivar'>@lex_state</span>  <span class='op'>=</span> <span class='symbol'>:expr_beg</span>
@@ -1415,7 +1411,7 @@ reference.</p>
 44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_column'>column</span>
   <span class='ivar'>@column</span>
@@ -1457,7 +1453,7 @@ reference.</p>
 46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eof_content'>eof_content</span>
   <span class='ivar'>@eof_content</span>
@@ -1499,7 +1495,7 @@ reference.</p>
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lex_state'>lex_state</span>
   <span class='ivar'>@lex_state</span>
@@ -1541,7 +1537,7 @@ reference.</p>
 44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_line'>line</span>
   <span class='ivar'>@line</span>
@@ -1583,7 +1579,7 @@ reference.</p>
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parser'>parser</span>
   <span class='ivar'>@parser</span>
@@ -1625,7 +1621,7 @@ reference.</p>
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scanner'>scanner</span>
   <span class='ivar'>@scanner</span>
@@ -1667,7 +1663,7 @@ reference.</p>
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scope'>scope</span>
   <span class='ivar'>@scope</span>
@@ -1709,7 +1705,7 @@ reference.</p>
 49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_strterm'>strterm</span>
   <span class='ivar'>@strterm</span>
@@ -1751,7 +1747,7 @@ reference.</p>
 51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_yylval'>yylval</span>
   <span class='ivar'>@yylval</span>
@@ -1879,18 +1875,18 @@ reference.</p>
 513</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 420</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 420</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_string_content'>add_string_content</span><span class='lparen'>(</span><span class='id identifier rubyid_str_buffer'>str_buffer</span><span class='comma'>,</span> <span class='id identifier rubyid_str_parse'>str_parse</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_func'>func</span> <span class='op'>=</span> <span class='id identifier rubyid_str_parse'>str_parse</span><span class='lbracket'>[</span><span class='symbol'>:func</span><span class='rbracket'>]</span>
 
   <span class='id identifier rubyid_end_str_re'>end_str_re</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_str_parse'>str_parse</span><span class='lbracket'>[</span><span class='symbol'>:term</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_qwords'>qwords</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'>STR_FUNC_QWORDS</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_expand'>expand</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'>STR_FUNC_EXPAND</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_regexp'>regexp</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'>STR_FUNC_REGEXP</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_escape'>escape</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'>STR_FUNC_ESCAPE</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_xquote'>xquote</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>==</span> <span class='const'>STR_XQUOTE</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_qwords'>qwords</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_QWORDS-constant" title="Opal::Lexer::STR_FUNC_QWORDS (constant)">STR_FUNC_QWORDS</a></span></span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_expand'>expand</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_EXPAND-constant" title="Opal::Lexer::STR_FUNC_EXPAND (constant)">STR_FUNC_EXPAND</a></span></span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_regexp'>regexp</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_REGEXP-constant" title="Opal::Lexer::STR_FUNC_REGEXP (constant)">STR_FUNC_REGEXP</a></span></span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_escape'>escape</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_ESCAPE-constant" title="Opal::Lexer::STR_FUNC_ESCAPE (constant)">STR_FUNC_ESCAPE</a></span></span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_xquote'>xquote</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#STR_XQUOTE-constant" title="Opal::Lexer::STR_XQUOTE (constant)">STR_XQUOTE</a></span></span><span class='rparen'>)</span>
 
   <span class='kw'>until</span> <span class='id identifier rubyid_scanner'>scanner</span><span class='period'>.</span><span class='id identifier rubyid_eos?'>eos?</span>
     <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -2022,7 +2018,7 @@ reference.</p>
 145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 143</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_operator?'>after_operator?</span>
   <span class='lbracket'>[</span><span class='symbol'>:expr_fname</span><span class='comma'>,</span> <span class='symbol'>:expr_dot</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='ivar'>@lex_state</span>
@@ -2074,7 +2070,7 @@ reference.</p>
 133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_arg?'>arg?</span>
   <span class='lbracket'>[</span><span class='symbol'>:expr_arg</span><span class='comma'>,</span> <span class='symbol'>:expr_cmdarg</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='ivar'>@lex_state</span>
@@ -2126,7 +2122,7 @@ reference.</p>
 141</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 139</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 139</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_beg?'>beg?</span>
   <span class='lbracket'>[</span><span class='symbol'>:expr_beg</span><span class='comma'>,</span> <span class='symbol'>:expr_value</span><span class='comma'>,</span> <span class='symbol'>:expr_mid</span><span class='comma'>,</span> <span class='symbol'>:expr_class</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='ivar'>@lex_state</span>
@@ -2156,7 +2152,7 @@ reference.</p>
 183</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 181</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 181</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check'>check</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='rparen'>)</span>
   <span class='ivar'>@scanner</span><span class='period'>.</span><span class='id identifier rubyid_check'>check</span> <span class='id identifier rubyid_regexp'>regexp</span>
@@ -2208,7 +2204,7 @@ reference.</p>
 129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cmdarg?'>cmdarg?</span>
   <span class='lparen'>(</span><span class='ivar'>@cmdarg</span> <span class='op'>&amp;</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
@@ -2238,7 +2234,7 @@ reference.</p>
 125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cmdarg_lexpop'>cmdarg_lexpop</span>
   <span class='ivar'>@cmdarg</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@cmdarg</span> <span class='op'>&gt;&gt;</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>|</span> <span class='lparen'>(</span><span class='ivar'>@cmdarg</span> <span class='op'>&amp;</span> <span class='int'>1</span><span class='rparen'>)</span>
@@ -2268,7 +2264,7 @@ reference.</p>
 121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 119</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cmdarg_pop'>cmdarg_pop</span>
   <span class='ivar'>@cmdarg</span> <span class='op'>=</span> <span class='ivar'>@cmdarg</span> <span class='op'>&gt;&gt;</span> <span class='int'>1</span>
@@ -2298,7 +2294,7 @@ reference.</p>
 117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cmdarg_push'>cmdarg_push</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
   <span class='ivar'>@cmdarg</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@cmdarg</span> <span class='op'>&lt;&lt;</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>|</span> <span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>&amp;</span> <span class='int'>1</span><span class='rparen'>)</span>
@@ -2350,7 +2346,7 @@ reference.</p>
 113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cond?'>cond?</span>
   <span class='lparen'>(</span><span class='ivar'>@cond</span> <span class='op'>&amp;</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
@@ -2380,7 +2376,7 @@ reference.</p>
 109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cond_lexpop'>cond_lexpop</span>
   <span class='ivar'>@cond</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@cond</span> <span class='op'>&gt;&gt;</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>|</span> <span class='lparen'>(</span><span class='ivar'>@cond</span> <span class='op'>&amp;</span> <span class='int'>1</span><span class='rparen'>)</span>
@@ -2410,7 +2406,7 @@ reference.</p>
 105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cond_pop'>cond_pop</span>
   <span class='ivar'>@cond</span> <span class='op'>=</span> <span class='ivar'>@cond</span> <span class='op'>&gt;&gt;</span> <span class='int'>1</span>
@@ -2440,7 +2436,7 @@ reference.</p>
 101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cond_push'>cond_push</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
   <span class='ivar'>@cond</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@cond</span> <span class='op'>&lt;&lt;</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>|</span> <span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>&amp;</span> <span class='int'>1</span><span class='rparen'>)</span>
@@ -2492,7 +2488,7 @@ reference.</p>
 137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_end?'>end?</span>
   <span class='lbracket'>[</span><span class='symbol'>:expr_end</span><span class='comma'>,</span> <span class='symbol'>:expr_endarg</span><span class='comma'>,</span> <span class='symbol'>:expr_endfn</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='ivar'>@lex_state</span>
@@ -2544,7 +2540,7 @@ reference.</p>
 97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 95</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_has_local?'>has_local?</span><span class='lparen'>(</span><span class='id identifier rubyid_local'>local</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_has_local?'>has_local?</span><span class='lparen'>(</span><span class='id identifier rubyid_local'>local</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
@@ -2624,14 +2620,14 @@ reference.</p>
 331</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 279</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 279</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_here_document'>here_document</span><span class='lparen'>(</span><span class='id identifier rubyid_str_parse'>str_parse</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_eos_regx'>eos_regx</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[ \t]*</span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_str_parse'>str_parse</span><span class='lbracket'>[</span><span class='symbol'>:term</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>(\r*\n|$)</span><span class='regexp_end'>/</span></span>
   <span class='id identifier rubyid_expand'>expand</span> <span class='op'>=</span> <span class='kw'>true</span>
 
   <span class='comment'># Don&#39;t escape single-quoted heredoc identifiers
-</span>  <span class='id identifier rubyid_escape'>escape</span> <span class='op'>=</span> <span class='id identifier rubyid_str_parse'>str_parse</span><span class='lbracket'>[</span><span class='symbol'>:func</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='const'>STR_SQUOTE</span>
+</span>  <span class='id identifier rubyid_escape'>escape</span> <span class='op'>=</span> <span class='id identifier rubyid_str_parse'>str_parse</span><span class='lbracket'>[</span><span class='symbol'>:func</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="#STR_SQUOTE-constant" title="Opal::Lexer::STR_SQUOTE (constant)">STR_SQUOTE</a></span></span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_check'>check</span><span class='lparen'>(</span><span class='id identifier rubyid_eos_regx'>eos_regx</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[ \t]*</span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_str_parse'>str_parse</span><span class='lbracket'>[</span><span class='symbol'>:term</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -2719,11 +2715,11 @@ reference.</p>
 532</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 515</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 515</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_heredoc_identifier'>heredoc_identifier</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(-?)([&#39;&quot;])?(\w+)\2?</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_escape_method'>escape_method</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@scanner</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'>STR_SQUOTE</span> <span class='op'>:</span> <span class='const'>STR_DQUOTE</span>
+    <span class='id identifier rubyid_escape_method'>escape_method</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@scanner</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="#STR_SQUOTE-constant" title="Opal::Lexer::STR_SQUOTE (constant)">STR_SQUOTE</a></span></span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="#STR_DQUOTE-constant" title="Opal::Lexer::STR_DQUOTE (constant)">STR_DQUOTE</a></span></span>
     <span class='id identifier rubyid_heredoc'>heredoc</span> <span class='op'>=</span> <span class='ivar'>@scanner</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span>
 
     <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='id identifier rubyid_escape_method'>escape_method</span><span class='comma'>,</span> <span class='id identifier rubyid_heredoc'>heredoc</span><span class='comma'>,</span> <span class='id identifier rubyid_heredoc'>heredoc</span><span class='rparen'>)</span>
@@ -2786,7 +2782,7 @@ reference.</p>
 149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 147</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_label_state?'>label_state?</span>
   <span class='lbracket'>[</span><span class='symbol'>:expr_beg</span><span class='comma'>,</span> <span class='symbol'>:expr_endfn</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='ivar'>@lex_state</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='id identifier rubyid_arg?'>arg?</span>
@@ -2816,7 +2812,7 @@ reference.</p>
 191</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 189</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_matched'>matched</span>
   <span class='ivar'>@scanner</span><span class='period'>.</span><span class='id identifier rubyid_matched'>matched</span>
@@ -2847,7 +2843,7 @@ reference.</p>
 210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 207</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 207</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new_op_asgn'>new_op_asgn</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_yylval'>yylval</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -2878,7 +2874,7 @@ reference.</p>
 200</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span><span class='comma'>,</span> <span class='id identifier rubyid_term'>term</span><span class='comma'>,</span> <span class='id identifier rubyid_paren'>paren</span><span class='rparen'>)</span>
   <span class='lbrace'>{</span> <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:func</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_func'>func</span><span class='comma'>,</span> <span class='symbol'>:term</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_term'>term</span><span class='comma'>,</span> <span class='symbol'>:paren</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_paren'>paren</span> <span class='rbrace'>}</span>
@@ -2909,7 +2905,7 @@ reference.</p>
 205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 202</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 202</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new_strterm2'>new_strterm2</span><span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span><span class='comma'>,</span> <span class='id identifier rubyid_term'>term</span><span class='comma'>,</span> <span class='id identifier rubyid_paren'>paren</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_term'>term</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span><span class='comma'>,</span> <span class='id identifier rubyid_term'>term</span><span class='comma'>,</span> <span class='id identifier rubyid_paren'>paren</span><span class='rparen'>)</span>
@@ -2976,7 +2972,7 @@ reference.</p>
 93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 83</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 83</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_next_token'>next_token</span>
   <span class='id identifier rubyid_token'>token</span>     <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_yylex'>yylex</span>
@@ -3097,7 +3093,7 @@ reference.</p>
 418</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 333</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 333</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_string'>parse_string</span>
   <span class='id identifier rubyid_str_parse'>str_parse</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span>
@@ -3105,9 +3101,9 @@ reference.</p>
 
   <span class='id identifier rubyid_space'>space</span> <span class='op'>=</span> <span class='kw'>false</span>
 
-  <span class='id identifier rubyid_qwords'>qwords</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'>STR_FUNC_QWORDS</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_expand'>expand</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'>STR_FUNC_EXPAND</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_regexp'>regexp</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'>STR_FUNC_REGEXP</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_qwords'>qwords</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_QWORDS-constant" title="Opal::Lexer::STR_FUNC_QWORDS (constant)">STR_FUNC_QWORDS</a></span></span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_expand'>expand</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_EXPAND-constant" title="Opal::Lexer::STR_FUNC_EXPAND (constant)">STR_FUNC_EXPAND</a></span></span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_regexp'>regexp</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#STR_FUNC_REGEXP-constant" title="Opal::Lexer::STR_FUNC_REGEXP (constant)">STR_FUNC_REGEXP</a></span></span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
 
   <span class='id identifier rubyid_space'>space</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_qwords'>qwords</span> <span class='kw'>and</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
 
@@ -3214,7 +3210,7 @@ reference.</p>
 277</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 271</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 271</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_peek_variable_name'>peek_variable_name</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_check'>check</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[@$]</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -3344,7 +3340,7 @@ reference.</p>
 632</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 534</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 534</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_process_identifier'>process_identifier</span><span class='lparen'>(</span><span class='id identifier rubyid_matched'>matched</span><span class='comma'>,</span> <span class='id identifier rubyid_cmd_start'>cmd_start</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_last_state'>last_state</span> <span class='op'>=</span> <span class='ivar'>@lex_state</span>
@@ -3374,14 +3370,14 @@ reference.</p>
         <span class='id identifier rubyid_matched'>matched</span> <span class='op'>+=</span> <span class='id identifier rubyid_scanner'>scanner</span><span class='period'>.</span><span class='id identifier rubyid_matched'>matched</span>
       <span class='kw'>end</span>
 
-    <span class='kw'>elsif</span> <span class='id identifier rubyid_matched'>matched</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>REGEXP_START</span><span class='embexpr_end'>}</span><span class='tstring_content'>[A-Z]</span><span class='regexp_end'>/</span></span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_matched'>matched</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Opal.html#REGEXP_START-constant" title="Opal::REGEXP_START (constant)">REGEXP_START</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>[A-Z]</span><span class='regexp_end'>/</span></span>
       <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='symbol'>:tCONSTANT</span>
     <span class='kw'>else</span>
       <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='symbol'>:tIDENTIFIER</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
 
-  <span class='kw'>if</span> <span class='ivar'>@lex_state</span> <span class='op'>!=</span> <span class='symbol'>:expr_dot</span> <span class='kw'>and</span> <span class='id identifier rubyid_kw'>kw</span> <span class='op'>=</span> <span class='const'>Keywords</span><span class='period'>.</span><span class='id identifier rubyid_keyword'>keyword</span><span class='lparen'>(</span><span class='id identifier rubyid_matched'>matched</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='ivar'>@lex_state</span> <span class='op'>!=</span> <span class='symbol'>:expr_dot</span> <span class='kw'>and</span> <span class='id identifier rubyid_kw'>kw</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Keywords.html" title="Opal::Keywords (module)">Keywords</a></span></span><span class='period'>.</span><span class='id identifier rubyid_keyword'><span class='object_link'><a href="Keywords.html#keyword-class_method" title="Opal::Keywords.keyword (method)">keyword</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_matched'>matched</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_old_state'>old_state</span> <span class='op'>=</span> <span class='ivar'>@lex_state</span>
     <span class='ivar'>@lex_state</span> <span class='op'>=</span> <span class='id identifier rubyid_kw'>kw</span><span class='period'>.</span><span class='id identifier rubyid_state'>state</span>
 
@@ -3443,7 +3439,7 @@ reference.</p>
     <span class='ivar'>@lex_state</span> <span class='op'>=</span> <span class='symbol'>:expr_end</span>
   <span class='kw'>end</span>
 
-  <span class='kw'>return</span> <span class='id identifier rubyid_matched'>matched</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>REGEXP_START</span><span class='embexpr_end'>}</span><span class='tstring_content'>[A-Z]</span><span class='regexp_end'>/</span></span> <span class='op'>?</span> <span class='symbol'>:tCONSTANT</span> <span class='op'>:</span> <span class='symbol'>:tIDENTIFIER</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_matched'>matched</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Opal.html#REGEXP_START-constant" title="Opal::REGEXP_START (constant)">REGEXP_START</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>[A-Z]</span><span class='regexp_end'>/</span></span> <span class='op'>?</span> <span class='symbol'>:tCONSTANT</span> <span class='op'>:</span> <span class='symbol'>:tIDENTIFIER</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3492,7 +3488,7 @@ reference.</p>
 236</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 212</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 212</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_process_numeric'>process_numeric</span>
   <span class='ivar'>@lex_state</span> <span class='op'>=</span> <span class='symbol'>:expr_end</span>
@@ -3544,7 +3540,7 @@ reference.</p>
 187</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 185</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 185</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pushback'>pushback</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
   <span class='ivar'>@scanner</span><span class='period'>.</span><span class='id identifier rubyid_pos'>pos</span> <span class='op'>-=</span> <span class='id identifier rubyid_n'>n</span>
@@ -3603,7 +3599,7 @@ reference.</p>
 269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 238</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 238</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_read_escape'>read_escape</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\\</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -3667,7 +3663,7 @@ reference.</p>
 170</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 163</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 163</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='ivar'>@scanner</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='rparen'>)</span>
@@ -3702,7 +3698,7 @@ reference.</p>
 161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 159</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_arg_state'>set_arg_state</span>
   <span class='ivar'>@lex_state</span> <span class='op'>=</span> <span class='id identifier rubyid_after_operator?'>after_operator?</span> <span class='op'>?</span> <span class='symbol'>:expr_arg</span> <span class='op'>:</span> <span class='symbol'>:expr_beg</span>
@@ -3737,7 +3733,7 @@ reference.</p>
 179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 172</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 172</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_skip'>skip</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='ivar'>@scanner</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='rparen'>)</span>
@@ -3794,7 +3790,7 @@ reference.</p>
 157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_space?'>space?</span>
   <span class='ivar'>@scanner</span><span class='period'>.</span><span class='id identifier rubyid_check'>check</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -3846,7 +3842,7 @@ reference.</p>
 153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 151</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 151</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_spcarg?'>spcarg?</span>
   <span class='id identifier rubyid_arg?'>arg?</span> <span class='kw'>and</span> <span class='ivar'>@space_seen</span> <span class='kw'>and</span> <span class='op'>!</span><span class='id identifier rubyid_space?'>space?</span>
@@ -4513,7 +4509,7 @@ reference.</p>
 1264</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/parser/lexer.rb', line 635</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/parser/lexer.rb', line 635</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_yylex'>yylex</span>
   <span class='ivar'>@yylval</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
@@ -4664,15 +4660,15 @@ reference.</p>
       <span class='kw'>return</span> <span class='symbol'>:tEQL</span>
 
     <span class='kw'>elsif</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\&quot;</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
-      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'>STR_DQUOTE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STR_DQUOTE-constant" title="Opal::Lexer::STR_DQUOTE (constant)">STR_DQUOTE</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
       <span class='kw'>return</span> <span class='symbol'>:tSTRING_BEG</span>
 
     <span class='kw'>elsif</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\&#39;</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
-      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'>STR_SQUOTE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STR_SQUOTE-constant" title="Opal::Lexer::STR_SQUOTE (constant)">STR_SQUOTE</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
       <span class='kw'>return</span> <span class='symbol'>:tSTRING_BEG</span>
 
     <span class='kw'>elsif</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\`</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
-      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'>STR_XQUOTE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>`</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STR_XQUOTE-constant" title="Opal::Lexer::STR_XQUOTE (constant)">STR_XQUOTE</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>`</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
       <span class='kw'>return</span> <span class='symbol'>:tXSTRING_BEG</span>
 
     <span class='kw'>elsif</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\&amp;</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -4733,21 +4729,21 @@ reference.</p>
 
       <span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='id identifier rubyid_func'>func</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='id identifier rubyid_str_type'>str_type</span>
                     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Q</span><span class='tstring_end'>&#39;</span></span>
-                      <span class='lbracket'>[</span><span class='symbol'>:tSTRING_BEG</span><span class='comma'>,</span> <span class='const'>STR_DQUOTE</span><span class='rbracket'>]</span>
+                      <span class='lbracket'>[</span><span class='symbol'>:tSTRING_BEG</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#STR_DQUOTE-constant" title="Opal::Lexer::STR_DQUOTE (constant)">STR_DQUOTE</a></span></span><span class='rbracket'>]</span>
                     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>q</span><span class='tstring_end'>&#39;</span></span>
-                      <span class='lbracket'>[</span><span class='symbol'>:tSTRING_BEG</span><span class='comma'>,</span> <span class='const'>STR_SQUOTE</span><span class='rbracket'>]</span>
+                      <span class='lbracket'>[</span><span class='symbol'>:tSTRING_BEG</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#STR_SQUOTE-constant" title="Opal::Lexer::STR_SQUOTE (constant)">STR_SQUOTE</a></span></span><span class='rbracket'>]</span>
                     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>W</span><span class='tstring_end'>&#39;</span></span>
                       <span class='id identifier rubyid_skip'>skip</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s*</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
-                      <span class='lbracket'>[</span><span class='symbol'>:tWORDS_BEG</span><span class='comma'>,</span> <span class='const'>STR_DWORD</span><span class='rbracket'>]</span>
+                      <span class='lbracket'>[</span><span class='symbol'>:tWORDS_BEG</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#STR_DWORD-constant" title="Opal::Lexer::STR_DWORD (constant)">STR_DWORD</a></span></span><span class='rbracket'>]</span>
                     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>w</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>i</span><span class='tstring_end'>&#39;</span></span>
                       <span class='id identifier rubyid_skip'>skip</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s*</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
-                      <span class='lbracket'>[</span><span class='symbol'>:tAWORDS_BEG</span><span class='comma'>,</span> <span class='const'>STR_SWORD</span><span class='rbracket'>]</span>
+                      <span class='lbracket'>[</span><span class='symbol'>:tAWORDS_BEG</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#STR_SWORD-constant" title="Opal::Lexer::STR_SWORD (constant)">STR_SWORD</a></span></span><span class='rbracket'>]</span>
                     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>x</span><span class='tstring_end'>&#39;</span></span>
-                      <span class='lbracket'>[</span><span class='symbol'>:tXSTRING_BEG</span><span class='comma'>,</span> <span class='const'>STR_XQUOTE</span><span class='rbracket'>]</span>
+                      <span class='lbracket'>[</span><span class='symbol'>:tXSTRING_BEG</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#STR_XQUOTE-constant" title="Opal::Lexer::STR_XQUOTE (constant)">STR_XQUOTE</a></span></span><span class='rbracket'>]</span>
                     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>r</span><span class='tstring_end'>&#39;</span></span>
-                      <span class='lbracket'>[</span><span class='symbol'>:tREGEXP_BEG</span><span class='comma'>,</span> <span class='const'>STR_REGEXP</span><span class='rbracket'>]</span>
+                      <span class='lbracket'>[</span><span class='symbol'>:tREGEXP_BEG</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#STR_REGEXP-constant" title="Opal::Lexer::STR_REGEXP (constant)">STR_REGEXP</a></span></span><span class='rbracket'>]</span>
                     <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>s</span><span class='tstring_end'>&#39;</span></span>
-                      <span class='lbracket'>[</span><span class='symbol'>:tSTRING_BEG</span><span class='comma'>,</span> <span class='const'>STR_SQUOTE</span><span class='rbracket'>]</span>
+                      <span class='lbracket'>[</span><span class='symbol'>:tSTRING_BEG</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#STR_SQUOTE-constant" title="Opal::Lexer::STR_SQUOTE (constant)">STR_SQUOTE</a></span></span><span class='rbracket'>]</span>
                     <span class='kw'>end</span>
 
       <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm2'>new_strterm2</span><span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span><span class='comma'>,</span> <span class='id identifier rubyid_term'>term</span><span class='comma'>,</span> <span class='id identifier rubyid_paren'>paren</span><span class='rparen'>)</span>
@@ -4755,7 +4751,7 @@ reference.</p>
 
     <span class='kw'>elsif</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\/</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
       <span class='kw'>if</span> <span class='id identifier rubyid_beg?'>beg?</span>
-        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'>STR_REGEXP</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STR_REGEXP-constant" title="Opal::Lexer::STR_REGEXP (constant)">STR_REGEXP</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
         <span class='kw'>return</span> <span class='symbol'>:tREGEXP_BEG</span>
       <span class='kw'>elsif</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\=</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
         <span class='ivar'>@lex_state</span> <span class='op'>=</span> <span class='symbol'>:expr_beg</span>
@@ -4764,7 +4760,7 @@ reference.</p>
 
       <span class='kw'>if</span> <span class='id identifier rubyid_arg?'>arg?</span>
         <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_check'>check</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@space_seen</span>
-          <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'>STR_REGEXP</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+          <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STR_REGEXP-constant" title="Opal::Lexer::STR_REGEXP (constant)">STR_REGEXP</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
           <span class='kw'>return</span> <span class='symbol'>:tREGEXP_BEG</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
@@ -4787,7 +4783,7 @@ reference.</p>
            <span class='ivar'>@lex_state</span> <span class='op'>==</span> <span class='symbol'>:expr_mid</span>
           <span class='id identifier rubyid_start_word'>start_word</span>  <span class='op'>=</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>.</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
           <span class='id identifier rubyid_end_word'>end_word</span>    <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>(</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>)</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>}</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span><span class='lbracket'>[</span><span class='id identifier rubyid_start_word'>start_word</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_start_word'>start_word</span>
-          <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm2'>new_strterm2</span><span class='lparen'>(</span><span class='const'>STR_DQUOTE</span><span class='comma'>,</span> <span class='id identifier rubyid_end_word'>end_word</span><span class='comma'>,</span> <span class='id identifier rubyid_start_word'>start_word</span><span class='rparen'>)</span>
+          <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm2'>new_strterm2</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STR_DQUOTE-constant" title="Opal::Lexer::STR_DQUOTE (constant)">STR_DQUOTE</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_end_word'>end_word</span><span class='comma'>,</span> <span class='id identifier rubyid_start_word'>start_word</span><span class='rparen'>)</span>
           <span class='kw'>return</span> <span class='symbol'>:tSTRING_BEG</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
@@ -4910,9 +4906,9 @@ reference.</p>
       <span class='kw'>end</span>
 
       <span class='kw'>if</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\&#39;</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
-        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'>STR_SSYM</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STR_SSYM-constant" title="Opal::Lexer::STR_SSYM (constant)">STR_SSYM</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
       <span class='kw'>elsif</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\&quot;</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
-        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'>STR_DSYM</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_strterm'>strterm</span> <span class='op'>=</span> <span class='id identifier rubyid_new_strterm'>new_strterm</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STR_DSYM-constant" title="Opal::Lexer::STR_DSYM (constant)">STR_DSYM</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
       <span class='kw'>end</span>
 
       <span class='ivar'>@lex_state</span> <span class='op'>=</span> <span class='symbol'>:expr_fname</span>
@@ -5155,9 +5151,9 @@ reference.</p>
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

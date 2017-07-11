@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::ResBodyNode
   
@@ -100,14 +98,11 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/rescue.rb</dd>
+    <dd>opal/lib/opal/nodes/rescue.rb</dd>
   </dl>
   
 </div>
 
-
-  <h2>Constant Summary</h2>
-  
 
 
 
@@ -330,7 +325,7 @@
 129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/rescue.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/rescue.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='id identifier rubyid_push'>push</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>if (</span><span class='tstring_end'>&quot;</span></span>
@@ -391,7 +386,7 @@
 149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/rescue.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/rescue.rb', line 145</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rescue_body'>rescue_body</span>
   <span class='id identifier rubyid_body_code'>body_code</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_body'>body</span> <span class='op'>||</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='symbol'>:nil</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -425,7 +420,7 @@
 143</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/rescue.rb', line 139</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/rescue.rb', line 139</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rescue_exprs'>rescue_exprs</span>
   <span class='id identifier rubyid_exprs'>exprs</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -457,7 +452,7 @@
 137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/rescue.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/rescue.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rescue_variable'>rescue_variable</span>
   <span class='id identifier rubyid_rescue_variable?'>rescue_variable?</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='op'>:</span> <span class='kw'>nil</span>
@@ -509,10 +504,10 @@
 133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/rescue.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/rescue.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rescue_variable?'>rescue_variable?</span><span class='lparen'>(</span><span class='id identifier rubyid_variable'>variable</span><span class='rparen'>)</span>
-  <span class='const'>Sexp</span> <span class='op'>===</span> <span class='id identifier rubyid_variable'>variable</span> <span class='kw'>and</span> <span class='lbracket'>[</span><span class='symbol'>:lasgn</span><span class='comma'>,</span> <span class='symbol'>:iasgn</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_variable'>variable</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../Sexp.html" title="Opal::Sexp (class)">Sexp</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_variable'>variable</span> <span class='kw'>and</span> <span class='lbracket'>[</span><span class='symbol'>:lasgn</span><span class='comma'>,</span> <span class='symbol'>:iasgn</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_variable'>variable</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -524,9 +519,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

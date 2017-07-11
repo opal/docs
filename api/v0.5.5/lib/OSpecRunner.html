@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: OSpecRunner
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb</dd>
+    <dd>opal/lib/mspec/opal/runner.rb</dd>
   </dl>
   
 </div>
@@ -300,7 +298,7 @@
 154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter_class'>formatter_class</span><span class='rparen'>)</span>
   <span class='ivar'>@formatter_class</span> <span class='op'>=</span> <span class='id identifier rubyid_formatter_class'>formatter_class</span>
@@ -339,9 +337,9 @@
 148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 146</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 146</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_main'>main</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter_class'>formatter_class</span> <span class='op'>=</span> <span class='const'>BrowserFormatter</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_main'>main</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter_class'>formatter_class</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="BrowserFormatter.html" title="BrowserFormatter (class)">BrowserFormatter</a></span></span><span class='rparen'>)</span>
   <span class='ivar'>@main</span> <span class='op'>||=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_formatter_class'>formatter_class</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -375,10 +373,10 @@
 173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 171</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_did_finish'>did_finish</span>
-  <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_actions'>actions</span> <span class='symbol'>:finish</span>
+  <span class='const'><span class='object_link'><a href="MSpec.html" title="MSpec (module)">MSpec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_actions'>actions</span> <span class='symbol'>:finish</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -408,13 +406,13 @@
 161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 156</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span>
   <span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='ivar'>@formatter_class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   <span class='id identifier rubyid_formatter'>formatter</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span>
 
-  <span class='const'>OSpecFilter</span><span class='period'>.</span><span class='id identifier rubyid_main'>main</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span>
+  <span class='const'><span class='object_link'><a href="OSpecFilter.html" title="OSpecFilter (class)">OSpecFilter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_main'><span class='object_link'><a href="OSpecFilter.html#main-class_method" title="OSpecFilter.main (method)">main</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -441,10 +439,10 @@
 165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 163</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 163</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
-  <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_opal_runner'>opal_runner</span>
+  <span class='const'><span class='object_link'><a href="MSpec.html" title="MSpec (module)">MSpec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_opal_runner'><span class='object_link'><a href="MSpec.html#opal_runner-class_method" title="MSpec.opal_runner (method)">opal_runner</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -471,10 +469,10 @@
 169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_will_start'>will_start</span>
-  <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_actions'>actions</span> <span class='symbol'>:start</span>
+  <span class='const'><span class='object_link'><a href="MSpec.html" title="MSpec (module)">MSpec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_actions'>actions</span> <span class='symbol'>:start</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -486,9 +484,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

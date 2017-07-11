@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::SourceMapServer
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb</dd>
+    <dd>opal/lib/opal/sprockets/server.rb</dd>
   </dl>
   
 </div>
@@ -329,7 +327,7 @@
 19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span> <span class='id identifier rubyid_sprockets'>sprockets</span><span class='comma'>,</span> <span class='id identifier rubyid_prefix'>prefix</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span>
   <span class='ivar'>@sprockets</span> <span class='op'>=</span> <span class='id identifier rubyid_sprockets'>sprockets</span>
@@ -377,7 +375,7 @@
 23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prefix'>prefix</span>
   <span class='ivar'>@prefix</span>
@@ -419,7 +417,7 @@
 23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sprockets'>sprockets</span>
   <span class='ivar'>@sprockets</span>
@@ -481,7 +479,7 @@
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_env'>env</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_prefix_regex'>prefix_regex</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^(?:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_prefix'>prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/|/)</span><span class='regexp_end'>}</span></span>
@@ -536,7 +534,7 @@
 25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_object_id'>object_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -566,7 +564,7 @@
 58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_not_found'>not_found</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_messages'>messages</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_not_found'>not_found</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>404</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='lbrace'>{</span><span class='label'>not_found:</span> <span class='id identifier rubyid_messages'>messages</span><span class='comma'>,</span> <span class='label'>keys:</span> <span class='id identifier rubyid_register'>register</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
@@ -596,10 +594,10 @@
 62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/server.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/server.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span>
-  <span class='const'>Opal</span><span class='op'>::</span><span class='const'>Processor</span><span class='period'>.</span><span class='id identifier rubyid_source_map_register'>source_map_register</span>
+  <span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Processor.html" title="Opal::Processor (class)">Processor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_source_map_register'><span class='object_link'><a href="Processor.html#source_map_register-class_method" title="Opal::Processor.source_map_register (method)">source_map_register</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -611,9 +609,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

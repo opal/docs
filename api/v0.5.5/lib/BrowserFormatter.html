@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: BrowserFormatter
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb</dd>
+    <dd>opal/lib/mspec/opal/runner.rb</dd>
   </dl>
   
 </div>
@@ -474,7 +472,7 @@
 41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_out'>out</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@exception</span> <span class='op'>=</span> <span class='ivar'>@failure</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -517,7 +515,7 @@
 90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after'>after</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@current_state</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -549,7 +547,7 @@
 78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before'>before</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@current_state</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -578,7 +576,7 @@
 73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_enter'>enter</span><span class='lparen'>(</span><span class='id identifier rubyid_describe'>describe</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -609,7 +607,7 @@
 85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_exception'>exception</span><span class='lparen'>(</span><span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span>
   <span class='ivar'>@count</span> <span class='op'>+=</span> <span class='int'>1</span>
@@ -664,7 +662,7 @@
 67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_exception?'>exception?</span>
   <span class='ivar'>@exception</span>
@@ -716,7 +714,7 @@
 71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failure?'>failure?</span>
   <span class='ivar'>@failure</span>
@@ -765,7 +763,7 @@
 117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_finish'>finish</span>
   <span class='id identifier rubyid_time'>time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>-</span> <span class='ivar'>@start_time</span>
@@ -814,7 +812,7 @@
 121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 119</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_finish_with_code'>finish_with_code</span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>window.OPAL_SPEC_CODE = code;</span><span class='tstring_end'>`</span></span>
@@ -844,7 +842,7 @@
 55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_green'>green</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>console.info(str)</span><span class='tstring_end'>`</span></span>
@@ -874,7 +872,7 @@
 63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>console.log(str)</span><span class='tstring_end'>`</span></span>
@@ -904,7 +902,7 @@
 59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_red'>red</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>console.error(str)</span><span class='tstring_end'>`</span></span>
@@ -940,16 +938,16 @@
 51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span>
-  <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:exception</span><span class='comma'>,</span> <span class='kw'>self</span>
-  <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:before</span><span class='comma'>,</span>    <span class='kw'>self</span>
-  <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:after</span><span class='comma'>,</span>     <span class='kw'>self</span>
-  <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:start</span><span class='comma'>,</span>     <span class='kw'>self</span>
-  <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:finish</span><span class='comma'>,</span>    <span class='kw'>self</span>
-  <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:abort</span><span class='comma'>,</span>     <span class='kw'>self</span>
-  <span class='const'>MSpec</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:enter</span><span class='comma'>,</span>     <span class='kw'>self</span>
+  <span class='const'><span class='object_link'><a href="MSpec.html" title="MSpec (module)">MSpec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:exception</span><span class='comma'>,</span> <span class='kw'>self</span>
+  <span class='const'><span class='object_link'><a href="MSpec.html" title="MSpec (module)">MSpec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:before</span><span class='comma'>,</span>    <span class='kw'>self</span>
+  <span class='const'><span class='object_link'><a href="MSpec.html" title="MSpec (module)">MSpec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:after</span><span class='comma'>,</span>     <span class='kw'>self</span>
+  <span class='const'><span class='object_link'><a href="MSpec.html" title="MSpec (module)">MSpec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:start</span><span class='comma'>,</span>     <span class='kw'>self</span>
+  <span class='const'><span class='object_link'><a href="MSpec.html" title="MSpec (module)">MSpec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:finish</span><span class='comma'>,</span>    <span class='kw'>self</span>
+  <span class='const'><span class='object_link'><a href="MSpec.html" title="MSpec (module)">MSpec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:abort</span><span class='comma'>,</span>     <span class='kw'>self</span>
+  <span class='const'><span class='object_link'><a href="MSpec.html" title="MSpec (module)">MSpec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span> <span class='symbol'>:enter</span><span class='comma'>,</span>     <span class='kw'>self</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -976,7 +974,7 @@
 94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/runner.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/runner.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span>
   <span class='ivar'>@start_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
@@ -991,9 +989,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

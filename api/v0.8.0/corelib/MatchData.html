@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: MatchData
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb</dd>
+    <dd>opal/opal/corelib/match_data.rb</dd>
   </dl>
   
 </div>
@@ -238,7 +236,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -262,7 +260,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(*args)  &#x21d2; Object </a>
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(*args)  &#x21d2; Object </a>
     
 
     
@@ -561,7 +559,7 @@
 25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='id identifier rubyid_match_groups'>match_groups</span><span class='rparen'>)</span>
   <span class='gvar'>$~</span>          <span class='op'>=</span> <span class='kw'>self</span>
@@ -627,7 +625,7 @@
 4</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 2</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post_match'>post_match</span>
   <span class='ivar'>@post_match</span>
@@ -669,7 +667,7 @@
 4</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 2</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pre_match'>pre_match</span>
   <span class='ivar'>@pre_match</span>
@@ -711,7 +709,7 @@
 4</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 2</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_regexp'>regexp</span>
   <span class='ivar'>@regexp</span>
@@ -753,7 +751,7 @@
 4</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 2</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_string'>string</span>
   <span class='ivar'>@string</span>
@@ -800,10 +798,10 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'>MatchData</span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="MatchData (class)">MatchData</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span>
 
   <span class='backtick'>`</span><span class='tstring_content'>self.string == other.string</span><span class='tstring_end'>`</span></span> <span class='op'>&amp;&amp;</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.regexp.toString() == other.regexp.toString()</span><span class='tstring_end'>`</span></span> <span class='op'>&amp;&amp;</span>
@@ -836,7 +834,7 @@
 29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='ivar'>@matches</span><span class='lbracket'>[</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rbracket'>]</span>
@@ -871,12 +869,12 @@
 59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='kw'>begin</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     if (n !== 0) {
-      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MatchData#begin only supports 0th element</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MatchData#begin only supports 0th element</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
     }
     return self.begin;
   </span><span class='tstring_end'>}</span></span>
@@ -906,7 +904,7 @@
 72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_captures'>captures</span>
   <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@matches</span><span class='tstring_content'>.slice(1)</span><span class='tstring_end'>`</span></span>
@@ -941,12 +939,12 @@
 68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='kw'>end</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     if (n !== 0) {
-      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MatchData#end only supports 0th element</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MatchData#end only supports 0th element</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
     }
     return self.begin + self.matches[n].length;
   </span><span class='tstring_end'>}</span></span>
@@ -984,7 +982,7 @@
 84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1026,7 +1024,7 @@
 88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_length'>length</span>
   <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@matches</span><span class='tstring_content'>.length</span><span class='tstring_end'>`</span></span>
@@ -1061,12 +1059,12 @@
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_offset'>offset</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     if (n !== 0) {
-      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MatchData#offset only supports 0th element</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MatchData#offset only supports 0th element</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
     }
     return [self.begin, self.begin + self.matches[n].length];
   </span><span class='tstring_end'>}</span></span>
@@ -1096,7 +1094,7 @@
 94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
   <span class='ivar'>@matches</span>
@@ -1126,9 +1124,9 @@
 98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 96</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'><span class='object_link'><a href="top-level-namespace.html#to_s-class_method" title="::to_s (method)">to_s</a></span></span>
   <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@matches</span><span class='tstring_content'>[0]</span><span class='tstring_end'>`</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1181,7 +1179,7 @@
 127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/match_data.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/match_data.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_values_at'>values_at</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1195,7 +1193,7 @@
         Array.prototype.splice.apply(args, a);
       }
 
-      index = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>args[i]</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      index = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'><span class='object_link'><a href="Opal.html#coerce_to!-class_method" title="Opal.coerce_to! (method)">coerce_to!</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>args[i]</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
       if (index &lt; 0) {
         index += </span><span class='embvar'>#</span><span class='ivar'>@matches</span><span class='tstring_content'>.length;
@@ -1221,9 +1219,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

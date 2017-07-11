@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::MassAssignNode
   
@@ -100,23 +98,21 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/masgn.rb</dd>
+    <dd>opal/lib/opal/nodes/masgn.rb</dd>
   </dl>
   
 </div>
 
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="SIMPLE_ASSIGNMENT-constant" class="">SIMPLE_ASSIGNMENT =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:lasgn</span><span class='comma'>,</span> <span class='symbol'>:iasgn</span><span class='comma'>,</span> <span class='symbol'>:lvar</span><span class='comma'>,</span> <span class='symbol'>:gasgn</span><span class='comma'>,</span> <span class='symbol'>:cdecl</span><span class='rbracket'>]</span></pre></dd>
-      
-    </dl>
-  
+  <dl class="constants">
+    
+      <dt id="SIMPLE_ASSIGNMENT-constant" class="">SIMPLE_ASSIGNMENT =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:lasgn</span><span class='comma'>,</span> <span class='symbol'>:iasgn</span><span class='comma'>,</span> <span class='symbol'>:lvar</span><span class='comma'>,</span> <span class='symbol'>:gasgn</span><span class='comma'>,</span> <span class='symbol'>:cdecl</span><span class='rbracket'>]</span></pre></dd>
+    
+  </dl>
 
 
 
@@ -288,7 +284,7 @@
 34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/masgn.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/masgn.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='id identifier rubyid_array'>array</span> <span class='op'>=</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_new_temp'>new_temp</span>
@@ -366,7 +362,7 @@
 107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/masgn.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/masgn.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_assignment'>compile_assignment</span><span class='lparen'>(</span><span class='id identifier rubyid_child'>child</span><span class='comma'>,</span> <span class='id identifier rubyid_array'>array</span><span class='comma'>,</span> <span class='id identifier rubyid_idx'>idx</span><span class='comma'>,</span> <span class='id identifier rubyid_len'>len</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_len'>len</span> <span class='op'>||</span> <span class='id identifier rubyid_idx'>idx</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_len'>len</span>
@@ -376,7 +372,7 @@
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_part'>part</span> <span class='op'>=</span> <span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
-  <span class='kw'>if</span> <span class='const'>SIMPLE_ASSIGNMENT</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="#SIMPLE_ASSIGNMENT-constant" title="Opal::Nodes::MassAssignNode::SIMPLE_ASSIGNMENT (constant)">SIMPLE_ASSIGNMENT</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_part'>part</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_assign'>assign</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='symbol'>:call</span>
     <span class='id identifier rubyid_part'>part</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_part'>part</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
@@ -470,7 +466,7 @@
 76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/masgn.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/masgn.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_masgn'>compile_masgn</span><span class='lparen'>(</span><span class='id identifier rubyid_lhs_items'>lhs_items</span><span class='comma'>,</span> <span class='id identifier rubyid_array'>array</span><span class='comma'>,</span> <span class='id identifier rubyid_len'>len</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_pre_splat'>pre_splat</span>  <span class='op'>=</span> <span class='id identifier rubyid_lhs_items'>lhs_items</span><span class='period'>.</span><span class='id identifier rubyid_take_while'>take_while</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_child'>child</span><span class='op'>|</span> <span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>!=</span> <span class='symbol'>:splat</span> <span class='rbrace'>}</span>
@@ -522,9 +518,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: UnboundMethod
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/method.rb</dd>
+    <dd>opal/opal/corelib/method.rb</dd>
   </dl>
   
 </div>
@@ -330,7 +328,7 @@
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/method.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/method.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_owner'>owner</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='ivar'>@owner</span>  <span class='op'>=</span> <span class='id identifier rubyid_owner'>owner</span>
@@ -379,7 +377,7 @@
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/method.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/method.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='ivar'>@name</span>
@@ -421,7 +419,7 @@
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/method.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/method.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_owner'>owner</span>
   <span class='ivar'>@owner</span>
@@ -458,7 +456,7 @@
 58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/method.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/method.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_arity'>arity</span>
   <span class='ivar'>@method</span><span class='period'>.</span><span class='id identifier rubyid_arity'>arity</span>
@@ -492,14 +490,14 @@
 70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/method.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/method.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bind'>bind</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='comment'># TODO: re-enable when Module#&lt; is fixed
 </span>  <span class='comment'># unless object.class &lt;= @owner
 </span>  <span class='comment'>#   raise TypeError, &quot;can&#39;t bind singleton method to a different class&quot;
 </span>  <span class='comment'># end
-</span>  <span class='const'>Method</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='ivar'>@method</span><span class='comma'>,</span> <span class='ivar'>@name</span><span class='rparen'>)</span>
+</span>  <span class='const'><span class='object_link'><a href="Method.html" title="Method (class)">Method</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Method.html#initialize-instance_method" title="Method#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='ivar'>@method</span><span class='comma'>,</span> <span class='ivar'>@name</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -526,7 +524,7 @@
 74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/method.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/method.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;UnboundMethod: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@owner</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>#</span><span class='embvar'>#</span><span class='ivar'>@name</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -556,7 +554,7 @@
 62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/method.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/method.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parameters'>parameters</span>
   <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='ivar'>@method</span><span class='embexpr_end'>}</span><span class='tstring_content'>.$$parameters</span><span class='tstring_end'>`</span></span>
@@ -571,9 +569,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

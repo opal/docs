@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Struct
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/native.rb</dd>
+    <dd>opal/stdlib/native.rb</dd>
   </dl>
   
 </div>
@@ -191,13 +189,13 @@ values as values.</p>
 483</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 475</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/native.rb', line 475</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_n'>to_n</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>{}</span><span class='tstring_end'>`</span></span>
 
   <span class='id identifier rubyid_each_pair'>each_pair</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-    <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>] = </span><span class='embexpr_beg'>#{</span><span class='const'>Native</span><span class='period'>.</span><span class='id identifier rubyid_try_convert'>try_convert</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>`</span></span>
+    <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>] = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Native.html" title="Native (module)">Native</a></span></span><span class='period'>.</span><span class='id identifier rubyid_try_convert'><span class='object_link'><a href="Native.html#try_convert-class_method" title="Native.try_convert (method)">try_convert</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>`</span></span>
   <span class='rbrace'>}</span>
 
   <span class='id identifier rubyid_result'>result</span>
@@ -212,9 +210,9 @@ values as values.</p>
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

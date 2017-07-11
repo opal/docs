@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Thread
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/thread.rb</dd>
+    <dd>opal/stdlib/thread.rb</dd>
   </dl>
   
 </div>
@@ -184,7 +182,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
     
 
     
@@ -207,7 +205,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(key, value)  &#x21d2; Object </a>
+      <a href="#[]=-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(key, value)  &#x21d2; Object </a>
     
 
     
@@ -420,7 +418,7 @@
 25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_fail'>fail</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Thread creation not available</span><span class='tstring_end'>&quot;</span></span>
@@ -462,7 +460,7 @@
 16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span>
   <span class='kw'>unless</span> <span class='ivar'>@current</span>
@@ -497,7 +495,7 @@
 20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span>
   <span class='lbracket'>[</span><span class='id identifier rubyid_current'>current</span><span class='rbracket'>]</span>
@@ -543,7 +541,7 @@
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 28</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='ivar'>@fiber_locals</span><span class='lbracket'>[</span><span class='id identifier rubyid_coerce_key_name'>coerce_key_name</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='rbracket'>]</span>
@@ -573,7 +571,7 @@
 34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@fiber_locals</span><span class='lbracket'>[</span><span class='id identifier rubyid_coerce_key_name'>coerce_key_name</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -625,7 +623,7 @@
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='ivar'>@fiber_locals</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_coerce_key_name'>coerce_key_name</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -655,7 +653,7 @@
 42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_keys'>keys</span>
   <span class='ivar'>@fiber_locals</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
@@ -707,7 +705,7 @@
 55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_thread_variable?'>thread_variable?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='ivar'>@thread_locals</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_coerce_key_name'>coerce_key_name</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -747,7 +745,7 @@
 47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_thread_variable_get'>thread_variable_get</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='ivar'>@thread_locals</span><span class='lbracket'>[</span><span class='id identifier rubyid_coerce_key_name'>coerce_key_name</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='rbracket'>]</span>
@@ -777,7 +775,7 @@
 51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_thread_variable_set'>thread_variable_set</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@thread_locals</span><span class='lbracket'>[</span><span class='id identifier rubyid_coerce_key_name'>coerce_key_name</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -807,7 +805,7 @@
 59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/thread.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/thread.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_thread_variables'>thread_variables</span>
   <span class='ivar'>@thread_locals</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
@@ -822,9 +820,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

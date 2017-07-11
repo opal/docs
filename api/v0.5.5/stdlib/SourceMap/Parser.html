@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -61,8 +61,6 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="../class_list.html"></iframe>
-
       <div id="content"><h1>Module: SourceMap::Parser
   
   
@@ -87,7 +85,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/source_map/parser.rb</dd>
+    <dd>opal/stdlib/source_map/parser.rb</dd>
   </dl>
   
 </div>
@@ -255,13 +253,13 @@ for more details.</p>
 100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/source_map/parser.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/source_map/parser.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_mapping'>parse_mapping</span><span class='lparen'>(</span><span class='id identifier rubyid_segment'>segment</span><span class='comma'>,</span> <span class='id identifier rubyid_line_num'>line_num</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='const'>VLQ</span><span class='period'>.</span><span class='id identifier rubyid_decode_array'>decode_array</span><span class='lparen'>(</span><span class='id identifier rubyid_segment'>segment</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="VLQ.html" title="SourceMap::VLQ (module)">VLQ</a></span></span><span class='period'>.</span><span class='id identifier rubyid_decode_array'><span class='object_link'><a href="VLQ.html#decode_array-class_method" title="SourceMap::VLQ.decode_array (method)">decode_array</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_segment'>segment</span><span class='rparen'>)</span>
 
   <span class='kw'>unless</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>5</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ParserError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unparseable item: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_segment'>segment</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ParserError.html" title="SourceMap::ParserError (class)">ParserError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unparseable item: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_segment'>segment</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_map'>map</span> <span class='op'>=</span> <span class='lbrace'>{</span>
@@ -277,19 +275,19 @@ for more details.</p>
   <span class='kw'>end</span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:generated_col</span><span class='rbracket'>]</span> <span class='op'>&lt;</span> <span class='int'>0</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ParserError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unexpected generated_col: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:generated_col</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ParserError.html" title="SourceMap::ParserError (class)">ParserError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unexpected generated_col: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:generated_col</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
   <span class='kw'>elsif</span> <span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:source</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:source</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='ivar'>@previous</span><span class='lbracket'>[</span><span class='symbol'>:source_id</span><span class='rbracket'>]</span> <span class='op'>&lt;</span> <span class='int'>0</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ParserError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unknown source id: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@previous</span><span class='lbracket'>[</span><span class='symbol'>:source_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ParserError.html" title="SourceMap::ParserError (class)">ParserError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unknown source id: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@previous</span><span class='lbracket'>[</span><span class='symbol'>:source_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
   <span class='kw'>elsif</span> <span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:source_line</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:source_line</span><span class='rbracket'>]</span> <span class='op'>&lt;</span> <span class='int'>1</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ParserError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unexpected source_line: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:source_line</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ParserError.html" title="SourceMap::ParserError (class)">ParserError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unexpected source_line: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:source_line</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
   <span class='kw'>elsif</span> <span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:source_col</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:source_col</span><span class='rbracket'>]</span> <span class='op'>&lt;</span> <span class='int'>0</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ParserError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unexpected source_col: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:source_col</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ParserError.html" title="SourceMap::ParserError (class)">ParserError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unexpected source_col: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:source_col</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
   <span class='kw'>elsif</span> <span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='ivar'>@previous</span><span class='lbracket'>[</span><span class='symbol'>:name_id</span><span class='rbracket'>]</span> <span class='op'>&lt;</span> <span class='int'>0</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ParserError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unknown name id: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@previous</span><span class='lbracket'>[</span><span class='symbol'>:name_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ParserError.html" title="SourceMap::ParserError (class)">ParserError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In map for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line_num'>line_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>: unknown name id: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@previous</span><span class='lbracket'>[</span><span class='symbol'>:name_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
   <span class='kw'>else</span>
     <span class='id identifier rubyid_map'>map</span>
@@ -345,10 +343,10 @@ in the output file, these lists are joined by semi-colons.</p>
 49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/source_map/parser.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/source_map/parser.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_mappings'>parse_mappings</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
-  <span class='ivar'>@previous</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span> <span class='int'>0</span> <span class='rbrace'>}</span>
+  <span class='ivar'>@previous</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Hash.html" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Hash.html#initialize-instance_method" title="Hash#initialize (method)">new</a></span></span><span class='lbrace'>{</span> <span class='int'>0</span> <span class='rbrace'>}</span>
 
   <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_line_idx'>line_idx</span><span class='op'>|</span>
     <span class='comment'># The generated_col resets to 0 at the start of every line, though
@@ -397,7 +395,7 @@ so we need to remove the difference every time we read a number.</p>
 55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/source_map/parser.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/source_map/parser.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_undiff'>undiff</span><span class='lparen'>(</span><span class='id identifier rubyid_int'>int</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='ivar'>@previous</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='id identifier rubyid_int'>int</span>
@@ -412,9 +410,9 @@ so we need to remove the difference every time we read a number.</p>
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Hash
   
@@ -98,8 +96,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/json.rb<span class="defines">,<br />
-  /Users/elia/Code/opal-docs/opal/stdlib/native.rb</span>
+    <dd>opal/stdlib/json.rb<span class="defines">,<br />
+  opal/stdlib/native.rb</span>
 </dd>
   </dl>
   
@@ -279,7 +277,7 @@
 560</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 527</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/native.rb', line 527</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -292,18 +290,18 @@
         value = defaults[key];
 
         if (value &amp;&amp; value.constructor === Object) {
-          smap[key] = </span><span class='embexpr_beg'>#{</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+          smap[key] = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
         } else if (value &amp;&amp; value.$$is_array) {
           value = value.map(function(item) {
             if (item &amp;&amp; item.constructor === Object) {
-              return </span><span class='embexpr_beg'>#{</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>item</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+              return </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>item</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
             }
 
             return item;
           });
           smap[key] = value
         } else {
-          smap[key] = </span><span class='embexpr_beg'>#{</span><span class='const'>Native</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+          smap[key] = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Native.html" title="Native (module)">Native</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
         }
 
         keys.push(key);
@@ -345,7 +343,7 @@
 525</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 525</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/native.rb', line 525</span>
 
 <span class='id identifier rubyid_alias_method'>alias_method</span> <span class='symbol'>:_initialize</span><span class='comma'>,</span> <span class='symbol'>:initialize</span></pre>
     </td>
@@ -390,7 +388,7 @@
 161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/json.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/json.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_json'>to_json</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -484,7 +482,7 @@
 586</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 564</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/native.rb', line 564</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_n'>to_n</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -503,7 +501,7 @@
         value = key.value;
       }
 
-      result[key] = </span><span class='embexpr_beg'>#{</span><span class='const'>Native</span><span class='period'>.</span><span class='id identifier rubyid_try_convert'>try_convert</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      result[key] = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Native.html" title="Native (module)">Native</a></span></span><span class='period'>.</span><span class='id identifier rubyid_try_convert'><span class='object_link'><a href="Native.html#try_convert-class_method" title="Native.try_convert (method)">try_convert</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
     }
 
     return result;
@@ -519,9 +517,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Minitest::Runnable
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb</dd>
+    <dd>opal/stdlib/minitest.rb</dd>
   </dl>
   
 </div>
@@ -123,11 +121,10 @@ Runnable.runnables.</p>
 </div>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="SIGNALS-constant" class="">SIGNALS =
-          <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="SIGNALS-constant" class="">SIGNALS =
+        <div class="docstring">
   <div class="discussion">
     <p>Signal.list # :nodoc:</p>
 
@@ -138,11 +135,10 @@ Runnable.runnables.</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
-      
-    </dl>
-  
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+    
+  </dl>
 
 
 
@@ -551,7 +547,7 @@ Runnable.runnables.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name%3D-instance_method" title="#name= (instance method)">#<strong>name=</strong>(o)  &#x21d2; Object </a>
+      <a href="#name=-instance_method" title="#name= (instance method)">#<strong>name=</strong>(o)  &#x21d2; Object </a>
     
 
     
@@ -701,7 +697,7 @@ Runnable.runnables.</p>
 363</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 359</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 359</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span> <span class='id identifier rubyid_name'>name</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>       <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
@@ -750,7 +746,7 @@ Runnable.runnables.</p>
 237</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 235</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 235</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assertions'>assertions</span>
   <span class='ivar'>@assertions</span>
@@ -792,7 +788,7 @@ Runnable.runnables.</p>
 242</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 240</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 240</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failures'>failures</span>
   <span class='ivar'>@failures</span>
@@ -840,7 +836,7 @@ Runnable.runnables.</p>
 259</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 256</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 256</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_inherited'>inherited</span> <span class='id identifier rubyid_klass'>klass</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_runnables'>runnables</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_klass'>klass</span>
@@ -881,7 +877,7 @@ Runnable.runnables.</p>
 266</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 264</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 264</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_methods_matching'>methods_matching</span> <span class='id identifier rubyid_re'>re</span>
   <span class='id identifier rubyid_public_instance_methods'>public_instance_methods</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_grep'>grep</span><span class='lparen'>(</span><span class='id identifier rubyid_re'>re</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span>
@@ -930,10 +926,10 @@ Runnable.runnables.</p>
 330</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 319</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 319</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_on_signal'>on_signal</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_action'>action</span> <span class='comment'># :nodoc:
-</span>  <span class='id identifier rubyid_supported'>supported</span> <span class='op'>=</span> <span class='const'>SIGNALS</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+</span>  <span class='id identifier rubyid_supported'>supported</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#SIGNALS-constant" title="Minitest::Runnable::SIGNALS (constant)">SIGNALS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
 
   <span class='id identifier rubyid_old_trap'>old_trap</span> <span class='op'>=</span> <span class='id identifier rubyid_trap'>trap</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_old_trap'>old_trap</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='kw'>if</span> <span class='id identifier rubyid_old_trap'>old_trap</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:call</span>
@@ -979,7 +975,7 @@ Runnable.runnables.</p>
 270</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 268</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 268</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span> <span class='comment'># :nodoc:
 </span>  <span class='cvar'>@@runnables</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1032,11 +1028,11 @@ reporter to record.</p>
 292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 279</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 279</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='id identifier rubyid_reporter'>reporter</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
   <span class='id identifier rubyid_filter'>filter</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:filter</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/./</span><span class='tstring_end'>&#39;</span></span>
-  <span class='id identifier rubyid_filter'>filter</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='backref'>$1</span> <span class='kw'>if</span> <span class='id identifier rubyid_filter'>filter</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\/(.*)\/</span><span class='regexp_end'>/</span></span>
+  <span class='id identifier rubyid_filter'>filter</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Regexp.html" title="Regexp (class)">Regexp</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='backref'>$1</span> <span class='kw'>if</span> <span class='id identifier rubyid_filter'>filter</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\/(.*)\/</span><span class='regexp_end'>/</span></span>
 
   <span class='id identifier rubyid_filtered_methods'>filtered_methods</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_runnable_methods'>runnable_methods</span><span class='period'>.</span><span class='id identifier rubyid_find_all'>find_all</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span>
     <span class='id identifier rubyid_filter'>filter</span> <span class='op'>===</span> <span class='id identifier rubyid_m'>m</span> <span class='op'>||</span> <span class='id identifier rubyid_filter'>filter</span> <span class='op'>===</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>#</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_m'>m</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1086,10 +1082,10 @@ test. See Minitest::ParallelTest::ClassMethods for an example.</p>
 302</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 300</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 300</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_run_one_method'>run_one_method</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_reporter'>reporter</span>
-  <span class='id identifier rubyid_reporter'>reporter</span><span class='period'>.</span><span class='id identifier rubyid_record'>record</span> <span class='const'>Minitest</span><span class='period'>.</span><span class='id identifier rubyid_run_one_method'>run_one_method</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_reporter'>reporter</span><span class='period'>.</span><span class='id identifier rubyid_record'>record</span> <span class='const'><span class='object_link'><a href="../Minitest.html" title="Minitest (module)">Minitest</a></span></span><span class='period'>.</span><span class='id identifier rubyid_run_one_method'><span class='object_link'><a href="../Minitest.html#run_one_method-class_method" title="Minitest.run_one_method (method)">run_one_method</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1140,7 +1136,7 @@ method to return all runnable methods. See #methods_matching.</p>
 338</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 336</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 336</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_runnable_methods'>runnable_methods</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subclass responsibility</span><span class='tstring_end'>&quot;</span></span>
@@ -1180,7 +1176,7 @@ method to return all runnable methods. See #methods_matching.</p>
 345</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 343</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 343</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_runnables'>runnables</span>
   <span class='cvar'>@@runnables</span>
@@ -1229,7 +1225,7 @@ method to return all runnable methods. See #methods_matching.</p>
 315</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 304</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 304</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_with_info_handler'>with_info_handler</span> <span class='id identifier rubyid_reporter'>reporter</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='comment'># :nodoc:
 </span>  <span class='id identifier rubyid_handler'>handler</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span>
@@ -1284,7 +1280,7 @@ method to return all runnable methods. See #methods_matching.</p>
 357</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 355</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 355</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failure'>failure</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failures'>failures</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
@@ -1324,7 +1320,7 @@ method to return all runnable methods. See #methods_matching.</p>
 349</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 347</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 347</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_marshal_dump'>marshal_dump</span> <span class='comment'># :nodoc:
 </span>  <span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failures'>failures</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_assertions'>assertions</span><span class='rbracket'>]</span>
@@ -1364,7 +1360,7 @@ method to return all runnable methods. See #methods_matching.</p>
 353</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 351</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 351</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_marshal_load'>marshal_load</span> <span class='id identifier rubyid_ary'>ary</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failures'>failures</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_assertions'>assertions</span> <span class='op'>=</span> <span class='id identifier rubyid_ary'>ary</span>
@@ -1404,7 +1400,7 @@ method to return all runnable methods. See #methods_matching.</p>
 247</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 245</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 245</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='ivar'>@NAME</span>
@@ -1444,7 +1440,7 @@ method to return all runnable methods. See #methods_matching.</p>
 254</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 252</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 252</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name='>name=</span> <span class='id identifier rubyid_o'>o</span>
   <span class='ivar'>@NAME</span> <span class='op'>=</span> <span class='id identifier rubyid_o'>o</span>
@@ -1513,7 +1509,7 @@ cause the process to exit non-zero.</p>
 380</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 378</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 378</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_passed?'>passed?</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subclass responsibility</span><span class='tstring_end'>&quot;</span></span>
@@ -1567,7 +1563,7 @@ of the run. Eg &quot;.&quot;, &quot;F&quot;, or &quot;E&quot;.</p>
 388</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 386</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 386</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result_code'>result_code</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subclass responsibility</span><span class='tstring_end'>&quot;</span></span>
@@ -1620,7 +1616,7 @@ of the run. Eg &quot;.&quot;, &quot;F&quot;, or &quot;E&quot;.</p>
 370</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 368</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 368</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subclass responsibility</span><span class='tstring_end'>&quot;</span></span>
@@ -1686,7 +1682,7 @@ of the run. Eg &quot;.&quot;, &quot;F&quot;, or &quot;E&quot;.</p>
 395</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest.rb', line 393</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest.rb', line 393</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_skipped?'>skipped?</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subclass responsibility</span><span class='tstring_end'>&quot;</span></span>
@@ -1701,9 +1697,9 @@ of the run. Eg &quot;.&quot;, &quot;F&quot;, or &quot;E&quot;.</p>
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

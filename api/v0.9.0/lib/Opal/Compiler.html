@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Compiler
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb</dd>
+    <dd>opal/lib/opal/compiler.rb</dd>
   </dl>
   
 </div>
@@ -119,14 +117,14 @@ javascript.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='const'>Opal</span><span class='op'>::</span><span class='const'>Compiler</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ruby code</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'>Compiler</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Opal::Compiler#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ruby code</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_compile'><span class='object_link'><a href="#compile-instance_method" title="Opal::Compiler#compile (method)">compile</a></span></span>
 <span class='comment'># =&gt; &quot;javascript code&quot;</span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>Accessing result</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_compiler'>compiler</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='op'>::</span><span class='const'>Compiler</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ruby_code</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <pre class="example code"><code><span class='id identifier rubyid_compiler'>compiler</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'>Compiler</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Opal::Compiler#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ruby_code</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_compiler'>compiler</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span>
 <span class='id identifier rubyid_compiler'>compiler</span><span class='period'>.</span><span class='id identifier rubyid_result'>result</span> <span class='comment'># =&gt; &quot;javascript code&quot;</span></code></pre>
     
@@ -134,7 +132,7 @@ javascript.</p>
         <p class="example_title"><div class='inline'><p>Source Maps</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_compiler'>compiler</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='op'>::</span><span class='const'>Compiler</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <pre class="example code"><code><span class='id identifier rubyid_compiler'>compiler</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'>Compiler</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Opal::Compiler#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_compiler'>compiler</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span>
 <span class='id identifier rubyid_compiler'>compiler</span><span class='period'>.</span><span class='id identifier rubyid_source_map'>source_map</span> <span class='comment'># =&gt; #&lt;SourceMap:&gt;</span></code></pre>
     
@@ -143,11 +141,10 @@ javascript.</p>
 
 </div>
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="INDENT-constant" class="">INDENT =
-          <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="INDENT-constant" class="">INDENT =
+        <div class="docstring">
   <div class="discussion">
     <p>Generated code gets indented with two spaces on each scope</p>
 
@@ -158,11 +155,11 @@ javascript.</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>  </span><span class='tstring_end'>&#39;</span></span></pre></dd>
-      
-        <dt id="COMPARE-constant" class="">COMPARE =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>  </span><span class='tstring_end'>&#39;</span></span></pre></dd>
+    
+      <dt id="COMPARE-constant" class="">COMPARE =
+        <div class="docstring">
   <div class="discussion">
     <p>All compare method nodes - used to optimize performance of
 math comparisons</p>
@@ -174,11 +171,10 @@ math comparisons</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='qwords_beg'>%w[</span><span class='tstring_content'>&lt;</span><span class='words_sep'> </span><span class='tstring_content'>&gt;</span><span class='words_sep'> </span><span class='tstring_content'>&lt;=</span><span class='words_sep'> </span><span class='tstring_content'>&gt;=</span><span class='words_sep'>]</span></pre></dd>
-      
-    </dl>
-  
+      </dt>
+      <dd><pre class="code"><span class='qwords_beg'>%w[</span><span class='tstring_content'>&lt;</span><span class='words_sep'> </span><span class='tstring_content'>&gt;</span><span class='words_sep'> </span><span class='tstring_content'>&lt;=</span><span class='words_sep'> </span><span class='tstring_content'>&gt;=</span><span class='words_sep'>]</span></pre></dd>
+    
+  </dl>
 
 
 
@@ -1165,7 +1161,7 @@ math comparisons</p>
 141</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@source</span> <span class='op'>=</span> <span class='id identifier rubyid_source'>source</span>
@@ -1215,7 +1211,7 @@ math comparisons</p>
 133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_case_stmt'>case_stmt</span>
   <span class='ivar'>@case_stmt</span>
@@ -1257,7 +1253,7 @@ math comparisons</p>
 136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eof_content'>eof_content</span>
   <span class='ivar'>@eof_content</span>
@@ -1316,7 +1312,7 @@ math comparisons</p>
 127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 125</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 125</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fragments'>fragments</span>
   <span class='ivar'>@fragments</span>
@@ -1375,7 +1371,7 @@ math comparisons</p>
 124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result'>result</span>
   <span class='ivar'>@result</span>
@@ -1417,7 +1413,7 @@ math comparisons</p>
 130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scope'>scope</span>
   <span class='ivar'>@scope</span>
@@ -1473,7 +1469,7 @@ math comparisons</p>
 63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_compiler_option'>compiler_option</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_default_value'>default_value</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_mid'>mid</span>          <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:as</span><span class='rbracket'>]</span>
@@ -1539,7 +1535,7 @@ math comparisons</p>
 85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 85</span>
 
 <span class='id identifier rubyid_compiler_option'>compiler_option</span> <span class='symbol'>:arity_check</span><span class='comma'>,</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='symbol'>:as</span> <span class='op'>=&gt;</span> <span class='symbol'>:arity_check?</span></pre>
     </td>
@@ -1604,10 +1600,10 @@ math comparisons</p>
 158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 146</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
-  <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Parser.html" title="Opal::Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 
   <span class='ivar'>@sexp</span> <span class='op'>=</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='symbol'>:top</span><span class='comma'>,</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='ivar'>@source</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='symbol'>:nil</span><span class='rparen'>)</span><span class='rparen'>)</span>
   <span class='ivar'>@eof_content</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id identifier rubyid_lexer'>lexer</span><span class='period'>.</span><span class='id identifier rubyid_eof_content'>eof_content</span>
@@ -1652,7 +1648,7 @@ math comparisons</p>
 107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 107</span>
 
 <span class='id identifier rubyid_compiler_option'>compiler_option</span> <span class='symbol'>:dynamic_require_severity</span><span class='comma'>,</span> <span class='symbol'>:error</span><span class='comma'>,</span> <span class='symbol'>:valid_values</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='symbol'>:error</span><span class='comma'>,</span> <span class='symbol'>:warning</span><span class='comma'>,</span> <span class='symbol'>:ignore</span><span class='rbracket'>]</span></pre>
     </td>
@@ -1705,7 +1701,7 @@ the message and raises it.</p>
 193</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 191</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>SyntaxError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_msg'>msg</span><span class='embexpr_end'>}</span><span class='tstring_content'> :</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line'>line</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1757,7 +1753,7 @@ as well as finding relative require()</p>
 71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 71</span>
 
 <span class='id identifier rubyid_compiler_option'>compiler_option</span> <span class='symbol'>:file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>(file)</span><span class='tstring_end'>&#39;</span></span></pre>
     </td>
@@ -1785,10 +1781,10 @@ as well as finding relative require()</p>
 218</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 216</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 216</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fragment'>fragment</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='const'>Fragment</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_sexp'>sexp</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Fragment.html" title="Opal::Fragment (class)">Fragment</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Fragment.html#initialize-instance_method" title="Opal::Fragment#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_sexp'>sexp</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1836,7 +1832,7 @@ as well as finding relative require()</p>
 92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 92</span>
 
 <span class='id identifier rubyid_compiler_option'>compiler_option</span> <span class='symbol'>:freezing</span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:as</span> <span class='op'>=&gt;</span> <span class='symbol'>:freezing?</span></pre>
     </td>
@@ -1871,7 +1867,7 @@ as well as finding relative require()</p>
 398</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 389</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 389</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_handle_block_given_call'>handle_block_given_call</span><span class='lparen'>(</span><span class='id identifier rubyid_sexp'>sexp</span><span class='rparen'>)</span>
   <span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid_uses_block!'>uses_block!</span>
@@ -1908,10 +1904,10 @@ as well as finding relative require()</p>
 295</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 293</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 293</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_handlers'>handlers</span>
-  <span class='ivar'>@handlers</span> <span class='op'>||=</span> <span class='const'>Opal</span><span class='op'>::</span><span class='const'>Nodes</span><span class='op'>::</span><span class='const'>Base</span><span class='period'>.</span><span class='id identifier rubyid_handlers'>handlers</span>
+  <span class='ivar'>@handlers</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Nodes.html" title="Opal::Nodes (module)">Nodes</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Nodes/Base.html" title="Opal::Nodes::Base (class)">Base</a></span></span><span class='period'>.</span><span class='id identifier rubyid_handlers'><span class='object_link'><a href="Nodes/Base.html#handlers-class_method" title="Opal::Nodes::Base.handlers (method)">handlers</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1948,7 +1944,7 @@ as well as finding relative require()</p>
 229</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 227</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 227</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_helper'>helper</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_helpers'>helpers</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_name'>name</span>
@@ -2003,7 +1999,7 @@ javascript by keeping a reference to helpers used.</p>
 176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 174</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_helpers'>helpers</span>
   <span class='ivar'>@helpers</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='symbol'>:breaker</span><span class='comma'>,</span> <span class='symbol'>:slice</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -2037,7 +2033,7 @@ javascript by keeping a reference to helpers used.</p>
 273</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 267</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 267</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_in_case'>in_case</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2087,7 +2083,7 @@ scope&#39;s while stack so we know how to handle break, next etc.</p>
 265</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 258</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 258</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_in_while'>in_while</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2146,7 +2142,7 @@ false otherwise.</p>
 279</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 277</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_in_while?'>in_while?</span>
   <span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid_in_while?'>in_while?</span>
@@ -2194,11 +2190,11 @@ code after reverting the indent.</p>
 242</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 234</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_indent'>indent</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_indent'>indent</span> <span class='op'>=</span> <span class='ivar'>@indent</span>
-  <span class='ivar'>@indent</span> <span class='op'>+=</span> <span class='const'>INDENT</span>
+  <span class='ivar'>@indent</span> <span class='op'>+=</span> <span class='const'><span class='object_link'><a href="#INDENT-constant" title="Opal::Compiler::INDENT (constant)">INDENT</a></span></span>
   <span class='ivar'>@space</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='embvar'>#</span><span class='ivar'>@indent</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='kw'>yield</span>
   <span class='ivar'>@indent</span> <span class='op'>=</span> <span class='id identifier rubyid_indent'>indent</span>
@@ -2238,7 +2234,7 @@ code after reverting the indent.</p>
 117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 117</span>
 
 <span class='id identifier rubyid_compiler_option'>compiler_option</span> <span class='symbol'>:inline_operators</span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:as</span> <span class='op'>=&gt;</span> <span class='symbol'>:inline_operators?</span></pre>
     </td>
@@ -2274,7 +2270,7 @@ code after reverting the indent.</p>
 102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 102</span>
 
 <span class='id identifier rubyid_compiler_option'>compiler_option</span> <span class='symbol'>:irb</span><span class='comma'>,</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='symbol'>:as</span> <span class='op'>=&gt;</span> <span class='symbol'>:irb?</span></pre>
     </td>
@@ -2312,7 +2308,7 @@ code after reverting the indent.</p>
 186</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 184</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 184</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_calls'>method_calls</span>
   <span class='ivar'>@method_calls</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -2363,7 +2359,7 @@ code after reverting the indent.</p>
 78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 78</span>
 
 <span class='id identifier rubyid_compiler_option'>compiler_option</span> <span class='symbol'>:method_missing</span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:as</span> <span class='op'>=&gt;</span> <span class='symbol'>:method_missing?</span></pre>
     </td>
@@ -2401,7 +2397,7 @@ code after reverting the indent.</p>
 181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 179</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 179</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_operator_helpers'>operator_helpers</span>
   <span class='ivar'>@operator_helpers</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -2443,7 +2439,7 @@ readable.</p>
 207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 205</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 205</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parser_indent'>parser_indent</span>
   <span class='ivar'>@indent</span>
@@ -2490,7 +2486,7 @@ and compiling it to fragments.</p>
 291</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 283</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 283</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_process'>process</span><span class='lparen'>(</span><span class='id identifier rubyid_sexp'>sexp</span><span class='comma'>,</span> <span class='id identifier rubyid_level'>level</span> <span class='op'>=</span> <span class='symbol'>:expr</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_fragment'>fragment</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>==</span> <span class='kw'>nil</span>
@@ -2534,7 +2530,7 @@ and compiling it to fragments.</p>
 112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 112</span>
 
 <span class='id identifier rubyid_compiler_option'>compiler_option</span> <span class='symbol'>:requirable</span><span class='comma'>,</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='symbol'>:as</span> <span class='op'>=&gt;</span> <span class='symbol'>:requirable?</span></pre>
     </td>
@@ -2573,7 +2569,7 @@ and compiling it to fragments.</p>
 306</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 304</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 304</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_required_trees'>required_trees</span>
   <span class='ivar'>@required_trees</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -2613,7 +2609,7 @@ and compiling it to fragments.</p>
 300</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 298</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 298</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_requires'>requires</span>
   <span class='ivar'>@requires</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -2729,7 +2725,7 @@ default action if no special case is required.</p>
 387</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 319</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 319</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_returns'>returns</span><span class='lparen'>(</span><span class='id identifier rubyid_sexp'>sexp</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_returns'>returns</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='symbol'>:nil</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sexp'>sexp</span>
@@ -2837,10 +2833,10 @@ of sexps does change.</p>
 214</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 212</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 212</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_parts'>parts</span><span class='rparen'>)</span>
-  <span class='const'>Sexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_parts'>parts</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Sexp.html" title="Opal::Sexp (class)">Sexp</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Sexp.html#initialize-instance_method" title="Opal::Sexp#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_parts'>parts</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2912,10 +2908,10 @@ original ruby code.</p>
 167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 165</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 165</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_map'>source_map</span><span class='lparen'>(</span><span class='id identifier rubyid_source_file'>source_file</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='const'>Opal</span><span class='op'>::</span><span class='const'>SourceMap</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@fragments</span><span class='comma'>,</span> <span class='id identifier rubyid_source_file'>source_file</span> <span class='op'>||</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SourceMap.html" title="Opal::SourceMap (class)">SourceMap</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SourceMap.html#initialize-instance_method" title="Opal::SourceMap#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@fragments</span><span class='comma'>,</span> <span class='id identifier rubyid_source_file'>source_file</span> <span class='op'>||</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2950,7 +2946,7 @@ original ruby code.</p>
 97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 97</span>
 
 <span class='id identifier rubyid_compiler_option'>compiler_option</span> <span class='symbol'>:tainting</span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:as</span> <span class='op'>=&gt;</span> <span class='symbol'>:tainting?</span></pre>
     </td>
@@ -2989,7 +2985,7 @@ mainly to name method bodies for methods that use blocks.</p>
 224</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 222</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 222</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unique_temp'>unique_temp</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TMP_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@unique</span> <span class='op'>+=</span> <span class='int'>1</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -3031,7 +3027,7 @@ the message and issues a warning.</p>
 200</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_warning'>warning</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WARNING: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_msg'>msg</span><span class='embexpr_end'>}</span><span class='tstring_content'> -- </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line'>line</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -3078,7 +3074,7 @@ numbers of variables needed at runtime.</p>
 254</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/compiler.rb', line 249</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/compiler.rb', line 249</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_with_temp'>with_temp</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tmp'>tmp</span> <span class='op'>=</span> <span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid_new_temp'>new_temp</span>
@@ -3096,9 +3092,9 @@ numbers of variables needed at runtime.</p>
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

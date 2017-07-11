@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Date::Infinity
   
@@ -105,7 +103,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/date.rb</dd>
+    <dd>opal/stdlib/date.rb</dd>
   </dl>
   
 </div>
@@ -128,7 +126,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%2B%40-instance_method" title="#+@ (instance method)">#<strong>+@</strong>  &#x21d2; Object </a>
+      <a href="#%2B@-instance_method" title="#+@ (instance method)">#<strong>+@</strong>  &#x21d2; Object </a>
     
 
     
@@ -150,7 +148,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#-%40-instance_method" title="#-@ (instance method)">#<strong>-@</strong>  &#x21d2; Object </a>
+      <a href="#-@-instance_method" title="#-@ (instance method)">#<strong>-@</strong>  &#x21d2; Object </a>
     
 
     
@@ -172,7 +170,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C%3D%3E-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(other)  &#x21d2; Object </a>
+      <a href="#<=>-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -440,7 +438,7 @@
 7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span> <span class='op'>=</span> <span class='int'>1</span><span class='rparen'>)</span>
   <span class='ivar'>@d</span> <span class='op'>=</span> <span class='id identifier rubyid_d'>d</span> <span class='op'>&lt;=&gt;</span> <span class='int'>0</span>
@@ -477,7 +475,7 @@
 39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='op'>+@</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>+</span><span class='id identifier rubyid_d'>d</span><span class='rparen'>)</span>
@@ -507,7 +505,7 @@
 35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='op'>-@</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_d'>d</span><span class='rparen'>)</span>
@@ -547,12 +545,12 @@
 53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span> <span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_other'>other</span>
-  <span class='kw'>when</span> <span class='const'>Infinity</span><span class='semicolon'>;</span> <span class='kw'>return</span> <span class='id identifier rubyid_d'>d</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_d'>d</span>
-  <span class='kw'>when</span> <span class='const'>Numeric</span><span class='semicolon'>;</span> <span class='kw'>return</span> <span class='id identifier rubyid_d'>d</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="" title="Date::Infinity (class)">Infinity</a></span></span><span class='semicolon'>;</span> <span class='kw'>return</span> <span class='id identifier rubyid_d'>d</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_d'>d</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span></span><span class='semicolon'>;</span> <span class='kw'>return</span> <span class='id identifier rubyid_d'>d</span>
   <span class='kw'>else</span>
     <span class='kw'>begin</span>
       <span class='id identifier rubyid_l'>l</span><span class='comma'>,</span> <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_coerce'>coerce</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
@@ -587,7 +585,7 @@
 31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_abs'>abs</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -622,11 +620,11 @@
 62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_coerce'>coerce</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_other'>other</span>
-  <span class='kw'>when</span> <span class='const'>Numeric</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span></span>
     <span class='kw'>return</span> <span class='op'>-</span><span class='id identifier rubyid_d'>d</span><span class='comma'>,</span> <span class='id identifier rubyid_d'>d</span>
   <span class='kw'>else</span>
     <span class='kw'>super</span>
@@ -657,7 +655,7 @@
 11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_d'>d</span>
   <span class='ivar'>@d</span>
@@ -709,7 +707,7 @@
 19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_finite?'>finite?</span>
   <span class='kw'>false</span>
@@ -761,7 +759,7 @@
 23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_infinite?'>infinite?</span>
   <span class='id identifier rubyid_d'>d</span><span class='period'>.</span><span class='id identifier rubyid_nonzero?'>nonzero?</span>
@@ -813,7 +811,7 @@
 27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_nan?'>nan?</span>
   <span class='id identifier rubyid_d'>d</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>
@@ -848,7 +846,7 @@
 71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_f'>to_f</span>
   <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='ivar'>@d</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -905,7 +903,7 @@
 15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/date.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/date.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_zero?'>zero?</span>
   <span class='kw'>false</span>
@@ -920,9 +918,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

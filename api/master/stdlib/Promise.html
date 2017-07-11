@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Promise
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/promise.rb</dd>
+    <dd>opal/stdlib/promise.rb</dd>
   </dl>
   
 </div>
@@ -120,7 +118,7 @@ will eventually be resolved or rejected, but never both. A <span class='object_l
 a <span class='object_link'><a href="#then-instance_method" title="Promise#then (method)">#then</a></span> and <span class='object_link'><a href="#fail-instance_method" title="Promise#fail (method)">#fail</a></span> method (or one of their aliases) that can be used to
 register a block that gets called once resolved or rejected.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_promise'>promise</span> <span class='op'>=</span> <span class='const'>Promise</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_promise'>promise</span> <span class='op'>=</span> <span class='const'>Promise</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Promise#initialize (method)">new</a></span></span>
 
 <span class='id identifier rubyid_promise'>promise</span><span class='period'>.</span><span class='id identifier rubyid_then'>then</span> <span class='lbrace'>{</span>
   <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>resolved!</span><span class='tstring_end'>&quot;</span></span>
@@ -144,7 +142,7 @@ or evaluated to a useful value. <span class='object_link'><a href="#resolve-inst
 then passed into the block handler:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='kw'>def</span> <span class='id identifier rubyid_get_json'>get_json</span>
-  <span class='id identifier rubyid_promise'>promise</span> <span class='op'>=</span> <span class='const'>Promise</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_promise'>promise</span> <span class='op'>=</span> <span class='const'>Promise</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Promise#initialize (method)">new</a></span></span>
 
   <span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>some_url</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_req'>req</span><span class='op'>|</span>
     <span class='id identifier rubyid_promise'>promise</span><span class='period'>.</span><span class='id identifier rubyid_resolve'>resolve</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_json'>json</span>
@@ -413,7 +411,7 @@ end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C%3C-instance_method" title="#&lt;&lt; (instance method)">#<strong>&lt;&lt;</strong>(promise)  &#x21d2; Object </a>
+      <a href="#<<-instance_method" title="#&lt;&lt; (instance method)">#<strong>&lt;&lt;</strong>(promise)  &#x21d2; Object </a>
     
 
     
@@ -435,7 +433,7 @@ end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3E%3E-instance_method" title="#&gt;&gt; (instance method)">#<strong>&gt;&gt;</strong>(promise)  &#x21d2; Object </a>
+      <a href="#>>-instance_method" title="#&gt;&gt; (instance method)">#<strong>&gt;&gt;</strong>(promise)  &#x21d2; Object </a>
     
 
     
@@ -547,7 +545,7 @@ end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#exception%21-instance_method" title="#exception! (instance method)">#<strong>exception!</strong>(error)  &#x21d2; Object </a>
+      <a href="#exception!-instance_method" title="#exception! (instance method)">#<strong>exception!</strong>(error)  &#x21d2; Object </a>
     
 
     
@@ -706,7 +704,7 @@ end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reject%21-instance_method" title="#reject! (instance method)">#<strong>reject!</strong>(value)  &#x21d2; Object </a>
+      <a href="#reject!-instance_method" title="#reject! (instance method)">#<strong>reject!</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -772,7 +770,7 @@ end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#resolve%21-instance_method" title="#resolve! (instance method)">#<strong>resolve!</strong>(value)  &#x21d2; Object </a>
+      <a href="#resolve!-instance_method" title="#resolve! (instance method)">#<strong>resolve!</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -926,7 +924,7 @@ end
 126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@action</span> <span class='op'>=</span> <span class='id identifier rubyid_action'>action</span>
@@ -982,7 +980,7 @@ end
 115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_error'>error</span>
   <span class='ivar'>@error</span>
@@ -1024,7 +1022,7 @@ end
 115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='kw'>next</span>
   <span class='ivar'>@next</span>
@@ -1066,7 +1064,7 @@ end
 115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prev'>prev</span>
   <span class='ivar'>@prev</span>
@@ -1103,7 +1101,7 @@ end
 107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
@@ -1133,7 +1131,7 @@ end
 103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_resolve'>resolve</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
@@ -1163,7 +1161,7 @@ end
 111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='kw'>when</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_promises'>promises</span><span class='rparen'>)</span>
   <span class='const'>When</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_promises'>promises</span><span class='rparen'>)</span>
@@ -1201,7 +1199,7 @@ end
 171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_promise'>promise</span><span class='rparen'>)</span>
   <span class='ivar'>@prev</span> <span class='op'>=</span> <span class='id identifier rubyid_promise'>promise</span>
@@ -1247,7 +1245,7 @@ end
 189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 173</span>
 
 <span class='kw'>def</span> <span class='op'>&gt;&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_promise'>promise</span><span class='rparen'>)</span>
   <span class='ivar'>@next</span> <span class='op'>=</span> <span class='id identifier rubyid_promise'>promise</span>
@@ -1257,7 +1255,7 @@ end
   <span class='kw'>elsif</span> <span class='id identifier rubyid_resolved?'>resolved?</span>
     <span class='id identifier rubyid_promise'>promise</span><span class='period'>.</span><span class='id identifier rubyid_resolve'>resolve</span><span class='lparen'>(</span><span class='ivar'>@delayed</span> <span class='op'>?</span> <span class='ivar'>@delayed</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_rejected?'>rejected?</span>
-    <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@action</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:failure</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'>Promise</span> <span class='op'>===</span> <span class='lparen'>(</span><span class='ivar'>@delayed</span> <span class='op'>?</span> <span class='ivar'>@delayed</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='ivar'>@error</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@action</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:failure</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="" title="Promise (class)">Promise</a></span></span> <span class='op'>===</span> <span class='lparen'>(</span><span class='ivar'>@delayed</span> <span class='op'>?</span> <span class='ivar'>@delayed</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='ivar'>@error</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_promise'>promise</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span><span class='lparen'>(</span><span class='ivar'>@delayed</span> <span class='op'>?</span> <span class='ivar'>@delayed</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_error'>error</span><span class='rparen'>)</span>
     <span class='kw'>elsif</span> <span class='id identifier rubyid_promise'>promise</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='symbol'>:always</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_promise'>promise</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span><span class='lparen'>(</span><span class='ivar'>@delayed</span> <span class='op'>?</span> <span class='ivar'>@delayed</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_error'>error</span><span class='rparen'>)</span>
@@ -1294,7 +1292,7 @@ end
 165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 160</span>
 
 <span class='kw'>def</span> <span class='op'>^</span><span class='lparen'>(</span><span class='id identifier rubyid_promise'>promise</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_promise'>promise</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span>
@@ -1349,7 +1347,7 @@ end
 138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_act?'>act?</span>
   <span class='ivar'>@action</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:success</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@action</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:always</span><span class='rparen'>)</span>
@@ -1379,7 +1377,7 @@ end
 142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 140</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_action'>action</span>
   <span class='ivar'>@action</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
@@ -1417,14 +1415,14 @@ end
 294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 288</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 288</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_always'>always</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@next</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a promise has already been chained</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
-  <span class='kw'>self</span> <span class='op'>^</span> <span class='const'>Promise</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>always:</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>self</span> <span class='op'>^</span> <span class='const'><span class='object_link'><a href="" title="Promise (class)">Promise</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Promise#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>always:</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1453,7 +1451,7 @@ end
 265</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 261</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 261</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_exception!'>exception!</span><span class='lparen'>(</span><span class='id identifier rubyid_error'>error</span><span class='rparen'>)</span>
   <span class='ivar'>@exception</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -1507,7 +1505,7 @@ end
 146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 144</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_exception?'>exception?</span>
   <span class='ivar'>@exception</span>
@@ -1545,14 +1543,14 @@ end
 283</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 277</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fail'>fail</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@next</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a promise has already been chained</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
-  <span class='kw'>self</span> <span class='op'>^</span> <span class='const'>Promise</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>failure:</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>self</span> <span class='op'>^</span> <span class='const'><span class='object_link'><a href="" title="Promise (class)">Promise</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Promise#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>failure:</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1591,7 +1589,7 @@ end
 321</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 307</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 307</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_object_id'>object_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
@@ -1655,7 +1653,7 @@ end
 150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_realized?'>realized?</span>
   <span class='op'>!</span><span class='op'>!</span><span class='ivar'>@realized</span>
@@ -1707,14 +1705,14 @@ end
 248</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 224</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reject'>reject</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_realized?'>realized?</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>the promise has already been realized</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
-  <span class='kw'>if</span> <span class='const'>Promise</span> <span class='op'>===</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Promise (class)">Promise</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_value'>value</span>
     <span class='kw'>return</span> <span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@prev</span><span class='rparen'>)</span> <span class='op'>^</span> <span class='kw'>self</span>
   <span class='kw'>end</span>
 
@@ -1766,7 +1764,7 @@ end
 259</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 250</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 250</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reject!'>reject!</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@realized</span> <span class='op'>=</span> <span class='symbol'>:reject</span>
@@ -1825,7 +1823,7 @@ end
 158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 156</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rejected?'>rejected?</span>
   <span class='ivar'>@realized</span> <span class='op'>==</span> <span class='symbol'>:reject</span>
@@ -1873,14 +1871,14 @@ end
 211</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 191</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_resolve'>resolve</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_realized?'>realized?</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>the promise has already been realized</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
-  <span class='kw'>if</span> <span class='const'>Promise</span> <span class='op'>===</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Promise (class)">Promise</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_value'>value</span>
     <span class='kw'>return</span> <span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@prev</span><span class='rparen'>)</span> <span class='op'>^</span> <span class='kw'>self</span>
   <span class='kw'>end</span>
 
@@ -1928,7 +1926,7 @@ end
 222</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 213</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 213</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_resolve!'>resolve!</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@realized</span> <span class='op'>=</span> <span class='symbol'>:resolve</span>
@@ -1987,7 +1985,7 @@ end
 154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 152</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_resolved?'>resolved?</span>
   <span class='ivar'>@realized</span> <span class='op'>==</span> <span class='symbol'>:resolve</span>
@@ -2025,14 +2023,14 @@ end
 273</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 267</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 267</span>
 
 <span class='kw'>def</span> <span class='kw'>then</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@next</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a promise has already been chained</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
-  <span class='kw'>self</span> <span class='op'>^</span> <span class='const'>Promise</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>success:</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>self</span> <span class='op'>^</span> <span class='const'><span class='object_link'><a href="" title="Promise (class)">Promise</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Promise#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>success:</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2063,14 +2061,14 @@ end
 305</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 299</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 299</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_trace'>trace</span><span class='lparen'>(</span><span class='id identifier rubyid_depth'>depth</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@next</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a promise has already been chained</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
-  <span class='kw'>self</span> <span class='op'>^</span> <span class='const'>Trace</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>self</span> <span class='op'>^</span> <span class='const'><span class='object_link'><a href="Promise/Trace.html" title="Promise::Trace (class)">Trace</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Promise/Trace.html#initialize-instance_method" title="Promise::Trace#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2101,10 +2099,10 @@ end
 134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/promise.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/promise.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
-  <span class='kw'>if</span> <span class='const'>Promise</span> <span class='op'>===</span> <span class='ivar'>@value</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Promise (class)">Promise</a></span></span> <span class='op'>===</span> <span class='ivar'>@value</span>
     <span class='ivar'>@value</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
   <span class='kw'>else</span>
     <span class='ivar'>@value</span>
@@ -2120,9 +2118,9 @@ end
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

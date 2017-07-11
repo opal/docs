@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: IO
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/nodejs/io.rb</dd>
+    <dd>opal/stdlib/nodejs/io.rb</dd>
   </dl>
   
 </div>
@@ -289,7 +287,7 @@
 12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/io.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/nodejs/io.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@eof</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -337,7 +335,7 @@
 8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/io.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/nodejs/io.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eof'>eof</span>
   <span class='ivar'>@eof</span>
@@ -379,7 +377,7 @@
 9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/io.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/nodejs/io.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lineno'>lineno</span>
   <span class='ivar'>@lineno</span>
@@ -442,7 +440,7 @@
 53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/io.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/nodejs/io.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_line'>each_line</span><span class='lparen'>(</span><span class='id identifier rubyid_separator'>separator</span> <span class='op'>=</span> <span class='gvar'>$/</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@eof</span>
@@ -450,7 +448,7 @@
   <span class='kw'>end</span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
-    <span class='id identifier rubyid_lines'>lines</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='ivar'>@path</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_lines'>lines</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="File.html" title="File (class)">File</a></span></span><span class='period'>.</span><span class='id identifier rubyid_read'><span class='object_link'><a href="File.html#read-class_method" title="File.read (method)">read</a></span></span><span class='lparen'>(</span><span class='ivar'>@path</span><span class='rparen'>)</span>
     <span class='backtick'>%x{</span><span class='tstring_content'>
       self.eof = false;
       self.lineno = 0;
@@ -505,7 +503,7 @@
 23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/io.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/nodejs/io.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_read'>read</span>
   <span class='kw'>if</span> <span class='ivar'>@eof</span>
@@ -527,9 +525,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

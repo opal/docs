@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: MSpec::Opal::RackApp
   
@@ -100,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb</dd>
+    <dd>opal/lib/mspec/opal/rake_task.rb</dd>
   </dl>
   
 </div>
@@ -302,18 +300,18 @@
 237</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 226</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 226</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_basedir'>basedir</span> <span class='op'>=</span> <span class='const'>DEFAULT_BASEDIR</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_basedir'>basedir</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Opal.html#DEFAULT_BASEDIR-constant" title="MSpec::Opal::DEFAULT_BASEDIR (constant)">DEFAULT_BASEDIR</a></span></span>
 
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_use'>use</span> <span class='const'>Rack</span><span class='op'>::</span><span class='const'>ShowExceptions</span>
   <span class='id identifier rubyid_use'>use</span> <span class='const'>Rack</span><span class='op'>::</span><span class='const'>ShowStatus</span>
-  <span class='id identifier rubyid_use'>use</span> <span class='const'>Index</span>
+  <span class='id identifier rubyid_use'>use</span> <span class='const'><span class='object_link'><a href="Index.html" title="MSpec::Opal::Index (class)">Index</a></span></span>
   <span class='id identifier rubyid_run'>run</span> <span class='id identifier rubyid_environment'>environment</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -358,7 +356,7 @@
 226</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 224</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_basedir'>basedir</span>
   <span class='ivar'>@basedir</span>
@@ -400,7 +398,7 @@
 226</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 224</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pattern'>pattern</span>
   <span class='ivar'>@pattern</span>
@@ -437,10 +435,10 @@
 241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 239</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 239</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_environment'>environment</span>
-  <span class='ivar'>@environment</span> <span class='op'>||=</span> <span class='const'>Environment</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_basedir'>basedir</span><span class='comma'>,</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='rparen'>)</span>
+  <span class='ivar'>@environment</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Environment.html" title="MSpec::Opal::Environment (class)">Environment</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Environment.html#initialize-instance_method" title="MSpec::Opal::Environment#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_basedir'>basedir</span><span class='comma'>,</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -452,9 +450,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

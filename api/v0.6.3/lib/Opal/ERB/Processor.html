@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::ERB::Processor
   
@@ -100,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/erb.rb</dd>
+    <dd>opal/lib/opal/sprockets/erb.rb</dd>
   </dl>
   
 </div>
@@ -291,7 +289,7 @@
 14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/erb.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/erb.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_engine_initialized?'>engine_initialized?</span>
   <span class='kw'>true</span>
@@ -321,10 +319,10 @@
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/erb.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/erb.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_version'>version</span>
-  <span class='op'>::</span><span class='const'>Opal</span><span class='op'>::</span><span class='const'>VERSION</span>
+  <span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal.html#VERSION-constant" title="Opal::VERSION (constant)">VERSION</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -358,11 +356,11 @@
 32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/erb.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/erb.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_evaluate'>evaluate</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_locals'>locals</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_require_asset'>require_asset</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>erb</span><span class='tstring_end'>&#39;</span></span>
-  <span class='const'>Opal</span><span class='op'>::</span><span class='const'>ERB</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_logical_path'>logical_path</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^templates\/</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ERB.html" title="Opal::ERB (module)">ERB</a></span></span><span class='period'>.</span><span class='id identifier rubyid_compile'><span class='object_link'><a href="../ERB.html#compile-class_method" title="Opal::ERB.compile (method)">compile</a></span></span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_logical_path'>logical_path</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^templates\/</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -389,7 +387,7 @@
 22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/erb.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/erb.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize_engine'>initialize_engine</span>
   <span class='id identifier rubyid_require_template_library'>require_template_library</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>opal</span><span class='tstring_end'>&#39;</span></span>
@@ -418,7 +416,7 @@
 25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets/erb.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets/erb.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
 <span class='kw'>end</span></pre>
@@ -432,9 +430,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

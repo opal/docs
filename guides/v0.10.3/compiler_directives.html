@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -115,7 +121,7 @@ enhance the output of compiled Ruby code to suit the Ruby environment.</p>
 can determine which dependencies a file has. In the case of <code>Builder</code>,
 these are collated and then added to a list of files to be processed.</p>
 <h3><code>require</code></h3>
-<p>Assuming we have a file <code>foo.rb</code>:</p><div class="highlight"><pre># foo.rb
+<p>Assuming we have a file <code>foo.rb</code>:</p><div class="highlight"><pre><span></span># foo.rb
 require &#39;bar&#39;
 require &#39;baz&#39;
 </pre></div><p>The compiler will collect these two dependencies, and then <code>Builder</code>
@@ -131,21 +137,21 @@ common use case of dynamic requires is to include a directory of Ruby
 files. In this case, see <code>require_tree</code> below.</p>
 <h3><code>require_relative</code></h3>
 <p><code>require_relative</code> is also supported by Opal&#39;s compiler for ahead-of-time
-inclusion.</p><div class="highlight"><pre># foo.rb
+inclusion.</p><div class="highlight"><pre><span></span># foo.rb
 require_relative &#39;bar&#39;
 </pre></div><p>This example will try to resolve <code>bar.rb</code> in the same directory.</p>
 <h3><code>autoload</code></h3>
 <p><code>autoload</code> is used to load a modules and classes within a modules
 namespace. As long as the string argument given to <code>autoload</code> can be
 resolved in Opal&#39;s load paths, in the same way as <code>require</code>, then these
-referenced dependencies will also be compiled.</p><div class="highlight"><pre># foo.rb
+referenced dependencies will also be compiled.</p><div class="highlight"><pre><span></span># foo.rb
 module Foo
   autoload :Bar, &#39;bar&#39;
 end
 </pre></div><p>In this example, <code>bar.rb</code> will also be required.</p>
 <h3><code>require_tree</code></h3>
 <p><code>require_tree</code> can be used as an Opal-friendly alternative to globbing
-over a directory to require a list of dependencies.</p><div class="highlight"><pre># foo.rb
+over a directory to require a list of dependencies.</p><div class="highlight"><pre><span></span># foo.rb
 require_tree &#39;./models&#39;
 </pre></div><p>This will, at compile time, resolve all files inside the <code>models/</code>
 directory and also compile them to the output. At runtime this method
@@ -162,15 +168,15 @@ compiling <code>.erb</code> files using the same process.</p>
 <p>A special case <code>if</code> and <code>unless</code> statements can hide or show blocks of
 code from the Opal compiler. These check against <code>RUBY_ENGINE</code> or
 <code>RUBY_PLATFORM</code>. As these are valid Ruby statements against constants
-that exist in all Ruby runtimes, they will not affect any running code:</p><div class="highlight"><pre><span class="k">if</span> <span class="no">RUBY_ENGINE</span> <span class="o">==</span> <span class="s1">&#39;opal&#39;</span>
+that exist in all Ruby runtimes, they will not affect any running code:</p><div class="highlight"><pre><span></span><span class="k">if</span> <span class="no">RUBY_ENGINE</span> <span class="o">==</span> <span class="s1">&#39;opal&#39;</span>
   <span class="c1"># this code compiles</span>
 <span class="k">else</span>
   <span class="c1"># this code never compiles</span>
 <span class="k">end</span>
-</pre></div><p>Unless statements are also supported:</p><div class="highlight"><pre><span class="k">unless</span> <span class="no">RUBY_ENGINE</span> <span class="o">==</span> <span class="s1">&#39;opal&#39;</span>
+</pre></div><p>Unless statements are also supported:</p><div class="highlight"><pre><span></span><span class="k">unless</span> <span class="no">RUBY_ENGINE</span> <span class="o">==</span> <span class="s1">&#39;opal&#39;</span>
   <span class="c1"># this code will not run</span>
 <span class="k">end</span>
-</pre></div><p>Also <code>!=</code> statements work:</p><div class="highlight"><pre><span class="k">if</span> <span class="no">RUBY_ENGINE</span> <span class="o">!=</span> <span class="s1">&#39;opal&#39;</span>
+</pre></div><p>Also <code>!=</code> statements work:</p><div class="highlight"><pre><span></span><span class="k">if</span> <span class="no">RUBY_ENGINE</span> <span class="o">!=</span> <span class="s1">&#39;opal&#39;</span>
   <span class="nb">puts</span> <span class="s1">&#39;do not run this code&#39;</span>
 <span class="k">end</span>
 </pre></div><p>These blocks of code don&#39;t run at all at runtime, but they also never

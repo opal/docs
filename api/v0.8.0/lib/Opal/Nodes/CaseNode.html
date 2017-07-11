@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::CaseNode
   
@@ -100,14 +98,11 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/case.rb</dd>
+    <dd>opal/lib/opal/nodes/case.rb</dd>
   </dl>
   
 </div>
 
-
-  <h2>Constant Summary</h2>
-  
 
 
 
@@ -279,7 +274,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/case.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/case.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_case_parts'>case_parts</span>
   <span class='id identifier rubyid_children'>children</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
@@ -309,7 +304,7 @@
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/case.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/case.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_case_stmt'>case_stmt</span>
   <span class='id identifier rubyid_compiler'>compiler</span><span class='period'>.</span><span class='id identifier rubyid_case_stmt'>case_stmt</span>
@@ -367,7 +362,7 @@
 40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/case.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/case.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='id identifier rubyid_handled_else'>handled_else</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -447,7 +442,7 @@
 44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/case.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/case.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_needs_closure?'>needs_closure?</span>
   <span class='op'>!</span><span class='id identifier rubyid_stmt?'>stmt?</span>
@@ -462,9 +457,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

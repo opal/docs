@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Minitest::Test
   
@@ -110,8 +108,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb<span class="defines">,<br />
-  /Users/elia/Code/opal-docs/opal/stdlib/minitest/hell.rb</span>
+    <dd>opal/stdlib/minitest/test.rb<span class="defines">,<br />
+  opal/stdlib/minitest/hell.rb</span>
 </dd>
   </dl>
   
@@ -146,11 +144,10 @@ Test subclass per implementation class.</p>
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="PASSTHROUGH_EXCEPTIONS-constant" class="">PASSTHROUGH_EXCEPTIONS =
-          <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="PASSTHROUGH_EXCEPTIONS-constant" class="">PASSTHROUGH_EXCEPTIONS =
+        <div class="docstring">
   <div class="discussion">
     <p>:nodoc:</p>
 
@@ -161,12 +158,12 @@ Test subclass per implementation class.</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span><span class='const'>NoMemoryError</span><span class='comma'>,</span> <span class='const'>SignalException</span><span class='comma'>,</span> <span class='comment'># :nodoc:
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='const'>NoMemoryError</span><span class='comma'>,</span> <span class='const'>SignalException</span><span class='comma'>,</span> <span class='comment'># :nodoc:
 </span><span class='const'>Interrupt</span><span class='comma'>,</span> <span class='const'>SystemExit</span><span class='rbracket'>]</span></pre></dd>
-      
-        <dt id="TEARDOWN_METHODS-constant" class="">TEARDOWN_METHODS =
-          <div class="docstring">
+    
+      <dt id="TEARDOWN_METHODS-constant" class="">TEARDOWN_METHODS =
+        <div class="docstring">
   <div class="discussion">
     <p>:nodoc:</p>
 
@@ -177,11 +174,10 @@ Test subclass per implementation class.</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='qwords_beg'>%w{ </span><span class='tstring_content'>before_teardown</span><span class='words_sep'> </span><span class='tstring_content'>teardown</span><span class='words_sep'> </span><span class='tstring_content'>after_teardown</span><span class='words_sep'> }</span></pre></dd>
-      
-    </dl>
-  
+      </dt>
+      <dd><pre class="code"><span class='qwords_beg'>%w{ </span><span class='tstring_content'>before_teardown</span><span class='words_sep'> </span><span class='tstring_content'>teardown</span><span class='words_sep'> </span><span class='tstring_content'>after_teardown</span><span class='words_sep'> }</span></pre></dd>
+    
+  </dl>
 
 
 
@@ -279,7 +275,7 @@ Test subclass per implementation class.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#i_suck_and_my_tests_are_order_dependent%21-class_method" title="i_suck_and_my_tests_are_order_dependent! (class method)">.<strong>i_suck_and_my_tests_are_order_dependent!</strong>  &#x21d2; Object </a>
+      <a href="#i_suck_and_my_tests_are_order_dependent!-class_method" title="i_suck_and_my_tests_are_order_dependent! (class method)">.<strong>i_suck_and_my_tests_are_order_dependent!</strong>  &#x21d2; Object </a>
     
 
     
@@ -302,7 +298,7 @@ Test subclass per implementation class.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#make_my_diffs_pretty%21-class_method" title="make_my_diffs_pretty! (class method)">.<strong>make_my_diffs_pretty!</strong>  &#x21d2; Object </a>
+      <a href="#make_my_diffs_pretty!-class_method" title="make_my_diffs_pretty! (class method)">.<strong>make_my_diffs_pretty!</strong>  &#x21d2; Object </a>
     
 
     
@@ -339,7 +335,7 @@ Test subclass per implementation class.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines the order to run tests (:random by default).</p>
+    <span class="summary_desc"><div class='inline'><p>:nodoc:.</p>
 </div></span>
   
 </li>
@@ -348,7 +344,7 @@ Test subclass per implementation class.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#parallelize_me%21-class_method" title="parallelize_me! (class method)">.<strong>parallelize_me!</strong>  &#x21d2; Object </a>
+      <a href="#parallelize_me!-class_method" title="parallelize_me! (class method)">.<strong>parallelize_me!</strong>  &#x21d2; Object </a>
     
 
     
@@ -408,7 +404,7 @@ Test subclass per implementation class.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>:nodoc:.</p>
+    <span class="summary_desc"><div class='inline'><p>Defines the order to run tests (:random by default).</p>
 </div></span>
   
 </li>
@@ -734,7 +730,7 @@ Test subclass per implementation class.</p>
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Assertions.html" title="Minitest::Assertions (module)">Assertions</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Assertions.html#_synchronize-instance_method" title="Minitest::Assertions#_synchronize (method)">#_synchronize</a></span>, <span class='object_link'><a href="Assertions.html#assert-instance_method" title="Minitest::Assertions#assert (method)">#assert</a></span>, <span class='object_link'><a href="Assertions.html#assert_empty-instance_method" title="Minitest::Assertions#assert_empty (method)">#assert_empty</a></span>, <span class='object_link'><a href="Assertions.html#assert_equal-instance_method" title="Minitest::Assertions#assert_equal (method)">#assert_equal</a></span>, <span class='object_link'><a href="Assertions.html#assert_in_delta-instance_method" title="Minitest::Assertions#assert_in_delta (method)">#assert_in_delta</a></span>, <span class='object_link'><a href="Assertions.html#assert_in_epsilon-instance_method" title="Minitest::Assertions#assert_in_epsilon (method)">#assert_in_epsilon</a></span>, <span class='object_link'><a href="Assertions.html#assert_includes-instance_method" title="Minitest::Assertions#assert_includes (method)">#assert_includes</a></span>, <span class='object_link'><a href="Assertions.html#assert_instance_of-instance_method" title="Minitest::Assertions#assert_instance_of (method)">#assert_instance_of</a></span>, <span class='object_link'><a href="Assertions.html#assert_kind_of-instance_method" title="Minitest::Assertions#assert_kind_of (method)">#assert_kind_of</a></span>, <span class='object_link'><a href="Assertions.html#assert_match-instance_method" title="Minitest::Assertions#assert_match (method)">#assert_match</a></span>, <span class='object_link'><a href="Assertions.html#assert_nil-instance_method" title="Minitest::Assertions#assert_nil (method)">#assert_nil</a></span>, <span class='object_link'><a href="Assertions.html#assert_operator-instance_method" title="Minitest::Assertions#assert_operator (method)">#assert_operator</a></span>, <span class='object_link'><a href="Assertions.html#assert_output-instance_method" title="Minitest::Assertions#assert_output (method)">#assert_output</a></span>, <span class='object_link'><a href="Assertions.html#assert_predicate-instance_method" title="Minitest::Assertions#assert_predicate (method)">#assert_predicate</a></span>, <span class='object_link'><a href="Assertions.html#assert_raises-instance_method" title="Minitest::Assertions#assert_raises (method)">#assert_raises</a></span>, <span class='object_link'><a href="Assertions.html#assert_respond_to-instance_method" title="Minitest::Assertions#assert_respond_to (method)">#assert_respond_to</a></span>, <span class='object_link'><a href="Assertions.html#assert_same-instance_method" title="Minitest::Assertions#assert_same (method)">#assert_same</a></span>, <span class='object_link'><a href="Assertions.html#assert_send-instance_method" title="Minitest::Assertions#assert_send (method)">#assert_send</a></span>, <span class='object_link'><a href="Assertions.html#assert_silent-instance_method" title="Minitest::Assertions#assert_silent (method)">#assert_silent</a></span>, <span class='object_link'><a href="Assertions.html#assert_throws-instance_method" title="Minitest::Assertions#assert_throws (method)">#assert_throws</a></span>, <span class='object_link'><a href="Assertions.html#capture_io-instance_method" title="Minitest::Assertions#capture_io (method)">#capture_io</a></span>, <span class='object_link'><a href="Assertions.html#capture_subprocess_io-instance_method" title="Minitest::Assertions#capture_subprocess_io (method)">#capture_subprocess_io</a></span>, <span class='object_link'><a href="Assertions.html#diff-instance_method" title="Minitest::Assertions#diff (method)">#diff</a></span>, <span class='object_link'><a href="Assertions.html#diff-class_method" title="Minitest::Assertions.diff (method)">diff</a></span>, <span class='object_link'><a href="Assertions.html#diff%3D-class_method" title="Minitest::Assertions.diff= (method)">diff=</a></span>, <span class='object_link'><a href="Assertions.html#exception_details-instance_method" title="Minitest::Assertions#exception_details (method)">#exception_details</a></span>, <span class='object_link'><a href="Assertions.html#flunk-instance_method" title="Minitest::Assertions#flunk (method)">#flunk</a></span>, <span class='object_link'><a href="Assertions.html#message-instance_method" title="Minitest::Assertions#message (method)">#message</a></span>, <span class='object_link'><a href="Assertions.html#mu_pp-instance_method" title="Minitest::Assertions#mu_pp (method)">#mu_pp</a></span>, <span class='object_link'><a href="Assertions.html#mu_pp_for_diff-instance_method" title="Minitest::Assertions#mu_pp_for_diff (method)">#mu_pp_for_diff</a></span>, <span class='object_link'><a href="Assertions.html#pass-instance_method" title="Minitest::Assertions#pass (method)">#pass</a></span>, <span class='object_link'><a href="Assertions.html#refute-instance_method" title="Minitest::Assertions#refute (method)">#refute</a></span>, <span class='object_link'><a href="Assertions.html#refute_empty-instance_method" title="Minitest::Assertions#refute_empty (method)">#refute_empty</a></span>, <span class='object_link'><a href="Assertions.html#refute_equal-instance_method" title="Minitest::Assertions#refute_equal (method)">#refute_equal</a></span>, <span class='object_link'><a href="Assertions.html#refute_in_delta-instance_method" title="Minitest::Assertions#refute_in_delta (method)">#refute_in_delta</a></span>, <span class='object_link'><a href="Assertions.html#refute_in_epsilon-instance_method" title="Minitest::Assertions#refute_in_epsilon (method)">#refute_in_epsilon</a></span>, <span class='object_link'><a href="Assertions.html#refute_includes-instance_method" title="Minitest::Assertions#refute_includes (method)">#refute_includes</a></span>, <span class='object_link'><a href="Assertions.html#refute_instance_of-instance_method" title="Minitest::Assertions#refute_instance_of (method)">#refute_instance_of</a></span>, <span class='object_link'><a href="Assertions.html#refute_kind_of-instance_method" title="Minitest::Assertions#refute_kind_of (method)">#refute_kind_of</a></span>, <span class='object_link'><a href="Assertions.html#refute_match-instance_method" title="Minitest::Assertions#refute_match (method)">#refute_match</a></span>, <span class='object_link'><a href="Assertions.html#refute_nil-instance_method" title="Minitest::Assertions#refute_nil (method)">#refute_nil</a></span>, <span class='object_link'><a href="Assertions.html#refute_operator-instance_method" title="Minitest::Assertions#refute_operator (method)">#refute_operator</a></span>, <span class='object_link'><a href="Assertions.html#refute_predicate-instance_method" title="Minitest::Assertions#refute_predicate (method)">#refute_predicate</a></span>, <span class='object_link'><a href="Assertions.html#refute_respond_to-instance_method" title="Minitest::Assertions#refute_respond_to (method)">#refute_respond_to</a></span>, <span class='object_link'><a href="Assertions.html#refute_same-instance_method" title="Minitest::Assertions#refute_same (method)">#refute_same</a></span>, <span class='object_link'><a href="Assertions.html#skip-instance_method" title="Minitest::Assertions#skip (method)">#skip</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Assertions.html#_synchronize-instance_method" title="Minitest::Assertions#_synchronize (method)">#_synchronize</a></span>, <span class='object_link'><a href="Assertions.html#assert-instance_method" title="Minitest::Assertions#assert (method)">#assert</a></span>, <span class='object_link'><a href="Assertions.html#assert_empty-instance_method" title="Minitest::Assertions#assert_empty (method)">#assert_empty</a></span>, <span class='object_link'><a href="Assertions.html#assert_equal-instance_method" title="Minitest::Assertions#assert_equal (method)">#assert_equal</a></span>, <span class='object_link'><a href="Assertions.html#assert_in_delta-instance_method" title="Minitest::Assertions#assert_in_delta (method)">#assert_in_delta</a></span>, <span class='object_link'><a href="Assertions.html#assert_in_epsilon-instance_method" title="Minitest::Assertions#assert_in_epsilon (method)">#assert_in_epsilon</a></span>, <span class='object_link'><a href="Assertions.html#assert_includes-instance_method" title="Minitest::Assertions#assert_includes (method)">#assert_includes</a></span>, <span class='object_link'><a href="Assertions.html#assert_instance_of-instance_method" title="Minitest::Assertions#assert_instance_of (method)">#assert_instance_of</a></span>, <span class='object_link'><a href="Assertions.html#assert_kind_of-instance_method" title="Minitest::Assertions#assert_kind_of (method)">#assert_kind_of</a></span>, <span class='object_link'><a href="Assertions.html#assert_match-instance_method" title="Minitest::Assertions#assert_match (method)">#assert_match</a></span>, <span class='object_link'><a href="Assertions.html#assert_nil-instance_method" title="Minitest::Assertions#assert_nil (method)">#assert_nil</a></span>, <span class='object_link'><a href="Assertions.html#assert_operator-instance_method" title="Minitest::Assertions#assert_operator (method)">#assert_operator</a></span>, <span class='object_link'><a href="Assertions.html#assert_output-instance_method" title="Minitest::Assertions#assert_output (method)">#assert_output</a></span>, <span class='object_link'><a href="Assertions.html#assert_predicate-instance_method" title="Minitest::Assertions#assert_predicate (method)">#assert_predicate</a></span>, <span class='object_link'><a href="Assertions.html#assert_raises-instance_method" title="Minitest::Assertions#assert_raises (method)">#assert_raises</a></span>, <span class='object_link'><a href="Assertions.html#assert_respond_to-instance_method" title="Minitest::Assertions#assert_respond_to (method)">#assert_respond_to</a></span>, <span class='object_link'><a href="Assertions.html#assert_same-instance_method" title="Minitest::Assertions#assert_same (method)">#assert_same</a></span>, <span class='object_link'><a href="Assertions.html#assert_send-instance_method" title="Minitest::Assertions#assert_send (method)">#assert_send</a></span>, <span class='object_link'><a href="Assertions.html#assert_silent-instance_method" title="Minitest::Assertions#assert_silent (method)">#assert_silent</a></span>, <span class='object_link'><a href="Assertions.html#assert_throws-instance_method" title="Minitest::Assertions#assert_throws (method)">#assert_throws</a></span>, <span class='object_link'><a href="Assertions.html#capture_io-instance_method" title="Minitest::Assertions#capture_io (method)">#capture_io</a></span>, <span class='object_link'><a href="Assertions.html#capture_subprocess_io-instance_method" title="Minitest::Assertions#capture_subprocess_io (method)">#capture_subprocess_io</a></span>, <span class='object_link'><a href="Assertions.html#diff-instance_method" title="Minitest::Assertions#diff (method)">#diff</a></span>, <span class='object_link'><a href="Assertions.html#diff-class_method" title="Minitest::Assertions.diff (method)">diff</a></span>, <span class='object_link'><a href="Assertions.html#diff=-class_method" title="Minitest::Assertions.diff= (method)">diff=</a></span>, <span class='object_link'><a href="Assertions.html#exception_details-instance_method" title="Minitest::Assertions#exception_details (method)">#exception_details</a></span>, <span class='object_link'><a href="Assertions.html#flunk-instance_method" title="Minitest::Assertions#flunk (method)">#flunk</a></span>, <span class='object_link'><a href="Assertions.html#message-instance_method" title="Minitest::Assertions#message (method)">#message</a></span>, <span class='object_link'><a href="Assertions.html#mu_pp-instance_method" title="Minitest::Assertions#mu_pp (method)">#mu_pp</a></span>, <span class='object_link'><a href="Assertions.html#mu_pp_for_diff-instance_method" title="Minitest::Assertions#mu_pp_for_diff (method)">#mu_pp_for_diff</a></span>, <span class='object_link'><a href="Assertions.html#pass-instance_method" title="Minitest::Assertions#pass (method)">#pass</a></span>, <span class='object_link'><a href="Assertions.html#refute-instance_method" title="Minitest::Assertions#refute (method)">#refute</a></span>, <span class='object_link'><a href="Assertions.html#refute_empty-instance_method" title="Minitest::Assertions#refute_empty (method)">#refute_empty</a></span>, <span class='object_link'><a href="Assertions.html#refute_equal-instance_method" title="Minitest::Assertions#refute_equal (method)">#refute_equal</a></span>, <span class='object_link'><a href="Assertions.html#refute_in_delta-instance_method" title="Minitest::Assertions#refute_in_delta (method)">#refute_in_delta</a></span>, <span class='object_link'><a href="Assertions.html#refute_in_epsilon-instance_method" title="Minitest::Assertions#refute_in_epsilon (method)">#refute_in_epsilon</a></span>, <span class='object_link'><a href="Assertions.html#refute_includes-instance_method" title="Minitest::Assertions#refute_includes (method)">#refute_includes</a></span>, <span class='object_link'><a href="Assertions.html#refute_instance_of-instance_method" title="Minitest::Assertions#refute_instance_of (method)">#refute_instance_of</a></span>, <span class='object_link'><a href="Assertions.html#refute_kind_of-instance_method" title="Minitest::Assertions#refute_kind_of (method)">#refute_kind_of</a></span>, <span class='object_link'><a href="Assertions.html#refute_match-instance_method" title="Minitest::Assertions#refute_match (method)">#refute_match</a></span>, <span class='object_link'><a href="Assertions.html#refute_nil-instance_method" title="Minitest::Assertions#refute_nil (method)">#refute_nil</a></span>, <span class='object_link'><a href="Assertions.html#refute_operator-instance_method" title="Minitest::Assertions#refute_operator (method)">#refute_operator</a></span>, <span class='object_link'><a href="Assertions.html#refute_predicate-instance_method" title="Minitest::Assertions#refute_predicate (method)">#refute_predicate</a></span>, <span class='object_link'><a href="Assertions.html#refute_respond_to-instance_method" title="Minitest::Assertions#refute_respond_to (method)">#refute_respond_to</a></span>, <span class='object_link'><a href="Assertions.html#refute_same-instance_method" title="Minitest::Assertions#refute_same (method)">#refute_same</a></span>, <span class='object_link'><a href="Assertions.html#skip-instance_method" title="Minitest::Assertions#skip (method)">#skip</a></span></p>
 
   
   
@@ -745,7 +741,7 @@ Test subclass per implementation class.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Runnable.html" title="Minitest::Runnable (class)">Runnable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Runnable.html#failure-instance_method" title="Minitest::Runnable#failure (method)">#failure</a></span>, <span class='object_link'><a href="Runnable.html#inherited-class_method" title="Minitest::Runnable.inherited (method)">inherited</a></span>, <span class='object_link'><a href="Runnable.html#initialize-instance_method" title="Minitest::Runnable#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="Runnable.html#methods_matching-class_method" title="Minitest::Runnable.methods_matching (method)">methods_matching</a></span>, <span class='object_link'><a href="Runnable.html#name-instance_method" title="Minitest::Runnable#name (method)">#name</a></span>, <span class='object_link'><a href="Runnable.html#name%3D-instance_method" title="Minitest::Runnable#name= (method)">#name=</a></span>, <span class='object_link'><a href="Runnable.html#on_signal-class_method" title="Minitest::Runnable.on_signal (method)">on_signal</a></span>, <span class='object_link'><a href="Runnable.html#reset-class_method" title="Minitest::Runnable.reset (method)">reset</a></span>, <span class='object_link'><a href="Runnable.html#run-class_method" title="Minitest::Runnable.run (method)">run</a></span>, <span class='object_link'><a href="Runnable.html#run_one_method-class_method" title="Minitest::Runnable.run_one_method (method)">run_one_method</a></span>, <span class='object_link'><a href="Runnable.html#runnables-class_method" title="Minitest::Runnable.runnables (method)">runnables</a></span>, <span class='object_link'><a href="Runnable.html#with_info_handler-class_method" title="Minitest::Runnable.with_info_handler (method)">with_info_handler</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Runnable.html#failure-instance_method" title="Minitest::Runnable#failure (method)">#failure</a></span>, <span class='object_link'><a href="Runnable.html#inherited-class_method" title="Minitest::Runnable.inherited (method)">inherited</a></span>, <span class='object_link'><a href="Runnable.html#initialize-instance_method" title="Minitest::Runnable#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="Runnable.html#methods_matching-class_method" title="Minitest::Runnable.methods_matching (method)">methods_matching</a></span>, <span class='object_link'><a href="Runnable.html#name-instance_method" title="Minitest::Runnable#name (method)">#name</a></span>, <span class='object_link'><a href="Runnable.html#name=-instance_method" title="Minitest::Runnable#name= (method)">#name=</a></span>, <span class='object_link'><a href="Runnable.html#on_signal-class_method" title="Minitest::Runnable.on_signal (method)">on_signal</a></span>, <span class='object_link'><a href="Runnable.html#reset-class_method" title="Minitest::Runnable.reset (method)">reset</a></span>, <span class='object_link'><a href="Runnable.html#run-class_method" title="Minitest::Runnable.run (method)">run</a></span>, <span class='object_link'><a href="Runnable.html#run_one_method-class_method" title="Minitest::Runnable.run_one_method (method)">run_one_method</a></span>, <span class='object_link'><a href="Runnable.html#runnables-class_method" title="Minitest::Runnable.runnables (method)">runnables</a></span>, <span class='object_link'><a href="Runnable.html#with_info_handler-class_method" title="Minitest::Runnable.with_info_handler (method)">with_info_handler</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -788,7 +784,7 @@ Test subclass per implementation class.</p>
 19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_io_lock'>io_lock</span>
   <span class='ivar'>@io_lock</span>
@@ -835,7 +831,7 @@ Test subclass per implementation class.</p>
 88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_time'>time</span>
   <span class='ivar'>@time</span>
@@ -887,7 +883,7 @@ admitting that you suck and your tests are weak.</p>
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_i_suck_and_my_tests_are_order_dependent!'>i_suck_and_my_tests_are_order_dependent!</span>
   <span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span>
@@ -937,7 +933,7 @@ objects.</p>
 44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_make_my_diffs_pretty!'>make_my_diffs_pretty!</span>
   <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pp</span><span class='tstring_end'>&quot;</span></span>
@@ -962,9 +958,7 @@ objects.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines the order to run tests (:random by default). Override
-this or use a convenience method to change it for your tests.
-:nodoc:</p>
+    <p>:nodoc:</p>
 
 
   </div>
@@ -978,16 +972,12 @@ this or use a convenience method to change it for your tests.
       <pre class="lines">
 
 
-5
-6
-7</pre>
+5</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/hell.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/hell.rb', line 5</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_test_order'>test_order</span>
-  <span class='symbol'>:random</span>
-<span class='kw'>end</span></pre>
+<span class='kw'>alias</span> <span class='symbol'>:old_test_order</span> <span class='symbol'>:test_order</span></pre>
     </td>
   </tr>
 </table>
@@ -1026,11 +1016,11 @@ and your tests are awesome.</p>
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parallelize_me!'>parallelize_me!</span>
-  <span class='id identifier rubyid_include'>include</span> <span class='const'>Minitest</span><span class='op'>::</span><span class='const'>Parallel</span><span class='op'>::</span><span class='const'>Test</span>
-  <span class='id identifier rubyid_extend'>extend</span> <span class='const'>Minitest</span><span class='op'>::</span><span class='const'>Parallel</span><span class='op'>::</span><span class='const'>Test</span><span class='op'>::</span><span class='const'>ClassMethods</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../Minitest.html" title="Minitest (module)">Minitest</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parallel.html" title="Minitest::Parallel (module)">Parallel</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parallel/Test.html" title="Minitest::Parallel::Test (module)">Test</a></span></span>
+  <span class='id identifier rubyid_extend'>extend</span> <span class='const'><span class='object_link'><a href="../Minitest.html" title="Minitest (module)">Minitest</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parallel.html" title="Minitest::Parallel (module)">Parallel</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parallel/Test.html" title="Minitest::Parallel::Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parallel/Test/ClassMethods.html" title="Minitest::Parallel::Test::ClassMethods (module)">ClassMethods</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1081,7 +1071,7 @@ and your tests are awesome.</p>
 73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_runnable_methods'>runnable_methods</span>
   <span class='id identifier rubyid_methods'>methods</span> <span class='op'>=</span> <span class='id identifier rubyid_methods_matching'>methods_matching</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^test_</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -1112,7 +1102,8 @@ and your tests are awesome.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>:nodoc:</p>
+    <p>Defines the order to run tests (:random by default). Override
+this or use a convenience method to change it for your tests.</p>
 
 
   </div>
@@ -1126,15 +1117,15 @@ and your tests are awesome.</p>
       <pre class="lines">
 
 
-79
-80
-81</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/hell.rb', line 7</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_test_order'>test_order</span>
-  <span class='symbol'>:random</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_test_order'>test_order</span> <span class='comment'># :nodoc:
+</span>  <span class='symbol'>:parallel</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1191,7 +1182,7 @@ and your tests are awesome.</p>
 220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 204</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 204</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_capture_exceptions'>capture_exceptions</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>begin</span>
@@ -1204,9 +1195,9 @@ and your tests are awesome.</p>
 </span>  <span class='comment'>#   self.failures &lt;&lt; UnexpectedError.new(e)
 </span>  <span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
     <span class='kw'>case</span> <span class='id identifier rubyid_e'>e</span>
-    <span class='kw'>when</span> <span class='op'>*</span><span class='const'>PASSTHROUGH_EXCEPTIONS</span>
-    <span class='kw'>when</span> <span class='const'>Assertion</span> <span class='kw'>then</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failures'>failures</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_e'>e</span>
-    <span class='kw'>when</span> <span class='const'>Exception</span> <span class='kw'>then</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failures'>failures</span> <span class='op'>&lt;&lt;</span> <span class='const'>UnexpectedError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='op'>*</span><span class='const'><span class='object_link'><a href="#PASSTHROUGH_EXCEPTIONS-constant" title="Minitest::Test::PASSTHROUGH_EXCEPTIONS (constant)">PASSTHROUGH_EXCEPTIONS</a></span></span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Assertion.html" title="Minitest::Assertion (class)">Assertion</a></span></span> <span class='kw'>then</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failures'>failures</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='kw'>when</span> <span class='const'>Exception</span> <span class='kw'>then</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failures'>failures</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="UnexpectedError.html" title="Minitest::UnexpectedError (class)">UnexpectedError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="UnexpectedError.html#initialize-instance_method" title="Minitest::UnexpectedError#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -1258,10 +1249,10 @@ and your tests are awesome.</p>
 227</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 225</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 225</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_error?'>error?</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failures'>failures</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span> <span class='const'>UnexpectedError</span> <span class='op'>===</span> <span class='id identifier rubyid_f'>f</span> <span class='rbrace'>}</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failures'>failures</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="UnexpectedError.html" title="Minitest::UnexpectedError (class)">UnexpectedError</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_f'>f</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1299,7 +1290,7 @@ and your tests are awesome.</p>
 235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 232</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 232</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_location'>location</span>
   <span class='id identifier rubyid_loc'>loc</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> [</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span><span class='period'>.</span><span class='id identifier rubyid_location'>location</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_passed?'>passed?</span> <span class='kw'>or</span> <span class='id identifier rubyid_error?'>error?</span>
@@ -1340,7 +1331,7 @@ and your tests are awesome.</p>
 90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_marshal_dump'>marshal_dump</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>super</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_time'>time</span>
@@ -1381,7 +1372,7 @@ and your tests are awesome.</p>
 95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_marshal_load'>marshal_load</span> <span class='id identifier rubyid_ary'>ary</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_time'>time</span> <span class='op'>=</span> <span class='id identifier rubyid_ary'>ary</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
@@ -1438,7 +1429,7 @@ cause the process to exit non-zero.</p>
 245</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 243</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 243</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_passed?'>passed?</span>
   <span class='kw'>not</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span>
@@ -1478,7 +1469,7 @@ cause the process to exit non-zero.</p>
 252</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 250</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 250</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result_code'>result_code</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span> <span class='kw'>and</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span><span class='period'>.</span><span class='id identifier rubyid_result_code'>result_code</span> <span class='kw'>or</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
@@ -1534,7 +1525,7 @@ cause the process to exit non-zero.</p>
 120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
   <span class='id identifier rubyid_with_info_handler'>with_info_handler</span> <span class='kw'>do</span>
@@ -1545,7 +1536,7 @@ cause the process to exit non-zero.</p>
         <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
       <span class='kw'>end</span>
 
-      <span class='const'>TEARDOWN_METHODS</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hook'>hook</span><span class='op'>|</span>
+      <span class='const'><span class='object_link'><a href="#TEARDOWN_METHODS-constant" title="Minitest::Test::TEARDOWN_METHODS (constant)">TEARDOWN_METHODS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hook'>hook</span><span class='op'>|</span>
         <span class='id identifier rubyid_capture_exceptions'>capture_exceptions</span> <span class='kw'>do</span>
           <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='id identifier rubyid_hook'>hook</span>
         <span class='kw'>end</span>
@@ -1603,10 +1594,10 @@ cause the process to exit non-zero.</p>
 259</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 257</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 257</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_skipped?'>skipped?</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span> <span class='kw'>and</span> <span class='const'>Skip</span> <span class='op'>===</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span> <span class='kw'>and</span> <span class='const'><span class='object_link'><a href="Skip.html" title="Minitest::Skip (class)">Skip</a></span></span> <span class='op'>===</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1647,14 +1638,14 @@ cause the process to exit non-zero.</p>
 267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 261</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 261</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_time_it'>time_it</span> <span class='comment'># :nodoc:
-</span>  <span class='id identifier rubyid_t0'>t0</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+</span>  <span class='id identifier rubyid_t0'>t0</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
 
   <span class='kw'>yield</span>
 <span class='kw'>ensure</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_time'>time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_t0'>t0</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_time'>time</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_t0'>t0</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1695,7 +1686,7 @@ cause the process to exit non-zero.</p>
 275</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 269</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 269</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>return</span> <span class='id identifier rubyid_location'>location</span> <span class='kw'>if</span> <span class='id identifier rubyid_passed?'>passed?</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id identifier rubyid_skipped?'>skipped?</span>
@@ -1745,13 +1736,13 @@ cause the process to exit non-zero.</p>
 285</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/test.rb', line 277</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/test.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_with_info_handler'>with_info_handler</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='comment'># :nodoc:
-</span>  <span class='id identifier rubyid_t0'>t0</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+</span>  <span class='id identifier rubyid_t0'>t0</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
 
   <span class='id identifier rubyid_handler'>handler</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nCurrent: %s#%s %.2fs</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_t0'>t0</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nCurrent: %s#%s %.2fs</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_t0'>t0</span><span class='rbracket'>]</span>
   <span class='kw'>end</span>
 
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_on_signal'>on_signal</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INFO</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_handler'>handler</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
@@ -1766,9 +1757,9 @@ cause the process to exit non-zero.</p>
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

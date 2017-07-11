@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::BaseYieldNode
   
@@ -100,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/yield.rb</dd>
+    <dd>opal/lib/opal/nodes/yield.rb</dd>
   </dl>
   
 </div>
@@ -109,9 +107,6 @@
   <h2>Direct Known Subclasses</h2>
   <p class="children"><span class='object_link'><a href="ReturnableYieldNode.html" title="Opal::Nodes::ReturnableYieldNode (class)">ReturnableYieldNode</a></span>, <span class='object_link'><a href="YasgnNode.html" title="Opal::Nodes::YasgnNode (class)">YasgnNode</a></span>, <span class='object_link'><a href="YieldNode.html" title="Opal::Nodes::YieldNode (class)">YieldNode</a></span></p>
 </div>
-
-  <h2>Constant Summary</h2>
-  
 
 
 
@@ -299,7 +294,7 @@
 24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/yield.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/yield.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_call'>compile_call</span><span class='lparen'>(</span><span class='id identifier rubyid_children'>children</span><span class='comma'>,</span> <span class='id identifier rubyid_level'>level</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_yielding_scope'>yielding_scope</span> <span class='op'>=</span> <span class='id identifier rubyid_find_yielding_scope'>find_yielding_scope</span>
@@ -353,7 +348,7 @@
 36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/yield.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/yield.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_yielding_scope'>find_yielding_scope</span>
   <span class='id identifier rubyid_working'>working</span> <span class='op'>=</span> <span class='id identifier rubyid_scope'>scope</span>
@@ -413,7 +408,7 @@
 44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/yield.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/yield.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_uses_splat?'>uses_splat?</span><span class='lparen'>(</span><span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_children'>children</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_child'>child</span><span class='op'>|</span> <span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='symbol'>:splat</span> <span class='rbrace'>}</span>
@@ -465,7 +460,7 @@
 40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/yield.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/yield.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_yields_single_arg?'>yields_single_arg?</span><span class='lparen'>(</span><span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
   <span class='op'>!</span><span class='id identifier rubyid_uses_splat?'>uses_splat?</span><span class='lparen'>(</span><span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_children'>children</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>1</span>
@@ -480,9 +475,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

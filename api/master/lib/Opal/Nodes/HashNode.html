@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::HashNode
   
@@ -100,14 +98,11 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb</dd>
+    <dd>opal/lib/opal/nodes/hash.rb</dd>
   </dl>
   
 </div>
 
-
-  <h2>Constant Summary</h2>
-  
 
 
 
@@ -307,7 +302,7 @@
 34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='id identifier rubyid_keys'>keys</span><span class='comma'>,</span> <span class='id identifier rubyid_values'>values</span> <span class='op'>=</span> <span class='id identifier rubyid_keys_and_values'>keys_and_values</span>
@@ -350,7 +345,7 @@
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_hash'>compile_hash</span>
   <span class='id identifier rubyid_helper'>helper</span> <span class='symbol'>:hash</span>
@@ -402,7 +397,7 @@
 64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_hash2'>compile_hash2</span><span class='lparen'>(</span><span class='id identifier rubyid_keys'>keys</span><span class='comma'>,</span> <span class='id identifier rubyid_values'>values</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_hash_obj'>hash_obj</span><span class='comma'>,</span> <span class='id identifier rubyid_hash_keys'>hash_keys</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -457,7 +452,7 @@
 20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_keys_and_values'>keys_and_values</span>
   <span class='id identifier rubyid_keys'>keys</span><span class='comma'>,</span> <span class='id identifier rubyid_values'>values</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -519,7 +514,7 @@
 24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_simple_keys?'>simple_keys?</span><span class='lparen'>(</span><span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='symbol'>:sym</span><span class='comma'>,</span> <span class='symbol'>:str</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='rbrace'>}</span>
@@ -534,9 +529,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -61,8 +61,6 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="class_list.html"></iframe>
-
       <div id="content"><h1>Module: Marshal
   
   
@@ -82,8 +80,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/marshal.rb<span class="defines">,<br />
-  /Users/elia/Code/opal-docs/opal/opal/corelib/marshal/read_buffer.rb,<br /> /Users/elia/Code/opal-docs/opal/opal/corelib/marshal/write_buffer.rb</span>
+    <dd>opal/opal/corelib/marshal.rb<span class="defines">,<br />
+  opal/opal/corelib/marshal/read_buffer.rb,<br /> opal/opal/corelib/marshal/write_buffer.rb</span>
 </dd>
   </dl>
   
@@ -101,21 +99,19 @@
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="MAJOR_VERSION-constant" class="">MAJOR_VERSION =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>4</span></pre></dd>
-      
-        <dt id="MINOR_VERSION-constant" class="">MINOR_VERSION =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>8</span></pre></dd>
-      
-    </dl>
-  
+  <dl class="constants">
+    
+      <dt id="MAJOR_VERSION-constant" class="">MAJOR_VERSION =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>4</span></pre></dd>
+    
+      <dt id="MINOR_VERSION-constant" class="">MINOR_VERSION =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>8</span></pre></dd>
+    
+  </dl>
 
 
 
@@ -206,10 +202,10 @@
 23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/marshal.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/marshal.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
-  <span class='const'>WriteBuffer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span>
+  <span class='const'><span class='object_link'><a href="Marshal/WriteBuffer.html" title="Marshal::WriteBuffer (class)">WriteBuffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Marshal/WriteBuffer.html#initialize-instance_method" title="Marshal::WriteBuffer#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_write'><span class='object_link'><a href="Marshal/WriteBuffer.html#write-instance_method" title="Marshal::WriteBuffer#write (method)">write</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -240,10 +236,10 @@
 27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/marshal.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/marshal.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span><span class='id identifier rubyid_marshaled'>marshaled</span><span class='rparen'>)</span>
-  <span class='const'>ReadBuffer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_marshaled'>marshaled</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span>
+  <span class='const'><span class='object_link'><a href="Marshal/ReadBuffer.html" title="Marshal::ReadBuffer (class)">ReadBuffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Marshal/ReadBuffer.html#initialize-instance_method" title="Marshal::ReadBuffer#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_marshaled'>marshaled</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_read'><span class='object_link'><a href="Marshal/ReadBuffer.html#read-instance_method" title="Marshal::ReadBuffer#read (method)">read</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -255,9 +251,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::PostArgsNode
   
@@ -100,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb</dd>
+    <dd>opal/lib/opal/nodes/args/post_args.rb</dd>
   </dl>
   
 </div>
@@ -140,9 +138,6 @@ These statements simplify everything, keep them in mind.</p></li>
   
 
 </div>
-  <h2>Constant Summary</h2>
-  
-
 
 
   <h2>Constant Summary</h2>
@@ -261,7 +256,7 @@ These statements simplify everything, keep them in mind.</p></li>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>required_right_args contains the list of required post args like normarg and mlhs arg For post-args: can be provided from   def m(a=1,<em>b,c)   post-args = [(:optarg, :a, (:int, 1)), (:restarg, :b), (:arg, :c)]   required_right_args = [(:arg, :c)] For mlhs: can be provided from   (</em>a, b)   required_right_args = [(:arg, :b)].</p>
+    <span class="summary_desc"><div class='inline'><p>required_right_args contains the list of required post args like normarg and mlhs arg For post-args: can be provided from   def m(a=1,*b,c)   post-args = [(:optarg, :a, (:int, 1)), (:restarg, :b), (:arg, :c)]   required_right_args = [(:arg, :c)] For mlhs: can be provided from   (*a, b)   required_right_args = [(:arg, :b)].</p>
 </div></span>
   
 </li>
@@ -578,7 +573,7 @@ These statements simplify everything, keep them in mind.</p></li>
 80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
@@ -632,7 +627,7 @@ all of them can be processed in the first oder</p>
 33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_kwargs'>kwargs</span>
   <span class='ivar'>@kwargs</span>
@@ -682,7 +677,7 @@ For mlhs: always blank</p>
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_optargs'>optargs</span>
   <span class='ivar'>@optargs</span>
@@ -729,7 +724,7 @@ For mlhs: can be provided from
 41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_required_left_args'>required_left_args</span>
   <span class='ivar'>@required_left_args</span>
@@ -755,11 +750,11 @@ For mlhs: can be provided from
     <p>required_right_args contains the list of required post args
 like normarg and mlhs arg
 For post-args: can be provided from
-  def m(a=1,<em>b,c)
+  def m(a=1,*b,c)
   post-args = [(:optarg, :a, (:int, 1)), (:restarg, :b), (:arg, :c)]
   required_right_args = [(:arg, :c)]
 For mlhs: can be provided from
-  (</em>a, b)
+  (*a, b)
   required_right_args = [(:arg, :b)]</p>
 
 
@@ -779,7 +774,7 @@ For mlhs: can be provided from
 72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_required_right_args'>required_right_args</span>
   <span class='ivar'>@required_right_args</span>
@@ -827,7 +822,7 @@ For post-args: can be provided from
 61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restarg'>restarg</span>
   <span class='ivar'>@restarg</span>
@@ -897,7 +892,7 @@ For post-args: can be provided from
 142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_children'>children</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -968,7 +963,7 @@ For post-args: can be provided from
 154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 144</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_optarg'>compile_optarg</span><span class='lparen'>(</span><span class='id identifier rubyid_optarg'>optarg</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_var_name'>var_name</span> <span class='op'>=</span> <span class='id identifier rubyid_variable'>variable</span><span class='lparen'>(</span><span class='id identifier rubyid_optarg'>optarg</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
@@ -1006,7 +1001,7 @@ For post-args: can be provided from
 158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 156</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_required_arg'>compile_required_arg</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_process'>process</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
@@ -1048,7 +1043,7 @@ For post-args: can be provided from
 174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 160</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_restarg'>compile_restarg</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_restarg'>restarg</span>
@@ -1111,7 +1106,7 @@ For post-args: can be provided from
 105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extract_arguments'>extract_arguments</span>
   <span class='id identifier rubyid_found_opt_or_rest'>found_opt_or_rest</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -1166,7 +1161,7 @@ For post-args: can be provided from
 193</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 187</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extract_blank_restarg'>extract_blank_restarg</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_restarg'>restarg</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
@@ -1207,7 +1202,7 @@ For post-args: can be provided from
 185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 176</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extract_restarg'>extract_restarg</span>
   <span class='id identifier rubyid_extract_code'>extract_code</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_working_arguments'>working_arguments</span><span class='embexpr_end'>}</span><span class='tstring_content'>.splice(0, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_working_arguments'>working_arguments</span><span class='embexpr_end'>}</span><span class='tstring_content'>.length - </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_required_right_args'>required_right_args</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'>);</span><span class='tstring_end'>&quot;</span></span>
@@ -1244,7 +1239,7 @@ For post-args: can be provided from
 197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/args/post_args.rb', line 195</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/args/post_args.rb', line 195</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_kwargs_sexp'>kwargs_sexp</span>
   <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='symbol'>:post_kwargs</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
@@ -1259,9 +1254,9 @@ For post-args: can be provided from
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::BreakNode
   
@@ -100,14 +98,11 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb</dd>
+    <dd>opal/lib/opal/nodes/logic.rb</dd>
   </dl>
   
 </div>
 
-
-  <h2>Constant Summary</h2>
-  
 
 
 
@@ -285,7 +280,7 @@
 55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/logic.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_break_val'>break_val</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -327,7 +322,7 @@
 31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/logic.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_in_while?'>in_while?</span>
@@ -365,7 +360,7 @@
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/logic.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_iter'>compile_iter</span>
   <span class='id identifier rubyid_error'>error</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>break must be used as a statement</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_stmt?'>stmt?</span>
@@ -401,7 +396,7 @@
 39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/logic.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_while'>compile_while</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_while_loop'>while_loop</span><span class='lbracket'>[</span><span class='symbol'>:closure</span><span class='rbracket'>]</span>
@@ -420,9 +415,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

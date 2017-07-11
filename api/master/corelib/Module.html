@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Module
   
@@ -98,8 +96,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb<span class="defines">,<br />
-  /Users/elia/Code/opal-docs/opal/opal/corelib/unsupported.rb</span>
+    <dd>opal/opal/corelib/module.rb<span class="defines">,<br />
+  opal/opal/corelib/unsupported.rb</span>
 </dd>
   </dl>
   
@@ -154,7 +152,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C-instance_method" title="#&lt; (instance method)">#<strong>&lt;</strong>(other)  &#x21d2; Object </a>
+      <a href="#<-instance_method" title="#&lt; (instance method)">#<strong>&lt;</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -176,7 +174,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C%3D-instance_method" title="#&lt;= (instance method)">#<strong>&lt;=</strong>(other)  &#x21d2; Object </a>
+      <a href="#<=-instance_method" title="#&lt;= (instance method)">#<strong>&lt;=</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -198,7 +196,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D%3D-instance_method" title="#=== (instance method)">#<strong>===</strong>(object)  &#x21d2; Object </a>
+      <a href="#===-instance_method" title="#=== (instance method)">#<strong>===</strong>(object)  &#x21d2; Object </a>
     
 
     
@@ -1163,7 +1161,7 @@
 24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 2</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1236,7 +1234,7 @@
 51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='comment'># class cannot be a descendant of itself
@@ -1283,7 +1281,7 @@
 55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_equal?'>equal?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='kw'>self</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_other'>other</span>
@@ -1315,7 +1313,7 @@
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='op'>===</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>object == null</span><span class='tstring_end'>`</span></span>
@@ -1349,7 +1347,7 @@
 61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_alias_method'>alias_method</span><span class='lparen'>(</span><span class='id identifier rubyid_newname'>newname</span><span class='comma'>,</span> <span class='id identifier rubyid_oldname'>oldname</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>Opal.alias(self, newname, oldname)</span><span class='tstring_end'>`</span></span>
@@ -1383,7 +1381,7 @@
 67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_alias_native'>alias_native</span><span class='lparen'>(</span><span class='id identifier rubyid_mid'>mid</span><span class='comma'>,</span> <span class='id identifier rubyid_jsid'>jsid</span> <span class='op'>=</span> <span class='id identifier rubyid_mid'>mid</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>Opal.alias_native(self, mid, jsid)</span><span class='tstring_end'>`</span></span>
@@ -1415,7 +1413,7 @@
 71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ancestors'>ancestors</span>
   <span class='backtick'>`</span><span class='tstring_content'>Opal.ancestors(self)</span><span class='tstring_end'>`</span></span>
@@ -1446,7 +1444,7 @@
 76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_append_features'>append_features</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>Opal.append_features(self, klass)</span><span class='tstring_end'>`</span></span>
@@ -1482,7 +1480,7 @@
 81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attr_accessor'>attr_accessor</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_attr_reader'>attr_reader</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
@@ -1546,7 +1544,7 @@
 120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attr_reader'>attr_reader</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1637,7 +1635,7 @@
 152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attr_writer'>attr_writer</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1704,7 +1702,7 @@
 165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 154</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_autoload'>autoload</span><span class='lparen'>(</span><span class='id identifier rubyid_const'>const</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1771,14 +1769,14 @@
 175</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_class_variable_get'>class_variable_get</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>class vars should start with @@</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>name.length &lt; 3 || name.slice(0,2) !== &#39;@@&#39;</span><span class='tstring_end'>`</span></span>
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'><span class='object_link'><a href="Opal.html#coerce_to!-class_method" title="Opal.coerce_to! (method)">coerce_to!</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="String.html" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NameError.html" title="NameError (class)">NameError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Exception.html#new-class_method" title="Exception.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>class vars should start with @@</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>name.length &lt; 3 || name.slice(0,2) !== &#39;@@&#39;</span><span class='tstring_end'>`</span></span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     var value = Opal.cvars[name.slice(2)];
-    </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>uninitialized class variable @@a in</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>value == null</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+    </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NameError.html" title="NameError (class)">NameError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Exception.html#new-class_method" title="Exception.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>uninitialized class variable @@a in</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>value == null</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
     return value;
   </span><span class='tstring_end'>}</span></span>
 <span class='kw'>end</span></pre>
@@ -1834,11 +1832,11 @@
 184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 177</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 177</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_class_variable_set'>class_variable_set</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>name.length &lt; 3 || name.slice(0,2) !== &#39;@@&#39;</span><span class='tstring_end'>`</span></span>
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'><span class='object_link'><a href="Opal.html#coerce_to!-class_method" title="Opal.coerce_to! (method)">coerce_to!</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="String.html" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NameError.html" title="NameError (class)">NameError</a></span></span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>name.length &lt; 3 || name.slice(0,2) !== &#39;@@&#39;</span><span class='tstring_end'>`</span></span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     Opal.cvars[name.slice(2)] = value;
     return value;
@@ -1928,10 +1926,10 @@ if inherit is true or self is Object, will also check ancestors</p>
 216</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 192</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 192</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_const_defined?'>const_defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_inherit'>inherit</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong constant name </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[A-Z]\w*$</span><span class='regexp_end'>/</span></span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NameError.html" title="NameError (class)">NameError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Exception.html#new-class_method" title="Exception.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong constant name </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[A-Z]\w*$</span><span class='regexp_end'>/</span></span>
 
   <span class='backtick'>%x{</span><span class='tstring_content'>
     var scopes = [self.$$scope];
@@ -2028,14 +2026,14 @@ if inherit is true or self is Object, will also check ancestors</p>
 246</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 218</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_inherit'>inherit</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>name.indexOf(&#39;::&#39;) != -1 &amp;&amp; name != &#39;::&#39;</span><span class='tstring_end'>`</span></span>
     <span class='kw'>return</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>::</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_o'>o</span><span class='comma'>,</span> <span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='kw'>end</span>
 
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong constant name </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='backtick'>`</span><span class='tstring_content'>/^[A-Z]\w*$/.test(name)</span><span class='tstring_end'>`</span></span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NameError.html" title="NameError (class)">NameError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Exception.html#new-class_method" title="Exception.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong constant name </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='backtick'>`</span><span class='tstring_content'>/^[A-Z]\w*$/.test(name)</span><span class='tstring_end'>`</span></span>
 
   <span class='backtick'>%x{</span><span class='tstring_content'>
     var scopes = [self.$$scope];
@@ -2118,7 +2116,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 262</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 248</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 248</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_const_missing'>const_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2133,7 +2131,7 @@ if inherit is true or self is Object, will also check ancestors</p>
     }
   </span><span class='tstring_end'>}</span></span>
 
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>uninitialized constant </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NameError.html" title="NameError (class)">NameError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Exception.html#new-class_method" title="Exception.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>uninitialized constant </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2192,15 +2190,15 @@ if inherit is true or self is Object, will also check ancestors</p>
 276</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 264</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 264</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_const_set'>const_set</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong constant name </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[A-Z]\w*$</span><span class='regexp_end'>/</span></span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NameError.html" title="NameError (class)">NameError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Exception.html#new-class_method" title="Exception.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong constant name </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[A-Z]\w*$</span><span class='regexp_end'>/</span></span>
 
   <span class='kw'>begin</span>
     <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span>
   <span class='kw'>rescue</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>conversion with #to_str failed</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>conversion with #to_str failed</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
   <span class='backtick'>`</span><span class='tstring_content'>Opal.casgn(self, name, value)</span><span class='tstring_end'>`</span></span>
@@ -2232,7 +2230,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 188</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 186</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 186</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_constants'>constants</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.$$scope.constants.slice(0)</span><span class='tstring_end'>`</span></span>
@@ -2293,28 +2291,28 @@ if inherit is true or self is Object, will also check ancestors</p>
 311</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 278</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 278</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>method === undefined &amp;&amp; block === nil</span><span class='tstring_end'>`</span></span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tried to create a Proc object without a block</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tried to create a Proc object without a block</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_block'>block</span> <span class='op'>||=</span> <span class='kw'>case</span> <span class='id identifier rubyid_method'>method</span>
-    <span class='kw'>when</span> <span class='const'>Proc</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Proc.html" title="Proc (class)">Proc</a></span></span>
       <span class='id identifier rubyid_method'>method</span>
 
-    <span class='kw'>when</span> <span class='const'>Method</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Method.html" title="Method (class)">Method</a></span></span>
       <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method'>method</span><span class='period'>.</span><span class='id identifier rubyid_to_proc'>to_proc</span><span class='embexpr_end'>}</span><span class='tstring_content'>.$$unbound</span><span class='tstring_end'>`</span></span>
 
-    <span class='kw'>when</span> <span class='const'>UnboundMethod</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="UnboundMethod.html" title="UnboundMethod (class)">UnboundMethod</a></span></span>
       <span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='op'>|</span>
         <span class='id identifier rubyid_bound'>bound</span> <span class='op'>=</span> <span class='id identifier rubyid_method'>method</span><span class='period'>.</span><span class='id identifier rubyid_bind'>bind</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_bound'>bound</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
       <span class='rbrace'>}</span>
 
     <span class='kw'>else</span>
-      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong argument type </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> (expected Proc/Method)</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong argument type </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> (expected Proc/Method)</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2353,7 +2351,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 417</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 416</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 416</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extended'>extended</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2399,9 +2397,9 @@ if inherit is true or self is Object, will also check ancestors</p>
 346</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 327</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 327</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_include'>include</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_mods'>mods</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_include'><span class='object_link'><a href="top-level-namespace.html#include-class_method" title="::include (method)">include</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_mods'>mods</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     for (var i = mods.length - 1; i &gt;= 0; i--) {
       var mod = mods[i];
@@ -2411,7 +2409,7 @@ if inherit is true or self is Object, will also check ancestors</p>
       }
 
       if (!mod.$$is_module) {
-        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong argument type </span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>mod</span><span class='tstring_end'>`</span></span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> (expected Module)</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong argument type </span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>mod</span><span class='tstring_end'>`</span></span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> (expected Module)</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
       }
 
       </span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>mod</span><span class='tstring_end'>`</span></span><span class='period'>.</span><span class='id identifier rubyid_append_features'>append_features</span> <span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
@@ -2478,7 +2476,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 360</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 348</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 348</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2517,7 +2515,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 414</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 413</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 413</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_included'>included</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2554,17 +2552,17 @@ if inherit is true or self is Object, will also check ancestors</p>
 372</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 362</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 362</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_instance_method'>instance_method</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     var meth = self.$$proto[&#39;$&#39; + name];
 
     if (!meth || meth.$$stub) {
-      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>NameError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>undefined method `</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; for class `</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NameError.html" title="NameError (class)">NameError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Exception.html#new-class_method" title="Exception.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>undefined method `</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; for class `</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
     }
 
-    return </span><span class='embexpr_beg'>#{</span><span class='const'>UnboundMethod</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='backtick'>`</span><span class='tstring_content'>meth</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+    return </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="UnboundMethod.html" title="UnboundMethod (class)">UnboundMethod</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="UnboundMethod.html#initialize-instance_method" title="UnboundMethod#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='backtick'>`</span><span class='tstring_content'>meth</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
   </span><span class='tstring_end'>}</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2631,7 +2629,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 411</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 374</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 374</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_instance_methods'>instance_methods</span><span class='lparen'>(</span><span class='id identifier rubyid_include_super'>include_super</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2695,7 +2693,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 420</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 419</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 419</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_added'>method_added</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2753,7 +2751,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 468</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 463</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 463</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_defined?'>method_defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2785,7 +2783,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 423</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 422</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 422</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_removed'>method_removed</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2813,7 +2811,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 426</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 425</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 425</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_undefined'>method_undefined</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2879,10 +2877,10 @@ if inherit is true or self is Object, will also check ancestors</p>
 441</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 428</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 428</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_module_eval'>module_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>no block given</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>no block given</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
 
   <span class='backtick'>%x{</span><span class='tstring_content'>
     var old = block.$$s,
@@ -2936,12 +2934,12 @@ if inherit is true or self is Object, will also check ancestors</p>
 459</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 445</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 445</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_module_exec'>module_exec</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     if (block === nil) {
-      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>LocalJumpError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>no block given</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="LocalJumpError.html" title="LocalJumpError (class)">LocalJumpError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>no block given</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
     }
 
     var block_self = block.$$s, result;
@@ -2993,7 +2991,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 487</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 470</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 470</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_module_function'>module_function</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_methods'>methods</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3064,7 +3062,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 517</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 489</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 489</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3124,7 +3122,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/unsupported.rb', line 183</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/unsupported.rb', line 183</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_private_class_method'>private_class_method</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
   <span class='kw'>self</span>
@@ -3153,7 +3151,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 194</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/unsupported.rb', line 193</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/unsupported.rb', line 193</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_private_constant'>private_constant</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -3208,7 +3206,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 191</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/unsupported.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/unsupported.rb', line 189</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_private_method_defined?'>private_method_defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
   <span class='kw'>false</span>
@@ -3248,7 +3246,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 175</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/unsupported.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/unsupported.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_public'>public</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_methods'>methods</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3283,7 +3281,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 520</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 519</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 519</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_class_variable'>remove_class_variable</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -3316,7 +3314,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 528</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 522</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 522</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_const'>remove_const</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3356,7 +3354,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 321</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 313</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 313</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_method'>remove_method</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3414,7 +3412,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 325</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 323</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 323</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_singleton_class?'>singleton_class?</span>
   <span class='backtick'>`</span><span class='tstring_content'>!!self.$$is_singleton</span><span class='tstring_end'>`</span></span>
@@ -3444,9 +3442,9 @@ if inherit is true or self is Object, will also check ancestors</p>
 532</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 530</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 530</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'><span class='object_link'><a href="top-level-namespace.html#to_s-class_method" title="::to_s (method)">to_s</a></span></span>
   <span class='backtick'>`</span><span class='tstring_content'>Opal.Module.$name.call(self)</span><span class='tstring_end'>`</span></span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>self.$$is_module ? &#39;Module&#39; : &#39;Class&#39;</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>:0x</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid___id__'>__id__</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='int'>16</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -3480,7 +3478,7 @@ if inherit is true or self is Object, will also check ancestors</p>
 542</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/module.rb', line 534</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/module.rb', line 534</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_undef_method'>undef_method</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3501,9 +3499,9 @@ if inherit is true or self is Object, will also check ancestors</p>
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

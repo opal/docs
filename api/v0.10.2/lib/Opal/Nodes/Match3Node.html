@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::Match3Node
   
@@ -100,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb</dd>
+    <dd>opal/lib/opal/nodes/call_special.rb</dd>
   </dl>
   
 </div>
@@ -117,9 +115,6 @@ s(:match3, lhs, rhs)</p>
   
 
 </div>
-  <h2>Constant Summary</h2>
-  
-
 
 
   <h2>Constant Summary</h2>
@@ -225,7 +220,7 @@ s(:match3, lhs, rhs)</p>
 114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/call_special.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>=</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='id identifier rubyid_lhs'>lhs</span><span class='comma'>,</span> <span class='symbol'>:=~</span><span class='comma'>,</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='symbol'>:arglist</span><span class='comma'>,</span> <span class='id identifier rubyid_rhs'>rhs</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -241,9 +236,9 @@ s(:match3, lhs, rhs)</p>
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../../class_list.html"></iframe>
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -61,8 +61,6 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="../../../class_list.html"></iframe>
-
       <div id="content"><h1>Module: Minitest::Parallel::Test::ClassMethods
   
   
@@ -82,7 +80,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/minitest/parallel.rb</dd>
+    <dd>opal/stdlib/minitest/parallel.rb</dd>
   </dl>
   
 </div>
@@ -187,10 +185,10 @@
 60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/parallel.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/parallel.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run_one_method'>run_one_method</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_reporter'>reporter</span> <span class='comment'># :nodoc:
-</span>  <span class='const'>Minitest</span><span class='period'>.</span><span class='id identifier rubyid_parallel_executor'>parallel_executor</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_reporter'>reporter</span><span class='rbracket'>]</span>
+</span>  <span class='const'><span class='object_link'><a href="../../../Minitest.html" title="Minitest (module)">Minitest</a></span></span><span class='period'>.</span><span class='id identifier rubyid_parallel_executor'>parallel_executor</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_reporter'>reporter</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -225,7 +223,7 @@
 61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/minitest/parallel.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/minitest/parallel.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_order'>test_order</span><span class='semicolon'>;</span> <span class='symbol'>:parallel</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -238,9 +236,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

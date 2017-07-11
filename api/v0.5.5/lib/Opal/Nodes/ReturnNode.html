@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::ReturnNode
   
@@ -100,14 +98,11 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb</dd>
+    <dd>opal/lib/opal/nodes/logic.rb</dd>
   </dl>
   
 </div>
 
-
-  <h2>Constant Summary</h2>
-  
 
 
 
@@ -308,7 +303,7 @@
 177</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/logic.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_def_scope'>def_scope</span> <span class='op'>=</span> <span class='id identifier rubyid_scope_to_catch_return'>scope_to_catch_return</span>
@@ -367,7 +362,7 @@
 162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/logic.rb', line 160</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_return_expr_in_def?'>return_expr_in_def?</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_scope'>scope</span> <span class='kw'>if</span> <span class='id identifier rubyid_expr?'>expr?</span> <span class='kw'>and</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_def?'>def?</span>
@@ -421,7 +416,7 @@
 158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb', line 154</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/logic.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_return_in_iter?'>return_in_iter?</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_iter?'>iter?</span> <span class='kw'>and</span> <span class='id identifier rubyid_parent_def'>parent_def</span> <span class='op'>=</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_find_parent_def'>find_parent_def</span>
@@ -453,7 +448,7 @@
 152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/logic.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_return_val'>return_val</span>
   <span class='id identifier rubyid_expr_or_nil'>expr_or_nil</span> <span class='id identifier rubyid_value'>value</span>
@@ -483,7 +478,7 @@
 166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/logic.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/logic.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scope_to_catch_return'>scope_to_catch_return</span>
   <span class='id identifier rubyid_return_in_iter?'>return_in_iter?</span> <span class='kw'>or</span> <span class='id identifier rubyid_return_expr_in_def?'>return_expr_in_def?</span>
@@ -498,9 +493,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

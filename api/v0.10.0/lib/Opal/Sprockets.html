@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -61,8 +61,6 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="../class_list.html"></iframe>
-
       <div id="content"><h1>Module: Opal::Sprockets
   
   
@@ -82,8 +80,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/sprockets.rb<span class="defines">,<br />
-  /Users/elia/Code/opal-docs/opal/lib/opal/sprockets/path_reader.rb,<br /> /Users/elia/Code/opal-docs/opal/lib/opal/sprockets/source_map_header_patch.rb</span>
+    <dd>opal/lib/opal/sprockets.rb<span class="defines">,<br />
+  opal/lib/opal/sprockets/path_reader.rb,<br /> opal/lib/opal/sprockets/source_map_header_patch.rb</span>
 </dd>
   </dl>
   
@@ -133,7 +131,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Generate a `` tag for Opal assets.</p>
+    <span class="summary_desc"><div class='inline'><p>Generate a <code>&lt;script&gt;</code> tag for Opal assets.</p>
 </div></span>
   
 </li>
@@ -322,7 +320,7 @@
 89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_javascript_include_tag'>javascript_include_tag</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_sprockets'>sprockets</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:sprockets</span><span class='rparen'>)</span>
@@ -344,7 +342,7 @@
     <span class='id identifier rubyid_scripts'>scripts</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>&lt;script src=&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_prefix'>prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.js&quot;&gt;&lt;/script&gt;</span><span class='tstring_end'>}</span></span>
   <span class='kw'>end</span>
 
-  <span class='id identifier rubyid_scripts'>scripts</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>&lt;script&gt;</span><span class='embexpr_beg'>#{</span><span class='op'>::</span><span class='const'>Opal</span><span class='op'>::</span><span class='const'>Sprockets</span><span class='period'>.</span><span class='id identifier rubyid_load_asset'>load_asset</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_sprockets'>sprockets</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/script&gt;</span><span class='tstring_end'>}</span></span>
+  <span class='id identifier rubyid_scripts'>scripts</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>&lt;script&gt;</span><span class='embexpr_beg'>#{</span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Opal::Sprockets (module)">Sprockets</a></span></span><span class='period'>.</span><span class='id identifier rubyid_load_asset'><span class='object_link'><a href="#load_asset-class_method" title="Opal::Sprockets.load_asset (method)">load_asset</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_sprockets'>sprockets</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/script&gt;</span><span class='tstring_end'>}</span></span>
 
   <span class='id identifier rubyid_scripts'>scripts</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
@@ -377,7 +375,7 @@ non-Opal asset as already loaded.</p>
     
       
       <pre class="example code"><code>
-<span class='const'>Opal</span><span class='op'>::</span><span class='const'>Sprockets</span><span class='period'>.</span><span class='id identifier rubyid_load_asset'>load_asset</span><span class='lparen'>(</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_application'>application</span><span class='period'>.</span><span class='id identifier rubyid_assets'>assets</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>application</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+<span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Opal::Sprockets (module)">Sprockets</a></span></span><span class='period'>.</span><span class='id identifier rubyid_load_asset'>load_asset</span><span class='lparen'>(</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_application'>application</span><span class='period'>.</span><span class='id identifier rubyid_assets'>assets</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>application</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>Will output the following JavaScript:</p>
@@ -478,21 +476,21 @@ if (typeof(Opal) !== &#39;undefined&#39;) {
 55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/sprockets.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/sprockets.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_load_asset'>load_asset</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_sprockets'>sprockets</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_asset'>asset</span> <span class='op'>=</span> <span class='id identifier rubyid_sprockets'>sprockets</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\.(js|rb|opal))*</span><span class='embexpr_beg'>#{</span><span class='const'>REGEXP_END</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.js</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_asset'>asset</span> <span class='op'>=</span> <span class='id identifier rubyid_sprockets'>sprockets</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\.(js|rb|opal))*</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Opal.html#REGEXP_END-constant" title="Opal::REGEXP_END (constant)">REGEXP_END</a></span></span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.js</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span>
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_asset'>asset</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
 
   <span class='id identifier rubyid_opal_extnames'>opal_extnames</span> <span class='op'>=</span> <span class='id identifier rubyid_sprockets'>sprockets</span><span class='period'>.</span><span class='id identifier rubyid_engines'>engines</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ext'>ext</span><span class='comma'>,</span> <span class='id identifier rubyid_engine'>engine</span><span class='op'>|</span>
-    <span class='id identifier rubyid_ext'>ext</span> <span class='kw'>if</span> <span class='id identifier rubyid_engine'>engine</span> <span class='op'>&lt;=</span> <span class='op'>::</span><span class='const'>Opal</span><span class='op'>::</span><span class='const'>Processor</span>
+    <span class='id identifier rubyid_ext'>ext</span> <span class='kw'>if</span> <span class='id identifier rubyid_engine'>engine</span> <span class='op'>&lt;=</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Processor.html" title="Opal::Processor (class)">Processor</a></span></span>
   <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
 
-  <span class='id identifier rubyid_module_name'>module_name</span>       <span class='op'>=</span> <span class='tlambda'>-&gt;</span> <span class='id identifier rubyid_asset'>asset</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_asset'>asset</span><span class='period'>.</span><span class='id identifier rubyid_logical_path'>logical_path</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.js</span><span class='embexpr_beg'>#{</span><span class='const'>REGEXP_END</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_module_name'>module_name</span>       <span class='op'>=</span> <span class='tlambda'>-&gt;</span> <span class='id identifier rubyid_asset'>asset</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_asset'>asset</span><span class='period'>.</span><span class='id identifier rubyid_logical_path'>logical_path</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.js</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Opal.html#REGEXP_END-constant" title="Opal::REGEXP_END (constant)">REGEXP_END</a></span></span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_path_extnames'>path_extnames</span>     <span class='op'>=</span> <span class='tlambda'>-&gt;</span> <span class='id identifier rubyid_path'>path</span>  <span class='tlambeg'>{</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_basename'>basename</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.[^.]+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_mark_loaded'>mark_loaded</span>       <span class='op'>=</span> <span class='tlambda'>-&gt;</span> <span class='id identifier rubyid_paths'>paths</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Opal.loaded([</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:inspect</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>]);</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_processed_by_opal'>processed_by_opal</span> <span class='op'>=</span> <span class='tlambda'>-&gt;</span> <span class='id identifier rubyid_asset'>asset</span> <span class='tlambeg'>{</span> <span class='lparen'>(</span><span class='id identifier rubyid_path_extnames'>path_extnames</span><span class='lbracket'>[</span><span class='id identifier rubyid_asset'>asset</span><span class='period'>.</span><span class='id identifier rubyid_pathname'>pathname</span><span class='rbracket'>]</span> <span class='op'>&amp;</span> <span class='id identifier rubyid_opal_extnames'>opal_extnames</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='rbrace'>}</span>
-  <span class='id identifier rubyid_stubbed_files'>stubbed_files</span>     <span class='op'>=</span> <span class='op'>::</span><span class='const'>Opal</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_stubbed_files'>stubbed_files</span>
+  <span class='id identifier rubyid_stubbed_files'>stubbed_files</span>     <span class='op'>=</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="Opal::Config (module)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stubbed_files'>stubbed_files</span>
 
   <span class='id identifier rubyid_non_opal_assets'>non_opal_assets</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_asset'>asset</span><span class='rbracket'>]</span><span class='op'>+</span><span class='id identifier rubyid_asset'>asset</span><span class='period'>.</span><span class='id identifier rubyid_dependencies'>dependencies</span><span class='rparen'>)</span>
     <span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_asset'>asset</span><span class='op'>|</span> <span class='kw'>not</span><span class='lparen'>(</span><span class='id identifier rubyid_processed_by_opal'>processed_by_opal</span><span class='lbracket'>[</span><span class='id identifier rubyid_asset'>asset</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -520,9 +518,9 @@ if (typeof(Opal) !== &#39;undefined&#39;) {
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

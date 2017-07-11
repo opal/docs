@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Proc
   
@@ -98,8 +96,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb<span class="defines">,<br />
-  /Users/elia/Code/opal-docs/opal/opal/corelib/marshal/write_buffer.rb</span>
+    <dd>opal/opal/corelib/proc.rb<span class="defines">,<br />
+  opal/opal/corelib/marshal/write_buffer.rb</span>
 </dd>
   </dl>
   
@@ -408,11 +406,11 @@
 11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/proc.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tried to create a Proc object without a block</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tried to create a Proc object without a block</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_block'>block</span>
@@ -470,10 +468,10 @@
 92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/marshal/write_buffer.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/marshal/write_buffer.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid___marshal__'>__marshal__</span><span class='lparen'>(</span><span class='id identifier rubyid_buffer'>buffer</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no _dump_data is defined for class </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no _dump_data is defined for class </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -506,7 +504,7 @@
 73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/proc.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_arity'>arity</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -543,10 +541,10 @@
 83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/proc.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_binding'>binding</span>
-  <span class='backtick'>`</span><span class='tstring_content'>if (self.$$is_curried) { </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Can&#39;t create Binding</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> }</span><span class='tstring_end'>`</span></span>
+  <span class='backtick'>`</span><span class='tstring_content'>if (self.$$is_curried) { </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Can&#39;t create Binding</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> }</span><span class='tstring_end'>`</span></span>
   <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -612,7 +610,7 @@
 49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/proc.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -713,7 +711,7 @@
 153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/proc.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_curry'>curry</span><span class='lparen'>(</span><span class='id identifier rubyid_arity'>arity</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -721,9 +719,9 @@
       arity = self.length;
     }
     else {
-      arity = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_arity'>arity</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      arity = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'><span class='object_link'><a href="Opal.html#coerce_to!-class_method" title="Opal.coerce_to! (method)">coerce_to!</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_arity'>arity</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
       if (self.$$is_lambda &amp;&amp; arity !== self.length) {
-        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong number of arguments (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>arity</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> for </span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>self.length</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong number of arguments (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>arity</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> for </span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>self.length</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
       }
     }
 
@@ -733,7 +731,7 @@
           result;
 
       if (length &gt; arity &amp;&amp; self.$$is_lambda &amp;&amp; !self.$$is_curried) {
-        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong number of arguments (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>length</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> for </span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>arity</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong number of arguments (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>length</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> for </span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>arity</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
       }
 
       if (length &gt;= arity) {
@@ -797,7 +795,7 @@
 170</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/proc.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dup'>dup</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -864,7 +862,7 @@
 63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/proc.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lambda?'>lambda?</span>
   <span class='comment'># This method should tell the user if the proc tricks are unavailable,
@@ -921,7 +919,7 @@
 112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/proc.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parameters'>parameters</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -977,7 +975,7 @@
 78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/proc.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_location'>source_location</span>
   <span class='backtick'>`</span><span class='tstring_content'>if (self.$$is_curried) { return nil; }</span><span class='tstring_end'>`</span></span>
@@ -1008,7 +1006,7 @@
 57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/proc.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/proc.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_proc'>to_proc</span>
   <span class='kw'>self</span>
@@ -1023,9 +1021,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

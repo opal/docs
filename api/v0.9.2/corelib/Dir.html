@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Dir
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/dir.rb</dd>
+    <dd>opal/opal/corelib/dir.rb</dd>
   </dl>
   
 </div>
@@ -219,7 +217,7 @@
 9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/dir.rb', line 3</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/dir.rb', line 3</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_chdir'>chdir</span><span class='lparen'>(</span><span class='id identifier rubyid_dir'>dir</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_prev_cwd'>prev_cwd</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>Opal.current_dir</span><span class='tstring_end'>`</span></span>
@@ -253,10 +251,10 @@
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/dir.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/dir.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_home'>home</span>
-  <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HOME</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.</span><span class='tstring_end'>&#39;</span></span>
+  <span class='const'><span class='object_link'><a href="top-level-namespace.html#ENV-constant" title="ENV (constant)">ENV</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HOME</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -287,7 +285,7 @@
 13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/dir.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/dir.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pwd'>pwd</span>
   <span class='backtick'>`</span><span class='tstring_content'>Opal.current_dir || &#39;.&#39;</span><span class='tstring_end'>`</span></span>
@@ -302,9 +300,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

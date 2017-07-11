@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::IfNode
   
@@ -100,42 +98,40 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/if.rb</dd>
+    <dd>opal/lib/opal/nodes/if.rb</dd>
   </dl>
   
 </div>
 
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="RUBY_ENGINE_CHECK-constant" class="">RUBY_ENGINE_CHECK =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:const</span><span class='comma'>,</span> <span class='symbol'>:RUBY_ENGINE</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <dl class="constants">
+    
+      <dt id="RUBY_ENGINE_CHECK-constant" class="">RUBY_ENGINE_CHECK =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:const</span><span class='comma'>,</span> <span class='symbol'>:RUBY_ENGINE</span><span class='rbracket'>]</span><span class='comma'>,</span>
 <span class='symbol'>:==</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:arglist</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:str</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>opal</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rbracket'>]</span></pre></dd>
-      
-        <dt id="RUBY_PLATFORM_CHECK-constant" class="">RUBY_PLATFORM_CHECK =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:const</span><span class='comma'>,</span> <span class='symbol'>:RUBY_PLATFORM</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    
+      <dt id="RUBY_PLATFORM_CHECK-constant" class="">RUBY_PLATFORM_CHECK =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:const</span><span class='comma'>,</span> <span class='symbol'>:RUBY_PLATFORM</span><span class='rbracket'>]</span><span class='comma'>,</span>
 <span class='symbol'>:==</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:arglist</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:str</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>opal</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rbracket'>]</span></pre></dd>
-      
-        <dt id="RUBY_ENGINE_CHECK_NOT-constant" class="">RUBY_ENGINE_CHECK_NOT =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:const</span><span class='comma'>,</span> <span class='symbol'>:RUBY_ENGINE</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:==</span><span class='comma'>,</span>
+    
+      <dt id="RUBY_ENGINE_CHECK_NOT-constant" class="">RUBY_ENGINE_CHECK_NOT =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:const</span><span class='comma'>,</span> <span class='symbol'>:RUBY_ENGINE</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:==</span><span class='comma'>,</span>
 <span class='lbracket'>[</span><span class='symbol'>:arglist</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:str</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>opal</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:!</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:arglist</span><span class='rbracket'>]</span><span class='rbracket'>]</span></pre></dd>
-      
-        <dt id="RUBY_PLATFORM_CHECK_NOT-constant" class="">RUBY_PLATFORM_CHECK_NOT =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:const</span><span class='comma'>,</span> <span class='symbol'>:RUBY_PLATFORM</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:==</span><span class='comma'>,</span>
+    
+      <dt id="RUBY_PLATFORM_CHECK_NOT-constant" class="">RUBY_PLATFORM_CHECK_NOT =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:call</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:const</span><span class='comma'>,</span> <span class='symbol'>:RUBY_PLATFORM</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:==</span><span class='comma'>,</span>
 <span class='lbracket'>[</span><span class='symbol'>:arglist</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:str</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>opal</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:!</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:arglist</span><span class='rbracket'>]</span><span class='rbracket'>]</span></pre></dd>
-      
-    </dl>
-  
+    
+  </dl>
 
 
 
@@ -382,7 +378,7 @@
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/if.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/if.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='id identifier rubyid_truthy'>truthy</span><span class='comma'>,</span> <span class='id identifier rubyid_falsy'>falsy</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_truthy'>truthy</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_falsy'>falsy</span>
@@ -442,7 +438,7 @@
 74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/if.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/if.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_falsy'>falsy</span>
   <span class='id identifier rubyid_needs_wrapper?'>needs_wrapper?</span> <span class='op'>?</span> <span class='id identifier rubyid_compiler'>compiler</span><span class='period'>.</span><span class='id identifier rubyid_returns'>returns</span><span class='lparen'>(</span><span class='id identifier rubyid_false_body'>false_body</span> <span class='op'>||</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='symbol'>:nil</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_false_body'>false_body</span>
@@ -494,7 +490,7 @@
 78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/if.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/if.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_needs_wrapper?'>needs_wrapper?</span>
   <span class='id identifier rubyid_expr?'>expr?</span> <span class='kw'>or</span> <span class='id identifier rubyid_recv?'>recv?</span>
@@ -550,10 +546,10 @@ falsy block</p>
 62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/if.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/if.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_skip_check_present?'>skip_check_present?</span>
-  <span class='id identifier rubyid_test'>test</span> <span class='op'>==</span> <span class='const'>RUBY_ENGINE_CHECK</span> <span class='kw'>or</span> <span class='id identifier rubyid_test'>test</span> <span class='op'>==</span> <span class='const'>RUBY_PLATFORM_CHECK</span>
+  <span class='id identifier rubyid_test'>test</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#RUBY_ENGINE_CHECK-constant" title="Opal::Nodes::IfNode::RUBY_ENGINE_CHECK (constant)">RUBY_ENGINE_CHECK</a></span></span> <span class='kw'>or</span> <span class='id identifier rubyid_test'>test</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#RUBY_PLATFORM_CHECK-constant" title="Opal::Nodes::IfNode::RUBY_PLATFORM_CHECK (constant)">RUBY_PLATFORM_CHECK</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -602,10 +598,10 @@ falsy block</p>
 66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/if.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/if.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_skip_check_present_not?'>skip_check_present_not?</span>
-  <span class='id identifier rubyid_test'>test</span> <span class='op'>==</span> <span class='const'>RUBY_ENGINE_CHECK_NOT</span> <span class='kw'>or</span> <span class='id identifier rubyid_test'>test</span> <span class='op'>==</span> <span class='const'>RUBY_PLATFORM_CHECK_NOT</span>
+  <span class='id identifier rubyid_test'>test</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#RUBY_ENGINE_CHECK_NOT-constant" title="Opal::Nodes::IfNode::RUBY_ENGINE_CHECK_NOT (constant)">RUBY_ENGINE_CHECK_NOT</a></span></span> <span class='kw'>or</span> <span class='id identifier rubyid_test'>test</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#RUBY_PLATFORM_CHECK_NOT-constant" title="Opal::Nodes::IfNode::RUBY_PLATFORM_CHECK_NOT (constant)">RUBY_PLATFORM_CHECK_NOT</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -632,7 +628,7 @@ falsy block</p>
 70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/if.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/if.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_truthy'>truthy</span>
   <span class='id identifier rubyid_needs_wrapper?'>needs_wrapper?</span> <span class='op'>?</span> <span class='id identifier rubyid_compiler'>compiler</span><span class='period'>.</span><span class='id identifier rubyid_returns'>returns</span><span class='lparen'>(</span><span class='id identifier rubyid_true_body'>true_body</span> <span class='op'>||</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='symbol'>:nil</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_true_body'>true_body</span>
@@ -647,9 +643,9 @@ falsy block</p>
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

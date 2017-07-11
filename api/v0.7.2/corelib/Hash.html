@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Hash
   
@@ -103,7 +101,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb</dd>
+    <dd>opal/opal/corelib/hash.rb</dd>
   </dl>
   
 </div>
@@ -126,7 +124,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-class_method" title="[] (class method)">.<strong>[]</strong>(*objs)  &#x21d2; Object </a>
+      <a href="#[]-class_method" title="[] (class method)">.<strong>[]</strong>(*objs)  &#x21d2; Object </a>
     
 
     
@@ -179,7 +177,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -203,7 +201,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
     
 
     
@@ -225,7 +223,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(key, value)  &#x21d2; Object </a>
+      <a href="#[]=-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(key, value)  &#x21d2; Object </a>
     
 
     
@@ -339,7 +337,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default%3D-instance_method" title="#default= (instance method)">#<strong>default=</strong>(object)  &#x21d2; Object </a>
+      <a href="#default=-instance_method" title="#default= (instance method)">#<strong>default=</strong>(object)  &#x21d2; Object </a>
     
 
     
@@ -383,7 +381,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_proc%3D-instance_method" title="#default_proc= (instance method)">#<strong>default_proc=</strong>(proc)  &#x21d2; Object </a>
+      <a href="#default_proc=-instance_method" title="#default_proc= (instance method)">#<strong>default_proc=</strong>(proc)  &#x21d2; Object </a>
     
 
     
@@ -862,7 +860,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#merge%21-instance_method" title="#merge! (instance method)">#<strong>merge!</strong>(other, &amp;block)  &#x21d2; Object </a>
+      <a href="#merge!-instance_method" title="#merge! (instance method)">#<strong>merge!</strong>(other, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -974,7 +972,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#select%21-instance_method" title="#select! (instance method)">#<strong>select!</strong>(&amp;block)  &#x21d2; Object </a>
+      <a href="#select!-instance_method" title="#select! (instance method)">#<strong>select!</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -1154,7 +1152,7 @@
 33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1195,7 +1193,7 @@
 11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_objs'>objs</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>Opal.hash.apply(null, objs)</span><span class='tstring_end'>`</span></span>
@@ -1235,7 +1233,7 @@
 25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_allocate'>allocate</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1327,7 +1325,7 @@
 79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1424,7 +1422,7 @@
 108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1501,7 +1499,7 @@
 130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1570,7 +1568,7 @@
 155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assoc'>assoc</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1626,7 +1624,7 @@
 164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 157</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1701,7 +1699,7 @@
 204</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clone'>clone</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1772,7 +1770,7 @@
 213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 206</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 206</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default'>default</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1810,7 +1808,7 @@
 220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 215</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default='>default=</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1843,7 +1841,7 @@
 224</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 222</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 222</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default_proc'>default_proc</span>
   <span class='ivar'>@proc</span>
@@ -1883,15 +1881,15 @@
 238</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 226</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 226</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default_proc='>default_proc=</span><span class='lparen'>(</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     if (proc !== nil) {
-      proc = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_proc'>proc</span><span class='comma'>,</span> <span class='const'>Proc</span><span class='comma'>,</span> <span class='symbol'>:to_proc</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      proc = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'><span class='object_link'><a href="Opal.html#coerce_to!-class_method" title="Opal.coerce_to! (method)">coerce_to!</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_proc'>proc</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Proc.html" title="Proc (class)">Proc</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_proc</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
       if (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_proc'>proc</span><span class='period'>.</span><span class='id identifier rubyid_lambda?'>lambda?</span><span class='embexpr_end'>}</span><span class='tstring_content'> &amp;&amp; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_proc'>proc</span><span class='period'>.</span><span class='id identifier rubyid_arity'>arity</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span><span class='embexpr_end'>}</span><span class='tstring_content'> != 2) {
-        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default_proc takes two arguments</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default_proc takes two arguments</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
       }
     }
     self.none = nil;
@@ -1947,7 +1945,7 @@
 266</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 240</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 240</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2036,7 +2034,7 @@
 305</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 268</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 268</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_if'>delete_if</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:delete_if</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -2132,7 +2130,7 @@
 338</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 309</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 309</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -2203,7 +2201,7 @@
 356</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 340</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 340</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_key'>each_key</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_key</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -2271,7 +2269,7 @@
 386</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 360</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 360</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_value'>each_value</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_value</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -2347,7 +2345,7 @@
 390</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 388</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 388</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_empty?'>empty?</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.keys.length === 0</span><span class='tstring_end'>`</span></span>
@@ -2409,7 +2407,7 @@
 428</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 394</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 394</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_defaults'>defaults</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2443,7 +2441,7 @@
       return defaults;
     }
 
-    </span><span class='embexpr_beg'>#{</span> <span class='id identifier rubyid_raise'>raise</span> <span class='const'>KeyError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key not found</span><span class='tstring_end'>&quot;</span></span> <span class='embexpr_end'>}</span><span class='tstring_content'>;
+    </span><span class='embexpr_beg'>#{</span> <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="KeyError.html" title="KeyError (class)">KeyError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key not found</span><span class='tstring_end'>&quot;</span></span> <span class='embexpr_end'>}</span><span class='tstring_content'>;
   </span><span class='tstring_end'>}</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2507,7 +2505,7 @@
 468</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 430</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 430</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_flatten'>flatten</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='op'>=</span><span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2620,7 +2618,7 @@
 493</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 470</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 470</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2705,7 +2703,7 @@
 505</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 495</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 495</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_has_value?'>has_value?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2776,7 +2774,7 @@
 543</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 508</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 508</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2866,7 +2864,7 @@
 572</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 547</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 547</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2951,7 +2949,7 @@
 604</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 574</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 574</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_indexes'>indexes</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3048,7 +3046,7 @@
 646</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 609</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 609</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3149,7 +3147,7 @@
 686</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 648</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 648</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_invert'>invert</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3251,7 +3249,7 @@
 726</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 688</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 688</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_keep_if'>keep_if</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:keep_if</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -3317,7 +3315,7 @@
 734</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 732</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 732</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_keys'>keys</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.keys.slice(0)</span><span class='tstring_end'>`</span></span>
@@ -3351,7 +3349,7 @@
 738</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 736</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 736</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_length'>length</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.keys.length</span><span class='tstring_end'>`</span></span>
@@ -3387,11 +3385,11 @@
 750</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 742</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 742</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='kw'>unless</span> <span class='const'>Hash</span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span>
-    <span class='id identifier rubyid_other'>other</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='const'>Hash</span><span class='comma'>,</span> <span class='symbol'>:to_hash</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span>
+    <span class='id identifier rubyid_other'>other</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'><span class='object_link'><a href="Opal.html#coerce_to!-class_method" title="Opal.coerce_to! (method)">coerce_to!</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_hash</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_cloned'>cloned</span> <span class='op'>=</span> <span class='id identifier rubyid_clone'>clone</span>
@@ -3489,12 +3487,12 @@
 816</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 752</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 752</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
-    if (! </span><span class='embexpr_beg'>#{</span><span class='const'>Hash</span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
-      other = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='const'>Hash</span><span class='comma'>,</span> <span class='symbol'>:to_hash</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+    if (! </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_other'>other</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+      other = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'><span class='object_link'><a href="Opal.html#coerce_to!-class_method" title="Opal.coerce_to! (method)">coerce_to!</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_hash</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
     }
 
     var keys  = self.keys,
@@ -3606,7 +3604,7 @@
 845</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 818</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 818</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rassoc'>rassoc</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3699,7 +3697,7 @@
 887</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 847</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 847</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reject'>reject</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:reject</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -3793,7 +3791,7 @@
 917</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 889</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 889</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_replace'>replace</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3888,7 +3886,7 @@
 960</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 919</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 919</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:select</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -3995,7 +3993,7 @@
 1002</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 962</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 962</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_select!'>select!</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:select!</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -4087,7 +4085,7 @@
 1030</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 1004</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 1004</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_shift'>shift</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4163,7 +4161,7 @@
 1060</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 1036</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 1036</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4230,7 +4228,7 @@
 1079</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 1062</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 1062</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4275,7 +4273,7 @@
 1083</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 1081</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 1081</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='kw'>self</span>
@@ -4327,7 +4325,7 @@
 1117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/hash.rb', line 1093</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/hash.rb', line 1093</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_values'>values</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4364,9 +4362,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

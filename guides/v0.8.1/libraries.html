@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -114,12 +120,12 @@ from. If you want to add a directory to this load path, you can add it to
 either the global environment, or a sprockets instance.</p>
 <h3>Global Environment</h3>
 <p>In the <code>Opal</code> module, a property <code>paths</code> is used to hold the load paths which
-<code>Opal</code> uses to require files from. You can add a directory to this:</p><div class="highlight"><pre><span class="no">Opal</span><span class="o">.</span><span class="n">append_path</span> <span class="s1">&#39;../my_lib&#39;</span>
+<code>Opal</code> uses to require files from. You can add a directory to this:</p><div class="highlight"><pre><span></span><span class="no">Opal</span><span class="o">.</span><span class="n">append_path</span> <span class="s1">&#39;../my_lib&#39;</span>
 </pre></div><p>Now, any ruby files in this directory can be discovered.</p>
 <h3>Sprockets instances</h3>
 <p><code>Opal::Environment</code> is a subclass of the sprockets environment class which
 can have instance specific paths added to it. This class will inherit all
-global paths, but you can also add your instance paths as:</p><div class="highlight"><pre><span class="n">env</span> <span class="o">=</span> <span class="no">Opal</span><span class="o">::</span><span class="no">Environment</span><span class="o">.</span><span class="n">new</span>
+global paths, but you can also add your instance paths as:</p><div class="highlight"><pre><span></span><span class="n">env</span> <span class="o">=</span> <span class="no">Opal</span><span class="o">::</span><span class="no">Environment</span><span class="o">.</span><span class="n">new</span>
 <span class="n">env</span><span class="o">.</span><span class="n">append_path</span> <span class="s1">&#39;../my_lib&#39;</span>
 </pre></div>
 <h2>with Opal::Builder</h2>

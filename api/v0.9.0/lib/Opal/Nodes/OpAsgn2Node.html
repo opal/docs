@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::OpAsgn2Node
   
@@ -100,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb</dd>
+    <dd>opal/lib/opal/nodes/call_special.rb</dd>
   </dl>
   
 </div>
@@ -117,9 +115,6 @@ s(:op_asgn2, lhs, :b=, :+, rhs)</p>
   
 
 </div>
-  <h2>Constant Summary</h2>
-  
-
 
 
   <h2>Constant Summary</h2>
@@ -316,7 +311,7 @@ s(:op_asgn2, lhs, :b=, :+, rhs)</p>
 219</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb', line 213</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/call_special.rb', line 213</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_op'>op</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -356,7 +351,7 @@ s(:op_asgn2, lhs, :b=, :+, rhs)</p>
 239</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb', line 231</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/call_special.rb', line 231</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_and'>compile_and</span>
   <span class='id identifier rubyid_with_temp'>with_temp</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tmp'>tmp</span><span class='op'>|</span>
@@ -398,7 +393,7 @@ s(:op_asgn2, lhs, :b=, :+, rhs)</p>
 249</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb', line 241</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/call_special.rb', line 241</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_operator'>compile_operator</span>
   <span class='id identifier rubyid_with_temp'>with_temp</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tmp'>tmp</span><span class='op'>|</span>
@@ -440,7 +435,7 @@ s(:op_asgn2, lhs, :b=, :+, rhs)</p>
 229</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb', line 221</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/call_special.rb', line 221</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_or'>compile_or</span>
   <span class='id identifier rubyid_with_temp'>with_temp</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tmp'>tmp</span><span class='op'>|</span>
@@ -476,7 +471,7 @@ s(:op_asgn2, lhs, :b=, :+, rhs)</p>
 211</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/call_special.rb', line 209</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/call_special.rb', line 209</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_meth'>meth</span>
   <span class='id identifier rubyid_mid'>mid</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span>
@@ -491,9 +486,9 @@ s(:op_asgn2, lhs, :b=, :+, rhs)</p>
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

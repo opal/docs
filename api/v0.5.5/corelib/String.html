@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: String
   
@@ -103,8 +101,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb<span class="defines">,<br />
-  /Users/elia/Code/opal-docs/opal/opal/corelib/encoding.rb</span>
+    <dd>opal/opal/corelib/string.rb<span class="defines">,<br />
+  opal/opal/corelib/encoding.rb</span>
 </dd>
   </dl>
   
@@ -203,7 +201,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%2A-instance_method" title="#* (instance method)">#<strong>*</strong>(count)  &#x21d2; Object </a>
+      <a href="#*-instance_method" title="#* (instance method)">#<strong>*</strong>(count)  &#x21d2; Object </a>
     
 
     
@@ -247,7 +245,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C%3D%3E-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(other)  &#x21d2; Object </a>
+      <a href="#<=>-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -269,7 +267,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -293,7 +291,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%7E-instance_method" title="#=~ (instance method)">#<strong>=~</strong>(other)  &#x21d2; Object </a>
+      <a href="#=~-instance_method" title="#=~ (instance method)">#<strong>=~</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -315,7 +313,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(index, length = undefined)  &#x21d2; Object </a>
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(index, length = undefined)  &#x21d2; Object </a>
     
 
     
@@ -1592,7 +1590,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Comparable.html" title="Comparable (module)">Comparable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Comparable.html#%3C-instance_method" title="Comparable#&lt; (method)">#<</a></span>, <span class='object_link'><a href="Comparable.html#%3C%3D-instance_method" title="Comparable#&lt;= (method)">#<=</a></span>, <span class='object_link'><a href="Comparable.html#%3E-instance_method" title="Comparable#&gt; (method)">#></a></span>, <span class='object_link'><a href="Comparable.html#%3E%3D-instance_method" title="Comparable#&gt;= (method)">#>=</a></span>, <span class='object_link'><a href="Comparable.html#between%3F-instance_method" title="Comparable#between? (method)">#between?</a></span>, <span class='object_link'><a href="Comparable.html#normalize-class_method" title="Comparable.normalize (method)">normalize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Comparable.html#<-instance_method" title="Comparable#&lt; (method)">#<</a></span>, <span class='object_link'><a href="Comparable.html#<=-instance_method" title="Comparable#&lt;= (method)">#<=</a></span>, <span class='object_link'><a href="Comparable.html#>-instance_method" title="Comparable#&gt; (method)">#></a></span>, <span class='object_link'><a href="Comparable.html#>=-instance_method" title="Comparable#&gt;= (method)">#>=</a></span>, <span class='object_link'><a href="Comparable.html#between%3F-instance_method" title="Comparable#between? (method)">#between?</a></span>, <span class='object_link'><a href="Comparable.html#normalize-class_method" title="Comparable.normalize (method)">normalize</a></span></p>
 
 
   <div id="class_method_details" class="method_details_list">
@@ -1619,7 +1617,7 @@
 14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>new String(str)</span><span class='tstring_end'>`</span></span>
@@ -1651,7 +1649,7 @@
 10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_try_convert'>try_convert</span><span class='lparen'>(</span><span class='id identifier rubyid_what'>what</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_what'>what</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span>
@@ -1693,10 +1691,10 @@
 22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='op'>%</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='const'>Array</span> <span class='op'>===</span> <span class='id identifier rubyid_data'>data</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_data'>data</span>
     <span class='id identifier rubyid_format'>format</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_format'>format</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
@@ -1745,7 +1743,7 @@
 44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='op'>*</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1795,10 +1793,10 @@
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='op'>+</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_other'>other</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span>
+  <span class='id identifier rubyid_other'>other</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span> <span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_str</span>
 
   <span class='backtick'>`</span><span class='tstring_content'>self + </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='embexpr_end'>}</span><span class='tstring_end'>`</span></span>
 <span class='kw'>end</span></pre>
@@ -1842,7 +1840,7 @@
 69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:to_str</span>
@@ -1891,7 +1889,7 @@
 73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>!!(other._isString &amp;&amp; self.valueOf() === other.valueOf())</span><span class='tstring_end'>`</span></span>
@@ -1927,12 +1925,12 @@
 85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='op'>=~</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     if (other._isString) {
-      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>type mismatch: String given</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>type mismatch: String given</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
     }
 
     return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span> <span class='op'>=~</span> <span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
@@ -2017,7 +2015,7 @@
 139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2097,7 +2095,7 @@
 130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/encoding.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/encoding.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bytes'>bytes</span>
   <span class='id identifier rubyid_each_byte'>each_byte</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
@@ -2127,7 +2125,7 @@
 134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/encoding.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/encoding.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bytesize'>bytesize</span>
   <span class='ivar'>@encoding</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
@@ -2157,7 +2155,7 @@
 143</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_capitalize'>capitalize</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.charAt(0).toUpperCase() + self.substr(1).toLowerCase()</span><span class='tstring_end'>`</span></span>
@@ -2189,10 +2187,10 @@
 149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 145</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_casecmp'>casecmp</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_other'>other</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_other'>other</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 
   <span class='backtick'>`</span><span class='tstring_content'>self.toLowerCase()</span><span class='tstring_end'>`</span></span> <span class='op'>&lt;=&gt;</span> <span class='backtick'>`</span><span class='tstring_content'>other.toLowerCase()</span><span class='tstring_end'>`</span></span>
 <span class='kw'>end</span></pre>
@@ -2235,14 +2233,14 @@
 167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 151</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 151</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_center'>center</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_padstr'>padstr</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_width'>width</span>  <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_padstr'>padstr</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span><span class='lparen'>(</span><span class='id identifier rubyid_padstr'>padstr</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_width'>width</span>  <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_padstr'>padstr</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_padstr'>padstr</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_padstr'>padstr</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>zero width padding</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>zero width padding</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
   <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>width &lt;= self.length</span><span class='tstring_end'>`</span></span>
@@ -2279,7 +2277,7 @@
 171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 169</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_chars'>chars</span>
   <span class='id identifier rubyid_each_char'>each_char</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
@@ -2329,12 +2327,12 @@
 195</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 173</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_chomp'>chomp</span><span class='lparen'>(</span><span class='id identifier rubyid_separator'>separator</span> <span class='op'>=</span> <span class='gvar'>$/</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>separator === nil || self.length === 0</span><span class='tstring_end'>`</span></span>
 
-  <span class='id identifier rubyid_separator'>separator</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span><span class='lparen'>(</span><span class='id identifier rubyid_separator'>separator</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_separator'>separator</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'><span class='object_link'><a href="Opal.html#coerce_to!-class_method" title="Opal.coerce_to! (method)">coerce_to!</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_separator'>separator</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 
   <span class='backtick'>%x{</span><span class='tstring_content'>
     if (separator === &quot;\\n&quot;) {
@@ -2392,7 +2390,7 @@
 212</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 197</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_chop'>chop</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2435,7 +2433,7 @@
 216</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 214</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 214</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_chr'>chr</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.charAt(0)</span><span class='tstring_end'>`</span></span>
@@ -2469,7 +2467,7 @@
 220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 218</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clone'>clone</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.slice()</span><span class='tstring_end'>`</span></span>
@@ -2499,7 +2497,7 @@
 224</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 222</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 222</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>(self.length - self.replace(new RegExp(str, &#39;g&#39;), &#39;&#39;).length) / str.length</span><span class='tstring_end'>`</span></span>
@@ -2529,7 +2527,7 @@
 230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 228</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 228</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_downcase'>downcase</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.toLowerCase()</span><span class='tstring_end'>`</span></span>
@@ -2563,7 +2561,7 @@
 142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/encoding.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/encoding.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_byte'>each_byte</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_byte</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2605,7 +2603,7 @@
 242</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 232</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 232</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_char'>each_char</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_char</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2660,7 +2658,7 @@
 263</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 244</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 244</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_line'>each_line</span><span class='lparen'>(</span><span class='id identifier rubyid_separator'>separator</span> <span class='op'>=</span> <span class='gvar'>$/</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='id identifier rubyid_separator'>separator</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2729,7 +2727,7 @@
 267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 265</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 265</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_empty?'>empty?</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.length === 0</span><span class='tstring_end'>`</span></span>
@@ -2759,7 +2757,7 @@
 146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/encoding.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/encoding.rb', line 144</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_encoding'>encoding</span>
   <span class='ivar'>@encoding</span>
@@ -2821,12 +2819,12 @@
 281</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 269</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 269</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_end_with?'>end_with?</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_suffixes'>suffixes</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     for (var i = 0, length = suffixes.length; i &lt; length; i++) {
-      var suffix = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='backtick'>`</span><span class='tstring_content'>suffixes[i]</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      var suffix = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span> <span class='backtick'>`</span><span class='tstring_content'>suffixes[i]</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
       if (self.length &gt;= suffix.length &amp;&amp; self.substr(0 - suffix.length) === suffix) {
         return true;
@@ -2870,10 +2868,10 @@
 159</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/encoding.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/encoding.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='id identifier rubyid_encoding'>encoding</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>=</span> <span class='const'>Encoding</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_encoding'>encoding</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Encoding.html" title="Encoding (class)">Encoding</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'><span class='object_link'><a href="Encoding.html#find-class_method" title="Encoding.find (method)">find</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_encoding'>encoding</span><span class='rparen'>)</span>
 
   <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>==</span> <span class='ivar'>@encoding</span>
 
@@ -2909,7 +2907,7 @@
 1037</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 1035</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 1035</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_freeze'>freeze</span>
   <span class='kw'>self</span>
@@ -2961,7 +2959,7 @@
 1041</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 1039</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 1039</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_frozen?'>frozen?</span>
   <span class='kw'>true</span>
@@ -2991,7 +2989,7 @@
 163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/encoding.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/encoding.rb', line 161</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='id identifier rubyid_idx'>idx</span><span class='rparen'>)</span>
   <span class='ivar'>@encoding</span><span class='period'>.</span><span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_idx'>idx</span><span class='rparen'>)</span>
@@ -3036,15 +3034,15 @@
 303</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 286</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 286</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='comma'>,</span> <span class='id identifier rubyid_replace'>replace</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='const'>String</span> <span class='op'>===</span> <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>||</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>||</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Regexp.html" title="Regexp (class)">Regexp</a></span></span><span class='period'>.</span><span class='id identifier rubyid_escape'><span class='object_link'><a href="Regexp.html#escape-class_method" title="Regexp.escape (method)">escape</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span>
   <span class='kw'>end</span>
 
-  <span class='kw'>unless</span> <span class='const'>Regexp</span> <span class='op'>===</span> <span class='id identifier rubyid_pattern'>pattern</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong argument type </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> (expected Regexp)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="Regexp.html" title="Regexp (class)">Regexp</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_pattern'>pattern</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong argument type </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> (expected Regexp)</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3081,7 +3079,7 @@
 307</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 305</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 305</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span>
   <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>.toString()</span><span class='tstring_end'>`</span></span>
@@ -3111,7 +3109,7 @@
 311</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 309</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 309</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_hex'>hex</span>
   <span class='id identifier rubyid_to_i'>to_i</span> <span class='int'>16</span>
@@ -3173,7 +3171,7 @@
 325</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 313</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 313</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3183,7 +3181,7 @@
   </span><span class='tstring_end'>}</span></span>
 
   <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:to_str</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no implicit conversion of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> into String</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no implicit conversion of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> into String</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='backtick'>`</span><span class='tstring_content'>self.indexOf(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>) !== -1</span><span class='tstring_end'>`</span></span>
@@ -3259,21 +3257,21 @@
 375</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 327</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 327</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_what'>what</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='const'>String</span> <span class='op'>===</span> <span class='id identifier rubyid_what'>what</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_what'>what</span>
     <span class='id identifier rubyid_what'>what</span> <span class='op'>=</span> <span class='id identifier rubyid_what'>what</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_what'>what</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:to_str</span>
     <span class='id identifier rubyid_what'>what</span> <span class='op'>=</span> <span class='id identifier rubyid_what'>what</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
-  <span class='kw'>elsif</span> <span class='kw'>not</span> <span class='const'>Regexp</span> <span class='op'>===</span> <span class='id identifier rubyid_what'>what</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type mismatch: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_what'>what</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> given</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='kw'>not</span> <span class='const'><span class='object_link'><a href="Regexp.html" title="Regexp (class)">Regexp</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_what'>what</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type mismatch: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_what'>what</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> given</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_offset'>offset</span>
-    <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
+    <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
 
     <span class='backtick'>%x{</span><span class='tstring_content'>
       var size = self.length;
@@ -3287,7 +3285,7 @@
       }
     </span><span class='tstring_end'>}</span></span>
 
-    <span class='kw'>if</span> <span class='const'>Regexp</span> <span class='op'>===</span> <span class='id identifier rubyid_what'>what</span>
+    <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="Regexp.html" title="Regexp (class)">Regexp</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_what'>what</span>
       <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_what'>what</span> <span class='op'>=~</span> <span class='backtick'>`</span><span class='tstring_content'>self.substr(offset)</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>-</span><span class='int'>1</span>
     <span class='kw'>else</span>
       <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>self.substr(offset).indexOf(what)</span><span class='tstring_end'>`</span></span>
@@ -3299,7 +3297,7 @@
       }
     </span><span class='tstring_end'>}</span></span>
   <span class='kw'>else</span>
-    <span class='kw'>if</span> <span class='const'>Regexp</span> <span class='op'>===</span> <span class='id identifier rubyid_what'>what</span>
+    <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="Regexp.html" title="Regexp (class)">Regexp</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_what'>what</span>
       <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_what'>what</span> <span class='op'>=~</span> <span class='kw'>self</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>-</span><span class='int'>1</span>
     <span class='kw'>else</span>
       <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>self.indexOf(what)</span><span class='tstring_end'>`</span></span>
@@ -3355,7 +3353,7 @@
 399</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 377</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 377</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3409,7 +3407,7 @@
 403</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 401</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 401</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_intern'>intern</span>
   <span class='kw'>self</span>
@@ -3443,7 +3441,7 @@
 411</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 409</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 409</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_length'>length</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.length</span><span class='tstring_end'>`</span></span>
@@ -3473,7 +3471,7 @@
 407</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 405</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 405</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lines'>lines</span><span class='lparen'>(</span><span class='id identifier rubyid_separator'>separator</span> <span class='op'>=</span> <span class='gvar'>$/</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_each_line'>each_line</span><span class='lparen'>(</span><span class='id identifier rubyid_separator'>separator</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
@@ -3523,14 +3521,14 @@
 435</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 413</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 413</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ljust'>ljust</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_padstr'>padstr</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_width'>width</span>  <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_padstr'>padstr</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span><span class='lparen'>(</span><span class='id identifier rubyid_padstr'>padstr</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_width'>width</span>  <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_padstr'>padstr</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_padstr'>padstr</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_padstr'>padstr</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>zero width padding</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>zero width padding</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
   <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>width &lt;= self.length</span><span class='tstring_end'>`</span></span>
@@ -3573,7 +3571,7 @@
 439</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 437</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 437</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lstrip'>lstrip</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.replace(/^\\s*/, &#39;&#39;)</span><span class='tstring_end'>`</span></span>
@@ -3611,15 +3609,15 @@
 451</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 441</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 441</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='comma'>,</span> <span class='id identifier rubyid_pos'>pos</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='const'>String</span> <span class='op'>===</span> <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>||</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>||</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Regexp.html" title="Regexp (class)">Regexp</a></span></span><span class='period'>.</span><span class='id identifier rubyid_escape'><span class='object_link'><a href="Regexp.html#escape-class_method" title="Regexp.escape (method)">escape</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_to_str'>to_str</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span>
   <span class='kw'>end</span>
 
-  <span class='kw'>unless</span> <span class='const'>Regexp</span> <span class='op'>===</span> <span class='id identifier rubyid_pattern'>pattern</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong argument type </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> (expected Regexp)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="Regexp.html" title="Regexp (class)">Regexp</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_pattern'>pattern</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong argument type </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> (expected Regexp)</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_pos'>pos</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -3662,7 +3660,7 @@
 464</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 453</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 453</span>
 
 <span class='kw'>def</span> <span class='kw'>next</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3701,7 +3699,7 @@
 468</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 466</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 466</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ord'>ord</span>
   <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>.charCodeAt(0)</span><span class='tstring_end'>`</span></span>
@@ -3736,7 +3734,7 @@
 477</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 470</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 470</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_partition'>partition</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3771,7 +3769,7 @@
 481</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 479</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 479</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reverse'>reverse</span>
   <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>.split(&#39;&#39;).reverse().join(&#39;&#39;)</span><span class='tstring_end'>`</span></span>
@@ -3851,14 +3849,14 @@
 526</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 484</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 484</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rindex'>rindex</span><span class='lparen'>(</span><span class='id identifier rubyid_search'>search</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     var search_type = (search == null ? Opal.NilClass : search.constructor);
     if (search_type != String &amp;&amp; search_type != RegExp) {
       var msg = &quot;type mismatch: &quot; + search_type + &quot; given&quot;;
-      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>msg</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Exception.html#new-class_method" title="Exception.new (method)">new</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>msg</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
     }
 
     if (</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>.length == 0) {
@@ -3937,14 +3935,14 @@
 546</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 528</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 528</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rjust'>rjust</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_padstr'>padstr</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_width'>width</span>  <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_padstr'>padstr</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span><span class='lparen'>(</span><span class='id identifier rubyid_padstr'>padstr</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_width'>width</span>  <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_padstr'>padstr</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_padstr'>padstr</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_padstr'>padstr</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>zero width padding</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>zero width padding</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
   <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>width &lt;= self.length</span><span class='tstring_end'>`</span></span>
@@ -3983,7 +3981,7 @@
 550</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 548</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 548</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rstrip'>rstrip</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.replace(/\\s*$/, &#39;&#39;)</span><span class='tstring_end'>`</span></span>
@@ -4037,7 +4035,7 @@
 578</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 552</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 552</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4054,7 +4052,7 @@
     var match;
 
     while ((match = pattern.exec(</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>)) != null) {
-      var match_data = </span><span class='embexpr_beg'>#{</span><span class='const'>MatchData</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='backtick'>`</span><span class='tstring_content'>pattern</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='backtick'>`</span><span class='tstring_content'>match</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      var match_data = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="MatchData.html" title="MatchData (class)">MatchData</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="MatchData.html#new-class_method" title="MatchData.new (method)">new</a></span></span> <span class='backtick'>`</span><span class='tstring_content'>pattern</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='backtick'>`</span><span class='tstring_content'>match</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
       if (block === nil) {
         match.length == 1 ? result.push(match[0]) : result.push(match.slice(1));
       }
@@ -4091,7 +4089,7 @@
 586</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 584</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 584</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='gvar'>$;</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_limit'>limit</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>.split(pattern, limit)</span><span class='tstring_end'>`</span></span>
@@ -4153,12 +4151,12 @@
 600</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 588</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 588</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_with?'>start_with?</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_prefixes'>prefixes</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     for (var i = 0, length = prefixes.length; i &lt; length; i++) {
-      var prefix = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='backtick'>`</span><span class='tstring_content'>prefixes[i]</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      var prefix = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span> <span class='backtick'>`</span><span class='tstring_content'>prefixes[i]</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
       if (self.indexOf(prefix) === 0) {
         return true;
@@ -4193,7 +4191,7 @@
 604</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 602</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 602</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_strip'>strip</span>
   <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>.replace(/^\\s*/, &#39;&#39;).replace(/\\s*$/, &#39;&#39;)</span><span class='tstring_end'>`</span></span>
@@ -4279,7 +4277,7 @@
 664</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 606</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 606</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='comma'>,</span> <span class='id identifier rubyid_replace'>replace</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4316,7 +4314,7 @@
       });
     }
     else if (replace !== undefined) {
-      if (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_replace'>replace</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+      if (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_replace'>replace</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
         return </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>.replace(pattern, function(str) {
           var value = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_replace'>replace</span><span class='lbracket'>[</span><span class='id identifier rubyid_str'>str</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
@@ -4324,10 +4322,10 @@
         });
       }
       else {
-        replace = </span><span class='embexpr_beg'>#{</span><span class='const'>String</span><span class='period'>.</span><span class='id identifier rubyid_try_convert'>try_convert</span><span class='lparen'>(</span><span class='id identifier rubyid_replace'>replace</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        replace = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="" title="String (class)">String</a></span></span><span class='period'>.</span><span class='id identifier rubyid_try_convert'><span class='object_link'><a href="#try_convert-class_method" title="String.try_convert (method)">try_convert</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_replace'>replace</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
         if (replace == null) {
-          </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>can&#39;t convert </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_replace'>replace</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> into String</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+          </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>can&#39;t convert </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_replace'>replace</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> into String</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
         }
 
         return </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>.replace(pattern, replace);
@@ -4373,7 +4371,7 @@
 678</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 668</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 668</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sum'>sum</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>16</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4421,7 +4419,7 @@
 692</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 680</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 680</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_swapcase'>swapcase</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4467,7 +4465,7 @@
 702</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 694</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 694</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4507,7 +4505,7 @@
 710</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 704</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 704</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_f'>to_f</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4549,7 +4547,7 @@
 722</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 712</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 712</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_i'>to_i</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='int'>10</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4594,7 +4592,7 @@
 733</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 724</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 724</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_proc'>to_proc</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -4635,9 +4633,9 @@
 737</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 735</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 735</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'><span class='object_link'><a href="top-level-namespace.html#to_s-class_method" title="::to_s (method)">to_s</a></span></span>
   <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>.toString()</span><span class='tstring_end'>`</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -4796,7 +4794,7 @@
 876</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 743</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 743</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tr'>tr</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -5106,7 +5104,7 @@
 1029</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 878</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 878</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tr_s'>tr_s</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -5285,7 +5283,7 @@
 1033</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string.rb', line 1031</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string.rb', line 1031</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_upcase'>upcase</span>
   <span class='backtick'>`</span><span class='tstring_content'>self.toUpperCase()</span><span class='tstring_end'>`</span></span>
@@ -5300,9 +5298,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

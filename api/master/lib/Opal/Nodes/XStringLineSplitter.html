@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -61,8 +61,6 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
-
       <div id="content"><h1>Module: Opal::Nodes::XStringLineSplitter
   
   
@@ -87,7 +85,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/literal.rb</dd>
+    <dd>opal/lib/opal/nodes/literal.rb</dd>
   </dl>
   
 </div>
@@ -170,7 +168,7 @@
 94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/literal.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/literal.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_split_lines'>compile_split_lines</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_sexp'>sexp</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_idx'>idx</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -180,7 +178,7 @@
     <span class='kw'>else</span>
       <span class='id identifier rubyid_line_sexp'>line_sexp</span> <span class='op'>=</span> <span class='id identifier rubyid_s'>s</span><span class='lparen'>(</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_line_sexp'>line_sexp</span><span class='period'>.</span><span class='id identifier rubyid_source'>source</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_sexp'>sexp</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span> <span class='op'>+</span> <span class='id identifier rubyid_idx'>idx</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
-      <span class='id identifier rubyid_frag'>frag</span> <span class='op'>=</span> <span class='const'>Fragment</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_line_sexp'>line_sexp</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_frag'>frag</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Fragment.html" title="Opal::Fragment (class)">Fragment</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Fragment.html#initialize-instance_method" title="Opal::Fragment#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_line_sexp'>line_sexp</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_frag'>frag</span>
     <span class='kw'>end</span>
 
@@ -197,9 +195,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

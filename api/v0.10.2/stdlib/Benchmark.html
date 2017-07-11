@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -61,8 +61,6 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="class_list.html"></iframe>
-
       <div id="content"><h1>Module: Benchmark
   
   
@@ -82,7 +80,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/benchmark.rb</dd>
+    <dd>opal/stdlib/benchmark.rb</dd>
   </dl>
   
 </div>
@@ -225,11 +223,10 @@ using the #benchmark method:</p>
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="BENCHMARK_VERSION-constant" class="">BENCHMARK_VERSION =
-          <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="BENCHMARK_VERSION-constant" class="">BENCHMARK_VERSION =
+        <div class="docstring">
   <div class="discussion">
     <p>:nodoc:</p>
 
@@ -240,11 +237,11 @@ using the #benchmark method:</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2002-04-25</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-      
-        <dt id="CAPTION-constant" class="">CAPTION =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2002-04-25</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="CAPTION-constant" class="">CAPTION =
+        <div class="docstring">
   <div class="discussion">
     <p>The default caption string (heading above the output times).</p>
 
@@ -255,11 +252,11 @@ using the #benchmark method:</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='const'>Benchmark</span><span class='op'>::</span><span class='const'>Tms</span><span class='op'>::</span><span class='const'>CAPTION</span></pre></dd>
-      
-        <dt id="FORMAT-constant" class="">FORMAT =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='const'>Benchmark</span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Benchmark/Tms.html" title="Benchmark::Tms (class)">Tms</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Benchmark/Tms.html#CAPTION-constant" title="Benchmark::Tms::CAPTION (constant)">CAPTION</a></span></span></pre></dd>
+    
+      <dt id="FORMAT-constant" class="">FORMAT =
+        <div class="docstring">
   <div class="discussion">
     <p>The default format string used to display times.  See also Benchmark::Tms#format.</p>
 
@@ -270,11 +267,10 @@ using the #benchmark method:</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='const'>Benchmark</span><span class='op'>::</span><span class='const'>Tms</span><span class='op'>::</span><span class='const'>FORMAT</span></pre></dd>
-      
-    </dl>
-  
+      </dt>
+      <dd><pre class="code"><span class='const'>Benchmark</span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Benchmark/Tms.html" title="Benchmark::Tms (class)">Tms</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Benchmark/Tms.html#FORMAT-constant" title="Benchmark::Tms::FORMAT (constant)">FORMAT</a></span></span></pre></dd>
+    
+  </dl>
 
 
 
@@ -444,10 +440,10 @@ Benchmark, and the #bm and #bmbm methods.</p>
 <p>Example:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>benchmark</span><span class='tstring_end'>&#39;</span></span>
-<span class='id identifier rubyid_include'>include</span> <span class='const'>Benchmark</span>          <span class='comment'># we need the CAPTION and FORMAT constants
+<span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="" title="Benchmark (module)">Benchmark</a></span></span>          <span class='comment'># we need the CAPTION and FORMAT constants
 </span>
 <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>5000000</span>
-<span class='const'>Benchmark</span><span class='period'>.</span><span class='id identifier rubyid_benchmark'>benchmark</span><span class='lparen'>(</span><span class='const'>CAPTION</span><span class='comma'>,</span> <span class='int'>7</span><span class='comma'>,</span> <span class='const'>FORMAT</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;total:</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;avg:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+<span class='const'><span class='object_link'><a href="" title="Benchmark (module)">Benchmark</a></span></span><span class='period'>.</span><span class='id identifier rubyid_benchmark'>benchmark</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#CAPTION-constant" title="Benchmark::CAPTION (constant)">CAPTION</a></span></span><span class='comma'>,</span> <span class='int'>7</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#FORMAT-constant" title="Benchmark::FORMAT (constant)">FORMAT</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;total:</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;avg:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
   <span class='id identifier rubyid_tf'>tf</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>for:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>   <span class='lbrace'>{</span> <span class='kw'>for</span> <span class='id identifier rubyid_i'>i</span> <span class='kw'>in</span> <span class='int'>1</span><span class='op'>..</span><span class='id identifier rubyid_n'>n</span><span class='semicolon'>;</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span> <span class='kw'>end</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_tt'>tt</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>times:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span>   <span class='semicolon'>;</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span> <span class='kw'>end</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_tu'>tu</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>upto:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>  <span class='lbrace'>{</span> <span class='int'>1</span><span class='period'>.</span><span class='id identifier rubyid_upto'>upto</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='semicolon'>;</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span> <span class='kw'>end</span> <span class='rbrace'>}</span>
@@ -495,18 +491,18 @@ Benchmark, and the #bm and #bmbm methods.</p>
 179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/benchmark.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/benchmark.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_benchmark'>benchmark</span><span class='lparen'>(</span><span class='id identifier rubyid_caption'>caption</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_label_width'>label_width</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_format'>format</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_labels'>labels</span><span class='rparen'>)</span> <span class='comment'># :yield: report
 </span>  <span class='id identifier rubyid_sync'>sync</span> <span class='op'>=</span> <span class='const'>STDOUT</span><span class='period'>.</span><span class='id identifier rubyid_sync'>sync</span>
   <span class='const'>STDOUT</span><span class='period'>.</span><span class='id identifier rubyid_sync'>sync</span> <span class='op'>=</span> <span class='kw'>true</span>
   <span class='id identifier rubyid_label_width'>label_width</span> <span class='op'>||=</span> <span class='int'>0</span>
   <span class='id identifier rubyid_label_width'>label_width</span> <span class='op'>+=</span> <span class='int'>1</span>
-  <span class='id identifier rubyid_format'>format</span> <span class='op'>||=</span> <span class='const'>FORMAT</span>
+  <span class='id identifier rubyid_format'>format</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="#FORMAT-constant" title="Benchmark::FORMAT (constant)">FORMAT</a></span></span>
   <span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='op'>*</span><span class='id identifier rubyid_label_width'>label_width</span> <span class='op'>+</span> <span class='id identifier rubyid_caption'>caption</span> <span class='kw'>unless</span> <span class='id identifier rubyid_caption'>caption</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-  <span class='id identifier rubyid_report'>report</span> <span class='op'>=</span> <span class='const'>Report</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_label_width'>label_width</span><span class='comma'>,</span> <span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_report'>report</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Benchmark/Report.html" title="Benchmark::Report (class)">Report</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Benchmark/Report.html#initialize-instance_method" title="Benchmark::Report#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_label_width'>label_width</span><span class='comma'>,</span> <span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_report'>report</span><span class='rparen'>)</span>
-  <span class='const'>Array</span> <span class='op'>===</span> <span class='id identifier rubyid_results'>results</span> <span class='kw'>and</span> <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_grep'>grep</span><span class='lparen'>(</span><span class='const'>Tms</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+  <span class='const'><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_results'>results</span> <span class='kw'>and</span> <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_grep'>grep</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Benchmark/Tms.html" title="Benchmark::Tms (class)">Tms</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
     <span class='id identifier rubyid_print'>print</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_labels'>labels</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span> <span class='op'>||</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_label'>label</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_ljust'>ljust</span><span class='lparen'>(</span><span class='id identifier rubyid_label_width'>label_width</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_format'>format</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span><span class='rparen'>)</span>
   <span class='rbrace'>}</span>
   <span class='id identifier rubyid_report'>report</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span>
@@ -537,7 +533,7 @@ reports with labels.  The parameters have the same meaning as for</p>
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>benchmark</span><span class='tstring_end'>&#39;</span></span>
 
 <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>5000000</span>
-<span class='const'>Benchmark</span><span class='period'>.</span><span class='id identifier rubyid_bm'>bm</span><span class='lparen'>(</span><span class='int'>7</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+<span class='const'><span class='object_link'><a href="" title="Benchmark (module)">Benchmark</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bm'>bm</span><span class='lparen'>(</span><span class='int'>7</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
   <span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>for:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>   <span class='lbrace'>{</span> <span class='kw'>for</span> <span class='id identifier rubyid_i'>i</span> <span class='kw'>in</span> <span class='int'>1</span><span class='op'>..</span><span class='id identifier rubyid_n'>n</span><span class='semicolon'>;</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span> <span class='kw'>end</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>times:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span>   <span class='semicolon'>;</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span> <span class='kw'>end</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>upto:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>  <span class='lbrace'>{</span> <span class='int'>1</span><span class='period'>.</span><span class='id identifier rubyid_upto'>upto</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='semicolon'>;</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span> <span class='kw'>end</span> <span class='rbrace'>}</span>
@@ -569,10 +565,10 @@ reports with labels.  The parameters have the same meaning as for</p>
 205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/benchmark.rb', line 203</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/benchmark.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bm'>bm</span><span class='lparen'>(</span><span class='id identifier rubyid_label_width'>label_width</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_labels'>labels</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span> <span class='comment'># :yield: report
-</span>  <span class='id identifier rubyid_benchmark'>benchmark</span><span class='lparen'>(</span><span class='const'>CAPTION</span><span class='comma'>,</span> <span class='id identifier rubyid_label_width'>label_width</span><span class='comma'>,</span> <span class='const'>FORMAT</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_labels'>labels</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+</span>  <span class='id identifier rubyid_benchmark'>benchmark</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#CAPTION-constant" title="Benchmark::CAPTION (constant)">CAPTION</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_label_width'>label_width</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#FORMAT-constant" title="Benchmark::FORMAT (constant)">FORMAT</a></span></span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_labels'>labels</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -608,7 +604,7 @@ calculate the required label width.</p>
 
   <span class='id identifier rubyid_array'>array</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='int'>1</span><span class='op'>..</span><span class='int'>1000000</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_rand'>rand</span> <span class='rbrace'>}</span>
 
-  <span class='const'>Benchmark</span><span class='period'>.</span><span class='id identifier rubyid_bmbm'>bmbm</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+  <span class='const'><span class='object_link'><a href="" title="Benchmark (module)">Benchmark</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bmbm'>bmbm</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
     <span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sort!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_sort!'>sort!</span> <span class='rbrace'>}</span>
     <span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sort</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>  <span class='lbrace'>{</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>  <span class='rbrace'>}</span>
   <span class='kw'>end</span>
@@ -671,10 +667,10 @@ calculate the required label width.</p>
 271</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/benchmark.rb', line 245</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/benchmark.rb', line 245</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bmbm'>bmbm</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span> <span class='op'>=</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='comment'># :yield: job
-</span>  <span class='id identifier rubyid_job'>job</span> <span class='op'>=</span> <span class='const'>Job</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='rparen'>)</span>
+</span>  <span class='id identifier rubyid_job'>job</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Benchmark/Job.html" title="Benchmark::Job (class)">Job</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Benchmark/Job.html#initialize-instance_method" title="Benchmark::Job#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='rparen'>)</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_job'>job</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_width'>width</span> <span class='op'>=</span> <span class='id identifier rubyid_job'>job</span><span class='period'>.</span><span class='id identifier rubyid_width'>width</span> <span class='op'>+</span> <span class='int'>1</span>
   <span class='id identifier rubyid_sync'>sync</span> <span class='op'>=</span> <span class='const'>STDOUT</span><span class='period'>.</span><span class='id identifier rubyid_sync'>sync</span>
@@ -682,20 +678,20 @@ calculate the required label width.</p>
 
   <span class='comment'># rehearsal
 </span>  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Rehearsal </span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_ljust'>ljust</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='op'>+</span><span class='const'>CAPTION</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_ets'>ets</span> <span class='op'>=</span> <span class='id identifier rubyid_job'>job</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='const'>Tms</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_sum'>sum</span><span class='comma'>,</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span><span class='op'>|</span>
+  <span class='id identifier rubyid_ets'>ets</span> <span class='op'>=</span> <span class='id identifier rubyid_job'>job</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Benchmark/Tms.html" title="Benchmark::Tms (class)">Tms</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Benchmark/Tms.html#initialize-instance_method" title="Benchmark::Tms#initialize (method)">new</a></span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_sum'>sum</span><span class='comma'>,</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span><span class='op'>|</span>
     <span class='id identifier rubyid_print'>print</span> <span class='id identifier rubyid_label'>label</span><span class='period'>.</span><span class='id identifier rubyid_ljust'>ljust</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'>Benchmark</span><span class='period'>.</span><span class='id identifier rubyid_measure'>measure</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Benchmark (module)">Benchmark</a></span></span><span class='period'>.</span><span class='id identifier rubyid_measure'><span class='object_link'><a href="#measure-class_method" title="Benchmark.measure (method)">measure</a></span></span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_print'>print</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_format'>format</span>
     <span class='id identifier rubyid_sum'>sum</span> <span class='op'>+</span> <span class='id identifier rubyid_res'>res</span>
   <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_format'>format</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>total: %tsec</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ets'>ets</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n\n</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_rjust'>rjust</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='op'>+</span><span class='const'>CAPTION</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>+</span><span class='int'>2</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 
   <span class='comment'># take
-</span>  <span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='op'>*</span><span class='id identifier rubyid_width'>width</span> <span class='op'>+</span> <span class='const'>CAPTION</span>
+</span>  <span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='op'>*</span><span class='id identifier rubyid_width'>width</span> <span class='op'>+</span> <span class='const'><span class='object_link'><a href="#CAPTION-constant" title="Benchmark::CAPTION (constant)">CAPTION</a></span></span>
   <span class='id identifier rubyid_job'>job</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
     <span class='const'>GC</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span>
     <span class='id identifier rubyid_print'>print</span> <span class='id identifier rubyid_label'>label</span><span class='period'>.</span><span class='id identifier rubyid_ljust'>ljust</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='rparen'>)</span>
-    <span class='const'>Benchmark</span><span class='period'>.</span><span class='id identifier rubyid_measure'>measure</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span> <span class='id identifier rubyid_print'>print</span> <span class='id identifier rubyid_res'>res</span> <span class='rbrace'>}</span>
+    <span class='const'><span class='object_link'><a href="" title="Benchmark (module)">Benchmark</a></span></span><span class='period'>.</span><span class='id identifier rubyid_measure'><span class='object_link'><a href="#measure-class_method" title="Benchmark.measure (method)">measure</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span> <span class='id identifier rubyid_print'>print</span> <span class='id identifier rubyid_res'>res</span> <span class='rbrace'>}</span>
   <span class='rbrace'>}</span>
 <span class='kw'>ensure</span>
   <span class='const'>STDOUT</span><span class='period'>.</span><span class='id identifier rubyid_sync'>sync</span> <span class='op'>=</span> <span class='id identifier rubyid_sync'>sync</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sync'>sync</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -744,13 +740,13 @@ Benchmark::Tms object.</p>
 296</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/benchmark.rb', line 286</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/benchmark.rb', line 286</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_measure'>measure</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># :yield:
 </span>  <span class='id identifier rubyid_t0'>t0</span><span class='comma'>,</span> <span class='id identifier rubyid_r0'>r0</span> <span class='op'>=</span> <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span><span class='comma'>,</span> <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_clock_gettime'>clock_gettime</span><span class='lparen'>(</span><span class='const'>BENCHMARK_CLOCK</span><span class='rparen'>)</span>
   <span class='kw'>yield</span>
   <span class='id identifier rubyid_t1'>t1</span><span class='comma'>,</span> <span class='id identifier rubyid_r1'>r1</span> <span class='op'>=</span> <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span><span class='comma'>,</span> <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_clock_gettime'>clock_gettime</span><span class='lparen'>(</span><span class='const'>BENCHMARK_CLOCK</span><span class='rparen'>)</span>
-  <span class='const'>Benchmark</span><span class='op'>::</span><span class='const'>Tms</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_t1'>t1</span><span class='period'>.</span><span class='id identifier rubyid_utime'>utime</span>  <span class='op'>-</span> <span class='id identifier rubyid_t0'>t0</span><span class='period'>.</span><span class='id identifier rubyid_utime'>utime</span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="" title="Benchmark (module)">Benchmark</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Benchmark/Tms.html" title="Benchmark::Tms (class)">Tms</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Benchmark/Tms.html#initialize-instance_method" title="Benchmark::Tms#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_t1'>t1</span><span class='period'>.</span><span class='id identifier rubyid_utime'>utime</span>  <span class='op'>-</span> <span class='id identifier rubyid_t0'>t0</span><span class='period'>.</span><span class='id identifier rubyid_utime'>utime</span><span class='comma'>,</span>
                      <span class='id identifier rubyid_t1'>t1</span><span class='period'>.</span><span class='id identifier rubyid_stime'>stime</span>  <span class='op'>-</span> <span class='id identifier rubyid_t0'>t0</span><span class='period'>.</span><span class='id identifier rubyid_stime'>stime</span><span class='comma'>,</span>
                      <span class='id identifier rubyid_t1'>t1</span><span class='period'>.</span><span class='id identifier rubyid_cutime'>cutime</span> <span class='op'>-</span> <span class='id identifier rubyid_t0'>t0</span><span class='period'>.</span><span class='id identifier rubyid_cutime'>cutime</span><span class='comma'>,</span>
                      <span class='id identifier rubyid_t1'>t1</span><span class='period'>.</span><span class='id identifier rubyid_cstime'>cstime</span> <span class='op'>-</span> <span class='id identifier rubyid_t0'>t0</span><span class='period'>.</span><span class='id identifier rubyid_cstime'>cstime</span><span class='comma'>,</span>
@@ -794,7 +790,7 @@ Benchmark::Tms object.</p>
 305</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/benchmark.rb', line 301</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/benchmark.rb', line 301</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_realtime'>realtime</span> <span class='comment'># :yield:
 </span>  <span class='id identifier rubyid_r0'>r0</span> <span class='op'>=</span> <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_clock_gettime'>clock_gettime</span><span class='lparen'>(</span><span class='const'>BENCHMARK_CLOCK</span><span class='rparen'>)</span>
@@ -811,9 +807,9 @@ Benchmark::Tms object.</p>
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

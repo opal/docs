@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -108,14 +114,14 @@
       </nav>
       <hr>
       <h1>Using Opal with Sinatra</h1>
-<p>Add Opal to your Gemfile (or install using <code>gem</code>):</p><div class="highlight"><pre><span class="c1"># Gemfile</span>
+<p>Add Opal to your Gemfile (or install using <code>gem</code>):</p><div class="highlight"><pre><span></span><span class="c1"># Gemfile</span>
 <span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span>
 <span class="n">gem</span> <span class="s1">&#39;opal&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 0.6.2&#39;</span>
 </pre></div><p>Opal uses <code>sprockets</code> as its default build system, so the asset-pipeline
 from rails can be mimicked here to map all ruby assets in the <code>/assets</code>
 path to be compiled using opal.</p>
 <h2>Basic Application</h2>
-<div class="highlight"><pre><span class="c1"># config.ru</span>
+<div class="highlight"><pre><span></span><span class="c1"># config.ru</span>
 <span class="nb">require</span> <span class="s1">&#39;opal&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
 
@@ -133,14 +139,14 @@ path to be compiled using opal.</p>
 <span class="k">end</span>
 
 <span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
-  <span class="o">&lt;&lt;-</span><span class="no">HTML</span>
+  <span class="o">&lt;&lt;-</span><span class="dl">HTML</span>
 <span class="sh">    &lt;!doctype html&gt;</span>
 <span class="sh">    &lt;html&gt;</span>
 <span class="sh">      &lt;head&gt;</span>
 <span class="sh">        &lt;script src=&quot;/assets/application.js&quot;&gt;&lt;/script&gt;</span>
 <span class="sh">      &lt;/head&gt;</span>
 <span class="sh">    &lt;/html&gt;</span>
-<span class="no">  HTML</span>
+<span class="dl">  HTML</span>
 <span class="k">end</span>
 
 <span class="n">run</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Application</span>
@@ -150,7 +156,7 @@ uses a set of load paths to compile assets using sprockets. The
 with all the custom opal paths added automatically.</p><p>This <code>env</code> object includes all the opal corelib and stdlib paths. To add
 any custom application directories, you must add them to the load path using
 <code>env.append_path</code>. You can now add an <code>app/application.rb</code> file into this
-added path with some basic content:</p><div class="highlight"><pre><span class="c1"># app/application.rb</span>
+added path with some basic content:</p><div class="highlight"><pre><span></span><span class="c1"># app/application.rb</span>
 <span class="nb">require</span> <span class="s1">&#39;opal&#39;</span>
 
 <span class="nb">puts</span> <span class="s2">&quot;wow, running ruby!&quot;</span>
@@ -158,7 +164,7 @@ added path with some basic content:</p><div class="highlight"><pre><span class="
 This just makes the Opal runtime and corelib available. Then it is possible to
 use all the corelib methods and classes, e.g. <code>Kernel#puts</code> as seen above.</p>
 <h3>Running Application</h3>
-<p>As this is just a simple sinatra application, you can run it:</p><div class="highlight"><pre><span class="nv">$ </span>bundle <span class="nb">exec </span>rackup
+<p>As this is just a simple sinatra application, you can run it:</p><div class="highlight"><pre><span></span>$ bundle <span class="nb">exec</span> rackup
 </pre></div><p>And point your browser towards <code>http://localhost:9292/</code> and view the browser
 debug console. You should see this message printed.</p>
 

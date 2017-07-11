@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -112,9 +118,9 @@
 <h2><code>Opal::Processor.load_asset_code</code> deprecated</h2>
 <p><code>Opal::Processor.load_asset_code(sprockets, name)</code> has been deprecated in favor of <code>Opal::Sprockets.load_asset(name, sprockets)</code>.</p>
 <h2><code>$console.log</code> instead of <code>pp</code></h2>
-<p>Previously <code>pp</code> would have forwarded the object to JS own <code>console.log</code> but now just prints calling <code>.inspect</code> on it similarly to what <code>p</code> does.</p><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;pp&#39;</span>
+<p>Previously <code>pp</code> would have forwarded the object to JS own <code>console.log</code> but now just prints calling <code>.inspect</code> on it similarly to what <code>p</code> does.</p><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;pp&#39;</span>
 <span class="n">pp</span> <span class="ss">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">b</span><span class="p">:</span> <span class="p">{</span><span class="ss">c</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
-</pre></div><p>Now:</p><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;console&#39;</span>
+</pre></div><p>Now:</p><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;console&#39;</span>
 <span class="vg">$console</span><span class="o">.</span><span class="n">log</span> <span class="ss">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">b</span><span class="p">:</span> <span class="p">{</span><span class="ss">c</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
 </pre></div>
 

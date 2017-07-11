@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Encoding
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb</dd>
+    <dd>opal/opal/corelib/string/encoding.rb</dd>
   </dl>
   
 </div>
@@ -492,7 +490,7 @@
 41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='id identifier rubyid_ascii'>ascii</span><span class='comma'>,</span> <span class='id identifier rubyid_dummy'>dummy</span><span class='rparen'>)</span>
   <span class='ivar'>@name</span>  <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
@@ -542,7 +540,7 @@
 33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default_external'>default_external</span>
   <span class='ivar'>@default_external</span>
@@ -589,7 +587,7 @@
 36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='ivar'>@name</span>
@@ -631,7 +629,7 @@
 36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_names'>names</span>
   <span class='ivar'>@names</span>
@@ -702,7 +700,7 @@
 28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_upcase'>upcase</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
@@ -710,14 +708,14 @@
   <span class='id identifier rubyid_constants'>constants</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_const'>const</span><span class='op'>|</span>
     <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>=</span> <span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='id identifier rubyid_const'>const</span><span class='rparen'>)</span>
 
-    <span class='kw'>next</span> <span class='kw'>unless</span> <span class='const'>Encoding</span> <span class='op'>===</span> <span class='id identifier rubyid_encoding'>encoding</span>
+    <span class='kw'>next</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="Encoding (class)">Encoding</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_encoding'>encoding</span>
 
     <span class='kw'>if</span> <span class='id identifier rubyid_encoding'>encoding</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_upcase'>upcase</span> <span class='op'>||</span> <span class='id identifier rubyid_encoding'>encoding</span><span class='period'>.</span><span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_upcase'>upcase</span><span class='rparen'>)</span>
       <span class='kw'>return</span> <span class='id identifier rubyid_encoding'>encoding</span>
     <span class='kw'>end</span>
   <span class='rbrace'>}</span>
 
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown encoding name - </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown encoding name - </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -750,11 +748,11 @@
 12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_names'>names</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:aliases</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>=</span> <span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span><span class='period'>.</span>
+  <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Class.html" title="Class (class)">Class</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Class.html#new-class_method" title="Class.new (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span><span class='period'>.</span>
     <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:ascii</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dummy</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='kw'>false</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
@@ -814,7 +812,7 @@
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ascii_compatible?'>ascii_compatible?</span>
   <span class='ivar'>@ascii</span>
@@ -866,10 +864,10 @@
 70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bytesize'>bytesize</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -918,7 +916,7 @@
 49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dummy?'>dummy?</span>
   <span class='ivar'>@dummy</span>
@@ -971,10 +969,10 @@
 62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_byte'>each_byte</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1023,10 +1021,10 @@
 66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1053,7 +1051,7 @@
 57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;Encoding:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@name</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> (dummy)</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@dummy</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -1083,9 +1081,9 @@
 53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/string/encoding.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/string/encoding.rb', line 51</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'><span class='object_link'><a href="top-level-namespace.html#to_s-class_method" title="::to_s (method)">to_s</a></span></span>
   <span class='ivar'>@name</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1098,9 +1096,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

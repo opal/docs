@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: MSpec::Opal::Environment
   
@@ -102,7 +100,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb</dd>
+    <dd>opal/lib/mspec/opal/rake_task.rb</dd>
   </dl>
   
 </div>
@@ -510,19 +508,19 @@
 134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_basedir'>basedir</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='op'>::</span><span class='const'>Opal</span><span class='op'>::</span><span class='const'>Processor</span><span class='period'>.</span><span class='id identifier rubyid_arity_check_enabled'>arity_check_enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
-  <span class='op'>::</span><span class='const'>Opal</span><span class='op'>::</span><span class='const'>Processor</span><span class='period'>.</span><span class='id identifier rubyid_dynamic_require_severity'>dynamic_require_severity</span> <span class='op'>=</span> <span class='symbol'>:ignore</span>
+  <span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal/Processor.html" title="Opal::Processor (class)">Processor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_arity_check_enabled'><span class='object_link'><a href="../../Opal/Processor.html#arity_check_enabled-class_method" title="Opal::Processor.arity_check_enabled (method)">arity_check_enabled</a></span></span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal/Processor.html" title="Opal::Processor (class)">Processor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dynamic_require_severity'><span class='object_link'><a href="../../Opal/Processor.html#dynamic_require_severity-class_method" title="Opal::Processor.dynamic_require_severity (method)">dynamic_require_severity</a></span></span> <span class='op'>=</span> <span class='symbol'>:ignore</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='ivar'>@pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_pattern'>pattern</span>
-  <span class='ivar'>@basedir</span> <span class='op'>=</span> <span class='id identifier rubyid_basedir'>basedir</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_basedir'>basedir</span> <span class='op'>||</span> <span class='const'>DEFAULT_BASEDIR</span><span class='rparen'>)</span>
+  <span class='ivar'>@basedir</span> <span class='op'>=</span> <span class='id identifier rubyid_basedir'>basedir</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_basedir'>basedir</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Opal.html#DEFAULT_BASEDIR-constant" title="MSpec::Opal::DEFAULT_BASEDIR (constant)">DEFAULT_BASEDIR</a></span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_append_path'>append_path</span> <span class='id identifier rubyid_basedir'>basedir</span>
   <span class='id identifier rubyid_use_gem'>use_gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mspec</span><span class='tstring_end'>&#39;</span></span>
 
   <span class='id identifier rubyid_stubs'>stubs</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_asset'>asset</span><span class='op'>|</span>
-    <span class='op'>::</span><span class='const'>Opal</span><span class='op'>::</span><span class='const'>Processor</span><span class='period'>.</span><span class='id identifier rubyid_stub_file'>stub_file</span> <span class='id identifier rubyid_asset'>asset</span>
+    <span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal/Processor.html" title="Opal::Processor (class)">Processor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stub_file'><span class='object_link'><a href="../../Opal/Processor.html#stub_file-class_method" title="Opal::Processor.stub_file (method)">stub_file</a></span></span> <span class='id identifier rubyid_asset'>asset</span>
   <span class='kw'>end</span>
 
   <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>OPAL_SPEC</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_files_to_run'>files_to_run</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -569,7 +567,7 @@
 120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_basedir'>basedir</span>
   <span class='ivar'>@basedir</span>
@@ -611,7 +609,7 @@
 120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pattern'>pattern</span>
   <span class='ivar'>@pattern</span>
@@ -649,7 +647,7 @@
 165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 162</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_files'>add_files</span> <span class='id identifier rubyid_specs'>specs</span>
   <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Adding </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_specs'>specs</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> spec files...</span><span class='tstring_end'>&quot;</span></span>
@@ -681,11 +679,11 @@
 156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 153</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_min'>build_min</span> <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_basedir'>basedir</span><span class='embexpr_end'>}</span><span class='tstring_content'>/build/specs.min.js</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>opal/util</span><span class='tstring_end'>&#39;</span></span>
-  <span class='id identifier rubyid_build'>build</span> <span class='op'>::</span><span class='const'>Opal</span><span class='op'>::</span><span class='const'>Util</span><span class='period'>.</span><span class='id identifier rubyid_uglify'>uglify</span><span class='lparen'>(</span><span class='id identifier rubyid_specs'>specs</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_file'>file</span>
+  <span class='id identifier rubyid_build'>build</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal/Util.html" title="Opal::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_uglify'><span class='object_link'><a href="../../Opal/Util.html#uglify-instance_method" title="Opal::Util#uglify (method)">uglify</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_specs'>specs</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_file'>file</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -715,7 +713,7 @@
 220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 215</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_specs'>build_specs</span> <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_basedir'>basedir</span><span class='embexpr_end'>}</span><span class='tstring_content'>/build/specs.js</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_code'>code</span> <span class='op'>=</span> <span class='id identifier rubyid_specs'>specs</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -748,7 +746,7 @@
 160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 158</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 158</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_files'>files</span>
   <span class='ivar'>@files</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -791,7 +789,7 @@
 213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_files_to_run'>files_to_run</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='comment'># add any filters in spec/filters of specs we dont want to run
@@ -836,7 +834,7 @@
 171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_paths_from_glob'>paths_from_glob</span> <span class='id identifier rubyid_pattern'>pattern</span>
   <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
@@ -875,7 +873,7 @@
 182</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 173</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rubyspec_paths'>rubyspec_paths</span>
   <span class='id identifier rubyid_rubyspec_white_list'>rubyspec_white_list</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='op'>|</span>
@@ -916,7 +914,7 @@
 190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 184</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 184</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rubyspec_paths_in_dir'>rubyspec_paths_in_dir</span><span class='lparen'>(</span><span class='id identifier rubyid_dirname'>dirname</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_entries'>entries</span><span class='lparen'>(</span><span class='id identifier rubyid_dirname'>dirname</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_spec'>spec</span><span class='op'>|</span>
@@ -952,7 +950,7 @@
 196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 192</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 192</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rubyspec_white_list'>rubyspec_white_list</span>
   <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_basedir'>basedir</span><span class='embexpr_end'>}</span><span class='tstring_content'>/rubyspecs</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span>
@@ -984,7 +982,7 @@
 151</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 149</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 149</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_specs'>specs</span>
   <span class='ivar'>@specs</span> <span class='op'>||=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mspec/opal/main</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Cannot find mspec/opal/main inside </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1023,7 +1021,7 @@
 147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/mspec/opal/rake_task.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/mspec/opal/rake_task.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stubs'>stubs</span>
   <span class='comment'># missing stdlib
@@ -1047,9 +1045,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::Nodes::HashNode
   
@@ -100,14 +98,11 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb</dd>
+    <dd>opal/lib/opal/nodes/hash.rb</dd>
   </dl>
   
 </div>
 
-
-  <h2>Constant Summary</h2>
-  
 
 
 
@@ -439,7 +434,7 @@
 15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
@@ -489,7 +484,7 @@
 10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_has_kwsplat'>has_kwsplat</span>
   <span class='ivar'>@has_kwsplat</span>
@@ -531,7 +526,7 @@
 10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_keys'>keys</span>
   <span class='ivar'>@keys</span>
@@ -573,7 +568,7 @@
 10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_values'>values</span>
   <span class='ivar'>@values</span>
@@ -618,7 +613,7 @@
 64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile'>compile</span>
   <span class='id identifier rubyid_extract_kv_pairs_and_kwsplats'>extract_kv_pairs_and_kwsplats</span>
@@ -674,7 +669,7 @@ with complex keys.</p>
 112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_hash'>compile_hash</span>
   <span class='id identifier rubyid_helper'>helper</span> <span class='symbol'>:hash</span>
@@ -737,7 +732,7 @@ and containing <strong>only</strong> string/symbols as keys.</p>
 133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_hash2'>compile_hash2</span>
   <span class='id identifier rubyid_hash_obj'>hash_obj</span><span class='comma'>,</span> <span class='id identifier rubyid_hash_keys'>hash_keys</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -822,7 +817,7 @@ Hash k/v pairs override previously defined kwsplat values</p>
 99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compile_merge'>compile_merge</span>
   <span class='id identifier rubyid_helper'>helper</span> <span class='symbol'>:hash</span>
@@ -915,7 +910,7 @@ So k/v pairs and kwsplats can be mixed in any order.</p>
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extract_kv_pairs_and_kwsplats'>extract_kv_pairs_and_kwsplats</span>
   <span class='id identifier rubyid_found_key'>found_key</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -981,7 +976,7 @@ So k/v pairs and kwsplats can be mixed in any order.</p>
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/nodes/hash.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/nodes/hash.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_simple_keys?'>simple_keys?</span>
   <span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='symbol'>:sym</span><span class='comma'>,</span> <span class='symbol'>:str</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -996,9 +991,9 @@ So k/v pairs and kwsplats can be mixed in any order.</p>
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

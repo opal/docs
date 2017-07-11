@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -113,10 +119,10 @@
 <li>The opal gem running on a server (so the ruby code can get compiled to JavaScript).</li>
 <li>The Opal search path has to know to look for your gem when it is required.</li>
 </ol>
-<p>This is done by having the following 2 lines in your outermost .rb file:</p><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;opal&#39;</span>
+<p>This is done by having the following 2 lines in your outermost .rb file:</p><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;opal&#39;</span>
 <span class="no">Opal</span><span class="o">.</span><span class="n">append_path</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="bp">__FILE__</span><span class="p">)</span><span class="o">.</span><span class="n">untaint</span>
 </pre></div><p>However it only makes sense to execute these lines outside of Opal, since what they do is set things up for Opal to find and compile the files to .js. So how these lines get added to your gem depends on whether the gem can usefully run in the normal server environment as well as in Opal, or just strictly in Opal.</p><p>For example, you have a gem that parses, validates, and gives details on email addresses.  This gem would be just as useful on the server, as running
-in the browser.</p><p>On the other hand you have a gem that does something with the DOM.  There would be no point in making this gem available to the server.</p><p>Each case is detailed below, assuming you have a Gem file structure like this:</p><div class="highlight"><pre>/lib
+in the browser.</p><p>On the other hand you have a gem that does something with the DOM.  There would be no point in making this gem available to the server.</p><p>Each case is detailed below, assuming you have a Gem file structure like this:</p><div class="highlight"><pre><span></span>/lib
   /your_gem_directory
     /your_gem_file1.rb
     /your_gem_file2.rb
@@ -126,7 +132,7 @@ in the browser.</p><p>On the other hand you have a gem that does something with 
 </pre></div>
 <h2>Configuring Gems To Run Everywhere</h2>
 <p>If your gem will work both in Opal and in a classic ruby environment
-your outer .rb file (<code>your_gem.rb</code>) needs to look like this</p><div class="highlight"><pre><span class="c1"># require all the files, regardless of whether this code is running</span>
+your outer .rb file (<code>your_gem.rb</code>) needs to look like this</p><div class="highlight"><pre><span></span><span class="c1"># require all the files, regardless of whether this code is running</span>
 <span class="c1"># to run on the server, or inside of Opal.</span>
 <span class="n">require_relative</span> <span class="s1">&#39;your_gem_directory/your_gem_file1.rb&#39;</span>
 <span class="n">require_relative</span> <span class="s1">&#39;your_gem_directory/your_gem_file2.rb&#39;</span>
@@ -152,7 +158,7 @@ your outer .rb file (<code>your_gem.rb</code>) needs to look like this</p><div c
 </ol>
 <p>The result is that you have two versions of the code, one in standard ruby, and a second compiled to .js and ready to be served.</p>
 <h2>Configuring Gems To Run In Opal Only</h2>
-<p>If it makes no sense to run the code in standard Ruby (i.e. on the server) then the above code can look like this:</p><div class="highlight"><pre><span class="c1"># require all the files, only if Opal is executing</span>
+<p>If it makes no sense to run the code in standard Ruby (i.e. on the server) then the above code can look like this:</p><div class="highlight"><pre><span></span><span class="c1"># require all the files, only if Opal is executing</span>
 <span class="k">if</span> <span class="no">RUBY_ENGINE</span> <span class="o">==</span> <span class="s1">&#39;opal&#39;</span>
   <span class="n">require_relative</span> <span class="s1">&#39;your_gem_directory/your_gem_file1.rb&#39;</span>
   <span class="n">require_relative</span> <span class="s1">&#39;your_gem_directory/your_gem_file2.rb&#39;</span>
@@ -166,9 +172,9 @@ your outer .rb file (<code>your_gem.rb</code>) needs to look like this</p><div c
 <span class="k">end</span>
 </pre></div>
 <h2>Testing</h2>
-<p>Regardless of which case your gem is designed for, you will want to make sure you test inside the Opal environment.  If nothing else you will want to make sure you have all the above configuration setup correctly.</p><p>To do this add the following to your gemspec:</p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">add_development_dependency</span> <span class="s2">&quot;opal-rspec&quot;</span>
+<p>Regardless of which case your gem is designed for, you will want to make sure you test inside the Opal environment.  If nothing else you will want to make sure you have all the above configuration setup correctly.</p><p>To do this add the following to your gemspec:</p><div class="highlight"><pre><span></span><span class="n">spec</span><span class="o">.</span><span class="n">add_development_dependency</span> <span class="s2">&quot;opal-rspec&quot;</span>
 <span class="n">spec</span><span class="o">.</span><span class="n">add_development_dependency</span> <span class="s2">&quot;opal&quot;</span>
-</pre></div><p>Then setup the following in config.ru (assuming your specs are in the /spec directory.)</p><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;bundler&#39;</span>
+</pre></div><p>Then setup the following in config.ru (assuming your specs are in the /spec directory.)</p><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;bundler&#39;</span>
 <span class="no">Bundler</span><span class="o">.</span><span class="n">require</span>
 
 <span class="nb">require</span> <span class="s1">&#39;opal-rspec&#39;</span>
@@ -180,18 +186,18 @@ your outer .rb file (<code>your_gem.rb</code>) needs to look like this</p><div c
   <span class="n">s</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="kp">false</span>
   <span class="n">s</span><span class="o">.</span><span class="n">index_path</span> <span class="o">=</span> <span class="s1">&#39;spec/index.html.erb&#39;</span>
 <span class="p">}</span>
-</pre></div><p>Finally create a index.html.erb file in the spec directory with the following contents:</p><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
+</pre></div><p>Finally create a index.html.erb file in the spec directory with the following contents:</p><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="err">&lt;</span>%= javascript_include_tag @server.main %&gt;
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div><p>With all this setup, you can run specs normally to test standard ruby execution, and then do</p><div class="highlight"><pre>bundle exec rackup
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div><p>With all this setup, you can run specs normally to test standard ruby execution, and then do</p><div class="highlight"><pre><span></span>bundle exec rackup
 </pre></div><p>and point your browser to localhost, and you will see your spec results running in the Opal environment.</p><p>Don&#39;t forget to checkout the added features of the opal-rspec gem such as async specs.</p>
 <h2>Conditional Execution</h2>
-<p>In some cases you might have to check whether you are in Opal or not, just wrap the code in:</p><div class="highlight"><pre><span class="k">if</span> <span class="no">RUBY_ENGINE</span> <span class="o">==</span> <span class="s1">&#39;opal&#39;</span>
+<p>In some cases you might have to check whether you are in Opal or not, just wrap the code in:</p><div class="highlight"><pre><span></span><span class="k">if</span> <span class="no">RUBY_ENGINE</span> <span class="o">==</span> <span class="s1">&#39;opal&#39;</span>
   <span class="c1"># …</span>
 <span class="k">end</span>
 </pre></div><p>This might happen in your specs or in the actual gem code.</p>

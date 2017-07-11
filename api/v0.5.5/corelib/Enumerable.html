@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -61,8 +61,6 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="class_list.html"></iframe>
-
       <div id="content"><h1>Module: Enumerable
   
   
@@ -87,7 +85,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb</dd>
+    <dd>opal/opal/corelib/enumerable.rb</dd>
   </dl>
   
 </div>
@@ -1082,7 +1080,7 @@
 34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 2</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all?'>all?</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1097,7 +1095,7 @@
           return $breaker;
         }
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_falsy?'>falsy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_falsy?'>falsy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           result = false;
           return $breaker;
         }
@@ -1105,7 +1103,7 @@
     }
     else {
       self.$each._p = function(obj) {
-        if (arguments.length == 1 &amp;&amp; </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_falsy?'>falsy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>obj</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (arguments.length == 1 &amp;&amp; </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_falsy?'>falsy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>obj</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           result = false;
           return $breaker;
         }
@@ -1194,7 +1192,7 @@
 68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_any?'>any?</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1209,7 +1207,7 @@
           return $breaker;
         }
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           result = true;
           return $breaker;
         }
@@ -1217,7 +1215,7 @@
     }
     else {
       self.$each._p = function(obj) {
-        if (arguments.length != 1 || </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>obj</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (arguments.length != 1 || </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>obj</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           result = true;
           return $breaker;
         }
@@ -1276,10 +1274,10 @@
 72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_chunk'>chunk</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1329,7 +1327,7 @@
 95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_collect'>collect</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:collect</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -1404,10 +1402,10 @@
 99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_collect_concat'>collect_concat</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1462,7 +1460,7 @@
 131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1470,7 +1468,7 @@
 
     if (object != null) {
       block = function() {
-        return </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='backtick'>`</span><span class='tstring_content'>object</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        return </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='backtick'>`</span><span class='tstring_content'>object</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
       };
     }
     else if (block === nil) {
@@ -1485,7 +1483,7 @@
         return $breaker;
       }
 
-      if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+      if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
         result++;
       }
     }
@@ -1581,13 +1579,13 @@
 196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cycle'>cycle</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:cycle</span><span class='comma'>,</span> <span class='id identifier rubyid_n'>n</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
 
   <span class='kw'>unless</span> <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-    <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'>coerce_to!</span> <span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
+    <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to!'><span class='object_link'><a href="Opal.html#coerce_to!-class_method" title="Opal.coerce_to! (method)">coerce_to!</a></span></span> <span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
 
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>n &lt;= 0</span><span class='tstring_end'>`</span></span>
   <span class='kw'>end</span>
@@ -1597,7 +1595,7 @@
         all  = [];
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
           value = $opal.$yield1(block, param);
 
       if (value === $breaker) {
@@ -1708,7 +1706,7 @@
 232</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_detect'>detect</span><span class='lparen'>(</span><span class='id identifier rubyid_ifnone'>ifnone</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:detect</span><span class='comma'>,</span> <span class='id identifier rubyid_ifnone'>ifnone</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -1717,7 +1715,7 @@
     var result = undefined;
 
     self.$each._p = function() {
-      var params = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+      var params = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
           value  = $opal.$yield1(block, params);
 
       if (value === $breaker) {
@@ -1725,7 +1723,7 @@
         return $breaker;
       }
 
-      if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+      if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
         result = params;
         return $breaker;
       }
@@ -1791,13 +1789,13 @@
 257</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 234</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_drop'>drop</span><span class='lparen'>(</span><span class='id identifier rubyid_number'>number</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='id identifier rubyid_number'>number</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
+  <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span> <span class='id identifier rubyid_number'>number</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
 
   <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>number &lt; 0</span><span class='tstring_end'>`</span></span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>attempt to drop negative size</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>attempt to drop negative size</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -1806,7 +1804,7 @@
 
     self.$each._p = function() {
       if (number &lt;= current) {
-        result.push(</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>);
+        result.push(</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>);
       }
 
       current++;
@@ -1872,7 +1870,7 @@
 291</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 259</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 259</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_drop_while'>drop_while</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:drop_while</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -1882,7 +1880,7 @@
         dropping = true;
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
       if (dropping) {
         var value = $opal.$yield1(block, param);
@@ -1892,7 +1890,7 @@
           return $breaker;
         }
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_falsy?'>falsy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_falsy?'>falsy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           dropping = false;
           result.push(param);
         }
@@ -1954,10 +1952,10 @@
 295</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 293</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 293</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_cons'>each_cons</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2006,10 +2004,10 @@
 299</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 297</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 297</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_entry'>each_entry</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2077,13 +2075,13 @@
 344</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 301</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 301</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_slice'>each_slice</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
+  <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span> <span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
 
   <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>n &lt;= 0</span><span class='tstring_end'>`</span></span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>invalid slice size</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>invalid slice size</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_slice</span><span class='comma'>,</span> <span class='id identifier rubyid_n'>n</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2093,7 +2091,7 @@
         slice = []
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
       slice.push(param);
 
@@ -2173,7 +2171,7 @@
 373</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 346</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 346</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_with_index'>each_with_index</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_with_index</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2183,7 +2181,7 @@
         index = 0;
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
           value = block(param, index);
 
       if (value === $breaker) {
@@ -2250,7 +2248,7 @@
 399</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 375</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 375</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:each_with_object</span><span class='comma'>,</span> <span class='id identifier rubyid_object'>object</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2259,7 +2257,7 @@
     var result;
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
           value = block(param, object);
 
       if (value === $breaker) {
@@ -2316,14 +2314,14 @@
 413</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 401</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 401</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_entries'>entries</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     var result = [];
 
     self.$each._p = function() {
-      result.push(</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>);
+      result.push(</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>);
     };
 
     self.$each.apply(self, args);
@@ -2382,7 +2380,7 @@
 441</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 417</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 417</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_all'>find_all</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:find_all</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2391,7 +2389,7 @@
     var result = [];
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
           value = $opal.$yield1(block, param);
 
       if (value === $breaker) {
@@ -2399,7 +2397,7 @@
         return $breaker;
       }
 
-      if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+      if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
         result.push(param);
       }
     };
@@ -2473,7 +2471,7 @@
 484</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 443</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 443</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_index'>find_index</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:find_index</span> <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>object === undefined &amp;&amp; block === nil</span><span class='tstring_end'>`</span></span>
@@ -2484,7 +2482,7 @@
 
     if (object != null) {
       self.$each._p = function() {
-        var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
         if (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>param</span><span class='tstring_end'>`</span></span> <span class='op'>==</span> <span class='backtick'>`</span><span class='tstring_content'>object</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           result = index;
@@ -2503,7 +2501,7 @@
           return $breaker;
         }
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           result = index;
           return $breaker;
         }
@@ -2582,7 +2580,7 @@
 528</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 486</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 486</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_first'>first</span><span class='lparen'>(</span><span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>number === undefined</span><span class='tstring_end'>`</span></span>
@@ -2590,7 +2588,7 @@
 
     <span class='backtick'>%x{</span><span class='tstring_content'>
       self.$each._p = function() {
-        result = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        result = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
         return $breaker;
       };
@@ -2599,10 +2597,10 @@
     </span><span class='tstring_end'>}</span></span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='id identifier rubyid_number'>number</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
+    <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span> <span class='id identifier rubyid_number'>number</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
 
     <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>number &lt; 0</span><span class='tstring_end'>`</span></span>
-      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>attempt to take negative size</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>attempt to take negative size</span><span class='tstring_end'>&#39;</span></span>
     <span class='kw'>end</span>
 
     <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>number == 0</span><span class='tstring_end'>`</span></span>
@@ -2611,10 +2609,10 @@
 
     <span class='backtick'>%x{</span><span class='tstring_content'>
       var current = 0,
-          number  = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='id identifier rubyid_number'>number</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+          number  = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span> <span class='id identifier rubyid_number'>number</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
       self.$each._p = function() {
-        result.push(</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>);
+        result.push(</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>);
 
         if (number &lt;= ++current) {
           return $breaker;
@@ -2686,7 +2684,7 @@
 568</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 532</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 532</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_grep'>grep</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2694,10 +2692,10 @@
 
     if (block !== nil) {
       self.$each._p = function() {
-        var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+        var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
             value = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>===</span> <span class='backtick'>`</span><span class='tstring_content'>param</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           value = $opal.$yield1(block, param);
 
           if (value === $breaker) {
@@ -2711,10 +2709,10 @@
     }
     else {
       self.$each._p = function() {
-        var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+        var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
             value = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>===</span> <span class='backtick'>`</span><span class='tstring_content'>param</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           result.push(param);
         }
       };
@@ -2776,18 +2774,18 @@
 598</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 570</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 570</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_group_by'>group_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:group_by</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
 
-  <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Hash.html#initialize-instance_method" title="Hash#initialize (method)">new</a></span></span>
 
   <span class='backtick'>%x{</span><span class='tstring_content'>
     var result;
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
           value = $opal.$yield1(block, param);
 
       if (value === $breaker) {
@@ -2873,14 +2871,14 @@
 617</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 600</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 600</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
     var result = false;
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
       if (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>param</span><span class='tstring_end'>`</span></span> <span class='op'>==</span> <span class='id identifier rubyid_obj'>obj</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
         result = true;
@@ -2969,7 +2967,7 @@
 668</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 619</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 619</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='id identifier rubyid_sym'>sym</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -2977,7 +2975,7 @@
 
     if (block !== nil &amp;&amp; sym === undefined) {
       self.$each._p = function() {
-        var value = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        var value = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
         if (result === undefined) {
           result = value;
@@ -2996,8 +2994,8 @@
     }
     else {
       if (sym === undefined) {
-        if (!</span><span class='embexpr_beg'>#{</span><span class='const'>Symbol</span> <span class='op'>===</span> <span class='id identifier rubyid_object'>object</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
-          </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>TypeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a Symbol</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        if (!</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="top-level-namespace.html#Symbol-constant" title="Symbol (constant)">Symbol</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_object'>object</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+          </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not a Symbol</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
         }
 
         sym    = object;
@@ -3005,7 +3003,7 @@
       }
 
       self.$each._p = function() {
-        var value = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        var value = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
         if (result === undefined) {
           result = value;
@@ -3048,10 +3046,10 @@
 674</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 670</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 670</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lazy'>lazy</span>
-  <span class='const'>Enumerator</span><span class='op'>::</span><span class='const'>Lazy</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_enumerator_size'>enumerator_size</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_enum'>enum</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='op'>|</span>
+  <span class='const'><span class='object_link'><a href="Enumerator.html" title="Enumerator (class)">Enumerator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Enumerator/Lazy.html" title="Enumerator::Lazy (class)">Lazy</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Enumerator/Lazy.html#initialize-instance_method" title="Enumerator::Lazy#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_enumerator_size'>enumerator_size</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_enum'>enum</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='op'>|</span>
     <span class='id identifier rubyid_enum'>enum</span><span class='period'>.</span><span class='id identifier rubyid_yield'>yield</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -3126,7 +3124,7 @@
 731</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 683</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 683</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_max'>max</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3134,7 +3132,7 @@
 
     if (block !== nil) {
       self.$each._p = function() {
-        var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
         if (result === undefined) {
           result = param;
@@ -3149,7 +3147,7 @@
         }
 
         if (value === nil) {
-          </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>comparison failed</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+          </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>comparison failed</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
         }
 
         if (value &gt; 0) {
@@ -3159,14 +3157,14 @@
     }
     else {
       self.$each._p = function() {
-        var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
         if (result === undefined) {
           result = param;
           return;
         }
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_compare'>compare</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>param</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='backtick'>`</span><span class='tstring_content'>result</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> &gt; 0) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_compare'><span class='object_link'><a href="Opal.html#compare-class_method" title="Opal.compare (method)">compare</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>param</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='backtick'>`</span><span class='tstring_content'>result</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> &gt; 0) {
           result = param;
         }
       };
@@ -3232,7 +3230,7 @@
 765</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 733</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 733</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_max_by'>max_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:max_by</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -3242,7 +3240,7 @@
         by;
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
           value = $opal.$yield1(block, param);
 
       if (result === undefined) {
@@ -3338,7 +3336,7 @@
 817</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 769</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 769</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_min'>min</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3346,7 +3344,7 @@
 
     if (block !== nil) {
       self.$each._p = function() {
-        var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
         if (result === undefined) {
           result = param;
@@ -3361,7 +3359,7 @@
         }
 
         if (value === nil) {
-          </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>comparison failed</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+          </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>comparison failed</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
         }
 
         if (value &lt; 0) {
@@ -3371,14 +3369,14 @@
     }
     else {
       self.$each._p = function() {
-        var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
         if (result === undefined) {
           result = param;
           return;
         }
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_compare'>compare</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>param</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='backtick'>`</span><span class='tstring_content'>result</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> &lt; 0) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_compare'><span class='object_link'><a href="Opal.html#compare-class_method" title="Opal.compare (method)">compare</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>param</span><span class='tstring_end'>`</span></span><span class='comma'>,</span> <span class='backtick'>`</span><span class='tstring_content'>result</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> &lt; 0) {
           result = param;
         }
       };
@@ -3444,7 +3442,7 @@
 851</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 819</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 819</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_min_by'>min_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:min_by</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -3454,7 +3452,7 @@
         by;
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
           value = $opal.$yield1(block, param);
 
       if (result === undefined) {
@@ -3526,10 +3524,10 @@
 855</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 853</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 853</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_minmax'>minmax</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3578,10 +3576,10 @@
 859</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 857</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 857</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_minmax_by'>minmax_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3662,7 +3660,7 @@
 895</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 861</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 861</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_none?'>none?</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3677,7 +3675,7 @@
           return $breaker;
         }
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           result = false;
           return $breaker;
         }
@@ -3685,9 +3683,9 @@
     }
     else {
       self.$each._p = function() {
-        var value = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        var value = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           result = false;
           return $breaker;
         }
@@ -3786,7 +3784,7 @@
 939</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 897</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 897</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_one?'>one?</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -3801,7 +3799,7 @@
           return $breaker;
         }
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           if (result === true) {
             result = false;
             return $breaker;
@@ -3813,9 +3811,9 @@
     }
     else {
       self.$each._p = function() {
-        var value = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
+        var value = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
-        if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+        if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
           if (result === true) {
             result = false;
             return $breaker;
@@ -3878,10 +3876,10 @@
 943</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 941</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 941</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_partition'>partition</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3930,10 +3928,10 @@
 949</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 947</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 947</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reverse_each'>reverse_each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -4016,24 +4014,24 @@
 1011</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 953</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 953</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slice_before'>slice_before</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='backtick'>`</span><span class='tstring_content'>pattern === undefined &amp;&amp; block === nil || arguments.length &gt; 1</span><span class='tstring_end'>`</span></span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong number of arguments (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>arguments.length</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> for 1)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong number of arguments (</span><span class='embexpr_beg'>#{</span><span class='backtick'>`</span><span class='tstring_content'>arguments.length</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> for 1)</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
-  <span class='const'>Enumerator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span>
+  <span class='const'><span class='object_link'><a href="Enumerator.html" title="Enumerator (class)">Enumerator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Enumerator.html#initialize-instance_method" title="Enumerator#initialize (method)">new</a></span></span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span>
     <span class='backtick'>%x{</span><span class='tstring_content'>
       var slice = [];
 
       if (block !== nil) {
         if (pattern === undefined) {
           self.$each._p = function() {
-            var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+            var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
                 value = $opal.$yield1(block, param);
 
-            if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> &amp;&amp; slice.length &gt; 0) {
+            if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> &amp;&amp; slice.length &gt; 0) {
               </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span> <span class='op'>&lt;&lt;</span> <span class='backtick'>`</span><span class='tstring_content'>slice</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
               slice = [];
             }
@@ -4043,10 +4041,10 @@
         }
         else {
           self.$each._p = function() {
-            var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+            var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
                 value = block(param, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='embexpr_end'>}</span><span class='tstring_content'>);
 
-            if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> &amp;&amp; slice.length &gt; 0) {
+            if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> &amp;&amp; slice.length &gt; 0) {
               </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span> <span class='op'>&lt;&lt;</span> <span class='backtick'>`</span><span class='tstring_content'>slice</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
               slice = [];
             }
@@ -4057,10 +4055,10 @@
       }
       else {
         self.$each._p = function() {
-          var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+          var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
               value = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>===</span> <span class='backtick'>`</span><span class='tstring_content'>param</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
 
-          if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> &amp;&amp; slice.length &gt; 0) {
+          if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_truthy?'>truthy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> &amp;&amp; slice.length &gt; 0) {
             </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span> <span class='op'>&lt;&lt;</span> <span class='backtick'>`</span><span class='tstring_content'>slice</span><span class='tstring_end'>`</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>;
             slice = [];
           }
@@ -4124,10 +4122,10 @@
 1015</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 1013</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 1013</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sort'>sort</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -4160,13 +4158,13 @@
 1025</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 1017</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 1017</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sort_by'>sort_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:sort_by</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
 
   <span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span>
-    <span class='id identifier rubyid_arg'>arg</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_arg'>arg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span>
 
     <span class='lbracket'>[</span><span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_arg'>arg</span><span class='rbracket'>]</span>
   <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>|</span> <span class='backtick'>`</span><span class='tstring_content'>arg[1]</span><span class='tstring_end'>`</span></span> <span class='rbrace'>}</span>
@@ -4196,7 +4194,7 @@
 1029</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 1027</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 1027</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_take'>take</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_first'>first</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
@@ -4250,7 +4248,7 @@
 1057</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 1031</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 1031</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_take_while'>take_while</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span> <span class='symbol'>:take_while</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span>
@@ -4259,7 +4257,7 @@
     var result = [];
 
     self.$each._p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
           value = $opal.$yield1(block, param);
 
       if (value === $breaker) {
@@ -4267,7 +4265,7 @@
         return $breaker;
       }
 
-      if (</span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_falsy?'>falsy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
+      if (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_falsy?'>falsy?</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) {
         return $breaker;
       }
 
@@ -4326,10 +4324,10 @@
 1063</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerable.rb', line 1061</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerable.rb', line 1061</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_zip'>zip</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_lists'>lists</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -4341,9 +4339,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

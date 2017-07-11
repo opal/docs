@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Enumerator
   
@@ -103,7 +101,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/enumerator.rb</dd>
+    <dd>opal/opal/corelib/enumerator.rb</dd>
   </dl>
   
 </div>
@@ -342,17 +340,17 @@
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerator.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerator.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span>
-    <span class='ivar'>@object</span> <span class='op'>=</span> <span class='const'>Generator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+    <span class='ivar'>@object</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Enumerator/Generator.html" title="Enumerator::Generator (class)">Generator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Enumerator/Generator.html#initialize-instance_method" title="Enumerator::Generator#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
     <span class='ivar'>@method</span> <span class='op'>=</span> <span class='symbol'>:each</span>
     <span class='ivar'>@args</span>   <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='ivar'>@size</span>   <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>arguments[0] || nil</span><span class='tstring_end'>`</span></span>
 
     <span class='kw'>if</span> <span class='ivar'>@size</span>
-      <span class='ivar'>@size</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='ivar'>@size</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
+      <span class='ivar'>@size</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span> <span class='ivar'>@size</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
     <span class='kw'>end</span>
   <span class='kw'>else</span>
     <span class='ivar'>@object</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>arguments[0]</span><span class='tstring_end'>`</span></span>
@@ -403,7 +401,7 @@
 20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerator.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerator.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='kw'>for</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span> <span class='op'>=</span> <span class='symbol'>:each</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='backtick'>%x{</span><span class='tstring_content'>
@@ -455,7 +453,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerator.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerator.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -497,13 +495,13 @@
 100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerator.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerator.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@object</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@method</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
   <span class='kw'>unless</span> <span class='ivar'>@args</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@args</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='lbracket'>[</span><span class='const'>Range</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>2</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@args</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="Range.html" title="Range (class)">Range</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Range.html#initialize-instance_method" title="Range#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>2</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_result'>result</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -533,10 +531,10 @@
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerator.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerator.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_size'>size</span>
-  <span class='const'>Proc</span> <span class='op'>===</span> <span class='ivar'>@size</span> <span class='op'>?</span> <span class='ivar'>@size</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='op'>*</span><span class='ivar'>@args</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='ivar'>@size</span>
+  <span class='const'><span class='object_link'><a href="Proc.html" title="Proc (class)">Proc</a></span></span> <span class='op'>===</span> <span class='ivar'>@size</span> <span class='op'>?</span> <span class='ivar'>@size</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='op'>*</span><span class='ivar'>@args</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='ivar'>@size</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -595,11 +593,11 @@
 88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/enumerator.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/enumerator.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_with_index'>with_index</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_offset'>offset</span>
-    <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'>coerce_to</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
+    <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_coerce_to'><span class='object_link'><a href="Opal.html#coerce_to-class_method" title="Opal.coerce_to (method)">coerce_to</a></span></span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></span><span class='comma'>,</span> <span class='symbol'>:to_int</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='kw'>end</span>
@@ -610,7 +608,7 @@
     var result, index = offset;
 
     self.$each.$$p = function() {
-      var param = </span><span class='embexpr_beg'>#{</span><span class='const'>Opal</span><span class='period'>.</span><span class='id identifier rubyid_destructure'>destructure</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
+      var param = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Opal.html" title="Opal (module)">Opal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_destructure'><span class='object_link'><a href="Opal.html#destructure-class_method" title="Opal.destructure (method)">destructure</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='tstring_content'>arguments</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>,
           value = block(param, index);
 
       if (value === $breaker) {
@@ -642,9 +640,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

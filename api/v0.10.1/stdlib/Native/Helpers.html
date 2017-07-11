@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -61,8 +61,6 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="../class_list.html"></iframe>
-
       <div id="content"><h1>Module: Native::Helpers
   
   
@@ -82,7 +80,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/native.rb</dd>
+    <dd>opal/stdlib/native.rb</dd>
   </dl>
   
 </div>
@@ -224,7 +222,7 @@
       
       <pre class="example code"><code>
 <span class='kw'>class</span> <span class='const'>Element</span>
-  <span class='id identifier rubyid_include'>include</span> <span class='const'>Native</span><span class='op'>::</span><span class='const'>Helpers</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../Native.html" title="Native (module)">Native</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Native::Helpers (module)">Helpers</a></span></span>
 
   <span class='id identifier rubyid_alias_native'>alias_native</span> <span class='symbol'>:add_class</span><span class='comma'>,</span> <span class='symbol'>:addClass</span>
   <span class='id identifier rubyid_alias_native'>alias_native</span> <span class='symbol'>:show</span>
@@ -327,25 +325,25 @@ is expected to accept a native JavaScript value.</p>
 163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/native.rb', line 143</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_alias_native'>alias_native</span><span class='lparen'>(</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='id identifier rubyid_old'>old</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='label'>as:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_old'>old</span><span class='period'>.</span><span class='id identifier rubyid_end_with?'>end_with?</span> <span class='CHAR'>?=</span>
     <span class='id identifier rubyid_define_method'>define_method</span> <span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-      <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_old'>old</span><span class='lbracket'>[</span><span class='int'>0</span> <span class='op'>..</span> <span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>] = </span><span class='embexpr_beg'>#{</span><span class='const'>Native</span><span class='period'>.</span><span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>`</span></span>
+      <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_old'>old</span><span class='lbracket'>[</span><span class='int'>0</span> <span class='op'>..</span> <span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>] = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Native.html" title="Native (module)">Native</a></span></span><span class='period'>.</span><span class='id identifier rubyid_convert'><span class='object_link'><a href="../Native.html#convert-class_method" title="Native.convert (method)">convert</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>`</span></span>
 
       <span class='id identifier rubyid_value'>value</span>
     <span class='kw'>end</span>
   <span class='kw'>else</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_as'>as</span>
       <span class='id identifier rubyid_define_method'>define_method</span> <span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='op'>|</span>
-        <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='const'>Native</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='ivar'>@native</span><span class='comma'>,</span> <span class='id identifier rubyid_old'>old</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Native.html" title="Native (module)">Native</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'><span class='object_link'><a href="../Native.html#call-class_method" title="Native.call (method)">call</a></span></span><span class='lparen'>(</span><span class='ivar'>@native</span><span class='comma'>,</span> <span class='id identifier rubyid_old'>old</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
           <span class='id identifier rubyid_as'>as</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_to_n'>to_n</span><span class='rparen'>)</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
     <span class='kw'>else</span>
       <span class='id identifier rubyid_define_method'>define_method</span> <span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='op'>|</span>
-        <span class='const'>Native</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='ivar'>@native</span><span class='comma'>,</span> <span class='id identifier rubyid_old'>old</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="../Native.html" title="Native (module)">Native</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'><span class='object_link'><a href="../Native.html#call-class_method" title="Native.call (method)">call</a></span></span><span class='lparen'>(</span><span class='ivar'>@native</span><span class='comma'>,</span> <span class='id identifier rubyid_old'>old</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
@@ -376,7 +374,7 @@ is expected to accept a native JavaScript value.</p>
 184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 181</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/native.rb', line 181</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_native_accessor'>native_accessor</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_native_reader'>native_reader</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
@@ -411,12 +409,12 @@ is expected to accept a native JavaScript value.</p>
 171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 165</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/native.rb', line 165</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_native_reader'>native_reader</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
     <span class='id identifier rubyid_define_method'>define_method</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>do</span>
-      <span class='const'>Native</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>[name]</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../Native.html" title="Native (module)">Native</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>[name]</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -449,12 +447,12 @@ is expected to accept a native JavaScript value.</p>
 179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/native.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/native.rb', line 173</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_native_writer'>native_writer</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
     <span class='id identifier rubyid_define_method'>define_method</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-      <span class='const'>Native</span><span class='lparen'>(</span><span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>[name] = value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../Native.html" title="Native (module)">Native</a></span></span><span class='lparen'>(</span><span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>[name] = value</span><span class='tstring_end'>`</span></span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -468,9 +466,9 @@ is expected to accept a native JavaScript value.</p>
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

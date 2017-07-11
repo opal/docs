@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Float
   
@@ -100,8 +98,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/opal/corelib/number.rb<span class="defines">,<br />
-  /Users/elia/Code/opal-docs/opal/opal/corelib/marshal/write_buffer.rb</span>
+    <dd>opal/opal/corelib/number.rb<span class="defines">,<br />
+  opal/opal/corelib/marshal/write_buffer.rb</span>
 </dd>
   </dl>
   
@@ -109,51 +107,49 @@
 
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="INFINITY-constant" class="">INFINITY =
-          
-        </dt>
-        <dd><pre class="code"><span class='backtick'>`</span><span class='tstring_content'>Infinity</span><span class='tstring_end'>`</span></span></pre></dd>
-      
-        <dt id="MAX-constant" class="">MAX =
-          
-        </dt>
-        <dd><pre class="code"><span class='backtick'>`</span><span class='tstring_content'>Number.MAX_VALUE</span><span class='tstring_end'>`</span></span></pre></dd>
-      
-        <dt id="MIN-constant" class="">MIN =
-          
-        </dt>
-        <dd><pre class="code"><span class='backtick'>`</span><span class='tstring_content'>Number.MIN_VALUE</span><span class='tstring_end'>`</span></span></pre></dd>
-      
-        <dt id="NAN-constant" class="">NAN =
-          
-        </dt>
-        <dd><pre class="code"><span class='backtick'>`</span><span class='tstring_content'>NaN</span><span class='tstring_end'>`</span></span></pre></dd>
-      
-        <dt id="DIG-constant" class="">DIG =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>15</span></pre></dd>
-      
-        <dt id="MANT_DIG-constant" class="">MANT_DIG =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>53</span></pre></dd>
-      
-        <dt id="RADIX-constant" class="">RADIX =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>2</span></pre></dd>
-      
-        <dt id="EPSILON-constant" class="">EPSILON =
-          
-        </dt>
-        <dd><pre class="code"><span class='backtick'>`</span><span class='tstring_content'>Number.EPSILON</span><span class='tstring_end'>`</span></span></pre></dd>
-      
-    </dl>
-  
+  <dl class="constants">
+    
+      <dt id="INFINITY-constant" class="">INFINITY =
+        
+      </dt>
+      <dd><pre class="code"><span class='backtick'>`</span><span class='tstring_content'>Infinity</span><span class='tstring_end'>`</span></span></pre></dd>
+    
+      <dt id="MAX-constant" class="">MAX =
+        
+      </dt>
+      <dd><pre class="code"><span class='backtick'>`</span><span class='tstring_content'>Number.MAX_VALUE</span><span class='tstring_end'>`</span></span></pre></dd>
+    
+      <dt id="MIN-constant" class="">MIN =
+        
+      </dt>
+      <dd><pre class="code"><span class='backtick'>`</span><span class='tstring_content'>Number.MIN_VALUE</span><span class='tstring_end'>`</span></span></pre></dd>
+    
+      <dt id="NAN-constant" class="">NAN =
+        
+      </dt>
+      <dd><pre class="code"><span class='backtick'>`</span><span class='tstring_content'>NaN</span><span class='tstring_end'>`</span></span></pre></dd>
+    
+      <dt id="DIG-constant" class="">DIG =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>15</span></pre></dd>
+    
+      <dt id="MANT_DIG-constant" class="">MANT_DIG =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>53</span></pre></dd>
+    
+      <dt id="RADIX-constant" class="">RADIX =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>2</span></pre></dd>
+    
+      <dt id="EPSILON-constant" class="">EPSILON =
+        
+      </dt>
+      <dd><pre class="code"><span class='backtick'>`</span><span class='tstring_content'>Number.EPSILON</span><span class='tstring_end'>`</span></span></pre></dd>
+    
+  </dl>
 
 
 
@@ -172,7 +168,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D%3D-class_method" title="=== (class method)">.<strong>===</strong>(other)  &#x21d2; Object </a>
+      <a href="#===-class_method" title="=== (class method)">.<strong>===</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -235,7 +231,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Numeric.html#%25-instance_method" title="Numeric#% (method)">#%</a></span>, <span class='object_link'><a href="Numeric.html#%2B%40-instance_method" title="Numeric#+@ (method)">#+@</a></span>, <span class='object_link'><a href="Numeric.html#-%40-instance_method" title="Numeric#-@ (method)">#-@</a></span>, <span class='object_link'><a href="Numeric.html#%3C%3D%3E-instance_method" title="Numeric#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="Numeric.html#%5B%5D-instance_method" title="Numeric#[] (method)">#[]</a></span>, <span class='object_link'><a href="Numeric.html#__coerced__-instance_method" title="Numeric#__coerced__ (method)">#__coerced__</a></span>, <span class='object_link'><a href="Numeric.html#abs-instance_method" title="Numeric#abs (method)">#abs</a></span>, <span class='object_link'><a href="Numeric.html#abs2-instance_method" title="Numeric#abs2 (method)">#abs2</a></span>, <span class='object_link'><a href="Numeric.html#angle-instance_method" title="Numeric#angle (method)">#angle</a></span>, <span class='object_link'><a href="Numeric.html#ceil-instance_method" title="Numeric#ceil (method)">#ceil</a></span>, <span class='object_link'><a href="Numeric.html#clone-instance_method" title="Numeric#clone (method)">#clone</a></span>, <span class='object_link'><a href="Numeric.html#coerce-instance_method" title="Numeric#coerce (method)">#coerce</a></span>, <span class='object_link'><a href="Numeric.html#conj-instance_method" title="Numeric#conj (method)">#conj</a></span>, <span class='object_link'><a href="Numeric.html#denominator-instance_method" title="Numeric#denominator (method)">#denominator</a></span>, <span class='object_link'><a href="Numeric.html#div-instance_method" title="Numeric#div (method)">#div</a></span>, <span class='object_link'><a href="Numeric.html#divmod-instance_method" title="Numeric#divmod (method)">#divmod</a></span>, <span class='object_link'><a href="Numeric.html#dup-instance_method" title="Numeric#dup (method)">#dup</a></span>, <span class='object_link'><a href="Numeric.html#fdiv-instance_method" title="Numeric#fdiv (method)">#fdiv</a></span>, <span class='object_link'><a href="Numeric.html#floor-instance_method" title="Numeric#floor (method)">#floor</a></span>, <span class='object_link'><a href="Numeric.html#i-instance_method" title="Numeric#i (method)">#i</a></span>, <span class='object_link'><a href="Numeric.html#imag-instance_method" title="Numeric#imag (method)">#imag</a></span>, <span class='object_link'><a href="Numeric.html#integer%3F-instance_method" title="Numeric#integer? (method)">#integer?</a></span>, <span class='object_link'><a href="Numeric.html#negative%3F-instance_method" title="Numeric#negative? (method)">#negative?</a></span>, <span class='object_link'><a href="Numeric.html#nonzero%3F-instance_method" title="Numeric#nonzero? (method)">#nonzero?</a></span>, <span class='object_link'><a href="Numeric.html#numerator-instance_method" title="Numeric#numerator (method)">#numerator</a></span>, <span class='object_link'><a href="Numeric.html#polar-instance_method" title="Numeric#polar (method)">#polar</a></span>, <span class='object_link'><a href="Numeric.html#positive%3F-instance_method" title="Numeric#positive? (method)">#positive?</a></span>, <span class='object_link'><a href="Numeric.html#quo-instance_method" title="Numeric#quo (method)">#quo</a></span>, <span class='object_link'><a href="Numeric.html#real-instance_method" title="Numeric#real (method)">#real</a></span>, <span class='object_link'><a href="Numeric.html#real%3F-instance_method" title="Numeric#real? (method)">#real?</a></span>, <span class='object_link'><a href="Numeric.html#rect-instance_method" title="Numeric#rect (method)">#rect</a></span>, <span class='object_link'><a href="Numeric.html#round-instance_method" title="Numeric#round (method)">#round</a></span>, <span class='object_link'><a href="Numeric.html#to_c-instance_method" title="Numeric#to_c (method)">#to_c</a></span>, <span class='object_link'><a href="Numeric.html#to_int-instance_method" title="Numeric#to_int (method)">#to_int</a></span>, <span class='object_link'><a href="Numeric.html#truncate-instance_method" title="Numeric#truncate (method)">#truncate</a></span>, <span class='object_link'><a href="Numeric.html#zero%3F-instance_method" title="Numeric#zero? (method)">#zero?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Numeric.html#%25-instance_method" title="Numeric#% (method)">#%</a></span>, <span class='object_link'><a href="Numeric.html#%2B@-instance_method" title="Numeric#+@ (method)">#+@</a></span>, <span class='object_link'><a href="Numeric.html#-@-instance_method" title="Numeric#-@ (method)">#-@</a></span>, <span class='object_link'><a href="Numeric.html#<=>-instance_method" title="Numeric#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="Numeric.html#[]-instance_method" title="Numeric#[] (method)">#[]</a></span>, <span class='object_link'><a href="Numeric.html#__coerced__-instance_method" title="Numeric#__coerced__ (method)">#__coerced__</a></span>, <span class='object_link'><a href="Numeric.html#abs-instance_method" title="Numeric#abs (method)">#abs</a></span>, <span class='object_link'><a href="Numeric.html#abs2-instance_method" title="Numeric#abs2 (method)">#abs2</a></span>, <span class='object_link'><a href="Numeric.html#angle-instance_method" title="Numeric#angle (method)">#angle</a></span>, <span class='object_link'><a href="Numeric.html#ceil-instance_method" title="Numeric#ceil (method)">#ceil</a></span>, <span class='object_link'><a href="Numeric.html#clone-instance_method" title="Numeric#clone (method)">#clone</a></span>, <span class='object_link'><a href="Numeric.html#coerce-instance_method" title="Numeric#coerce (method)">#coerce</a></span>, <span class='object_link'><a href="Numeric.html#conj-instance_method" title="Numeric#conj (method)">#conj</a></span>, <span class='object_link'><a href="Numeric.html#denominator-instance_method" title="Numeric#denominator (method)">#denominator</a></span>, <span class='object_link'><a href="Numeric.html#div-instance_method" title="Numeric#div (method)">#div</a></span>, <span class='object_link'><a href="Numeric.html#divmod-instance_method" title="Numeric#divmod (method)">#divmod</a></span>, <span class='object_link'><a href="Numeric.html#dup-instance_method" title="Numeric#dup (method)">#dup</a></span>, <span class='object_link'><a href="Numeric.html#fdiv-instance_method" title="Numeric#fdiv (method)">#fdiv</a></span>, <span class='object_link'><a href="Numeric.html#floor-instance_method" title="Numeric#floor (method)">#floor</a></span>, <span class='object_link'><a href="Numeric.html#i-instance_method" title="Numeric#i (method)">#i</a></span>, <span class='object_link'><a href="Numeric.html#imag-instance_method" title="Numeric#imag (method)">#imag</a></span>, <span class='object_link'><a href="Numeric.html#integer%3F-instance_method" title="Numeric#integer? (method)">#integer?</a></span>, <span class='object_link'><a href="Numeric.html#negative%3F-instance_method" title="Numeric#negative? (method)">#negative?</a></span>, <span class='object_link'><a href="Numeric.html#nonzero%3F-instance_method" title="Numeric#nonzero? (method)">#nonzero?</a></span>, <span class='object_link'><a href="Numeric.html#numerator-instance_method" title="Numeric#numerator (method)">#numerator</a></span>, <span class='object_link'><a href="Numeric.html#polar-instance_method" title="Numeric#polar (method)">#polar</a></span>, <span class='object_link'><a href="Numeric.html#positive%3F-instance_method" title="Numeric#positive? (method)">#positive?</a></span>, <span class='object_link'><a href="Numeric.html#quo-instance_method" title="Numeric#quo (method)">#quo</a></span>, <span class='object_link'><a href="Numeric.html#real-instance_method" title="Numeric#real (method)">#real</a></span>, <span class='object_link'><a href="Numeric.html#real%3F-instance_method" title="Numeric#real? (method)">#real?</a></span>, <span class='object_link'><a href="Numeric.html#rect-instance_method" title="Numeric#rect (method)">#rect</a></span>, <span class='object_link'><a href="Numeric.html#round-instance_method" title="Numeric#round (method)">#round</a></span>, <span class='object_link'><a href="Numeric.html#to_c-instance_method" title="Numeric#to_c (method)">#to_c</a></span>, <span class='object_link'><a href="Numeric.html#to_int-instance_method" title="Numeric#to_int (method)">#to_int</a></span>, <span class='object_link'><a href="Numeric.html#truncate-instance_method" title="Numeric#truncate (method)">#truncate</a></span>, <span class='object_link'><a href="Numeric.html#zero%3F-instance_method" title="Numeric#zero? (method)">#zero?</a></span></p>
 
   
   
@@ -246,7 +242,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Comparable.html" title="Comparable (module)">Comparable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Comparable.html#%3C-instance_method" title="Comparable#&lt; (method)">#<</a></span>, <span class='object_link'><a href="Comparable.html#%3C%3D-instance_method" title="Comparable#&lt;= (method)">#<=</a></span>, <span class='object_link'><a href="Comparable.html#%3D%3D-instance_method" title="Comparable#== (method)">#==</a></span>, <span class='object_link'><a href="Comparable.html#%3E-instance_method" title="Comparable#&gt; (method)">#></a></span>, <span class='object_link'><a href="Comparable.html#%3E%3D-instance_method" title="Comparable#&gt;= (method)">#>=</a></span>, <span class='object_link'><a href="Comparable.html#between%3F-instance_method" title="Comparable#between? (method)">#between?</a></span>, <span class='object_link'><a href="Comparable.html#normalize-class_method" title="Comparable.normalize (method)">normalize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Comparable.html#<-instance_method" title="Comparable#&lt; (method)">#<</a></span>, <span class='object_link'><a href="Comparable.html#<=-instance_method" title="Comparable#&lt;= (method)">#<=</a></span>, <span class='object_link'><a href="Comparable.html#==-instance_method" title="Comparable#== (method)">#==</a></span>, <span class='object_link'><a href="Comparable.html#>-instance_method" title="Comparable#&gt; (method)">#></a></span>, <span class='object_link'><a href="Comparable.html#>=-instance_method" title="Comparable#&gt;= (method)">#>=</a></span>, <span class='object_link'><a href="Comparable.html#between%3F-instance_method" title="Comparable#between? (method)">#between?</a></span>, <span class='object_link'><a href="Comparable.html#normalize-class_method" title="Comparable.normalize (method)">normalize</a></span></p>
 
 
   <div id="class_method_details" class="method_details_list">
@@ -273,7 +269,7 @@
 736</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/number.rb', line 734</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/number.rb', line 734</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>===</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='backtick'>`</span><span class='tstring_content'>!!other.$$is_number</span><span class='tstring_end'>`</span></span>
@@ -311,7 +307,7 @@
 29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/opal/corelib/marshal/write_buffer.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'opal/opal/corelib/marshal/write_buffer.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid___marshal__'>__marshal__</span><span class='lparen'>(</span><span class='id identifier rubyid_buffer'>buffer</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_buffer'>buffer</span><span class='period'>.</span><span class='id identifier rubyid_save_link'>save_link</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
@@ -328,9 +324,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

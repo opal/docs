@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -61,8 +61,6 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="../class_list.html"></iframe>
-
       <div id="content"><h1>Module: SourceMap::VLQ
   
   
@@ -82,7 +80,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/source_map/vlq.rb</dd>
+    <dd>opal/stdlib/source_map/vlq.rb</dd>
   </dl>
   
 </div>
@@ -105,11 +103,10 @@ Copyright 2009-2011, Mozilla Foundation and contributors, BSD</p>
 
 </div>
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="VLQ_BASE_SHIFT-constant" class="">VLQ_BASE_SHIFT =
-          <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="VLQ_BASE_SHIFT-constant" class="">VLQ_BASE_SHIFT =
+        <div class="docstring">
   <div class="discussion">
     <p>A single base 64 digit can contain 6 bits of data. For the base 64 variable
 length quantities we use in the source map spec, the first bit is the sign,
@@ -130,11 +127,11 @@ digits in this value following this digit.</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='int'>5</span></pre></dd>
-      
-        <dt id="VLQ_BASE-constant" class="">VLQ_BASE =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='int'>5</span></pre></dd>
+    
+      <dt id="VLQ_BASE-constant" class="">VLQ_BASE =
+        <div class="docstring">
   <div class="discussion">
     <p>binary: 100000</p>
 
@@ -145,11 +142,11 @@ digits in this value following this digit.</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='const'>VLQ_BASE_SHIFT</span></pre></dd>
-      
-        <dt id="VLQ_BASE_MASK-constant" class="">VLQ_BASE_MASK =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="#VLQ_BASE_SHIFT-constant" title="SourceMap::VLQ::VLQ_BASE_SHIFT (constant)">VLQ_BASE_SHIFT</a></span></span></pre></dd>
+    
+      <dt id="VLQ_BASE_MASK-constant" class="">VLQ_BASE_MASK =
+        <div class="docstring">
   <div class="discussion">
     <p>binary: 011111</p>
 
@@ -160,11 +157,11 @@ digits in this value following this digit.</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='const'>VLQ_BASE</span> <span class='op'>-</span> <span class='int'>1</span></pre></dd>
-      
-        <dt id="VLQ_CONTINUATION_BIT-constant" class="">VLQ_CONTINUATION_BIT =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="#VLQ_BASE-constant" title="SourceMap::VLQ::VLQ_BASE (constant)">VLQ_BASE</a></span></span> <span class='op'>-</span> <span class='int'>1</span></pre></dd>
+    
+      <dt id="VLQ_CONTINUATION_BIT-constant" class="">VLQ_CONTINUATION_BIT =
+        <div class="docstring">
   <div class="discussion">
     <p>binary: 100000</p>
 
@@ -175,21 +172,20 @@ digits in this value following this digit.</p>
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='const'>VLQ_BASE</span></pre></dd>
-      
-        <dt id="BASE64_DIGITS-constant" class="">BASE64_DIGITS =
-          
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
-      
-        <dt id="BASE64_VALUES-constant" class="">BASE64_VALUES =
-          
-        </dt>
-        <dd><pre class="code"><span class='lparen'>(</span><span class='int'>0</span><span class='op'>..</span><span class='int'>64</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> <span class='const'>BASE64_DIGITS</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_i'>i</span> <span class='rbrace'>}</span></pre></dd>
-      
-    </dl>
-  
+      </dt>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="#VLQ_BASE-constant" title="SourceMap::VLQ::VLQ_BASE (constant)">VLQ_BASE</a></span></span></pre></dd>
+    
+      <dt id="BASE64_DIGITS-constant" class="">BASE64_DIGITS =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
+    
+      <dt id="BASE64_VALUES-constant" class="">BASE64_VALUES =
+        
+      </dt>
+      <dd><pre class="code"><span class='lparen'>(</span><span class='int'>0</span><span class='op'>..</span><span class='int'>64</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> <span class='const'><span class='object_link'><a href="#BASE64_DIGITS-constant" title="SourceMap::VLQ::BASE64_DIGITS (constant)">BASE64_DIGITS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_i'>i</span> <span class='rbrace'>}</span></pre></dd>
+    
+  </dl>
 
 
 
@@ -329,7 +325,7 @@ value and the rest of the string.</p>
 73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/source_map/vlq.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/source_map/vlq.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decode'>decode</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
 
@@ -341,10 +337,10 @@ value and the rest of the string.</p>
   <span class='kw'>while</span> <span class='id identifier rubyid_continue'>continue</span>
     <span class='id identifier rubyid_char'>char</span> <span class='op'>=</span> <span class='id identifier rubyid_chars'>chars</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span> <span class='kw'>or</span> <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Expected more digits in base 64 VLQ value.</span><span class='tstring_end'>&quot;</span></span>
     <span class='id identifier rubyid_digit'>digit</span> <span class='op'>=</span> <span class='id identifier rubyid_base64_decode'>base64_decode</span><span class='lparen'>(</span><span class='id identifier rubyid_char'>char</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_continue'>continue</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_digit'>digit</span> <span class='op'>&amp;</span> <span class='const'>VLQ_CONTINUATION_BIT</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='int'>0</span>
-    <span class='id identifier rubyid_digit'>digit</span> <span class='op'>&amp;=</span> <span class='const'>VLQ_BASE_MASK</span>
+    <span class='id identifier rubyid_continue'>continue</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_digit'>digit</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#VLQ_CONTINUATION_BIT-constant" title="SourceMap::VLQ::VLQ_CONTINUATION_BIT (constant)">VLQ_CONTINUATION_BIT</a></span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_digit'>digit</span> <span class='op'>&amp;=</span> <span class='const'><span class='object_link'><a href="#VLQ_BASE_MASK-constant" title="SourceMap::VLQ::VLQ_BASE_MASK (constant)">VLQ_BASE_MASK</a></span></span>
     <span class='id identifier rubyid_vlq'>vlq</span> <span class='op'>+=</span> <span class='id identifier rubyid_digit'>digit</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_shift'>shift</span>
-    <span class='id identifier rubyid_shift'>shift</span> <span class='op'>+=</span> <span class='const'>VLQ_BASE_SHIFT</span>
+    <span class='id identifier rubyid_shift'>shift</span> <span class='op'>+=</span> <span class='const'><span class='object_link'><a href="#VLQ_BASE_SHIFT-constant" title="SourceMap::VLQ::VLQ_BASE_SHIFT (constant)">VLQ_BASE_SHIFT</a></span></span>
   <span class='kw'>end</span>
 
   <span class='lbracket'>[</span><span class='id identifier rubyid_from_vlq_signed'>from_vlq_signed</span><span class='lparen'>(</span><span class='id identifier rubyid_vlq'>vlq</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_chars'>chars</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span>
@@ -390,7 +386,7 @@ return them.</p>
 84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/source_map/vlq.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/source_map/vlq.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decode_array'>decode_array</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -446,7 +442,7 @@ return them.</p>
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/source_map/vlq.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/source_map/vlq.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='id identifier rubyid_int'>int</span><span class='rparen'>)</span>
 
@@ -454,9 +450,9 @@ return them.</p>
   <span class='id identifier rubyid_encoded'>encoded</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
   <span class='kw'>begin</span>
-    <span class='id identifier rubyid_digit'>digit</span> <span class='op'>=</span> <span class='id identifier rubyid_vlq'>vlq</span> <span class='op'>&amp;</span> <span class='const'>VLQ_BASE_MASK</span>
-    <span class='id identifier rubyid_vlq'>vlq</span> <span class='op'>&gt;&gt;=</span> <span class='const'>VLQ_BASE_SHIFT</span>
-    <span class='id identifier rubyid_digit'>digit</span> <span class='op'>|=</span> <span class='const'>VLQ_CONTINUATION_BIT</span> <span class='kw'>if</span> <span class='id identifier rubyid_vlq'>vlq</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_digit'>digit</span> <span class='op'>=</span> <span class='id identifier rubyid_vlq'>vlq</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#VLQ_BASE_MASK-constant" title="SourceMap::VLQ::VLQ_BASE_MASK (constant)">VLQ_BASE_MASK</a></span></span>
+    <span class='id identifier rubyid_vlq'>vlq</span> <span class='op'>&gt;&gt;=</span> <span class='const'><span class='object_link'><a href="#VLQ_BASE_SHIFT-constant" title="SourceMap::VLQ::VLQ_BASE_SHIFT (constant)">VLQ_BASE_SHIFT</a></span></span>
+    <span class='id identifier rubyid_digit'>digit</span> <span class='op'>|=</span> <span class='const'><span class='object_link'><a href="#VLQ_CONTINUATION_BIT-constant" title="SourceMap::VLQ::VLQ_CONTINUATION_BIT (constant)">VLQ_CONTINUATION_BIT</a></span></span> <span class='kw'>if</span> <span class='id identifier rubyid_vlq'>vlq</span> <span class='op'>&gt;</span> <span class='int'>0</span>
     <span class='id identifier rubyid_encoded'>encoded</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_base64_encode'>base64_encode</span><span class='lparen'>(</span><span class='id identifier rubyid_digit'>digit</span><span class='rparen'>)</span>
   <span class='kw'>end</span> <span class='kw'>while</span> <span class='id identifier rubyid_vlq'>vlq</span> <span class='op'>&gt;</span> <span class='int'>0</span>
 
@@ -472,9 +468,9 @@ return them.</p>
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Dir
   
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/nodejs/dir.rb</dd>
+    <dd>opal/stdlib/nodejs/dir.rb</dd>
   </dl>
   
 </div>
@@ -121,7 +119,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-class_method" title="[] (class method)">.<strong>[]</strong>(glob)  &#x21d2; Object </a>
+      <a href="#[]-class_method" title="[] (class method)">.<strong>[]</strong>(glob)  &#x21d2; Object </a>
     
 
     
@@ -202,7 +200,7 @@
 7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/dir.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/nodejs/dir.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span> <span class='id identifier rubyid_glob'>glob</span>
   <span class='backtick'>`</span><span class='tstring_content'>__glob__.sync(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_glob'>glob</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>`</span></span>
@@ -242,7 +240,7 @@
 11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/nodejs/dir.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/nodejs/dir.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pwd'>pwd</span>
   <span class='backtick'>`</span><span class='tstring_content'>process.cwd()</span><span class='tstring_end'>`</span></span>
@@ -257,9 +255,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

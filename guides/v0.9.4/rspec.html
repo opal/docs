@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -111,14 +117,14 @@
 <p><code>opal-rspec</code> allows opal to use rspec for running specs in javascript
 environments. It comes with built-in support for running rspec with custom
 <code>phantomjs</code> and standard web browser formatters. Also, async spec examples
-are supported to reflect browser usage of ruby applications.</p><div class="highlight"><pre><span class="n">describe</span> <span class="no">User</span> <span class="k">do</span>
+are supported to reflect browser usage of ruby applications.</p><div class="highlight"><pre><span></span><span class="n">describe</span> <span class="no">User</span> <span class="k">do</span>
   <span class="n">it</span> <span class="s2">&quot;can be created with a name&quot;</span> <span class="k">do</span>
     <span class="n">expect</span><span class="p">(</span><span class="no">User</span><span class="o">.</span><span class="n">new</span><span class="p">)</span><span class="o">.</span><span class="n">to_not</span> <span class="n">be_persisted</span>
   <span class="k">end</span>
 <span class="k">end</span>
 </pre></div>
 <h3>Installation</h3>
-<p>Add the <code>opal-rspec</code> gem to your Gemfile:</p><div class="highlight"><pre><span class="c1"># Gemfile</span>
+<p>Add the <code>opal-rspec</code> gem to your Gemfile:</p><div class="highlight"><pre><span></span><span class="c1"># Gemfile</span>
 <span class="n">gem</span> <span class="s1">&#39;opal&#39;</span>
 <span class="n">gem</span> <span class="s1">&#39;opal-rspec&#39;</span>
 </pre></div>
@@ -126,13 +132,13 @@ are supported to reflect browser usage of ruby applications.</p><div class="high
 
 <h3>phantomjs</h3>
 <p>To run specs, a rake task can be added which will load all spec files
-from <code>spec/</code>:</p><div class="highlight"><pre><span class="c1"># Rakefile</span>
+from <code>spec/</code>:</p><div class="highlight"><pre><span></span><span class="c1"># Rakefile</span>
 <span class="nb">require</span> <span class="s1">&#39;opal/rspec/rake_task&#39;</span>
 <span class="no">Opal</span><span class="o">::</span><span class="no">RSpec</span><span class="o">::</span><span class="no">RakeTask</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:default</span><span class="p">)</span>
-</pre></div><p>Then, to run your specs inside phantomjs, just run the rake task:</p><div class="highlight"><pre><span class="nv">$ </span>bundle <span class="nb">exec </span>rake
+</pre></div><p>Then, to run your specs inside phantomjs, just run the rake task:</p><div class="highlight"><pre><span></span>$ bundle <span class="nb">exec</span> rake
 </pre></div>
 <h3>In a Browser</h3>
-<p><code>opal-rspec</code> can use sprockets to build and serve specs over a simple rack server. Add the following to a <code>config.ru</code> file:</p><div class="highlight"><pre><span class="c1"># config.ru</span>
+<p><code>opal-rspec</code> can use sprockets to build and serve specs over a simple rack server. Add the following to a <code>config.ru</code> file:</p><div class="highlight"><pre><span></span><span class="c1"># config.ru</span>
 <span class="nb">require</span> <span class="s1">&#39;bundler&#39;</span>
 <span class="no">Bundler</span><span class="o">.</span><span class="n">require</span>
 
@@ -144,7 +150,7 @@ from <code>spec/</code>:</p><div class="highlight"><pre><span class="c1"># Rakef
 </pre></div><p>Then run the rack server bundle exec rackup and visit <code>http://localhost:9292</code> in any web browser.</p>
 <h2>Async examples</h2>
 <p><code>opal-rspec</code> adds support for async specs to rspec. These specs are defined using
-<code>#async</code> instead of <code>#it</code>:</p><div class="highlight"><pre><span class="n">describe</span> <span class="no">MyClass</span> <span class="k">do</span>
+<code>#async</code> instead of <code>#it</code>:</p><div class="highlight"><pre><span></span><span class="n">describe</span> <span class="no">MyClass</span> <span class="k">do</span>
   <span class="c1"># normal example</span>
   <span class="n">it</span> <span class="s1">&#39;does something&#39;</span> <span class="k">do</span>
     <span class="n">expect</span><span class="p">(</span><span class="ss">:foo</span><span class="p">)</span><span class="o">.</span><span class="n">to</span> <span class="n">eq</span><span class="p">(</span><span class="ss">:foo</span><span class="p">)</span>
@@ -156,7 +162,7 @@ from <code>spec/</code>:</p><div class="highlight"><pre><span class="c1"># Rakef
   <span class="k">end</span>
 <span class="k">end</span>
 </pre></div><p>This just marks the example as running async. To actually handle the async result,
-you also need to use a <code>run_async</code> call inside some future handler:</p><div class="highlight"><pre><span class="n">async</span> <span class="s1">&#39;HTTP requests should work&#39;</span> <span class="k">do</span>
+you also need to use a <code>run_async</code> call inside some future handler:</p><div class="highlight"><pre><span></span><span class="n">async</span> <span class="s1">&#39;HTTP requests should work&#39;</span> <span class="k">do</span>
   <span class="no">HTTP</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/users/1.json&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">res</span><span class="o">|</span>
     <span class="n">run_async</span> <span class="p">{</span>
       <span class="n">expect</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="o">.</span><span class="n">to</span> <span class="n">be_ok</span>

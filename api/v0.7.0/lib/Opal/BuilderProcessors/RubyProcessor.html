@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Opal::BuilderProcessors::RubyProcessor
   
@@ -100,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/lib/opal/builder_processors.rb</dd>
+    <dd>opal/lib/opal/builder_processors.rb</dd>
   </dl>
   
 </div>
@@ -333,7 +331,7 @@
 94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder_processors.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/builder_processors.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compiled'>compiled</span>
   <span class='ivar'>@compiled</span> <span class='op'>||=</span> <span class='kw'>begin</span>
@@ -367,10 +365,10 @@
 110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder_processors.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/builder_processors.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compiler_class'>compiler_class</span>
-  <span class='op'>::</span><span class='const'>Opal</span><span class='op'>::</span><span class='const'>Compiler</span>
+  <span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Opal.html" title="Opal (module)">Opal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Compiler.html" title="Opal::Compiler (class)">Compiler</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -397,7 +395,7 @@
 98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder_processors.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/builder_processors.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compiler_for'>compiler_for</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_compiler_class'>compiler_class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -427,7 +425,7 @@
 106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder_processors.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/builder_processors.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_required_trees'>required_trees</span>
   <span class='id identifier rubyid_compiled'>compiled</span><span class='period'>.</span><span class='id identifier rubyid_required_trees'>required_trees</span>
@@ -457,7 +455,7 @@
 102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder_processors.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/builder_processors.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_requires'>requires</span>
   <span class='id identifier rubyid_compiled'>compiled</span><span class='period'>.</span><span class='id identifier rubyid_requires'>requires</span>
@@ -487,7 +485,7 @@
 82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder_processors.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/builder_processors.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source'>source</span>
   <span class='id identifier rubyid_compiled'>compiled</span><span class='period'>.</span><span class='id identifier rubyid_result'>result</span>
@@ -517,7 +515,7 @@
 86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/lib/opal/builder_processors.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'opal/lib/opal/builder_processors.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_map'>source_map</span>
   <span class='id identifier rubyid_compiled'>compiled</span><span class='period'>.</span><span class='id identifier rubyid_source_map'>source_map</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span>
@@ -532,9 +530,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/07/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

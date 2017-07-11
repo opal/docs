@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -110,14 +116,14 @@
       <h1>Source maps</h1>
 <p>Source maps are available (on current stable release, v0.6.x) even without explicit support from Sprockets in a sort of hackish way.</p><p><em>As such even if they generally work fine there are some limitations and edge case issues.</em></p><div class="note"><p>Currently on <code>master</code> branch sourcemaps are work-in-progress and probably will integrate with the upcoming Sprockets 4 that has integrated support for them.</p></div>
 <h4>Processor <code>source_map_enabled</code> flag</h4>
-<p>To enable sourcemaps in the Sprockets processor you need to turn on the relative flag:</p><div class="highlight"><pre><span class="no">Opal</span><span class="o">::</span><span class="no">Processor</span><span class="o">.</span><span class="n">source_map_enabled</span> <span class="o">=</span> <span class="kp">true</span> <span class="c1"># default</span>
+<p>To enable sourcemaps in the Sprockets processor you need to turn on the relative flag:</p><div class="highlight"><pre><span></span><span class="no">Opal</span><span class="o">::</span><span class="no">Processor</span><span class="o">.</span><span class="n">source_map_enabled</span> <span class="o">=</span> <span class="kp">true</span> <span class="c1"># default</span>
 </pre></div>
 <h4>Sprockets debug mode</h4>
 <p>The  sourcemaps only work with Sprockets in debug mode because they are generated just for single files.</p>
 <h2>Enable source maps</h2>
 
 <h3>Rails</h3>
-<p>Rails has debug mode already enabled in development environment with the following line from <code>config/environments/development.rb</code>:</p><div class="highlight"><pre><span class="c1"># Debug mode disables concatenation and preprocessing of assets.</span>
+<p>Rails has debug mode already enabled in development environment with the following line from <code>config/environments/development.rb</code>:</p><div class="highlight"><pre><span></span><span class="c1"># Debug mode disables concatenation and preprocessing of assets.</span>
 <span class="c1"># This option may cause significant delays in view rendering with a large</span>
 <span class="c1"># number of complex assets.</span>
 <span class="n">config</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="kp">true</span>

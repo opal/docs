@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -108,16 +114,16 @@
       </nav>
       <hr>
       <h1>Parsing Ruby from JavaScript with <code>opal-parser</code></h1>
-<p>Generally is best to precompile Ruby source files to JavaScript server-side but sometimes may become useful to be able to compile Ruby to JavaScript directly from JS.</p><p>Opal is able to compile its – pure Ruby – compiler to JavaScript (how cool is that!). The whole compiler chain is available in the <code>stdlib</code> as <code>opal-parser</code>.</p><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;opal-parser&#39;</span>
+<p>Generally is best to precompile Ruby source files to JavaScript server-side but sometimes may become useful to be able to compile Ruby to JavaScript directly from JS.</p><p>Opal is able to compile its – pure Ruby – compiler to JavaScript (how cool is that!). The whole compiler chain is available in the <code>stdlib</code> as <code>opal-parser</code>.</p><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;opal-parser&#39;</span>
 </pre></div>
 <h2>Features</h2>
 
 <h3><code>Kernel#eval</code></h3>
-<p><code>opal-parser</code> provides a partial implementation of <code>Kernel#eval</code> that only support the first parameter (String) and refuse any passed <code>binding</code>, <code>lineno</code> or <code>filename</code>.</p><p>Example:</p><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;opal-parser&#39;</span>
+<p><code>opal-parser</code> provides a partial implementation of <code>Kernel#eval</code> that only support the first parameter (String) and refuse any passed <code>binding</code>, <code>lineno</code> or <code>filename</code>.</p><p>Example:</p><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;opal-parser&#39;</span>
 <span class="nb">eval</span> <span class="s2">&quot;puts &#39;hello world!&#39;&quot;</span>
 </pre></div>
 <h3><code>Kernel#require_remote</code></h3>
-<p>Will fetch a remote URL (by means of a sync <code>XMLHttpRequest</code>) and evaluate its contents as Ruby code.</p><p>Example:</p><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;opal-parser&#39;</span>
+<p>Will fetch a remote URL (by means of a sync <code>XMLHttpRequest</code>) and evaluate its contents as Ruby code.</p><p>Example:</p><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;opal-parser&#39;</span>
 <span class="n">require_remote</span> <span class="s1">&#39;http://pastie.org/pastes/10444960/text&#39;</span>
 <span class="no">HelloWorld</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">say_hello!</span>
 </pre></div>

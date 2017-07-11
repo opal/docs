@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -60,8 +60,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Buffer::View
   
@@ -103,7 +101,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb</dd>
+    <dd>opal/stdlib/buffer/view.rb</dd>
   </dl>
   
 </div>
@@ -722,7 +720,7 @@
 25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_buffer'>buffer</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_native?'>native?</span><span class='lparen'>(</span><span class='id identifier rubyid_buffer'>buffer</span><span class='rparen'>)</span>
@@ -780,7 +778,7 @@
 12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_buffer'>buffer</span>
   <span class='ivar'>@buffer</span>
@@ -822,7 +820,7 @@
 12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_offset'>offset</span>
   <span class='ivar'>@offset</span>
@@ -881,7 +879,7 @@
 8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_supported?'>supported?</span>
   <span class='kw'>not</span> <span class='gvar'>$$</span><span class='lbracket'>[</span><span class='symbol'>:DataView</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -921,10 +919,10 @@
 35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_bits'>bits</span> <span class='op'>=</span> <span class='int'>8</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='symbol'>:unsigned</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>[&quot;get&quot; + </span><span class='embexpr_beg'>#{</span><span class='const'>Buffer</span><span class='period'>.</span><span class='id identifier rubyid_name_for'>name_for</span> <span class='id identifier rubyid_bits'>bits</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'>](offset, little)</span><span class='tstring_end'>`</span></span>
+  <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>[&quot;get&quot; + </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Buffer.html" title="Buffer (class)">Buffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name_for'><span class='object_link'><a href="../Buffer.html#name_for-class_method" title="Buffer.name_for (method)">name_for</a></span></span> <span class='id identifier rubyid_bits'>bits</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'>](offset, little)</span><span class='tstring_end'>`</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -949,7 +947,7 @@
 63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_float32'>get_float32</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.getFloat32(offset, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -975,7 +973,7 @@
 66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_float64'>get_float64</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.getFloat64(offset, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1001,7 +999,7 @@
 51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_int16'>get_int16</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.getInt16(offset, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1027,7 +1025,7 @@
 57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_int32'>get_int32</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.getInt32(offset, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1053,7 +1051,7 @@
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_int8'>get_int8</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.getInt8(offset, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1079,7 +1077,7 @@
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_uint16'>get_uint16</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.getUint16(offset, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1105,7 +1103,7 @@
 60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_uint32'>get_uint32</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.getUint32(offset, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1131,7 +1129,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_uint8'>get_uint8</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.getUint8(offset, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1163,7 +1161,7 @@
 29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_length'>length</span>
   <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.byteLength</span><span class='tstring_end'>`</span></span>
@@ -1197,10 +1195,10 @@
 41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_bits'>bits</span> <span class='op'>=</span> <span class='int'>8</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='symbol'>:unsigned</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>[&quot;set&quot; + </span><span class='embexpr_beg'>#{</span><span class='const'>Buffer</span><span class='period'>.</span><span class='id identifier rubyid_name_for'>name_for</span> <span class='id identifier rubyid_bits'>bits</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'>](offset, value, little)</span><span class='tstring_end'>`</span></span>
+  <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>[&quot;set&quot; + </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Buffer.html" title="Buffer (class)">Buffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name_for'><span class='object_link'><a href="../Buffer.html#name_for-class_method" title="Buffer.name_for (method)">name_for</a></span></span> <span class='id identifier rubyid_bits'>bits</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'>](offset, value, little)</span><span class='tstring_end'>`</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1225,7 +1223,7 @@
 64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_float32'>set_float32</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.setFloat32(offset, value, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1251,7 +1249,7 @@
 67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_float64'>set_float64</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.setFloat64(offset, value, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1277,7 +1275,7 @@
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_int16'>set_int16</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.setInt16(offset, value, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1303,7 +1301,7 @@
 58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_int32'>set_int32</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.setInt32(offset, value, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1329,7 +1327,7 @@
 46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_int8'>set_int8</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.setInt8(offset, value, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1355,7 +1353,7 @@
 55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_uint16'>set_uint16</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.setUint16(offset, value, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1381,7 +1379,7 @@
 61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_uint32'>set_uint32</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.setUint32(offset, value, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1407,7 +1405,7 @@
 49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File '/Users/elia/Code/opal-docs/opal/stdlib/buffer/view.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'opal/stdlib/buffer/view.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_uint8'>set_uint8</span><span class='lparen'>(</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_little'>little</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='backtick'>`</span><span class='embvar'>#</span><span class='ivar'>@native</span><span class='tstring_content'>.setUint8(offset, value, little)</span><span class='tstring_end'>`</span></span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1420,9 +1418,9 @@
 </div>
 
       <div id="footer">
-  Generated on 11/01/16 by
+  Generated on 07/11/17 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.8.7.6 (ruby-2.3.1).
+  0.9.9 (ruby-2.4.0).
 </div>
 
     </div>

@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -108,17 +114,17 @@
       </nav>
       <hr>
       <h1>Opal in a Rails application</h1>
-<p>Add Opal to your Gemfile:</p><div class="highlight"><pre><span class="n">gem</span> <span class="s1">&#39;opal-rails&#39;</span>
-</pre></div><p>Or to start off with Opal when you build your new Rails app:</p><div class="highlight"><pre>rails new &lt;app-name&gt; --javascript<span class="o">=</span>opal
+<p>Add Opal to your Gemfile:</p><div class="highlight"><pre><span></span><span class="n">gem</span> <span class="s1">&#39;opal-rails&#39;</span>
+</pre></div><p>Or to start off with Opal when you build your new Rails app:</p><div class="highlight"><pre><span></span>rails new &lt;app-name&gt; --javascript<span class="o">=</span>opal
 </pre></div>
 <h2>Basic usage through the asset pipeline</h2>
-<div class="highlight"><pre><span class="c1">// app/assets/application.js.rb</span>
+<div class="highlight"><pre><span></span><span class="c1">// app/assets/application.js.rb</span>
 
 <span class="c1">//= require opal</span>
 <span class="c1">//= require opal_ujs</span>
 <span class="c1">//= require turbolinks</span>
 <span class="c1">//= require_tree .</span>
-</pre></div><p>Opal requires are forwarded to the Asset Pipeline at compile time (similarly to what happens for RubyMotion). You can use either the <code>.rb</code> or <code>.opal</code> extension:</p><div class="highlight"><pre><span class="c1"># app/assets/javascripts/greeter.js.rb</span>
+</pre></div><p>Opal requires are forwarded to the Asset Pipeline at compile time (similarly to what happens for RubyMotion). You can use either the <code>.rb</code> or <code>.opal</code> extension:</p><div class="highlight"><pre><span></span><span class="c1"># app/assets/javascripts/greeter.js.rb</span>
 
 <span class="nb">puts</span> <span class="s2">&quot;G&#39;day world!&quot;</span> <span class="c1"># check the console!</span>
 
@@ -130,13 +136,13 @@
 <span class="k">end</span>
 </pre></div>
 <h3>As a template</h3>
-<p>You can use it for your views too, it even inherits instance and local variables from actions:</p><div class="highlight"><pre><span class="c1"># app/controllers/posts_controller.rb</span>
+<p>You can use it for your views too, it even inherits instance and local variables from actions:</p><div class="highlight"><pre><span></span><span class="c1"># app/controllers/posts_controller.rb</span>
 
 <span class="k">def</span> <span class="nf">create</span>
   <span class="vi">@post</span> <span class="o">=</span> <span class="no">Post</span><span class="o">.</span><span class="n">create!</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:post</span><span class="o">]</span><span class="p">)</span>
   <span class="n">render</span> <span class="ss">type</span><span class="p">:</span> <span class="ss">:js</span><span class="p">,</span> <span class="ss">locals</span><span class="p">:</span> <span class="p">{</span><span class="ss">comments_html</span><span class="p">:</span> <span class="n">render_to_string</span><span class="p">(</span><span class="vi">@post</span><span class="o">.</span><span class="n">comments</span><span class="p">)}</span>
 <span class="k">end</span>
-</pre></div><p>Each assign is filtered through JSON so it&#39;s reduced to basic types:</p><div class="highlight"><pre><span class="c1"># app/views/posts/create.js.opal</span>
+</pre></div><p>Each assign is filtered through JSON so it&#39;s reduced to basic types:</p><div class="highlight"><pre><span></span><span class="c1"># app/views/posts/create.js.opal</span>
 
 <span class="n">post</span> <span class="o">=</span> <span class="no">Element</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;.post&#39;</span><span class="p">)</span>
 <span class="n">post</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;.title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">html</span>    <span class="o">=</span> <span class="vi">@post</span><span class="o">[</span><span class="ss">:title</span><span class="o">]</span>
@@ -144,7 +150,7 @@
 <span class="n">post</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;.comments&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">html</span> <span class="o">=</span> <span class="n">comments_html</span>
 </pre></div>
 <h3>As a Haml filter (optional)</h3>
-<p>Of course you need to require <code>haml-rails</code> separately since its presence is not assumed</p><div class="highlight"><pre><span class="cp">-# app/views/posts/show.html.haml</span>
+<p>Of course you need to require <code>haml-rails</code> separately since its presence is not assumed</p><div class="highlight"><pre><span></span><span class="cp">-# app/views/posts/show.html.haml</span>
 
 <span class="nt">%article</span><span class="nc">.post</span>
   <span class="nt">%h1</span><span class="nc">.title</span><span class="p">=</span> <span class="n">post</span><span class="o">.</span><span class="n">title</span>
@@ -166,7 +172,7 @@
   <span class="nd">end</span>
 </pre></div>
 <h3>Spec!</h3>
-<p>Add specs into <code>app/assets/javascripts/spec</code>:</p><p>and then a spec folder with you specs!</p><div class="highlight"><pre><span class="c1"># app/assets/javascripts/spec/example_spec.js.rb</span>
+<p>Add specs into <code>app/assets/javascripts/spec</code>:</p><p>and then a spec folder with you specs!</p><div class="highlight"><pre><span></span><span class="c1"># app/assets/javascripts/spec/example_spec.js.rb</span>
 
 <span class="n">describe</span> <span class="s1">&#39;a spec&#39;</span> <span class="k">do</span>
   <span class="n">it</span> <span class="s1">&#39;has successful examples&#39;</span> <span class="k">do</span>

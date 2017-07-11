@@ -12,8 +12,10 @@
 .err { color: #FF0000; background-color: #FFAAAA } /* Error */
 .k { color: #008800; font-weight: bold } /* Keyword */
 .o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
 .cm { color: #888888 } /* Comment.Multiline */
 .cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
 .c1 { color: #888888 } /* Comment.Single */
 .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
@@ -53,8 +55,10 @@
 .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
 .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
 .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
 .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
 .sd { color: #DD4422 } /* Literal.String.Doc */
 .s2 { background-color: #fff0f0 } /* Literal.String.Double */
 .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
@@ -65,9 +69,11 @@
 .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .ss { color: #AA6600 } /* Literal.String.Symbol */
 .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
 .vc { color: #336699 } /* Name.Variable.Class */
 .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
 .vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
 .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
     .navbar-default .navbar-text {
@@ -114,7 +120,7 @@ can also be used via the <code>opal-haml</code> gem.</p>
 <p>If you require <code>template.rb</code> from the stdlib, then all compiled templates will
 be available on the <code>Template</code> object. Each compiled template will be an
 instance of <code>Template</code>, which provides a basic standard rendering api to make
-rendering a uniform method on the client.</p><p>For example, to access a template named <code>user</code>:</p><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;template&#39;</span>
+rendering a uniform method on the client.</p><p>For example, to access a template named <code>user</code>:</p><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;template&#39;</span>
 
 <span class="n">template</span> <span class="o">=</span> <span class="no">Template</span><span class="o">[</span><span class="s1">&#39;user&#39;</span><span class="o">]</span>
 <span class="n">context</span>  <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;Ford Prefect&#39;</span><span class="p">)</span>
@@ -125,31 +131,31 @@ rendering a uniform method on the client.</p><p>For example, to access a templat
 as a string. This is usually a html string, but it can be used for any dynamic
 content.</p>
 <h3>Registered Templates</h3>
-<p>You can get a quick list of all registered templates using <code>.paths</code>:</p><div class="highlight"><pre><span class="no">Template</span><span class="o">.</span><span class="n">paths</span>
+<p>You can get a quick list of all registered templates using <code>.paths</code>:</p><div class="highlight"><pre><span></span><span class="no">Template</span><span class="o">.</span><span class="n">paths</span>
 <span class="c1"># =&gt; [#&lt;Template: &#39;views/user&#39;&gt;, #&lt;Template: &#39;login&#39;&gt;]</span>
-</pre></div><p>These names are the keys used to access a template:</p><div class="highlight"><pre><span class="no">Template</span><span class="o">[</span><span class="s1">&#39;login&#39;</span><span class="o">]</span>
+</pre></div><p>These names are the keys used to access a template:</p><div class="highlight"><pre><span></span><span class="no">Template</span><span class="o">[</span><span class="s1">&#39;login&#39;</span><span class="o">]</span>
 <span class="c1"># =&gt; #&lt;Template: &#39;login&#39;&gt;</span>
 </pre></div>
 <h2>Haml templates</h2>
 <p><code>opal-haml</code> allows <code>.haml</code> templates to be compiled, just like opal compiles
-ruby code, ready to run on the client.</p><p>To get started, add to your Gemfile:</p><div class="highlight"><pre><span class="c1"># Gemfile</span>
+ruby code, ready to run on the client.</p><p>To get started, add to your Gemfile:</p><div class="highlight"><pre><span></span><span class="c1"># Gemfile</span>
 <span class="n">gem</span> <span class="s1">&#39;opal&#39;</span>
 <span class="n">gem</span> <span class="s1">&#39;opal-haml&#39;</span>
 </pre></div><p><code>opal-haml</code> simply registers the <code>.haml</code> template to be handled under sprockets.
-This means, that you can simply <code>require()</code> a haml template in your code.</p><p>Lets say you have the following simple opal app:</p><div class="highlight"><pre><span class="c1"># app/application.rb</span>
+This means, that you can simply <code>require()</code> a haml template in your code.</p><p>Lets say you have the following simple opal app:</p><div class="highlight"><pre><span></span><span class="c1"># app/application.rb</span>
 <span class="nb">require</span> <span class="s1">&#39;opal&#39;</span>
 
 <span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">Struct</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:name</span><span class="p">,</span> <span class="ss">:age</span><span class="p">)</span>
 <span class="k">end</span>
 </pre></div><p>We want to create an instance of the <code>User</code> class and render it using a haml
-template. Lets first create that template as <code>app/views/user.haml</code>:</p><div class="highlight"><pre><span class="cp">-# app/views/user.haml</span>
+template. Lets first create that template as <code>app/views/user.haml</code>:</p><div class="highlight"><pre><span></span><span class="cp">-# app/views/user.haml</span>
 <span class="nc">.row</span>
   <span class="nc">.col-md-6</span>
     <span class="p">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">name</span>
   <span class="nc">.col-md-6</span>
     <span class="p">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">age</span>
 </pre></div><p>You are nearly ready to go. Lets create a user instance and render the template
-in the context of that user:</p><div class="highlight"><pre><span class="c1"># app/application.rb</span>
+in the context of that user:</p><div class="highlight"><pre><span></span><span class="c1"># app/application.rb</span>
 <span class="nb">require</span> <span class="s1">&#39;opal&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;views/user&#39;</span>
 
@@ -162,28 +168,28 @@ in the context of that user:</p><div class="highlight"><pre><span class="c1"># a
 <span class="nb">puts</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">ford</span><span class="p">)</span>
 </pre></div><p>Note, when requiring haml templates you do not need to specify the <code>.haml</code>
 extension. This code will print the rendered html to the console. If you
-check it out, you should see it compiled into something like the following:</p><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-6&quot;</span><span class="nt">&gt;</span>
+check it out, you should see it compiled into something like the following:</p><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-6&quot;</span><span class="p">&gt;</span>
     Ford Prefect
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-6&quot;</span><span class="nt">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-6&quot;</span><span class="p">&gt;</span>
     42
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 <h2>ERB Templates</h2>
 <p>Support for <code>erb</code> templates is built in directly to the opal gem and stdlib.
 There is one caveat though when working with sprockets - it must have the
 <code>.opalerb</code> file extension, instead of <code>.erb</code>. This is because sprockets has a
 built in handler for <code>.erb</code> files.</p><p>If we have the same user class as above, create an <code>app/views/user.opalerb</code>
-file:</p><div class="highlight"><pre><span class="x">&lt;!-- app/views/user.opalerb --&gt;</span>
+file:</p><div class="highlight"><pre><span></span><span class="x">&lt;!-- app/views/user.opalerb --&gt;</span>
 <span class="x">&lt;div class=&quot;row&quot;&gt;</span>
 <span class="x">  &lt;div class=&quot;col-md-3&quot;&gt;</span><span class="cp">&lt;%=</span> <span class="nb">self</span><span class="o">.</span><span class="n">name</span> <span class="cp">%&gt;</span><span class="x">&lt;/div&gt;</span>
 <span class="x">&lt;/div&gt;</span>
-</pre></div><p>Again, you must then require the template (without the <code>.opalerb</code> extension):</p><div class="highlight"><pre><span class="c1"># app/application.rb</span>
+</pre></div><p>Again, you must then require the template (without the <code>.opalerb</code> extension):</p><div class="highlight"><pre><span></span><span class="c1"># app/application.rb</span>
 <span class="nb">require</span> <span class="s1">&#39;opal&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;views/user&#39;</span>
-</pre></div><p>And then you can access and render the template:</p><div class="highlight"><pre><span class="c1"># app/application.rb</span>
+</pre></div><p>And then you can access and render the template:</p><div class="highlight"><pre><span></span><span class="c1"># app/application.rb</span>
 
 <span class="n">template</span> <span class="o">=</span> <span class="no">Template</span><span class="o">[</span><span class="s1">&#39;views/user&#39;</span><span class="o">]</span>
 <span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;Ford Prefect&#39;</span><span class="p">)</span>
