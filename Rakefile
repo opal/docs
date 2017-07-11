@@ -223,6 +223,7 @@ def yard(component:, base_dir:, base_title:)
            end
 
   target = File.expand_path(target)
+  without_root = -> path { File.expand_path(path)[(File.expand_path(__dir__).size+1)..-1] }
   output = "#{__dir__}/#{base_dir}/#{component}"
   rm_rf "#{output}/*"
   sh %{
@@ -234,10 +235,10 @@ def yard(component:, base_dir:, base_title:)
     --exclude 'node_modules'
     --markup="markdown"
     --no-cache
-    --main #{target}/README.md
-    '#{target}/**/*.rb' '#{target}/**/*.js.rb'
+    --main #{without_root[target]}/README.md
+    '#{without_root[target]}/**/*.rb' '#{without_root[target]}/**/*.js.rb'
     -
-    #{target}/**/*.md
+    #{without_root[target]}/**/*.md
   }.gsub(/\n */, " ").strip
 end
 
