@@ -1,6 +1,15 @@
-#!/usr/bin/env bash
+#!/usr/bin/env ruby
 
-ref=${1:-master}
+if ARGV.empty?
+  puts <<~USAGE
+  #{$PROGRAM_NAME} master                # prepare docs for the master branch
+  #{$PROGRAM_NAME} v0.11.0               # prepare docs for v0.11.0
+  #{$PROGRAM_NAME} v0.8.1 stdlib corelib # only prepare docs for corelib & stdlib
+  USAGE
+end
 
-rake REF="$ref" COMPONENTS="${2}"
-rake index REF="$ref"
+ref = ARGV[0]
+components = ARGV[1..-1].join(' ') # defaults to components = 'lib corelib stdlib'
+
+system 'rake', %{REF="#{ref}"}, %{COMPONENTS="#{components}"}
+system 'rake', 'index', %{REF="#{ref}"}
