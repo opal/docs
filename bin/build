@@ -11,5 +11,5 @@ end
 ref = ARGV[0]
 components = ARGV[1..-1].join(' ') # defaults to components = 'lib corelib stdlib'
 
-system 'rake', %{REF="#{ref}"}, %{COMPONENTS="#{components}"}
-system 'rake', 'index', %{REF="#{ref}"}
+system 'rake', %{REF=#{ref}}, %{COMPONENTS=#{components}}
+system 'rake', 'index', %{REF=#{ref}}
