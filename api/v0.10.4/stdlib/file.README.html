@@ -59,276 +59,394 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1>JS-YAML - YAML 1.2 parser and serializer for JavaScript</h1>
+      <div id="content"><div id='filecontents'><p><a href="https://travis-ci.org/isaacs/node-glob/"><img src="https://travis-ci.org/isaacs/node-glob.svg?branch=master" alt="Build Status"></a> <a href="https://david-dm.org/isaacs/node-glob"><img src="https://david-dm.org/isaacs/node-glob.svg" alt="Dependency Status"></a> <a href="https://david-dm.org/isaacs/node-glob#info=devDependencies"><img src="https://david-dm.org/isaacs/node-glob/dev-status.svg" alt="devDependency Status"></a> <a href="https://david-dm.org/isaacs/node-glob#info=optionalDependencies"><img src="https://david-dm.org/isaacs/node-glob/optional-status.svg" alt="optionalDependency Status"></a></p>
 
-<p><a href="https://travis-ci.org/nodeca/js-yaml"><img src="https://travis-ci.org/nodeca/js-yaml.svg?branch=master" alt="Build Status"></a>
-<a href="https://www.npmjs.org/package/js-yaml"><img src="https://img.shields.io/npm/v/js-yaml.svg" alt="NPM version"></a></p>
+<h1>Glob</h1>
 
-<p><a href="http://nodeca.github.com/js-yaml/">Online Demo</a></p>
+<p>Match files using the patterns the shell uses, like stars and stuff.</p>
 
-<p>This is an implementation of <a href="http://yaml.org/">YAML</a>, a human friendly data
-serialization language. Started as <a href="http://pyyaml.org/">PyYAML</a> port, it was
-completely rewritten from scratch. Now it&#39;s very fast, and supports 1.2 spec.</p>
+<p>This is a glob implementation in JavaScript.  It uses the <code>minimatch</code>
+library to do its matching.</p>
 
-<h2>Installation</h2>
+<p><img src="oh-my-glob.gif" alt=""></p>
 
-<h3>YAML module for node.js</h3>
+<h2>Usage</h2>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_npm'>npm</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_js'>js</span><span class='op'>-</span><span class='id identifier rubyid_yaml'>yaml</span>
+<pre class="code javascript"><code class="javascript">var glob = require(&quot;glob&quot;)
+
+// options is optional
+glob(&quot;**/*.js&quot;, options, function (er, files) {
+  // files is an array of filenames.
+  // If the `nonull` option is set, and nothing
+  // was found, then files is [&quot;**/*.js&quot;]
+  // er is an error object or null.
+})
 </code></pre>
 
-<h3>CLI executable</h3>
+<h2>Glob Primer</h2>
 
-<p>If you want to inspect your YAML files from CLI, install js-yaml globally:</p>
+<p>&quot;Globs&quot; are the patterns you type when you do stuff like <code>ls *.js</code> on
+the command line, or put <code>build/*</code> in a <code>.gitignore</code> file.</p>
 
-<pre class="code ruby"><code class="ruby">npm install -g js-yaml
-</code></pre>
+<p>Before parsing the path part patterns, braced sections are expanded
+into a set.  Braced sections start with <code>{</code> and end with <code>}</code>, with any
+number of comma-delimited sections within.  Braced sections may contain
+slash characters, so <code>a{/b/c,bcd}</code> would expand into <code>a/b/c</code> and <code>abcd</code>.</p>
 
-<h4>Usage</h4>
-
-<pre class="code ruby"><code class="ruby">usage: js-yaml [-h] [-v] [-c] [-t] file
-
-Positional arguments:
-  file           File with YAML document(s)
-
-Optional arguments:
-  -h, --help     Show this help message and exit.
-  -v, --version  Show program&#39;s version number and exit.
-  -c, --compact  Display errors in compact mode
-  -t, --trace    Show stack trace on error
-</code></pre>
-
-<h3>Bundled YAML library for browsers</h3>
-
-<pre class="code html"><code class="html">&lt;!-- esprima required only for !!js/function --&gt;
-&lt;script src=&quot;esprima.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;js-yaml.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-var doc = jsyaml.load(&#39;greeting: hello\nname: world&#39;);
-&lt;/script&gt;
-</code></pre>
-
-<p>Browser support was done mostly for online demo. If you find any errors - feel
-free to send pull requests with fixes. Also note, that IE and other old browsers
-needs <a href="https://github.com/kriskowal/es5-shim">es5-shims</a> to operate.</p>
-
-<p>Notes:</p>
-
-<ol>
-<li>We have no resourses to support browserified version. Don&#39;t expect it to be
-well tested. Don&#39;t expect fast fixes if something goes wrong there.</li>
-<li><code>!!js/function</code> in browser bundle will not work by default. If you really need
-it - load <code>esprima</code> parser first (via amd or directly).</li>
-<li><code>!!bin</code> in browser will return <code>Array</code>, because browsers do not support
-node.js <code>Buffer</code> and adding Buffer shims is completely useless on practice.</li>
-</ol>
-
-<h2>API</h2>
-
-<p>Here we cover the most &#39;useful&#39; methods. If you need advanced details (creating
-your own tags), see <a href="https://github.com/nodeca/js-yaml/wiki">wiki</a> and
-<a href="https://github.com/nodeca/js-yaml/tree/master/examples">examples</a> for more
-info.</p>
-
-<pre class="code javascript"><code class="javascript">yaml = require(&#39;js-yaml&#39;);
-fs   = require(&#39;fs&#39;);
-
-// Get document, or throw exception on error
-try {
-  var doc = yaml.safeLoad(fs.readFileSync(&#39;/home/ixti/example.yml&#39;, &#39;utf8&#39;));
-  console.log(doc);
-} catch (e) {
-  console.log(e);
-}
-</code></pre>
-
-<h3>safeLoad (string [ , options ])</h3>
-
-<p><strong>Recommended loading way.</strong> Parses <code>string</code> as single YAML document. Returns a JavaScript
-object or throws <code>YAMLException</code> on error. By default, does not support regexps,
-functions and undefined. This method is safe for untrusted data.</p>
-
-<p>options:</p>
+<p>The following characters have special magic meaning when used in a
+path portion:</p>
 
 <ul>
-<li><code>filename</code> <em>(default: null)</em> - string to be used as a file path in
-error/warning messages.</li>
-<li><code>onWarning</code> <em>(default: null)</em> - function to call on warning messages.
-Loader will throw on warnings if this function is not provided.</li>
-<li><code>schema</code> <em>(default: <code>DEFAULT_SAFE_SCHEMA</code>)</em> - specifies a schema to use.
+<li><code>*</code> Matches 0 or more characters in a single path portion</li>
+<li><code>?</code> Matches 1 character</li>
+<li><code>[...]</code> Matches a range of characters, similar to a RegExp range.
+If the first character of the range is <code>!</code> or <code>^</code> then it matches
+any character not in the range.</li>
+<li><code>!(pattern|pattern|pattern)</code> Matches anything that does not match
+any of the patterns provided.</li>
+<li><code>?(pattern|pattern|pattern)</code> Matches zero or one occurrence of the
+patterns provided.</li>
+<li><code>+(pattern|pattern|pattern)</code> Matches one or more occurrences of the
+patterns provided.</li>
+<li><code>*(a|b|c)</code> Matches zero or more occurrences of the patterns provided</li>
+<li><code>@(pattern|pat*|pat?erN)</code> Matches exactly one of the patterns
+provided</li>
+<li><code>**</code> If a &quot;globstar&quot; is alone in a path portion, then it matches
+zero or more directories and subdirectories searching for matches.
+It does not crawl symlinked directories.</li>
+</ul>
+
+<h3>Dots</h3>
+
+<p>If a file or directory path portion has a <code>.</code> as the first character,
+then it will not match any glob pattern unless that pattern&#39;s
+corresponding path part also has a <code>.</code> as its first character.</p>
+
+<p>For example, the pattern <code>a/.*/c</code> would match the file at <code>a/.b/c</code>.
+However the pattern <code>a/*/c</code> would not, because <code>*</code> does not start with
+a dot character.</p>
+
+<p>You can make glob treat dots as normal characters by setting
+<code>dot:true</code> in the options.</p>
+
+<h3>Basename Matching</h3>
+
+<p>If you set <code>matchBase:true</code> in the options, and the pattern has no
+slashes in it, then it will seek for any file anywhere in the tree
+with a matching basename.  For example, <code>*.js</code> would match
+<code>test/simple/basic.js</code>.</p>
+
+<h3>Negation</h3>
+
+<p>The intent for negation would be for a pattern starting with <code>!</code> to
+match everything that <em>doesn&#39;t</em> match the supplied pattern.  However,
+the implementation is weird, and for the time being, this should be
+avoided.  The behavior will change or be deprecated in version 5.</p>
+
+<h3>Empty Sets</h3>
+
+<p>If no matching files are found, then an empty array is returned.  This
+differs from the shell, where the pattern itself is returned.  For
+example:</p>
+
+<pre class="code ruby"><code class="ruby">$ echo a*s*d*f
+a*s*d*f
+</code></pre>
+
+<p>To get the bash-style behavior, set the <code>nonull:true</code> in the options.</p>
+
+<h3>See Also:</h3>
 
 <ul>
-<li><code>FAILSAFE_SCHEMA</code> - only strings, arrays and plain objects:
-<a href="http://www.yaml.org/spec/1.2/spec.html#id2802346">http://www.yaml.org/spec/1.2/spec.html#id2802346</a></li>
-<li><code>JSON_SCHEMA</code> - all JSON-supported types:
-<a href="http://www.yaml.org/spec/1.2/spec.html#id2803231">http://www.yaml.org/spec/1.2/spec.html#id2803231</a></li>
-<li><code>CORE_SCHEMA</code> - same as <code>JSON_SCHEMA</code>:
-<a href="http://www.yaml.org/spec/1.2/spec.html#id2804923">http://www.yaml.org/spec/1.2/spec.html#id2804923</a></li>
-<li><code>DEFAULT_SAFE_SCHEMA</code> - all supported YAML types, without unsafe ones
-(<code>!!js/undefined</code>, <code>!!js/regexp</code> and <code>!!js/function</code>):
-<a href="http://yaml.org/type/">http://yaml.org/type/</a></li>
-<li><code>DEFAULT_FULL_SCHEMA</code> - all supported YAML types.</li>
+<li><code>man sh</code></li>
+<li><code>man bash</code> (Search for &quot;Pattern Matching&quot;)</li>
+<li><code>man 3 fnmatch</code></li>
+<li><code>man 5 gitignore</code></li>
+<li><a href="https://github.com/isaacs/minimatch">minimatch documentation</a></li>
+</ul>
+
+<h2>glob.hasMagic(pattern, [options])</h2>
+
+<p>Returns <code>true</code> if there are any special characters in the pattern, and
+<code>false</code> otherwise.</p>
+
+<p>Note that the options affect the results.  If <code>noext:true</code> is set in
+the options object, then <code>+(a|b)</code> will not be considered a magic
+pattern.  If the pattern has a brace expansion, like <code>a/{b/c,x/y}</code>
+then that is considered magical, unless <code>nobrace:true</code> is set in the
+options.</p>
+
+<h2>glob(pattern, [options], cb)</h2>
+
+<ul>
+<li><code>pattern</code> <span class='object_link'><a href="String.html" title="String (class)">String</a></span> Pattern to be matched</li>
+<li><code>options</code> <span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+<li><code>cb</code> Function
+
+<ul>
+<li><code>err</code> | null</li>
+<li><code>matches</code> Array&lt;String&gt; filenames found matching the pattern</li>
 </ul></li>
 </ul>
 
-<p>NOTE: This function <strong>does not</strong> understand multi-document sources, it throws
-exception on those.</p>
+<p>Perform an asynchronous glob search.</p>
 
-<p>NOTE: JS-YAML <strong>does not</strong> support schema-specific tag resolution restrictions.
-So, JSON schema is not as strict as defined in the YAML specification.
-It allows numbers in any notaion, use <code>Null</code> and <code>NULL</code> as <code>null</code>, etc.
-Core schema also has no such restrictions. It allows binary notation for integers.</p>
-
-<h3>load (string [ , options ])</h3>
-
-<p><strong>Use with care with untrusted sources</strong>. The same as <code>safeLoad()</code> but uses
-<code>DEFAULT_FULL_SCHEMA</code> by default - adds some JavaScript-specific types:
-<code>!!js/function</code>, <code>!!js/regexp</code> and <code>!!js/undefined</code>. For untrusted sources you
-must additionally validate object structure, to avoid injections:</p>
-
-<pre class="code javascript"><code class="javascript">var untrusted_code = &#39;&quot;toString&quot;: !&lt;tag:yaml.org,2002:js/function&gt; &quot;function (){very_evil_thing();}&quot;&#39;;
-
-// I&#39;m just converting that string, what could possibly go wrong?
-require(&#39;js-yaml&#39;).load(untrusted_code) + &#39;&#39;
-</code></pre>
-
-<h3>safeLoadAll (string, iterator [ , options ])</h3>
-
-<p>Same as <code>safeLoad()</code>, but understands multi-document sources and apply
-<code>iterator</code> to each document.</p>
-
-<pre class="code javascript"><code class="javascript">var yaml = require(&#39;js-yaml&#39;);
-
-yaml.safeLoadAll(data, function (doc) {
-  console.log(doc);
-});
-</code></pre>
-
-<h3>loadAll (string, iterator [ , options ])</h3>
-
-<p>Same as <code>safeLoadAll()</code> but uses <code>DEFAULT_FULL_SCHEMA</code> by default.</p>
-
-<h3>safeDump (object [ , options ])</h3>
-
-<p>Serializes <code>object</code> as YAML document. Uses <code>DEFAULT_SAFE_SCHEMA</code>, so it will
-throw exception if you try to dump regexps or functions. However, you can
-disable exceptions by <code>skipInvalid</code> option.</p>
-
-<p>options:</p>
+<h2>glob.sync(pattern, [options])</h2>
 
 <ul>
-<li><code>indent</code> <em>(default: 2)</em> - indentation width to use (in spaces).</li>
-<li><code>skipInvalid</code> <em>(default: false)</em> - do not throw on invalid types (like function
-in the safe schema) and skip pairs and single values with such types.</li>
-<li><code>flowLevel</code> (default: -1) - specifies level of nesting, when to switch from
-block to flow style for collections. -1 means block style everwhere</li>
-<li><code>styles</code> - &quot;tag&quot; =&gt; &quot;style&quot; map. Each tag may have own set of styles.</li>
-<li><code>schema</code> <em>(default: <code>DEFAULT_SAFE_SCHEMA</code>)</em> specifies a schema to use.</li>
+<li><code>pattern</code> <span class='object_link'><a href="String.html" title="String (class)">String</a></span> Pattern to be matched</li>
+<li><code>options</code> <span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+<li>return: Array&lt;String&gt; filenames found matching the pattern</li>
 </ul>
 
-<p>styles:</p>
+<p>Perform a synchronous glob search.</p>
 
-<pre class="code none"><code class="none">!!null
-  &quot;canonical&quot;   =&gt; &quot;~&quot;
+<h2>Class: glob.Glob</h2>
 
-!!int
-  &quot;binary&quot;      =&gt; &quot;0b1&quot;, &quot;0b101010&quot;, &quot;0b1110001111010&quot;
-  &quot;octal&quot;       =&gt; &quot;01&quot;, &quot;052&quot;, &quot;016172&quot;
-  &quot;decimal&quot;     =&gt; &quot;1&quot;, &quot;42&quot;, &quot;7290&quot;
-  &quot;hexadecimal&quot; =&gt; &quot;0x1&quot;, &quot;0x2A&quot;, &quot;0x1C7A&quot;
+<p>Create a Glob object by instantiating the <code>glob.Glob</code> class.</p>
 
-!!null, !!bool, !!float
-  &quot;lowercase&quot;   =&gt; &quot;null&quot;, &quot;true&quot;, &quot;false&quot;, &quot;.nan&quot;, &#39;.inf&#39;
-  &quot;uppercase&quot;   =&gt; &quot;NULL&quot;, &quot;TRUE&quot;, &quot;FALSE&quot;, &quot;.NAN&quot;, &#39;.INF&#39;
-  &quot;camelcase&quot;   =&gt; &quot;Null&quot;, &quot;True&quot;, &quot;False&quot;, &quot;.NaN&quot;, &#39;.Inf&#39;
+<pre class="code javascript"><code class="javascript">var Glob = require(&quot;glob&quot;).Glob
+var mg = new Glob(pattern, options, cb)
 </code></pre>
 
-<p>By default, !!int uses <code>decimal</code>, and !!null, !!bool, !!float use <code>lowercase</code>.</p>
+<p>It&#39;s an EventEmitter, and starts walking the filesystem to find matches
+immediately.</p>
 
-<h3>dump (object [ , options ])</h3>
+<h3>new glob.Glob(pattern, [options], [cb])</h3>
 
-<p>Same as <code>safeDump()</code> but without limits (uses <code>DEFAULT_FULL_SCHEMA</code> by default).</p>
+<ul>
+<li><code>pattern</code> <span class='object_link'><a href="String.html" title="String (class)">String</a></span> pattern to search for</li>
+<li><code>options</code> <span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+<li><code>cb</code> Function Called when an error occurs, or matches are found
 
-<h2>Supported YAML types</h2>
+<ul>
+<li><code>err</code> | null</li>
+<li><code>matches</code> Array&lt;String&gt; filenames found matching the pattern</li>
+</ul></li>
+</ul>
 
-<p>The list of standard YAML tags and corresponding JavaScipt types. See also
-<a href="http://pyyaml.org/wiki/YAMLTagDiscussion">YAML tag discussion</a> and
-<a href="http://yaml.org/type/">YAML types repository</a>.</p>
+<p>Note that if the <code>sync</code> flag is set in the options, then matches will
+be immediately available on the <code>g.found</code> member.</p>
 
-<pre class="code ruby"><code class="ruby">!!null &#39;&#39;                   # null
-!!bool &#39;yes&#39;                # bool
-!!int &#39;3...&#39;                # number
-!!float &#39;3.14...&#39;           # number
-!!binary &#39;...base64...&#39;     # buffer
-!!timestamp &#39;YYYY-...&#39;      # date
-!!omap [ ... ]              # array of key-value pairs
-!!pairs [ ... ]             # array or array pairs
-!!set { ... }               # array of objects with given keys and null values
-!!str &#39;...&#39;                 # string
-!!seq [ ... ]               # array
-!!map { ... }               # object
+<h3>Properties</h3>
+
+<ul>
+<li><code>minimatch</code> The minimatch object that the glob uses.</li>
+<li><code>options</code> The options object passed in.</li>
+<li><code>aborted</code> Boolean which is set to true when calling <code>abort()</code>.  There
+is no way at this time to continue a glob search after aborting, but
+you can re-use the statCache to avoid having to duplicate syscalls.</li>
+<li><code>statCache</code> Collection of all the stat results the glob search
+performed.</li>
+<li><code>cache</code> Convenience object.  Each field has the following possible
+values:
+
+<ul>
+<li><code>false</code> - Path does not exist</li>
+<li><code>true</code> - Path exists</li>
+<li><code>&#39;DIR&#39;</code> - Path exists, and is not a directory</li>
+<li><code>&#39;FILE&#39;</code> - Path exists, and is a directory</li>
+<li><code>[file, entries, ...]</code> - Path exists, is a directory, and the
+array value is the results of <code>fs.readdir</code></li>
+</ul></li>
+<li><code>statCache</code> Cache of <code>fs.stat</code> results, to prevent statting the same
+path multiple times.</li>
+<li><code>symlinks</code> A record of which paths are symbolic links, which is
+relevant in resolving <code>**</code> patterns.</li>
+</ul>
+
+<h3>Events</h3>
+
+<ul>
+<li><code>end</code> When the matching is finished, this is emitted with all the
+matches found.  If the <code>nonull</code> option is set, and no match was found,
+then the <code>matches</code> list contains the original pattern.  The matches
+are sorted, unless the <code>nosort</code> flag is set.</li>
+<li><code>match</code> Every time a match is found, this is emitted with the matched.</li>
+<li><code>error</code> Emitted when an unexpected error is encountered, or whenever
+any fs error occurs if <code>options.strict</code> is set.</li>
+<li><code>abort</code> When <code>abort()</code> is called, this event is raised.</li>
+</ul>
+
+<h3>Methods</h3>
+
+<ul>
+<li><code>pause</code> Temporarily stop the search</li>
+<li><code>resume</code> Resume the search</li>
+<li><code>abort</code> Stop the search forever</li>
+</ul>
+
+<h3>Options</h3>
+
+<p>All the options that can be passed to Minimatch can also be passed to
+Glob to change pattern matching behavior.  Also, some have been added,
+or have glob-specific ramifications.</p>
+
+<p>All options are false by default, unless otherwise noted.</p>
+
+<p>All options are added to the Glob object, as well.</p>
+
+<p>If you are running many <code>glob</code> operations, you can pass a Glob object
+as the <code>options</code> argument to a subsequent operation to shortcut some
+<code>stat</code> and <code>readdir</code> calls.  At the very least, you may pass in shared
+<code>symlinks</code>, <code>statCache</code>, and <code>cache</code> options, so that parallel glob
+operations will be sped up by sharing information about the
+filesystem.</p>
+
+<ul>
+<li><code>cwd</code> The current working directory in which to search.  Defaults
+to <code>process.cwd()</code>.</li>
+<li><code>root</code> The place where patterns starting with <code>/</code> will be mounted
+onto.  Defaults to <code>path.resolve(options.cwd, &quot;/&quot;)</code> (<code>/</code> on Unix
+systems, and <code>C:\</code> or some such on Windows.)</li>
+<li><code>dot</code> Include <code>.dot</code> files in normal matches and <code>globstar</code> matches.
+Note that an explicit dot in a portion of the pattern will always
+match dot files.</li>
+<li><code>nomount</code> By default, a pattern starting with a forward-slash will be
+&quot;mounted&quot; onto the root setting, so that a valid filesystem path is
+returned.  Set this flag to disable that behavior.</li>
+<li><code>mark</code> Add a <code>/</code> character to directory matches.  Note that this
+requires additional stat calls.</li>
+<li><code>nosort</code> Don&#39;t sort the results.</li>
+<li><code>stat</code> Set to true to stat <em>all</em> results.  This reduces performance
+somewhat, and is completely unnecessary, unless <code>readdir</code> is presumed
+to be an untrustworthy indicator of file existence.</li>
+<li><code>silent</code> When an unusual error is encountered when attempting to
+read a directory, a warning will be printed to stderr.  Set the
+<code>silent</code> option to true to suppress these warnings.</li>
+<li><code>strict</code> When an unusual error is encountered when attempting to
+read a directory, the process will just continue on in search of
+other matches.  Set the <code>strict</code> option to raise an error in these
+cases.</li>
+<li><code>cache</code> See <code>cache</code> property above.  Pass in a previously generated
+cache object to save some fs calls.</li>
+<li><code>statCache</code> A cache of results of filesystem information, to prevent
+unnecessary stat calls.  While it should not normally be necessary
+to set this, you may pass the statCache from one glob() call to the
+options object of another, if you know that the filesystem will not
+change between calls.  (See &quot;Race Conditions&quot; below.)</li>
+<li><code>symlinks</code> A cache of known symbolic links.  You may pass in a
+previously generated <code>symlinks</code> object to save <code>lstat</code> calls when
+resolving <code>**</code> matches.</li>
+<li><code>sync</code> Perform a synchronous glob search.</li>
+<li><code>nounique</code> In some cases, brace-expanded patterns can result in the
+same file showing up multiple times in the result set.  By default,
+this implementation prevents duplicates in the result set.  Set this
+flag to disable that behavior.</li>
+<li><code>nonull</code> Set to never return an empty set, instead returning a set
+containing the pattern itself.  This is the default in glob(3).</li>
+<li><code>debug</code> Set to enable debug logging in minimatch and glob.</li>
+<li><code>nobrace</code> Do not expand <code>{a,b}</code> and <code>{1..3}</code> brace sets.</li>
+<li><code>noglobstar</code> Do not match <code>**</code> against multiple filenames.  (Ie,
+treat it as a normal <code>*</code> instead.)</li>
+<li><code>noext</code> Do not match <code>+(a|b)</code> &quot;extglob&quot; patterns.</li>
+<li><code>nocase</code> Perform a case-insensitive match.  Note: on
+case-insensitive filesystems, non-magic patterns will match by
+default, since <code>stat</code> and <code>readdir</code> will not raise errors.</li>
+<li><code>matchBase</code> Perform a basename-only match if the pattern does not
+contain any slash characters.  That is, <code>*.js</code> would be treated as
+equivalent to <code>**/*.js</code>, matching all js files in all directories.</li>
+<li><code>nonegate</code> Suppress <code>negate</code> behavior.  (See below.)</li>
+<li><code>nocomment</code> Suppress <code>comment</code> behavior.  (See below.)</li>
+<li><code>nonull</code> Return the pattern when no matches are found.</li>
+<li><code>nodir</code> Do not match directories, only files.</li>
+</ul>
+
+<h2>Comparisons to other fnmatch/glob implementations</h2>
+
+<p>While strict compliance with the existing standards is a worthwhile
+goal, some discrepancies exist between node-glob and other
+implementations, and are intentional.</p>
+
+<p>If the pattern starts with a <code>!</code> character, then it is negated.  Set the
+<code>nonegate</code> flag to suppress this behavior, and treat leading <code>!</code>
+characters normally.  This is perhaps relevant if you wish to start the
+pattern with a negative extglob pattern like <code>!(a|B)</code>.  Multiple <code>!</code>
+characters at the start of a pattern will negate the pattern multiple
+times.</p>
+
+<p>If a pattern starts with <code>#</code>, then it is treated as a comment, and
+will not match anything.  Use <code>\#</code> to match a literal <code>#</code> at the
+start of a line, or set the <code>nocomment</code> flag to suppress this behavior.</p>
+
+<p>The double-star character <code>**</code> is supported by default, unless the
+<code>noglobstar</code> flag is set.  This is supported in the manner of bsdglob
+and bash 4.3, where <code>**</code> only has special significance if it is the only
+thing in a path part.  That is, <code>a/**/b</code> will match <code>a/x/y/b</code>, but
+<code>a/**b</code> will not.</p>
+
+<p>Note that symlinked directories are not crawled as part of a <code>**</code>,
+though their contents may match against subsequent portions of the
+pattern.  This prevents infinite loops and duplicates and the like.</p>
+
+<p>If an escaped pattern has no matches, and the <code>nonull</code> flag is set,
+then glob returns the pattern as-provided, rather than
+interpreting the character escapes.  For example,
+<code>glob.match([], &quot;\\*a\\?&quot;)</code> will return <code>&quot;\\*a\\?&quot;</code> rather than
+<code>&quot;*a?&quot;</code>.  This is akin to setting the <code>nullglob</code> option in bash, except
+that it does not resolve escaped pattern characters.</p>
+
+<p>If brace expansion is not disabled, then it is performed before any
+other interpretation of the glob pattern.  Thus, a pattern like
+<code>+(a|{b),c)}</code>, which would not be valid in bash or zsh, is expanded
+<strong>first</strong> into the set of <code>+(a|b)</code> and <code>+(a|c)</code>, and those patterns are
+checked for validity.  Since those two are valid, matching proceeds.</p>
+
+<h2>Windows</h2>
+
+<p><strong>Please only use forward-slashes in glob expressions.</strong></p>
+
+<p>Though windows uses either <code>/</code> or <code>\</code> as its path separator, only <code>/</code>
+characters are used by this glob implementation.  You must use
+forward-slashes <strong>only</strong> in glob expressions.  Back-slashes will always
+be interpreted as escape characters, not path separators.</p>
+
+<p>Results from absolute patterns such as <code>/foo/*</code> are mounted onto the
+root setting using <code>path.join</code>.  On windows, this will by default result
+in <code>/foo/*</code> matching <code>C:\foo\bar.txt</code>.</p>
+
+<h2>Race Conditions</h2>
+
+<p>Glob searching, by its very nature, is susceptible to race conditions,
+since it relies on directory walking and such.</p>
+
+<p>As a result, it is possible that a file that exists when glob looks for
+it may have been deleted or modified by the time it returns the result.</p>
+
+<p>As part of its internal implementation, this program caches all stat
+and readdir calls that it makes, in order to cut down on system
+overhead.  However, this also makes it even more susceptible to races,
+especially if the cache or statCache objects are reused between glob
+calls.</p>
+
+<p>Users are thus advised not to use a glob result as a guarantee of
+filesystem state in the face of rapid changes.  For the vast majority
+of operations, this is never a problem.</p>
+
+<h2>Contributing</h2>
+
+<p>Any change to behavior (including bugfixes) must come with a test.</p>
+
+<p>Patches that fail tests or reduce performance will be rejected.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='comment'># to run tests
+</span><span class='id identifier rubyid_npm'>npm</span> <span class='id identifier rubyid_test'>test</span>
+
+<span class='comment'># to re-generate test fixtures
+</span><span class='id identifier rubyid_npm'>npm</span> <span class='id identifier rubyid_run'>run</span> <span class='id identifier rubyid_test'>test</span><span class='op'>-</span><span class='id identifier rubyid_regen'>regen</span>
+
+<span class='comment'># to benchmark against bash/zsh
+</span><span class='id identifier rubyid_npm'>npm</span> <span class='id identifier rubyid_run'>run</span> <span class='id identifier rubyid_bench'>bench</span>
+
+<span class='comment'># to profile javascript
+</span><span class='id identifier rubyid_npm'>npm</span> <span class='id identifier rubyid_run'>run</span> <span class='id identifier rubyid_prof'>prof</span>
 </code></pre>
-
-<p><strong>JavaScript-specific tags</strong></p>
-
-<pre class="code ruby"><code class="ruby">!!js/regexp /pattern/gim            # RegExp
-!!js/undefined &#39;&#39;                   # Undefined
-!!js/function &#39;function () {...}&#39;   # Function
-</code></pre>
-
-<h2>Caveats</h2>
-
-<p>Note, that you use arrays or objects as key in JS-YAML. JS do not allows objects
-or array as keys, and stringifies (by calling .toString method) them at the
-moment of adding them.</p>
-
-<pre class="code yaml"><code class="yaml">---
-? [ foo, bar ]
-: - baz
-? { foo: bar }
-: - baz
-  - baz
-</code></pre>
-
-<pre class="code javascript"><code class="javascript">{ &quot;foo,bar&quot;: [&quot;baz&quot;], &quot;[object Object]&quot;: [&quot;baz&quot;, &quot;baz&quot;] }
-</code></pre>
-
-<p>Also, reading of properties on implicit block mapping keys is not supported yet.
-So, the following YAML document cannot be loaded.</p>
-
-<pre class="code yaml"><code class="yaml">&amp;anchor foo:
-  foo: bar
-  *anchor: duplicate key
-  baz: bat
-  *anchor: duplicate key
-</code></pre>
-
-<h2>Breaking changes in 2.x.x -&gt; 3.x.x</h2>
-
-<p>If your have not used <strong>custom</strong> tags or loader classes and not loaded yaml
-files via <code>require()</code> - no changes needed. Just upgrade library.</p>
-
-<p>In other case, you should:</p>
-
-<ol>
-<li>Replace all occurences of <code>require(&#39;xxxx.yml&#39;)</code> by <code>fs.readFileSync()</code> +
-<code>yaml.safeLoad()</code>.</li>
-<li>rewrite your custom tags constructors and custom loader
-classes, to conform new API. See
-<a href="https://github.com/nodeca/js-yaml/tree/master/examples">examples</a> and
-<a href="https://github.com/nodeca/js-yaml/wiki">wiki</a> for details.</li>
-</ol>
-
-<h2>License</h2>
-
-<p>View the <a href="https://github.com/nodeca/js-yaml/blob/master/LICENSE">LICENSE</a> file
-(MIT).</p>
 </div></div>
 
       <div id="footer">
-  Generated on 07/11/17 by
+  Generated on 03/13/18 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.9.9 (ruby-2.4.0).
+  0.9.9 (ruby-2.5.0).
 </div>
 
     </div>

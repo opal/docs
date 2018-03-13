@@ -1228,7 +1228,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_uses_defn?'>uses_defn?</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_iter?'>iter?</span> <span class='kw'>or</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_module?'>module?</span>
     <span class='kw'>true</span>
-  <span class='kw'>elsif</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_class?'>class?</span> <span class='kw'>and</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>Object</span><span class='words_sep'> </span><span class='tstring_content'>BasicObject</span><span class='words_sep'>)</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_class?'>class?</span> <span class='kw'>and</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>Object</span><span class='words_sep'> </span><span class='tstring_content'>BasicObject</span><span class='tstring_end'>)</span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
     <span class='kw'>true</span>
   <span class='kw'>else</span>
     <span class='kw'>false</span>
@@ -1244,9 +1244,9 @@
 </div>
 
       <div id="footer">
-  Generated on 07/11/17 by
+  Generated on 03/13/18 by
   <!-- <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a> -->
-  0.9.9 (ruby-2.4.0).
+  0.9.9 (ruby-2.5.0).
 </div>
 
     </div>
