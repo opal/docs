@@ -21,6 +21,7 @@ system 'rake setup REF=master'
   v0.10.4
   v0.10.5
   v0.11.0
+  v0.11.1
   master
 ].each do |ref|
   system({'SKIP_GH_PAGES_RESET' => 'true'}, "#{__dir__}/build #{ref}")
