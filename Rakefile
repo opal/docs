@@ -1,8 +1,6 @@
 require 'bundler/setup'
 Bundler.require
 
-STABLE_VERSION = 'v0.11.1'
-
 def directory? path
   File.directory? path
 end
@@ -144,7 +142,7 @@ task :index do
   api_path    = -> v { "./api/#{v}/index.html" }
   guides_path = -> v { "./guides/#{v}/index.html" }
 
-  stable_v = STABLE_VERSION
+  stable_v = (api_versions - ['master']).sort_by { |v| Gem::Version.new(v.sub(/^v/, '')) }.last
 
   stable_html = <<-HTML
     <div class="jumbotron">
