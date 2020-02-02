@@ -11,6 +11,9 @@
       color: rgba(255,255,255,0.8);
     }
   </style>
+
+  <!-- Algolia -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 </head>
 <body class="<%= page_classes %>">
   <nav class='navbar navbar-default opal-nav' role='navigation'>
@@ -74,6 +77,17 @@
       }
     })
   })(document.querySelectorAll('a[href="'+location.pathname.replace(/\/$/,'')+'"]'))
+  </script>
+
+  <!-- Algolia -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript">
+    docsearch({
+      apiKey: 'cf08db1eca77cb92ca34e24a86430bcb',
+      indexName: 'opalrb',
+      inputSelector: '### REPLACE ME ####',
+      debug: false // Set debug to true if you want to inspect the dropdown
+      });
   </script>
 </body>
 </html>
