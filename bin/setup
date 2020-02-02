@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+gem install bundler:2.1 --conservative
+bundle check || bundle install
