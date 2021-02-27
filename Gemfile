@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'yard', github: 'lsegal/yard'
-gem 'rake'
+gem 'yard', git: 'https://github.com/lsegal/yard.git', branch: :main
+gem 'rake', '< 12'
 gem 'redcarpet'
 gem 'pygments.rb'
