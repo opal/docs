@@ -1,18 +1,18 @@
 GIT
   remote: https://github.com/lsegal/yard.git
-  revision: 359006641260eef1fe6d28f5c43c7c98d40f257d
+  revision: 9865620413d3519b561d87479e44f1b4fe782904
   branch: main
   specs:
     yard (0.9.26)
+      webrick (~> 1.7.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    multi_json (1.12.1)
-    pygments.rb (1.1.2)
-      multi_json (>= 1.0.0)
+    pygments.rb (2.2.0)
     rake (11.3.0)
     redcarpet (3.5.1)
+    webrick (1.7.0)
 
 PLATFORMS
   ruby
@@ -25,4 +25,4 @@ DEPENDENCIES
   yard!
 
 BUNDLED WITH
-   2.2.3
+   2.2.30
