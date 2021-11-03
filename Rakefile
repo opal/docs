@@ -24,7 +24,7 @@ opal_dir = local || 'opal'
 task :setup do
   unless local
     directory? 'opal' or sh 'git clone https://github.com/opal/opal.git opal'
-    cd 'opal' do
+    Dir.chdir 'opal' do
       sh "git fetch --all"
       sh "git reset --hard"
       sh "git clean -fx"
@@ -33,7 +33,7 @@ task :setup do
   end
 
   directory? 'gh-pages' or sh 'git clone git@github.com:opal/docs.git gh-pages --reference . -b gh-pages'
-  cd 'gh-pages' do
+  Dir.chdir 'gh-pages' do
     sh "git reset --hard"
     sh "git clean -fx"
     sh "git checkout gh-pages"
