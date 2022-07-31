@@ -81,31 +81,33 @@ task :guides => :setup do
   target_for = -> file { File.basename(file).sub('.md', '.html') }
   mkdir_p base_dir
 
+  is_index = -> { _1.end_with? 'index.md' }
+
   files.each do |path|
     html_contents = markdown(File.read(path))
     target_path = target_for[path]
     title = title_for[path]
     puts "#{path.ljust 40} → #{title}"
     html_title = "#{base_title} · #{title}"
+    html_nav = %{<nav><a href="./index.html">« Back to index</a></nav><hr>}
     html_body = <<-HTML
-      <nav>
-        <a href="./index.html">« Back to index</a>
-      </nav>
-      <hr>
+      #{html_nav unless is_index[path]}
       #{html_contents}
     HTML
 
     File.write "#{base_dir}/#{target_path}", html_template(html_body, title: html_title, css: css)
   end
 
-  html_title = "#{base_title} · Guides"
-  html_body = %{
-    <h1>#{html_title}</h1>
-    <ul>
-      #{files.map {|t| "<li><a href='./#{target_for[t]}'>#{title_for[t]}</a></li>"}.join}
-    </ul>
-  }
-  File.write "#{base_dir}/index.html", html_template(html_body, title: html_title)
+  unless files.any?(is_index)
+    html_title = "#{base_title} · Guides"
+    html_body = %{
+      <h1>#{html_title}</h1>
+      <ul>
+        #{files.map {|t| "<li><a href='./#{target_for[t]}'>#{title_for[t]}</a></li>"}.join}
+      </ul>
+    }
+    File.write "#{base_dir}/index.html", html_template(html_body, title: html_title)
+  end
 end
 
 task :index do
