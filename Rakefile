@@ -90,9 +90,16 @@ task :guides => :setup do
     puts "#{path.ljust 40} → #{title}"
     html_title = "#{base_title} · #{title}"
     html_nav = %{<nav><a href="./index.html">« Back to index</a></nav><hr>}
+    html_footer = %{<footer><hr/>
+      You're encouraged to help improve the quality of this guide.
+      Please contribute if you see any typos, factual errors, or missing information.<br/>
+      To get started, <a href="https://github.com/opal/opal/tree/master/docs">head to the docs folder in the main repo</a>.
+    </footer>}
+
     html_body = <<-HTML
       #{html_nav unless is_index[path]}
       #{html_contents}
+      #{html_footer}
     HTML
 
     File.write "#{base_dir}/#{target_path}", html_template(html_body, title: html_title, css: css)
