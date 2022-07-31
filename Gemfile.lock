@@ -10,7 +10,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     pygments.rb (2.2.0)
-    rake (11.3.0)
+    rake (12.3.3)
     redcarpet (3.5.1)
     webrick (1.7.0)
 
@@ -20,7 +20,7 @@ PLATFORMS
 
 DEPENDENCIES
   pygments.rb
-  rake (< 12)
+  rake (< 13)
   redcarpet
   yard!
 
