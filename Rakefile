@@ -77,7 +77,12 @@ task :guides => :setup do
 
   target_paths = []
   files = Dir["#{opal_dir}/docs/*.md"]
-  title_for = -> file { File.read(file).scan(/^#([^#].*?)$/).flatten.first.strip }
+  title_for = -> file do
+    File.read(file).scan(/^#([^#].*?)$/).flatten.first.strip
+  rescue
+    warn "ERROR: missing a title for #{file}, looking for a subtitle"
+    File.read(file).scan(/^#+([^#].*?)$/).flatten.first.strip
+  end
   target_for = -> file { File.basename(file).sub('.md', '.html') }
   mkdir_p base_dir
 
