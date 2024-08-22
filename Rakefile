@@ -411,7 +411,9 @@ def runtime_markdown(data)
     '# runtime.js'
   ]
 
-  data.each do |comment:, body:|
+  data.each do |hash|
+    comment:, body: = **hash
+
     markdown << "## #{extract_function_name[body.first]}"
     markdown << ""
     markdown += comment
@@ -438,7 +440,9 @@ def runtime_ruby(data)
 
   ruby = []
 
-  data.each do |comment:, body:|
+  data.each do |hash|
+    comment:, body: = **hash
+
     method_name, method_args = extract_function_name[body.first]
     next if method_name.nil? or method_name =~ /^[A-Z]/
 
