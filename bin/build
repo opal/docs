@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
+require 'shellwords'
 
 if ARGV.empty?
   puts <<~USAGE
@@ -12,6 +13,11 @@ end
 
 ref = ARGV[0]
 components = ARGV[1..-1].join(' ') # defaults to components = 'lib corelib stdlib'
+
+def system(*cmd)
+  puts cmd.shelljoin
+  super
+end
 
 system 'bin/rake', %{REF=#{ref}}, %{COMPONENTS=#{components}}, '--trace'
 system 'bin/rake', 'index', %{REF=#{ref}}, '--trace'

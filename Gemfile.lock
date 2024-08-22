@@ -1,15 +1,15 @@
 GIT
   remote: https://github.com/lsegal/yard.git
-  revision: 2d197a381c5d4cc5c55b2c60fff992b31c986361
+  revision: e833aac7a01510245dd4ae1d1d18b046c8293c2d
   branch: main
   specs:
-    yard (0.9.34)
+    yard (0.9.36)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    pygments.rb (2.4.0)
-    rake (11.3.0)
+    pygments.rb (3.0.0)
+    rake (13.2.1)
     redcarpet (3.6.0)
 
 PLATFORMS
@@ -18,12 +18,12 @@ PLATFORMS
 
 DEPENDENCIES
   pygments.rb
-  rake (< 12)
+  rake
   redcarpet
   yard!
 
 RUBY VERSION
-   ruby 2.7.5p203
+   ruby 3.3.0p0
 
 BUNDLED WITH
-   2.3.8
+   2.5.4
