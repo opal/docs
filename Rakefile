@@ -76,17 +76,30 @@ task :guides => :setup do
   CSS
 
   target_paths = []
-  files = Dir["#{opal_dir}/docs/*.md"]
+  docs_dir = "#{opal_dir}/docs"
+
+  # NOTE: The docs tree used to be flat, since Opal 2.0 it's organized in
+  # subfolders (tutorial/, how-to/, reference/, explanation/, contributing/).
+  # Both layouts must keep working since we rebuild every past release.
+  files = Dir["#{docs_dir}/**/*.md"].sort
   title_for = -> file do
     File.read(file).scan(/^#([^#].*?)$/).flatten.first.strip
   rescue
     warn "ERROR: missing a title for #{file}, looking for a subtitle"
     File.read(file).scan(/^#+([^#].*?)$/).flatten.first.strip
   end
-  target_for = -> file { File.basename(file).sub('.md', '.html') }
-  mkdir_p base_dir
 
-  is_index = -> { _1.end_with? 'index.md' }
+  # Preserve the path relative to docs/ so that in-repo relative links
+  # (e.g. `../explanation/async.html`) keep resolving on the built site.
+  # For the old flat layout this is just the basename, as before.
+  relative_for = -> file { file.sub(%r{\A#{Regexp.escape docs_dir}/}, '') }
+  target_for = -> file { relative_for[file].sub(/\.md\z/, '.html') }
+
+  # Only the top-level docs/index.md is the guides index, a nested
+  # `how-to/index.md` would be a regular page.
+  is_index = -> { relative_for[_1] == 'index.md' }
+
+  mkdir_p base_dir
 
   files.each do |path|
     html_contents = markdown(File.read(path))
@@ -94,7 +107,10 @@ task :guides => :setup do
     title = title_for[path]
     puts "#{path.ljust 40} → #{title}"
     html_title = "#{base_title} · #{title}"
-    html_nav = %{<nav><a href="./index.html">« Back to index</a></nav><hr>}
+    # The index lives at the root of base_dir, walk up from nested pages.
+    depth = target_path.count('/')
+    up = depth.zero? ? './' : '../' * depth
+    html_nav = %{<nav><a href="#{up}index.html">« Back to index</a></nav><hr>}
     html_footer = %{<footer><hr/>
       You're encouraged to help improve the quality of this guide.
       Please contribute if you see any typos, factual errors, or missing information.<br/>
@@ -107,7 +123,9 @@ task :guides => :setup do
       #{html_footer}
     HTML
 
-    File.write "#{base_dir}/#{target_path}", html_template(html_body, title: html_title, css: css)
+    output_path = "#{base_dir}/#{target_path}"
+    mkdir_p File.dirname(output_path)
+    File.write output_path, html_template(html_body, title: html_title, css: css)
   end
 
   unless files.any?(is_index)
